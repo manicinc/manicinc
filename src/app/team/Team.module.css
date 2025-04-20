@@ -1,0 +1,351 @@
+/* src/app/teams/Team.module.css */
+
+.pageWrapper {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden; /* Prevent horizontal scroll from absolute elements */
+}
+
+.contentContainer {
+    /* Add padding if Nav isn't pushing content down */
+    /* padding-top: var(--header-height); */
+}
+
+/* --- Section Styling --- */
+.documentSection {
+    position: relative; /* For background elements */
+}
+
+.sectionTitle {
+    font-family: var(--font-display); /* Use theme display font */
+    font-weight: 800;
+    color: var(--text-heading);
+    letter-spacing: -0.02em;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.1), 0 0 8px var(--glow-color);
+    margin-bottom: 0.75rem; /* Base margin */
+}
+
+.sectionSubtitle {
+    font-family: var(--font-body); /* Use theme body font */
+    color: var(--text-secondary);
+    font-size: 1.05rem; /* Base size */
+    line-height: 1.7;
+    max-width: 70ch; /* Limit line length */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Specific styling for tighter layout */
+.documentSection {
+    padding-top: 3rem;    /* Reduced padding */
+    padding-bottom: 3rem; /* Reduced padding */
+}
+@media (min-width: 768px) {
+    .documentSection {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+@media (min-width: 1024px) {
+     .documentSection {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+/* --- Hero Section --- */
+.heroBackgroundShapes {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+.shape1, .shape2 {
+    position: absolute;
+    border-radius: 50% 30% 60% 40% / 40% 60% 30% 50%;
+    opacity: 0.08;
+    filter: blur(50px);
+    animation: hero-shape-morph 20s infinite alternate ease-in-out;
+}
+.shape1 {
+    width: 40vw; height: 40vw; top: -10%; left: -10%;
+    background: var(--accent-primary);
+}
+.shape2 {
+     width: 35vw; height: 35vw; bottom: -15%; right: -5%;
+     background: var(--accent-secondary);
+     animation-delay: -5s;
+ }
+ @keyframes hero-shape-morph {
+     0% { transform: rotate(0deg) scale(1); border-radius: 50% 30% 60% 40% / 40% 60% 30% 50%; }
+     100% { transform: rotate(90deg) scale(1.2); border-radius: 30% 50% 40% 60% / 60% 40% 50% 30%; }
+ }
+ .heroAscii {
+     color: var(--accent-highlight);
+     text-shadow: 0 0 5px var(--accent-highlight-rgb, 0.3);
+     background-color: rgba(var(--bg-secondary-rgb), 0.3);
+     padding: 1rem;
+     border-radius: var(--radius-sm);
+     border: 1px solid var(--bg-tertiary);
+     display: inline-block; /* Fit content */
+     line-height: 1.2;
+ }
+
+/* --- Team Grid --- */
+.teamSectionBackground {
+    background: linear-gradient(170deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    border-top: 1px solid var(--bg-tertiary);
+    border-bottom: 1px solid var(--bg-tertiary);
+}
+.synergyBackgroundSvg {
+    transform: scale(1.5);
+    mix-blend-mode: overlay; /* Or 'soft-light' */
+}
+@keyframes synergy-node-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.15); opacity: 1; }
+}
+.synergy-center-node { animation: synergy-node-pulse 3s infinite ease-in-out; transform-origin: center; }
+.synergy-outer-node { animation: synergy-node-pulse 3.5s infinite ease-in-out; transform-origin: center; }
+@keyframes synergy-line-flow {
+    from { stroke-dashoffset: 50; } to { stroke-dashoffset: 0; }
+}
+.synergy-connector { stroke-dasharray: 50; animation: synergy-line-flow 2s infinite linear alternate; }
+
+
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem; /* Slightly tighter gap */
+}
+
+.teamCard {
+    background: rgba(var(--bg-tertiary-rgb), 0.5);
+    border: 1px solid rgba(var(--accent-secondary-rgb), 0.2);
+    border-radius: 8px 12px 6px 10px; /* Organic radius */
+    padding: 1.5rem; /* Reduced padding */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 4px 10px var(--shadow-color-light);
+    height: 100%; /* Make cards equal height */
+    display: flex; /* Use flex for content alignment */
+    flex-direction: column;
+}
+
+.teamCard:hover {
+    border-color: rgba(var(--accent-primary-rgb), 0.5);
+    box-shadow: 0 10px 30px var(--shadow-color), 0 0 15px var(--accent-primary);
+}
+
+/* Glitchy border effect */
+.cardBorderGlitch {
+     position: absolute;
+     inset: -1px;
+     border-radius: inherit;
+     pointer-events: none;
+     z-index: 2;
+     opacity: 0;
+     transition: opacity 0.3s ease;
+ }
+ .teamCard:hover .cardBorderGlitch {
+     opacity: 1;
+ }
+ .cardBorderGlitch::before,
+ .cardBorderGlitch::after {
+     content: '';
+     position: absolute;
+     inset: 0;
+     border-radius: inherit;
+     border: 1px solid;
+     animation: card-glitch-anim 1.5s infinite steps(2);
+ }
+ .cardBorderGlitch::before {
+     border-color: var(--accent-highlight);
+     clip-path: polygon(0 0, 100% 0, 100% 30%, 0 50%);
+     animation-delay: -0.75s;
+ }
+ .cardBorderGlitch::after {
+      border-color: var(--accent-secondary);
+      clip-path: polygon(0 70%, 100% 50%, 100% 100%, 0 100%);
+ }
+ @keyframes card-glitch-anim {
+     0% { transform: translate(1px, -1px); }
+     25% { transform: translate(-1px, 1px); }
+     50% { transform: translate(1px, 1px); }
+     75% { transform: translate(-1px, -1px); }
+     100% { transform: translate(1px, -1px); }
+ }
+
+
+.cardContent {
+    position: relative; /* Content above background elements */
+    z-index: 1;
+    flex-grow: 1; /* Allow content to take space */
+    display: flex;
+    flex-direction: column;
+}
+
+.emojiBackground {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 4rem; /* Larger emoji */
+    opacity: 0.08;
+    z-index: 0;
+    user-select: none;
+    transform: rotate(15deg);
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.memberIcon {
+    color: var(--accent-primary);
+    background-color: rgba(var(--accent-primary-rgb), 0.1);
+    border-radius: 50%;
+    padding: 0.4rem;
+    margin-right: 0.6rem;
+    display: inline-flex;
+    border: 1px solid rgba(var(--accent-primary-rgb), 0.2);
+}
+
+.memberName {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-heading);
+}
+
+.memberTitle {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.memberDescription {
+    font-family: var(--font-body);
+    font-size: 0.875rem; /* 14px */
+    color: var(--text-secondary);
+    line-height: 1.65;
+    flex-grow: 1; /* Push description down if card height varies */
+}
+
+/* Placeholder Card Specifics */
+.placeholderCard {
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(var(--bg-secondary-rgb), 0.4),
+        rgba(var(--bg-secondary-rgb), 0.4) 5px,
+        rgba(var(--bg-tertiary-rgb), 0.3) 5px,
+        rgba(var(--bg-tertiary-rgb), 0.3) 10px
+    );
+    backdrop-filter: none; /* Remove blur */
+}
+.placeholderIconWrapper {
+    position: relative;
+    margin-bottom: 0.75rem;
+    display: inline-block;
+}
+.placeholderCTA {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent-highlight);
+    margin-top: 1rem;
+    border-bottom: 1px dotted var(--accent-highlight);
+    transition: color 0.2s, border-color 0.2s;
+}
+.placeholderCTA:hover {
+    color: var(--accent-primary);
+    border-bottom-color: var(--accent-primary);
+}
+
+/* Keep or rename this - might just need margin */
+.locationAsciiWrapper { /* Or rename to .locationMapWrapper */
+    position: relative; /* Needed for absolute positioning of label */
+    margin: 2rem auto 0; /* Add some top margin */
+    max-width: 600px; /* Control max width of the map container */
+    /* Remove padding/border/background specific to ASCII if they existed */
+}
+
+/* Optional: Add styles specific to the SVG itself if needed */
+.locationMapSvg {
+    /* filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); Optional shadow */
+    /* border: 1px solid var(--bg-tertiary); Optional border */
+    border-radius: var(--radius-lg);
+    overflow: visible; /* Ensure filters/glows aren't clipped */
+}
+
+
+/* Ensure the location label still works */
+.locationLabel {
+    text-align: center;
+    margin-top: 0.75rem; /* Space between map and label */
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: flex; /* Align icon and text */
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Explore Further Section --- */
+.exploreGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; /* Tighter gap */
+}
+
+.exploreLinkCard {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem; /* Space between icon and text */
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.6rem 1.2rem; /* Tighter padding */
+    border: 1px solid var(--bg-tertiary);
+    border-radius: var(--radius-base);
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    transition: all 0.2s ease-out;
+    box-shadow: 2px 2px 0px rgba(var(--accent-primary-rgb), 0.2); /* Subtle shadow */
+}
+
+.exploreLinkCard:hover {
+    background-color: var(--bg-tertiary);
+    color: var(--accent-primary);
+    border-color: var(--accent-primary);
+    box-shadow: 1px 1px 0px rgba(var(--accent-primary-rgb), 0.4);
+    /* Removed transform from here, handled by motion.div */
+}
+
+.exploreLinkCard svg {
+    width: 1.1rem; /* Slightly smaller icons */
+    height: 1.1rem;
+    flex-shrink: 0;
+    color: var(--accent-secondary); /* Match text */
+    transition: color 0.2s ease-out;
+}
+
+.exploreLinkCard:hover svg {
+    color: var(--accent-primary);
+}
+
+.exploreLinkText {
+    white-space: nowrap;
+}

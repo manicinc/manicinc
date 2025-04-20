@@ -1,0 +1,44 @@
+/* src/styles/mobile.css */
+
+/* ======================================== */
+/* Mobile Overrides & Fixes                 */
+/* ======================================== */
+
+/* --- Prevent Horizontal Overflow --- */
+/* Apply to body or your main page wrapper */
+body, #__next, .main-page-wrapper { /* Adjust selectors as needed */
+    overflow-x: hidden;
+    /* Consider adding position: relative if absolutely positioned children cause overflow */
+    /* position: relative; */
+}
+
+/* --- General Mobile Element Adjustments --- */
+/* Example: Ensure images don't overflow their containers */
+img, svg, video, canvas, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Prevents potential bottom space */
+}
+
+/* Example: Force long words/URLs to break */
+.force-break-word {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+/* Add any other mobile-specific global overrides here */
+
+/* --- Mobile Navigation Specific Overrides --- */
+/* (Can also be placed in Nav.module.css within @media blocks) */
+
+/* Example: Further reduce padding on mobile nav container if needed */
+/* @media (max-width: 767px) { */
+    /* .navContainer { */
+        /* min-height: 52px; /* Slightly smaller min-height on mobile */
+    /* } */
+    /* Adjust padding within the nav's inner container via Nav.tsx Tailwind */
+/* } */
+

@@ -1,0 +1,152 @@
+/* src/components/LookingGlassLogo/LookingGlassLogo.module.css */
+
+.lookingGlassWrapper {
+    /* Define variables locally scoped to this component */
+    --lg-logo-color: var(--accent-highlight);
+    --lg-logo-color-rgb: var(--accent-highlight-rgb);
+
+    display: block;
+    position: relative;
+    /* --- Underline Fix --- */
+    text-decoration: none !important;
+    border-bottom: none !important;
+    /* --------------------- */
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    line-height: 1;
+    vertical-align: middle;
+    padding: 0.3rem; /* Add padding */
+}
+/* Ensure underline doesn't appear on hover/focus either */
+.lookingGlassWrapper:hover,
+.lookingGlassWrapper:focus {
+     border-bottom: none !important;
+}
+
+/* Base SVG styles */
+.lookingGlassSvg {
+    /* width: auto; */
+    height: 6.5rem; /* Increased height */
+    display: block;
+    overflow: visible;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Group for overall animation */
+.logoGroup {
+    transition: transform 0.5s ease-out;
+    transform-origin: center center;
+}
+.lookingGlassWrapper:hover .logoGroup {
+    transform: scale(1.03);
+}
+
+/* Pattern Background */
+.patternBg {
+    transition: opacity 0.5s ease-in-out;
+}
+.lookingGlassWrapper:hover .patternBg {
+    opacity: 0.85;
+}
+
+/* Mirror Surface Animation */
+.mirrorSurface {
+    transition: filter 0.6s ease, opacity 0.5s ease;
+    opacity: 0.95;
+}
+.lookingGlassWrapper:hover .mirrorSurface {
+    opacity: 1;
+}
+
+/* Frame Group Base */
+.frameGroup {
+    transition: filter 0.5s ease, stroke-width 0.4s ease;
+    filter: drop-shadow(0px 1px 1px rgba(var(--shadow-color-rgb), 0.1));
+}
+.lookingGlassWrapper:hover .frameGroup {
+     /* Apply glow filter defined in SVG */
+     /* Ensure the filter ID matches the one generated in the component */
+     /* Combining filters needs careful handling - use unique IDs */
+     /* Example: filter: drop-shadow(...) url(#lg-glow-filter-id); */
+     filter: drop-shadow(0px 2px 4px rgba(var(--shadow-color-rgb), 0.25)) url(#lg-glow-uniqueId); /* Placeholder ID - ensure correct ID is used */
+}
+
+/* Frame Elements Animation */
+.frameMain {
+    transition: stroke-dashoffset 1s ease-in-out 0.1s, opacity 0.5s ease, stroke-width 0.4s ease;
+    stroke-dasharray: 1000; stroke-dashoffset: 0;
+ }
+.frameDetail {
+    transition: stroke-dashoffset 1.2s ease-in-out 0.2s, opacity 0.5s ease;
+    stroke-dasharray: 10 5; stroke-dashoffset: 0;
+}
+.frameScrollwork path {
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s, opacity 0.4s ease, stroke 0.3s ease;
+    transform-origin: center center;
+    opacity: 0.8;
+}
+.lookingGlassWrapper:hover .frameMain { stroke-width: 3.9; opacity: 1; }
+.lookingGlassWrapper:hover .frameDetail { opacity: 0.9; stroke-dashoffset: -5; }
+.lookingGlassWrapper:hover .frameScrollwork path { opacity: 1; stroke: var(--accent-secondary); } /* Example: change color */
+.lookingGlassWrapper:hover .frameScrollwork path:nth-child(odd) { transform: scale(1.05) translate(-0.5px, -0.5px) rotate(1deg); }
+.lookingGlassWrapper:hover .frameScrollwork path:nth-child(even) { transform: scale(0.97) translate(0.5px, 0.5px) rotate(-1deg); }
+
+/* Ornaments Animation */
+.ornament { transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.5s ease; opacity: 0.9; }
+.ornamentJewel { transition: filter 0.5s ease, r 0.5s ease, fill 0.4s ease; fill: currentColor; }
+.lookingGlassWrapper:hover .topOrnament { transform: translate(50px, 2.5px) scale(0.88) rotate(3deg); opacity: 1; transition-delay: 0.05s; }
+.lookingGlassWrapper:hover .bottomOrnament { transform: translate(50px, 97.5px) scale(0.88, -0.88) rotate(-3deg); opacity: 1; transition-delay: 0.1s; }
+.lookingGlassWrapper:hover .leftOrnament { transform: translate(2.5px, 50px) scale(0.78) rotate(-98deg); opacity: 1; transition-delay: 0.15s; }
+.lookingGlassWrapper:hover .rightOrnament { transform: translate(97.5px, 50px) scale(0.78) rotate(98deg); opacity: 1; transition-delay: 0.2s; }
+.lookingGlassWrapper:hover .ornamentJewel { filter: drop-shadow(0 0 2px currentColor); r: 3; fill: var(--accent-primary); }
+
+/* Mirror Content (Clock Hands) Animation */
+.mirrorContent { transition: opacity 0.7s ease; }
+.hourHand, .minuteHand { transform-origin: 50% 50%; transition: transform 1.8s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
+.lookingGlassWrapper:hover .mirrorContent { opacity: 0.35; }
+.lookingGlassWrapper:hover .hourHand { transform: rotate(45deg) scale(1.1); transition-delay: 0.1s; }
+.lookingGlassWrapper:hover .minuteHand { transform: rotate(180deg) scale(0.9); transition-delay: 0.25s; }
+
+/* --- Text Styling & Effects --- */
+.textGroup {
+     transition: filter 0.3s ease-in-out;
+     filter: none; /* Start without glitch */
+}
+/* Apply glitch filter on hover */
+.lookingGlassWrapper:hover .textGroup {
+     /* Note: Ensure the filter ID used here matches the one in the SVG component */
+     filter: url(#lg-text-glitch-uniqueId); /* Ensure ID matches */
+}
+
+/* Keyframes for text shimmer */
+@keyframes logoTextShimmer {
+  0%, 100% { text-shadow: 0px 1px 2px rgba(var(--shadow-color-rgb), 0.1), 0 0 8px rgba(var(--lg-logo-color-rgb), 0.2); }
+  50% { text-shadow: 0px 1px 3px rgba(var(--shadow-color-rgb), 0.15), 0 0 16px rgba(var(--lg-logo-color-rgb), 0.5); }
+}
+
+.logoText {
+    /* Base styles for main text */
+    transition: transform 0.5s ease, text-shadow 0.5s ease, fill 0.4s ease, opacity 0.4s ease;
+    transform-origin: center center;
+    fill: var(--lg-logo-color);
+    /* Opacity handled by SMIL */
+    /* Apply shimmer animation */
+    animation: logoTextShimmer 7s ease-in-out infinite alternate;
+    /* Font properties set directly on SVG <text> element */
+}
+.lookingGlassWrapper:hover .logoText {
+    transform: scale(1.01);
+    /* Opacity handled by SMIL animate tag in component */
+}
+
+/* Reflected Text Style */
+.reflectionText {
+    fill: currentColor;
+    /* Opacity handled by SMIL animate tag in component */
+    transition: opacity 0.5s ease-out 0.1s; /* Keep transition for smoothness */
+    transform-origin: center center;
+    pointer-events: none;
+    filter: blur(0.5px);
+}
+

@@ -1,0 +1,60 @@
+/* src/components/PocketWatch/PocketWatch.module.css */
+
+.pocketWatchWrapper {
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary); /* Base color */
+    cursor: default; /* Indicate it's not clickable */
+}
+
+.pocketWatchSvg {
+    width: 26px; /* Adjust overall size */
+    height: 26px;
+    overflow: visible;
+    filter: drop-shadow(0 1px 1px rgba(var(--shadow-color-rgb), 0.2));
+}
+
+.pocketWatchFace {
+    fill: rgba(var(--bg-tertiary-rgb), 0.6);
+    stroke: rgba(var(--text-primary-rgb), 0.3);
+    stroke-width: 0.5;
+}
+
+.pocketWatchFrame {
+    fill: none;
+    stroke: currentColor; /* Use wrapper color */
+    stroke-width: 1;
+}
+
+.pocketWatchCrown {
+    fill: currentColor;
+    stroke: rgba(var(--text-primary-rgb), 0.3);
+    stroke-width: 0.3;
+}
+
+.pocketWatchText {
+    font-family: var(--font-mono);
+    font-size: 5px; /* Adjust relative to viewBox */
+    fill: var(--text-primary);
+    text-anchor: middle;
+    dominant-baseline: middle;
+    user-select: none; /* Prevent text selection */
+}
+
+.pocketWatchHand {
+    stroke: var(--accent-primary); /* Example color */
+    stroke-width: 0.7;
+    stroke-linecap: round;
+    transform-origin: 15px 17.5px; /* Center of the watch face */
+    /* Smooth transition for ticking */
+    transition: transform 0.2s cubic-bezier(.4,0,.6,1); /* Ease out */
+    /* Remove if you want instant jump: */
+    /* transition: none; */
+}
+
+/* Optional: Add a subtle tick animation */
+@keyframes tick {
+    from { /* Slightly behind */ }
+    to { /* Final position */ }
+}
+/* Apply to hand if desired: animation: tick 1s linear infinite; */

@@ -1,0 +1,470 @@
+/* --- Base Section Styles --- */
+.servicesSection {
+    position: relative;
+    overflow: hidden;
+    /* Use a subtle gradient instead of solid color for depth */
+    background: linear-gradient(170deg, var(--color-space-purple) 0%, var(--bg-secondary) 100%);
+}
+
+/* --- Background Enhancements --- */
+.sectionBackground { position: absolute; inset: 0; z-index: 0; }
+.gridOverlay { /* Slightly more visible grid */
+    position: absolute; inset: 0;
+    background-image: linear-gradient(to right, rgba(var(--accent-primary-rgb), 0.06) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(var(--accent-primary-rgb), 0.06) 1px, transparent 1px);
+    background-size: 45px 45px; /* Slightly larger grid */
+    mask-image: radial-gradient(ellipse at center, black 35%, transparent 80%);
+    opacity: 0.6;
+    animation: backgroundPan 80s linear infinite; /* Subtle pan */
+}
+@keyframes backgroundPan {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+.glowEffect { /* Enhance glows */
+    position: absolute; width: 60%; height: 60%; border-radius: 50%;
+    filter: blur(130px); opacity: 0.12; z-index: -1;
+    animation: pulseGlow 10s infinite alternate ease-in-out;
+}
+.glowEffectTop { top: -25%; left: -20%; background-color: var(--accent-highlight); } /* Pink */
+.glowEffectBottom { bottom: -25%; right: -20%; background-color: var(--brand-cyan); animation-delay: -5s; } /* Cyan */
+
+@keyframes pulseGlow {
+    from { opacity: 0.1; transform: scale(0.9); }
+    to { opacity: 0.18; transform: scale(1.1); }
+}
+
+.starsContainer { /* Keep stars */
+    position: absolute; width: 100%; height: 100%; overflow: hidden; z-index: -2;
+}
+.star { /* Keep stars */
+    position: absolute; background-color: var(--color-transmission); border-radius: 50%; opacity: 0;
+    animation: twinkle 6s infinite linear alternate; /* Slightly slower */
+}
+@keyframes twinkle { /* Keep twinkle */
+    0% { opacity: 0.1; transform: scale(0.8); }
+    100% { opacity: 0.7; transform: scale(1.1); }
+}
+
+/* --- Circular Heading Styles --- */
+.circularHeadingContainer { /* Keep structure */
+    position: relative; display: flex; align-items: center; justify-content: center;
+    width: 100%; min-height: 220px; margin-bottom: -10px; /* Slightly less negative margin */
+}
+/* --- Keyframes for Stopwatch Jitter --- */
+@keyframes stopwatchJitter {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  10% { transform: rotate(-1.5deg) scale(1.01); }
+  25% { transform: rotate(2deg) scale(0.99); }
+  40% { transform: rotate(-2.5deg) scale(1); }
+  55% { transform: rotate(1deg) scale(1.02); }
+  70% { transform: rotate(-1deg) scale(0.98); }
+  85% { transform: rotate(2.5deg) scale(1); }
+}
+/* --- Class to apply jitter to the SVG element --- */
+.jitteringStopwatchSvg {
+    animation: stopwatchJitter 7s infinite steps(8, jump-none); /* Use steps for more mechanical feel */
+    transform-origin: center;
+}
+.stopwatchContainer { /* Style the container subtly */
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 96px; height: 96px; z-index: 5;
+    /* Add subtle hardware feel */
+    filter: drop-shadow(0 1px 2px rgba(var(--shadow-color), 0.3));
+}
+/* Make SVG strokes slightly crisper if needed */
+.stopwatchContainer svg circle,
+.stopwatchContainer svg path,
+.stopwatchContainer svg line {
+    /* stroke-linecap: square; */ /* Optional: sharper line ends */
+}
+
+.circularHeadingRotator { /* Keep structure, ensure animation name matches */
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateHeadingCSS 45s linear infinite; /* Defined below */
+    transform-origin: center; z-index: 10;
+    /* Ensure text looks clean */
+    font-family: var(--font-display);
+    font-weight: 500; /* Adjust weight */
+    font-size: 1.05rem; /* Adjust size if needed */
+    color: var(--text-secondary);
+    letter-spacing: 0.05em; /* Adjust spacing */
+}
+.circularHeadingLetter { /* Base style for individual letters */
+    /* Applied dynamically */
+}
+@keyframes rotateHeadingCSS { /* Keep overall rotation */
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+.placeholderTextSpan { opacity: 0; position: absolute; pointer-events: none; user-select: none; }
+
+/* --- Keyframes for individual letter ticking (from previous step) --- */
+@keyframes tickRotateLetter {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-3deg); }
+  40% { transform: rotate(2deg); }
+  60% { transform: rotate(-4deg); }
+  80% { transform: rotate(3deg); }
+}
+.tickingLetter { /* Keep this class for the inner span */
+    display: inline-block;
+    transform-origin: center;
+    animation-name: tickRotateLetter;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/* --- Service Card Styles --- */
+.serviceCard {
+    position: relative;
+    overflow: hidden; /* Keep hidden for pseudo-elements */
+    /* Brutalist: Defined border */
+    border: 1px solid rgba(var(--text-muted-rgb, 114, 117, 126), 0.15);
+    background-color: rgba(var(--bg-secondary-rgb), 0.6); /* Base background */
+    backdrop-filter: blur(10px);
+    transition: /* Define transitions explicitly */
+        transform var(--transition-medium),
+        box-shadow var(--transition-medium),
+        border-color var(--transition-medium),
+        background-color var(--transition-medium);
+    z-index: 1;
+    border-radius: var(--radius-lg); /* Keep defined radius */
+    /* Add inner shadow for neomorphism touch */
+    box-shadow: inset 0 1px 2px rgba(var(--bg-primary-rgb), 0.2),
+                0 4px 10px rgba(var(--shadow-color), 0.1);
+    display: flex; /* Ensure flex layout for content */
+    flex-direction: column;
+    height: 100%; /* Make cards equal height in grid */
+}
+
+/* Subtle Hover (Non-Active) - Retrofuturism/Rabbit Hole touch */
+.serviceCard:hover {
+    transform: translateY(-4px) scale(1.01) perspective(1500px) rotateY(0.5deg); /* Subtle lift/perspective */
+    border-color: rgba(var(--accent-primary-rgb), 0.3);
+    box-shadow: inset 0 1px 2px rgba(var(--bg-primary-rgb), 0.1),
+                0 8px 20px rgba(var(--shadow-color), 0.15), /* Slightly larger shadow */
+                0 0 15px rgba(var(--glow-color), 0.1); /* Faint glow */
+    z-index: 5; /* Bring forward slightly on hover */
+}
+
+/* Active State - Brutalist emphasis + Vibrant accent */
+.serviceCard.active {
+    border-color: rgba(var(--accent-primary-rgb), 0.7); /* Stronger accent border */
+    transform: translateY(-8px); /* Lift higher */
+    /* Stronger glow + sharper secondary shadow */
+    box-shadow: inset 0 0 10px rgba(var(--accent-primary-rgb), 0.1),
+                0 12px 35px -8px var(--glow-color), /* Accent glow */
+                4px 4px 0px rgba(var(--shadow-color), 0.2); /* Brutalist offset shadow */
+    background-color: rgba(var(--bg-tertiary-rgb), 0.75); /* Slightly change bg */
+    z-index: 20; /* Keep on top */
+    transition: /* Ensure transform has bounce */
+        transform 0.3s var(--transition-bounce),
+        box-shadow var(--transition-medium),
+        border-color var(--transition-medium),
+        background-color var(--transition-medium);
+}
+
+/* Optional: Subtle Noise Texture Overlay */
+.serviceCard::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03; /* Very subtle */
+    pointer-events: none;
+    z-index: 0;
+    border-radius: inherit;
+}
+
+/* Card Content Styling */
+.cardContentWrapper { /* Add this wrapper in JSX if needed for structure */
+    position: relative; z-index: 1; /* Ensure content is above noise overlay */
+    padding: 1.25rem; /* Adjust padding as needed */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allow content to grow */
+}
+
+.iconWrapper { /* Keep scale animation */
+    margin-bottom: 0.75rem; display: inline-block;
+    transition: transform var(--transition-medium);
+    /* Ensure icon color provides contrast */
+    color: var(--accent-primary);
+}
+.serviceCard:hover .iconWrapper,
+.serviceCard.active .iconWrapper {
+    transform: scale(1.1);
+    /* Add subtle glow to active icon */
+    filter: drop-shadow(0 0 6px var(--glow-color));
+}
+
+.cardTitle { /* Style the h3 title */
+    font-family: var(--font-display);
+    font-size: 1.1rem; /* Adjust size */
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem; /* Reduced margin */
+    line-height: 1.3;
+    text-shadow: 0 1px 2px var(--shadow-color-light); /* Add text shadow */
+}
+
+/* --- Card Description Decrypt Styles --- */
+.descriptionWrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+    max-height: 110px; /* Further reduced max height */
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 8px; /* Space for scrollbar */
+    padding-bottom: 0.25rem; /* Less bottom padding */
+
+    /* --- FIXED MINIMALIST SCROLLBAR --- */
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(var(--text-muted-rgb, 114, 117, 126), 0.25) transparent; /* Faint muted thumb, transparent track */
+}
+.descriptionWrapper:hover {
+    scrollbar-color: rgba(var(--accent-primary-rgb, 127, 90, 240), 0.4) transparent; /* Slightly more visible thumb on hover */
+}
+/* Webkit */
+.descriptionWrapper::-webkit-scrollbar { width: 4px; height: 4px; }
+.descriptionWrapper::-webkit-scrollbar-track { background: transparent; }
+.descriptionWrapper::-webkit-scrollbar-thumb { background-color: rgba(var(--text-muted-rgb, 114, 117, 126), 0.2); border-radius: 2px; border: none; transition: background-color 0.2s ease; }
+.descriptionWrapper:hover::-webkit-scrollbar-thumb { background-color: rgba(var(--accent-primary-rgb, 127, 90, 240), 0.35); }
+.descriptionWrapper::-webkit-scrollbar-corner { background: transparent; }
+
+.encryptedText,
+.decryptedText {
+    position: absolute; inset: 0; margin: 0;
+    padding: 0 0.25rem; /* Keep minimal padding */
+    font-size: 0.9rem; /* Slightly smaller */
+    line-height: 1.6;
+    color: var(--text-secondary);
+    backface-visibility: hidden;
+    transition: opacity 0.45s ease-out, filter 0.45s ease-out;
+    will-change: opacity, filter;
+    pointer-events: none;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+.encryptedText { opacity: 1; filter: blur(3px); }
+.decryptedText { opacity: 0; filter: blur(3px); color: var(--text-primary); } /* Use primary text for decrypted */
+
+.serviceCard.active .encryptedText { opacity: 0; filter: blur(0px); }
+.serviceCard.active .decryptedText { opacity: 1; filter: blur(0); }
+/* --- End Decrypt Styles --- */
+
+/* --- Feature List Styles --- */
+.featureList { margin-top: auto; /* Push to bottom */ padding-top: 0.75rem; border-t: 1px solid rgba(var(--text-muted-rgb), 0.1); 
+}
+.featureItem {
+    display: flex; align-items: center;
+    color: var(--text-muted); opacity: 0.7;
+    transition: opacity var(--transition-medium), color var(--transition-medium), transform var(--transition-fast);
+    font-size: 0.85rem; /* Smaller feature text */
+    line-height: 1.4;
+    font-family: var(--font-mono); /* Mono for features? */
+}
+.serviceCard.active .featureItem {
+    opacity: 1; color: var(--text-secondary);
+    transform: translateX(3px); /* Keep subtle shift */
+}
+.featureDot {
+    width: 5px; height: 5px; border-radius: 50%;
+    background-color: var(--accent-secondary); /* Green dot */
+    margin-right: 0.5rem;
+    transition: background-color var(--transition-medium), box-shadow var(--transition-medium);
+    flex-shrink: 0;
+}
+.serviceCard.active .featureDot {
+    background-color: var(--accent-highlight); /* Pink dot on active */
+    box-shadow: 0 0 6px var(--highlight-glow-color); /* Add glow */
+}
+
+/* --- Background & Mouse Effects (Keep if implemented) --- */
+.bgImageHover { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 0.5s ease; z-index: -1; border-radius: inherit; }
+.serviceCard:hover .bgImageHover { opacity: 0.05; } /* Very subtle */
+.serviceCard.active .bgImageHover { opacity: 0.1; }
+.mouseLightEffect { /* Keep structure if used */ position: absolute; /* ... */ }
+
+/* --- CTA Link Styles --- */
+
+/* --- REFINED: Ornate CTA Section --- */
+.ctaSection {
+    margin-top: 6rem; margin-bottom: 7rem; padding: 3rem 1rem;
+    position: relative; text-align: center;
+    overflow: hidden; /* Hide overflowing vine parts */
+}
+@media (min-width: 768px) {
+    .ctaSection { padding: 4rem 1rem; margin-top: 8rem; margin-bottom: 9rem;}
+}
+
+/* Wrapper for positioning */
+.ctaWrapper {
+    display: inline-block;
+    position: relative;
+    padding: 2rem 3rem; /* Add padding around link for decorations */
+}
+
+/* The Link Element - Ensure pointer events */
+.ornateLink {
+    display: inline-flex; align-items: center; gap: 0.8rem;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.6rem; /* Adjusted base size */
+    font-weight: 700; letter-spacing: 0.04em;
+    color: var(--text-primary); /* Start with primary text color */
+    text-decoration: none;
+    position: relative; /* Needed for stacking context */
+    z-index: 10; /* Above decorations */
+    cursor: pointer !important; /* FORCE POINTER */
+    pointer-events: auto !important; /* Ensure clickable */
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.3s ease;
+    text-shadow: /* Keep complex shadow */
+        0 0 3px rgba(var(--color-transmission-rgb), 0.6),
+        0 0 9px rgba(var(--brand-cyan-rgb, 0, 255, 255), 0.4),
+        0 0 18px rgba(var(--brand-pink-rgb, 255, 0, 255), 0.3),
+        0 0 30px rgba(var(--accent-primary-rgb), 0.2);
+}
+@media (min-width: 768px) { .ornateLink { font-size: 2rem; } }
+@media (min-width: 1024px) { .ornateLink { font-size: 2.25rem; } }
+
+/* Hover state for link */
+.ornateLink:hover {
+    color: var(--brand-cyan); /* Bright cyan hover */
+    transform: scale(1.02);
+    text-shadow: /* Intensify glow */
+        0 0 5px var(--color-transmission),
+        0 0 15px var(--brand-cyan),
+        0 0 25px var(--brand-pink),
+        0 0 40px var(--accent-highlight);
+}
+
+/* Styling text spans within the link */
+.ctaWordSpan {
+    display: inline-block;
+    transition: transform 0.3s ease-out;
+}
+/* Subtle word hover effect */
+.ornateLink:hover .ctaWordSpan {
+    transform: translateY(-2px);
+    transition-delay: calc(var(--word-index) * 0.03s); /* Stagger via inline style */
+}
+
+/* Arrow Styling */
+.ctaArrowSpan {
+    display: inline-block;
+    transition: transform 0.5s var(--transition-bounce), color 0.3s ease;
+    color: var(--accent-primary); /* Use accent color */
+    position: relative; top: 0.1em;
+    opacity: 0.9; margin-left: 0.6rem;
+}
+.ornateLink:hover .ctaArrowSpan {
+    transform: translateX(10px) rotate(10deg) scale(1.1);
+    color: var(--brand-pink); /* Pink arrow on hover */
+    opacity: 1;
+}
+
+/* --- Ornate SVG Decorations (Vines/Flourishes) --- */
+.ctaDecoration {
+    position: absolute;
+    z-index: 1; pointer-events: none; overflow: visible;
+    color: var(--accent-primary); /* Base color */
+    /* Entrance Animation */
+    opacity: 0;
+    animation: decorationFadeIn 1.5s ease-out 0.5s forwards,
+               decorationWiggle 10s infinite alternate ease-in-out 2s; /* Wiggle starts after fade */
+    filter: drop-shadow(0 0 5px rgba(var(--accent-primary-rgb), 0.3));
+    transition: opacity 0.4s ease, transform 0.4s ease, filter 0.4s ease, color 0.4s ease; /* Transition for hover */
+}
+@keyframes decorationFadeIn { to { opacity: 0.3; } } /* Default subtle visibility */
+@keyframes decorationWiggle { /* Continuous subtle movement */
+  0%, 100% { transform: rotate(-2deg) scale(1); }
+  50% { transform: rotate(2deg) scale(1.02); }
+}
+
+/* Vine path drawing animation */
+.ctaDecoration path {
+    stroke-dasharray: 1000; /* Estimate */
+    stroke-dashoffset: 1000;
+    animation: drawVinesCSS 10s infinite linear 1s; /* Slow continuous draw/undraw loop */
+}
+@keyframes drawVinesCSS {
+    0% { stroke-dashoffset: 1000; } /* Start hidden */
+    50% { stroke-dashoffset: 0; } /* Fully drawn */
+    100% { stroke-dashoffset: -1000; } /* Undraw completely */
+}
+
+/* Positioning - More spread out */
+.ctaDecorationTL { width: 90px; top: -30px; left: -40px; transform: rotate(-40deg); animation-delay: 2.5s; } /* Different delays */
+.ctaDecorationTR { width: 90px; top: -30px; right: -40px; transform: rotate(40deg) scaleX(-1); animation-delay: 2.8s; }
+.ctaDecorationBL { width: 80px; bottom: -25px; left: -20px; transform: rotate(50deg) scaleY(-1); animation-delay: 3.1s; }
+.ctaDecorationBR { width: 80px; bottom: -25px; right: -20px; transform: rotate(-50deg) scale(-1); animation-delay: 3.4s; }
+.ctaDecorationMidL { width: 70px; top: 50%; left: -60px; transform: translateY(-50%) rotate(-90deg) scale(0.9); animation-delay: 3.7s; } /* Added sides */
+.ctaDecorationMidR { width: 70px; top: 50%; right: -60px; transform: translateY(-50%) rotate(90deg) scaleX(-1) scale(0.9); animation-delay: 4s; }
+
+/* Hover effect on the CONTAINER div now */
+.ctaWrapper:hover .ctaDecoration {
+   opacity: 0.6; /* More visible */
+   color: var(--accent-highlight); /* Change color */
+   filter: drop-shadow(0 0 12px rgba(var(--accent-highlight-rgb), 0.5));
+   /* Pause wiggle, enhance scale/rotation */
+   animation-play-state: paused, running; /* Pause wiggle, keep fade-in running (if needed) */
+   transform: scale(1.15) rotate(5deg); /* Grow more - apply base transform here */
+}
+/* Re-apply individual positions with hover enhancement */
+.ctaWrapper:hover .ctaDecorationTL { transform: scale(1.15) rotate(-10deg) translateX(-5px) translateY(-5px); }
+.ctaWrapper:hover .ctaDecorationTR { transform: scaleX(-1) scale(1.15) rotate(-10deg) translateX(-5px) translateY(-5px); }
+.ctaWrapper:hover .ctaDecorationBL { transform: scaleY(-1) scale(1.15) rotate(-10deg) translateX(-5px) translateY(5px); }
+.ctaWrapper:hover .ctaDecorationBR { transform: scale(-1) scale(1.15) rotate(10deg) translateX(-5px) translateY(5px); }
+.ctaWrapper:hover .ctaDecorationMidL { transform: translateY(-50%) scale(1.1) rotate(-80deg) translateX(-10px); }
+.ctaWrapper:hover .ctaDecorationMidR { transform: translateY(-50%) scaleX(-1) scale(1.1) rotate(-80deg) translateX(10px); }
+
+/* Speed up path drawing on hover */
+.ctaWrapper:hover .ctaDecoration path {
+    animation: drawVinesCSS 1.5s infinite linear; /* Faster loop on hover */
+}
+
+/* Ensure other keyframes defined */
+@keyframes rotateHand { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes rotateHeadingCSS { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
+@keyframes drawStrokeCSS { to { stroke-dashoffset: 0; } }
+
+/* Keyframe for stopwatch hand (ensure defined) */
+/* 1. Keyframes for the continuous hand rotation */
+@keyframes rotateHand {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  /* 2. Class to apply continuous rotation to the hand line */
+  .rotatingHandElement {
+      transform-origin: center center; /* Set origin */
+      animation-name: rotateHand;
+      animation-duration: 60s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+  }
+  
+  /* 3. Keyframes for the overall stopwatch jitter */
+  @keyframes stopwatchJitter {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    10% { transform: rotate(-1.5deg) scale(1.01); }
+    25% { transform: rotate(2deg) scale(0.99); }
+    40% { transform: rotate(-2.5deg) scale(1); }
+    55% { transform: rotate(1deg) scale(1.02); }
+    70% { transform: rotate(-1deg) scale(0.98); }
+    85% { transform: rotate(2.5deg) scale(1); }
+  }
+  
+  /* 4. Class to apply jitter animation to the SVG element */
+  .jitteringStopwatchSvg {
+      animation: stopwatchJitter 7s infinite steps(8, jump-none); /* Adjust timing/steps */
+      transform-origin: center;
+  }
+  

@@ -1,0 +1,208 @@
+/* styles/AsciiArtPlaceholder.css */
+/* Combined and refined styles for the AsciiArtPlaceholder component */
+/* With **SLOW COLOR** Glitch Intensity */
+
+/* ======================================== */
+/* ASCII Art Placeholder Component          */
+/* ======================================== */
+
+/* --- Base Placeholder Styles (Outer Container) --- */
+.ascii-placeholder {
+  display: block; /* Or 'inline-block' */
+  box-sizing: border-box;
+  border-radius: var(--radius-lg, 8px);
+  transition: background-color var(--transition-medium, 0.3s),
+              border-color var(--transition-medium, 0.3s),
+              box-shadow var(--transition-medium, 0.3s);
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(var(--bg-tertiary-rgb, 95, 72, 103), 0.6); /* Default Dark */
+  border: 1px solid rgba(var(--accent-primary-rgb, 214, 80, 118), 0.15); /* Default Dark */
+  box-shadow: inset 0 0 15px rgba(var(--bg-primary-rgb, 34, 24, 43), 0.4), /* Default Dark */
+              0 2px 8px rgba(var(--shadow-color-light, 0,0,0), 0.15);
+  color: var(--text-secondary, #d8cce6); /* Default Dark */
+  backdrop-filter: blur(3px);
+  flex-shrink: 0;
+  /* Padding and Dimensions are set via inline styles */
+}
+
+/* --- Inner Wrapper (Controls Content Box and Overflow) --- */
+.ascii-inner-wrapper {
+  position: relative;
+  overflow: hidden;
+  /* height/width applied via inline style */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* --- Preformatted Text Styling --- */
+.ascii-placeholder pre {
+  color: inherit;
+  text-shadow: 0 0 3px rgba(var(--accent-secondary-rgb, 136, 176, 164), 0.1);
+  /* Slower transition for smoother color changes */
+  transition: color 0.4s ease-in-out,
+              text-shadow var(--transition-fast, 0.2s),
+              filter var(--transition-fast, 0.2s);
+  will-change: filter, color, text-shadow;
+  /* Other styles (font, line-height, etc.) applied via inline style or preClassName */
+}
+
+/* --- Loading State --- */
+.ascii-placeholder.loading {
+  background-color: rgba(var(--bg-secondary-rgb, 64, 46, 70), 0.7);
+  border-style: dashed;
+  border-color: rgba(var(--text-muted-rgb, 168, 153, 184), 0.3);
+  min-height: 100px;
+}
+.ascii-placeholder.loading .ascii-inner-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ascii-loading-text {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.9em;
+  font-weight: 500;
+  opacity: 0.6;
+  color: var(--text-secondary, #d8cce6);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  animation: pulseLoadingText 1.8s infinite alternate ease-in-out;
+}
+@keyframes pulseLoadingText {
+  0% { opacity: 0.5; filter: blur(0.5px); transform: scale(0.99); }
+  100% { opacity: 0.8; filter: blur(0px); transform: scale(1); }
+}
+
+/* ======================================== */
+/* --- SLOW COLOR GLITCH ANIMATIONS ---     */
+/* ======================================== */
+
+.ascii-placeholder.glitching {
+  /* Optional: Slow border flash */
+   animation: placeholderBorderFlashSlow 0.5s 1 linear forwards; /* Run once per glitch */
+}
+
+.ascii-placeholder.glitching .ascii-inner-wrapper pre {
+  /* REMOVED textFlashColor */
+  /* Use NEW slower color cycle animation */
+  animation: textGlitchColorSlow 2.2s ease-in-out infinite alternate; /* ~2s cycle */
+  /* Keep subtle brightness */
+  filter: brightness(1.1);
+}
+
+/* Glitch Overlay (Static scanlines, subtle fade) */
+.ascii-placeholder .glitch-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: inherit;
+  opacity: 0;
+  /* Static Background: Just subtle scanlines */
+  background:
+      repeating-linear-gradient(
+          to bottom,
+          transparent 0px,
+          transparent 1px,
+          rgba(var(--accent-highlight-rgb, 212, 172, 128), 0.05) 1px, /* Even more subtle */
+          rgba(var(--accent-highlight-rgb, 212, 172, 128), 0.05) 2px
+      );
+  mix-blend-mode: overlay; /* Changed blend mode */
+  /* Slower fade transition */
+  transition: opacity 0.3s ease-out;
+}
+.ascii-placeholder.glitching .glitch-overlay {
+  opacity: 0.3; /* REDUCED max opacity further */
+}
+
+
+/* --- Keyframes (Revised for Slow Color) --- */
+
+/* Optional: Slower border flash */
+@keyframes placeholderBorderFlashSlow {
+  0%, 100% { border-color: rgba(var(--accent-primary-rgb, 214, 80, 118), 0.15); } /* Default */
+  50% { border-color: rgba(var(--accent-alert-rgb, 230, 103, 103), 0.3); } /* Alert color */
+}
+
+/* NEW: Slower, smoother color cycle using theme accents */
+@keyframes textGlitchColorSlow {
+  0% {
+    color: var(--text-secondary, #d8cce6); /* Start near base */
+    text-shadow: 0 0 3px rgba(var(--accent-secondary-rgb, 136, 176, 164), 0.1);
+  }
+  25% {
+    color: var(--accent-primary, #d65076); /* Accent 1 */
+    text-shadow: 0 0 5px rgba(var(--accent-primary-rgb, 214, 80, 118), 0.2);
+  }
+  50% {
+    color: var(--accent-secondary, #88b0a4); /* Accent 2 */
+     text-shadow: 0 0 5px rgba(var(--accent-secondary-rgb, 136, 176, 164), 0.2);
+  }
+  75% {
+    color: var(--accent-highlight, #d4ac80); /* Accent 3 */
+    text-shadow: 0 0 5px rgba(var(--accent-highlight-rgb, 212, 172, 128), 0.2);
+  }
+  100% {
+    color: var(--accent-cool, #00ffff); /* Accent 4 */
+    text-shadow: 0 0 6px rgba(var(--accent-cool-rgb, 0, 255, 255), 0.25);
+  }
+}
+
+
+/* --- Theme Overrides (Light Mode Adjustments) --- */
+
+.ascii-placeholder[data-theme="light"] {
+  background-color: rgba(var(--bg-tertiary-rgb, 237, 228, 214), 0.7);
+  border-color: rgba(var(--accent-primary-rgb, 182, 104, 128), 0.2);
+  box-shadow: inset 0 0 10px rgba(var(--bg-primary-rgb, 251, 246, 239), 0.5),
+              0 2px 5px rgba(var(--shadow-color-light, 74, 63, 53), 0.1);
+  color: var(--text-secondary, #8a7d70);
+}
+
+.ascii-placeholder[data-theme="light"] pre {
+   text-shadow: none;
+   color: var(--text-code, #635548);
+}
+
+/* Adjust overlay for light mode */
+.ascii-placeholder[data-theme="light"] .glitch-overlay {
+  mix-blend-mode: multiply;
+  background:
+      repeating-linear-gradient(
+          to bottom,
+          transparent 0px, transparent 1px,
+          rgba(var(--accent-highlight-rgb, 184, 142, 98), 0.04) 1px, /* Subtle light accent */
+          rgba(var(--accent-highlight-rgb, 184, 142, 98), 0.04) 2px
+      );
+}
+
+/* Adjust glitching text color for light mode */
+.ascii-placeholder[data-theme="light"].glitching .ascii-inner-wrapper pre {
+   animation: textGlitchColorSlowLight 2.2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlitchColorSlowLight {
+  0% { color: var(--text-code, #635548); text-shadow: none; }
+  25% { color: var(--accent-primary, #b66880); text-shadow: 0 0 4px rgba(var(--accent-primary-rgb, 182, 104, 128), 0.1); }
+  50% { color: var(--accent-secondary, #7ea196); text-shadow: 0 0 4px rgba(var(--accent-secondary-rgb, 126, 161, 150), 0.1);}
+  75% { color: var(--accent-highlight, #b88e62); text-shadow: 0 0 4px rgba(var(--accent-highlight-rgb, 184, 142, 98), 0.1);}
+  100% { color: var(--accent-muted2, #b5c7d8); text-shadow: 0 0 5px rgba(var(--accent-muted2-rgb, 181, 199, 216), 0.15);} /* Using muted blue */
+}
+
+/* Optional: Adjust border flash for light mode */
+.ascii-placeholder[data-theme="light"].glitching {
+   animation: placeholderBorderFlashLightSlow 0.5s 1 linear forwards;
+}
+@keyframes placeholderBorderFlashLightSlow {
+  0%, 100% { border-color: rgba(var(--accent-primary-rgb, 182, 104, 128), 0.2); } /* Default light */
+  50% { border-color: rgba(var(--accent-alert-rgb, 208, 118, 118), 0.4); } /* Light alert color */
+}
+
+/* Dark mode handled by base styles */
+.ascii-placeholder:not([data-theme="light"]) { /* ... */ }

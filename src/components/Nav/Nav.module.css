@@ -1,0 +1,987 @@
+/* src/components/Nav/Nav.module.css */
+
+/* ======================================== */
+/* Base Nav Container & Structure           */
+/* ======================================== */
+
+.navContainer {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* ADD fixed min-height (adjust value as needed) */
+    min-height: 56px;
+    /* OR set a fixed height: */
+    /* height: 56px; */
+    transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, min-height 0.4s ease;
+    background: linear-gradient(to bottom, var(--bg-nav-dark-start, rgba(var(--bg-primary-rgb), 0.96)) 0%, var(--bg-nav-dark-end, rgba(var(--bg-secondary-rgb), 0.98)) 100%);
+    backdrop-filter: blur(16px) saturate(110%);
+    -webkit-backdrop-filter: blur(16px) saturate(110%);
+    border-bottom: 1px solid var(--nav-border-dark-start, rgba(var(--accent-secondary-rgb), 0.15));
+    box-shadow: 0 6px 20px -3px var(--nav-shadow-dark, rgba(var(--shadow-color-rgb), 0.6));
+    z-index: 100;
+}
+
+.navScrolled {
+    background: linear-gradient(to bottom, var(--bg-nav-dark-scrolled-start, rgba(var(--bg-primary-rgb), 1.0)) 0%, var(--bg-nav-dark-scrolled-end, rgba(var(--bg-secondary-rgb), 1.0)) 100%);
+    border-bottom-color: rgba(var(--accent-primary-rgb), 0.35);
+    box-shadow: 0 10px 25px -5px var(--nav-shadow-dark, rgba(var(--shadow-color-rgb), 0.7));
+}
+
+:global(.light) .navContainer {
+    background: linear-gradient(to bottom, var(--bg-nav-light-start, rgba(var(--bg-primary-rgb), 0.97)) 0%, var(--bg-nav-light-end, rgba(var(--bg-secondary-rgb), 0.99)) 100%);
+    border-bottom: 1px solid var(--nav-border-light-start, rgba(var(--accent-secondary-rgb), 0.25));
+    box-shadow: 0 6px 20px -3px var(--nav-shadow-light, rgba(var(--shadow-color-rgb), 0.3));
+}
+
+:global(.light) .navScrolled {
+    background: linear-gradient(to bottom, var(--bg-nav-light-scrolled-start, rgba(var(--bg-primary-rgb), 1.0)) 0%, var(--bg-nav-light-scrolled-end, rgba(var(--bg-secondary-rgb), 1.0)) 100%);
+    border-bottom-color: rgba(var(--accent-primary-rgb), 0.35);
+    box-shadow: 0 10px 25px -5px var(--nav-shadow-light, rgba(var(--shadow-color-rgb), 0.4));
+}
+
+.dividerGradient {
+    background: linear-gradient(to bottom, transparent, rgba(var(--text-secondary-rgb), 0.4), transparent);
+    opacity: 0.6;
+    height: 1.75rem;
+    width: 1px;
+}
+
+.dividerGradientBlog {
+    background: linear-gradient(to bottom, transparent, rgba(var(--accent-secondary-rgb), 0.5), transparent);
+    opacity: 0.7;
+    height: 1.75rem;
+    width: 1px;
+}
+
+.noiseOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/noise.png');
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 150;
+    animation: noiseAnim 0.1s infinite steps(2);
+    mix-blend-mode: overlay;
+}
+
+.navBottomGlow {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    background: radial-gradient(ellipse at bottom, rgba(var(--accent-primary-rgb), 0.25) 0%, transparent 65%);
+    pointer-events: none;
+    z-index: -1;
+    filter: blur(10px);
+    transition: opacity var(--transition-medium);
+    opacity: 0.6;
+}
+
+.navBottomGlowScrolled {
+    opacity: 0.8;
+}
+
+/* ======================================== */
+/* Logo & Tagline Styles                    */
+/* ======================================== */
+.logoLink {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    color: transparent;
+    display: inline-block;
+    position: relative;
+    font-family: var(--font-display);
+    outline: none;
+    transition: filter var(--transition-fast);
+}
+
+.logoLink:hover {
+    color: transparent;
+    border-bottom: none !important;
+    filter: brightness(1.05);
+}
+
+.logoLinkDefault {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: transform var(--transition-bounce) 0.15s, filter var(--transition-medium);
+    filter: drop-shadow(1px 1px 0px rgba(var(--accent-secondary-rgb), 0.4));
+    will-change: filter, transform;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.logoLinkDefault:hover {
+    transform: scale(1.03) rotateY(-1deg) translateZ(5px);
+    filter: drop-shadow(2px 2px 0px rgba(var(--accent-secondary-rgb), 0.6)) brightness(1.1);
+}
+
+.logoLinkDefault .logoTextMain,
+.ManicAgencyLogoComponentInternalTextClass {
+    font-family: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    position: relative;
+    display: inline-block;
+    will-change: filter, transform, background-position, clip-path, content, opacity;
+    background: linear-gradient(135deg, #FF1B6B 10%, #FF70B3 50%, #FFBDE6 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 250% auto;
+    color: transparent;
+    animation: animatedGradientVibrant 5s ease-in-out infinite alternate, surrealTextGlitchV10 10s linear infinite alternate;
+    text-shadow: 1px 1px 0px rgba(255, 27, 107, 0.5), -1px -1px 0px rgba(var(--accent-secondary-rgb), 0.3);
+}
+
+.logoLinkBlog {}
+
+.logoLinkBlog:hover {
+    filter: brightness(1.1);
+}
+
+.tagline {
+    font-family: var(--font-mono);
+    letter-spacing: 0.04em;
+    opacity: 0.9;
+    transition: opacity var(--transition-fast), color var(--transition-fast);
+    color: var(--text-secondary);
+    text-shadow: 0 0 2px rgba(var(--text-secondary-rgb), 0.2);
+    line-height: 1.3;
+    flex-shrink: 1;
+    min-width: 0;
+    position: relative;
+    align-items: center;
+    gap: 0.3em;
+    white-space: nowrap;
+}
+
+.tagline:hover {
+    opacity: 1;
+    color: var(--text-primary);
+}
+
+.taglineBlog {
+    color: var(--text-secondary);
+    text-shadow: 0 0 4px rgba(var(--accent-secondary-rgb), 0.3);
+    animation: taglinePulseBlog 5s ease-in-out infinite alternate;
+}
+
+.tagline :global(span.animated-ascii) {
+    display: inline-block;
+    font-size: 1.1em;
+    color: var(--accent-highlight);
+    filter: var(--filter-glow-highlight);
+    animation: asciiPopV2 1.8s ease-in-out infinite;
+    vertical-align: baseline;
+    flex-shrink: 0;
+}
+
+.taglineBlog :global(span.animated-ascii) {
+    color: var(--accent-secondary);
+    filter: var(--filter-glow-secondary);
+}
+
+.taglineScopeIcon {
+    display: inline-block;
+    width: 0.9em;
+    height: 0.9em;
+    stroke: var(--accent-secondary);
+    stroke-width: 1.5;
+    opacity: 0.8;
+    vertical-align: -0.05em;
+    transition: transform var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.tagline:hover .taglineScopeIcon {
+    transform: rotate(-15deg) scale(1.1);
+}
+
+/* ====================================================== */
+/* Desktop Nav Links Styles (Hover Animation Strategy)    */
+/* ====================================================== */
+.navDesktop {
+    display: flex;
+    align-items: stretch;
+    gap: 0.5rem;
+}
+
+.navLink {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 1.6rem;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--text-secondary);
+    text-decoration: none !important;
+    border-bottom: none !important;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid transparent;
+    box-shadow: inset 0 1px 1px rgba(var(--text-primary-rgb), 0.02);
+    transition: color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+    will-change: color, transform, box-shadow;
+}
+
+.navLink:hover {
+    color: var(--text-primary);
+    box-shadow: inset 0 1px 1px rgba(var(--text-primary-rgb), 0.04);
+    transform: translateY(-2px);
+}
+
+.navLink:active {
+    transform: translateY(0px) scale(0.98);
+    box-shadow: inset 0px 1px 2px rgba(var(--shadow-color-rgb), 0.2);
+}
+
+.linkText {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.4s var(--transition-bounce), opacity 0.4s ease, color var(--transition-fast), filter var(--transition-medium);
+    will-change: transform, opacity, color, filter;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.hoverAnimationSvg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0.9) translateY(5px);
+    transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+    will-change: opacity, transform;
+    color: inherit;
+    stroke: currentColor;
+    stroke-width: 1;
+    fill: none;
+    overflow: visible;
+}
+
+.navLink:hover .hoverAnimationSvg,
+.navLink:focus-visible .hoverAnimationSvg {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.navLink[data-nav-id="services"]:hover .linkText {
+    color: var(--accent-primary);
+    text-shadow: 0 0 8px rgba(var(--accent-primary-rgb), 0.5);
+}
+
+.navLink[data-nav-id="services"] .hoverAnimationSvg {
+    color: var(--accent-primary);
+}
+
+.navLink[data-nav-id="projects"]:hover .linkText {
+    color: var(--accent-secondary);
+    filter: blur(0.5px) brightness(1.1);
+}
+
+.navLink[data-nav-id="projects"] .hoverAnimationSvg {
+    color: var(--accent-secondary);
+    filter: var(--filter-glow-secondary);
+}
+
+.navLink[data-nav-id="open-source"] .linkText {
+    position: relative;
+}
+
+.navLink[data-nav-id="open-source"] .linkText::before,
+.navLink[data-nav-id="open-source"] .linkText::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-primary);
+    clip: rect(auto, auto, auto, auto);
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+    color: var(--accent-alert);
+}
+
+.navLink[data-nav-id="open-source"] .linkText::before {
+    text-shadow: -1px 0 var(--accent-secondary);
+}
+
+.navLink[data-nav-id="open-source"] .linkText::after {
+    text-shadow: 1px 0 var(--accent-highlight);
+}
+
+.navLink[data-nav-id="open-source"]:hover .linkText {
+    color: var(--accent-alert);
+    animation: terminalFlicker 0.5s steps(2) infinite;
+    opacity: 1 !important;
+}
+
+.navLink[data-nav-id="open-source"]:hover .linkText::before,
+.navLink[data-nav-id="open-source"]:hover .linkText::after {
+    opacity: 1;
+    animation: terminalGlitch 0.08s linear infinite alternate;
+}
+
+.navLink[data-nav-id="open-source"]:hover .linkText::after {
+    animation-delay: 0.02s;
+}
+
+.navLink[data-nav-id="open-source"] .hoverAnimationSvg {
+    color: var(--accent-alert);
+    filter: var(--filter-glow-alert);
+}
+
+.navLinkBlog:hover .linkText {
+    color: var(--accent-highlight);
+    transform: scale(1.03) skew(-1deg);
+    text-shadow: 0 0 10px var(--accent-highlight, transparent);
+    opacity: 1;
+    filter: url(#blogLinkWarp) brightness(1.1);
+}
+
+.navLinkBlog .hoverAnimationSvg {
+    color: var(--accent-highlight);
+    filter: var(--filter-glow-highlight);
+}
+
+.navActive {
+    box-shadow: inset 0px 1px 2px rgba(var(--shadow-color-rgb), 0.15);
+}
+
+.navActive .linkText {
+    font-weight: 700;
+}
+
+.navLink[data-nav-id="services"].navActive .linkText {
+    color: var(--accent-primary);
+}
+
+.navLink[data-nav-id="projects"].navActive .linkText {
+    color: var(--accent-secondary);
+}
+
+.navLink[data-nav-id="open-source"].navActive .linkText {
+    color: var(--accent-alert);
+}
+
+.navLink[data-nav-id="blog"].navActive .linkText {
+    color: var(--accent-highlight);
+    text-shadow: 0 0 8px var(--accent-highlight, transparent);
+}
+
+.navActive .hoverAnimationSvg {
+    opacity: 0;
+    transform: scale(0.9) translateY(5px);
+    pointer-events: none;
+}
+
+.navLink:hover .hoverAnimationSvg .animated-stroke,
+.navLink:focus-visible .hoverAnimationSvg .animated-stroke,
+.navLink:hover .hoverAnimationSvg .animated-fill,
+.navLink:focus-visible .hoverAnimationSvg .animated-fill,
+.navLink:hover .hoverAnimationSvg .svg-pulse,
+.navLink:focus-visible .hoverAnimationSvg .svg-pulse,
+.navLink:hover .hoverAnimationSvg .svg-eyelid,
+.navLink:focus-visible .hoverAnimationSvg .svg-eyelid,
+.navLink:hover .hoverAnimationSvg .eye-scanline,
+.navLink:focus-visible .hoverAnimationSvg .eye-scanline,
+.navLink:hover .hoverAnimationSvg .svg-chevron,
+.navLink:focus-visible .hoverAnimationSvg .svg-chevron,
+.navLink:hover .hoverAnimationSvg .svg-quill-nib,
+.navLink:focus-visible .hoverAnimationSvg .svg-quill-nib,
+.navLink:hover .hoverAnimationSvg .quill-feather,
+.navLink:focus-visible .hoverAnimationSvg .quill-feather,
+.navLink:hover .hoverAnimationSvg .branch-left,
+.navLink:focus-visible .hoverAnimationSvg .branch-left,
+.navLink:hover .hoverAnimationSvg .branch-right,
+.navLink:focus-visible .hoverAnimationSvg .branch-right {
+    animation-play-state: running !important;
+}
+
+/* ====================================================== */
+/* Desktop Nav Links Styles (Icon Animation)              */
+/* ====================================================== */
+.navDesktop {
+    display: flex;
+    align-items: stretch;
+    gap: 0.5rem;
+}
+
+.navLink {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    min-height: 52px;
+    padding: 0 1rem;
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--text-secondary);
+    text-decoration: none !important;
+    border-bottom: none !important;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid transparent;
+    box-shadow: inset 0 1px 1px rgba(var(--text-primary-rgb), 0.02);
+    transition: color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+    will-change: color, transform, box-shadow;
+}
+
+.navLink:hover {
+    color: var(--text-primary);
+    box-shadow: inset 0 1px 1px rgba(var(--text-primary-rgb), 0.04);
+    transform: translateY(-2px);
+}
+
+.navLink:active {
+    transform: translateY(0px) scale(0.98);
+    box-shadow: inset 0px 1px 2px rgba(var(--shadow-color-rgb), 0.2);
+}
+
+.linkText {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.4s var(--transition-bounce), opacity 0.4s ease;
+    will-change: transform, opacity;
+    display: inline-block;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.navLink .nav-svg {
+    flex-shrink: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.3em;
+    height: 1.3em;
+    color: inherit;
+    transition: color var(--transition-fast), transform 0.3s var(--transition-bounce), filter var(--transition-fast);
+    will-change: color, transform, filter;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    fill: none;
+    overflow: visible;
+    transform-origin: center center;
+    transform: scale(1) rotate(0deg);
+}
+
+.navLink:hover .linkText,
+.navLink:focus-visible .linkText {
+    opacity: 1;
+}
+
+.navLink:hover .nav-svg,
+.navLink:focus-visible .nav-svg {
+    transform: scale(1.1) rotate(-5deg);
+    color: var(--text-primary);
+}
+
+.navActive {
+    box-shadow: inset 0px 1px 2px rgba(var(--shadow-color-rgb), 0.15);
+}
+
+.navActive .linkText {
+    opacity: 1;
+    font-weight: 700;
+}
+
+.navActive .nav-svg {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+.navLink:hover .animated-stroke,
+.navLink:focus-visible .animated-stroke,
+.navLink.navActive .animated-stroke,
+.navLink:hover .animated-fill,
+.navLink:focus-visible .animated-fill,
+.navLink.navActive .animated-fill,
+.navLink:hover .pulse-node,
+.navLink:focus-visible .pulse-node,
+.navLink.navActive .pulse-node,
+.navLink:hover .svg-eyelid,
+.navLink:focus-visible .svg-eyelid,
+.navLink.navActive .svg-eyelid,
+.navLink:hover .eye-scanline,
+.navLink:focus-visible .eye-scanline,
+.navLink.navActive .eye-scanline,
+.navLink:hover .svg-chevron,
+.navLink:focus-visible .svg-chevron,
+.navLink.navActive .svg-chevron {
+    animation-play-state: running !important;
+}
+
+.navLink[data-nav-id="services"].navActive {
+    color: var(--accent-primary);
+}
+
+.navLink[data-nav-id="services"].navActive .nav-svg {
+    color: var(--accent-primary);
+    filter: var(--filter-glow-primary);
+}
+
+.navLink[data-nav-id="projects"].navActive {
+    color: var(--accent-secondary);
+}
+
+.navLink[data-nav-id="projects"].navActive .nav-svg {
+    color: var(--accent-secondary);
+    filter: var(--filter-glow-secondary);
+}
+
+.navLink[data-nav-id="open-source"].navActive {
+    color: var(--accent-alert);
+}
+
+.navLink[data-nav-id="open-source"].navActive .nav-svg {
+    color: var(--accent-alert);
+    filter: var(--filter-glow-alert);
+}
+
+.navLink[data-nav-id="blog"].navActive {
+    color: var(--accent-highlight);
+}
+
+.navLink[data-nav-id="blog"].navActive .nav-svg {
+    color: var(--accent-highlight);
+    filter: var(--filter-glow-highlight);
+}
+
+.navLink[data-nav-id="blog"].navActive .linkText {
+    text-shadow: 0 0 8px var(--highlight-glow-color, transparent);
+}
+
+.navLinkBlog {
+    font-family: var(--font-mono);
+    text-transform: lowercase;
+    letter-spacing: 0.08em !important;
+}
+
+.navLinkBlog:hover .linkText {
+    transform: scale(1.03) skew(-1deg);
+    text-shadow: 0 0 10px var(--highlight-glow-color, transparent);
+    opacity: 1;
+}
+
+.navLinkBlog:hover .nav-svg {
+    transform: scale(1.15) rotate(5deg);
+    filter: var(--filter-glow-highlight);
+}
+
+.navLink[data-nav-id="open-source"] .linkText {
+    position: relative;
+}
+
+.navLink[data-nav-id="open-source"] .linkText::before,
+.navLink[data-nav-id="open-source"] .linkText::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-primary);
+    clip: rect(auto, auto, auto, auto);
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+    color: var(--accent-alert);
+}
+
+.navLink[data-nav-id="open-source"] .linkText::before {
+    text-shadow: -1px 0 var(--accent-secondary);
+}
+
+.navLink[data-nav-id="open-source"] .linkText::after {
+    text-shadow: 1px 0 var(--accent-highlight);
+}
+
+.navLink[data-nav-id="open-source"]:hover .linkText {
+    color: var(--accent-alert);
+    animation: terminalFlicker 0.5s steps(2) infinite;
+    opacity: 1 !important;
+}
+
+.navLink[data-nav-id="open-source"]:hover .linkText::before,
+.navLink[data-nav-id="open-source"]:hover .linkText::after {
+    opacity: 1;
+    animation: terminalGlitch 0.08s linear infinite alternate;
+}
+
+.navLink[data-nav-id="open-source"]:hover .linkText::after {
+    animation-delay: 0.02s;
+}
+
+/* ======================================== */
+/* Contact Button Styles (Robust/Brutalist) */
+/* ======================================== */
+.contactBtnFinal {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.6rem;
+    font-family: var(--font-display);
+    font-weight: 800;
+    color: var(--text-on-accent, #ffffff);
+    text-decoration: none !important;
+    border-bottom: none !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: 2px solid var(--accent-primary);
+    border-radius: var(--radius-md);
+    min-height: 52px;
+    background-color: var(--accent-primary);
+    cursor: pointer;
+    z-index: 1;
+    transition: var(--transition-medium);
+    transition-property: transform, box-shadow, background-color, border-color, color;
+    will-change: transform, box-shadow, background-color, border-color;
+    box-shadow: 3px 3px 0px 0px color-mix(in srgb, var(--accent-primary) 60%, black);
+    overflow: visible;
+}
+
+.contactBtnFinal .contactText {
+    position: relative;
+    z-index: 2;
+    transition: transform var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.contactBtnFinal .hourglassSvg {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
+    color: inherit;
+    animation: none;
+    vertical-align: -0.1em;
+}
+
+.contactBtnFinal:hover,
+.contactBtnFinal:focus-visible {
+    background-color: var(--accent-secondary);
+    border-color: var(--accent-secondary);
+    color: var(--text-on-accent, #ffffff);
+    box-shadow: 1px 1px 0px 0px color-mix(in srgb, var(--accent-secondary) 60%, black);
+    transform: translate(2px, 2px);
+    outline: none;
+}
+
+.contactBtnFinal:hover .contactText {
+    transform: scale(1.01);
+}
+
+.contactBtnFinal:hover .hourglassSvg,
+.contactBtnFinal:focus-visible .hourglassSvg {
+    animation: hourglassRotate 1.6s linear infinite;
+    opacity: 1;
+    transform: scale(1);
+}
+
+@keyframes hourglassRotate {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    25% {
+      transform: rotate(90deg) scale(1.1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1);
+    }
+    75% {
+      transform: rotate(270deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+  }
+  
+
+.contactBtnFinal:active {
+    transform: translate(3px, 3px);
+    background-color: color-mix(in srgb, var(--accent-secondary) 80%, black);
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
+    border-color: color-mix(in srgb, var(--accent-secondary) 80%, black);
+}
+
+.contactBtnFinal:active .hourglassSvg {
+    animation-duration: 0.3s;
+}
+
+/* ======================================== */
+/* Mobile Menu & Button Styles              */
+/* ======================================== */
+.mobileMenuBtn {
+    padding: 0.6rem;
+    border: 1px solid rgba(var(--text-primary-rgb), 0.1);
+    background: rgba(var(--bg-tertiary-rgb), 0.3);
+    cursor: pointer;
+    z-index: 110;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    box-shadow: inset 1px 1px 2px rgba(var(--text-primary-rgb), 0.05), inset -1px -1px 2px rgba(var(--shadow-color-rgb), 0.3), 0 2px 5px rgba(var(--shadow-color-rgb), 0.2);
+    transition: all var(--transition-fast);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.mobileMenuBtn:hover {
+    background: rgba(var(--bg-tertiary-rgb), 0.5);
+    transform: scale(1.05);
+    border-color: rgba(var(--text-primary-rgb), 0.2);
+}
+
+.mobileMenuBtn:active {
+    transform: scale(0.95);
+    background: rgba(var(--bg-tertiary-rgb), 0.2);
+    box-shadow: inset 1px 1px 3px rgba(var(--shadow-color-rgb), 0.5);
+}
+
+.hamburgerIconWrapper,
+.flourishIconWrapper {
+    position: absolute;
+    width: 26px;
+    height: 20px;
+    transition: opacity 0.3s var(--transition-medium), transform 0.3s var(--transition-medium);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hamburger specific styles */
+.hamburgerIconWrapper {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hamburgerIconWrapper .bar {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-primary);
+    border-radius: 3px;
+    transition: transform 0.3s var(--transition-bounce), opacity 0.3s ease-in-out;
+    transform-origin: center;
+    box-shadow: 0 0 3px rgba(var(--accent-primary-rgb), 0.5);
+}
+
+.hamburgerIconWrapper .bar1 { top: 0; }
+.hamburgerIconWrapper .bar2 { top: 50%; transform: translateY(-50%); }
+.hamburgerIconWrapper .bar3 { bottom: 0; }
+
+
+/* Hamburger -> X animation - more pronounced */
+.mobileMenuBtn.menuOpen .bar1 {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    background-color: var(--accent-highlight);
+}
+
+.mobileMenuBtn.menuOpen .bar2 {
+    opacity: 0;
+    transform: translateY(-50%) scaleX(0);
+}
+
+.mobileMenuBtn.menuOpen .bar3 {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+    background-color: var(--accent-highlight);
+}
+
+
+/* Flourish Icon Container (hidden by default) */
+.flourishIconWrapper {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.flourishIcon {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    fill: none;
+}
+
+/* --- Animation on Menu Open --- */
+.mobileMenuBtn.menuOpen .hamburgerIconWrapper {
+    transform: scale(0.8);
+}
+
+.mobileMenuBtn.menuOpen .flourishIconWrapper {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Blog Mode Specific Styling (No change needed here if the visibility is handled by the above) */
+.mobileMenuBtn.blogModeActive .hamburgerIconWrapper {
+    transform: scale(0.8);
+}
+
+
+.mobileMenuBtn.blogModeActive .flourishIconWrapper { opacity: 1; transform: scale(1); }
+
+/* Visibility toggle between open/close icons */
+.mobileMenuBtn .iconOpen { opacity: 1; transform: rotate(0deg) scale(1); }
+.mobileMenuBtn .iconClose { opacity: 0; transform: rotate(-90deg) scale(0.8); }
+.mobileMenuBtn.menuOpen .iconOpen { opacity: 0; transform: rotate(90deg) scale(0.8); }
+.mobileMenuBtn.menuOpen .iconClose { opacity: 1; transform: rotate(0deg) scale(1); }
+
+/* Mobile Menu Dropdown */
+.mobileMenuWrapper {
+    position: absolute;
+    top: calc(100% + 1px); /* Position below nav, slight overlap or gap based on border */
+    left: 0; right: 0;
+    background-color: rgba(var(--bg-secondary-rgb), 0.99);
+    border: 1px solid rgba(var(--accent-primary-rgb), 0.2);
+    border-top: none;
+    backdrop-filter: blur(18px) saturate(130%);
+    -webkit-backdrop-filter: blur(18px) saturate(130%);
+    box-shadow: 0 20px 40px rgba(var(--shadow-color-rgb), 0.4);
+    border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+    z-index: 105; /* Below button, above page content */
+    overflow: hidden;
+
+    /* --- INITIAL HIDDEN STATE (Using Transform & Opacity) --- */
+    opacity: 0;
+    transform: scaleY(0.95) translateY(-10px);
+    transform-origin: top center;
+    pointer-events: none; /* Prevent interaction when hidden */
+
+    /* --- TRANSITION (Animates opening/closing) --- */
+    transition: transform 0.3s var(--transition-bounce),
+                opacity 0.25s ease;
+}
+/* Light Mode Mobile Menu */
+:global(.light) .mobileMenuWrapper {
+     background-color: rgba(var(--bg-secondary-rgb), 0.99);
+     border: 1px solid rgba(var(--accent-primary-rgb), 0.2);
+     border-top: none;
+     box-shadow: 0 20px 40px var(--nav-shadow-light, rgba(var(--shadow-color-rgb), 0.4));
+}
+
+
+/* Add 'mobileMenuOpen' class to wrapper when menu is open */
+.mobileMenuOpen {
+    /* --- VISIBLE STATE --- */
+    opacity: 1;
+    transform: scaleY(1) translateY(0);
+    pointer-events: auto; /* Allow interaction */
+}
+
+.mobileMenuContent { padding-bottom: 1.5rem; padding-top: 0.5rem; }
+.mobileNavLink { /* Individual mobile links */
+    display: flex; align-items: center; padding: 1rem 1.5rem;
+    color: var(--text-secondary);
+    text-decoration: none !important; border-bottom: none !important; /* Override base 'a' */
+    font-size: 1.1rem; /* Slightly smaller */
+    font-weight: 600;
+    transition: var(--transition-medium); transition-property: color, border-left-color, background-color, letter-spacing, transform;
+    border-left: 4px solid transparent;
+    letter-spacing: 0.05em;
+}
+/* Emoji icons */
+.mobileNavLink::before { content: ''; display: inline-block; width: 1.5em; text-align: center; margin-right: 0.8em; font-size: 1.1em; transition: transform var(--transition-fast); }
+.mobileNavLink[data-nav-id="services"]::before { content: '⚡'; }
+.mobileNavLink[data-nav-id="projects"]::before { content: '💡'; }
+.mobileNavLink[data-nav-id="open-source"]::before { content: '🛠️'; }
+.mobileNavLink[data-nav-id="blog"]::before { content: '📖'; } /* Added Blog Emoji */
+
+
+/* Mobile link hover/focus/active */
+.mobileNavLink:hover, .mobileNavLink:focus-visible {
+    color: var(--text-primary);
+    background-color: rgba(var(--accent-primary-rgb), 0.1);
+    border-left-color: var(--accent-primary);
+    letter-spacing: 0.07em;
+    transform: translateX(4px);
+    outline: none;
+}
+.mobileNavLink:hover::before, .mobileNavLink:focus-visible::before { transform: scale(1.3) rotate(-10deg); }
+.mobileNavLink:active { background-color: rgba(var(--accent-primary-rgb), 0.15); transform: translateX(2px); }
+
+/* Active page indicator styles */
+.mobileNavLink.navActive { /* Use navActive class */
+    font-weight: 700; border-left-width: 5px;
+}
+/* Add active color based on section */
+.mobileNavLink[data-nav-id="services"].navActive { border-left-color: var(--accent-primary); color: var(--accent-primary); background-color: rgba(var(--accent-primary-rgb), 0.08); }
+.mobileNavLink[data-nav-id="projects"].navActive { border-left-color: var(--accent-secondary); color: var(--accent-secondary); background-color: rgba(var(--accent-secondary-rgb), 0.08); }
+.mobileNavLink[data-nav-id="open-source"].navActive { border-left-color: var(--accent-alert); color: var(--accent-alert); background-color: rgba(var(--accent-alert-rgb), 0.08); }
+.mobileNavLink[data-nav-id="blog"].navActive { border-left-color: var(--accent-highlight); color: var(--accent-highlight); background-color: rgba(var(--accent-highlight-rgb), 0.08); }
+/* Apply active color to emoji */
+.mobileNavLink[data-nav-id="services"].navActive::before { color: var(--accent-primary); }
+.mobileNavLink[data-nav-id="projects"].navActive::before { color: var(--accent-secondary); }
+.mobileNavLink[data-nav-id="open-source"].navActive::before { color: var(--accent-alert); }
+.mobileNavLink[data-nav-id="blog"].navActive::before { color: var(--accent-highlight); }
+
+
+.mobileContact { /* Style for mobile contact button */
+    /* Inherits .contactBtnFinal styles via className composition */
+    margin-left: 1.5rem; /* Match padding */
+    margin-right: 1.5rem; /* Add right margin for spacing */
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.05rem; /* Slightly smaller */
+    padding: 0.8rem 1.5rem;
+    display: block; /* Make it block for margin auto or text-align */
+    text-align: center;
+}
+.mobileMenuFooter { /* Footer inside mobile menu */
+    text-align: center; padding: 1.5rem 1rem; font-size: 0.8rem; font-family: var(--font-mono);
+    color: var(--text-muted); background-color: rgba(var(--bg-primary-rgb), 0.7);
+    border-top: 1px solid rgba(var(--accent-primary-rgb), 0.1); letter-spacing: 0.05em;
+}
+
+
+/* ======================================== */
+/* Responsive Visibility Control            */
+/* ======================================== */
+/* Handled by Tailwind classes (md:flex, md:hidden) in Nav.tsx */
+/* No extra CSS needed here if using Tailwind approach */
+
+
+/* ======================================== */
+/* Ornate Hamburger Icon Styling (Blog Mode)*/
+/* ======================================== */
+/* Handled by conditional class (.blogModeActive) and */
+/* icon visibility toggling within .mobileMenuBtn styles above */
