@@ -308,3 +308,79 @@ export const IconOrnateSearch = createIcon(<> <circle cx="11" cy="11" r="7" stro
 export const IconOrnateFilter = createIcon(<> <path d="M22 3 H 2 L 10 12.46 V 19 L 14 21 V 12.46 L 22 3 z" strokeWidth="1"/> <path d="M2 4 C 1 6, 1 8, 2 10 M22 4 C 23 6, 23 8, 22 10" strokeWidth="0.5"/> </>, "0 0 24 24", 1);
 export const IconOrnateSliders = createIcon(<> <line x1="4" y1="21" x2="4" y2="14" /> <line x1="4" y1="10" x2="4" y2="3" /> <line x1="12" y1="21" x2="12" y2="12" /> <line x1="12" y1="8" x2="12" y2="3" /> <line x1="20" y1="21" x2="20" y2="16" /> <line x1="20" y1="12" x2="20" y2="3" /> <line x1="1" x2="7" y1="14" y2="14" /> <line x1="9" x2="15" y1="8" y2="8" /> <line x1="17" x2="23" y1="16" y2="16" /> <path d="M1 16 C 0 14, 0 12, 1 10 M7 16 C 8 14, 8 12, 7 10 M9 10 C 8 8, 8 6, 9 4 M15 10 C 16 8, 16 6, 15 4 M17 18 C 16 16, 16 14, 17 12 M23 18 C 24 16, 24 14, 23 12" strokeWidth="0.5"/> </>, "0 0 24 24", 1.5);
 export const IconOrnateX = createIcon(<> <path d="M18 6 L 6 18 M 6 6 L 18 18" strokeWidth="1.5"/> <path d="M18 8 C 21 9, 22 11, 21 13 M6 8 C 3 9, 2 11, 3 13 M8 6 C 9 3, 11 2, 13 3 M8 18 C 9 21, 11 22, 13 21" strokeWidth="0.5" opacity="0.8"/> </>, "0 0 24 24", 1.5);
+
+
+
+// --- NEW ORNAMENTAL MENU ICON (Open State Placeholder) ---
+export const IconOrnamentalMenuOpen: React.FC<IconProps> = ({ className, ...props }) => {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24" // Consistent viewBox
+        fill="none"
+        stroke="currentColor" // Color set by CSS
+        strokeWidth="1.2"    // Slightly thinner stroke for potential detail
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className} // Pass down className
+        {...props}            // Pass down other SVG props
+      >
+        {/* Top Bar with Flourishes */}
+        <path d="M 5 7 Q 4 6, 6 6 H 18 Q 20 6, 19 7" />
+        {/* Optional: Small decorative elements */}
+        <circle cx="12" cy="6" r="0.5" fill="currentColor" stroke="none" />
+  
+        {/* Middle Bar - Can be simpler or slightly styled */}
+        <path d="M 4 12 H 20" />
+  
+        {/* Bottom Bar with Flourishes */}
+        <path d="M 5 17 Q 4 18, 6 18 H 18 Q 20 18, 19 17" />
+        {/* Optional: Small decorative elements */}
+        <circle cx="12" cy="18" r="0.5" fill="currentColor" stroke="none" />
+  
+        {/* Example subtle side flourishes */}
+         <path d="M6 6 Q 4 9, 6 12" strokeWidth="0.8" />
+         <path d="M18 6 Q 20 9, 18 12" strokeWidth="0.8" />
+         <path d="M6 18 Q 4 15, 6 12" strokeWidth="0.8" />
+         <path d="M18 18 Q 20 15, 18 12" strokeWidth="0.8" />
+      </svg>
+    );
+  };
+
+  
+
+// --- NEW ORNAMENTAL CLOSE ICON (X State Placeholder) ---
+export const IconOrnamentalMenuClose: React.FC<IconProps> = ({ className, ...props }) => {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24" // Consistent viewBox
+        fill="none"
+        stroke="currentColor" // Color set by CSS
+        strokeWidth="1.2"    // Slightly thinner stroke
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className} // Pass down className
+        {...props}            // Pass down other SVG props
+      >
+        {/* Central Decorative Element */}
+        <circle cx="12" cy="12" r="1.5" fill="none" />
+  
+        {/* Main X Lines with Curves/Flourishes */}
+        {/* Line 1 (Top-left to Bottom-right) */}
+        <path d="M 7 7 Q 6 6, 6 7 L 17 18 Q 18 18, 18 17" />
+         {/* Example Flourish at ends */}
+         <path d="M7 7 C 6 8, 5 7, 5 6" strokeWidth="0.8"/>
+         <path d="M17 18 C 18 17, 19 17, 19 18" strokeWidth="0.8"/>
+  
+        {/* Line 2 (Bottom-left to Top-right) */}
+        <path d="M 7 17 Q 6 18, 6 17 L 17 6 Q 18 6, 18 7" />
+         {/* Example Flourish at ends */}
+         <path d="M7 17 C 6 16, 5 17, 5 18" strokeWidth="0.8"/>
+         <path d="M17 6 C 18 7, 19 7, 19 6" strokeWidth="0.8"/>
+  
+      </svg>
+    );
+  };
+  
+
