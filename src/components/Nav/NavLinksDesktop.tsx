@@ -9,14 +9,15 @@ import {
     ProjectsHoverAnimation,
     OpenSourceHoverAnimation,
     BlogHoverAnimation
+    // Add AboutHoverAnimation etc. if you create specific icons
 } from '../Icons'; // Adjust path if needed
 import styles from './Nav.module.css';
 
 interface NavLinksDesktopProps {
     isBlog: boolean;
     isActivePath: (path: string) => boolean;
-    closeMenu: () => void; // Keep prop if needed elsewhere
-    handleContactClick: () => void; // Keep prop if needed elsewhere
+    closeMenu: () => void;
+    handleContactClick: () => void;
 }
 
 const NavLinksDesktop: React.FC<NavLinksDesktopProps> = ({ isBlog, isActivePath, closeMenu, handleContactClick }) => {
@@ -26,7 +27,7 @@ const NavLinksDesktop: React.FC<NavLinksDesktopProps> = ({ isBlog, isActivePath,
             gap-x-1 lg:gap-x-2
             ${styles.navDesktop}
         `}>
-            {/* Regular Links */}
+            {/* --- Regular Links (Shown when NOT on a blog page) --- */}
             {!isBlog && (
                 <>
                     {/* Services Link */}
@@ -53,18 +54,25 @@ const NavLinksDesktop: React.FC<NavLinksDesktopProps> = ({ isBlog, isActivePath,
                             <OpenSourceHoverAnimation className={styles.hoverAnimationSvg} />
                         </a>
                     </Link>
+
+                    {/* Consider adding /process, /team, /mission links here */}
                 </>
             )}
 
-         {/* AboutLink */}
-         <Link href="/blog/tutorials/contribute" legacyBehavior>
-                <a className={`${styles.navLink} ${styles.navLinkBlog} ${isActivePath('/blog') ? styles.navActive : ''}`} data-nav-id="blog" onClick={closeMenu}>
-                    <span className={styles.linkText} data-text="about">about</span>
-                </a>
-            </Link>
+             {/* --- "About" Link (Shown ONLY on blog pages) --- */}
+             {/* Note: href and text are based on your provided code */}
+             {isBlog && ( // <<< --- ADDED THIS CONDITION
+                 <Link href="/blog/tutorials/contribute" legacyBehavior>
+                     <a className={`${styles.navLink} ${styles.navLinkBlog} ${isActivePath('/blog/tutorials/contribute') ? styles.navActive : ''}`} data-nav-id="about" onClick={closeMenu}>
+                         <span className={styles.linkText} data-text="about">about</span>
+                         {/* Add hover animation if desired */}
+                     </a>
+                 </Link>
+             )} {/* // <<< --- ENDED THIS CONDITION */}
 
 
-            {/* Blog Link */}
+            {/* Blog Link (Currently always shown after non-blog links or About link) */}
+            {/* If this should *also* only show on blog pages, wrap it like the "About" link */}
             <Link href="/blog" legacyBehavior>
                 <a className={`${styles.navLink} ${styles.navLinkBlog} ${isActivePath('/blog') ? styles.navActive : ''}`} data-nav-id="blog" onClick={closeMenu}>
                     <span className={styles.linkText} data-text="Blog">Blog</span>
@@ -72,10 +80,10 @@ const NavLinksDesktop: React.FC<NavLinksDesktopProps> = ({ isBlog, isActivePath,
                 </a>
             </Link>
 
-            {/* Contact Button */}
+            {/* Contact Button (Always shown) */}
             <Link href="/contact" legacyBehavior>
                  <a
-                     className={`${styles.contactBtnFinal} ${isBlog ? styles.blogContact : ''} ml-1 lg:ml-2`} // Added conditional blog style
+                     className={`${styles.contactBtnFinal} ${isBlog ? styles.blogContact : ''} ml-1 lg:ml-2`}
                      data-nav-id="contact"
                      onClick={closeMenu}
                  >
@@ -86,7 +94,7 @@ const NavLinksDesktop: React.FC<NavLinksDesktopProps> = ({ isBlog, isActivePath,
                  </a>
             </Link>
 
-            {/* **MODIFIED:** Conditional Theme Toggle */}
+            {/* Theme Toggle (Always shown) */}
             <div className={`ml-1 lg:ml-2 flex items-center self-center ${styles.themeToggleNavWrapper}`}>
                  {isBlog ? (
                      <OrnamentalThemeToggle size="md" />
