@@ -1,0 +1,287 @@
+3:I[4707,[],""]
+6:I[36423,[],""]
+7:I[12025,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5214","static/chunks/5214-799ba3c3b5d6a85f.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3498","static/chunks/3498-6db732f9c38ca810.js","3185","static/chunks/app/layout-feac030d53146c95.js"],"ThemeProvider"]
+8:I[9873,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5214","static/chunks/5214-799ba3c3b5d6a85f.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3498","static/chunks/3498-6db732f9c38ca810.js","3185","static/chunks/app/layout-feac030d53146c95.js"],"default"]
+9:I[82889,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5214","static/chunks/5214-799ba3c3b5d6a85f.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3498","static/chunks/3498-6db732f9c38ca810.js","3185","static/chunks/app/layout-feac030d53146c95.js"],"Nav"]
+a:I[79229,["2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","9160","static/chunks/app/not-found-be0e1788a49b9521.js"],"default"]
+b:I[53498,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5214","static/chunks/5214-799ba3c3b5d6a85f.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3498","static/chunks/3498-6db732f9c38ca810.js","3185","static/chunks/app/layout-feac030d53146c95.js"],"default"]
+c:I[16049,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5214","static/chunks/5214-799ba3c3b5d6a85f.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3498","static/chunks/3498-6db732f9c38ca810.js","3185","static/chunks/app/layout-feac030d53146c95.js"],"default"]
+d:I[31214,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5214","static/chunks/5214-799ba3c3b5d6a85f.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3498","static/chunks/3498-6db732f9c38ca810.js","3185","static/chunks/app/layout-feac030d53146c95.js"],"default"]
+4:["category","tools","d"]
+5:["slug","portapack","d"]
+0:["2DDZgV4rkdPkJzLcgGdpm",[[["",{"children":["projects",{"children":[["category","tools","d"],{"children":[["slug","portapack","d"],{"children":["__PAGE__?{\"category\":\"tools\",\"slug\":\"portapack\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["category","tools","d"],{"children":[["slug","portapack","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/3b36c3043ab85ede.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/39abf9b3110b1323.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/1e2558bf1cf8f812.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/359a11d202baa9c1.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/a1fa5d1c52e3b11a.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/28b2d3b76ce00b58.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n                __variable_d65c78\n                __variable_de8755\n                __variable_c24da7\n                __variable_088c69\n                __variable_881712\n                __variable_5ac533\n            ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){ function getInitialTheme() { try { const storedTheme = window.localStorage.getItem('theme'); if (storedTheme) return storedTheme; } catch(e){} const prefersDark = window.matchMedia('(prefers-color-scheme: dark)'); if (prefersDark.matches) return 'dark'; return 'light'; } const theme = getInitialTheme(); document.documentElement.classList.add(theme); document.documentElement.style.setProperty('color-scheme', theme); })();"}}]}],["$","body",null,{"children":["$","$L7",null,{"children":[["$","$L8",null,{}],["$","$L9",null,{}],["$","main",null,{"role":"main","className":"","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$La",null,{}],"notFoundStyles":[]}]}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{}]]}]}]]}]],null],null],["$Le",null]]]]
+f:I[86198,["3954","static/chunks/d3ac728e-b4495703dbbd00a1.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","9121","static/chunks/9121-8bc7d74fe48e236f.js","3695","static/chunks/3695-a809c4028595fe56.js","7346","static/chunks/7346-e8bcc0868075d4b5.js","9632","static/chunks/9632-dc8a05dfecd56d7b.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-2f2d98db2fe9bda1.js"],"default"]
+10:T737,
+# PortaPack
+
+## Why we built PortaPack
+
+Ever needed to share a web thing but got tangled in the "how do I send this?" mess? Us too! We wanted something that lets you share interactive prototypes with anyone — no server setup, no "it works on my machine" drama. Just a thing you can **drag into Slack**, **attach to emails**, or **toss on a USB stick** that works perfectly offline.
+
+So we made **PortaPack**:  
+
+> A magic little bundler that squishes your entire website into one `.html` file — super portable and totally bulletproof.
+
+## The Problem
+
+Let's be real: modern websites are a jungle of files, dependencies, CDNs, and weird asset pipelines. Great for fancy production sites! Not so great when you need to:
+
+- Share quick demos with non-techy folks
+- Make self-contained archives that won't break tomorrow
+- Create offline snapshots for testing or presentations
+- Package apps for kiosks or offline devices
+
+And tools like `webpack`, `vite`, or `parcel`? They weren't built with "toss it in an email" portability in mind.
+
+## The Solution
+
+PortaPack is a **super simple CLI tool** (with a Node API too!) that crawls through your site, grabs all the bits and pieces, cleverly tucks them inside, and spits out a single HTML file with **everything** included — even the fonts!
+
+```bash
+npx portapack ./index.html -o bundle.html
+```
+
+You get a magical self-contained webpage with:
+
+✅ All your styles baked in
+✅ All your JavaScript tucked inside
+✅ Fonts and images embedded
+✅ Optional minification if you want it smaller
+✅ Works offline and no CORS headaches
+
+## Who's It For?
+
+- Designers showing off interactive mockups
+- Developers sharing prototypes that actually work
+- QA folks needing reliable test environments
+- Kiosk builders making offline experiences
+- Anyone tired of saying "hang on, it should work if you..."
+11:Tb4a,
+![MagicLogger]
+
+## What's MagicLogger?
+
+A powerful, zero-config logging library that works beautifully in both Node.js and browsers. Get rich styling, colors, multiple output formats, and drop-in compatibility with popular logging libraries.
+
+> Simplify your logging with a single library that works everywhere.
+
+## Key Features
+
+- **🎨 Rich Styling** — Colors, bold, italic, underline in terminal and browser console
+- **📊 Visual Elements** — Progress bars and tables directly in your console
+- **📝 Multiple Transports** — Console, file, browser storage, and remote HTTP endpoints
+- **🔌 Drop-in Compatibility** — Replace console, Winston, Bunyan, and Pino seamlessly
+- **🧠 Structured Logging** — Support for both text and JSON formats
+- **⚡ Zero Config & Zero Dependencies** — Works out of the box with sensible defaults
+- **🌐 Environment Aware** — Automatically adapts to Node.js or browser
+- **🧵 Multiple Module Formats** — ESM, CommonJS, and TypeScript declarations
+
+## Quick Start
+
+```javascript
+import { Logger } from 'magiclogger';
+
+// Create a new logger with default settings
+const logger = new Logger();
+
+// Log with different levels
+logger.info('Application starting up...');
+logger.warn('Connection pool nearing capacity');
+logger.error('Database connection failed');
+logger.debug('User authentication details');
+logger.success('Email sent successfully');
+
+// Add visual elements
+logger.header('SYSTEM STATUS');
+logger.progressBar(75);  // 75% progress bar
+
+// Structured logging
+logger.info('User logged in', { userId: 123, ip: '192.168.1.1' });
+```
+
+## Powerful Transports
+
+MagicLogger sends your logs wherever you need them:
+
+```javascript
+const logger = new Logger({
+  // Log to console with colors
+  console: { 
+    enabled: true, 
+    useColors: true 
+  },
+  
+  // Save logs to files (Node.js)
+  file: { 
+    enabled: true, 
+    directory: './logs' 
+  },
+  
+  // Store logs in browser localStorage
+  browserStorage: { 
+    enabled: true, 
+    maxEntries: 1000 
+  },
+  
+  // Send critical logs to your server
+  remote: {
+    enabled: true,
+    endpoint: 'https://logs.example.com/api/logs',
+    levels: ['error', 'warn']
+  }
+});
+```
+
+## Replace Existing Loggers
+
+Enhance your existing logging code without refactoring:
+
+```javascript
+// Enhance the standard console
+import { enhanceConsole } from 'magiclogger';
+enhanceConsole();
+
+// Now standard console has new powers
+console.header('APPLICATION STATUS');
+console.success('All systems operational');
+
+// Create Winston/Bunyan/Pino compatible loggers
+import { createWinstonCompatible } from 'magiclogger';
+const logger = createWinstonCompatible({ verbose: true });
+```
+
+## Coming Soon!
+
+MagicLogger is currently in development and will be available soon. Stay tuned for its release!
+
+Built with ❤️ by [Manic Agency](https://manic.agency) - We do experimental design & development12:Ta60,
+# Logomaker
+
+## What's Logomaker?
+
+A free, open-source text logo generator that works entirely in your browser! Create beautiful, animated text logos with 400+ fonts, export them as vector SVGs or high-quality PNGs, and share your designs with a unique URL.
+
+> Logomaker is more than just a tool - it's our experiment in ✨ Vibe Coding ✨ (Human+AI collaboration).
+
+## Key Features
+
+- **400+ Built-in Fonts** - Plus add your own! All fonts work offline
+- **Dynamic Effects & Animations** - Add bounces, pulses, glitches and more
+- **Pro Export Options:**
+  - **SVG:** Clean vectors with embedded fonts and animations
+  - **PNG:** High-quality images with transparency
+  - **Frame Sequences:** Export animations as individual PNG frames
+- **Shareable URLs** - Generate links that capture your exact design
+- **100% Client-Side** - Works offline, respects your privacy
+- **Zero Dependencies** - No npm or build tools needed to use it
+
+## Why We Made This
+
+We needed a quick way to prototype text logos for projects without firing up Illustrator or After Effects. Something lightweight that clients could play with directly in the browser.
+
+But we also wanted to experiment with a new development approach:
+
+## ✨ Vibe Coding: AI + Human Collaboration ✨
+
+Logomaker is a creative experiment in human-AI collaboration. Over 90% of the codebase originated from AI (GPT-4, Claude 3, and Gemini models), guided by our technical prompt engineering and refined through iterative testing.
+
+Each AI system worked through their respective web UIs (not APIs), letting us test how they approach complex software design through conversation. We discovered:
+
+- AI excels at generating functional code skeletons and solving focused problems
+- Humans are essential for architecture, quality control, and creative direction
+- The "vibe" between human and AI creates a unique development workflow
+
+## Two Ways To Use It
+
+### 1. Online Version (Fastest)
+
+The [live demo](https://manicinc.github.io/logomaker/) loads instantly and fetches font data only when needed.
+
+### 2. Portable Version (Works Anywhere)
+
+Download the single-file version with all fonts embedded - perfect for offline use, workshops, or easy sharing.
+
+## Technical Tricks
+
+- **Smart Font Loading:** Uses IndexedDB caching and chunked loading online, embedded Base64 data offline
+- **Vector Animation:** CSS animations embedded directly in SVG exports
+- **Intelligent Randomization:** Press "R" to generate coherent, weighted random styles
+
+## Try It Now!
+
+[Launch Logomaker](https://manicinc.github.io/logomaker/) or check out the [GitHub repo](https://github.com/manicinc/logomaker) for more details.
+13:Tcc7,
+# SynthGPT: The AI-Powered Creative Development Assistant
+
+SynthGPT represents a new approach to AI-assisted development, specifically designed for creative coding and experimental digital projects. Unlike general-purpose coding assistants, SynthGPT understands the unique challenges and workflows that arise when technology meets creative expression.
+
+## The Problem We're Solving
+
+Creative developers often work at the intersection of multiple disciplines—code, design, user experience, and experimental technologies. Traditional development tools and AI assistants typically excel at solving well-defined technical problems but struggle with the more fluid, exploratory nature of creative work.
+
+Some common pain points we identified:
+
+1. **Context switching between tools** disrupts creative flow
+2. **Translation between creative vision and technical implementation** is often laborious
+3. **Prototyping experimental ideas** requires significant technical overhead
+4. **Pushing the boundaries** of what's possible means there are often no existing solutions to reference
+
+SynthGPT was built to address these challenges by serving as a collaborative partner throughout the creative development process.
+
+## Core Features
+
+### Contextual Code Understanding
+
+SynthGPT doesn't just understand programming languages—it understands the intent behind your code. By analyzing your project structure, dependencies, and coding patterns, it can provide suggestions that align with your existing approach rather than generic solutions.
+
+```javascript
+// Example of how SynthGPT integrates with your workflow
+import { useSynthGPT } from '@synthstack/core';
+
+// The assistant understands your entire project context
+const { suggest, explain, refactor } = useSynthGPT({
+  projectScope: './src',
+  contextWindow: 12000,
+  stylePreferences: {
+    codeStyle: 'functional',
+    componentPattern: 'atomic',
+    aestheticDirection: 'brutalist'
+  }
+});
+
+// Get contextually relevant suggestions
+const improvedAnimation = await suggest.animation('hover-effect', {
+  currentImplementation: hoverEffect,
+  performanceConstraint: 'mobile-first',
+  visualComplexity: 'medium'
+});
+```
+
+### Multi-modal Communication
+
+Creative development often involves visual thinking. SynthGPT can:
+
+- **Interpret sketches and wireframes** to generate corresponding code
+- **Visualize code output** before you implement it
+- **Suggest visual alternatives** based on your code
+- **Map user flows** to technical architecture
+
+### Generative Prototyping
+
+One of SynthGPT's most powerful features is its ability to rapidly generate functional prototypes based on high-level descriptions. This allows you to:
+
+1. **Explore multiple approaches** to solving a creative challenge
+2. **Test ideas quickly** without investing significant development time
+3. **Iterate based on feedback** with minimal technical overhead
+
+## Technical Architecture
+
+SynthGPT is built on a three-layered architecture:
+
+1. **Core Language Model** - A fine-tuned large language model specialized for creative coding contexts
+2. **Multimodal Bridge** - Handles translation between different representation formats (code, visuals, natural language)
+3. **Integration Layer** - Connects directly to your development environment and tools
+
+2:["$","$Lf",null,{"project":{"slug":"portapack","title":"PortaPack — One-File Web Experiences","description":"Why we built a fun bundler that squishes your entire site into a single HTML file.","longDescription":"","date":"2025-04","modifiedDate":"2025-04-20T02:55:24-07:00","category":"tools","tags":["html","cli","bundler","offline","product","featured"],"image":"/portapack.jpg","images":[],"link":"https://manicinc.github.io/portapack/","github":"https://github.com/manicinc/portapack","featured":true,"content":"$10","technologies":[],"stats":[],"status":"completed","team":[],"testimonials":[],"bgColor":"","textColor":"","sortOrder":99,"draft":false,"toc":[{"level":1,"text":"PortaPack","slug":"portapack"},{"level":2,"text":"Why we built PortaPack","slug":"why-we-built-portapack"},{"level":2,"text":"The Problem","slug":"the-problem"},{"level":2,"text":"The Solution","slug":"the-solution"},{"level":2,"text":"Who's It For?","slug":"whos-it-for"}]},"relatedProjects":[{"slug":"magiclogger","title":"Magiclogger — Colorful Node / Browser Logger","description":"A powerful, zero-config logging library for Node.js and browsers with rich styling, multiple formats, and drop-in compatibility.","longDescription":"","date":"2025-04","modifiedDate":"2025-04-20T02:55:24-07:00","category":"tools","tags":["javascript","nodejs","logging","development","featured"],"image":"/images/placeholder.png","images":[],"link":"https://manic.agency/magiclogger","github":"https://github.com/manicinc/magiclogger","featured":false,"content":"$11","technologies":[],"stats":[],"status":"completed","team":[],"testimonials":[],"bgColor":"","textColor":"","sortOrder":99,"draft":true,"score":3},{"slug":"logomaker","title":"Logomaker — Free Text Logo Generator","description":"A fun, client-side text logo generator with 400+ fonts, animations, and offline support - built as an AI collaboration experiment.","longDescription":"","date":"2025-03","modifiedDate":"2025-04-20T02:55:24-07:00","category":"tools","tags":["design","typography","generative","ai","experiment","vibe coding"],"image":"/manic.gif","images":[],"link":"https://manicinc.github.io/logomaker/","github":"https://github.com/manicinc/logomaker","featured":false,"content":"$12","technologies":[],"stats":[],"status":"completed","team":[],"testimonials":[],"bgColor":"","textColor":"","sortOrder":99,"draft":false,"score":2},{"slug":"synthgpt","title":"SynthGPT","description":"An AI development assistant that integrates deeply with your workflow to accelerate creative coding projects.","longDescription":"A specialized language model that understands code, design principles, and creative constraints. It doesn't just generate code—it helps you explore possibilities, refine ideas, and overcome technical challenges through natural conversation.","date":"2025-02-15","modifiedDate":"2025-04-20T02:55:24-07:00","category":"ai","tags":["AI","Development","Creative Coding","Open Source","featured"],"image":"/images/placeholder.png","images":[],"link":"","github":"https://github.com/manicinc/synthgpt","featured":true,"content":"$13","technologies":["Python","TensorFlow","React","Node.js"],"stats":[{"label":"GitHub Stars","value":"2.4k"},{"label":"Monthly Users","value":"18k+"},{"label":"Contributions","value":123}],"status":"ongoing","team":[{"name":"Alex Mercer","role":"Lead Developer","link":"https://github.com/alexmercer"},{"name":"Jordan Chen","role":"Machine Learning Engineer","link":"https://github.com/jordanchen"},{"name":"Mia Rodriguez","role":"UI/UX Designer"}],"testimonials":[{"quote":"SynthGPT has completely transformed how our team develops interactive experiences. It's like having a creative partner that thinks alongside you.","author":"Sarah Johnson","role":"CTO at Interactive Studios"},{"quote":"The way it understands both code and creative constraints has helped us bridge the gap between our design and development teams.","author":"Michael Wong","role":"Creative Director at Digital Flux"}],"bgColor":"#0a0b13","textColor":"#7f5af0","sortOrder":1,"draft":true,"score":1}]}]
+e:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"PortaPack — One-File Web Experiences | Project Details | Manic Agency"}],["$","meta","3",{"name":"description","content":"Why we built a fun bundler that squishes your entire site into a single HTML file."}],["$","meta","4",{"name":"keywords","content":"html,cli,bundler,offline,product,featured"}],["$","meta","5",{"name":"creator","content":"Manic Inc"}],["$","meta","6",{"name":"publisher","content":"Manic Inc"}],["$","link","7",{"rel":"canonical","href":"https://your-domain.com/projects/tools/portapack"}],["$","meta","8",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","9",{"property":"og:title","content":"PortaPack — One-File Web Experiences | Project Details | Manic Agency"}],["$","meta","10",{"property":"og:description","content":"Why we built a fun bundler that squishes your entire site into a single HTML file."}],["$","meta","11",{"property":"og:url","content":"https://your-domain.com/projects/tools/portapack"}],["$","meta","12",{"property":"og:site_name","content":"Your Agency Name"}],["$","meta","13",{"property":"og:image","content":"https://your-domain.com/portapack.jpg"}],["$","meta","14",{"property":"og:image:width","content":"1200"}],["$","meta","15",{"property":"og:image:height","content":"630"}],["$","meta","16",{"property":"og:image:alt","content":"PortaPack — One-File Web Experiences | Project Details"}],["$","meta","17",{"property":"og:type","content":"article"}],["$","meta","18",{"property":"article:published_time","content":"2025-04-01T00:00:00.000Z"}],["$","meta","19",{"property":"article:modified_time","content":"2025-04-20T09:55:24.000Z"}],["$","meta","20",{"property":"article:section","content":"tools"}],["$","meta","21",{"property":"article:tag","content":"html"}],["$","meta","22",{"property":"article:tag","content":"cli"}],["$","meta","23",{"property":"article:tag","content":"bundler"}],["$","meta","24",{"property":"article:tag","content":"offline"}],["$","meta","25",{"property":"article:tag","content":"product"}],["$","meta","26",{"property":"article:tag","content":"featured"}],["$","meta","27",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","28",{"name":"twitter:title","content":"PortaPack — One-File Web Experiences | Project Details | Manic Agency"}],["$","meta","29",{"name":"twitter:description","content":"Why we built a fun bundler that squishes your entire site into a single HTML file."}],["$","meta","30",{"name":"twitter:image","content":"https://your-domain.com/portapack.jpg"}],["$","link","31",{"rel":"shortcut icon","href":"/favicon-16x16.png"}],["$","link","32",{"rel":"icon","href":"/favicon.ico"}],["$","link","33",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","meta","34",{"name":"next-size-adjust"}]]
+1:null
