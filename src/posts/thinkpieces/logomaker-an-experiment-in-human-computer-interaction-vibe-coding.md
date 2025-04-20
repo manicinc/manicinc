@@ -14,7 +14,7 @@ featured: true
 
 ## Intro
 
-For the TL;DR go down [here](http://localhost:3000/blog/thinkpieces/logomaker-an-experiment-in-human-computer-interaction-vibe-coding#tldr) to see a list of useful lessons.
+For the TL;DR go down [here](/blog/thinkpieces/logomaker-an-experiment-in-human-computer-interaction-vibe-coding#tldr) to see a list of useful lessons.
 
 Time of writing I'm in software for the upper half yet still far decade. Comes a sly shock the necessity to say as there're non-junior engineers (mid-level, working for multiple *years*) who might've got away with never handwriting a class, function or even LOC with no gen AI.
  
