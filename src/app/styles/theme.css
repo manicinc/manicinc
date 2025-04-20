@@ -18,12 +18,6 @@
       --font-script-blog-orig: "Dancing Script", cursive;
       --font-meta-blog-orig: "Lato", sans-serif;
  
-      /* --- NEW Specific Blog Fonts (Override via body.is-blog) --- */
-      --font-meta-blog: "EB Garamond", serif;
-      --font-heading-blog: "Playfair Display", serif;
-      --font-body-blog: "Merriweather", serif;
-      --font-script-blog: "Dancing Script", cursive;
- 
       /* --- Intro Neon & Font Variables (Dark Theme) --- */
       --font-decorative: 'Cinzel Decorative', 'Playfair Display', serif;
       --intro-neon-text: #00ffff;      /* Cyan */

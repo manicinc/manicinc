@@ -20,7 +20,7 @@ export default function DisqusComments({
   
   // Get the full URL for Disqus
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://manic.agency';
-  const fullUrl = `${siteUrl}${postUrl}`;
+  const fullUrl = `${siteUrl}`;
   
   return (
     <div className={`disqus-comments-container ${className}`}>
@@ -30,7 +30,7 @@ export default function DisqusComments({
       </div>
       
       <DiscussionEmbed
-        shortname="manic-agency" // Your Disqus shortname
+        shortname="www-manic-agency" // Your Disqus shortname
         config={{
           url: fullUrl,
           identifier: postIdentifier,
