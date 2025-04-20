@@ -1,5 +1,4 @@
 // src/app/layout.tsx
-import type { Metadata } from 'next';
 import { ReactNode } from "react";
 import Script from 'next/script';
 // Ensure fonts are correctly imported/configured
@@ -12,6 +11,7 @@ import LayoutClient from "./LayoutClient";
 import { ThemeProvider } from '@/context/ThemeContext';
 import DynamicFavicon from '@/components/Base/DynamicFavicon';
 import ScrollToTopHandler from '@/components/ScrollBtns/ScrollToTopHandler';
+import type { Metadata, Viewport } from 'next';
 
 // Import Styles
 import "./styles/globals.css"; // Includes theme.css via @import or direct rules
@@ -26,6 +26,16 @@ const ebGaramond = EB_Garamond({ subsets: ['latin'], weight: ['400', '700'], sty
 const playfairDisplay = Playfair_Display({ subsets: ['latin'], weight: ['700'], variable: '--font-heading-blog', display: 'swap' });
 const merriweather = Merriweather({ subsets: ['latin'], weight: ['400'], style: ['normal', 'italic'], variable: '--font-body-blog', display: 'swap' });
 const dancingScript = Dancing_Script({ subsets: ['latin'], weight: ['400'], variable: '--font-script-blog', display: 'swap' });
+
+export const viewport: Viewport = {
+    themeColor: [
+      { media: '(prefers-color-scheme: light)', color: '#FBF6EF' },
+      { media: '(prefers-color-scheme: dark)', color: '#22182B' },
+    ],
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  };
 
 // Generate default metadata for the root layout
 export const metadata: Metadata = generateSEOMetadata('/');

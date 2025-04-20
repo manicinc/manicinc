@@ -1,44 +1,62 @@
 // src/components/FooterBranding.tsx
-'use client'; // Needs client for usePathname
+'use client';
 
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import LookingGlassLogo from '../LookingGlassLogo/LookingGlassLogo'; // Import the new component
+import LookingGlassLogo from '../Nav/LookingGlassLogo/LookingGlassLogo';
 
 const FooterBranding = () => {
   const pathname = usePathname();
   const isBlog = pathname.startsWith('/blog');
 
-  const BrandLogo = isBlog ? LookingGlassLogo : () => (
-    <Link href="/" aria-label="Manic Agency Home" className="block footer-logo standard-logo-wrapper group logo-glitch"> {/* Add logo-glitch class */}
+  // Conditional logo component
+  const BrandLogo = isBlog ? () => (
+    <div className="looking-glass-wrapper mb-1">
+      <LookingGlassLogo scale={0.85} /> {/* Slightly smaller for footer */}
+    </div>
+  ) : () => (
+    <Link href="/" aria-label="Manic Agency Home" className="block footer-logo standard-logo-wrapper group logo-glitch">
        <Image
-        src="/logo-transparent.png" // Path from /public
+        src="/logo-transparent.png"
         alt="Manic Agency Logo"
-        width={80} // Adjust size as needed
-        height={80} // Adjust size
+        width={80}
+        height={80}
         className="mx-auto transition-transform duration-300 ease-out group-hover:scale-105"
-        // Add priority if it's above the fold, otherwise lazy loading is default
        />
     </Link>
   );
 
-  const brandName = isBlog ? "Manic Agency" : "Manic Agency";
-  const tagline = isBlog ? "Curiouser and curiouser..." : "Mania Driven Development"; // Themed taglines
+  // Conditional branding content
+  const brandName = isBlog ? "Looking Glass" : "Manic Agency";
+  const tagline = isBlog ? "Curiouser and curiouser..." : "Metaverses intersect here";
 
   return (
     <div className="footer-branding text-center">
       <div className="mb-3">
         <BrandLogo />
       </div>
-      {/* Conditionally render name with link to respective home */}
-      <Link href={isBlog ? "" : "/"} className={`inline-block font-bold text-lg mb-1 transition-colors hover:text-[color:var(--accent-highlight)] ${ isBlog ? 'font-script-blog' : 'font-display'}`}>
-        {/* {brandName} */}
-      </Link>
-      {/* Tagline */}
-      <p className={`text-xs font-mono text-[color:var(--text-muted)] opacity-80 tracking-wide ${isBlog ? 'italic' : ''}`}>
-        {tagline} {/* Apply glitch effect via CSS if needed */}
+      
+      {/* Brand name with conditional styling */}
+      <h3 className={`
+        text-lg font-bold mb-1 
+        transition-colors duration-300
+        ${isBlog 
+          ? 'font-script-blog text-[color:var(--accent-highlight)] hover:text-[color:var(--accent-secondary)]' 
+          : 'font-display text-[color:var(--text-primary)] hover:text-[color:var(--accent-primary)]'}
+      `}>
+        {brandName}
+      </h3>
+      
+      {/* Tagline with conditional styling */}
+      <p className={`
+        text-xs opacity-80 tracking-wide
+        ${isBlog 
+          ? 'font-meta-blog italic text-[color:var(--accent-secondary)]' 
+          : 'font-mono text-[color:var(--text-muted)]'}
+      `}>
+        {tagline}
       </p>
     </div>
   );
