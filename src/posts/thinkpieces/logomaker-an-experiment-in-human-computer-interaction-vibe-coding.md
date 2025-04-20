@@ -518,7 +518,7 @@ No server required to run the app (not necessarily with a multitude of building 
 
 This wasn't scientific but given every function was written by an LLM (by intention) it's safe to say well over 90% of the codebase was done by generative AI. At least 80% of the docs you see in the repo were written by gen AI. 0% of this article was written by AI.
 
-:::banner{backgroundColor="var(--accent-vibrant)
+:::banner{backgroundColor="var(--accent-vibrant)"}
 but...
 :::
 
