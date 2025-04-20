@@ -1,7 +1,7 @@
 // src/components/FooterNavigation.tsx
 "use client"; // May not be needed if 'navigation' constant is simple
 import React from 'react';
-import { navigation } from '@/constants'; // Assuming path and structure are correct
+import { footerNavigationData as navigation } from '@/lib/constants'; // Assuming path and structure are correct
 import Link from 'next/link';
 
 const FooterNavigation: React.FC = () => {
