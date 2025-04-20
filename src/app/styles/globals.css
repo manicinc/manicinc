@@ -11,34 +11,25 @@
    
    
    /* ==========================================================================
-      2. Font Imports (@import or @font-face)
-      ========================================================================== */
-   
-   /* --- Google Fonts --- */
-   /* Include ALL fonts needed across themes/sections */
-   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lato:wght@400;700&family=IBM+Plex+Mono:wght@400;600&family=Playfair+Display:wght@400;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400;700&display=swap');
-   @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
-   
-   /* --- Local Font Definition (Mona Sans) --- */
-   /* Make sure the path is correct relative to your PUBLIC directory or this CSS file location */
-   @font-face {
-     font-family: "Mona Sans";
-     font-weight: 200 900; /* Define the weight range for variable font */
-     font-display: block; /* Or 'swap'. 'block' prevents layout shift initially */
-     font-style: normal;
-     font-stretch: 75% 125%; /* Define the stretch range if applicable */
-     /* Adjust path if needed - assumes fonts folder relative to this CSS file's location */
-     src: url("../../fonts/Mona-Sans.var.woff2") format("woff2-variations"), /* Modern variable format */
-          url("../../fonts/Mona-Sans.var.woff2") format("woff2"); /* Basic woff2 fallback */
-   }
-   
-   /* ==========================================================================
       3. Core Theme & Base Styles
          - Imports theme.css which defines CSS variables for light/dark modes
            and includes base HTML element styling (body, headings, links, etc.)
       ========================================================================== */
    @import "./theme.css"; /* Defines CSS variables and base element styles */
    
+   
+   /* --- Local Font Definition (Mona Sans) --- */
+   /* Make sure the path is correct relative to your PUBLIC directory or this CSS file location */
+   @font-face {
+      font-family: "Mona Sans";
+      font-weight: 200 900; /* Define the weight range for variable font */
+      font-display: block; /* Or 'swap'. 'block' prevents layout shift initially */
+      font-style: normal;
+      font-stretch: 75% 125%; /* Define the stretch range if applicable */
+      /* Adjust path if needed - assumes fonts folder relative to this CSS file's location */
+      src: url("../../fonts/Mona-Sans.var.woff2") format("woff2-variations"), /* Modern variable format */
+           url("../../fonts/Mona-Sans.var.woff2") format("woff2"); /* Basic woff2 fallback */
+    }
    
    /* ==========================================================================
       4. Component & Utility Styles
@@ -59,8 +50,9 @@
    @import "./animations.css";
    @import "./mobile.css";
    @import "./markdownStyles.css"; /* Styles for Markdown rendering */
-   /* @import "./readingMode.css"; */ /* If needed */
-   
+   @import "./projectMarkdown.css";
+   @import "./readingMode.css"; /* If needed */
+   @import "./comments.css";
    
    /* ==========================================================================
       5. Optional Global Settings

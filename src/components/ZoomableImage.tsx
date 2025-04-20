@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 interface ZoomableImageProps {
   src: string;
@@ -27,6 +27,11 @@ export default function ZoomableImage({
 }: ZoomableImageProps) {
   const [isZoomed, setIsZoomed] = useState(false);
   const [modalId, setModalId] = useState('');
+  const [zoomLevel, setZoomLevel] = useState(1);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const imageRef = useRef<HTMLImageElement>(null);
 
   // Generate unique ID for modal
   useEffect(() => {
@@ -37,6 +42,9 @@ export default function ZoomableImage({
   const openZoom = () => {
     if (!zoomable) return;
     setIsZoomed(true);
+    // Reset zoom level and position when opening
+    setZoomLevel(1);
+    setPosition({ x: 0, y: 0 });
     // Prevent body scrolling when zoomed
     document.body.style.overflow = 'hidden';
   };
@@ -47,6 +55,51 @@ export default function ZoomableImage({
     document.body.style.overflow = '';
   };
 
+  // Zoom in function
+  const zoomIn = () => {
+    setZoomLevel(prev => Math.min(prev + 0.25, 4));
+  };
+
+  // Zoom out function
+  const zoomOut = () => {
+    setZoomLevel(prev => Math.max(prev - 0.25, 0.5));
+  };
+
+  // Reset zoom and position
+  const resetZoom = () => {
+    setZoomLevel(1);
+    setPosition({ x: 0, y: 0 });
+  };
+
+  // Handle drag start
+  const handleDragStart = (e: React.MouseEvent<HTMLImageElement>) => {
+    if (zoomLevel <= 1) return; // Only allow dragging when zoomed in
+    setIsDragging(true);
+    setDragStart({ 
+      x: e.clientX - position.x, 
+      y: e.clientY - position.y 
+    });
+  };
+
+  // Handle drag move
+  const handleDragMove = (e: MouseEvent) => {
+    if (!isDragging) return;
+    
+    // Calculate new position
+    const newX = e.clientX - dragStart.x;
+    const newY = e.clientY - dragStart.y;
+    
+    // Limit dragging based on zoom level and image size
+    setPosition({ x: newX, y: newY });
+    
+    e.preventDefault();
+  };
+
+  // Handle drag end
+  const handleDragEnd = () => {
+    setIsDragging(false);
+  };
+
   // Close on ESC key
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
@@ -55,9 +108,39 @@ export default function ZoomableImage({
       }
     };
     
+    // Setup drag handlers
+    const handleMouseMove = (e: MouseEvent) => {
+      handleDragMove(e);
+    };
+    
+    const handleMouseUp = () => {
+      handleDragEnd();
+    };
+    
+    // Setup wheel zoom
+    const handleWheel = (e: WheelEvent) => {
+      if (isZoomed) {
+        if (e.deltaY < 0) {
+          zoomIn();
+        } else {
+          zoomOut();
+        }
+        e.preventDefault();
+      }
+    };
+    
     window.addEventListener('keydown', handleEsc);
-    return () => window.removeEventListener('keydown', handleEsc);
-  }, [isZoomed]);
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseup', handleMouseUp);
+    window.addEventListener('wheel', handleWheel, { passive: false });
+    
+    return () => {
+      window.removeEventListener('keydown', handleEsc);
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUp);
+      window.removeEventListener('wheel', handleWheel);
+    };
+  }, [isZoomed, isDragging, dragStart]);
 
   // Get CSS classes based on props
   const getSizeClass = () => {
@@ -72,10 +155,10 @@ export default function ZoomableImage({
 
   const getAlignClass = () => {
     switch (align) {
-      case 'left': return 'image-left';
-      case 'center': return 'image-center';
-      case 'right': return 'image-right';
-      default: return 'image-center';
+      case 'left': return 'align-left';
+      case 'center': return 'align-center';
+      case 'right': return 'align-right';
+      default: return 'align-center';
     }
   };
 
@@ -108,22 +191,70 @@ export default function ZoomableImage({
       modal.className = `image-zoom-overlay ${isZoomed ? 'active' : ''}`;
       modal.innerHTML = `
         <div class="image-zoom-container">
-          <img src="${src}" alt="${alt}" class="image-zoom-img" />
+          <div class="zoom-image-wrapper">
+            <img 
+              src="${src}" 
+              alt="${alt}" 
+              class="image-zoom-img" 
+              style="transform: scale(${zoomLevel}) translate(${position.x / zoomLevel}px, ${position.y / zoomLevel}px)"
+            />
+          </div>
           ${caption ? `<div class="image-zoom-caption">${caption}</div>` : ''}
+          <div class="zoom-controls">
+            <button class="zoom-btn zoom-out-btn" aria-label="Zoom out">−</button>
+            <button class="zoom-btn zoom-reset-btn" aria-label="Reset zoom">1:1</button>
+            <button class="zoom-btn zoom-in-btn" aria-label="Zoom in">+</button>
+          </div>
         </div>
         <button class="image-zoom-close" aria-label="Close image">&times;</button>
       `;
       
       document.body.appendChild(modal);
       
-      // Add click handler to close on background click
+      // Add click handlers
+      const closeButton = modal.querySelector('.image-zoom-close');
+      if (closeButton) {
+        closeButton.addEventListener('click', closeZoom);
+      }
+      
+      const zoomInButton = modal.querySelector('.zoom-in-btn');
+      if (zoomInButton) {
+        zoomInButton.addEventListener('click', zoomIn);
+      }
+      
+      const zoomOutButton = modal.querySelector('.zoom-out-btn');
+      if (zoomOutButton) {
+        zoomOutButton.addEventListener('click', zoomOut);
+      }
+      
+      const resetButton = modal.querySelector('.zoom-reset-btn');
+      if (resetButton) {
+        resetButton.addEventListener('click', resetZoom);
+      }
+      
+      // Get the image element to attach drag handlers
+      const zoomImg = modal.querySelector('.image-zoom-img') as HTMLImageElement;
+      if (zoomImg) {
+        zoomImg.addEventListener('mousedown', (e) => {
+          if (zoomLevel > 1) {
+            setIsDragging(true);
+            setDragStart({ 
+              x: e.clientX - position.x, 
+              y: e.clientY - position.y 
+            });
+            e.preventDefault();
+          }
+        });
+      }
+      
+      // Background click to close
       modal.addEventListener('click', (e) => {
-        if (e.target === modal || (e.target as HTMLElement).classList.contains('image-zoom-close')) {
+        if (e.target === modal) {
           closeZoom();
         }
       });
       
-      // Prevent propagation from image clicks
+      // Prevent propagation from container clicks
       const imgContainer = modal.querySelector('.image-zoom-container');
       if (imgContainer) {
         imgContainer.addEventListener('click', (e) => {
@@ -131,20 +262,35 @@ export default function ZoomableImage({
         });
       }
       
+      // Update the image transform whenever zoom or position changes
+      const updateImageTransform = () => {
+        const img = document.querySelector(`#${modalId} .image-zoom-img`) as HTMLImageElement;
+        if (img) {
+          img.style.transform = `scale(${zoomLevel}) translate(${position.x / zoomLevel}px, ${position.y / zoomLevel}px)`;
+        }
+      };
+      
+      // Set up a mutation observer to update the image when the DOM changes
+      const observer = new MutationObserver(() => {
+        updateImageTransform();
+      });
+      
+      observer.observe(modal, { attributes: true, childList: true, subtree: true });
+      
       return () => {
+        observer.disconnect();
         const modalElement = document.getElementById(modalId);
         if (modalElement) {
           document.body.removeChild(modalElement);
         }
       };
     }
-  }, [isZoomed, src, alt, caption, modalId]);
+  }, [isZoomed, src, alt, caption, modalId, zoomLevel, position]);
 
   // Combine all classes
   const imageClasses = `
     content-image 
     ${getSizeClass()} 
-    ${getAlignClass()} 
     ${getEffectClass()} 
     ${getBorderClass()} 
     ${zoomable ? 'cursor-zoom-in' : ''} 
@@ -162,8 +308,9 @@ export default function ZoomableImage({
   }
 
   return (
-    <figure className={`image-with-caption ${getAlignClass()}`}>
+    <figure className={`markdown-image-wrapper ${getAlignClass()}`}>
       <img
+        ref={imageRef}
         src={src}
         alt={parsedAlt}
         className={imageClasses}
@@ -171,7 +318,7 @@ export default function ZoomableImage({
         loading="lazy"
       />
       {parsedCaption && (
-        <figcaption className="text-center text-sm text-text-muted mt-2">
+        <figcaption>
           {parsedCaption}
         </figcaption>
       )}
@@ -184,8 +331,8 @@ export default function ZoomableImage({
           left: 0;
           right: 0;
           bottom: 0;
-          background-color: rgba(10, 11, 19, 0.9);
-          backdrop-filter: blur(5px);
+          background-color: rgba(10, 11, 19, 0.95);
+          backdrop-filter: blur(8px);
           z-index: 9999;
           display: flex;
           align-items: center;
@@ -202,59 +349,124 @@ export default function ZoomableImage({
         
         .image-zoom-container {
           position: relative;
-          max-width: 90vw;
-          max-height: 90vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          max-width: 95vw;
+          max-height: 95vh;
+        }
+        
+        .zoom-image-wrapper {
+          overflow: hidden;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          max-width: 95vw;
+          max-height: 85vh;
         }
         
         .image-zoom-img {
-          max-width: 100%;
-          max-height: 90vh;
+          max-width: 95vw;
+          max-height: 85vh;
           object-fit: contain;
-          transform: scale(0.95);
+          transform-origin: center;
           transition: transform 0.3s ease;
-          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
-        }
-        
-        .image-zoom-overlay.active .image-zoom-img {
-          transform: scale(1);
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+          cursor: move;
+          will-change: transform;
+          user-select: none;
         }
         
         .image-zoom-caption {
-          position: absolute;
-          bottom: -40px;
-          left: 0;
-          right: 0;
+          margin-top: 15px;
           text-align: center;
           color: var(--text-primary);
-          padding: 10px;
-          font-size: 14px;
+          padding: 10px 20px;
+          font-size: 16px;
           background-color: rgba(29, 32, 56, 0.7);
-          border-radius: 0 0 8px 8px;
+          border-radius: 8px;
+          max-width: 90%;
+          font-family: var(--font-body-blog);
+          font-style: italic;
+        }
+        
+        .zoom-controls {
+          position: absolute;
+          bottom: -70px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          gap: 15px;
+          background-color: rgba(29, 32, 56, 0.7);
+          padding: 8px 16px;
+          border-radius: 30px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .zoom-btn {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: rgba(var(--accent-primary-rgb), 0.3);
+          color: white;
+          font-size: 20px;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          border: none;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        .zoom-btn:hover {
+          background: rgba(var(--accent-primary-rgb), 0.5);
+          transform: scale(1.1);
+        }
+        
+        .zoom-btn:active {
+          transform: scale(0.95);
+        }
+        
+        .zoom-reset-btn {
+          font-size: 14px;
+          width: auto;
+          padding: 0 15px;
+          border-radius: 20px;
         }
         
         .image-zoom-close {
           position: absolute;
           top: 20px;
           right: 20px;
-          width: 40px;
-          height: 40px;
+          width: 44px;
+          height: 44px;
           border-radius: 50%;
-          background: rgba(229, 49, 112, 0.2);
+          background: rgba(var(--accent-alert-rgb), 0.3);
           color: white;
           display: flex;
           align-items: center;
           justify-content: center;
           cursor: pointer;
-          font-size: 24px;
-          transition: background-color 0.3s ease;
+          font-size: 28px;
           border: none;
+          transition: background 0.3s ease, transform 0.2s ease;
+          z-index: 10;
         }
         
         .image-zoom-close:hover {
-          background: rgba(229, 49, 112, 0.4);
+          background: rgba(var(--accent-alert-rgb), 0.5);
+          transform: scale(1.1);
         }
         
-        /* Glitch effect for images */
+        .image-zoom-close:active {
+          transform: scale(0.95);
+        }
+        
+        /* Improved Glitch effect */
         .image-glitch {
           position: relative;
           overflow: hidden;
@@ -278,13 +490,13 @@ export default function ZoomableImage({
         
         .image-glitch::before {
           transform: translateX(-5px);
-          background-color: rgba(229, 49, 112, 0.2);
+          background-color: rgba(var(--accent-primary-rgb), 0.2);
           mix-blend-mode: multiply;
         }
         
         .image-glitch::after {
           transform: translateX(5px);
-          background-color: rgba(127, 90, 240, 0.2);
+          background-color: rgba(var(--accent-highlight-rgb), 0.2);
           mix-blend-mode: screen;
         }
         
@@ -297,6 +509,43 @@ export default function ZoomableImage({
         @keyframes glitch {
           0%, 100% { opacity: 0.2; }
           50% { opacity: 0.3; }
+        }
+        
+        /* Make regular images bigger by default */
+        .image-medium {
+          max-width: 650px; /* Increased from 500px */
+          height: auto;
+        }
+        
+        .image-large {
+          max-width: 950px; /* Increased from 800px */
+          height: auto;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+          .zoom-controls {
+            bottom: -60px;
+          }
+          
+          .zoom-btn {
+            width: 36px;
+            height: 36px;
+            font-size: 18px;
+          }
+          
+          .image-zoom-close {
+            top: 10px;
+            right: 10px;
+          }
+          
+          .image-zoom-img {
+            max-height: 80vh;
+          }
+          
+          .image-medium, .image-large {
+            max-width: 100%;
+          }
         }
       `}</style>
     </figure>
