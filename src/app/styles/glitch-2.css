@@ -1,0 +1,198 @@
+/* Mania Title - Very Slow & Dynamic Glitch with Color Spectrum */
+.mania-title {
+    font-family: var(--font-mono);
+    font-size: 1.2rem; /* Slightly Bigger */
+    color: var(--accent-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.15em; /* Adjust spacing for new size */
+    display: inline-block;
+    position: relative;
+  }
+  
+  @media (min-width: 768px) {
+    .mania-title {
+      font-size: 1.4rem; /* Even Bigger on larger screens */
+    }
+  }
+  
+  .mania-glitch-text {
+    position: relative;
+  }
+  
+  .mania-glitch-text span::before,
+  .mania-glitch-text span::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--bg-primary);
+  }
+  
+  .mania-glitch-text span::before {
+    left: 1px; /* Subtle offset */
+    animation: slowDynamicGlitchBefore 10s infinite alternate; /* Very slow animation */
+    opacity: 0.9;
+  }
+  
+  .mania-glitch-text span::after {
+    left: -1px; /* Subtle offset */
+    animation: slowDynamicGlitchAfter 10.5s infinite alternate; /* Slightly offset timing */
+    opacity: 0.9;
+  }
+  
+  @keyframes slowDynamicGlitchBefore {
+    0%, 15%, 90%, 100% {
+      transform: translate(0) skewX(0deg);
+      text-shadow: -1px 0 var(--accent-highlight);
+      clip-path: var(--slice-1);
+      filter: brightness(100%) hue-rotate(0deg); /* Base hue */
+    }
+    5%, 25% {
+      transform: translate(1px, -0.5px) skewX(5deg) scale(1.01, 0.99);
+      text-shadow: -1.5px 0 var(--vibrant-color-1), 0.5px 0 var(--accent-highlight), 0 0 3px var(--vibrant-color-1); /* Subtle glow */
+      clip-path: var(--slice-3);
+      filter: brightness(110%) hue-rotate(30deg); /* Shift hue */
+    }
+    10%, 35%, 70% {
+      transform: translate(-0.5px, 1px) skewX(-3deg) scale(0.99, 1.01);
+      text-shadow: 0.5px 0 var(--accent-highlight), -1.5px 0 var(--cool-color-1);
+      clip-path: var(--slice-2);
+      filter: brightness(95%) hue-rotate(-20deg); /* Shift hue */
+    }
+    45%, 60%, 80% {
+      transform: translate(0.8px, -0.2px) skewX(2deg);
+      text-shadow: -0.8px 0 var(--cool-color-2), 0 0 5px var(--cool-color-2); /* Subtle glow */
+      clip-path: var(--slice-4);
+      filter: brightness(105%) hue-rotate(15deg); /* Shift hue */
+    }
+    55%, 75% {
+      transform: translate(-0.2px, 0.5px) skewX(-1deg) scale(1.02, 0.98);
+      text-shadow: 0.8px 0 var(--vibrant-color-2);
+      clip-path: var(--slice-1);
+      filter: brightness(115%) hue-rotate(-10deg); /* Shift hue */
+    }
+  }
+  
+  @keyframes slowDynamicGlitchAfter {
+    0%, 10%, 85%, 100% {
+      transform: translate(0) skewX(0deg);
+      text-shadow: 1px 0 var(--accent-primary);
+      clip-path: var(--slice-4);
+      filter: brightness(100%) hue-rotate(0deg); /* Base hue */
+    }
+    5%, 30%, 75% {
+      transform: translate(-0.7px, 0.3px) skewX(-4deg) scale(0.98, 1.02);
+      text-shadow: 1.2px 0 var(--cool-color-1), -0.3px 0 var(--accent-primary), 0 0 4px var(--cool-color-1); /* Subtle glow */
+      clip-path: var(--slice-2);
+      filter: brightness(90%) hue-rotate(-25deg); /* Shift hue */
+    }
+    15%, 45%, 65% {
+      transform: translate(0.3px, -0.8px) skewX(2deg) scale(1.01, 0.99);
+      text-shadow: -0.3px 0 var(--accent-primary), 1.2px 0 var(--vibrant-color-1);
+      clip-path: var(--slice-1);
+      filter: brightness(105%) hue-rotate(20deg); /* Shift hue */
+    }
+    55%, 70%, 95% {
+      transform: translate(-0.6px, 0.1px) skewX(-2deg);
+      text-shadow: 0.6px 0 var(--vibrant-color-2), 0 0 6px var(--vibrant-color-2); /* Subtle glow */
+      clip-path: var(--slice-3);
+      filter: brightness(110%) hue-rotate(10deg); /* Shift hue */
+    }
+    25%, 80% {
+      transform: translate(0.5px, 0.6px) skewX(3deg) scale(0.99, 1.01);
+      text-shadow: -0.6px 0 var(--cool-color-2);
+      clip-path: var(--slice-4);
+      filter: brightness(98%) hue-rotate(-15deg); /* Shift hue */
+    }
+  }
+  
+  .mania-subtitle {
+    font-size: 0.85rem;
+    md:text-sm text-text-muted font-mono max-w-xl mx-auto mt-1;
+  }
+  
+  /* === Glitch Animation (Very Slow Hover Glow/Color Shift) === */
+  @keyframes slowGlitchAnim {
+    0%, 100% { transform: translate(0); text-shadow: var(--shadow-glow-hover-subtle); clip-path: none; filter: brightness(100%) hue-rotate(0deg); }
+    30% { transform: translate(0.5px, -0.5px) scale(1.005); text-shadow: -0.5px 0 var(--accent-highlight), 0.5px 0 var(--vibrant-color-1), var(--shadow-glow-hover-subtle); clip-path: inset(10% 0 80% 0 round 1px); filter: brightness(105%) hue-rotate(10deg); }
+    60% { transform: translate(-0.3px, 0.3px) scale(0.995); text-shadow: 0.5px 0 var(--accent-primary), -0.5px 0 var(--cool-color-1), var(--shadow-glow-hover-subtle); clip-path: inset(70% 0 15% 0 round 1px); filter: brightness(98%) hue-rotate(-5deg); }
+    90% { transform: translate(0); text-shadow: var(--shadow-glow-hover-subtle), 0.3px -0.3px var(--vibrant-color-2); clip-path: inset(20% 0 70% 0 round 2px); filter: brightness(102%) hue-rotate(5deg); }
+  }
+  
+  .logo-glitch:hover .manic-logo-text {
+    /* Apply animation to text on wrapper hover */
+    animation: slowGlitchAnim 8s linear infinite alternate; /* Very slow hover animation */
+  }
+  
+  /* Base styles for the logo links if needed */
+  .footer-logo {
+    /* Style from FooterBranding */
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Styles for the ManicAgencyLogo SVG elements */
+  .manic-logo-text {
+    /* Add any specific text styles if needed */
+    /* Example: filter: url(#logoGlow); */
+    /* Apply SVG glow */
+  }
+  
+  /* Add hover states for decorative lines if desired */
+  .standard-logo-wrapper:hover .manic-logo-text {
+    fill: var(--accent-highlight);
+    /* Change text color on hover */
+  }
+  
+  /* Styles for LookingGlassLogo */
+  .looking-glass-logo-wrapper {
+    /* Styles for the wrapper */
+    filter: drop-shadow(0 1px 3px rgba(var(--vibrant-color-1-rgb), 0.3)); /* Subtle shadow */
+  }
+  
+  .looking-glass-logo-wrapper svg {
+    /* Base styles for the SVG */
+    filter: url(#blogLogoSubtleWarp);
+    /* Example filter */
+  }
+  
+  .looking-glass-logo-wrapper:hover svg {
+    filter: url(#blogLogoShimmer) url(#blogLogoSubtleWarp);
+    /* Combine filters */
+    transform: scale(1.02) rotate(1deg); /* Very subtle hover */
+  }
+  
+  /* Blinking cursor animation for ManicAgencyLogo */
+  .blinking-cursor {
+    /* Animation is defined inline in the SVG component */
+  }
+  
+  /* Footer Divider Gradient (Example) */
+  .divider-gradient {
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--vibrant-color-1),
+      var(--cool-color-1),
+      transparent
+    ); /* More spectrum-like gradient */
+  }
+  
+  /* Tagline styles (Ensure these match Nav.module.css or global styles) */
+  .tagline {
+    /* Example */
+    font-size: 0.8rem; /* Slightly larger */
+    white-space: nowrap;
+    color: var(--cool-color-2); /* Different color */
+  }
+  
+  /* Dynamic Glitch Keyframes - Very Slow and Randomized Spectrum */
+  @keyframes slowDynamicGlitchSlice {
+    0%, 20%, 90%, 100% { clip-path: var(--slice-1); }
+    10%, 35%, 75% { clip-path: var(--slice-3); }
+    25%, 55%, 85% { clip-path: var(--slice-2); }
+    40%, 65% { clip-path: var(--slice-4); }
+  }

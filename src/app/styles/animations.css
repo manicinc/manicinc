@@ -1,0 +1,151 @@
+/* ======================================== */
+/* Complete Keyframe Definitions            */
+/* Add these to theme.css or globals.css    */
+/* ======================================== */
+
+/* --- General Utility Keyframes --- */
+
+/* For subtle background noise effect */
+@keyframes noiseAnim {
+    0%, 100% { transform: translate(1px, 2px); }
+    25% { transform: translate(-2px, -1px); }
+    50% { transform: translate(2px, -2px); }
+    75% { transform: translate(-1px, 1px); }
+  }
+  
+  /* For animating gradient background positions */
+  @keyframes animatedGradientVibrant {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+  
+  /* Subtle pulse/skew for Looking Glass logo text */
+  @keyframes blogLogoPulse {
+    0%, 100% { opacity: 0.95; transform: scale(1) skewX(-0.5deg); }
+    50% { opacity: 1; transform: scale(1.01) skewX(0.5deg); }
+  }
+  
+  /* Pop effect for ASCII character in taglines */
+  @keyframes asciiPopV2 {
+    0%, 100% { transform: scale(1) translateY(0); opacity: 0.8; filter: brightness(0.9); }
+    50% { transform: scale(1.15) translateY(-1px); opacity: 1; filter: brightness(1.1); }
+  }
+  
+  /* Simple rotation for hourglass icon */
+  @keyframes hourglassRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Subtle pulse for Blog Tagline */
+  @keyframes taglinePulseBlog {
+      0% { opacity: 0.8; filter: brightness(1); }
+      50% { opacity: 0.95; filter: brightness(1.1); }
+      100% { opacity: 0.8; filter: brightness(1); }
+  }
+  
+  
+  /* --- Glitch Effect Keyframes --- */
+  
+  /* Complex glitch for main MANIC AGENCY logo text */
+  /* Requires #logoWarp filter defined in SVG <defs> */
+  @keyframes surrealTextGlitchV10 {
+    0%, 8.9%, 10.1%, 22.9%, 24.1%, 37.9%, 39.1%, 52.9%, 54.1%, 67.9%, 69.1%, 82.9%, 84.1%, 95.9%, 97.1%, 100% { transform: none; filter: none; clip-path: none; }
+    9% { transform: skew(-4deg, 1deg) translate(-2px, 1px) scaleY(0.98); filter: hue-rotate(10deg) contrast(1.1); clip-path: inset(10% 0 75% 0); }
+    10% { transform: none; filter: none; clip-path: none; } /* Reset briefly */
+    23% { transform: scale(1.01, 0.97) translate(1px, -1px); filter: url(#logoWarp) brightness(0.95) blur(0.1px); }
+    38% { transform: translate(2px, -1px) skew(0, 1.5deg); filter: sepia(0.15); clip-path: polygon(5% 30%, 95% 30%, 95% 70%, 5% 70%); }
+    53% { transform: skew(3deg, -1.5deg) translate(-1px, 1px) scaleX(0.99); filter: contrast(0.95) brightness(1.03); }
+    68% { transform: scale(0.995, 1.005) translate(0, -1px); filter: hue-rotate(-8deg) blur(0.2px); clip-path: inset(75% 0 10% 0); }
+    83% { transform: skew(-2deg, 0) translate(1px, 0); filter: saturate(0.9); }
+    96% { transform: translate(-2px, 1px) scale(1.002); filter: invert(0.03); clip-path: polygon(35% 5%, 65% 5%, 65% 95%, 35% 95%); }
+  }
+  
+  /* Opacity flicker for MANIC/PANIC logo effect (main text) */
+  @keyframes manicPanicGlitch {
+    0%, 40%, 47%, 100% { opacity: 1; } /* Main text visible */
+    40.1% { opacity: 0.3; }
+    40.5% { opacity: 0.8; }
+    41%, 46% { opacity: 0; } /* Main text hidden */
+    46.1% { opacity: 0.7; }
+    46.5% { opacity: 0.2; }
+  }
+  
+  /* Opacity/transform flicker for MANIC/PANIC logo effect (::before pseudo-element) */
+  @keyframes manicPanicBeforeGlitch {
+    0%, 40%, 47%, 100% { opacity: 0; transform: none; } /* Before hidden */
+    40.1% { opacity: 0.7; transform: translate(-2px, 1px) skew(-3deg); }
+    40.5% { opacity: 0.2; transform: translate(1px, -1px) skew(2deg); }
+    41%, 46% { opacity: 1; transform: none; } /* Before visible */
+    46.1% { opacity: 0.3; transform: translate(2px, 1px) skew(3deg); }
+    46.5% { opacity: 0.8; transform: translate(-1px, 0px) skew(-1deg); }
+  }
+  
+  /* Flicker effect for Open Source link text */
+  @keyframes terminalFlicker {
+    50% { filter: brightness(1.5) contrast(1.2); }
+  }
+  
+  /* Glitch effect for Open Source link pseudo-elements */
+  @keyframes terminalGlitch {
+    from { transform: translate(1.5px, -1px) skew(-2.5deg); clip: rect(15px, 9999px, 35px, 0); }
+    to { transform: translate(-1.5px, 1px) skew(1.5deg); clip: rect(8px, 9999px, 42px, 0); }
+  }
+  
+  
+  /* --- SVG Internal Animation Keyframes --- */
+  
+  /* Basic stroke draw-in using dashoffset */
+  @keyframes strokeAnim {
+    to { stroke-dashoffset: 0; }
+  }
+  
+  /* Basic fill fade-in using opacity */
+  @keyframes fillAnim {
+    from { fill-opacity: 0; }
+    to { fill-opacity: 1; }
+  }
+  
+  /* Simple 360 rotation */
+  @keyframes svgSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Combined pulse (scale/opacity) and spin */
+  @keyframes svgPulseAndSpin {
+    0% { transform: scale(1) rotate(0deg); opacity: 1; }
+    50% { transform: scale(1.15) rotate(180deg); opacity: 0.8; }
+    100% { transform: scale(1) rotate(360deg); opacity: 1; }
+  }
+  
+  /* Subtle horizontal shift for chevrons */
+  @keyframes svgChevronShift {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(1px); }
+  }
+  
+  /* Stroke draw-in, potentially for curved paths/arcs */
+  @keyframes svgArcFlow {
+    to { stroke-dashoffset: 0; }
+  }
+  
+  /* Your provided animations */
+  @keyframes pulse { 0%, 100% { opacity: 0.7; } 50% { opacity: 1; } }
+  @keyframes blink-eye { 0%, 100% { transform: scaleY(1); } 5%, 15% { transform: scaleY(0.1); } 10% { transform: scaleY(1); } }
+  @keyframes scan { 0% { opacity: 0; transform: translateY(-2px); } 50% { opacity: 0.3; transform: translateY(0px); } 100% { opacity: 0; transform: translateY(2px); } }
+  @keyframes branch-sway { from { transform: rotate(-2deg); } to { transform: rotate(2deg); } }
+  @keyframes nib-dip { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(1px) rotate(1deg); } }
+  @keyframes feather-rustle { from { transform: rotate(-1deg); } to { transform: rotate(1deg); } }
+  
+  .animated-stroke {
+    stroke-dasharray: 10; /* Adjust this based on the path length */
+    stroke-dashoffset: 10;
+    animation: stroke-dash 0.5s linear forwards; 
+  }
+  
+  @keyframes stroke-dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }

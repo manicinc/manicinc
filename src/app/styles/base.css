@@ -1,0 +1,32 @@
+/* src/styles/base.css */
+
+/* ==========================================================================
+   Minimal Base Styles
+   - Most base HTML/typography styles are now consolidated in theme.css.
+   - This file can be used for truly global, non-theme-specific base settings
+     or utilities if needed, but is currently minimal.
+   ========================================================================== */
+
+/* --- Theme Transition Class --- */
+/* This class is added to <html> via JavaScript during theme switching
+   to temporarily enable transitions on theme-related properties.
+   (Style definition also exists in theme.css for consolidation,
+    can be removed from here if theme.css is always imported after base.css) */
+/* html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition: var(--transition-theme) !important;
+} */
+
+/* --- Post Content Base --- */
+/* Base class for main content areas like blog posts.
+   (Style definition also exists in theme.css for consolidation,
+    can be removed from here if theme.css is always imported after base.css) */
+/* .post-content {
+  transition: font-size 0.2s ease-out;
+} */
+
+/* --- Other Base Styles (If Any) --- */
+/* Add any other non-theme-specific base styles here if necessary. */
+/* For example, specific resets not covered by Tailwind's preflight. */
+

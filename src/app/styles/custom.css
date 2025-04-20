@@ -1,0 +1,818 @@
+/* src/app/styles/custom.css */
+
+/* ==========================================================================
+   Custom Components, Utilities & Effects
+   - Contains styles for custom components (buttons, cards), specific layouts,
+     visual effects, and custom utility classes.
+   - NOTE: DO NOT include @tailwind directives here. They belong in globals.css.
+   ========================================================================== */
+
+
+/* ========================================
+   Button Styles
+   ======================================== */
+
+/* --- Brutalist Contact Button --- */
+.contact-btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background-color: var(--brand-cyan); /* Consider using theme variables if brand colors change with theme */
+  color: var(--color-abyss); /* Consider using theme variables */
+  font-family: var(--font-mono);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: var(--radius-sm);
+  transition: all 0.1s ease-out;
+  box-shadow: 4px 4px 0 var(--brand-pink), 7px 7px 0 var(--brand-blue); /* Consider theme variables */
+  position: relative;
+  text-decoration: none;
+  border: 2px solid var(--color-abyss); /* Consider theme variables */
+  cursor: pointer;
+}
+.contact-btn:hover {
+  background-color: #3ff; /* Consider theme variables */
+  box-shadow: 2px 2px 0 var(--brand-pink), 4px 4px 0 var(--brand-blue); /* Consider theme variables */
+  transform: translate(3px, 3px);
+}
+.contact-btn:active {
+  box-shadow: 1px 1px 0 var(--brand-pink), 2px 2px 0 var(--brand-blue); /* Consider theme variables */
+  transform: translate(5px, 5px);
+}
+
+/* --- Synthetic Button --- */
+.btn-synthetic {
+  background-color: var(--accent-primary);
+  color: var(--text-on-accent);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1; /* Needed for pseudo-element */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(var(--shadow-color), 0.5);
+}
+.btn-synthetic::before { /* Hover gradient effect */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start hidden */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-highlight));
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+.btn-synthetic:hover {
+  box-shadow: 0 0 15px var(--glow-color), /* Assumes --glow-color is defined */
+              0 0 25px var(--highlight-glow-color), /* Assumes --highlight-glow-color is defined */
+              0 4px 10px rgba(var(--shadow-color), 0.7);
+  transform: translateY(-2px);
+}
+.btn-synthetic:hover::before {
+  left: 0; /* Slide gradient in */
+}
+
+/* --- Synthetic Outline Button --- */
+.btn-synthetic-outline {
+  background-color: transparent;
+  color: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
+  border-radius: var(--radius-md);
+  /* Adjust padding to account for border thickness */
+  padding: calc(0.75rem - 1px) calc(1.5rem - 1px);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.btn-synthetic-outline:hover {
+  background-color: rgba(var(--accent-primary-rgb), 0.1); /* Subtle background on hover */
+  color: var(--accent-highlight);
+  border-color: var(--accent-highlight);
+  box-shadow: 0 0 10px rgba(var(--glow-color), 0.5); /* Assumes --glow-color is defined */
+}
+
+/* --- Rabbit Hole Button --- */
+.rabbit-hole-btn {
+  position: relative;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  color: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
+  border-radius: var(--radius-md);
+  overflow: hidden; /* Hide the pseudo-element initially */
+  transition: all 0.3s ease;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.rabbit-hole-btn::before { /* Fill effect */
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, var(--accent-primary), var(--accent-highlight));
+  transform: scaleY(0); /* Start scaled down */
+  transform-origin: bottom;
+  transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+  z-index: -1;
+  border-radius: inherit; /* Match parent border radius */
+}
+.rabbit-hole-btn:hover {
+  color: var(--text-on-accent); /* Change text color */
+  border-color: transparent; /* Hide border */
+}
+.rabbit-hole-btn:hover::before {
+  transform: scaleY(1); /* Scale up to fill */
+  transform-origin: top;
+}
+
+/* --- Rabbit Trail Button --- */
+.rabbit-trail {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--accent-primary);
+  color: var(--accent-primary);
+  transition: all 0.3s ease;
+  position: relative;
+  border-radius: var(--radius-sm);
+  background: rgba(var(--bg-tertiary-rgb), 0.5);
+  padding: 0.6rem 1rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+.rabbit-trail::after { /* Animated arrow */
+  content: '»»»';
+  position: absolute;
+  right: 1rem; /* Initial position */
+  top: 50%;
+  transform: translateY(-50%) scale(1.2);
+  opacity: 0; /* Start hidden */
+  transition: right 0.4s ease-out, opacity 0.3s ease;
+  color: var(--accent-highlight);
+  pointer-events: none; /* Don't interfere with clicks */
+  font-weight: bold;
+}
+.rabbit-trail:hover {
+  padding-right: 4.5rem; /* Make space for the arrow */
+  background: rgba(var(--accent-primary-rgb), 0.1);
+  border-color: var(--accent-highlight);
+  color: var(--accent-highlight);
+  box-shadow: 0 0 10px rgba(var(--accent-primary-rgb), 0.2);
+}
+.rabbit-trail:hover::after {
+  right: 0.75rem; /* Move arrow into view */
+  opacity: 1; /* Fade arrow in */
+}
+
+
+/* ========================================
+   Card Styles
+   ======================================== */
+
+/* --- Base Card Style --- */
+.card-base {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(var(--accent-primary-rgb), 0.15);
+  box-shadow: 0 5px 20px rgba(var(--shadow-color), 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden; /* Clip content if needed */
+  height: 100%; /* Allow cards in a grid to have same height */
+  display: flex; /* Use flex for internal layout */
+  flex-direction: column; /* Stack content vertically */
+  position: relative;
+}
+.card-base:hover {
+  transform: translateY(-6px) scale(1.01); /* Lift and slightly scale */
+  box-shadow: 0 12px 30px rgba(var(--shadow-color), 0.8),
+              0 0 20px rgba(var(--accent-primary-rgb), 0.2); /* Enhance shadow */
+  border-color: rgba(var(--accent-primary-rgb), 0.4); /* Highlight border */
+}
+
+/* --- Synthetic Card Style --- */
+.card-synthetic {
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px var(--shadow-color);
+  border: 1px solid rgba(var(--accent-primary-rgb), 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+.card-synthetic:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px var(--shadow-color),
+              0 0 15px rgba(var(--accent-primary-rgb), 0.2);
+}
+
+/* --- Glass Card Style --- */
+.card-glass {
+  background: rgba(var(--bg-tertiary-rgb), 0.6); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border: 1px solid rgba(var(--accent-primary-rgb), 0.15);
+  box-shadow: 0 8px 32px 0 rgba(var(--shadow-color), 0.37);
+}
+.card-glass:hover {
+  box-shadow: 0 12px 40px 0 rgba(var(--shadow-color), 0.45),
+              0 0 20px rgba(var(--glow-color), 0.2); /* Assumes --glow-color */
+}
+
+/* --- Holographic Card Style --- */
+.holographic-card {
+  position: relative;
+  background: rgba(var(--bg-tertiary-rgb), 0.5);
+  border: 1px solid transparent; /* Border is created by pseudo-element */
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  overflow: hidden; /* Hide pseudo-elements overflowing */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 5px 15px rgba(var(--shadow-color), 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.holographic-card::before, /* Gradient overlay */
+.holographic-card::after { /* Border effect */
+  content: "";
+  position: absolute;
+  inset: -1px; /* Cover the border area */
+  border-radius: inherit;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: -1;
+  opacity: 0; /* Hidden initially */
+}
+.holographic-card::before {
+  background: linear-gradient(130deg, rgba(var(--accent-primary-rgb), 0.15) 0%, rgba(var(--accent-highlight-rgb), 0.15) 50%, rgba(var(--accent-secondary-rgb), 0.15) 100% );
+  mix-blend-mode: overlay;
+  transform: scale(1.2) rotate(-10deg); /* Initial state */
+}
+.holographic-card::after {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(130deg, rgba(var(--accent-primary-rgb), 0.7), rgba(var(--accent-highlight-rgb), 0.7), rgba(var(--accent-secondary-rgb), 0.7) );
+  transform: scale(1.05); /* Initial state */
+  filter: brightness(1.2);
+}
+.holographic-card:hover {
+  transform: translateY(-8px) rotateX(2deg) rotateY(-1deg) scale(1.03); /* 3D tilt effect */
+  box-shadow: 0 20px 40px rgba(var(--shadow-color), 0.2);
+}
+.holographic-card:hover::before {
+  opacity: 0.6; /* Fade in gradient */
+  transform: scale(1) rotate(0deg); /* Animate gradient */
+}
+.holographic-card:hover::after {
+  opacity: 1; /* Fade in border */
+  transform: scale(1); /* Animate border */
+}
+
+/* --- UV Glow Card Style --- */
+/* Adds extra glow effects, potentially combined with other card styles */
+.uv-glow-card {
+  box-shadow: 0 10px 30px rgba(var(--shadow-color), 0.15),
+              0 0 20px rgba(var(--accent-primary-rgb), 0.2), /* Primary glow */
+              0 0 35px rgba(var(--accent-highlight-rgb), 0.15); /* Highlight glow */
+}
+.uv-glow-card:hover {
+  box-shadow: 0 15px 40px rgba(var(--shadow-color), 0.25),
+              0 0 30px rgba(var(--accent-primary-rgb), 0.3), /* Enhanced primary glow */
+              0 0 45px rgba(var(--accent-highlight-rgb), 0.2); /* Enhanced highlight glow */
+}
+
+/* --- Blog Card Placeholder --- */
+/* Add specific styles for blog cards, potentially extending .card-base */
+.blog-card {
+  /* Example: Add specific padding or element styles */
+  /* .blog-card-image { ... } */
+  /* .blog-card-title { ... } */
+}
+
+
+/* ========================================
+   Specific Sections & Components
+   ======================================== */
+
+/* --- Project Grid --- */
+.projects-grid {
+  display: grid;
+  /* Responsive columns: fit columns at least 300px wide */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem; /* Default gap */
+  width: 100%;
+}
+@media (min-width: 1024px) { /* Increase gap on larger screens */
+  .projects-grid {
+    gap: 3rem;
+  }
+}
+
+/* --- Project Expand Card (Individual project card in the grid) --- */
+.project-expand-card {
+  height: 450px; /* Fixed height */
+  margin: 0;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 6px 15px var(--shadow-color);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden; /* Hide the info block initially */
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid rgba(var(--accent-primary-rgb), 0.1);
+  cursor: pointer;
+}
+.project-expand-card:hover {
+  transform: scale(1.03); /* Scale up on hover */
+  box-shadow: 0 12px 30px var(--shadow-color);
+  border-color: rgba(var(--accent-primary-rgb), 0.3);
+}
+/* Background images for specific project cards */
+.project-expand-1 { background-image: url('https://res.cloudinary.com/dwaypfftw/image/upload/v1729869976/quire_preview_lp4lmn.gif'); }
+.project-expand-2 { background-image: url('https://res.cloudinary.com/dwaypfftw/image/upload/v1729869976/fortune_preview_veaovi.gif'); }
+.project-expand-3 { background-image: url('https://jddunn.github.io/assets/projects/hype-blog-article-frontend.png'); }
+.project-expand-4 { background-image: url('https://res.cloudinary.com/dwaypfftw/image/upload/v1730046365/202410271709-ezgif.com-video-to-gif-converter_swlu6y.gif'); }
+
+/* Info block inside project card */
+.project-expand-card .info-block {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(to top, rgba(var(--bg-primary-rgb), 0.95) 10%, rgba(var(--bg-primary-rgb), 0) 100%); /* Gradient overlay */
+  color: var(--text-primary);
+  opacity: 0; /* Hidden initially */
+  transform: translateY(15px); /* Start slightly lower */
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.project-expand-card:hover .info-block {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Slide up */
+}
+.project-expand-card .info-block h3 {
+  margin-top: 0; /* Remove default heading margin */
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+.project-expand-card .info-block p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.project-expand-card .info-block a { /* Styling for links within info block */
+  color: var(--accent-primary);
+  font-weight: 500;
+  border-bottom: none; /* Remove base link underline if desired */
+}
+.project-expand-card .info-block a:hover {
+  color: var(--accent-highlight);
+}
+
+/* --- Horizontal Accordion --- */
+.horizontal-accordion {
+  display: flex;
+  width: 100%;
+  min-height: 35rem; /* Minimum height */
+  overflow: hidden; /* Hide overflowing content */
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+.accordion-panel {
+  flex: 1 1 25%; /* Default flex state: grow, shrink, basis */
+  overflow: hidden;
+  transition: flex-grow 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Animate flex-grow */
+  min-height: 35rem; /* Match parent min-height */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  cursor: pointer;
+  border-right: 1px solid rgba(var(--bg-primary-rgb), 0.5); /* Divider */
+}
+.accordion-panel:last-child {
+  border-right: none; /* Remove border from last panel */
+}
+/* Expand behavior on accordion hover */
+.horizontal-accordion:hover > .accordion-panel {
+  flex-grow: 1; /* Allow all panels to grow slightly */
+}
+.accordion-panel:hover {
+  flex-grow: 5; /* Greatly expand the hovered panel */
+}
+/* Background images for specific panels */
+.accordion-panel.expand1 { background-image: url('https://res.cloudinary.com/dwaypfftw/image/upload/v1729869976/quire_preview_lp4lmn.gif'); }
+.accordion-panel.expand2 { background-image: url('https://res.cloudinary.com/dwaypfftw/image/upload/v1729869976/fortune_preview_veaovi.gif'); }
+.accordion-panel.expand3 { background-image: url('https://jddunn.github.io/assets/projects/hype-blog-article-frontend.png'); }
+.accordion-panel.expand4 { background-image: url('https://picsum.photos/800/900?random=3'); } /* Placeholder */
+
+/* Overlay and info block inside accordion panel */
+.accordion-panel .overlay {
+  opacity: 0; /* Hidden initially */
+  transition: opacity 0.5s ease;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(var(--bg-primary-rgb), 0.9) 0%, rgba(var(--bg-primary-rgb), 0) 70%);
+  display: flex;
+  align-items: flex-end; /* Position info at the bottom */
+  padding: 2rem;
+  pointer-events: none; /* Allow clicks to pass through overlay */
+}
+.accordion-panel:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+.accordion-panel .info-block { /* Styles for info within the overlay */
+  position: static; /* Reset positioning */
+  background: none;
+  padding: 0;
+  opacity: 1;
+  transform: none;
+  color: var(--text-primary);
+  width: 100%;
+}
+.accordion-panel .info-block h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* Text shadow for readability */
+}
+.accordion-panel .info-block p {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  opacity: 0.9;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+.accordion-panel .info-block a {
+  color: var(--brand-cyan); /* Consider theme variable */
+  font-weight: bold;
+  pointer-events: auto; /* Make links clickable */
+  border-bottom: none;
+}
+.accordion-panel .info-block a:hover {
+  color: white; /* Consider theme variable */
+}
+
+/* Responsive adjustments for horizontal accordion */
+@media (max-width: 992px) {
+  .horizontal-accordion {
+    flex-direction: column; /* Stack vertically */
+    min-height: auto;
+  }
+  .accordion-panel {
+    width: 100%;
+    height: 400px; /* Fixed height for vertical panels */
+    min-height: auto;
+    flex-grow: 1 !important; /* Override hover grow effect */
+    border-right: none;
+    border-bottom: 1px solid rgba(var(--bg-primary-rgb), 0.5); /* Divider */
+  }
+  .accordion-panel:last-child {
+    border-bottom: none;
+  }
+  .accordion-panel .overlay {
+    /* Adjust gradient for vertical layout */
+    background: linear-gradient(to top, rgba(var(--bg-primary-rgb), 0.85) 0%, rgba(var(--bg-primary-rgb), 0) 90%);
+    opacity: 1; /* Keep overlay visible */
+  }
+}
+
+
+/* ========================================
+   Effects & Utilities
+   ======================================== */
+
+/* --- Glitch Text Effect --- */
+.glitch-text-effect {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  color: var(--text-primary);
+  /* Base text shadow creating the glitch layers */
+  text-shadow: 0.05em 0 0 rgba(var(--accent-highlight-rgb), 0.75), /* Highlight color */
+               -0.025em -0.05em 0 rgba(var(--accent-secondary-rgb), 0.75), /* Secondary color */
+               0.025em 0.05em 0 rgba(var(--accent-primary-rgb), 0.75); /* Primary color */
+  /* Apply animation */
+  animation: glitch-text-anim 3s infinite alternate steps(3, jump-end);
+}
+
+/* --- Neon Logo Effect --- */
+/* NOTE: Removed the duplicate/conflicting .logoNeon styles from the end.
+   This version uses CSS variables and is responsive. */
+.logoNeon {
+  text-align: center;
+  user-select: none; /* Prevent text selection */
+}
+.logoNeon b { /* Target the bold tag often used for the text */
+  display: block; /* Ensure it takes block layout */
+  width: auto; /* Allow natural width */
+  margin: 0 auto; /* Center if needed */
+  font-family: var(--font-mono); /* Use mono font */
+  font-weight: 700;
+  /* Responsive font size */
+  font-size: clamp(2rem, 10vw, 6rem);
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+  /* Neon text shadow effect using theme variables */
+  text-shadow:
+    0 0 5px var(--glow-color), /* Assumes --glow-color is defined */
+    0 0 10px var(--glow-color),
+    0 0 20px var(--accent-primary),
+    0 0 35px var(--accent-primary),
+    0 0 50px var(--accent-primary),
+    0 3px 5px var(--shadow-color); /* Subtle drop shadow */
+  animation: neon-flicker 5s linear infinite alternate; /* Apply flicker animation */
+}
+/* Specific span styling for blink animation (if structure is .logoNeon b span) */
+.logoNeon b span {
+  animation: blink linear infinite 5s;
+}
+.logoNeon b span:nth-of-type(2){
+  animation: blink linear infinite 11s; /* Different timing for second span */
+}
+
+/* --- Mad Quote Text --- */
+.mad-quote-text {
+  font-weight: bold;
+  color: var(--text-primary);
+  font-size: clamp(1.5rem, 3vw, 2.25rem); /* Responsive size */
+  line-height: 1.5;
+  /* Subtle glow effect */
+  text-shadow: 0 0 5px var(--glow-color), /* Assumes --glow-color */
+               0 0 10px var(--glow-color),
+               0 0 15px rgba(var(--accent-highlight-rgb), 0.4);
+  transition: text-shadow 0.3s ease-in-out;
+}
+.mad-quote-text:hover {
+  /* Enhanced glow on hover */
+  text-shadow: 0 0 6px var(--glow-color),
+               0 0 12px var(--glow-color),
+               0 0 20px var(--highlight-glow-color), /* Assumes --highlight-glow-color */
+               0 0 30px var(--highlight-glow-color);
+}
+
+/* --- Misc Utilities --- */
+
+/* Success Message Style */
+.messageSuccess {
+  z-index: 10001; /* Ensure it's above most content */
+  line-height: 1.4;
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--accent-secondary); /* Use an appropriate accent */
+  color: var(--text-on-accent);
+  left: 50%;
+  position: fixed; /* Fixed position */
+  top: 20%;
+  transform: translateX(-50%); /* Center horizontally */
+  border-radius: var(--radius-md);
+  box-shadow: 0 5px 20px var(--shadow-color);
+}
+
+/* --- Visibility Utility --- */
+/* WARNING: Avoid using this class if possible!
+   The `!important` flag will override Tailwind's responsive display classes
+   (like `hidden`, `md:block`, `lg:hidden`). Use Tailwind classes for
+   responsive visibility whenever possible. This is kept only for reference
+   if absolutely necessary and no other solution exists. */
+.visible {
+  display: block !important; /* Forces display: block */
+  /* Consider alternatives like .visible-flex { display: flex !important; } if needed */
+}
+
+/* --- Hover Underline Effect --- */
+.hover-underline {
+  position: relative; /* Needed for absolute positioning of pseudo-element */
+}
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* Position below text */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Underline thickness */
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-highlight)); /* Gradient */
+  transform: scaleX(0); /* Start hidden */
+  transform-origin: right; /* Animate from right */
+  transition: transform 0.4s ease;
+}
+.hover-underline:hover::after {
+  transform: scaleX(1); /* Animate in */
+  transform-origin: left; /* Animate towards left */
+}
+
+/* --- Animated Underline (Alternative) --- */
+.animated-underline {
+  position: relative;
+  text-decoration: none; /* Remove default underline */
+}
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-highlight));
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+.animated-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* --- Text Gradient Utility --- */
+.text-gradient {
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-highlight));
+  -webkit-background-clip: text; /* Clip background to text */
+  background-clip: text;
+  color: transparent; /* Make text transparent to show background */
+}
+
+/* --- Border Glow Utility --- */
+.border-glow {
+  border: 1px solid var(--accent-primary);
+  box-shadow: 0 0 15px var(--glow-color); /* Assumes --glow-color */
+}
+
+/* --- Glass Effect Utility --- */
+.glass-effect {
+  background: rgba(var(--bg-tertiary-rgb), 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(var(--accent-primary-rgb), 0.2);
+  border-radius: var(--radius-lg);
+}
+
+
+/* ========================================
+   Animations & Keyframes
+   ======================================== */
+
+/* --- Glitch Text Animation --- */
+@keyframes glitch-text-anim {
+  /* Keyframes define the text-shadow changes over time */
+  0%, 100% { text-shadow: 0.05em 0 0 rgba(var(--accent-highlight-rgb),0.75), -0.025em -0.05em 0 rgba(var(--accent-secondary-rgb),0.75), 0.025em 0.05em 0 rgba(var(--accent-primary-rgb),0.75); }
+  25% { text-shadow: -0.05em -0.025em 0 rgba(var(--accent-highlight-rgb),0.75), 0.025em 0.025em 0 rgba(var(--accent-secondary-rgb),0.75), -0.05em -0.05em 0 rgba(var(--accent-primary-rgb),0.75); }
+  50% { text-shadow: 0.025em 0.05em 0 rgba(var(--accent-highlight-rgb),0.75), 0.05em 0 0 rgba(var(--accent-secondary-rgb),0.75), 0 -0.05em 0 rgba(var(--accent-primary-rgb),0.75); }
+  75% { text-shadow: -0.03em 0.02em 0 rgba(var(--accent-highlight-rgb),0.75), -0.01em -0.03em 0 rgba(var(--accent-secondary-rgb),0.75), 0.04em 0.01em 0 rgba(var(--accent-primary-rgb),0.75); }
+}
+
+/* --- Neon Flicker Animation --- */
+@keyframes neon-flicker {
+  /* Defines opacity and text-shadow changes for flicker effect */
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 0 0 4px var(--glow-color), 0 0 8px var(--glow-color), 0 0 15px var(--accent-primary), 0 0 25px var(--accent-primary);
+    opacity: 1;
+  }
+  20%, 24%, 55% { /* Intermediate "off" states */
+    text-shadow: none;
+    opacity: 0.7;
+  }
+}
+
+/* --- Neon Blink Animation (for spans) --- */
+@keyframes blink {
+  /* Defines color/shadow changes for blinking effect */
+  78% { color: inherit; text-shadow: inherit; }
+  79% { color: #333; } /* Dim color */
+  80% { text-shadow: none; } /* Remove shadow */
+  81% { color: inherit; text-shadow: inherit; } /* Back on */
+  82% { color: #333; text-shadow: none; } /* Off again */
+  83% { color: inherit; text-shadow: inherit; } /* On */
+  92% { color: #333; text-shadow: none; } /* Off */
+  92.5% { color: inherit; text-shadow: inherit; } /* On */
+}
+
+
+/* --- Circuit Draw Animation (Example for SVG) --- */
+@keyframes circuit-draw {
+  to { stroke-dashoffset: 0; } /* Animates SVG stroke */
+}
+
+/* --- Logo Glitch Animations --- */
+@keyframes glitch-logo-1 {
+  /* Defines clip-path, transform, opacity changes */
+  0% { clip-path: inset(45% 0 50% 0); transform: translate(-1px, 1px); opacity: 0.7; }
+  100% { clip-path: inset(10% 0 70% 0); transform: translate(1px, -1px); opacity: 0.9; }
+}
+@keyframes glitch-logo-2 {
+  /* Defines different clip-path, transform, opacity changes */
+  0% { clip-path: inset(55% 0 30% 0); transform: translate(1px, -1px); opacity: 0.8; }
+  100% { clip-path: inset(80% 0 5% 0); transform: translate(-1px, 1px); opacity: 0.6; }
+}
+
+/* --- Button Glitch Animation --- */
+@keyframes glitch-btn {
+  /* Defines quick transform changes for button glitch */
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 1px); }
+  40% { transform: translate(1px, -1px); }
+  60% { transform: translate(-1px, -1px); }
+  80% { transform: translate(1px, 1px); }
+  100% { transform: translate(0); }
+}
+
+/* --- General Glitch Animation (from .glitch class) --- */
+@keyframes glitch {
+  /* Defines text-shadow changes for the .glitch class effect */
+   0% { text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em 0.05em 0 rgba(0, 0, 255, 0.75); }
+  14% { text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em 0.05em 0 rgba(0, 0, 255, 0.75); }
+  15% { text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75); }
+  49% { text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75); }
+  50% { text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75); }
+  99% { text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75); }
+ 100% { text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em -0.05em 0 rgba(0, 0, 255, 0.75); }
+}
+
+
+/* ========================================
+   Utility Layer & Reduced Motion
+   ======================================== */
+
+/* --- Tailwind Compatible Animation Utility --- */
+.animate-glitch {
+  animation: glitch-btn 0.2s infinite linear alternate; /* Apply button glitch */
+}
+/* Add other animation utility classes here */
+
+/* --- Reduced Motion Preferences --- */
+/* Styles to apply when user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, /* Apply to all elements */
+  ::before,
+  ::after {
+    animation-delay: -1ms !important; /* Effectively disable delay */
+    animation-duration: 1ms !important; /* Make animations instant */
+    animation-iteration-count: 1 !important; /* Run animations only once */
+    background-attachment: initial !important; /* Prevent parallax effects */
+    scroll-behavior: auto !important; /* Disable smooth scrolling */
+    transition-duration: 0s !important; /* Disable transitions */
+    transition-delay: 0s !important; /* Disable transition delays */
+  }
+}
+
+/* --- Glitch Class (from end of original file) --- */
+/* Styles for the standalone .glitch class */
+.glitch {
+  font-size: 2.5rem; /* Example size */
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1; /* Adjust line height */
+  position: relative;
+  /* Base text shadow */
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+               -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+               0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  animation: glitch 3500ms infinite; /* Apply the general glitch animation */
+}
+/* Pseudo-elements for layered glitch effect */
+.glitch span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.glitch span:first-child {
+  animation: glitch 2650ms infinite; /* Slightly different timing */
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%); /* Clip effect */
+  transform: translate(-0.025em, -0.0125em); /* Slight offset */
+  opacity: 0.8;
+}
+.glitch span:last-child {
+  animation: glitch 2375ms infinite; /* Another timing variation */
+  clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%); /* Different clip */
+  transform: translate(0.0125em, 0.025em); /* Different offset */
+  opacity: 0.8;
+}

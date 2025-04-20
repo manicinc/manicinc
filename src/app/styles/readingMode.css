@@ -1,0 +1,177 @@
+/* src/styles/readingMode.css */
+
+/* Apply styles when the reading-mode-active class is on the body */
+body.reading-mode-active {
+    /* Apply reading mode background and base text color using variables */
+    background-color: var(--reading-bg, #fdfdfa) !important;
+    color: var(--reading-text, #1f1f1f) !important;
+    font-family: var(--font-body) !important; /* Ensure consistent font */
+
+    /* --- Hide Distracting Elements --- */
+    /* Target specific IDs or more robust selectors if possible */
+    .blog-nav-controls,
+    .nav-outer-wrapper:not(:has(.blog-nav-controls)),
+    aside.toc-container,                   /* Sidebar TOC */
+    .blog-interactive-client,             /* Sidebar TOC Wrapper */
+    footer#site-footer,                    /* Specific Footer ID */
+    body > footer,                         /* Generic direct child footer */
+    .post-share,                           /* Share section in post */
+    .post-navigation,                      /* Prev/Next in post */
+    .related-content,                      /* Related posts */
+    .comments,                             /* Comments */
+    .author-bio,                           /* Author bio */
+    .back-to-top,                          /* Back-to-top button */
+    .mobile-toc-toggle                    /* Mobile TOC button */
+    {
+        display: none !important;
+        visibility: hidden !important;
+    }
+
+    /* --- Adjust Main Content Area --- */
+    /* Use high specificity but avoid overly broad selectors */
+    > main.blog-post-container, /* If main is direct child of body */
+    > div > main.blog-post-container, /* If main is inside a wrapper div */
+    main.blog-container { /* Fallback */
+        max-width: 68ch !important;      /* Slightly narrower reading width */
+        margin: 3rem auto 5rem !important; /* Adjust top/bottom margin, centered */
+        padding: 0 !important;           /* Remove padding from container */
+        background: transparent !important;/* Let body background show through */
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    /* --- Adjust Content Typography --- */
+    .post-content { /* Target the direct content wrapper */
+        font-size: calc(1.05em * var(--post-font-zoom, 1)) !important; /* Slightly larger base reading size */
+        line-height: 1.9 !important; /* More spacing */
+        color: var(--reading-text, #1f1f1f) !important;
+        padding: 0 !important; /* Ensure no extra padding */
+        margin: 0 !important;
+    }
+    .post-content * { /* Apply base reading text color to children */
+        color: var(--reading-text, #1f1f1f) !important;
+    }
+
+    /* Override specific element styles within content */
+    .post-content h1, .post-content h2, .post-content h3,
+    .post-content h4, .post-content h5, .post-content h6,
+    .post-content strong {
+        text-shadow: none !important;
+        border: none !important;
+        padding-left: 0 !important;
+        margin-top: 1.8em !important;
+        margin-bottom: 0.8em !important;
+        color: var(--reading-text, #1f1f1f) !important; /* Ensure headings use reading text color */
+    }
+    .post-content h1 { font-size: 2rem !important; }
+    .post-content h2 { font-size: 1.6rem !important; }
+    .post-content h3 { font-size: 1.35rem !important; font-weight: 600 !important; }
+
+    .post-content p { /* Ensure paragraphs use correct color/line-height */
+        color: var(--reading-text, #1f1f1f) !important;
+        line-height: 1.9 !important;
+        margin-bottom: 1.3em !important; /* Adjust paragraph spacing */
+    }
+
+    .post-content a {
+        color: var(--reading-link, #0000a0) !important; /* Reading link color */
+        text-decoration: underline !important;
+        text-decoration-thickness: 1px !important;
+        font-weight: inherit !important;
+        border-bottom: none !important;
+        background: none !important;
+    }
+    .post-content a:hover {
+        color: var(--reading-link, #0000a0) !important;
+        opacity: 0.75 !important;
+        text-decoration-thickness: 2px !important;
+    }
+     .post-content a::after { display: none !important; }
+
+    .post-content code:not(pre > code) { /* Inline code */
+        background: rgba(128, 128, 128, 0.12) !important;
+        color: inherit !important; /* Inherit text color */
+        padding: 0.1em 0.35em !important;
+        font-size: 0.88em !important;
+        border: 1px solid rgba(128, 128, 128, 0.15) !important;
+        border-radius: 3px !important;
+        text-shadow: none !important;
+    }
+
+    .post-content pre { /* Code blocks */
+        background: var(--reading-code-bg, #efefef) !important;
+        color: var(--reading-code-text, #444) !important;
+        border: 1px solid rgba(128, 128, 128, 0.2) !important;
+        box-shadow: none !important;
+        padding: 1.2em 1.5em !important; /* Adjust padding */
+        margin: 1.8em 0 !important;
+        border-radius: 4px !important;
+        line-height: 1.6 !important; /* Adjust line height */
+    }
+    .post-content pre code { color: inherit !important; background: none !important; }
+    .post-content pre::before { display: none !important; }
+
+    .post-content blockquote {
+        border-left: 3px solid rgba(128, 128, 128, 0.4) !important;
+        background: none !important;
+        padding: 0.5em 1.5em !important;
+        margin: 1.8rem 0 !important;
+        font-style: italic !important;
+        color: inherit !important;
+        box-shadow: none !important;
+    }
+    .post-content blockquote p { margin-bottom: 0.5em !important; }
+    .post-content blockquote p:last-child { margin-bottom: 0 !important; }
+    .post-content blockquote::before { display: none !important; }
+
+    .post-content img,
+    .post-content figure {
+         box-shadow: none !important;
+         border: 1px solid rgba(128, 128, 128, 0.25) !important; /* Slightly darker border */
+         margin: 1.8rem auto !important;
+         max-width: 100% !important;
+         height: auto !important;
+         border-radius: 4px !important;
+    }
+    .post-content figcaption { /* Keep figcaption styles */ }
+
+
+    /* --- Exit Reading Mode Button --- */
+    /* This button is rendered by BlogNavControls when isReadingMode is true */
+    .exit-reading-mode-btn {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 1100; /* Above reading mode content */
+        background-color: rgba(128, 128, 128, 0.2); /* Semi-transparent */
+        color: var(--reading-text, #333); /* Use reading text color */
+        border: 1px solid rgba(128, 128, 128, 0.3);
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+        backdrop-filter: blur(5px); /* Optional blur */
+    }
+    .exit-reading-mode-btn:hover {
+        background-color: rgba(128, 128, 128, 0.4);
+        color: var(--reading-link, #0000cd); /* Use reading link color */
+        transform: scale(1.1);
+    }
+    /* High contrast style for exit button if needed */
+    body.high-contrast-active .exit-reading-mode-btn {
+        background: #000 !important;
+        color: yellow !important;
+        border-color: yellow !important;
+    }
+
+     /* Ensure scrollbar matches reading mode */
+     /* Styles might need !important if overridden */
+    ::-webkit-scrollbar { background: var(--reading-bg, #f5f5dc); }
+    ::-webkit-scrollbar-track { background: rgba(128, 128, 128, 0.1); }
+    ::-webkit-scrollbar-thumb { background: rgba(128, 128, 128, 0.4); }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(128, 128, 128, 0.6); }
+}

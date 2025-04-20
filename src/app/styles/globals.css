@@ -1,0 +1,77 @@
+/* src/styles/globals.css */
+
+/* ==========================================================================
+   1. Tailwind Directives (Import Base, Components, Utilities)
+      - MUST be first.
+      - Only include ONCE in your project, typically in this global file.
+   ========================================================================== */
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+   
+   
+   /* ==========================================================================
+      2. Font Imports (@import or @font-face)
+      ========================================================================== */
+   
+   /* --- Google Fonts --- */
+   /* Include ALL fonts needed across themes/sections */
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lato:wght@400;700&family=IBM+Plex+Mono:wght@400;600&family=Playfair+Display:wght@400;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400;700&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+   
+   /* --- Local Font Definition (Mona Sans) --- */
+   /* Make sure the path is correct relative to your PUBLIC directory or this CSS file location */
+   @font-face {
+     font-family: "Mona Sans";
+     font-weight: 200 900; /* Define the weight range for variable font */
+     font-display: block; /* Or 'swap'. 'block' prevents layout shift initially */
+     font-style: normal;
+     font-stretch: 75% 125%; /* Define the stretch range if applicable */
+     /* Adjust path if needed - assumes fonts folder relative to this CSS file's location */
+     src: url("../../fonts/Mona-Sans.var.woff2") format("woff2-variations"), /* Modern variable format */
+          url("../../fonts/Mona-Sans.var.woff2") format("woff2"); /* Basic woff2 fallback */
+   }
+   
+   /* ==========================================================================
+      3. Core Theme & Base Styles
+         - Imports theme.css which defines CSS variables for light/dark modes
+           and includes base HTML element styling (body, headings, links, etc.)
+      ========================================================================== */
+   @import "./theme.css"; /* Defines CSS variables and base element styles */
+   
+   
+   /* ==========================================================================
+      4. Component & Utility Styles
+         - Import CSS for specific components, layouts, or custom utilities.
+         - Order can matter if there are overrides.
+      ========================================================================== */
+   /* @import "./base.css"; */ /* NOTE: Base styles are now merged into theme.css */
+   @import "./blogs.css"; /* Blog specific overrides and theme application */
+   @import "./imageStyles.css"; /* Styles for images */
+   @import "./embla.css"; /* Styles for Embla Carousel */
+   @import "./ascii.css"; /* Styles related to ASCII art */
+   @import "./giscus.css"; /* Styles for Giscus comments */
+   @import "./custom.css"; /* Custom utilities, components, effects (buttons, cards, etc.) */
+   @import "./styles.css"; /* General project-specific styles (if needed) */
+   @import "./glitch-2.css"; /* Additional glitch effects */
+   @import "./logos.css"; /* Styles specifically for logo components */
+   @import "./projects.css";
+   @import "./animations.css";
+   @import "./mobile.css";
+   @import "./markdownStyles.css"; /* Styles for Markdown rendering */
+   /* @import "./readingMode.css"; */ /* If needed */
+   
+   
+   /* ==========================================================================
+      5. Optional Global Settings
+      ========================================================================== */
+   
+   /* Example: Base smooth scroll (can be enabled if desired) */
+   /* html {
+     scroll-behavior: smooth;
+   } */
+   
+   /* Example: Reduced motion preferences (already included in custom.css, keep it there or move here) */
+   /* @media (prefers-reduced-motion: reduce) { ... } */
+   
+   
