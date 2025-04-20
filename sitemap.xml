@@ -3,105 +3,105 @@
   
   <url>
     <loc>https://manicinc.github.io/</loc>
-    <lastmod>2025-04-20T13:26:51.797Z</lastmod>
+    <lastmod>2025-04-20T15:43:10.809Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1</priority>
   </url>
   
   <url>
     <loc>https://manicinc.github.io/blog</loc>
-    <lastmod>2025-04-20T13:26:51.797Z</lastmod>
+    <lastmod>2025-04-20T15:43:10.809Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://manicinc.github.io/projects</loc>
-    <lastmod>2025-04-20T13:26:51.797Z</lastmod>
+    <lastmod>2025-04-20T15:43:10.809Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://manicinc.github.io/blog/thinkpieces</loc>
-    <lastmod>2025-04-20T13:26:51.797Z</lastmod>
+    <lastmod>2025-04-20T15:43:10.809Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://manicinc.github.io/blog/tutorials</loc>
-    <lastmod>2025-04-20T13:26:51.797Z</lastmod>
+    <lastmod>2025-04-20T15:43:10.809Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://manicinc.github.io/projects/ai</loc>
-    <lastmod>2025-04-20T13:26:51.797Z</lastmod>
+    <lastmod>2025-04-20T15:43:10.809Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://manicinc.github.io/projects/tools</loc>
-    <lastmod>2025-04-20T13:26:51.797Z</lastmod>
+    <lastmod>2025-04-20T15:43:10.809Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://manicinc.github.io/projects/social</loc>
-    <lastmod>2025-04-20T13:26:51.797Z</lastmod>
+    <lastmod>2025-04-20T15:43:10.809Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://manicinc.github.io/blog/thinkpieces/logomaker-an-experiment-in-human-computer-interaction-vibe-coding</loc>
-    <lastmod>2025-04-20T06:25:36-07:00</lastmod>
+    <lastmod>2025-04-20T08:41:55-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://manicinc.github.io/blog/tutorials/contribute</loc>
-    <lastmod>2025-04-20T06:25:36-07:00</lastmod>
+    <lastmod>2025-04-20T08:41:55-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://manicinc.github.io/blog/thinkpieces/ai-sociopaths</loc>
-    <lastmod>2025-04-20T06:25:36-07:00</lastmod>
+    <lastmod>2025-04-20T08:41:55-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://manicinc.github.io/blog/thinkpieces/the-meat-interface</loc>
-    <lastmod>2025-04-20T06:25:36-07:00</lastmod>
+    <lastmod>2025-04-20T08:41:55-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://manicinc.github.io/projects/tools/portapack</loc>
-    <lastmod>2025-04-20T06:25:36-07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://manicinc.github.io/projects/tools/logomaker</loc>
-    <lastmod>2025-04-20T06:25:36-07:00</lastmod>
+    <lastmod>2025-04-20T08:41:55-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://manicinc.github.io/projects/social/velvet</loc>
-    <lastmod>2025-04-20T06:25:36-07:00</lastmod>
+    <lastmod>2025-04-20T08:41:55-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://manicinc.github.io/projects/tools/logomaker</loc>
+    <lastmod>2025-04-20T08:41:55-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
