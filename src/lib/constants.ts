@@ -3,10 +3,10 @@
 // Giscus Configuration Constants
 export const GISCUS_CONFIG = {
     REPO: "manicinc/manicinc" as `<span class="math-inline">\{string\}/</span>{string}`, // Type assertion for safety
-    REPO_ID: "R_kgDOLPzZxQ",
+    REPO_ID: "R_kgDOOb1tSQ",
     CATEGORY: "Blogs",
     CATEGORY_ID: "DIC_kwDOLPzZxc4CpDyi",
-    MAPPING: "og:title", // Or "pathname" etc.
+    MAPPING: "pathname", // Or "pathname" etc.
     STRICT: "0", // '1' for true, '0' for false
     REACTIONS: "1", // '1' for true, '0' for false
     EMIT_METADATA: "0", // '1' for true, '0' for false
