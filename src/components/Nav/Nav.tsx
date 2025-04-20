@@ -125,10 +125,10 @@ export const Nav = () => {
                 {/* Logo Area: Takes priority, shrinks minimally */}
                 <div className="order-1 flex-shrink-0">
                     <NavLogo
-                        isBlogLogo={isBlog}
-                        closeMenu={closeMenu} // Pass closeMenu for logo click
-                    />
-                </div>
+                        isBlog={isBlog}
+                        toggleMenu={toggleMenu}
+                        />
+                    </div>
 
                 {/* Desktop Links & Actions Area: Hidden below md, pushes right on lg+ */}
                 {/* Takes remaining space on medium screens before wrapping */}
