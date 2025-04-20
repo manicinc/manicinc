@@ -56,6 +56,14 @@ const NavLinksDesktop: React.FC<NavLinksDesktopProps> = ({ isBlog, isActivePath,
                 </>
             )}
 
+         {/* AboutLink */}
+         <Link href="/blog/tutorials/contribute" legacyBehavior>
+                <a className={`${styles.navLink} ${styles.navLinkBlog} ${isActivePath('/blog') ? styles.navActive : ''}`} data-nav-id="blog" onClick={closeMenu}>
+                    <span className={styles.linkText} data-text="about">about</span>
+                </a>
+            </Link>
+
+
             {/* Blog Link */}
             <Link href="/blog" legacyBehavior>
                 <a className={`${styles.navLink} ${styles.navLinkBlog} ${isActivePath('/blog') ? styles.navActive : ''}`} data-nav-id="blog" onClick={closeMenu}>

@@ -30,7 +30,7 @@ export default function DisqusComments({
       </div>
       
       <DiscussionEmbed
-        shortname="manic-agency" // Your Disqus shortname
+        shortname="www-manic-agency" // Your Disqus shortname
         config={{
           url: fullUrl,
           identifier: postIdentifier,
