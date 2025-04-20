@@ -18,69 +18,76 @@ export const GISCUS_CONFIG = {
 
 // Other constants for your app can go here...
 export const SITE_NAME = "Manic Agency";
-
 // src/lib/constants.ts
 
-// Interface definitions (keep if you have them)
-interface FooterLink {
-    title: string;
-    href: string;
-  }
-  interface FooterSection {
-    title: string;
-    links: FooterLink[];
-  }
-  
-  // --- Define Footer Navigation Data ---
-  export const footerNavigationData: FooterSection[] = [
-    {
-      title: 'Navigate',
-      links: [
+// --- (Keep existing interfaces: FooterLink, FooterSection) ---
+interface FooterLink { title: string; href: string; }
+interface FooterSection { title: string; links: FooterLink[]; }
+
+// --- Existing Footer Data ---
+export const footerNavigationData: FooterSection[] = [
+  {
+    title: 'Navigate',
+    links: [ /* ... your main site links ... */
         { title: 'Home', href: '/' },
         { title: 'Services', href: '/#services' },
         { title: 'Projects', href: '/projects' },
         { title: 'Open Source', href: '/open-source' },
         { title: 'Blog', href: '/blog' },
-      ],
-    },
-    {
-      title: 'Company',
-      links: [
-        { title: 'About Us', href: '/team' }, // Added '/team' link
-        { title: 'Mission', href: '/mission' }, // Added '/mission' link
-        { title: 'Process', href: '/process' }, // Added '/process' link
+    ],
+  },
+  {
+    title: 'Company',
+    links: [ /* ... your main company links ... */
+        { title: 'About Us', href: '/team' },
+        { title: 'Mission', href: '/mission' },
+        { title: 'Process', href: '/process' },
         { title: 'Contact', href: '/contact' },
-      ],
-    },
+    ],
+  },
+  {
+    title: 'Legal',
+    links: [ /* ... your legal links ... */
+        { title: 'Privacy Policy', href: '/privacy' },
+        { title: 'Terms of Service', href: '/terms' },
+    ],
+  },
+];
+
+// --- NEW: Blog-Specific Footer Data ---
+export const blogFooterNavigationData: FooterSection[] = [
+  {
+    title: 'Explore the Looking Glass', // Blog-specific title
+    links: [
+      { title: 'Latest Posts', href: '/blog' },
+      // Add links to categories, archives, etc. as desired
+      // { title: 'Archives', href: '/blog/archives' },
+      { title: 'Category: Tutorials', href: '/blog/category/tutorials' },
+      { title: 'Category: Insights', href: '/blog/category/insights' },
+    ],
+  },
+  {
+    title: 'Through the Mirror', // The specific title you wanted
+    links: [
+      { title: 'About This Blog', href: '/blog/about' }, // Example link
+      { title: 'Contribute', href: '/blog/tutorials/contribute' },
+      { title: 'Agency Home', href: '/' }, // Link back to main site
+    ],
+  },
     {
-      title: 'Legal', // Added Legal section
-      links: [
-        { title: 'Privacy Policy', href: '/privacy' }, // Added '/privacy' link
-        { title: 'Terms of Service', href: '/terms' }, // Added '/terms' link
-      ],
-    },
-    // Add more sections if needed
-  ];
-  
-  export interface NavLinkItem {
-    title: string;
-    href: string;
-    id: string; // Used for data-nav-id and active path checks
-    isButton?: boolean; // Optional flag for styling contact button
-    // Add icon components if you refactor NavLinks to use this fully
-    // hoverAnimation?: React.ComponentType<any>;
-  }
-  
-  // --- OPTIONAL: Define Main Nav Links here for consistency ---
-  export const mainHeaderNavLinks: NavLinkItem[] = [
-      // Note: Order matters for display
-      { title: 'Services', href: '/#services', id: 'services' },
-      { title: 'Projects', href: '/projects', id: 'projects' },
-      { title: 'Blueprint', href: '/process', id: 'process'}, // Added Process/Blueprint
-      { title: 'Open Source', href: '/open-source', id: 'open-source' },
-      { title: 'Mission', href: '/mission', id: 'mission'},    // Added Mission
-      { title: 'Team', href: '/team', id: 'team'},        // Added Team/About Us
-      { title: 'Blog', href: '/blog', id: 'blog' },
-      // Keep Contact last if it's styled as a button
-      { title: 'Contact', href: '/contact', id: 'contact', isButton: true },
-  ];
+    title: 'Connect', // Keep a connect section?
+    links: [
+         { title: 'Contact Us', href: '/contact' },
+    ],
+  },
+  {
+    title: 'Legal', // Keep legal section consistent
+    links: [
+      { title: 'Privacy Policy', href: '/privacy' },
+      { title: 'Terms of Service', href: '/terms' },
+    ],
+  },
+];
+
+
+// --- (Keep GISCUS_CONFIG, SITE_NAME, mainHeaderNavLinks etc.) ---

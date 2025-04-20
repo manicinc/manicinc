@@ -1,0 +1,392 @@
+/* src/styles/projectMarkdownStyles.css */
+/* Styles for project content rendered by ProjectMarkdownRenderer */
+/* Aims for a cleaner, more modern aesthetic than the blog styles. */
+/* Uses CSS variables defined in theme.css */
+
+/* --- Base Content Scope --- */
+.project-prose {
+    color: var(--text-primary);
+    line-height: 1.7; /* Slightly tighter line height */
+    font-size: 1rem; /* Standard base font size */
+    font-family: var(--font-body); /* Use main body font */
+    max-width: 80ch; /* Allow slightly wider content */
+    margin: 0 auto; /* Center content block */
+}
+.project-prose > *:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Modern Typography (Headings H1-H6) --- */
+.project-prose .project-h1, .project-prose .project-h2, .project-prose .project-h3,
+.project-prose .project-h4, .project-prose .project-h5, .project-prose .project-h6 {
+    font-family: var(--font-display); /* Or keep --font-body for pure sans-serif */
+    color: var(--text-heading);
+    font-weight: 600; /* Slightly lighter weight */
+    line-height: 1.2;
+    margin: 2em 0 1em;
+    letter-spacing: -0.01em;
+    scroll-margin-top: calc(var(--header-height, 60px) + 1rem); /* Offset for sticky header */
+}
+.project-prose .project-h1 {
+    font-size: clamp(2rem, 5vw, 2.8rem); /* Slightly smaller H1 */
+    font-weight: 700; /* Keep H1 bold */
+    text-align: left; /* Align left */
+    border-bottom: 2px solid var(--accent-primary); /* Simple underline */
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.5em;
+}
+.project-prose .project-h2 {
+    font-size: clamp(1.7rem, 4vw, 2.3rem);
+    margin-top: 2.5em;
+    border-bottom: 1px solid var(--bg-tertiary); /* Subtle divider */
+    padding-bottom: 0.5rem;
+}
+.project-prose .project-h3 {
+    font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+    font-weight: 600;
+}
+.project-prose .project-h4 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    color: var(--text-secondary); /* Secondary color for H4 */
+    font-weight: 500;
+}
+.project-prose .project-h5 { font-size: 1.1rem; font-weight: 500; }
+.project-prose .project-h6 { font-size: 1rem; font-weight: 500; color: var(--text-muted); }
+
+
+/* --- Paragraphs --- */
+.project-prose .project-p {
+    margin-bottom: 1.2em; /* Tighter paragraph spacing */
+    color: var(--text-secondary); /* Use secondary text for body */
+}
+/* Ensure paragraphs directly after headings have slightly more space */
+.project-prose .project-h1 + .project-p,
+.project-prose .project-h2 + .project-p,
+.project-prose .project-h3 + .project-p,
+.project-prose .project-h4 + .project-p {
+    margin-top: 1.2em;
+}
+
+/* --- Links --- */
+.project-prose .project-link {
+    color: var(--accent-primary);
+    text-decoration: none; /* No underline */
+    /* Subtle animated underline on hover */
+    background-image: linear-gradient(var(--accent-highlight), var(--accent-highlight));
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px; /* Start with 0 width */
+    transition: background-size .3s ease-in-out;
+    font-weight: 500; /* Slightly bolder links */
+}
+.project-prose .project-link:hover,
+.project-prose .project-link:focus {
+    background-size: 100% 1px; /* Expand underline on hover */
+    outline: none;
+    color: var(--accent-highlight);
+}
+
+/* --- Lists (Standard Styling) --- */
+.project-prose .project-ul,
+.project-prose .project-ol {
+    margin: 1.2em 0 1.2em 1.5em; /* Indentation */
+    padding-left: 1.5em;
+}
+.project-prose .project-li {
+    margin-bottom: 0.5em; /* Spacing between items */
+    padding-left: 0.5em; /* Space between marker and text */
+    color: var(--text-secondary); /* Match paragraph color */
+}
+/* Standard list markers */
+.project-prose .project-ul {
+    list-style: disc;
+}
+.project-prose .project-ol {
+    list-style: decimal;
+}
+/* Marker styling */
+.project-prose .project-li::marker {
+    color: var(--text-muted); /* Subtle marker color */
+    font-weight: normal;
+}
+
+/* --- Horizontal Rule (Simple Line) --- */
+.project-prose .project-hr {
+    border: none;
+    height: 1px;
+    background-color: var(--bg-tertiary); /* Simple divider color */
+    margin: 3rem auto; /* Spacing */
+    width: 80%; /* Constrained width */
+}
+
+/* --- Code Blocks (Modern) --- */
+.project-prose .project-code-block-wrapper {
+    margin: 2em 0; /* Spacing */
+    position: relative; /* For copy button positioning */
+    border-radius: var(--radius-lg); /* Consistent radius */
+    overflow: hidden; /* Clip highlighter */
+    border: 1px solid var(--bg-tertiary); /* Subtle border */
+    /* Use background from highlighter theme if possible, or set wrapper bg */
+    background-color: var(--bg-code); /* Match theme variable */
+    box-shadow: var(--shadow-soft); /* Subtle shadow */
+}
+/* Style the div rendered by SyntaxHighlighter */
+.project-prose .project-code-block-wrapper > div[class*="react-syntax-highlighter"] {
+    margin: 0 !important;
+    padding: 1.2rem 1.5rem !important; /* Internal padding */
+    border-radius: var(--radius-lg) !important; /* Match wrapper radius */
+    border: none !important;
+    font-family: var(--font-mono) !important;
+    font-size: 0.9rem !important; /* Slightly smaller code font */
+    line-height: 1.6 !important;
+    overflow-x: auto !important; /* Horizontal scroll */
+    background: transparent !important; /* Let wrapper handle bg */
+    /* Themed scrollbar */
+    scrollbar-color: var(--accent-muted1) var(--bg-tertiary);
+    scrollbar-width: thin;
+}
+.project-prose .project-code-block-wrapper > div[class*="react-syntax-highlighter"]::-webkit-scrollbar {
+    height: 8px; background-color: var(--bg-tertiary);
+}
+.project-prose .project-code-block-wrapper > div[class*="react-syntax-highlighter"]::-webkit-scrollbar-thumb {
+    background-color: var(--accent-muted1); border-radius: 4px; border: 2px solid var(--bg-tertiary);
+}
+.project-prose .project-code-block-wrapper > div[class*="react-syntax-highlighter"]::-webkit-scrollbar-thumb:hover {
+    background-color: var(--accent-primary);
+}
+
+/* Optional: Style line numbers if showLineNumbers is true */
+.project-prose .project-code-block-wrapper .linenumber {
+    color: var(--text-muted) !important;
+    opacity: 0.6;
+    font-size: 0.8em !important;
+    padding-right: 1.5em !important;
+}
+
+/* Simple copy button - appears on hover */
+.project-prose .project-copy-button {
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+    background: var(--bg-tertiary);
+    color: var(--text-muted);
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--radius-base);
+    font-size: 0.75rem;
+    cursor: pointer;
+    opacity: 0; /* Hidden by default */
+    transition: opacity var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+    z-index: 1; /* Above code */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.project-prose .project-code-block-wrapper:hover .project-copy-button {
+    opacity: 0.8; /* Show on wrapper hover */
+}
+.project-prose .project-copy-button:hover {
+    opacity: 1;
+    background: var(--accent-primary);
+    color: var(--text-on-accent);
+}
+
+/* --- Inline Code (Modern) --- */
+.project-prose .project-inline-code {
+    font-family: var(--font-mono);
+    background: var(--bg-secondary); /* Subtle background */
+    color: var(--text-secondary); /* Secondary text color */
+    padding: 0.2em 0.4em;
+    border-radius: var(--radius-base);
+    font-size: 0.9em; /* Match code block font size? */
+    border: 1px solid var(--bg-tertiary); /* Subtle border */
+    margin: 0 0.1em;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+/* --- Blockquotes & Callouts (Modern) --- */
+/* Standard blockquote */
+.project-prose .project-blockquote {
+    border-left: 3px solid var(--accent-muted1); /* Thinner border */
+    margin: 1.5em 0 1.5em 0.5em; /* Less indent */
+    padding: 0.8em 1.5em; /* Less padding */
+    background-color: transparent; /* No background */
+    color: var(--text-secondary); /* Secondary text color */
+    font-style: normal; /* Not italic by default */
+}
+.project-prose .project-blockquote p {
+    margin-bottom: 0.5em;
+    color: inherit; /* Inherit color from blockquote */
+}
+
+/* Simple callout styles */
+.project-prose .project-callout {
+    padding: 1rem 1.2rem; /* Padding */
+    margin: 1.5em 0; /* Spacing */
+    border-radius: var(--radius-base); /* Standard radius */
+    border: 1px solid; /* Use border for emphasis */
+    border-left-width: 4px; /* Slightly thicker left border */
+    /* Color variables set based on type */
+    border-color: var(--callout-border-color, var(--bg-tertiary));
+    border-left-color: var(--callout-accent-color, var(--accent-primary));
+    background-color: rgba(var(--callout-accent-color-rgb, var(--accent-primary-rgb)), 0.08); /* Tinted background */
+    font-size: 0.95em; /* Slightly smaller */
+}
+.project-prose .project-callout p {
+    color: var(--text-primary); /* Normal text color inside */
+    margin: 0; /* Reset paragraph margins inside */
+}
+/* Define callout color variables */
+.project-prose .project-callout-note {
+    --callout-accent-color: var(--accent-muted2);
+    --callout-accent-color-rgb: var(--accent-muted2-rgb);
+    --callout-border-color: rgba(var(--accent-muted2-rgb), 0.4);
+}
+.project-prose .project-callout-warning {
+    --callout-accent-color: var(--accent-alert);
+    --callout-accent-color-rgb: var(--accent-alert-rgb);
+    --callout-border-color: rgba(var(--accent-alert-rgb), 0.4);
+}
+.project-prose .project-callout-tip {
+    --callout-accent-color: var(--accent-secondary);
+    --callout-accent-color-rgb: var(--accent-secondary-rgb);
+    --callout-border-color: rgba(var(--accent-secondary-rgb), 0.4);
+}
+.project-prose .project-callout-alert { /* Maps to :::alert */
+    --callout-accent-color: var(--accent-highlight);
+    --callout-accent-color-rgb: var(--accent-highlight-rgb);
+    --callout-border-color: rgba(var(--accent-highlight-rgb), 0.4);
+}
+
+
+/* --- Tables (Modern) --- */
+.project-prose .project-table-wrapper {
+    margin: 2em 0; /* Spacing */
+    overflow-x: auto;
+    border: 1px solid var(--bg-tertiary); /* Wrapper border */
+    border-radius: var(--radius-lg);
+    box-shadow: none; /* No shadow */
+    scrollbar-color: var(--accent-muted1) var(--bg-tertiary);
+    scrollbar-width: thin;
+}
+.project-prose .project-table-wrapper::-webkit-scrollbar {
+    height: 8px; background-color: var(--bg-secondary);
+}
+.project-prose .project-table-wrapper::-webkit-scrollbar-thumb {
+    background-color: var(--accent-muted1); border-radius: 4px; border: 2px solid var(--bg-secondary);
+}
+.project-prose .project-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem; /* Smaller table font */
+    line-height: 1.5;
+}
+.project-prose .project-table th,
+.project-prose .project-table td {
+    padding: 0.8rem 1rem; /* Cell padding */
+    text-align: left;
+    border-bottom: 1px solid var(--bg-tertiary); /* Row divider */
+    vertical-align: top;
+    /* Remove vertical dividers */
+    /* border-left: 1px solid var(--bg-tertiary); */
+}
+/* .project-prose .project-table th:first-child,
+.project-prose .project-table td:first-child { border-left: none; } */
+
+.project-prose .project-table th {
+    font-weight: 600; /* Bold header */
+    background: var(--bg-secondary); /* Subtle header background */
+    color: var(--text-heading);
+    white-space: nowrap;
+}
+.project-prose .project-table tr:last-child td {
+    border-bottom: none; /* Remove border on last row */
+}
+.project-prose .project-table td {
+    color: var(--text-primary); /* Primary text color in cells */
+}
+/* Optional: Subtle hover effect */
+.project-prose .project-table tr:hover td {
+    background: rgba(var(--accent-muted1-rgb), 0.05);
+}
+
+
+/* --- Images & Grids --- */
+/* Reuse .markdown-image-wrapper for consistency if desired */
+.project-prose .markdown-image-wrapper {
+    margin: 2em auto; /* Default spacing */
+}
+.project-prose .project-image-wrapper { /* Optional specific wrapper class */
+     /* Add specific project image wrapper styles if needed */
+}
+/* Reuse .image-grid if structure is the same */
+.project-prose .image-grid {
+    display: grid;
+    gap: 1rem;
+    margin: 2em 0;
+}
+.project-prose .image-grid > div {
+    margin: 0 !important;
+    border-radius: var(--radius-base);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft); /* Keep subtle shadow? */
+}
+.project-prose .image-grid img {
+    width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16 / 10; display: block;
+}
+/* Ensure project images use modern defaults (e.g., no ornate borders) */
+.project-prose .content-image { /* Target image within ZoomableImage */
+    border-radius: var(--radius-base);
+}
+.project-prose .image-shadow .content-image {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* Modern shadow */
+}
+.project-prose .border-simple .content-image {
+    border: 1px solid var(--bg-tertiary);
+    padding: 3px; /* Minimal padding */
+    background: var(--bg-secondary);
+}
+/* Hide complex borders if not supported/desired for projects */
+.project-prose .border-gradient,
+.project-prose .border-glow,
+.project-prose .border-inset,
+.project-prose .border-dashed {
+    /* Optionally hide or style simply */
+    padding: 0;
+    background: none;
+}
+.project-prose .border-gradient .content-image,
+.project-prose .border-glow .content-image,
+.project-prose .border-inset .content-image,
+.project-prose .border-dashed .content-image {
+     border: 1px solid var(--bg-tertiary); /* Default to simple border */
+     padding: 3px;
+     background: var(--bg-secondary);
+     box-shadow: none;
+}
+
+
+/* --- Math (KaTeX) --- */
+/* Keep KaTeX styling minimal */
+.project-prose .katex-display {
+    padding: 1em 0.5em;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+}
+.project-prose .katex {
+    font-size: 1em; /* Match surrounding text size */
+    color: inherit !important;
+}
+
+/* --- Mark Tag (<mark>) --- */
+.project-mark {
+    background-color: rgba(var(--accent-highlight-rgb), 0.2); /* More subtle highlight */
+    color: inherit; /* Inherit text color */
+    padding: 0.1em 0.3em;
+    border-radius: var(--radius-base);
+    margin: 0 0.1em;
+}
+.light .project-mark {
+    background-color: rgba(var(--accent-highlight-rgb), 0.25);
+}
