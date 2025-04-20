@@ -5,8 +5,13 @@
     --lg-logo-color: var(--accent-highlight);
     --lg-logo-color-rgb: var(--accent-highlight-rgb);
 
-    display: block;
-    position: relative;
+    padding: 0; /* Ensure wrapper has no padding */
+    margin: 0; /* Reset wrapper margins */
+    /* Add negative bottom margin HERE to reduce space below the logo */
+    margin-bottom: -1em; /* <<< ADJUST THIS VALUE AS NEEDED (-0.5em, -1.5em etc.) */
+
+    display: block; /* Make wrapper a block element */
+    position: relative; /* Keep for potential absolute children/effects */
     /* --- Underline Fix --- */
     text-decoration: none !important;
     border-bottom: none !important;
@@ -14,29 +19,74 @@
     outline: none;
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
-    line-height: 1;
-    vertical-align: middle;
-    padding: 0.3rem; /* Add padding */
+    line-height: 1; /* Helps ensure wrapper fits SVG height */
+    /* vertical-align: middle; */ /* Often not needed for display: block */
 }
 /* Ensure underline doesn't appear on hover/focus either */
 .lookingGlassWrapper:hover,
 .lookingGlassWrapper:focus {
-     border-bottom: none !important;
+    border-bottom: none !important;
 }
 
 /* Base SVG styles */
 .lookingGlassSvg {
-    /* width: auto; */
-    height: 6.5rem; /* Increased height */
-    display: block;
-    overflow: visible;
-    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    /* --- Mobile Size (Default) --- */
+    height: 5.5em; /* <<< Use 'em' unit for mobile height */
+    width: auto;   /* <<< Let width scale based on height & viewBox aspect ratio */
+
+    display: block; /* Make SVG a block element */
+    padding: 0;     /* <<< Ensure no padding */
+    margin: 0;      /* <<< Ensure no margin */
+    margin-bottom: 15px;
+
+    overflow: visible; /* Keep if needed for effects */
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); /* Keep */
 }
+
+/* This block applies ONLY to screens 767px wide or smaller */
+@media (max-width: 767px) {
+
+    /* Example 1: Styling a general element */
+    .some-element {
+      font-size: 14px;
+      padding: 10px;
+      background-color: lightyellow; /* Just an example */
+    }
+  
+    /* Example 2: Applying your logo height specifically for mobile */
+    /* (Using the previous context) */
+    .lookingGlassSvg {
+      height: 5.2em; /* This height now ONLY applies up to 767px */
+      margin-bottom: 0px;
+    }
+  
+    /* Add any other styles you ONLY want on mobile screens here */
+  
+  }
+  
+
+/* --- Desktop Styles --- */
+@media (min-width: 768px) { /* Adjust breakpoint (e.g., 768px, 1024px) as needed */
+  .lookingGlassSvg {
+    /* --- Desktop Size Override --- */
+    height: 5.5em; /* <<< Use 'em' unit for desktop height */
+  }
+
+  /* Optional: Adjust negative margin on wrapper for desktop if needed */
+  /* .lookingGlassWrapper {
+    margin-bottom: -0.8em;
+  } */
+}
+
+
+/* --- Animation & Effect Styles (Keep As Is) --- */
 
 /* Group for overall animation */
 .logoGroup {
     transition: transform 0.5s ease-out;
     transform-origin: center center;
+    padding: 0; /* Keep padding/margin 0 on internal groups if they don't need spacing */
+    margin: 0;
 }
 .lookingGlassWrapper:hover .logoGroup {
     transform: scale(1.03);
@@ -65,11 +115,7 @@
     filter: drop-shadow(0px 1px 1px rgba(var(--shadow-color-rgb), 0.1));
 }
 .lookingGlassWrapper:hover .frameGroup {
-     /* Apply glow filter defined in SVG */
-     /* Ensure the filter ID matches the one generated in the component */
-     /* Combining filters needs careful handling - use unique IDs */
-     /* Example: filter: drop-shadow(...) url(#lg-glow-filter-id); */
-     filter: drop-shadow(0px 2px 4px rgba(var(--shadow-color-rgb), 0.25)) url(#lg-glow-uniqueId); /* Placeholder ID - ensure correct ID is used */
+    filter: drop-shadow(0px 2px 4px rgba(var(--shadow-color-rgb), 0.25)) url(#lg-glow-uniqueId); /* Placeholder ID */
 }
 
 /* Frame Elements Animation */
@@ -88,7 +134,7 @@
 }
 .lookingGlassWrapper:hover .frameMain { stroke-width: 3.9; opacity: 1; }
 .lookingGlassWrapper:hover .frameDetail { opacity: 0.9; stroke-dashoffset: -5; }
-.lookingGlassWrapper:hover .frameScrollwork path { opacity: 1; stroke: var(--accent-secondary); } /* Example: change color */
+.lookingGlassWrapper:hover .frameScrollwork path { opacity: 1; stroke: var(--accent-secondary); }
 .lookingGlassWrapper:hover .frameScrollwork path:nth-child(odd) { transform: scale(1.05) translate(-0.5px, -0.5px) rotate(1deg); }
 .lookingGlassWrapper:hover .frameScrollwork path:nth-child(even) { transform: scale(0.97) translate(0.5px, 0.5px) rotate(-1deg); }
 
@@ -110,43 +156,36 @@
 
 /* --- Text Styling & Effects --- */
 .textGroup {
-     transition: filter 0.3s ease-in-out;
-     filter: none; /* Start without glitch */
+    transition: filter 0.3s ease-in-out;
+    filter: none; /* Start without glitch */
 }
-/* Apply glitch filter on hover */
 .lookingGlassWrapper:hover .textGroup {
-     /* Note: Ensure the filter ID used here matches the one in the SVG component */
-     filter: url(#lg-text-glitch-uniqueId); /* Ensure ID matches */
-}
-
-/* Keyframes for text shimmer */
-@keyframes logoTextShimmer {
-  0%, 100% { text-shadow: 0px 1px 2px rgba(var(--shadow-color-rgb), 0.1), 0 0 8px rgba(var(--lg-logo-color-rgb), 0.2); }
-  50% { text-shadow: 0px 1px 3px rgba(var(--shadow-color-rgb), 0.15), 0 0 16px rgba(var(--lg-logo-color-rgb), 0.5); }
+    filter: url(#lg-text-glitch-uniqueId); /* Ensure ID matches */
 }
 
 .logoText {
-    /* Base styles for main text */
     transition: transform 0.5s ease, text-shadow 0.5s ease, fill 0.4s ease, opacity 0.4s ease;
     transform-origin: center center;
     fill: var(--lg-logo-color);
-    /* Opacity handled by SMIL */
-    /* Apply shimmer animation */
     animation: logoTextShimmer 7s ease-in-out infinite alternate;
-    /* Font properties set directly on SVG <text> element */
 }
 .lookingGlassWrapper:hover .logoText {
     transform: scale(1.01);
-    /* Opacity handled by SMIL animate tag in component */
 }
 
-/* Reflected Text Style */
 .reflectionText {
     fill: currentColor;
-    /* Opacity handled by SMIL animate tag in component */
-    transition: opacity 0.5s ease-out 0.1s; /* Keep transition for smoothness */
+    transition: opacity 0.5s ease-out 0.1s;
     transform-origin: center center;
     pointer-events: none;
     filter: blur(0.5px);
 }
 
+/* Keyframes for text shimmer */
+@keyframes logoTextShimmer {
+  0%, 100% { text-shadow: 0px 1px 2px rgba(var(--shadow-color-rgb), 0.1), 0 0 5px rgba(var(--lg-logo-color-rgb), 0.2); }
+  50% { text-shadow: 0px 1px 3px rgba(var(--shadow-color-rgb), 0.15), 0 0 10px rgba(var(--lg-logo-color-rgb), 0.4); }
+}
+
+/* --- Text Glitch Effect --- */
+/* Redundant .textGroup rules removed, already defined above */

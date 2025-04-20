@@ -115,29 +115,9 @@ const LookingGlassLogo: React.FC<LookingGlassLogoProps> = ({ scale = 1 }) => {
                               {/* Animate opacity on hover using SMIL (more reliable than CSS for this) */}
                              <animate attributeName="opacity" from="1" to="0.85" dur="0.4s" begin="mouseenter" fill="freeze" />
                              <animate attributeName="opacity" from="0.85" to="1" dur="0.4s" begin="mouseleave" fill="freeze" />
+                             
                         </text>
 
-                        {/* Reflected Text Element */}
-                        <text
-                            x="110" // Match main text position
-                            y="85"  // Position below main text
-                            dominantBaseline="middle"
-                            textAnchor="start"
-                            fontFamily="var(--font-heading-blog, 'Playfair Display', serif)"
-                            fontSize="14" // Smaller font size for reflection
-                            fontWeight="400" // Lighter weight
-                            fill="currentColor"
-                            letterSpacing="1.5"
-                            // Apply flip transform
-                            transform="scale(1, -1) translate(0, -140)" // Adjust Y translate offset based on font size/position
-                            className={styles.reflectionText} // Apply CSS module class for base opacity/blur
-                            opacity="0" // Start hidden
-                        >
-                            <tspan>?rorrim eht hguorht nru‏teR</tspan> {/* Mirrored Text */}
-                            {/* Animate opacity on hover using SMIL */}
-                             <animate attributeName="opacity" from="0" to="0.6" dur="0.5s" begin="mouseenter" fill="freeze" />
-                             <animate attributeName="opacity" from="0.6" to="0" dur="0.5s" begin="mouseleave" fill="freeze" />
-                        </text>
                     </g>
                 </g>
             </svg>

@@ -68,6 +68,14 @@ const NavLinksMobile: React.FC<NavLinksMobileProps> = ({
                             </Link>
                         </>
                     )}
+
+                    {/* AboutLink */}
+                    <Link href="/blog/tutorials/contribute" legacyBehavior>
+                        <a className={`${styles.navLink} ${styles.navLinkBlog} ${isActivePath('/blog') ? styles.navActive : ''}`} data-nav-id="blog" onClick={closeAndNavigate}>
+                            <span className={styles.linkText} data-text="about">about</span>
+                        </a>
+                    </Link>
+
                     <Link href="/blog" legacyBehavior>
                         <a className={`${styles.mobileNavLink} group ${isActivePath('/blog') ? styles.navActive : ''}`} data-nav-id="blog" onClick={closeAndNavigate}>
                              {/* <BlogIcon className={styles.mobileNavIcon} /> */}
