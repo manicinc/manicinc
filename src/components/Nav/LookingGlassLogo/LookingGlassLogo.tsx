@@ -3,7 +3,11 @@ import React from 'react';
 // Link is now handled by the parent NavLogo component
 import styles from './LookingGlassLogo.module.css'; // Import the CSS module
 
-const LookingGlassLogo = () => {
+interface LookingGlassLogoProps {
+    scale?: number; // Add scale prop for sizing
+}
+
+const LookingGlassLogo: React.FC<LookingGlassLogoProps> = ({ scale = 1 }) => {
     // Unique IDs for SVG elements
     const uniqueSuffix = React.useId ? React.useId().replace(/:/g, '') : Math.random().toString(36).substring(2, 9);
     const gradientId = `lg-grad-${uniqueSuffix}`;
@@ -13,13 +17,19 @@ const LookingGlassLogo = () => {
     const glowFilterId = `lg-glow-${uniqueSuffix}`;
     const textGlitchFilterId = `lg-text-glitch-${uniqueSuffix}`; // New filter for text glitch
 
+    // Apply scaling to the wrapper and SVG
+    const wrapperStyle = {
+        transform: scale !== 1 ? `scale(${scale})` : 'none',
+        transformOrigin: 'left top'
+    };
+
     return (
         // The Link component is now wrapping this in NavLogo.tsx
         // Apply wrapper class for styling (e.g., underline removal)
-        <div className={`${styles.lookingGlassWrapper} group`}>
+        <div className={`${styles.lookingGlassWrapper} group`} style={wrapperStyle}>
             <svg
                 viewBox="-20 -30 260 180" // Adjusted viewBox for reflection text space
-                className={styles.lookingGlassSvg + " w-36 md:w-40"}
+                className={styles.lookingGlassSvg + ` w-${36 * scale} md:w-${40 * scale}`}
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 style={{ color: 'var(--lg-logo-color, var(--accent-highlight))' } as React.CSSProperties}
@@ -132,7 +142,7 @@ const LookingGlassLogo = () => {
                 </g>
             </svg>
             {/* Screen reader text */}
-            <span className="sr-only">The Looking Glass Blog</span>
+            <span className="sr-only">Looking Glass Chronicles</span>
         </div>
     );
 };

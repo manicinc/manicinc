@@ -95,49 +95,73 @@ export default function LayoutClient() {
     };
   }, []);
 
-
-  // --- Theme Management (Handles CHANGES after initial load) ---
+  // --- Theme Management ---
   const applyThemeTransition = useCallback((newTheme: string, currentTheme: string) => {
     const htmlEl = document.documentElement;
     htmlEl.classList.add('theme-transitioning');
     htmlEl.classList.remove(currentTheme);
     htmlEl.classList.add(newTheme);
-    // Also update the color-scheme property if the inline script did
-    htmlEl.style.setProperty('color-scheme', newTheme);
+    htmlEl.style.setProperty('color-scheme', newTheme); // Update color-scheme
     localStorage.setItem('theme', newTheme);
+
+    // ***** ADD THIS GISCUS POSTMESSAGE LOGIC *****
+    const giscusFrame = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame');
+    if (giscusFrame && giscusFrame.contentWindow) {
+      const newIsDarkMode = newTheme === 'dark'; // Check if the new theme is dark
+      // Determine the theme string Giscus expects
+      const giscusThemeToSet = newIsDarkMode ? 'transparent_dark' : 'light'; // Or use 'dark'/'light'
+      const giscusThemeMessage = {
+        giscus: {
+          setConfig: {
+            theme: giscusThemeToSet,
+          }
+        }
+      };
+      // Send the message to the Giscus iframe
+      giscusFrame.contentWindow.postMessage(giscusThemeMessage, 'https://giscus.app');
+      console.log(`LayoutClient: Sent theme '${giscusThemeToSet}' to Giscus`); // Debugging line
+    } else {
+       console.log("LayoutClient: Giscus iframe not found for theme update."); // Debugging line
+    }
+    // ***** END GISCUS POSTMESSAGE LOGIC *****
+
     // Remove transition class after animation
     setTimeout(() => {
       htmlEl.classList.remove('theme-transitioning');
-    }, 300); // Match transition duration in theme.css
-  }, []);
+    }, 300); // Match transition duration (adjust if your theme transition is different)
+  }, []); // Empty dependency array is fine here
 
-  // Listener for SYSTEM preference changes
+  
+  // Listener for SYSTEM preference changes (Keep as is)
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handleChange = (e: MediaQueryListEvent) => {
-      // Only switch if user HASN'T set a preference in localStorage
-      if (!localStorage.getItem('theme')) {
+      if (!localStorage.getItem('theme')) { // Only respect system if no manual choice
         const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
         const newTheme = e.matches ? 'dark' : 'light';
         if (newTheme !== currentTheme) {
             applyThemeTransition(newTheme, currentTheme);
+            // If using ThemeContext, you might need to update its state here too
         }
       }
     };
     mediaQuery.addEventListener('change', handleChange);
     return () => mediaQuery.removeEventListener('change', handleChange);
-  }, [applyThemeTransition]);
+  }, [applyThemeTransition]); // Need applyThemeTransition as dependency
 
-  // Expose theme toggle function globally for buttons etc.
+  // Expose theme toggle function globally
   useEffect(() => {
+    // This FUNCTION is called by the theme toggle buttons
     window.toggleTheme = () => {
       const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      // applyThemeTransition now handles class changes, localStorage, AND Giscus update
       applyThemeTransition(newTheme, currentTheme);
+      // If using ThemeContext, you might need to update its state here too
     };
     // Cleanup global function
     return () => { delete window.toggleTheme; };
-  }, [applyThemeTransition]);
+  }, [applyThemeTransition]); // Need applyThemeTransition as dependency
 
   // This component manages side effects, doesn't render UI itself
   return null;
