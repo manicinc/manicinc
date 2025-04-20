@@ -1,0 +1,122 @@
+
+/* ... (keep other tagline styles like :hover, scope icon, ascii) ... */
+
+/* ======================================== */
+/* Theme Toggle Styles (Standard & Ornate)  */
+/* ======================================== */
+
+/* Keep existing standard ThemeToggle styles if they are in this file */
+/* ... */
+
+/* --- NEW: Ornamental Theme Toggle Styles --- */
+.ornateTogglePlaceholder {
+    background-color: rgba(var(--text-secondary-rgb), 0.1);
+    border-radius: 50%; /* Or match button style */
+}
+
+.ornateToggleButton {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Circular button */
+    border: 2px solid var(--accent-secondary); /* Victorian border */
+    background: linear-gradient(145deg, rgba(var(--bg-tertiary-rgb), 0.8), rgba(var(--bg-secondary-rgb), 0.9));
+    box-shadow: inset 0 0 5px rgba(var(--shadow-color-rgb), 0.2),
+                2px 2px 4px rgba(var(--shadow-color-rgb), 0.3),
+                -1px -1px 2px rgba(var(--text-on-accent-rgb), 0.1); /* Inset/Outer shadow */
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s var(--transition-bounce), box-shadow 0.3s ease, border-color 0.3s ease;
+    color: var(--accent-highlight); /* Default icon color */
+}
+
+.ornateToggleButton:hover {
+    transform: scale(1.05) rotate(5deg);
+    border-color: var(--accent-highlight);
+    box-shadow: inset 0 0 6px rgba(var(--shadow-color-rgb), 0.3),
+                3px 3px 5px rgba(var(--shadow-color-rgb), 0.4),
+                -1px -1px 3px rgba(var(--text-on-accent-rgb), 0.15);
+}
+
+.ornateToggleButton:active {
+    transform: scale(0.98) rotate(-2deg);
+    box-shadow: inset 1px 1px 4px rgba(var(--shadow-color-rgb), 0.4);
+}
+
+.ornateToggleButton:disabled,
+.ornateToggleTransitioning {
+    cursor: not-allowed;
+    filter: grayscale(50%);
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.ornateIconContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ornateIcon {
+    position: absolute;
+    transition: opacity 0.6s ease-in-out, transform 0.6s var(--transition-bounce);
+    opacity: 0;
+    transform: scale(0.7) rotate(-45deg); /* Initial state for transition */
+}
+
+.ornateIconVisible {
+    opacity: 1;
+    transform: scale(1) rotate(0deg); /* Final state */
+}
+
+.ornateSun {
+    color: var(--accent-highlight); /* Color for light mode icon */
+    filter: drop-shadow(0 0 3px var(--accent-highlight));
+}
+
+.ornateMoon {
+    color: var(--accent-secondary); /* Color for dark mode icon */
+    filter: drop-shadow(0 0 3px var(--accent-secondary));
+}
+
+/* Optional: Add decorative elements */
+.ornateToggleButton::before,
+.ornateToggleButton::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+.ornateToggleButton::before {
+    inset: 3px;
+    border: 1px dashed rgba(var(--accent-secondary-rgb), 0.3);
+    opacity: 0.5;
+}
+.ornateToggleButton:hover::before {
+    opacity: 1;
+    transform: rotate(45deg);
+    border-style: solid;
+    border-color: rgba(var(--accent-highlight-rgb), 0.5);
+}
+
+
+/* ... (Keep remaining CSS, ensure media queries and other styles are correct) ... */
+
+/* Mobile Menu Adjustments */
+.mobileMenuWrapper.isBlogMenu .mobileMenuContent {
+    padding-top: 1rem;
+    /* Add any other specific padding/margin adjustments for blog mobile menu */
+}
+
+/* Ensure blog contact styles are applied correctly */
+.contactBtnFinal.blogContact {
+    /* Styles defined previously */
+}
+.mobileContact.blogContact {
+   /* Styles defined previously */
+}
