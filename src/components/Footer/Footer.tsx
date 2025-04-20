@@ -138,7 +138,7 @@ const Footer = () => {
         
         .blog-footer-heading {
           color: var(--accent-secondary);
-          font-family: var(--font-script-blog);
+          font-family: var(--font-heading-blog-orig);
           font-size: 0.9rem;
           letter-spacing: 0.03em;
         }
