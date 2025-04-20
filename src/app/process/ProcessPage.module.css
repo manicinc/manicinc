@@ -1,0 +1,657 @@
+/* app/process/ProcessPage.module.css */
+
+/* --- Decrypt Animation Styles --- */
+/* Enhanced overlay and text effects using theme variables */
+.decryptingText {
+    display: inline-block;
+    font-family: var(--font-mono); /* Use mono font for decrypting */
+    letter-spacing: 0.05em;
+  }
+  .decryptingText span { /* Minimal glow during decryption */
+    text-shadow: 0 0 4px rgba(var(--accent-secondary-rgb), 0.5);
+  }
+  
+  .decryptOverlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(var(--bg-primary-rgb), 0.85); /* Theme background */
+    backdrop-filter: blur(8px) grayscale(70%) contrast(120%); /* Refined filter */
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    color: var(--accent-secondary); /* Theme accent */
+    font-size: 1.2rem; /* Slightly larger */
+    text-shadow: 0 0 8px rgba(var(--accent-secondary-rgb), 0.8);
+    animation: fadeInOutPulse 1.5s ease-in-out infinite alternate; /* Slower pulse */
+    pointer-events: none;
+    letter-spacing: 0.15em; /* Wider spacing */
+    text-transform: uppercase;
+    border: 1px solid rgba(var(--accent-secondary-rgb), 0.2); /* Subtle border */
+    border-radius: var(--radius-sm); /* Match theme */
+  }
+  @keyframes fadeInOutPulse {
+    0% { opacity: 0.5; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.01); }
+  }
+  
+  /* Scanline effect using theme colors */
+  .decryptOverlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 50%,
+      rgba(var(--bg-tertiary-rgb), 0.2) 51% /* Use tertiary bg color */
+    );
+    background-size: 100% 3px; /* Slightly thicker scanlines */
+    animation: scanlines 0.15s linear infinite; /* Slightly slower */
+    opacity: 0.3;
+    pointer-events: none;
+    border-radius: inherit;
+  }
+  @keyframes scanlines {
+    from { background-position: 0 0; }
+    to { background-position: 0 3px; }
+  }
+  /* --- End Decrypt Styles --- */
+  
+  
+  /* --- General Page Styles --- */
+  .sectionDivider {
+    border: none;
+    height: 1px;
+    /* Gradient using theme accents */
+    background: linear-gradient(90deg,
+      transparent,
+      rgba(var(--accent-primary-rgb), 0.1),
+      rgba(var(--accent-highlight-rgb), 0.25),
+      rgba(var(--accent-primary-rgb), 0.1),
+      transparent
+    );
+    margin: 5rem auto; /* Increased spacing */
+    max-width: 40rem; /* More constrained */
+    opacity: 0.7;
+  }
+  @media (min-width: 768px) {
+    .sectionDivider { margin: 6.5rem auto; }
+  }
+  
+  .documentWrapper {
+    max-width: 80rem; /* Keep max width */
+    margin-left: auto;
+    margin-right: auto;
+    /* Add subtle background texture/noise if desired */
+    /* background-image: url('/path/to/noise.png'); */
+  }
+  .documentSection {
+    padding: 4rem 0; /* Base vertical padding */
+  }
+  @media (min-width: 768px) {
+    .documentSection { padding: 5.5rem 0; }
+  }
+  
+  /* Use theme fonts and colors, add subtle text shadow */
+  .sectionTitle {
+    font-family: var(--font-display);
+    font-size: clamp(2.1rem, 5vw, 3.1rem); /* Responsive size */
+    font-weight: 700; /* Bold */
+    color: var(--text-heading); /* Use heading color */
+    margin-bottom: 1.25rem;
+    text-shadow: 1px 1px 3px rgba(var(--shadow-color), 0.5); /* Theme shadow */
+    line-height: 1.25;
+    letter-spacing: -0.03em; /* Slightly tighter */
+    /* Optional: Add subtle gradient */
+    /* background: linear-gradient(120deg, var(--text-heading), var(--accent-primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; */
+  }
+  .sectionSubtitle {
+    font-family: var(--font-body); /* Theme body font */
+    font-size: clamp(1rem, 2.5vw, 1.2rem); /* Responsive */
+    color: var(--text-secondary); /* Theme secondary text */
+    line-height: 1.8; /* More leading */
+    max-width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+  }
+  
+  /* Enhanced Blockquote - "Art Book" / "Handcrafted Manuscript" */
+  .quote {
+    border-left: 4px solid var(--accent-highlight); /* Highlight accent border */
+    margin: 3rem 0 3rem 0.5rem; /* Adjust spacing */
+    padding: 1.75rem 2rem 1.75rem 2.25rem; /* Adjust padding */
+    font-style: italic; /* Italic for emphasis */
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    background-color: rgba(var(--bg-secondary-rgb), 0.6); /* Theme secondary bg */
+    border-radius: var(--radius-sm) var(--radius-md) var(--radius-md) var(--radius-sm); /* Slightly custom radius */
+    box-shadow: inset 2px 2px 6px rgba(var(--shadow-color), 0.1),
+                0 2px 5px rgba(var(--shadow-color), 0.05); /* Subtle outer shadow */
+    position: relative;
+    font-family: var(--font-body-blog); /* Merriweather for a book feel */
+    line-height: 1.7;
+  }
+  .quote::before { /* More stylized quote mark */
+    content: '❝'; /* Different quote character */
+    font-family: var(--font-heading-blog); /* Playfair Display */
+    position: absolute;
+    left: -18px; /* Adjust position */
+    top: -10px;
+    font-size: 5rem; /* Larger */
+    font-weight: normal;
+    color: rgba(var(--accent-highlight-rgb), 0.1); /* Very subtle */
+    line-height: 1;
+    z-index: -1;
+    transform: rotate(-5deg); /* Slight rotation */
+  }
+  .quote strong { /* Style strong text within quote */
+      color: var(--accent-secondary); /* Use another accent */
+      font-weight: 600;
+  }
+  
+  /* --- Process Step Cards --- */
+  /* Applying card styles inspired by custom.css */
+  .processStepCard {
+    display: flex;
+    flex-direction: column;
+    padding: 1.75rem; /* Adjust padding */
+    border-radius: var(--radius-lg); /* Theme radius */
+    background-color: rgba(var(--bg-secondary-rgb), 0.65); /* Theme bg */
+    border: 1px solid rgba(var(--accent-primary-rgb), 0.15); /* Theme border */
+    backdrop-filter: blur(8px); /* Glass effect */
+    height: 100%; /* Ensure equal height in grid */
+    transition: all 0.3s ease-out;
+    position: relative;
+    overflow: hidden;
+  }
+  .processStepCard::after { /* Subtle holographic-like sheen on hover */
+      content: '';
+      position: absolute;
+      top: 0; left: -150%; width: 100%; height: 100%;
+      background: linear-gradient(110deg, transparent 30%, rgba(var(--accent-highlight-rgb), 0.08) 50%, transparent 70%);
+      transform: skewX(-25deg);
+      transition: left 0.5s ease-out;
+      pointer-events: none;
+      opacity: 0;
+  }
+  .processStepCard:hover {
+    transform: translateY(-6px) scale(1.02); /* Lift effect */
+    box-shadow: 0 10px 25px rgba(var(--shadow-color), 0.3), /* Theme shadow */
+                0 0 15px rgba(var(--accent-primary-rgb), 0.1); /* Subtle glow */
+    border-color: rgba(var(--accent-primary-rgb), 0.4); /* Highlight border */
+  }
+  .processStepCard:hover::after {
+      left: 100%;
+      opacity: 1;
+  }
+  .processStepCard .flex.items-center.gap-3 { /* Target icon wrapper div */
+      margin-bottom: 1rem; /* More space */
+  }
+  .processStepCard .p-2 { /* Icon background */
+    background: linear-gradient(145deg, rgba(var(--accent-primary-rgb), 0.1), rgba(var(--accent-secondary-rgb), 0.15)); /* Theme gradient */
+    border: 1px solid rgba(var(--accent-primary-rgb), 0.25);
+    box-shadow: var(--shadow-inset);
+    transition: background 0.3s ease;
+  }
+  .processStepCard:hover .p-2 {
+      background: linear-gradient(145deg, rgba(var(--accent-primary-rgb), 0.2), rgba(var(--accent-secondary-rgb), 0.3));
+  }
+  .processStepCard h3 {
+    font-family: var(--font-display); /* Theme display font */
+    font-size: clamp(1.1rem, 3vw, 1.25rem); /* Responsive */
+    font-weight: 600; /* Semi-bold */
+    color: var(--text-heading); /* Heading color */
+    line-height: 1.3;
+  }
+  .processStepCard p { /* Description text */
+    font-family: var(--font-body); /* Theme body font */
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.25rem; /* Spacing */
+    flex-grow: 1; /* Push list to bottom */
+  }
+  .processStepCard ul { /* Details list */
+    space-y: 0.5rem; /* Adjust spacing */
+    margin-top: auto; /* Push to bottom */
+    padding-top: 1rem; /* Space above */
+    border-top: 1px solid rgba(var(--text-muted-rgb), 0.15); /* Theme divider */
+  }
+  .processStepCard li { /* Detail item */
+    display: flex;
+    align-items: center;
+    font-family: var(--font-mono); /* Mono for details */
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+  }
+  .processStepCard li svg { /* Checkmark icon */
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    color: var(--accent-secondary); /* Theme accent */
+    stroke-width: 2;
+    flex-shrink: 0;
+  }
+  
+  /* --- Timeline Visualization (Sleeker) --- */
+  .timelineContainer {
+    position: relative;
+    padding: 2.5rem 0;
+    margin-top: 2rem;
+  }
+  .timelineContainer::before { /* Central line */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px; /* Thinner line */
+    height: 100%;
+    /* Gradient using theme accents */
+    background: linear-gradient(to bottom,
+      rgba(var(--accent-primary-rgb), 0) 0%,
+      rgba(var(--accent-primary-rgb), 0.4) 10%,
+      rgba(var(--accent-secondary-rgb), 0.5) 50%,
+      rgba(var(--accent-primary-rgb), 0.4) 90%,
+      rgba(var(--accent-primary-rgb), 0) 100%
+    );
+    border-radius: 2px;
+    opacity: 0.8;
+  }
+  .timelineItem {
+    position: relative;
+    margin-bottom: 3.5rem; /* More space between items */
+    width: calc(50% - 4rem); /* Wider gap */
+  }
+  .timelineItem:nth-child(odd) { left: 0; padding-right: 2rem; text-align: right; }
+  .timelineItem:nth-child(even) { left: calc(50% + 4rem); padding-left: 2rem; text-align: left; }
+  /* Stylish Dot */
+  .timelineDot {
+    position: absolute;
+    top: 0.4rem;
+    width: 16px; height: 16px;
+    background-color: var(--bg-primary);
+    border: 2px solid var(--accent-secondary);
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 0 4px rgba(var(--bg-primary-rgb), 0.8), /* Inner glow effect */
+                0 0 12px rgba(var(--accent-secondary-rgb), 0.6); /* Outer glow */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bounce transition */
+  }
+  .timelineItem:hover .timelineDot {
+    transform: scale(1.5);
+    background-color: var(--accent-highlight);
+    border-color: var(--accent-highlight);
+    box-shadow: 0 0 0 3px rgba(var(--bg-primary-rgb), 0.6),
+                0 0 18px rgba(var(--accent-highlight-rgb), 0.8);
+  }
+  /* Dot Positioning (Recalculated for 16px dot) */
+  .timelineItem:nth-child(odd) .timelineDot { right: -0.5rem; transform: translateX(50%); }
+  .timelineItem:nth-child(even) .timelineDot { left: -0.5rem; transform: translateX(-50%); }
+  .timelineItem:hover:nth-child(odd) .timelineDot { transform: translateX(50%) scale(1.5); }
+  .timelineItem:hover:nth-child(even) .timelineDot { transform: translateX(-50%) scale(1.5); }
+  
+  .timelineContent {
+    background-color: rgba(var(--bg-secondary-rgb), 0.8); /* Slightly more opaque */
+    padding: 1.5rem 1.75rem; /* More padding */
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(var(--accent-primary-rgb), 0.2);
+    backdrop-filter: blur(10px); /* Stronger blur */
+    transition: all 0.3s ease-out;
+    box-shadow: var(--shadow-soft);
+  }
+  .timelineItem:hover .timelineContent {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 12px 30px rgba(var(--shadow-color), 0.35); /* Enhanced shadow */
+    border-color: rgba(var(--accent-highlight-rgb), 0.4); /* Highlight border */
+  }
+  .timelineWeek {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent-primary);
+    margin-bottom: 0.5rem;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .timelineTitle {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 600; /* Slightly less bold */
+    color: var(--text-heading); /* Use heading color */
+    margin-bottom: 0.75rem;
+  }
+  .timelineTaskList {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0.25rem;
+  }
+  .timelineTaskItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.85rem; /* Slightly smaller */
+    font-family: var(--font-body); /* Use body font for tasks */
+  }
+  .timelineTaskItem svg {
+    color: var(--accent-primary); /* Theme accent */
+    margin-top: 0.25rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    stroke-width: 2.5; /* Slightly thicker */
+    flex-shrink: 0;
+    opacity: 0.7;
+    transition: transform 0.3s ease;
+  }
+  .timelineItem:hover .timelineTaskItem svg {
+      transform: translateX(2px); /* Subtle shift on hover */
+  }
+  
+  /* Responsive timeline adjustments */
+  @media (max-width: 767px) {
+    .timelineContainer::before { left: 1.25rem; } /* Adjust position */
+    .timelineItem { width: 100%; padding-left: 3.75rem; padding-right: 0.5rem; text-align: left; left: 0 !important; margin-bottom: 2.5rem; }
+    .timelineItem:nth-child(odd) { text-align: left; padding-right: 0.5rem; }
+    .timelineItem:nth-child(even) { padding-left: 3.75rem; text-align: left; }
+    /* Dot positioning for mobile */
+    .timelineDot { left: 1.25rem; transform: translateX(-50%); }
+    .timelineItem:nth-child(odd) .timelineDot, .timelineItem:nth-child(even) .timelineDot { left: 1.25rem; transform: translateX(-50%); right: auto; }
+    .timelineItem:hover:nth-child(odd) .timelineDot, .timelineItem:hover:nth-child(even) .timelineDot { transform: translateX(-50%) scale(1.5); }
+  }
+  
+  /* --- Styled Internal Links (Refined "Rabbit Hole" Style) --- */
+  .styledLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    position: relative;
+    font-family: var(--font-mono); /* Changed to mono */
+    font-weight: 500;
+    font-size: 0.95rem; /* Adjusted size */
+    color: var(--accent-secondary);
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: none; /* Remove static border */
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .styledLink::after { /* Animated underline */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, var(--accent-secondary), var(--accent-highlight));
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-out;
+  }
+  .styledLink svg {
+    width: 1em;
+    height: 1em;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    margin-left: 0.2em;
+  }
+  .styledLink:hover {
+    color: var(--accent-highlight);
+  }
+  .styledLink:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .styledLink:hover svg {
+    opacity: 1;
+    transform: translateX(4px) rotate(3deg); /* More subtle movement */
+    color: var(--accent-highlight);
+  }
+  
+  /* Coming Soon Styling */
+  .comingSoon {
+    opacity: 0.4; /* More muted */
+    cursor: default;
+    pointer-events: none;
+    color: var(--text-muted);
+  }
+  .comingSoon::after { /* Underline for coming soon */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: repeating-linear-gradient(
+      -45deg,
+      rgba(var(--text-muted-rgb), 0.4),
+      rgba(var(--text-muted-rgb), 0.4) 3px,
+      transparent 3px,
+      transparent 6px
+    );
+    transform: scaleX(1); /* Keep visible */
+    transition: none;
+  }
+  .comingSoon::before { /* Optional: Add locked icon */
+      content: '🔒';
+      margin-right: 0.4em;
+      opacity: 0.7;
+      font-size: 0.9em;
+  }
+  .comingSoon:hover { color: var(--text-muted); } /* No color change */
+  .comingSoon:hover svg { transform: none; opacity: 0.7; } /* No icon movement */
+  
+  /* --- Tech Arsenal Styles (More Stylized) --- */
+  .techGrid {
+    display: grid;
+    /* Use minmax for better flexibility */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 1.75rem; /* Increase gap */
+  }
+  .techCategoryCard {
+    background-color: rgba(var(--bg-tertiary-rgb), 0.4); /* Use tertiary for contrast */
+    border: 1px solid rgba(var(--text-muted-rgb), 0.15);
+    border-radius: var(--radius-lg); /* Rounded */
+    padding: 1.75rem; /* Adjust padding */
+    backdrop-filter: blur(9px);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-out;
+    border-left: 3px solid rgba(var(--accent-primary-rgb), 0.3); /* Accent border */
+    position: relative;
+    overflow: hidden; /* Needed for pseudo-elements */
+  }
+  /* Add a subtle background pattern/texture */
+  .techCategoryCard::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(var(--accent-secondary-rgb), 0.05) 1px, transparent 1px);
+      background-size: 10px 10px;
+      opacity: 0.5;
+      z-index: -1;
+      pointer-events: none;
+  }
+  .techCategoryCard:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 8px 25px rgba(var(--shadow-color), 0.2);
+    border-color: rgba(var(--accent-primary-rgb), 0.3);
+    border-left-color: var(--accent-primary); /* Highlight accent border */
+  }
+  .techCategoryTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: var(--font-display);
+    font-size: 1.25rem; /* Slightly larger */
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(var(--accent-primary-rgb), 0.15);
+    padding-bottom: 1rem;
+  }
+  .techCategoryTitle svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    color: var(--accent-primary);
+    flex-shrink: 0;
+    opacity: 0.9;
+  }
+  .techList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 0.8rem; /* Adjust gaps */
+  }
+  .techItem { /* Style like retro/brutalist tags */
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.78rem; /* Smaller */
+    color: var(--text-secondary);
+    background-color: rgba(var(--bg-secondary-rgb), 0.9); /* Darker background */
+    padding: 0.35rem 0.8rem;
+    border-radius: var(--radius-base); /* Less rounded */
+    border: 1px solid rgba(var(--text-muted-rgb), 0.2);
+    transition: all 0.2s ease-out;
+    cursor: default;
+    box-shadow: 1px 1px 0 rgba(var(--text-muted-rgb), 0.2); /* Brutalist shadow */
+    white-space: nowrap; /* Prevent wrapping */
+  }
+  .techItem:hover {
+    color: var(--accent-highlight);
+    border-color: rgba(var(--accent-highlight-rgb), 0.7);
+    transform: translate(-1px, -1px); /* Shift on hover */
+    background-color: var(--bg-tertiary); /* Lighter background */
+    box-shadow: 2px 2px 0 rgba(var(--accent-highlight-rgb), 0.5); /* Accent shadow */
+  }
+  
+  /* --- ASCII Placeholder Styling --- */
+  /* Target the wrapper div generated by AsciiArtPlaceholder or apply directly if possible */
+  .asciiPlaceholderWrapper {
+      background-color: rgba(var(--bg-code), 0.7); /* Code background */
+      border: 1px dashed rgba(var(--text-muted-rgb), 0.3); /* Dashed border */
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      box-shadow: inset 0 0 10px rgba(var(--shadow-color), 0.1);
+      height: 100%; /* Make it fill container */
+      display: flex; /* Center potential text inside */
+      align-items: center;
+      justify-content: center;
+      overflow: hidden; /* Hide overflow */
+  }
+  .asciiPlaceholderWrapper pre { /* Style the pre tag inside if used */
+      font-size: 0.7rem !important; /* Smaller font for ASCII */
+      line-height: 1.2 !important;
+      color: var(--text-muted);
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+      background: none;
+      border: none;
+      box-shadow: none;
+      white-space: pre; /* Ensure pre formatting */
+  }
+  /* Specific styling for ASCII in tech grid */
+  .techGrid .techCategoryCard .asciiPlaceholderWrapper {
+      background-color: transparent;
+      border: 1px solid rgba(var(--text-muted-rgb), 0.1);
+      padding: 0.5rem;
+  }
+  .techGrid .techCategoryCard .asciiPlaceholderWrapper pre {
+      color: var(--text-secondary);
+  }
+  
+  /* --- Pillars Section Styles (Neomorphism / Handcrafted Feel) --- */
+  .pillarGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+    gap: 2.25rem; /* Increase gap */
+  }
+  .pillarCard {
+    background: linear-gradient(145deg, rgba(var(--bg-secondary-rgb), 0.7), rgba(var(--bg-tertiary-rgb), 0.5)); /* Gradient bg */
+    border: 1px solid rgba(var(--text-primary-rgb), 0.05); /* Very subtle border */
+    border-radius: var(--radius-xl); /* More rounded */
+    padding: 2rem 1.75rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s var(--transition-bounce); /* Use bounce */
+    position: relative;
+    overflow: hidden;
+    /* Neomorphism-inspired shadow */
+    box-shadow: 6px 6px 12px rgba(var(--shadow-color), 0.4),
+                -6px -6px 12px rgba(var(--bg-primary-rgb), 0.1); /* Light shadow opposite */
+  }
+  .pillarCard::before { /* Inner glow effect */
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(var(--accent-highlight-rgb), 0.08) 0%, transparent 40%);
+    transform: scale(0);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .pillarCard:hover {
+    transform: translateY(-8px); /* Lift more */
+    box-shadow: 8px 8px 16px rgba(var(--shadow-color), 0.5),
+                -8px -8px 16px rgba(var(--bg-primary-rgb), 0.05),
+                0 0 20px rgba(var(--accent-primary-rgb), 0.1); /* Added glow */
+    border-color: rgba(var(--accent-primary-rgb), 0.1); /* Subtle border highlight */
+  }
+  .pillarCard:hover::before {
+    transform: scale(1);
+    opacity: 1;
+  }
+  .pillarIconWrapper {
+    margin-bottom: 1.5rem;
+    display: inline-flex;
+    padding: 1.25rem; /* Larger padding */
+    border-radius: 50%;
+    background: var(--bg-primary); /* Solid background for contrast */
+    /* Inset shadow for depth */
+    box-shadow: inset 4px 4px 8px rgba(var(--shadow-color), 0.3),
+                inset -4px -4px 8px rgba(var(--bg-tertiary-rgb), 0.3);
+    border: 1px solid rgba(var(--text-primary-rgb), 0.08);
+    position: relative; /* For z-index */
+    z-index: 1;
+  }
+  .pillarIcon {
+    width: 3rem; height: 3rem; /* Larger icon */
+    opacity: 0.9;
+    transition: transform 0.4s var(--transition-bounce);
+    /* Use specific theme colors passed via className in TSX */
+  }
+  .pillarCard:hover .pillarIcon {
+    transform: scale(1.15) rotate(8deg); /* More rotation */
+    opacity: 1;
+  }
+  .pillarTitle {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-heading); /* Heading color */
+    margin-bottom: 0.8rem;
+    position: relative; /* For z-index */
+    z-index: 1;
+  }
+  .pillarText {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    position: relative; /* For z-index */
+    z-index: 1;
+  }

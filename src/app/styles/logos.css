@@ -1,0 +1,130 @@
+
+/* Looking glass logo */
+@keyframes shimmer {
+    0% { stop-color: rgba(var(--bg-secondary-rgb), 0.5); }
+    50% { stop-color: rgba(var(--bg-tertiary-rgb), 0.7); }
+    100% { stop-color: rgba(var(--bg-secondary-rgb), 0.5); }
+  }
+  
+  @keyframes rotateSubtle {
+    0% { transform: rotate(-1deg); }
+    50% { transform: rotate(1deg); }
+    100% { transform: rotate(-1deg); }
+  }
+  
+  .looking-glass-group {
+  }
+  
+  .mirror-surface {
+  }
+
+  /*  // Target gradient stop */
+  #lg-grad-uniqueId stop:first-child {
+  }
+  
+  .frame-scroll {
+    transition: stroke-dashoffset 0.5s ease-in-out;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+  }
+  
+  .looking-glass-logo-wrapper:hover .frame-scroll {
+    stroke-dashoffset: 0;
+  }
+  
+  .ornament {
+      transition: transform 0.4s ease-out;
+  }
+  .looking-glass-logo-wrapper:hover .ornament {
+      transform: scale(1.1) translate(0, -2px);
+  }
+
+  .logoLinkDefault {
+    /* Add display: flex or inline-flex if not already present */
+    display: inline-flex; /* Helps contain elements */
+    align-items: center; /* Vertically align if needed */
+    overflow: visible; /* Allow potential overflow */
+  }
+  
+  .logoLinkDefault .logoTextWrapper {
+    /* Ensure the wrapper doesn't cause clipping */
+    display: inline-block;
+  }
+  
+  .logoLinkDefault .logoTextMain {
+    /* Ensure text itself doesn't clip unexpectedly */
+    /* If the 'M' is still cut off, it might be the font itself or */
+    /* negative letter-spacing/margins. Adjust font or spacing. */
+    white-space: nowrap; /* Prevent wrapping if it was somehow happening */
+  }
+  
+  
+  .logoTextMain {
+    position: relative; display: inline-block; /* Need inline-block for pseudo */
+    will-change: filter, transform, background-position, clip-path, content, opacity;
+    background: linear-gradient(120deg, var(--accent-primary) 10%, var(--accent-secondary) 60%, var(--accent-highlight) 90%);
+    -webkit-background-clip: text; background-clip: text;
+    background-size: 300% auto; color: transparent;
+    /* Ensure ALL animations are applied */
+    animation:
+        animatedGradientVibrant 6s ease-in-out infinite alternate,
+        surrealTextGlitchV10 12s linear infinite,
+        manicPanicGlitch 13s steps(1, end) infinite alternate; /* Check timing/sync */
+    white-space: nowrap;
+    /* width: 100%; */ /* Remove fixed width */
+    text-align: left; /* Align with text-anchor="start" */
+    overflow: visible !important;
+    opacity: 1;
+}
+.logoTextMain::before {
+    content: "PANIC AGENCY";
+    position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+    font-family: inherit; font-weight: inherit; letter-spacing: inherit;
+    text-align: inherit; /* Inherit text-align */
+    white-space: nowrap; /* Match original */
+    background: linear-gradient(120deg, var(--accent-alert) 10%, var(--accent-secondary) 60%, var(--accent-highlight) 90%);
+    -webkit-background-clip: text; background-clip: text; background-size: 300% auto; color: transparent;
+    text-shadow: 1px 1px 0px rgba(var(--accent-alert-rgb), 0.8), -1px -1px 0px rgba(var(--accent-secondary-rgb), 0.6);
+    opacity: 0; pointer-events: none; z-index: 1;
+    will-change: opacity;
+    animation: animatedGradientVibrant 6s ease-in-out infinite alternate;
+}
+  
+  /* --- FIX for Nav Link Size/Padding --- */
+  .navDesktop {
+    gap: 0.5rem; /* Reduced gap further */
+  }
+  
+  .navLink {
+    min-height: 48px; /* Reduced height */
+    padding: 0 1.2rem; /* Reduced horizontal padding */
+    font-size: 0.95rem; /* Slightly smaller font */
+    /* Ensure flex properties allow shrinking if needed */
+    flex-shrink: 1;
+  }
+  
+  /* Adjust hover animation distances if text/SVG positions changed */
+  .hoverAnimationSvg {
+    left: 1rem; /* Adjust SVG start position based on new padding */
+    width: 1.2em; height: 1.2em; /* Slightly smaller icon */
+  }
+  
+  .navLink:hover .linkText {
+    transform: translateX(1.2em); /* Adjust text shift distance */
+  }
+  
+  .navActive .linkText {
+     transform: translateX(1em); /* Adjust active text shift */
+  }
+  
+  /* Adjust Contact Button if needed to match new link height */
+  .contactBtnFinal {
+    min-height: 48px; /* Match new link height */
+    padding: 0.6rem 1.5rem; /* Adjust padding */
+    font-size: 0.9rem; /* Adjust font if needed */
+  }
+  .contactBtnFinal .hourglassSvg {
+     margin-left: 0.5em; /* Adjust icon spacing */
+  }
+  
+  

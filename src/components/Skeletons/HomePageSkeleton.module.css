@@ -1,0 +1,169 @@
+/* src/components/Skeletons/HomePageSkeleton.module.css */
+
+.skeletonContainer {
+    width: 100%;
+    /* Add padding/margins to match your page layout if necessary */
+    /* padding: var(--space-lg); */
+    margin: 0 auto;
+    max-width: 100%;/* Set a max-width similar to your page content */;
+  }
+  
+  /* --- Base Skeleton Element --- */
+  .skeletonBox {
+    background-color: var(--bg-secondary); /* Use a slightly different bg */
+    border-radius: var(--radius-base);
+    position: relative;
+    overflow: hidden; /* Important for the shimmer */
+    margin-bottom: 0.75rem; /* Default spacing */
+  }
+  
+  /* Shimmer Animation */
+  .skeletonBox::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    /* Gradient: Use lighter/tertiary BGs for the shimmer effect */
+    background: linear-gradient(
+      90deg,
+      rgba(var(--bg-tertiary-rgb), 0) 0%,
+      /* Adjust opacity for subtlety */
+      rgba(var(--bg-tertiary-rgb), 0.4) 20%,
+      rgba(var(--bg-tertiary-rgb), 0.6) 60%,
+      rgba(var(--bg-tertiary-rgb), 0) 100%
+    );
+    /* Animation */
+    animation: shimmer 1.8s infinite linear; /* Speed up or slow down as needed */
+    /* Alice Theme Twist: Slight diagonal shimmer? */
+    background: linear-gradient(
+      110deg,
+      rgba(var(--bg-tertiary-rgb), 0) 8%,
+      rgba(var(--bg-tertiary-rgb), 0.4) 18%,
+      rgba(var(--bg-tertiary-rgb), 0.6) 33%,
+      rgba(var(--bg-tertiary-rgb), 0) 48%
+    );
+    background-size: 200% 100%;
+    animation: shimmer-diagonal 2s infinite linear;
+  }
+  
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Optional diagonal shimmer animation */
+  /* @keyframes shimmer-diagonal {
+    100% {
+      background-position: -200% 0;
+    }
+  } */
+  
+  
+  /* --- Specific Skeleton Shapes --- */
+  
+  /* Hero Section */
+  .heroSectionSkeleton {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); /* Adjust minmax based on your Hero card size */
+    gap: 1.5rem; /* Match your HeroSection gap */
+    margin-bottom: 3rem; /* Spacing between sections */
+  }
+  
+  .skeletonCard {
+    background-color: var(--bg-primary); /* Match card background if different */
+    padding: 1rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--bg-tertiary); /* Subtle border */
+  }
+  
+  .skeletonImage {
+    width: 100%;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    margin-bottom: 1rem;
+  }
+  
+  .skeletonTitle {
+    height: 1.8em; /* Approx height of a title */
+    width: 70%;
+    margin-bottom: 0.8rem;
+  }
+  
+  .skeletonText {
+    height: 1.2em; /* Approx height of a text line */
+    width: 95%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .skeletonTextShort {
+    height: 1.2em;
+    width: 80%;
+  }
+  
+  .skeletonTagContainer {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .skeletonTag {
+    height: 1.5em;
+    width: 60px; /* Approx width of a tag */
+    border-radius: var(--radius-pill);
+  }
+  
+  
+  /* Services / Intro Sections */
+  .sectionSkeleton {
+    margin-bottom: 3rem; /* Spacing between sections */
+  }
+  
+  .skeletonHeading {
+    height: 2.5em; /* Approx H2 height */
+    width: 40%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .skeletonGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust as needed */
+    gap: 1.5rem;
+  }
+  
+  .skeletonServiceItem {
+    height: 150px; /* Adjust based on your service item appearance */
+  }
+  
+  .skeletonParagraph {
+    height: 1.2em;
+    width: 90%;
+    margin-bottom: 0.75rem;
+  }
+  .skeletonParagraph:last-child {
+    margin-bottom: 0;
+  }
+  
+  .skeletonParagraphShort {
+    height: 1.2em;
+    width: 75%;
+  }
+  
+  /* Optional: Alice Themed Pattern (e.g., subtle checkerboard) */
+  /* .alicePattern {
+    position: fixed; // Or absolute relative to container
+    inset: 0;
+    background-image: linear-gradient(45deg, var(--bg-secondary) 25%, transparent 25%),
+                      linear-gradient(-45deg, var(--bg-secondary) 25%, transparent 25%);
+    background-size: 20px 20px; // Size of checker squares
+    opacity: 0.05; // Very subtle
+    z-index: -1; // Behind content
+    pointer-events: none;
+  } */
+  
+  /* Light mode adjustments for shimmer if needed (usually not, relies on BGs) */
+  /* .light .skeletonBox::after {
+     background: linear-gradient(... using light theme vars ...);
+  } */

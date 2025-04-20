@@ -1,0 +1,153 @@
+/* src/components/ClientsSection.module.css */
+
+/* --- Section Styling --- */
+.sectionWrapper {
+    /* Use a secondary background */
+    background-color: var(--bg-secondary);
+    /* Reduced vertical padding */
+    padding: 3rem 0;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(var(--accent-primary-rgb), 0.1); /* Optional separator */
+}
+@media (min-width: 768px) { .sectionWrapper { padding: 4.5rem 0; } } /* Adjusted md/lg padding */
+
+/* More subtle background effect */
+.sectionWrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 15% 20%, rgba(var(--accent-primary-rgb), 0.04) 0%, transparent 35%),
+                      radial-gradient(circle at 85% 75%, rgba(var(--accent-secondary-rgb), 0.03) 0%, transparent 35%);
+    opacity: 0.6;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* --- Heading --- */
+.heading {
+    font-family: var(--font-body); /* Use body font for less emphasis */
+    font-weight: 400; /* Regular weight */
+    font-size: 1rem; /* text-base */
+    color: var(--text-secondary); /* Use secondary text */
+    text-align: center;
+    margin-bottom: 2.5rem; /* Reduced space below heading */
+    letter-spacing: 0.02em;
+    opacity: 0.9;
+}
+@media (min-width: 768px) { .heading { font-size: 1.125rem; /* text-lg */ margin-bottom: 3rem;} }
+
+
+/* --- Client Grid --- */
+.clientGrid {
+    display: grid;
+    /* Responsive columns */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem; /* Slightly reduced gap */
+}
+@media (min-width: 640px) { /* sm */
+    .clientGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) { /* lg */
+    .clientGrid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; }
+}
+@media (min-width: 1280px) { /* xl */
+    /* Allow more columns if space permits */
+    .clientGrid { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+}
+
+
+.clientItemWrapper {
+    list-style: none;
+}
+
+/* Styles for the link/div inside the li */
+.clientItemLink,
+.clientItemDiv {
+    display: block;
+    text-decoration: none;
+    height: 100%;
+}
+
+/* Client Card styles - Simplified, more padding */
+.clientCard {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    text-align: center;
+    /* Increased internal padding */
+    padding: 1.75rem 1.25rem;
+    /* Using primary background for subtle contrast */
+    background-color: rgba(var(--bg-primary-rgb), 0.5);
+    border: 1px solid rgba(var(--text-muted-rgb), 0.1); /* Muted border */
+    border-radius: var(--radius-md); /* Slightly smaller radius */
+    backdrop-filter: blur(3px); /* More subtle blur */
+    transition: all 0.25s ease-out; /* Faster transition */
+    box-shadow: 0 2px 5px rgba(var(--shadow-color), 0.05); /* Very subtle shadow */
+    min-height: 90px; /* Reduced min height slightly */
+}
+/* Simplified hover effect */
+.clientItemLink:hover .clientCard,
+.clientItemDiv:hover .clientCard {
+    transform: translateY(-3px); /* Less lift */
+    border-color: rgba(var(--accent-primary-rgb), 0.4); /* Primary accent border */
+    background-color: rgba(var(--bg-secondary-rgb), 0.6); /* Use secondary on hover */
+    box-shadow: 0 6px 15px -3px rgba(var(--shadow-color), 0.1); /* Softer shadow */
+}
+/* REMOVED ::before, ::after decorative corners */
+
+
+/* Logo container - takes less space if no logo */
+.logoContainer {
+    /* Height adjusts to content, but max height limits it */
+    max-height: 40px; /* Reduced max height */
+    width: 100%;
+    margin-bottom: 0.75rem; /* Reduced space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Prevent shrinking */
+    min-height: 1px; /* Ensure it doesn't collapse completely */
+}
+
+.clientLogo { /* For img tags */
+    max-height: 100%; max-width: 100px; /* Limit width */ object-fit: contain;
+    filter: grayscale(10%) brightness(1) contrast(1); /* Almost full color */ opacity: 0.9;
+    transition: all 0.3s ease-out;
+}
+.clientItemLink:hover .clientLogo, .clientItemDiv:hover .clientLogo {
+    filter: grayscale(0%) brightness(1.05) contrast(1); opacity: 1; transform: scale(1.02);
+}
+
+.clientLogo svg { /* For inline SVGs */
+    max-height: 36px; /* Limit SVG height */ max-width: 100px; height: auto; width: auto;
+    fill: currentColor; color: var(--text-secondary); /* Use secondary color */
+    filter: none; /* Remove default grayscale for SVGs */ opacity: 0.85;
+    transition: all 0.3s ease-out;
+}
+.clientItemLink:hover .clientLogo svg, .clientItemDiv:hover .clientLogo svg {
+    opacity: 1; color: var(--text-primary); transform: scale(1.02);
+}
+
+/* Fallback Icon is NO LONGER USED */
+/* .fallbackIcon { ... } */
+
+/* Client name - centered, takes remaining space */
+.clientName {
+    font-family: var(--font-display); /* Use display font */
+    font-weight: 400; /* Semi-bold */
+    font-size: 1rem; /* text-base - INCREASED */
+    line-height: 1.4;
+    color: var(--text-primary); /* Use primary text color */
+    transition: color 0.3s ease;
+    margin-top: auto; /* Pushes down if logo missing/small */
+    flex-grow: 1; /* Allows name to take space */
+    display: flex; /* Center text within available space */
+    align-items: center;
+    justify-content: center;
+}
+.clientItemLink:hover .clientName, .clientItemDiv:hover .clientName {
+    color: var(--accent-primary); /* Highlight with primary accent */
+}

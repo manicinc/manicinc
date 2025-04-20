@@ -1,0 +1,345 @@
+/* src/app/styles/giscus.css */
+/* Theme Giscus comments to match the blog style */
+/* Uses variables defined in theme.css */
+
+/* Main container - Ensure base font and colors */
+.gsc-main {
+  font-family: var(--font-body-blog) !important; /* Merriweather */
+  color: var(--text-primary) !important;
+  background-color: transparent !important; /* Ensure no overriding background */
+  max-width: 100%; /* Prevent overflow issues */
+}
+
+/* Header / Comment Count */
+.gsc-header {
+  border-bottom: 1px solid var(--bg-tertiary) !important;
+  padding-bottom: 0.8rem !important;
+  margin-bottom: 1.5rem !important;
+}
+.gsc-comments-count {
+  font-family: var(--font-heading-blog) !important; /* Playfair */
+  color: var(--text-secondary) !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+}
+
+/* Comment Box Container */
+.gsc-comment-box {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--bg-tertiary) !important;
+  border-radius: var(--radius-lg) !important;
+  margin-top: 2rem !important;
+  padding: 0 !important; /* Remove padding, apply to inner elements */
+  box-shadow: var(--shadow-inset) !important;
+}
+
+/* Tabs (Write/Preview) */
+.gsc-comment-box-tabs {
+  background-color: var(--bg-tertiary) !important; /* Give tabs a slight bg */
+  border-bottom: 1px solid var(--bg-tertiary) !important;
+  margin: 0 !important; /* Remove negative margins */
+  padding: 0 1rem !important; /* Padding for tab alignment */
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0 !important; /* Round top corners */
+}
+.gsc-tab {
+    font-family: var(--font-meta-blog) !important; /* Use meta font */
+    color: var(--text-secondary) !important;
+    border: none !important;
+    padding: 0.8rem 1rem !important;
+    margin-bottom: -1px; /* Overlap border */
+    border-bottom: 2px solid transparent !important;
+    transition: color var(--transition-fast), border-color var(--transition-fast) !important;
+    text-transform: uppercase;
+    font-size: 0.9rem !important;
+    font-weight: 600; /* Slightly bolder */
+}
+.gsc-tab:hover {
+    color: var(--text-primary) !important;
+    border-bottom-color: var(--text-muted) !important; /* Subtle hover indicator */
+}
+.gsc-tab[aria-selected="true"] { /* Use aria-selected */
+    color: var(--accent-primary) !important;
+    border-bottom-color: var(--accent-primary) !important;
+    font-weight: 700 !important;
+}
+
+/* Text Area Container */
+.gsc-comment-box-main {
+    padding: 1.5rem !important; /* Add padding inside the main box area */
+}
+.gsc-comment-box-textarea {
+  font-family: var(--font-body-blog) !important;
+  font-size: 1rem !important;
+  color: var(--text-primary) !important;
+  background-color: var(--bg-primary) !important; /* Inner background */
+  border: 1px solid var(--bg-tertiary) !important;
+  border-radius: var(--radius-base) !important;
+  padding: 0.8rem 1rem !important;
+  min-height: 120px !important; /* Slightly taller */
+  box-shadow: none !important;
+  line-height: 1.7 !important;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast) !important;
+}
+.gsc-comment-box-textarea:focus {
+  border-color: var(--accent-highlight) !important;
+  box-shadow: 0 0 0 3px rgba(var(--accent-highlight-rgb), 0.25) !important; /* Match theme focus */
+  outline: none !important;
+}
+.gsc-comment-box-textarea-extras { display: none !important; /* Hide extra formatting buttons */ }
+
+/* Bottom Bar (Sign in / Submit Button area) */
+.gsc-comment-box-bottom {
+  padding: 1rem 1.5rem 1.5rem !important; /* Consistent padding */
+  margin: 0 !important; /* Remove margin */
+  border-top: 1px dashed var(--bg-tertiary) !important;
+  background-color: transparent !important; /* Ensure no extra background */
+  display: flex; /* Use flex for alignment */
+  justify-content: flex-end; /* Align buttons right */
+  align-items: center;
+  gap: 0.8rem; /* Space between buttons */
+}
+
+/* General Button Styling (Submit & Sign in) */
+.gsc-comment-box-bottom button[type="submit"],
+.gsc-comment-box-bottom a[href*="github.com/login"] {
+  font-family: var(--font-meta-blog) !important; /* Use meta font */
+  font-size: 0.9rem !important;
+  font-weight: 700 !important; /* Bolder */
+  padding: 0.6rem 1.2rem !important;
+  border-radius: var(--radius-base) !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all var(--transition-fast) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  border: 1px solid transparent !important; /* Base border */
+  line-height: 1.2 !important; /* Adjust line height */
+}
+
+/* Primary Comment/Submit Button */
+.gsc-comment-box-bottom button[type="submit"] {
+  background-color: var(--accent-primary) !important;
+  color: var(--text-on-accent) !important;
+  border-color: var(--accent-primary) !important;
+  order: 2; /* Ensure submit is typically last */
+}
+.gsc-comment-box-bottom button[type="submit"]:hover {
+  /* Use a slightly different shade for hover - maybe highlight? */
+  background-color: color-mix(in srgb, var(--accent-primary) 85%, black) !important; /* Darken primary */
+  border-color: color-mix(in srgb, var(--accent-primary) 85%, black) !important;
+  box-shadow: 0 2px 8px rgba(var(--accent-primary-rgb), 0.3) !important; /* Subtle glow */
+  transform: translateY(-1px);
+}
+
+/* GitHub Sign-in Button */
+.gsc-comment-box-bottom a[href*="github.com/login"] {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-secondary) !important; /* Use secondary text */
+  border: 1px solid var(--bg-tertiary) !important;
+  order: 1; /* Ensure sign in is typically first */
+}
+.gsc-comment-box-bottom a[href*="github.com/login"]:hover {
+  background-color: var(--bg-secondary) !important; /* Use secondary bg */
+  border-color: var(--text-secondary) !important;
+  color: var(--text-primary) !important; /* Use primary text on hover */
+  transform: translateY(-1px);
+}
+/* GitHub icon styling (optional: adjust color/size) */
+.gsc-comment-box-bottom a[href*="github.com/login"] svg {
+    width: 16px !important;
+    height: 16px !important;
+    color: currentColor !important; /* Inherit button color */
+}
+
+
+/* Individual Comments */
+.gsc-timeline { margin-top: 2.5rem !important; } /* Space above first comment */
+.gsc-comment {
+  border-top: 1px solid var(--bg-tertiary) !important;
+  padding-top: 1.5rem !important;
+  margin-top: 1.5rem !important;
+}
+.gsc-comment .gsc-comment-header {
+  font-family: var(--font-meta-blog) !important;
+  color: var(--text-muted) !important; /* Use muted color */
+  font-size: 0.85rem !important; /* Slightly smaller */
+  margin-bottom: 0.5rem !important;
+}
+.gsc-comment .gsc-comment-author {
+  font-weight: 700 !important;
+  color: var(--text-primary) !important;
+  font-size: 0.95rem !important; /* Slightly larger author */
+}
+.gsc-comment time { /* Style timestamp */
+    color: var(--text-muted) !important;
+    font-size: 0.85rem !important;
+}
+
+/* Comment Body - Apply base styles */
+.gsc-comment .gsc-comment-body {
+  color: var(--text-primary) !important;
+  font-size: 1rem !important;
+  line-height: 1.8 !important; /* Match content line height */
+  margin-top: 0.8rem !important;
+}
+/* Ensure paragraphs within comments have correct margin */
+ .gsc-comment .gsc-comment-body p {
+    margin-bottom: 1em !important;
+    color: var(--text-primary) !important;
+ }
+ .light .gsc-comment .gsc-comment-body p {
+    color: var(--color-light-ink) !important;
+ }
+ .gsc-comment .gsc-comment-body p:last-child {
+    margin-bottom: 0 !important;
+ }
+
+
+/* Blockquotes within comments - Match markdown styles */
+.gsc-comment .gsc-comment-body blockquote {
+  font-family: var(--font-body-blog) !important;
+  border: none !important;
+  border-left: 5px solid !important; /* Keep solid border */
+  border-image: linear-gradient(to bottom, var(--accent-muted1), var(--accent-muted2)) 1 10% !important;
+  border-image-slice: 1 !important;
+  padding: 1rem 1.5rem 1rem 2rem !important; /* Adjust padding */
+  margin: 1.5rem 0 1.5rem 0.5rem !important; /* Adjust margin */
+  background: linear-gradient(to right, rgba(var(--bg-secondary-rgb), 0.4), transparent) !important;
+  color: var(--text-secondary) !important;
+  font-style: italic !important;
+  font-size: 1em !important; /* Relative size */
+  line-height: 1.8 !important;
+  border-radius: 0 var(--radius-base) var(--radius-base) 0 !important; /* Use theme radius */
+  position: relative !important;
+}
+ .gsc-comment .gsc-comment-body blockquote::before {
+    content: '“' !important;
+    font-family: var(--font-display-blog) !important;
+    font-size: 3em !important; /* Slightly smaller than main content */
+    color: rgba(var(--accent-muted1-rgb), 0.3) !important;
+    position: absolute !important;
+    left: 0.5rem !important;
+    top: 0rem !important;
+    line-height: 1 !important;
+    z-index: 0 !important; /* Ensure behind text */
+    opacity: 0.8 !important;
+ }
+.gsc-comment .gsc-comment-body blockquote p {
+    margin-bottom: 0.5em !important;
+    font-style: italic !important;
+    color: var(--text-secondary) !important;
+    position: relative; /* Ensure text is above pseudo element */
+    z-index: 1;
+}
+.gsc-comment .gsc-comment-body blockquote p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Code blocks within comments - Match markdown styles */
+.gsc-comment .gsc-comment-body pre {
+  font-family: var(--font-mono) !important;
+  background: var(--bg-code) !important;
+  color: var(--text-code) !important;
+  padding: 1rem 1.2rem !important; /* Adjust padding */
+  border-radius: var(--radius-base) !important; /* Use theme radius */
+  margin: 1.5rem 0 !important; /* Adjust margin */
+  border: 1px solid var(--bg-tertiary) !important;
+  box-shadow: var(--shadow-inset) !important;
+  line-height: 1.7 !important;
+  font-size: 0.9rem !important;
+  overflow-x: auto !important;
+  /* Themed scrollbar */
+  scrollbar-color: var(--accent-muted2) var(--bg-tertiary) !important; /* Firefox */
+  scrollbar-width: thin !important;
+}
+.gsc-comment .gsc-comment-body pre::-webkit-scrollbar {
+     height: 8px !important;
+     width: 8px !important;
+     background-color: var(--bg-tertiary) !important;
+}
+.gsc-comment .gsc-comment-body pre::-webkit-scrollbar-thumb {
+     background-color: var(--accent-muted2) !important;
+     border-radius: 4px !important;
+     border: 2px solid var(--bg-tertiary) !important;
+}
+ .gsc-comment .gsc-comment-body pre::-webkit-scrollbar-thumb:hover {
+     background-color: var(--accent-secondary) !important;
+ }
+.gsc-comment .gsc-comment-body pre code {
+    background: none !important;
+    color: inherit !important;
+    border: none !important;
+    padding: 0 !important;
+    font-size: inherit !important;
+}
+
+/* Inline code within comments - Match markdown styles */
+.gsc-comment .gsc-comment-body code:not(pre > code) {
+  font-family: var(--font-mono) !important;
+  color: var(--text-secondary) !important;
+  background: rgba(var(--bg-secondary-rgb), 0.5) !important;
+  border: 1px solid var(--bg-tertiary) !important;
+  border-radius: var(--radius-base) !important;
+  font-size: 0.9em !important;
+  padding: 0.2em 0.5em !important;
+  word-wrap: break-word !important;
+  white-space: normal !important;
+}
+
+/* Reactions */
+.gsc-reactions { margin-top: 1rem !important; }
+.gsc-reactions-count { display: none !important; /* Hide verbose count */ }
+.gsc-reaction-button {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--bg-tertiary) !important;
+  color: var(--text-secondary) !important;
+  border-radius: var(--radius-pill) !important;
+  padding: 0.3rem 0.8rem !important;
+  transition: all var(--transition-fast) !important;
+  font-size: 0.9rem !important;
+  line-height: 1 !important; /* Ensure consistent height */
+  display: inline-flex !important; /* Align icon and text */
+  align-items: center;
+  gap: 0.3rem;
+}
+.gsc-reaction-button > span:first-child { /* Target emoji */
+    margin: 0 !important; /* Remove default margin */
+    font-size: 1em !important; /* Adjust emoji size if needed */
+    line-height: 1 !important;
+}
+ .gsc-reaction-button > span:last-child { /* Target count */
+    font-size: 0.85em !important;
+    font-weight: 600;
+    line-height: 1 !important;
+ }
+
+.gsc-reaction-button:hover {
+  border-color: var(--accent-secondary) !important;
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+}
+.gsc-reaction-button[aria-pressed="true"] { /* Use aria-pressed */
+  background-color: rgba(var(--accent-secondary-rgb), 0.2) !important; /* Subtle active background */
+  border-color: var(--accent-secondary) !important;
+  color: var(--accent-secondary) !important; /* Make text accent color */
+  font-weight: 700 !important;
+}
+
+/* Footer link */
+.gsc-footer {
+    margin-top: 2rem !important;
+    padding-top: 1rem !important;
+    border-top: 1px dashed var(--bg-tertiary) !important;
+    font-size: 0.85rem !important;
+}
+.gsc-footer a {
+    color: var(--text-muted) !important;
+    text-decoration: none !important;
+    border-bottom: 1px dotted var(--text-muted) !important;
+}
+ .gsc-footer a:hover {
+    color: var(--accent-highlight) !important;
+    border-bottom-color: var(--accent-highlight) !important;
+ }
+

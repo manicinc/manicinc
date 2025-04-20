@@ -1,0 +1,126 @@
+/* src/app/styles/comments.css */
+
+/* Common styles for comment sections */
+.comments-title {
+    font-family: var(--font-heading-blog);
+    font-size: 1.8rem;
+    color: var(--text-heading);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-primary);
+    position: relative;
+  }
+  
+  .comments-title::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  }
+  
+  /* Disqus specific styles */
+  .disqus-comments-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .disqus-comments-container:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent-primary);
+  }
+  
+  .disqus-header, .giscus-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .disqus-title, .giscus-title {
+    font-size: 1.25rem;
+    margin: 0;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    position: relative;
+  }
+  
+  .disqus-title::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background: var(--accent-primary);
+    left: -10px;
+    border-radius: 3px;
+  }
+  
+  .disqus-divider, .giscus-divider {
+    flex-grow: 1;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      var(--accent-primary) 0%,
+      var(--accent-secondary) 100%
+    );
+    margin-left: 1rem;
+    opacity: 0.6;
+  }
+  
+  /* Dark mode fixes for Disqus */
+  .dark #disqus_thread {
+    color-scheme: dark;
+  }
+  
+  /* Force Disqus iframe to use dark mode in dark theme */
+  .dark #disqus_thread iframe {
+    color-scheme: dark;
+  }
+  
+  /* Giscus specific styles */
+  .giscus-wrapper {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .giscus-wrapper:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent-secondary);
+  }
+  
+  .giscus-title::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background: var(--accent-secondary);
+    left: -10px;
+    border-radius: 3px;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .disqus-comments-container, .giscus-wrapper {
+      padding: 1rem;
+    }
+    
+    .comments-title {
+      font-size: 1.5rem;
+    }
+    
+    .disqus-title, .giscus-title {
+      font-size: 1.1rem;
+    }
+  }
