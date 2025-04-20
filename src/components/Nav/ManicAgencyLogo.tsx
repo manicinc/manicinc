@@ -1,7 +1,7 @@
 // src/components/Nav/ManicAgencyLogo.tsx
 import React from 'react';
 import Link from 'next/link';
-import navStyles from './Nav/Nav.module.css'; // Import Nav module for wrapper styles
+import navStyles from './Nav.module.css'; // Import Nav module for wrapper styles
 
 const ManicAgencyLogo = () => {
     // Generate unique IDs for SVG elements to prevent conflicts

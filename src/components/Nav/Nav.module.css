@@ -93,7 +93,8 @@
     text-decoration: none !important;
     border-bottom: none !important;
     color: transparent;
-    display: inline-block;
+    display: inline-block; /* Ensure it behaves like a block for sizing */
+    vertical-align: middle; /* Helps align with other elements if needed */
     position: relative;
     font-family: var(--font-display);
     outline: none;
@@ -121,6 +122,9 @@
     transform: scale(1.03) rotateY(-1deg) translateZ(5px);
     filter: drop-shadow(2px 2px 0px rgba(var(--accent-secondary-rgb), 0.6)) brightness(1.1);
 }
+
+
+
 
 .logoLinkDefault .logoTextMain,
 .ManicAgencyLogoComponentInternalTextClass {
@@ -172,6 +176,35 @@
     animation: taglinePulseBlog 5s ease-in-out infinite alternate;
 }
 
+
+/* --- Blog-specific tagline styles --- */
+.taglineBlog {
+    /* Inherits .tagline styles for font, etc. */
+    /* --- ADJUSTED: Absolute Positioning --- */
+    position: absolute;
+    /* Move closer to the logo visually. Experiment with these values: */
+    /* Option 1: Near bottom-right of the logo */
+     bottom: 1px;  /* <<<< ADJUST (e.g., 0px, 2px, -2px) - Vertical position relative to wrapper bottom */
+     left: 5px;   /* <<<< ADJUST (e.g., 0px, 10px) - Horizontal position relative to wrapper left */
+    /* Option 2: Near top-right (might need negative 'right' or larger 'left') */
+    /* top: 2px; */
+    /* left: 90%; */ /* Example */
+    /* Option 3: Use transform for fine-tuning */
+    /* bottom: 5px; left: 5px; transform: translate(5px, -3px); */
+
+    /* --- ADJUSTED: Styling --- */
+    font-size: 0.7rem; /* <<<< ADJUST (e.g., 0.65rem, 0.75rem) - Make smaller */
+    color: var(--text-secondary);
+    text-shadow: 0 0 3px rgba(var(--accent-secondary-rgb), 0.2); /* Reduced shadow slightly */
+    animation: taglinePulseBlog 6s ease-in-out infinite alternate; /* Slower pulse */
+    opacity: 0.8; /* Slightly more subtle */
+    z-index: 1; /* Ensure it's above the logo link if needed */
+    pointer-events: none; /* Prevent interfering with logo link click */
+    /* margin-top: -0.5rem; <<<< REMOVED (Handled by absolute positioning) */
+    line-height: 1.1; /* Tighter line height */
+}
+
+
 .tagline :global(span.animated-ascii) {
     display: inline-block;
     font-size: 1.1em;
@@ -186,22 +219,50 @@
     color: var(--accent-secondary);
     filter: var(--filter-glow-secondary);
 }
-
+/* Ensure the scope icon and ascii styles are still correct */
 .taglineScopeIcon {
     display: inline-block;
-    width: 0.9em;
-    height: 0.9em;
+    width: 0.8em; /* Slightly smaller to match font */
+    height: 0.8em; /* Slightly smaller to match font */
     stroke: var(--accent-secondary);
     stroke-width: 1.5;
-    opacity: 0.8;
+    opacity: 0.7; /* Slightly more subtle */
     vertical-align: -0.05em;
     transition: transform var(--transition-fast);
     flex-shrink: 0;
 }
 
-.tagline:hover .taglineScopeIcon {
+.taglineBlog:hover .taglineScopeIcon {
+    /* Keep hover effect or adjust */
     transform: rotate(-15deg) scale(1.1);
+    animation: scopeGlow 3s ease-in-out infinite alternate;
 }
+
+@keyframes scopeGlow {
+    0% { filter: drop-shadow(0 0 1px var(--accent-secondary)); }
+    100% { filter: drop-shadow(0 0 3px var(--accent-highlight)); }
+}
+
+.tagline :global(span.animated-ascii) {
+    display: inline-block;
+    font-size: 1.1em; /* Relative to tagline font size */
+    color: var(--accent-highlight);
+    filter: var(--filter-glow-highlight);
+    animation: asciiPopV2 1.8s ease-in-out infinite;
+    vertical-align: baseline;
+    flex-shrink: 0;
+}
+
+.taglineBlog :global(span.animated-ascii) {
+    color: var(--accent-secondary);
+    filter: var(--filter-glow-secondary);
+}
+
+@keyframes asciiPopV2 {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-1px) scale(1.05); } /* Subtle pop */
+}
+
 
 /* ====================================================== */
 /* Desktop Nav Links Styles (Hover Animation Strategy)    */
@@ -973,15 +1034,113 @@
 }
 
 
+
+/* Blog Logo Styles */
+.logoLinkBlog {
+    position: relative;
+    transition: transform var(--transition-bounce) 0.15s, filter var(--transition-medium);
+    filter: drop-shadow(0px 1px 2px rgba(var(--accent-highlight-rgb), 0.3));
+    will-change: filter, transform;
+}
+
+.logoLinkBlog:hover {
+    transform: scale(1.03);
+    filter: drop-shadow(0px 2px 3px rgba(var(--accent-highlight-rgb), 0.5)) brightness(1.1);
+}
+
+/* Tagline styles for both modes */
+.tagline {
+    font-family: var(--font-mono);
+    letter-spacing: 0.04em;
+    opacity: 0.9;
+    transition: opacity var(--transition-fast), color var(--transition-fast);
+    color: var(--text-secondary);
+    text-shadow: 0 0 2px rgba(var(--text-secondary-rgb), 0.2);
+    line-height: 1.3; /* Keep line-height */
+    display: flex; /* Keep for icon/text alignment inside tagline */
+    align-items: center;
+    gap: 0.3em;
+    white-space: nowrap;
+}
+
+.tagline:hover {
+    opacity: 1;
+    color: var(--text-primary);
+}
+
+/* Blog-specific tagline styles */
+.taglineBlog {
+    color: var(--text-secondary);
+    text-shadow: 0 0 4px rgba(var(--accent-secondary-rgb), 0.3);
+    animation: taglinePulseBlog 5s ease-in-out infinite alternate;
+    font-size: 0.8rem;
+    opacity: 0.85;
+    margin-top: -0.5rem; /* Pull it up slightly to tuck under logo */
+}
+
+@keyframes taglinePulseBlog {
+    0% { opacity: 0.7; }
+    100% { opacity: 0.95; }
+}
+
+/* Blog mode nav container */
+.navContainer.blogMode {
+    min-height: 68px; /* Slightly taller to accommodate stacked logo/tagline */
+}
+
+/* Mobile menu adjustments for blog mode */
+.mobileMenuWrapper.isBlogMenu .mobileMenuContent {
+    padding-top: 1rem;
+}
+
+/* Blog specific animations for the tagline scope icon */
+.taglineScopeIcon {
+    display: inline-block;
+    width: 0.9em;
+    height: 0.9em;
+    stroke: var(--accent-secondary);
+    stroke-width: 1.5;
+    opacity: 0.8;
+    vertical-align: -0.05em;
+    transition: transform var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.taglineBlog:hover .taglineScopeIcon {
+    transform: rotate(-15deg) scale(1.1);
+    animation: scopeGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes scopeGlow {
+    0% { filter: drop-shadow(0 0 1px var(--accent-secondary)); }
+    100% { filter: drop-shadow(0 0 3px var(--accent-highlight)); }
+}
+
+/* Animation for the ASCII characters in tagline */
+.tagline :global(span.animated-ascii) {
+    display: inline-block;
+    font-size: 1.1em;
+    color: var(--accent-highlight);
+    filter: var(--filter-glow-highlight);
+    animation: asciiPopV2 1.8s ease-in-out infinite;
+    vertical-align: baseline;
+    flex-shrink: 0;
+}
+
+.taglineBlog :global(span.animated-ascii) {
+    color: var(--accent-secondary);
+    filter: var(--filter-glow-secondary);
+}
+
+@keyframes asciiPopV2 {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-1px) scale(1.1); }
+}
+
+
+
 /* ======================================== */
 /* Responsive Visibility Control            */
 /* ======================================== */
 /* Handled by Tailwind classes (md:flex, md:hidden) in Nav.tsx */
 /* No extra CSS needed here if using Tailwind approach */
-
-
-/* ======================================== */
-/* Ornate Hamburger Icon Styling (Blog Mode)*/
-/* ======================================== */
-/* Handled by conditional class (.blogModeActive) and */
-/* icon visibility toggling within .mobileMenuBtn styles above */
