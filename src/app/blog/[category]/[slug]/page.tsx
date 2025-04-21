@@ -311,7 +311,6 @@ export default async function BlogPostPage({ params }: PageProps) {
                     </main> {/* End blog-main-content-area */}
                 </div> {/* End blog-layout-container */}
             </BlogPageClient>
-            <Footer /> {/* Rendered globally or here */}
         </>
     );
 }
