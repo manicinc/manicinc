@@ -9,82 +9,63 @@
     top: 0;
     left: 0;
     width: 100%;
-    /* ADD fixed min-height (adjust value as needed) */
-    min-height: 56px;
-    /* OR set a fixed height: */
-    /* height: 56px; */
+    min-height: 60px; /* Adjusted min-height */
     transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, min-height 0.4s ease;
-    background: linear-gradient(to bottom, var(--bg-nav-dark-start, rgba(var(--bg-primary-rgb), 0.96)) 0%, var(--bg-nav-dark-end, rgba(var(--bg-secondary-rgb), 0.98)) 100%);
-    backdrop-filter: blur(16px) saturate(110%);
-    -webkit-backdrop-filter: blur(16px) saturate(110%);
-    border-bottom: 1px solid var(--nav-border-dark-start, rgba(var(--accent-secondary-rgb), 0.15));
-    box-shadow: 0 6px 20px -3px var(--nav-shadow-dark, rgba(var(--shadow-color-rgb), 0.6));
+    /* Subtle Gradient + Noise Texture */
+    background: linear-gradient(170deg, var(--bg-nav-dark-start, rgba(var(--bg-primary-rgb), 0.92)) 0%, var(--bg-nav-dark-end, rgba(var(--bg-secondary-rgb), 0.95)) 100%), url('/noise.png');
+    background-blend-mode: overlay; /* Blend noise */
+    background-size: auto, 150px 150px; /* Control noise tile size */
+    backdrop-filter: blur(18px) saturate(120%);
+    -webkit-backdrop-filter: blur(18px) saturate(120%);
+    /* Complex border - Example */
+    border-bottom: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right,
+        rgba(var(--accent-cool-rgb), 0.1),
+        rgba(var(--accent-vibrant-rgb), 0.5) 50%,
+        rgba(var(--accent-cool-rgb), 0.1) 100%
+    );
+    box-shadow: 0 4px 15px -2px rgba(var(--accent-vibrant-rgb), 0.15), 0 8px 30px -10px var(--nav-shadow-dark, rgba(var(--shadow-color-rgb), 0.5));
     z-index: 100;
 }
 
 .navScrolled {
-    background: linear-gradient(to bottom, var(--bg-nav-dark-scrolled-start, rgba(var(--bg-primary-rgb), 1.0)) 0%, var(--bg-nav-dark-scrolled-end, rgba(var(--bg-secondary-rgb), 1.0)) 100%);
-    border-bottom-color: rgba(var(--accent-primary-rgb), 0.35);
-    box-shadow: 0 10px 25px -5px var(--nav-shadow-dark, rgba(var(--shadow-color-rgb), 0.7));
+    background: linear-gradient(170deg, var(--bg-nav-dark-scrolled-start, rgba(var(--bg-primary-rgb), 1.0)) 0%, var(--bg-nav-dark-scrolled-end, rgba(var(--bg-secondary-rgb), 1.0)) 100%), url('/noise.png');
+    background-blend-mode: overlay;
+    background-size: auto, 150px 150px;
+    box-shadow: 0 6px 20px -3px rgba(var(--accent-vibrant-rgb), 0.2), 0 10px 35px -8px var(--nav-shadow-dark, rgba(var(--shadow-color-rgb), 0.6));
+    border-image-source: linear-gradient(to right,
+        rgba(var(--accent-cool-rgb), 0.2),
+        rgba(var(--accent-vibrant-rgb), 0.7) 50%,
+        rgba(var(--accent-cool-rgb), 0.2) 100%
+    );
 }
 
+/* --- Light Mode --- */
 :global(.light) .navContainer {
-    background: linear-gradient(to bottom, var(--bg-nav-light-start, rgba(var(--bg-primary-rgb), 0.97)) 0%, var(--bg-nav-light-end, rgba(var(--bg-secondary-rgb), 0.99)) 100%);
-    border-bottom: 1px solid var(--nav-border-light-start, rgba(var(--accent-secondary-rgb), 0.25));
-    box-shadow: 0 6px 20px -3px var(--nav-shadow-light, rgba(var(--shadow-color-rgb), 0.3));
+    background: linear-gradient(170deg, var(--bg-nav-light-start, rgba(var(--bg-primary-rgb), 0.95)) 0%, var(--bg-nav-light-end, rgba(var(--bg-secondary-rgb), 0.98)) 100%), url('/noise.png');
+    background-blend-mode: multiply; /* Different blend for light */
+    background-size: auto, 150px 150px;
+    border-image-source: linear-gradient(to right,
+        rgba(var(--accent-cool-rgb), 0.2),
+        rgba(var(--accent-vibrant-rgb), 0.4) 50%,
+        rgba(var(--accent-cool-rgb), 0.2) 100%
+    );
+    box-shadow: 0 4px 15px -2px rgba(var(--accent-vibrant-rgb), 0.1), 0 8px 30px -10px var(--nav-shadow-light, rgba(var(--shadow-color-rgb), 0.3));
 }
 
 :global(.light) .navScrolled {
-    background: linear-gradient(to bottom, var(--bg-nav-light-scrolled-start, rgba(var(--bg-primary-rgb), 1.0)) 0%, var(--bg-nav-light-scrolled-end, rgba(var(--bg-secondary-rgb), 1.0)) 100%);
-    border-bottom-color: rgba(var(--accent-primary-rgb), 0.35);
-    box-shadow: 0 10px 25px -5px var(--nav-shadow-light, rgba(var(--shadow-color-rgb), 0.4));
+    background: linear-gradient(170deg, var(--bg-nav-light-scrolled-start, rgba(var(--bg-primary-rgb), 1.0)) 0%, var(--bg-nav-light-scrolled-end, rgba(var(--bg-secondary-rgb), 1.0)) 100%), url('/noise.png');
+    background-blend-mode: multiply;
+    background-size: auto, 150px 150px;
+    box-shadow: 0 6px 20px -3px rgba(var(--accent-vibrant-rgb), 0.15), 0 10px 35px -8px var(--nav-shadow-light, rgba(var(--shadow-color-rgb), 0.4));
+    border-image-source: linear-gradient(to right,
+        rgba(var(--accent-cool-rgb), 0.3),
+        rgba(var(--accent-vibrant-rgb), 0.6) 50%,
+        rgba(var(--accent-cool-rgb), 0.3) 100%
+    );
 }
 
-.dividerGradient {
-    background: linear-gradient(to bottom, transparent, rgba(var(--text-secondary-rgb), 0.4), transparent);
-    opacity: 0.6;
-    height: 1.75rem;
-    width: 1px;
-}
-
-.dividerGradientBlog {
-    background: linear-gradient(to bottom, transparent, rgba(var(--accent-secondary-rgb), 0.5), transparent);
-    opacity: 0.7;
-    height: 1.75rem;
-    width: 1px;
-}
-
-.noiseOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('/noise.png');
-    opacity: 0.05;
-    pointer-events: none;
-    z-index: 150;
-    animation: noiseAnim 0.1s infinite steps(2);
-    mix-blend-mode: overlay;
-}
-
-.navBottomGlow {
-    position: absolute;
-    bottom: -30px;
-    left: 0;
-    width: 100%;
-    height: 45px;
-    background: radial-gradient(ellipse at bottom, rgba(var(--accent-primary-rgb), 0.25) 0%, transparent 65%);
-    pointer-events: none;
-    z-index: -1;
-    filter: blur(10px);
-    transition: opacity var(--transition-medium);
-    opacity: 0.6;
-}
-
-.navBottomGlowScrolled {
-    opacity: 0.8;
-}
 
 /* ======================================== */
 /* Logo & Tagline Styles                    */
@@ -92,73 +73,85 @@
 .logoLink {
     text-decoration: none !important;
     border-bottom: none !important;
-    color: transparent;
+    color: transparent; /* Keep for background-clip */
     display: inline-block;
     position: relative;
-    font-family: var(--font-display);
+    font-family: var(--font-logo, 'Mona Sans', sans-serif); /* Use logo font */
+    font-weight: 700; /* Make it bold */
     outline: none;
-    transition: filter var(--transition-fast);
+    transition: filter var(--transition-fast), transform var(--transition-medium);
+    /* Added text shadow */
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.2), 0 0 8px rgba(var(--accent-vibrant-rgb), 0.3);
+    letter-spacing: 0.02em;
+    transform: translateZ(0); /* GPU accel */
+    will-change: filter, transform;
+    /* Ensure it's clickable */
+    cursor: pointer;
+    -webkit-user-select: none; /* Prevent text selection */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+:global(.light) .logoLink {
+    text-shadow: 1px 1px 0 rgba(var(--shadow-color-rgb), 0.2), 0 0 8px rgba(var(--accent-vibrant-rgb), 0.2);
 }
 
 .logoLink:hover {
-    color: transparent;
-    border-bottom: none !important;
-    filter: brightness(1.05);
+    filter: brightness(1.1);
+    transform: scale(1.03) translateZ(0); /* Slight scale on hover */
 }
 
-.logoLinkDefault {
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    transition: transform var(--transition-bounce) 0.15s, filter var(--transition-medium);
-    filter: drop-shadow(1px 1px 0px rgba(var(--accent-secondary-rgb), 0.4));
-    will-change: filter, transform;
-    transform-style: preserve-3d;
-    perspective: 500px;
-}
-
-.logoLinkDefault:hover {
-    transform: scale(1.03) rotateY(-1deg) translateZ(5px);
-    filter: drop-shadow(2px 2px 0px rgba(var(--accent-secondary-rgb), 0.6)) brightness(1.1);
-}
-
-.logoLinkDefault .logoTextMain,
-.ManicAgencyLogoComponentInternalTextClass {
+/* Specific Logo Text Styling */
+.logoText,
+.ManicAgencyLogoComponentInternalTextClass { /* Target both possibilities */
     font-family: inherit;
     font-weight: inherit;
     letter-spacing: inherit;
+    font-size: 1.3rem; /* Adjust size */
     position: relative;
     display: inline-block;
-    will-change: filter, transform, background-position, clip-path, content, opacity;
-    background: linear-gradient(135deg, #FF1B6B 10%, #FF70B3 50%, #FFBDE6 90%);
+    background: linear-gradient(135deg, var(--accent-cool) 0%, var(--accent-vibrant) 70%, var(--accent-vibrant-dark) 100%);
     -webkit-background-clip: text;
     background-clip: text;
-    background-size: 250% auto;
     color: transparent;
-    animation: animatedGradientVibrant 5s ease-in-out infinite alternate, surrealTextGlitchV10 10s linear infinite alternate;
-    text-shadow: 1px 1px 0px rgba(255, 27, 107, 0.5), -1px -1px 0px rgba(var(--accent-secondary-rgb), 0.3);
+    background-size: 250% auto;
+    animation: animatedGradientCoolVibrant 6s ease-in-out infinite alternate;
+}
+:global(.light) .logoText,
+:global(.light) .ManicAgencyLogoComponentInternalTextClass {
+     background: linear-gradient(135deg, var(--accent-cool) 0%, var(--accent-vibrant) 70%, var(--accent-vibrant-dark) 100%); /* Keep same gradient for light mode? Adjust if needed */
 }
 
-.logoLinkBlog {}
 
-.logoLinkBlog:hover {
-    filter: brightness(1.1);
+@keyframes animatedGradientCoolVibrant {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
+/* Tagline Styles */
 .tagline {
     font-family: var(--font-mono);
-    letter-spacing: 0.04em;
-    opacity: 0.9;
+    font-size: 0.7rem; /* Smaller */
+    letter-spacing: 0.06em;
+    opacity: 0.8;
     transition: opacity var(--transition-fast), color var(--transition-fast);
     color: var(--text-secondary);
     text-shadow: 0 0 2px rgba(var(--text-secondary-rgb), 0.2);
-    line-height: 1.3;
+    line-height: 1.2;
     flex-shrink: 1;
     min-width: 0;
-    position: relative;
-    align-items: center;
-    gap: 0.3em;
     white-space: nowrap;
+    margin-left: 0.5rem; /* Add space between logo and tagline */
+    margin-top: -2px; /* Fine-tune vertical alignment */
+}
+
+/* Blog tagline styling */
+.taglineBlog {
+    color: var(--accent-secondary);
+     text-shadow: 0 0 4px rgba(var(--accent-secondary-rgb), 0.3);
+     margin-top: -40px;
+     margin-left: 80px;
+     /* Removed specific positioning - handled by flex layout */
 }
 
 .tagline:hover {
@@ -166,237 +159,246 @@
     color: var(--text-primary);
 }
 
-.taglineBlog {
-    color: var(--text-secondary);
-    text-shadow: 0 0 4px rgba(var(--accent-secondary-rgb), 0.3);
-    animation: taglinePulseBlog 5s ease-in-out infinite alternate;
-}
-
-.tagline :global(span.animated-ascii) {
+/* Tagline Icons */
+.tagline :global(span.animated-ascii),
+.tagline .taglineScopeIcon {
     display: inline-block;
-    font-size: 1.1em;
-    color: var(--accent-highlight);
-    filter: var(--filter-glow-highlight);
-    animation: asciiPopV2 1.8s ease-in-out infinite;
-    vertical-align: baseline;
-    flex-shrink: 0;
-}
-
-.taglineBlog :global(span.animated-ascii) {
-    color: var(--accent-secondary);
-    filter: var(--filter-glow-secondary);
-}
-
-.taglineScopeIcon {
-    display: inline-block;
-    width: 0.9em;
-    height: 0.9em;
-    stroke: var(--accent-secondary);
-    stroke-width: 1.5;
+    vertical-align: middle;
+    margin: 0 0.2em;
     opacity: 0.8;
-    vertical-align: -0.05em;
-    transition: transform var(--transition-fast);
-    flex-shrink: 0;
+}
+.taglineScopeIcon {
+    width: 0.8em;
+    height: 0.8em;
+    stroke: currentColor; /* Inherit color */
+    stroke-width: 1.5;
+}
+.tagline:hover .taglineScopeIcon {
+    transform: rotate(-10deg);
 }
 
-.tagline:hover .taglineScopeIcon {
-    transform: rotate(-15deg) scale(1.1);
-}
 
 /* ====================================================== */
-/* Desktop Nav Links Styles (Hover Animation Strategy)    */
+/* Desktop Nav Links Styles (SVG Hover Animation Enabled) */
 /* ====================================================== */
 .navDesktop {
     display: flex;
-    align-items: stretch;
-    gap: 0.5rem;
+    align-items: stretch; /* Ensure links fill height */
+    gap: 0.4rem; /* Slightly reduced gap */
 }
 
 .navLink {
-    position: relative;
+    position: relative; /* Needed for absolute positioned SVG */
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 52px;
-    padding: 0 1.6rem;
+    min-height: 48px; /* Adjusted height */
+    padding: 0 1.1rem; /* Adjusted padding */
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 0.9rem; /* Slightly smaller */
     font-weight: 600;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.05em;
     color: var(--text-secondary);
     text-decoration: none !important;
-    border-bottom: none !important;
-    border-radius: var(--radius-md);
-    overflow: hidden;
+    border: none !important; /* Clean border */
+    border-bottom: none !important; /* Ensure no underline */
+    border-radius: var(--radius-base); /* Softer radius */
+    overflow: hidden; /* Hide overflowing parts of SVG if needed */
     cursor: pointer;
     background-color: transparent;
-    border: 1px solid transparent;
-    box-shadow: inset 0 1px 1px rgba(var(--text-primary-rgb), 0.02);
-    transition: color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+    /* Removed simple background hover (:before) */
+    /* box-shadow: inset 0 1px 1px rgba(var(--text-primary-rgb), 0.02); */ /* Optional: Subtle inset shadow */
+    transition: color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
     will-change: color, transform, box-shadow;
+    z-index: 1;
 }
 
 .navLink:hover {
     color: var(--text-primary);
-    box-shadow: inset 0 1px 1px rgba(var(--text-primary-rgb), 0.04);
-    transform: translateY(-2px);
+    transform: translateY(-1px); /* Subtle lift */
+    /* box-shadow: inset 0 1px 1px rgba(var(--text-primary-rgb), 0.04), 0 2px 8px rgba(var(--shadow-color-rgb), 0.1); */ /* Optional */
 }
+:global(.light) .navLink:hover {
+    /* box-shadow: inset 0 1px 1px rgba(var(--text-primary-rgb), 0.06), 0 2px 8px rgba(var(--shadow-color-rgb), 0.08); */ /* Optional */
+}
+
 
 .navLink:active {
     transform: translateY(0px) scale(0.98);
-    box-shadow: inset 0px 1px 2px rgba(var(--shadow-color-rgb), 0.2);
+    /* box-shadow: inset 0px 1px 2px rgba(var(--shadow-color-rgb), 0.15); */ /* Optional */
 }
 
 .linkText {
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Above the SVG */
     transition: transform 0.4s var(--transition-bounce), opacity 0.4s ease, color var(--transition-fast), filter var(--transition-medium);
     will-change: transform, opacity, color, filter;
     display: inline-block;
-    text-align: center;
     white-space: nowrap;
 }
 
+/* === SVG Hover Animation Container === */
 .hoverAnimationSvg {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: flex; /* Use flex to center content if SVG isn't 100% */
     align-items: center;
     justify-content: center;
-    z-index: 1;
-    pointer-events: none;
-    opacity: 0;
-    transform: scale(0.9) translateY(5px);
+    z-index: 1; /* Below link text */
+    pointer-events: none; /* Allow clicks to pass through to the link */
+    opacity: 0; /* Hidden by default */
+    transform: scale(0.9) translateY(5px); /* Start scaled down */
     transition: opacity 0.35s ease-out, transform 0.35s ease-out;
     will-change: opacity, transform;
+    /* Inherit color from parent .navLink for base stroke/fill */
     color: inherit;
     stroke: currentColor;
-    stroke-width: 1;
-    fill: none;
-    overflow: visible;
+    stroke-width: 1; /* Default stroke */
+    fill: none; /* Default fill */
+    overflow: visible; /* Allow parts of SVG to animate outside bounds */
 }
 
+/* Show SVG on hover/focus */
 .navLink:hover .hoverAnimationSvg,
 .navLink:focus-visible .hoverAnimationSvg {
     opacity: 1;
-    transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0); /* Scale up to full size */
 }
 
+/* === Specific Link Hover Styles (Text + SVG Container) === */
+
+/* Services Link */
 .navLink[data-nav-id="services"]:hover .linkText {
-    color: var(--accent-primary);
-    text-shadow: 0 0 8px rgba(var(--accent-primary-rgb), 0.5);
+    color: var(--accent-vibrant); /* Use vibrant color */
+    text-shadow: var(--text-shadow-vibrant); /* Add vibrant glow */
 }
-
 .navLink[data-nav-id="services"] .hoverAnimationSvg {
-    color: var(--accent-primary);
+    color: var(--accent-vibrant); /* Set SVG color */
+    filter: var(--filter-glow-vibrant); /* Add SVG glow */
 }
 
+/* Projects Link */
 .navLink[data-nav-id="projects"]:hover .linkText {
     color: var(--accent-secondary);
-    filter: blur(0.5px) brightness(1.1);
+    /* filter: blur(0.5px) brightness(1.1); */ /* Optional subtle text effect */
+     text-shadow: 0 0 6px rgba(var(--accent-secondary-rgb), 0.5);
 }
-
 .navLink[data-nav-id="projects"] .hoverAnimationSvg {
     color: var(--accent-secondary);
     filter: var(--filter-glow-secondary);
 }
 
+/* Open Source Link (Terminal Glitch) */
 .navLink[data-nav-id="open-source"] .linkText {
-    position: relative;
+    position: relative; /* Needed for ::before/::after */
 }
-
 .navLink[data-nav-id="open-source"] .linkText::before,
 .navLink[data-nav-id="open-source"] .linkText::after {
-    content: attr(data-text);
+    content: attr(data-text); /* Use data-text for glitch content */
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-primary);
-    clip: rect(auto, auto, auto, auto);
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: var(--bg-primary); /* Match nav background */
+    clip-path: inset(50% 0 50% 0); /* Start clipped */
     opacity: 0;
-    z-index: 3;
+    z-index: 3; /* Above original text */
     pointer-events: none;
-    color: var(--accent-alert);
+    color: var(--accent-cool); /* Glitch color */
+    transition: clip-path 0.1s steps(2), opacity 0.1s steps(2);
 }
-
 .navLink[data-nav-id="open-source"] .linkText::before {
-    text-shadow: -1px 0 var(--accent-secondary);
+    text-shadow: -1px 0 var(--accent-vibrant-light); /* Offset shadow */
 }
-
 .navLink[data-nav-id="open-source"] .linkText::after {
-    text-shadow: 1px 0 var(--accent-highlight);
+    text-shadow: 1px 0 var(--accent-cool-light); /* Offset shadow */
 }
-
 .navLink[data-nav-id="open-source"]:hover .linkText {
-    color: var(--accent-alert);
-    animation: terminalFlicker 0.5s steps(2) infinite;
-    opacity: 1 !important;
+    color: var(--accent-cool); /* Base text color changes */
+    animation: terminalFlicker 0.6s steps(3) infinite alternate; /* Flicker effect */
 }
-
 .navLink[data-nav-id="open-source"]:hover .linkText::before,
 .navLink[data-nav-id="open-source"]:hover .linkText::after {
     opacity: 1;
-    animation: terminalGlitch 0.08s linear infinite alternate;
+    animation: terminalGlitchPath 0.1s linear infinite alternate; /* Animate clip-path */
 }
-
 .navLink[data-nav-id="open-source"]:hover .linkText::after {
-    animation-delay: 0.02s;
+    animation-delay: 0.03s; /* Delay second glitch layer */
 }
-
 .navLink[data-nav-id="open-source"] .hoverAnimationSvg {
-    color: var(--accent-alert);
-    filter: var(--filter-glow-alert);
+    color: var(--accent-cool); /* Use cool color for SVG */
+    filter: var(--filter-glow-cool);
+}
+@keyframes terminalFlicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+@keyframes terminalGlitchPath {
+  0% { clip-path: inset(20% 0 70% 0); }
+  25% { clip-path: inset(80% 0 10% 0); }
+  50% { clip-path: inset(40% 0 40% 0); }
+  75% { clip-path: inset(60% 0 20% 0); }
+  100% { clip-path: inset(10% 0 85% 0); }
 }
 
-.navLinkBlog:hover .linkText {
+
+/* Blog & About Links */
+.navLinkBlog { /* Can be shared by Blog and About */
+   /* font-family: var(--font-mono); */ /* Optional */
+}
+.navLink[data-nav-id="blog"]:hover .linkText,
+.navLink[data-nav-id="about"]:hover .linkText {
     color: var(--accent-highlight);
-    transform: scale(1.03) skew(-1deg);
-    text-shadow: 0 0 10px var(--accent-highlight, transparent);
-    opacity: 1;
-    filter: url(#blogLinkWarp) brightness(1.1);
+    transform: scale(1.02) skew(-1deg);
+    text-shadow: 0 0 8px rgba(var(--accent-highlight-rgb), 0.6);
+    /* filter: url(#blogLinkWarp) brightness(1.1); */ /* Optional SVG filter */
 }
-
-.navLinkBlog .hoverAnimationSvg {
+.navLink[data-nav-id="blog"] .hoverAnimationSvg,
+.navLink[data-nav-id="about"] .hoverAnimationSvg {
     color: var(--accent-highlight);
     filter: var(--filter-glow-highlight);
 }
 
+
+/* === Active Link Styles === */
 .navActive {
-    box-shadow: inset 0px 1px 2px rgba(var(--shadow-color-rgb), 0.15);
+    /* Optional: Add subtle background or inset shadow */
+    /* background-color: rgba(var(--text-primary-rgb), 0.03); */
+     box-shadow: inset 0px 1px 2px rgba(var(--shadow-color-rgb), 0.1);
 }
+:global(.light) .navActive {
+    /* background-color: rgba(var(--text-primary-rgb), 0.05); */
+     box-shadow: inset 0px 1px 2px rgba(var(--shadow-color-rgb), 0.08);
+}
+
 
 .navActive .linkText {
-    font-weight: 700;
+    font-weight: 700; /* Bold active text */
+    /* Ensure active text color matches hover color */
 }
 
-.navLink[data-nav-id="services"].navActive .linkText {
-    color: var(--accent-primary);
-}
+/* Set active text colors to match hover colors */
+.navLink[data-nav-id="services"].navActive .linkText { color: var(--accent-vibrant); text-shadow: var(--text-shadow-vibrant); }
+.navLink[data-nav-id="projects"].navActive .linkText { color: var(--accent-secondary); text-shadow: 0 0 6px rgba(var(--accent-secondary-rgb), 0.5); }
+.navLink[data-nav-id="open-source"].navActive .linkText { color: var(--accent-cool); } /* Keep glitch off for active */
+.navLink[data-nav-id="blog"].navActive .linkText,
+.navLink[data-nav-id="about"].navActive .linkText { color: var(--accent-highlight); text-shadow: 0 0 8px rgba(var(--accent-highlight-rgb), 0.6); }
 
-.navLink[data-nav-id="projects"].navActive .linkText {
-    color: var(--accent-secondary);
-}
-
-.navLink[data-nav-id="open-source"].navActive .linkText {
-    color: var(--accent-alert);
-}
-
-.navLink[data-nav-id="blog"].navActive .linkText {
-    color: var(--accent-highlight);
-    text-shadow: 0 0 8px var(--accent-highlight, transparent);
-}
-
+/* Hide SVG and stop its animation when link is active */
 .navActive .hoverAnimationSvg {
-    opacity: 0;
-    transform: scale(0.9) translateY(5px);
-    pointer-events: none;
+    opacity: 0 !important;
+    transform: scale(0.9) translateY(5px) !important;
+    pointer-events: none !important;
+    animation-play-state: paused !important;
+}
+.navActive .hoverAnimationSvg * {
+    animation-play-state: paused !important; /* Pause animations on child elements too */
 }
 
+/* Trigger SVG Animations on Hover/Focus (if SVGs have internal animations) */
+/* These selectors assume your SVG components add classes like 'animated-stroke', etc. */
 .navLink:hover .hoverAnimationSvg .animated-stroke,
 .navLink:focus-visible .hoverAnimationSvg .animated-stroke,
 .navLink:hover .hoverAnimationSvg .animated-fill,
@@ -416,256 +418,51 @@
 .navLink:hover .hoverAnimationSvg .branch-left,
 .navLink:focus-visible .hoverAnimationSvg .branch-left,
 .navLink:hover .hoverAnimationSvg .branch-right,
-.navLink:focus-visible .hoverAnimationSvg .branch-right {
+.navLink:focus-visible .hoverAnimationSvg .branch-right,
+.navLink:hover .hoverAnimationSvg .pulse-node, /* Add any other animation classes */
+.navLink:focus-visible .hoverAnimationSvg .pulse-node {
+    /* Ensure animations play only on hover/focus, not when active */
     animation-play-state: running !important;
 }
 
-/* ====================================================== */
-/* Desktop Nav Links Styles (Icon Animation)              */
-/* ====================================================== */
-.navDesktop {
-    display: flex;
-    align-items: stretch;
-    gap: 0.5rem;
-}
-
-.navLink {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6em;
-    min-height: 52px;
-    padding: 0 1rem;
-    font-family: var(--font-display);
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    color: var(--text-secondary);
-    text-decoration: none !important;
-    border-bottom: none !important;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    cursor: pointer;
-    background-color: transparent;
-    border: 1px solid transparent;
-    box-shadow: inset 0 1px 1px rgba(var(--text-primary-rgb), 0.02);
-    transition: color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
-    will-change: color, transform, box-shadow;
-}
-
-.navLink:hover {
-    color: var(--text-primary);
-    box-shadow: inset 0 1px 1px rgba(var(--text-primary-rgb), 0.04);
-    transform: translateY(-2px);
-}
-
-.navLink:active {
-    transform: translateY(0px) scale(0.98);
-    box-shadow: inset 0px 1px 2px rgba(var(--shadow-color-rgb), 0.2);
-}
-
-.linkText {
-    position: relative;
-    z-index: 2;
-    transition: transform 0.4s var(--transition-bounce), opacity 0.4s ease;
-    will-change: transform, opacity;
-    display: inline-block;
-    text-align: left;
-    white-space: nowrap;
-}
-
-.navLink .nav-svg {
-    flex-shrink: 0;
-    display: inline-block;
-    vertical-align: middle;
-    width: 1.3em;
-    height: 1.3em;
-    color: inherit;
-    transition: color var(--transition-fast), transform 0.3s var(--transition-bounce), filter var(--transition-fast);
-    will-change: color, transform, filter;
-    stroke: currentColor;
-    stroke-width: 1.5;
-    fill: none;
-    overflow: visible;
-    transform-origin: center center;
-    transform: scale(1) rotate(0deg);
-}
-
-.navLink:hover .linkText,
-.navLink:focus-visible .linkText {
-    opacity: 1;
-}
-
-.navLink:hover .nav-svg,
-.navLink:focus-visible .nav-svg {
-    transform: scale(1.1) rotate(-5deg);
-    color: var(--text-primary);
-}
-
-.navActive {
-    box-shadow: inset 0px 1px 2px rgba(var(--shadow-color-rgb), 0.15);
-}
-
-.navActive .linkText {
-    opacity: 1;
-    font-weight: 700;
-}
-
-.navActive .nav-svg {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-}
-
-.navLink:hover .animated-stroke,
-.navLink:focus-visible .animated-stroke,
-.navLink.navActive .animated-stroke,
-.navLink:hover .animated-fill,
-.navLink:focus-visible .animated-fill,
-.navLink.navActive .animated-fill,
-.navLink:hover .pulse-node,
-.navLink:focus-visible .pulse-node,
-.navLink.navActive .pulse-node,
-.navLink:hover .svg-eyelid,
-.navLink:focus-visible .svg-eyelid,
-.navLink.navActive .svg-eyelid,
-.navLink:hover .eye-scanline,
-.navLink:focus-visible .eye-scanline,
-.navLink.navActive .eye-scanline,
-.navLink:hover .svg-chevron,
-.navLink:focus-visible .svg-chevron,
-.navLink.navActive .svg-chevron {
-    animation-play-state: running !important;
-}
-
-.navLink[data-nav-id="services"].navActive {
-    color: var(--accent-primary);
-}
-
-.navLink[data-nav-id="services"].navActive .nav-svg {
-    color: var(--accent-primary);
-    filter: var(--filter-glow-primary);
-}
-
-.navLink[data-nav-id="projects"].navActive {
-    color: var(--accent-secondary);
-}
-
-.navLink[data-nav-id="projects"].navActive .nav-svg {
-    color: var(--accent-secondary);
-    filter: var(--filter-glow-secondary);
-}
-
-.navLink[data-nav-id="open-source"].navActive {
-    color: var(--accent-alert);
-}
-
-.navLink[data-nav-id="open-source"].navActive .nav-svg {
-    color: var(--accent-alert);
-    filter: var(--filter-glow-alert);
-}
-
-.navLink[data-nav-id="blog"].navActive {
-    color: var(--accent-highlight);
-}
-
-.navLink[data-nav-id="blog"].navActive .nav-svg {
-    color: var(--accent-highlight);
-    filter: var(--filter-glow-highlight);
-}
-
-.navLink[data-nav-id="blog"].navActive .linkText {
-    text-shadow: 0 0 8px var(--highlight-glow-color, transparent);
-}
-
-.navLinkBlog {
-    font-family: var(--font-mono);
-    text-transform: lowercase;
-    letter-spacing: 0.08em !important;
-}
-
-.navLinkBlog:hover .linkText {
-    transform: scale(1.03) skew(-1deg);
-    text-shadow: 0 0 10px var(--highlight-glow-color, transparent);
-    opacity: 1;
-}
-
-.navLinkBlog:hover .nav-svg {
-    transform: scale(1.15) rotate(5deg);
-    filter: var(--filter-glow-highlight);
-}
-
-.navLink[data-nav-id="open-source"] .linkText {
-    position: relative;
-}
-
-.navLink[data-nav-id="open-source"] .linkText::before,
-.navLink[data-nav-id="open-source"] .linkText::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-primary);
-    clip: rect(auto, auto, auto, auto);
-    opacity: 0;
-    z-index: 3;
-    pointer-events: none;
-    color: var(--accent-alert);
-}
-
-.navLink[data-nav-id="open-source"] .linkText::before {
-    text-shadow: -1px 0 var(--accent-secondary);
-}
-
-.navLink[data-nav-id="open-source"] .linkText::after {
-    text-shadow: 1px 0 var(--accent-highlight);
-}
-
-.navLink[data-nav-id="open-source"]:hover .linkText {
-    color: var(--accent-alert);
-    animation: terminalFlicker 0.5s steps(2) infinite;
-    opacity: 1 !important;
-}
-
-.navLink[data-nav-id="open-source"]:hover .linkText::before,
-.navLink[data-nav-id="open-source"]:hover .linkText::after {
-    opacity: 1;
-    animation: terminalGlitch 0.08s linear infinite alternate;
-}
-
-.navLink[data-nav-id="open-source"]:hover .linkText::after {
-    animation-delay: 0.02s;
-}
 
 /* ======================================== */
-/* Contact Button Styles (Robust/Brutalist) */
+/* Contact Button Styles (Brutalist/Robust) */
 /* ======================================== */
 .contactBtnFinal {
     position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.8rem 1.6rem;
+    padding: 0.6rem 1.4rem; /* Adjusted padding */
     font-family: var(--font-display);
-    font-weight: 800;
+    font-weight: 700; /* Bold */
     color: var(--text-on-accent, #ffffff);
     text-decoration: none !important;
     border-bottom: none !important;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border: 2px solid var(--accent-primary);
-    border-radius: var(--radius-md);
-    min-height: 52px;
-    background-color: var(--accent-primary);
+    letter-spacing: 0.08em;
+    border: 2px solid color-mix(in srgb, var(--accent-vibrant) 85%, black); /* Darker border */
+    border-radius: var(--radius-sharp); /* Sharp Corners */
+    min-height: 48px; /* Match nav links */
+    background: linear-gradient(145deg, var(--accent-vibrant), var(--accent-vibrant-dark)); /* Gradient BG */
     cursor: pointer;
     z-index: 1;
     transition: var(--transition-medium);
-    transition-property: transform, box-shadow, background-color, border-color, color;
-    will-change: transform, box-shadow, background-color, border-color;
-    box-shadow: 3px 3px 0px 0px color-mix(in srgb, var(--accent-primary) 60%, black);
+    transition-property: transform, box-shadow, background, border-color, color;
+    will-change: transform, box-shadow, background, border-color;
+    /* Brutalist Shadow */
+    box-shadow: 4px 4px 0px 0px color-mix(in srgb, var(--accent-vibrant) 50%, black);
     overflow: visible;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3); /* Text shadow for depth */
 }
+:global(.light) .contactBtnFinal {
+    border-color: color-mix(in srgb, var(--accent-vibrant) 90%, var(--color-ink));
+    box-shadow: 4px 4px 0px 0px color-mix(in srgb, var(--accent-vibrant) 60%, var(--color-ink));
+    text-shadow: 1px 1px 0px rgba(var(--color-ink-rgb), 0.2);
+    color: var(--color-light-parchment); /* Light text on vibrant bg */
+}
+
 
 .contactBtnFinal .contactText {
     position: relative;
@@ -673,122 +470,145 @@
     transition: transform var(--transition-fast);
     display: inline-flex;
     align-items: center;
-    gap: 0.5em;
+    gap: 0.6em; /* Increased gap */
 }
 
 .contactBtnFinal .hourglassSvg {
     display: inline-block;
-    width: 1em;
-    height: 1em;
-    opacity: 0;
-    transform: scale(0.8);
-    transition: opacity var(--transition-fast), transform var(--transition-fast);
+    width: 1.1em; /* Larger icon */
+    height: 1.1em;
+    opacity: 0.8; /* Slightly visible */
+    transform: scale(1);
+    transition: opacity var(--transition-fast), transform 0.5s var(--transition-bounce), filter 0.3s ease;
+    filter: drop-shadow(1px 1px 0px rgba(0,0,0,0.4));
     color: inherit;
     animation: none;
     vertical-align: -0.1em;
 }
+:global(.light) .contactBtnFinal .hourglassSvg {
+     filter: drop-shadow(1px 1px 0px rgba(var(--color-ink-rgb), 0.3));
+}
+
 
 .contactBtnFinal:hover,
 .contactBtnFinal:focus-visible {
-    background-color: var(--accent-secondary);
-    border-color: var(--accent-secondary);
-    color: var(--text-on-accent, #ffffff);
-    box-shadow: 1px 1px 0px 0px color-mix(in srgb, var(--accent-secondary) 60%, black);
-    transform: translate(2px, 2px);
+    background: linear-gradient(145deg, var(--accent-cool), var(--accent-cool-dark)); /* Change to cool color */
+    border-color: color-mix(in srgb, var(--accent-cool) 85%, black);
+    color: var(--color-ink, #1a111b); /* Dark text on cool bg */
+    box-shadow: 2px 2px 0px 0px color-mix(in srgb, var(--accent-cool) 50%, black); /* Reduced shadow */
+    transform: translate(2px, 2px); /* Shift effect */
     outline: none;
+    text-shadow: none; /* Remove shadow on hover */
+}
+:global(.light) .contactBtnFinal:hover,
+:global(.light) .contactBtnFinal:focus-visible {
+    border-color: color-mix(in srgb, var(--accent-cool) 90%, var(--color-ink));
+    box-shadow: 2px 2px 0px 0px color-mix(in srgb, var(--accent-cool) 60%, var(--color-ink));
+    color: var(--color-ink);
 }
 
+
 .contactBtnFinal:hover .contactText {
-    transform: scale(1.01);
+    transform: scale(1.02); /* Slightly grow text */
 }
 
 .contactBtnFinal:hover .hourglassSvg,
 .contactBtnFinal:focus-visible .hourglassSvg {
-    animation: hourglassRotate 1.6s linear infinite;
+    /* Keep rotation, make it smoother */
+    animation: hourglassRotateSmooth 1.8s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
     opacity: 1;
-    transform: scale(1);
+    filter: drop-shadow(1px 1px 0px rgba(0,0,0,0.4));
+    transform: scale(1.1); /* Enlarge icon */
+}
+:global(.light) .contactBtnFinal:hover .hourglassSvg,
+:global(.light) .contactBtnFinal:focus-visible .hourglassSvg {
+     filter: drop-shadow(1px 1px 0px rgba(var(--color-ink-rgb), 0.3));
 }
 
-@keyframes hourglassRotate {
-    0% {
-      transform: rotate(0deg) scale(1);
-    }
-    25% {
-      transform: rotate(90deg) scale(1.1);
-    }
-    50% {
-      transform: rotate(180deg) scale(1);
-    }
-    75% {
-      transform: rotate(270deg) scale(1.1);
-    }
-    100% {
-      transform: rotate(360deg) scale(1);
-    }
-  }
-  
+@keyframes hourglassRotateSmooth {
+  0% { transform: rotate(0deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1.1); }
+}
+
 
 .contactBtnFinal:active {
-    transform: translate(3px, 3px);
-    background-color: color-mix(in srgb, var(--accent-secondary) 80%, black);
-    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4);
-    border-color: color-mix(in srgb, var(--accent-secondary) 80%, black);
+    transform: translate(4px, 4px); /* Push further */
+    background: linear-gradient(145deg, var(--accent-cool-dark), color-mix(in srgb, var(--accent-cool) 50%, black));
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.5); /* Inset shadow */
+    border-color: color-mix(in srgb, var(--accent-cool) 50%, black);
 }
+:global(.light) .contactBtnFinal:active {
+     transform: translate(4px, 4px);
+     background: linear-gradient(145deg, var(--accent-cool-dark), color-mix(in srgb, var(--accent-cool) 70%, var(--color-ink)));
+     box-shadow: inset 1px 1px 3px rgba(var(--color-ink-rgb), 0.3);
+     border-color: color-mix(in srgb, var(--accent-cool) 70%, var(--color-ink));
+}
+
 
 .contactBtnFinal:active .hourglassSvg {
-    animation-duration: 0.3s;
+    animation-duration: 0.2s; /* Faster spin on click */
+    transform: scale(1.0); /* Slightly shrink */
 }
 
 /* ======================================== */
-/* Mobile Menu & Button Styles              */
+/* Mobile Menu Button (Ornamental Hamburger) */
 /* ======================================== */
 .mobileMenuBtn {
-    padding: 0.6rem;
-    border: 1px solid rgba(var(--text-primary-rgb), 0.1);
-    background: rgba(var(--bg-tertiary-rgb), 0.3);
+    padding: 0; /* Remove padding, use width/height */
+    border: 1px solid rgba(var(--text-primary-rgb), 0.15);
+    /* Neomorphic subtle background */
+    background: linear-gradient(145deg, var(--bg-secondary), var(--bg-tertiary));
     cursor: pointer;
-    z-index: 110;
-    width: 48px;
-    height: 48px;
-    border-radius: var(--radius-md);
-    box-shadow: inset 1px 1px 2px rgba(var(--text-primary-rgb), 0.05), inset -1px -1px 2px rgba(var(--shadow-color-rgb), 0.3), 0 2px 5px rgba(var(--shadow-color-rgb), 0.2);
-    transition: all var(--transition-fast);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    z-index: 110; /* Above mobile menu */
+    width: 44px; /* Fixed size */
+    height: 44px;
+    border-radius: var(--radius-base); /* Consistent radius */
+    /* Neomorphic Shadow */
+    box-shadow: var(--shadow-neo-dark, 3px 3px 6px rgba(0,0,0,0.4), -3px -3px 6px rgba(var(--bg-tertiary-rgb),0.1));
+    transition: all 0.3s ease; /* Smoother transition */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    position: relative;
+    position: relative; /* Needed for absolute positioned bars */
 }
+
+:global(.light) .mobileMenuBtn {
+     background: linear-gradient(145deg, var(--bg-secondary), var(--bg-tertiary));
+     box-shadow: var(--shadow-neo-light, 3px 3px 6px rgba(var(--shadow-color-rgb), 0.1), -3px -3px 6px rgba(255,255,255,0.7));
+     border-color: rgba(var(--text-primary-rgb), 0.1);
+}
+
 
 .mobileMenuBtn:hover {
-    background: rgba(var(--bg-tertiary-rgb), 0.5);
-    transform: scale(1.05);
-    border-color: rgba(var(--text-primary-rgb), 0.2);
+    border-color: rgba(var(--accent-vibrant-rgb), 0.3);
+    transform: scale(1.05) translateY(-1px);
+    /* Enhance shadow on hover */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.45), -4px -4px 8px rgba(var(--bg-tertiary-rgb), 0.12), 0 0 10px rgba(var(--accent-vibrant-rgb), 0.3);
 }
+:global(.light) .mobileMenuBtn:hover {
+     border-color: rgba(var(--accent-vibrant-rgb), 0.2);
+     box-shadow: 4px 4px 8px rgba(var(--shadow-color-rgb), 0.12), -4px -4px 8px rgba(255, 255, 255, 0.8), 0 0 10px rgba(var(--accent-vibrant-rgb), 0.2);
+}
+
 
 .mobileMenuBtn:active {
-    transform: scale(0.95);
-    background: rgba(var(--bg-tertiary-rgb), 0.2);
-    box-shadow: inset 1px 1px 3px rgba(var(--shadow-color-rgb), 0.5);
+    transform: scale(0.98);
+    box-shadow: var(--shadow-neo-inset-dark, inset 2px 2px 5px rgba(0,0,0,0.6), inset -2px -2px 5px rgba(var(--bg-tertiary-rgb),0.1)); /* Deeper Inset shadow */
+    background: linear-gradient(145deg, var(--bg-tertiary), var(--bg-secondary)); /* Invert gradient */
+}
+:global(.light) .mobileMenuBtn:active {
+     box-shadow: var(--shadow-neo-inset-light, inset 2px 2px 5px rgba(var(--shadow-color-rgb), 0.15), inset -2px -2px 5px rgba(255,255,255,0.8));
+     background: linear-gradient(145deg, var(--bg-tertiary), var(--bg-secondary));
 }
 
-.hamburgerIconWrapper,
-.flourishIconWrapper {
-    position: absolute;
-    width: 26px;
-    height: 20px;
-    transition: opacity 0.3s var(--transition-medium), transform 0.3s var(--transition-medium);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-/* Hamburger specific styles */
+/* Hamburger Bars Container */
 .hamburgerIconWrapper {
-    opacity: 1;
-    transform: scale(1);
+    width: 24px; /* Define exact dimensions */
+    height: 18px;
+    position: relative;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); /* Bounce out */
 }
 
 .hamburgerIconWrapper .bar {
@@ -796,247 +616,273 @@
     position: absolute;
     left: 0;
     width: 100%;
-    height: 3px;
+    height: 3px; /* Thickness */
     background-color: var(--text-primary);
     border-radius: 3px;
-    transition: transform 0.3s var(--transition-bounce), opacity 0.3s ease-in-out;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), /* Bounce */
+                opacity 0.3s ease-in-out,
+                background-color 0.4s ease;
     transform-origin: center;
-    box-shadow: 0 0 3px rgba(var(--accent-primary-rgb), 0.5);
+    /* Subtle glow on bars */
+    box-shadow: 0 0 4px 1px rgba(var(--accent-vibrant-rgb), 0.3);
+}
+:global(.light) .hamburgerIconWrapper .bar {
+    background-color: var(--text-primary); /* Ensure contrast in light mode */
+    box-shadow: 0 0 4px 1px rgba(var(--accent-vibrant-rgb), 0.2);
 }
 
+
+/* Bar positions */
 .hamburgerIconWrapper .bar1 { top: 0; }
 .hamburgerIconWrapper .bar2 { top: 50%; transform: translateY(-50%); }
 .hamburgerIconWrapper .bar3 { bottom: 0; }
 
+/* --- Ornamental Hamburger -> X Animation --- */
+.mobileMenuBtn.menuOpen .hamburgerIconWrapper {
+     transform: rotate(180deg) scale(0.9); /* Rotate and slightly shrink */
+}
 
-/* Hamburger -> X animation - more pronounced */
+.mobileMenuBtn.menuOpen .bar {
+    background-color: var(--accent-vibrant); /* Change color to vibrant */
+    box-shadow: 0 0 6px 2px rgba(var(--accent-vibrant-rgb), 0.7); /* Enhance glow */
+}
+
 .mobileMenuBtn.menuOpen .bar1 {
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg);
-    background-color: var(--accent-highlight);
+    transform: translateY(7.5px) rotate(45deg); /* Move down and rotate */
+    transition-delay: 0s; /* Start immediately */
 }
 
 .mobileMenuBtn.menuOpen .bar2 {
     opacity: 0;
-    transform: translateY(-50%) scaleX(0);
+    transform: translateY(-50%) scaleX(0); /* Fade and shrink completely */
+    transition-delay: 0.1s; /* Slight delay */
 }
 
 .mobileMenuBtn.menuOpen .bar3 {
-    bottom: 50%;
-    transform: translateY(50%) rotate(-45deg);
-    background-color: var(--accent-highlight);
+    transform: translateY(-7.5px) rotate(-45deg); /* Move up and rotate */
+    transition-delay: 0s; /* Start immediately */
 }
 
 
-/* Flourish Icon Container (hidden by default) */
-.flourishIconWrapper {
-    opacity: 0;
-    transform: scale(0.8);
-}
-
-.flourishIcon {
-    width: 24px;
-    height: 24px;
-    stroke: currentColor;
-    stroke-width: 1.5;
-    fill: none;
-}
-
-/* --- Animation on Menu Open --- */
-.mobileMenuBtn.menuOpen .hamburgerIconWrapper {
-    transform: scale(0.8);
-}
-
-.mobileMenuBtn.menuOpen .flourishIconWrapper {
-    opacity: 1;
-    transform: scale(1);
-}
-
-/* Blog Mode Specific Styling (No change needed here if the visibility is handled by the above) */
-.mobileMenuBtn.blogModeActive .hamburgerIconWrapper {
-    transform: scale(0.8);
-}
-
-
-.mobileMenuBtn.blogModeActive .flourishIconWrapper { opacity: 1; transform: scale(1); }
-
-/* Visibility toggle between open/close icons */
-.mobileMenuBtn .iconOpen { opacity: 1; transform: rotate(0deg) scale(1); }
-.mobileMenuBtn .iconClose { opacity: 0; transform: rotate(-90deg) scale(0.8); }
-.mobileMenuBtn.menuOpen .iconOpen { opacity: 0; transform: rotate(90deg) scale(0.8); }
-.mobileMenuBtn.menuOpen .iconClose { opacity: 1; transform: rotate(0deg) scale(1); }
-
-/* Mobile Menu Dropdown */
+/* ======================================== */
+/* Mobile Menu Dropdown (Improved Style)    */
+/* ======================================== */
 .mobileMenuWrapper {
     position: absolute;
-    top: calc(100% + 1px); /* Position below nav, slight overlap or gap based on border */
+    top: calc(100% + 1px); /* Position below nav */
     left: 0; right: 0;
-    background-color: rgba(var(--bg-secondary-rgb), 0.99);
-    border: 1px solid rgba(var(--accent-primary-rgb), 0.2);
+    /* Neomorphic background with gradient */
+    background: linear-gradient(160deg, rgba(var(--bg-secondary-rgb), 0.98), rgba(var(--bg-primary-rgb), 0.99));
+    border: 1px solid rgba(var(--accent-vibrant-rgb), 0.15); /* Subtle vibrant border */
     border-top: none;
-    backdrop-filter: blur(18px) saturate(130%);
-    -webkit-backdrop-filter: blur(18px) saturate(130%);
-    box-shadow: 0 20px 40px rgba(var(--shadow-color-rgb), 0.4);
-    border-radius: 0 0 var(--radius-xl) var(--radius-xl);
-    z-index: 105; /* Below button, above page content */
-    overflow: hidden;
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    /* Soft Neomorphic Shadow */
+    box-shadow: 0 15px 30px -10px rgba(var(--shadow-color-rgb), 0.3), var(--shadow-neo-inset-dark);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg); /* Slightly larger radius */
+    z-index: 105; /* Below button */
+    overflow: hidden; /* Important for border-radius */
 
-    /* --- INITIAL HIDDEN STATE (Using Transform & Opacity) --- */
+    /* --- Animation States --- */
     opacity: 0;
-    transform: scaleY(0.95) translateY(-10px);
+    transform: translateY(-15px) scaleY(0.95); /* Start higher and scaled */
     transform-origin: top center;
     pointer-events: none; /* Prevent interaction when hidden */
-
-    /* --- TRANSITION (Animates opening/closing) --- */
-    transition: transform 0.3s var(--transition-bounce),
-                opacity 0.25s ease;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), /* Bounce effect */
+                opacity 0.3s ease;
 }
+
 /* Light Mode Mobile Menu */
 :global(.light) .mobileMenuWrapper {
-     background-color: rgba(var(--bg-secondary-rgb), 0.99);
-     border: 1px solid rgba(var(--accent-primary-rgb), 0.2);
-     border-top: none;
-     box-shadow: 0 20px 40px var(--nav-shadow-light, rgba(var(--shadow-color-rgb), 0.4));
+     background: linear-gradient(160deg, rgba(var(--bg-secondary-rgb), 0.98), rgba(var(--bg-primary-rgb), 0.99));
+     border: 1px solid rgba(var(--accent-vibrant-rgb), 0.1);
+     box-shadow: 0 15px 30px -10px var(--nav-shadow-light), var(--shadow-neo-inset-light);
 }
 
 
 /* Add 'mobileMenuOpen' class to wrapper when menu is open */
 .mobileMenuOpen {
-    /* --- VISIBLE STATE --- */
     opacity: 1;
-    transform: scaleY(1) translateY(0);
+    transform: translateY(0) scaleY(1); /* Animate to final position */
     pointer-events: auto; /* Allow interaction */
 }
 
-.mobileMenuContent { padding-bottom: 1.5rem; padding-top: 0.5rem; }
-.mobileNavLink { /* Individual mobile links */
-    display: flex; align-items: center; padding: 1rem 1.5rem;
+.mobileMenuContent {
+    padding-top: 0.8rem; /* Add padding inside */
+    padding-bottom: 0.5rem;
+    max-height: calc(100vh - 80px); /* Prevent menu from being too tall */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.mobileNavLink {
+    display: flex;
+    align-items: center;
+    padding: 0.9rem 1.5rem; /* Adjust padding */
+    margin: 0.3rem 0.8rem; /* Add margin for spacing between items */
     color: var(--text-secondary);
-    text-decoration: none !important; border-bottom: none !important; /* Override base 'a' */
-    font-size: 1.1rem; /* Slightly smaller */
+    text-decoration: none !important; border-bottom: none !important;
+    font-size: 1.05rem;
     font-weight: 600;
-    transition: var(--transition-medium); transition-property: color, border-left-color, background-color, letter-spacing, transform;
-    border-left: 4px solid transparent;
-    letter-spacing: 0.05em;
+    font-family: var(--font-display);
+    transition: var(--transition-medium);
+    transition-property: color, background-color, border-radius, transform, box-shadow;
+    border-radius: var(--radius-base); /* Rounded corners */
+    letter-spacing: 0.04em;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent; /* Placeholder for active state */
+    cursor: pointer;
 }
-/* Emoji icons */
-.mobileNavLink::before { content: ''; display: inline-block; width: 1.5em; text-align: center; margin-right: 0.8em; font-size: 1.1em; transition: transform var(--transition-fast); }
-.mobileNavLink[data-nav-id="services"]::before { content: '⚡'; }
-.mobileNavLink[data-nav-id="projects"]::before { content: '💡'; }
-.mobileNavLink[data-nav-id="open-source"]::before { content: '🛠️'; }
-.mobileNavLink[data-nav-id="blog"]::before { content: '📖'; } /* Added Blog Emoji */
 
-
-/* Mobile link hover/focus/active */
-.mobileNavLink:hover, .mobileNavLink:focus-visible {
+/* --- Mobile Link Hover/Focus --- */
+.mobileNavLink:hover,
+.mobileNavLink:focus-visible {
     color: var(--text-primary);
-    background-color: rgba(var(--accent-primary-rgb), 0.1);
-    border-left-color: var(--accent-primary);
-    letter-spacing: 0.07em;
-    transform: translateX(4px);
+    background-color: rgba(var(--accent-vibrant-rgb), 0.1); /* Vibrant hover */
+    transform: translateX(3px) scale(1.01); /* Subtle move and scale */
     outline: none;
+    box-shadow: 0 2px 5px rgba(var(--accent-vibrant-rgb), 0.1);
+    border-radius: var(--radius-md);
 }
-.mobileNavLink:hover::before, .mobileNavLink:focus-visible::before { transform: scale(1.3) rotate(-10deg); }
-.mobileNavLink:active { background-color: rgba(var(--accent-primary-rgb), 0.15); transform: translateX(2px); }
-
-/* Active page indicator styles */
-.mobileNavLink.navActive { /* Use navActive class */
-    font-weight: 700; border-left-width: 5px;
+:global(.light) .mobileNavLink:hover,
+:global(.light) .mobileNavLink:focus-visible {
+     background-color: rgba(var(--accent-vibrant-rgb), 0.08);
+     box-shadow: 0 2px 5px rgba(var(--accent-vibrant-rgb), 0.08);
 }
-/* Add active color based on section */
-.mobileNavLink[data-nav-id="services"].navActive { border-left-color: var(--accent-primary); color: var(--accent-primary); background-color: rgba(var(--accent-primary-rgb), 0.08); }
-.mobileNavLink[data-nav-id="projects"].navActive { border-left-color: var(--accent-secondary); color: var(--accent-secondary); background-color: rgba(var(--accent-secondary-rgb), 0.08); }
-.mobileNavLink[data-nav-id="open-source"].navActive { border-left-color: var(--accent-alert); color: var(--accent-alert); background-color: rgba(var(--accent-alert-rgb), 0.08); }
-.mobileNavLink[data-nav-id="blog"].navActive { border-left-color: var(--accent-highlight); color: var(--accent-highlight); background-color: rgba(var(--accent-highlight-rgb), 0.08); }
-/* Apply active color to emoji */
-.mobileNavLink[data-nav-id="services"].navActive::before { color: var(--accent-primary); }
-.mobileNavLink[data-nav-id="projects"].navActive::before { color: var(--accent-secondary); }
-.mobileNavLink[data-nav-id="open-source"].navActive::before { color: var(--accent-alert); }
-.mobileNavLink[data-nav-id="blog"].navActive::before { color: var(--accent-highlight); }
+
+.mobileNavLink:active {
+    background-color: rgba(var(--accent-vibrant-rgb), 0.15);
+    transform: translateX(1px) scale(0.99);
+    box-shadow: inset 0 1px 3px rgba(var(--shadow-color-rgb), 0.1);
+}
+:global(.light) .mobileNavLink:active {
+    background-color: rgba(var(--accent-vibrant-rgb), 0.12);
+    box-shadow: inset 0 1px 3px rgba(var(--shadow-color-rgb), 0.08);
+}
 
 
-.mobileContact { /* Style for mobile contact button */
-    /* Inherits .contactBtnFinal styles via className composition */
-    margin-left: 1.5rem; /* Match padding */
-    margin-right: 1.5rem; /* Add right margin for spacing */
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    font-size: 1.05rem; /* Slightly smaller */
-    padding: 0.8rem 1.5rem;
-    display: block; /* Make it block for margin auto or text-align */
+/* --- Mobile Link Active State --- */
+.mobileNavLink.navActive {
+    font-weight: 700;
+    border-radius: var(--radius-md);
+    /* Use border/background based on section */
+}
+
+.mobileNavLink[data-nav-id="services"].navActive { background-color: rgba(var(--accent-vibrant-rgb), 0.15); color: var(--accent-vibrant); border: 1px solid rgba(var(--accent-vibrant-rgb), 0.3); }
+.mobileNavLink[data-nav-id="projects"].navActive { background-color: rgba(var(--accent-secondary-rgb), 0.15); color: var(--accent-secondary); border: 1px solid rgba(var(--accent-secondary-rgb), 0.3); }
+.mobileNavLink[data-nav-id="open-source"].navActive { background-color: rgba(var(--accent-cool-rgb), 0.15); color: var(--accent-cool); border: 1px solid rgba(var(--accent-cool-rgb), 0.3); }
+.mobileNavLink[data-nav-id="blog"].navActive { background-color: rgba(var(--accent-highlight-rgb), 0.15); color: var(--accent-highlight); border: 1px solid rgba(var(--accent-highlight-rgb), 0.3); }
+
+:global(.light) .mobileNavLink[data-nav-id="services"].navActive { background-color: rgba(var(--accent-vibrant-rgb), 0.1); border-color: rgba(var(--accent-vibrant-rgb), 0.2); }
+:global(.light) .mobileNavLink[data-nav-id="projects"].navActive { background-color: rgba(var(--accent-secondary-rgb), 0.1); border-color: rgba(var(--accent-secondary-rgb), 0.2); }
+:global(.light) .mobileNavLink[data-nav-id="open-source"].navActive { background-color: rgba(var(--accent-cool-rgb), 0.1); border-color: rgba(var(--accent-cool-rgb), 0.2); }
+:global(.light) .mobileNavLink[data-nav-id="blog"].navActive { background-color: rgba(var(--accent-highlight-rgb), 0.1); border-color: rgba(var(--accent-highlight-rgb), 0.2); }
+
+
+/* --- Mobile Contact Button --- */
+.mobileContact {
+    /* Inherits .contactBtnFinal styles */
+    margin: 1.5rem 1.5rem 1rem; /* Adjust margin */
+    display: block; /* Make block to center/fill */
     text-align: center;
-}
-.mobileMenuFooter { /* Footer inside mobile menu */
-    text-align: center; padding: 1.5rem 1rem; font-size: 0.8rem; font-family: var(--font-mono);
-    color: var(--text-muted); background-color: rgba(var(--bg-primary-rgb), 0.7);
-    border-top: 1px solid rgba(var(--accent-primary-rgb), 0.1); letter-spacing: 0.05em;
+    width: calc(100% - 3rem); /* Full width minus margins */
+    font-size: 1rem;
+    padding: 0.9rem 1.5rem;
 }
 
-
-  /* --- Base Tagline Styles --- */
-  
-  .tagline:hover {
-    opacity: 1;
-    color: var(--text-primary);
-  }
-  
-  /* --- ADJUSTED: Blog Tagline Styles --- */
-  .taglineBlog {
-    /* Inherits base .tagline styles */
-    color: var(--text-secondary);
-    text-shadow: 0 0 3px rgba(var(--accent-secondary-rgb), 0.25);
-    animation: taglinePulseBlog 6s ease-in-out infinite alternate; /* Slower pulse */
-    font-size: 0.75rem; /* <<< ADJUSTED: Slightly smaller */
-    opacity: 0.85;
-    /* Add these lines to reposition */
-    position: relative; /* Allows repositioning relative to its normal place */
-    top: 0px;         /* Moves the element 50px upwards */
-    left: 0px;        /* Moves the element 85px to the left */
-    margin-top: -40px;
-    margin-left: 80px;
-    /* Removed absolute positioning */
-    /* Ensure parent container allows for this stacking (e.g., flex-direction: column) */
-  }
-  
-  @keyframes taglinePulseBlog {
-    0% { opacity: 0.7; text-shadow: 0 0 2px rgba(var(--accent-secondary-rgb), 0.2); }
-    100% { opacity: 0.9; text-shadow: 0 0 4px rgba(var(--accent-secondary-rgb), 0.3); }
-  }
-  
-  /* --- Tagline Icons & Animated Elements --- */
-  .taglineScopeIcon {
-    display: inline-block;
-    width: 0.8em; /* Relative to tagline font-size */
-    height: 0.8em;
-    stroke: var(--accent-secondary);
-    stroke-width: 1.5;
-    opacity: 0.8;
-    vertical-align: -0.05em; /* Fine-tune vertical alignment */
-    transition: transform var(--transition-fast), filter var(--transition-fast);
-    flex-shrink: 0; /* Prevent shrinking */
-  }
-  
-  /* Blog tagline hover specifically targets its icon */
-  .taglineBlog:hover .taglineScopeIcon {
-    transform: rotate(-15deg) scale(1.1);
-    animation: scopeGlow 3s ease-in-out infinite alternate;
-    opacity: 1;
-  }
-  
-  @keyframes scopeGlow {
-    0% { filter: drop-shadow(0 0 1px rgba(var(--accent-secondary-rgb), 0.5)); }
-    100% { filter: drop-shadow(0 0 3px rgba(var(--accent-highlight-rgb), 0.7)); }
-  }
-
-/* ======================================== */
-/* Responsive Visibility Control            */
-/* ======================================== */
-/* Handled by Tailwind classes (md:flex, md:hidden) in Nav.tsx */
-/* No extra CSS needed here if using Tailwind approach */
+/* --- Mobile Menu Footer --- */
+.mobileMenuFooter {
+    text-align: center;
+    padding: 1rem 1rem 1.2rem; /* Adjusted padding */
+    margin-top: 1rem; /* Space above footer */
+    font-size: 0.75rem;
+    font-family: var(--font-mono); /* Use mono font */
+    color: var(--text-muted);
+    background-color: rgba(var(--bg-primary-rgb), 0.5); /* Slightly different bg */
+    border-top: 1px solid rgba(var(--accent-cool-rgb), 0.1); /* Cool accent border */
+    letter-spacing: 0.06em;
+}
+:global(.light) .mobileMenuFooter {
+     background-color: rgba(var(--bg-tertiary-rgb), 0.5);
+     border-top-color: rgba(var(--accent-cool-rgb), 0.15);
+}
 
 
 /* ======================================== */
-/* Ornate Hamburger Icon Styling (Blog Mode)*/
+/* Responsive Adjustments (Mid-Size Fix)    */
 /* ======================================== */
-/* Handled by conditional class (.blogModeActive) and */
-/* icon visibility toggling within .mobileMenuBtn styles above */
+
+/* Target screens between mobile and full desktop, e.g., 768px to 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .navLink {
+        padding: 0 0.8rem; /* Reduce padding */
+        font-size: 0.85rem; /* Slightly smaller font */
+        min-height: 44px; /* Reduce height */
+    }
+    .contactBtnFinal {
+        padding: 0.5rem 1rem; /* Reduce padding */
+        font-size: 0.8rem; /* Smaller font */
+        letter-spacing: 0.06em;
+        min-height: 44px; /* Smaller button */
+        box-shadow: 3px 3px 0px 0px color-mix(in srgb, var(--accent-vibrant) 50%, black); /* Adjust shadow */
+    }
+    :global(.light) .contactBtnFinal {
+         box-shadow: 3px 3px 0px 0px color-mix(in srgb, var(--accent-vibrant) 60%, var(--color-ink));
+         min-height: 44px;
+    }
+
+    .contactBtnFinal:hover,
+    .contactBtnFinal:focus-visible {
+         box-shadow: 1px 1px 0px 0px color-mix(in srgb, var(--accent-cool) 50%, black); /* Adjust shadow */
+         transform: translate(1px, 1px);
+    }
+    :global(.light) .contactBtnFinal:hover,
+    :global(.light) .contactBtnFinal:focus-visible {
+         box-shadow: 1px 1px 0px 0px color-mix(in srgb, var(--accent-cool) 60%, var(--color-ink));
+         transform: translate(1px, 1px);
+    }
+
+    .contactBtnFinal:active {
+        transform: translate(3px, 3px); /* Adjust active state */
+    }
+     :global(.light) .contactBtnFinal:active {
+        transform: translate(3px, 3px);
+    }
+
+
+    .contactBtnFinal .hourglassSvg {
+        width: 1em; height: 1em;
+    }
+    .navDesktop {
+        gap: 0.2rem; /* Reduce gap */
+    }
+    .logoText {
+        font-size: 1.1rem; /* Slightly smaller logo text */
+    }
+    .tagline {
+        font-size: 0.65rem; /* Smaller tagline */
+        margin-left: 0.3rem;
+    }
+    /* Optional: Hide tagline if it causes too much crowding */
+    /* .tagline { display: none; } */
+}
+
+/* Slightly larger screens if still needed */
+@media (min-width: 1024px) and (max-width: 1199px) {
+     .navLink {
+        padding: 0 1rem;
+        font-size: 0.88rem;
+        min-height: 46px;
+    }
+    .navDesktop {
+        gap: 0.3rem;
+    }
+     .contactBtnFinal {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+        min-height: 46px;
+    }
+     :global(.light) .contactBtnFinal {
+        min-height: 46px;
+    }
+}
