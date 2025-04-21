@@ -2,117 +2,113 @@
 import React from 'react';
 import Link from 'next/link';
 import ThemeToggle from '../Theme/ThemeToggle';
-// Import ALL necessary icons from the updated Icons.tsx
-import {
-    HourglassIcon,
-    ServicesIcon,
-    ProjectsIcon,
-    OpenSourceIcon,
-    BlogIcon
-} from './Icons'; // Adjust path if needed
+import { HourglassIcon } from './Icons'; // Assuming Icons.tsx is in the same dir or adjust path
 import styles from './Nav.module.css';
 
 interface NavLinksMobileProps {
+    id: string; // Add id prop to match aria-controls
     isMenuOpen: boolean;
     isActivePath: (path: string) => boolean;
-    toggleMenu: () => void;
-    handleContactClick: () => void;
+    toggleMenu: () => void; // Use toggleMenu to close on link click
+    handleContactClick: () => void; // Keep if needed
     isBlog: boolean;
-    children?: React.ReactNode;
+    children?: React.ReactNode; // Keep children if you pass anything else
 }
 
 const NavLinksMobile: React.FC<NavLinksMobileProps> = ({
+    id, // Receive id
     isMenuOpen,
     isActivePath,
-    toggleMenu,
-    handleContactClick,
+    toggleMenu, // Receive toggleMenu
+    handleContactClick, // Receive handleContactClick
     isBlog,
     children,
 }) => {
+    // Function to close menu when a link is clicked
     const closeAndNavigate = () => {
-        toggleMenu();
+        toggleMenu(); // Call the toggle function to close the menu
+        // Navigation is handled by the Link/a component itself
     };
 
     const currentYear = new Date().getFullYear();
 
     return (
         <div
-            id="mobile-menu-content"
-            className={`${styles.mobileMenuWrapper} md:hidden ${
+            id={id} // Use the id prop here
+            className={`${styles.mobileMenuWrapper} lg:hidden ${ // Changed breakpoint to lg
                 isMenuOpen ? styles.mobileMenuOpen : ''
             }`}
             // Apply inert attribute when closed for accessibility
-            {...(isMenuOpen ? {} : { inert: "true", "aria-hidden": "true" })}
+            {...(isMenuOpen ? {} : { inert: "", "aria-hidden": "true" })}
         >
+            {/* Inner container for padding and scrolling */}
             <div className={styles.mobileMenuContent}>
-                <div className="flex flex-col px-4 pt-4 pb-2"> {/* Link/Button Container */}
-                    {/* Render links with SVG icons */}
+                {/* Link/Button Container */}
+                 <div className="flex flex-col py-2">
+                    {/* --- Standard Links (Not on Blog Pages) --- */}
                     {!isBlog && (
                         <>
-                            <a href="/#services" className={`${styles.mobileNavLink} group ${isActivePath('/#services') ? styles.navActive : ''}`} data-nav-id="services" onClick={closeAndNavigate}>
-                                {/* Use Icon Component - Add class for styling */}
-                                {/* <ServicesIcon className={styles.mobileNavIcon} /> */}
+                            <a href="/#services"
+                               className={`${styles.mobileNavLink} ${isActivePath('/#services') ? styles.navActive : ''}`}
+                               data-nav-id="services"
+                               onClick={closeAndNavigate}>
                                 <span>Services</span>
                             </a>
                             <Link href="/projects" legacyBehavior>
-                                <a className={`${styles.mobileNavLink} group ${isActivePath('/projects') ? styles.navActive : ''}`} data-nav-id="projects" onClick={closeAndNavigate}>
-                                    {/* <ProjectsIcon className={styles.mobileNavIcon} /> */}
+                                <a className={`${styles.mobileNavLink} ${isActivePath('/projects') ? styles.navActive : ''}`}
+                                   data-nav-id="projects"
+                                   onClick={closeAndNavigate}>
                                     <span>Projects</span>
                                 </a>
                             </Link>
                             <Link href="/open-source" legacyBehavior>
-                                <a className={`${styles.mobileNavLink} group ${isActivePath('/open-source') ? styles.navActive : ''}`} data-nav-id="open-source" onClick={closeAndNavigate}>
-                                    {/* <OpenSourceIcon className={styles.mobileNavIcon} /> */}
+                                <a className={`${styles.mobileNavLink} ${isActivePath('/open-source') ? styles.navActive : ''}`}
+                                   data-nav-id="open-source"
+                                   onClick={closeAndNavigate}>
                                     <span>Open Source</span>
                                 </a>
                             </Link>
                         </>
                     )}
 
-                    {/* AboutLink */}
-                    <Link href="/blog/tutorials/contribute" legacyBehavior>
-                        <a className={`${styles.navLink} ${styles.navLinkBlog} ${isActivePath('/blog') ? styles.navActive : ''}`} data-nav-id="blog" onClick={closeAndNavigate}>
-                            <span className={styles.linkText} data-text="about">about</span>
-                        </a>
-                    </Link>
+                    {/* --- ABOUT LINK REMOVED as requested --- */}
 
+                    {/* --- Blog Link (Always Shown) --- */}
                     <Link href="/blog" legacyBehavior>
-                        <a className={`${styles.mobileNavLink} group ${isActivePath('/blog') ? styles.navActive : ''}`} data-nav-id="blog" onClick={closeAndNavigate}>
-                             {/* <BlogIcon className={styles.mobileNavIcon} /> */}
+                        <a className={`${styles.mobileNavLink} ${isActivePath('/blog') ? styles.navActive : ''}`}
+                           data-nav-id="blog"
+                           onClick={closeAndNavigate}>
                              <span>Blog</span>
                         </a>
                     </Link>
 
-                    {/* Render Children (e.g., PocketWatch) Here */}
-                    {children && <div className="mt-4">{children}</div>}
+                    {/* Render Children Here if needed */}
+                    {children && <div className="mt-4 px-4">{children}</div>}
 
                     {/* Theme Toggle */}
-                    <div className="mt-6 px-2">
-                        <ThemeToggle size="md" />
+                    <div className="mt-4 mb-2 px-4"> {/* Added padding */}
+                        <ThemeToggle size="md" /> {/* Or 'lg' if you prefer */}
                     </div>
 
-                    {/* Contact Button - Changed to Link */}
+                    {/* Contact Button - Using Link */}
                     <Link href="/contact" legacyBehavior>
                         <a
-                            onClick={(e) => {
-                                // Allow link navigation but also close menu
-                                toggleMenu();
-                            }}
-                            // Apply mobile contact styles + base button styles
-                            className={`${styles.contactBtnFinal} ${styles.mobileContact} self-start mt-6 mb-4 group`}
+                            onClick={closeAndNavigate} // Close menu on click
+                            className={`${styles.contactBtnFinal} ${styles.mobileContact}`}
                             data-nav-id="contact"
                         >
-                            <span className={`${styles.contactText} inline-flex items-center gap-1.5`}>
+                            <span className={styles.contactText}>
                                 Reach Us
-                                <HourglassIcon className={`${styles.hourglassSvg} inline-block w-[1em] h-[1em] opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100`} />
+                                <HourglassIcon className={`${styles.hourglassSvg} inline-block w-[1em] h-[1em]`} />
                             </span>
                         </a>
                     </Link>
 
                 </div> {/* End Link/Button Container */}
 
+                {/* Footer */}
                 <div className={styles.mobileMenuFooter}>
-                    [Manic Agency] // metaverses intersect here // &copy; {currentYear}
+                    Manic Agency &copy; {currentYear} // metaverses intersect here
                 </div>
             </div>
         </div>
