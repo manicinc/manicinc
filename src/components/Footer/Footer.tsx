@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter, FaDiscord } from "react-icons/fa";
 import Link from "next/link";
 import OrnamentalThemeToggle from "../Theme/OrnamentalThemeToggle";
+import ThemeToggle from "../Theme/ThemeToggle";
 
 // --- Import the child components ---
 import FooterBranding from "./FooterBranding";
@@ -60,7 +61,9 @@ const Footer = () => {
                              <h3 className={`footer-heading mb-2 ${isBlog ? 'blog-footer-heading' : ''}`}>
                                  {isBlog ? 'Reality Mode' : 'Display Mode'}
                              </h3>
+                             {isBlog ? 
                              <OrnamentalThemeToggle size="sm" />
+                             : <ThemeToggle size="sm"/>}
                         </div>
                     </div>
                 </div> {/* End Grid */}
