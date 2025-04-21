@@ -28,7 +28,7 @@
   --font-display: "Lato", sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
-  --font-logo: "Mona Sans", sans-serif;
+  --font-logo: "Mona Sans", sans-serif; /* Added explicit logo font */
 
   /* --- Original Blog Fonts (Keep if used elsewhere, otherwise optional) --- */
   --font-heading-blog-orig: "Playfair Display", serif;
@@ -72,6 +72,8 @@
   --color-text-light: var(--color-parchment); /* Using the brighter parchment */
   --color-text-mid: #d8cce6;       /* Lighter secondary text */
   --color-text-dark: var(--color-ink);
+  --color-text-primary-rgb: 245, 240, 230; /* Added RGB for text-primary */
+  --color-text-secondary-rgb: 216, 204, 230; /* Added RGB for text-secondary */
 
   /* --- Dark Mode Mapping (Updated) --- */
   --bg-primary: var(--color-dark-bg);
@@ -85,7 +87,9 @@
   --bg-blog-paper-rgb: 48, 36, 53;  /* Updated RGB */
 
   --text-primary: var(--color-text-light);
+  --text-primary-rgb: var(--color-text-primary-rgb);
   --text-secondary: var(--color-text-mid);
+  --text-secondary-rgb: var(--color-text-secondary-rgb);
   --text-muted: #a899b8;            /* Lighter muted text */
   --text-heading: #ffffff;          /* Keep white headings */
   --text-code: var(--color-text-mid); /* Use lighter secondary text */
@@ -110,6 +114,7 @@
 
   /* --- Functional Variables --- */
   --shadow-color: rgba(12, 10, 12, 0.4); /* Adjusted shadow base color */
+  --shadow-color-rgb: 12, 10, 12; /* Added shadow RGB */
   --shadow-color-light: rgba(12, 10, 12, 0.2); /* Adjusted light shadow base */
   --shadow-soft: 0 5px 18px var(--shadow-color-light);
   --shadow-medium: 0 8px 25px var(--shadow-color);
@@ -121,10 +126,11 @@
   --blog-content-max-width: 900px; /* Increased */
   --global-font-size-base: 17px;
   --blog-font-size-base: 18px;
+  --radius-sharp: 0px;
   --radius-base: 4px;
+  --radius-md: 6px; /* Added medium radius */
   --radius-lg: 8px;
   --radius-xl: 12px;
-  --radius-sharp: 0px;
   --radius-pill: 9999px;
   --transition-fast: 0.2s ease-out;
   --transition-medium: 0.35s ease-out;
@@ -143,19 +149,28 @@
   --nav-shadow-dark: rgba(26, 17, 27, 0.7);
 
   /* --- Misc --- */
-  --accent-vibrant: #ff69b4;
-  --accent-cool: #00ffff;
-  --accent-vibrant-light: #ffb6d1;
-  --accent-cool-light: #a7f3ff;
-  --accent-vibrant-dark: #e04f9a;
-  --accent-cool-dark: #00ced1;
-  --shadow-glow-hover: 0 0 10px rgba(var(--accent-vibrant-light-rgb), 0.4);
-  --slice-1: inset(10% 10% 10% 0);
-  --slice-2: inset(50% 0 10% 50%);
-  --slice-3: inset(10% 0 90% 0);
-  --slice-4: inset(20% 0 20% 0);
-  --accent-vibrant-light-rgb: 255, 182, 209;
-  --accent-cool-light-rgb: 167, 243, 255;
+  /* --- Vibrant Accents (Ensure these or similar exist) --- */
+  --accent-vibrant: #ff2e88; /* Ultraviolent Pink/Magenta */
+  --accent-vibrant-rgb: 255, 46, 136;
+  --accent-cool: #00f6ff;    /* Bright Cyan */
+  --accent-cool-rgb: 0, 246, 255;
+  --accent-vibrant-dark: #d9006c;
+  --accent-cool-dark: #00c4cc;
+  --accent-vibrant-light: #ff7cc4;
+  --accent-cool-light: #99feff;
+
+  /* --- Additional shadows for effects --- */
+  --shadow-glow-vibrant: 0 0 12px 2px rgba(var(--accent-vibrant-rgb), 0.6);
+  --shadow-glow-cool: 0 0 12px 2px rgba(var(--accent-cool-rgb), 0.5);
+  --text-shadow-vibrant: 0 0 5px rgba(var(--accent-vibrant-rgb), 0.7), 0 0 10px rgba(var(--accent-vibrant-rgb), 0.5);
+  --text-shadow-cool: 0 0 5px rgba(var(--accent-cool-rgb), 0.7), 0 0 10px rgba(var(--accent-cool-rgb), 0.5);
+  --text-shadow-header: 1px 1px 0px rgba(var(--shadow-color-rgb), 0.3), 2px 2px 3px rgba(var(--shadow-color-rgb), 0.2);
+
+  /* --- Neomorphism Shadows (Dark) --- */
+  --shadow-neo-light: 3px 3px 6px rgba(var(--shadow-color-rgb), 0.1), -3px -3px 6px rgba(var(--bg-tertiary-rgb), 0.05); /* Adjusted intensity */
+  --shadow-neo-dark: 3px 3px 6px rgba(0, 0, 0, 0.4), -3px -3px 6px rgba(var(--bg-tertiary-rgb), 0.1); /* Darker shadow */
+  --shadow-neo-inset-light: inset 2px 2px 4px rgba(var(--shadow-color-rgb), 0.1), inset -2px -2px 4px rgba(var(--bg-tertiary-rgb), 0.05); /* Adjusted intensity */
+  --shadow-neo-inset-dark: inset 2px 2px 4px rgba(0, 0, 0, 0.5), inset -2px -2px 4px rgba(var(--bg-tertiary-rgb), 0.1); /* Darker inset */
 
   color-scheme: dark;
 }
@@ -163,13 +178,7 @@
 
 /* === Light Mode Theme (Adjusted) === */
 .light {
-  /* --- Blog Fonts are now defined in :root, no need to redefine here --- */
-  /* Remove if defined in :root and apply to both modes:
-  --font-meta-blog: "EB Garamond", serif;
-  --font-heading-blog: "Playfair Display", serif;
-  --font-body-blog: "Merriweather", serif;
-  --font-script-blog: "Dancing Script", cursive;
-  */
+  /* --- Blog Fonts are defined in :root --- */
 
   /* --- Intro Neon & Font Variables (Light Theme) --- */
   --font-decorative: 'Cinzel Decorative', 'Playfair Display', serif;
@@ -211,7 +220,9 @@
 
   /* --- Text Colors (Light Mode - Adjusted) --- */
   --text-primary: var(--color-light-ink); /* Keep dark ink for main text */
+  --text-primary-rgb: var(--color-ink-rgb); /* Map primary RGB */
   --text-secondary: #8a7d70;        /* Slightly lighter sepia */
+  --text-secondary-rgb: 138, 125, 112; /* Added RGB for text-secondary */
   --text-muted: #c0b2a3;            /* Lighter muted */
   --text-heading: var(--color-light-ink); /* Keep dark ink for headings */
   --text-code: #635548;
@@ -237,6 +248,7 @@
 
   /* Shadows (Adjusted for light theme) */
   --shadow-color: rgba(var(--color-ink-rgb), 0.18); /* Use ink RGB */
+  --shadow-color-rgb: var(--color-ink-rgb); /* Use ink RGB */
   --shadow-color-light: rgba(var(--color-ink-rgb), 0.10); /* Use ink RGB */
   --shadow-soft: 0 5px 18px var(--shadow-color);
   --shadow-medium: 0 8px 25px var(--shadow-color);
@@ -252,6 +264,29 @@
   --nav-border-light-mid2: rgba(182, 104, 128, 0.75); /* Adjusted burgundy */
   --nav-border-light-end: rgba(126, 161, 150, 0.25);   /* Adjusted sage */
   --nav-shadow-light: rgba(var(--color-ink-rgb), 0.30); /* Use ink RGB */
+
+  /* --- Vibrant Accents (Light Theme) --- */
+  --accent-vibrant: #e5237b; /* Slightly adjusted vibrant pink for light */
+  --accent-vibrant-rgb: 229, 35, 123;
+  --accent-cool: #00b8d4;    /* Slightly adjusted cyan for light */
+  --accent-cool-rgb: 0, 184, 212;
+  --accent-vibrant-dark: #b71561;
+  --accent-cool-dark: #008a9e;
+  --accent-vibrant-light: #ff69b4; /* HotPink */
+  --accent-cool-light: #61dafb; /* Lighter cyan */
+
+  /* --- Additional shadows (Light) --- */
+  --shadow-glow-vibrant: 0 0 12px 2px rgba(var(--accent-vibrant-rgb), 0.5);
+  --shadow-glow-cool: 0 0 12px 2px rgba(var(--accent-cool-rgb), 0.4);
+  --text-shadow-vibrant: 0 0 5px rgba(var(--accent-vibrant-rgb), 0.6), 0 0 10px rgba(var(--accent-vibrant-rgb), 0.4);
+  --text-shadow-cool: 0 0 5px rgba(var(--accent-cool-rgb), 0.6), 0 0 10px rgba(var(--accent-cool-rgb), 0.4);
+  --text-shadow-header: 1px 1px 0px rgba(var(--shadow-color-rgb), 0.3), 2px 2px 3px rgba(var(--shadow-color-rgb), 0.2);
+
+  /* --- Neomorphism Shadows (Light) --- */
+  --shadow-neo-light: 3px 3px 6px rgba(var(--shadow-color-rgb), 0.1), -3px -3px 6px rgba(255, 255, 255, 0.7); /* Light mode outer shadow */
+  --shadow-neo-dark: 3px 3px 6px rgba(var(--shadow-color-rgb), 0.15), -3px -3px 6px rgba(255, 255, 255, 0.7); /* Darker outer shadow for contrast */
+  --shadow-neo-inset-light: inset 2px 2px 4px rgba(var(--shadow-color-rgb), 0.1), inset -2px -2px 4px rgba(255, 255, 255, 0.7); /* Light mode inset */
+  --shadow-neo-inset-dark: inset 2px 2px 4px rgba(var(--shadow-color-rgb), 0.15), inset -2px -2px 4px rgba(255, 255, 255, 0.7); /* Darker inset for contrast */
 
   color-scheme: light;
 }
@@ -284,6 +319,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.3;
   margin: 1.8em 0 0.8em;
+  /* Optional Text Shadow */
+  /* text-shadow: var(--text-shadow-header); */
 }
 h1 { font-size: clamp(2.3rem, 5.5vw, 3.4rem); letter-spacing: -0.02em; }
 h2 { font-size: clamp(1.9rem, 4.5vw, 2.8rem); }
@@ -381,13 +418,15 @@ hr {
    ========================================================================== */
 ::selection {
   background-color: rgba(var(--accent-highlight-rgb), 0.8);
-  color: var(--bg-primary);
+  color: var(--bg-primary); /* Text color on selection */
 }
+
 /* Basic Scrollbar Styling */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: var(--bg-secondary); }
 ::-webkit-scrollbar-thumb { background: var(--bg-tertiary); border-radius: 5px; border: 2px solid var(--bg-secondary); }
 ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
 /* Smooth Theme Transitions */
 html.theme-transitioning *,
 html.theme-transitioning *::before,
@@ -395,6 +434,7 @@ html.theme-transitioning *::after {
   transition: var(--transition-theme) !important;
   transition-delay: 0ms !important;
 }
+
 /* Allow post content font size to transition smoothly (e.g., for reading mode) */
 .post-content {
   transition: font-size 0.2s ease-out;

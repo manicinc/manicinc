@@ -64,7 +64,7 @@ const NavLinksDesktop: React.FC<NavLinksDesktopProps> = ({ isBlog, isActivePath,
              {isBlog && ( // <<< --- ADDED THIS CONDITION
                  <Link href="/blog/tutorials/contribute" legacyBehavior>
                      <a className={`${styles.navLink} ${styles.navLinkBlog} ${isActivePath('/blog/tutorials/contribute') ? styles.navActive : ''}`} data-nav-id="about" onClick={closeMenu}>
-                         <span className={styles.linkText} data-text="about">about</span>
+                         <span className={styles.linkText} data-text="about">About</span>
                          {/* Add hover animation if desired */}
                      </a>
                  </Link>
