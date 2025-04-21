@@ -149,6 +149,8 @@
 .taglineBlog {
     color: var(--accent-secondary);
      text-shadow: 0 0 4px rgba(var(--accent-secondary-rgb), 0.3);
+     margin-top: -40px;
+     margin-left: 80px;
      /* Removed specific positioning - handled by flex layout */
 }
 
