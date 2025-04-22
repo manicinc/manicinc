@@ -53,7 +53,7 @@
    @import "./projectMarkdown.css";
    @import "./readingMode.css"; /* If needed */
    @import "./comments.css";
-   
+   @import './textures.css';
    /* ==========================================================================
       5. Optional Global Settings
       ========================================================================== */
