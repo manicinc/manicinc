@@ -12,7 +12,8 @@
     min-height: 60px; /* Adjusted min-height */
     transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, min-height 0.4s ease;
     /* Subtle Gradient + Noise Texture */
-    background: linear-gradient(170deg, var(--bg-nav-dark-start, rgba(var(--bg-primary-rgb), 0.92)) 0%, var(--bg-nav-dark-end, rgba(var(--bg-secondary-rgb), 0.95)) 100%), url('/noise.png');
+     background-color: var(--bg-nav-dark-end, rgba(var(--bg-secondary-rgb), 0.95));
+    background-image: linear-gradient(170deg, var(--bg-nav-dark-start, rgba(var(--bg-primary-rgb), 0.92)) 0%, var(--bg-nav-dark-end, rgba(var(--bg-secondary-rgb), 0.95)) 100%);
     background-blend-mode: overlay; /* Blend noise */
     background-size: auto, 150px 150px; /* Control noise tile size */
     backdrop-filter: blur(18px) saturate(120%);
@@ -187,27 +188,28 @@
     gap: 0.4rem; /* Slightly reduced gap */
 }
 
+/* src/components/Nav/Nav.module.css */
+
+/* Find this rule */
 .navLink {
-    position: relative; /* Needed for absolute positioned SVG */
+    position: relative; /* Needed for absolute positioned SVG & ::after */
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 48px; /* Adjusted height */
-    padding: 0 1.1rem; /* Adjusted padding */
+    min-height: 48px;
+    padding: 0 1.1rem;
     font-family: var(--font-display);
-    font-size: 0.9rem; /* Slightly smaller */
+    font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.05em;
     color: var(--text-secondary);
     text-decoration: none !important;
-    border: none !important; /* Clean border */
-    border-bottom: none !important; /* Ensure no underline */
-    border-radius: var(--radius-base); /* Softer radius */
-    overflow: hidden; /* Hide overflowing parts of SVG if needed */
+    border: none !important;
+    border-bottom: none !important;
+    border-radius: var(--radius-base);
+    /* overflow: hidden; */ /* <-- DELETE OR COMMENT OUT THIS LINE */
     cursor: pointer;
     background-color: transparent;
-    /* Removed simple background hover (:before) */
-    /* box-shadow: inset 0 1px 1px rgba(var(--text-primary-rgb), 0.02); */ /* Optional: Subtle inset shadow */
     transition: color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
     will-change: color, transform, box-shadow;
     z-index: 1;
@@ -885,4 +887,160 @@
      :global(.light) .contactBtnFinal {
         min-height: 46px;
     }
+}
+
+/* src/components/Nav/Nav.module.css */
+
+/* Add these new rules */
+
+/* ====================================================== */
+/* Conditional Hover Effects (Looking Glass / Mirror)     */
+/* ====================================================== */
+
+/* --- 1. Blog Link Hover (When NOT on Blog Page) --- */
+
+/* Target: Blog nav link hover, when body does NOT have .is-blog class */
+/* We'll use a pseudo-element for the "reflection" */
+
+/* --- 1. Blog Link Hover (When NOT on Blog Page) --- */
+
+/* Target: Blog nav link hover, when body does NOT have .is-blog class */
+:global(body:not(.is-blog)) .navLink[data-nav-id="blog"] {
+    position: relative; /* Ensure positioning context */
+    /* overflow: visible !important; */ /* Explicitly allow overflow if needed, but removing from base .navLink is better */
+}
+
+:global(body:not(.is-blog)) .navLink[data-nav-id="blog"]::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 100%; /* Start below the link */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    color: var(--accent-highlight);
+    text-shadow: 0 0 8px rgba(var(--accent-highlight-rgb), 0.6);
+    /* Optional subtle background */
+    /* background: linear-gradient(to bottom, rgba(var(--bg-secondary-rgb), 0.1) 0%, rgba(var(--bg-secondary-rgb), 0.5) 100%); */
+    opacity: 0; /* Start fully transparent */
+    transform: scaleY(-1) translateY(10%); /* Start slightly lower & flipped */
+    transform-origin: center top;
+    filter: blur(2px); /* Start more blurred */
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+                opacity 0.3s ease, /* Fade in */
+                filter 0.4s cubic-bezier(0.23, 1, 0.32, 1); /* Unblur */
+    pointer-events: none;
+    z-index: 1; /* Below main text */
+}
+
+:global(body:not(.is-blog)) .navLink[data-nav-id="blog"]:hover .linkText {
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), color 0.2s ease;
+    transform: translateY(-20%); /* Move original text up more */
+    color: var(--accent-highlight);
+}
+
+:global(body:not(.is-blog)) .navLink[data-nav-id="blog"]:hover::after {
+    opacity: 1; /* Fade in */
+    transform: scaleY(-1) translateY(-100%); /* Slide up into view */
+    filter: blur(0); /* Remove blur */
+}
+
+/* --- 2. Logo Hover (When ON Blog Page) - (Keep this section as is from before) --- */
+.logoLink {
+    perspective: 800px;
+}
+.logoText,
+.ManicAgencyLogoComponentInternalTextClass {
+     display: inline-block;
+     transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+     transform-style: preserve-3d;
+     will-change: transform;
+     position: relative;
+     z-index: 1;
+}
+/* Optional Backface styles here if you added them */
+/* :global(body.is-blog) .logoLink:hover .logoText, etc... */
+:global(body.is-blog) .logoLink:hover .logoText,
+:global(body.is-blog) .logoLink:hover .ManicAgencyLogoComponentInternalTextClass {
+    transform: rotateY(180deg);
+}
+
+/* Adjustments for light mode */
+:global(.light body:not(.is-blog)) .navLink[data-nav-id="blog"]::after {
+    /* Optional light mode background adjustment if needed */
+    /* background: linear-gradient(to bottom, rgba(var(--bg-secondary-rgb), 0.1) 0%, rgba(var(--bg-secondary-rgb), 0.5) 100%); */
+    color: var(--accent-highlight);
+    text-shadow: 0 0 8px rgba(var(--accent-highlight-rgb), 0.5);
+}
+/* Light mode for logo hover if needed */
+/* :global(.light body.is-blog) .logoText::after, etc... */
+
+/* --- 2. Logo Hover (When ON Blog Page) --- */
+
+/* Target: Logo link hover, when body HAS .is-blog class */
+/* We'll add a 3D flip effect to the logo text container */
+.logoLink {
+    /* Ensure perspective is set for 3D transforms */
+    perspective: 800px;
+}
+
+/* The inner text element needs transform-style */
+.logoText,
+.ManicAgencyLogoComponentInternalTextClass {
+     display: inline-block; /* Needed for transform */
+     transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1); /* Add transition */
+     transform-style: preserve-3d; /* Crucial for 3D */
+     will-change: transform;
+     position: relative; /* For pseudo-element if needed */
+     z-index: 1;
+}
+
+/* Optional: Add a "backface" element */
+/* .logoText::after,
+.ManicAgencyLogoComponentInternalTextClass::after {
+    content: "HOME"; // Or an icon like ←
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.8em; // Smaller text
+    font-family: var(--font-mono);
+    color: var(--accent-cool); // Different color
+    background: var(--bg-secondary); // Solid background
+    transform: rotateY(180deg); // Pre-rotated
+    backface-visibility: hidden; // Hide when facing away
+    z-index: 0;
+    border-radius: inherit; // Match parent rounding if any
+} */
+
+/* Apply the flip on hover when .is-blog is present */
+:global(body.is-blog) .logoLink:hover .logoText,
+:global(body.is-blog) .logoLink:hover .ManicAgencyLogoComponentInternalTextClass {
+    transform: rotateY(180deg); /* Flip the text */
+     /* If using ::after for backface: */
+     /* Add slight delay so backface shows after flip starts */
+     /* transition-delay: 0.1s; */
+}
+
+/* Hide the original text's front face during flip */
+/* :global(body.is-blog) .logoLink:hover .logoText {
+     backface-visibility: hidden;
+} */
+
+/* Adjustments for light mode if needed */
+:global(.light body:not(.is-blog)) .navLink[data-nav-id="blog"]::after {
+    background: linear-gradient(to bottom, rgba(var(--bg-secondary-rgb), 0.1) 0%, rgba(var(--bg-secondary-rgb), 0.5) 100%);
+    color: var(--accent-highlight); /* Ensure color matches */
+    text-shadow: 0 0 8px rgba(var(--accent-highlight-rgb), 0.5);
+}
+
+:global(.light body.is-blog) .logoText::after,
+:global(.light body.is-blog) .ManicAgencyLogoComponentInternalTextClass::after {
+    /* Adjust backface style for light mode if using it */
+     /* color: var(--accent-cool); */
+     /* background: var(--bg-secondary); */
 }

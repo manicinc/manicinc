@@ -1,6 +1,27 @@
 /* src/styles/theme.css */
 /* Updated with brighter colors, improved contrast, and structural fixes */
 
+/* === CRITICAL FLASH PREVENTION === */
+/* Add this to the top to prevent theme flash */
+html.dark {
+  background-color: #22182b; /* Your dark background color */
+}
+
+html.light {
+  background-color: #fbf6ef; /* Your light background color */
+}
+
+/* Prevent content flash */
+html:not([data-theme-loaded="true"]) body {
+  opacity: 0;
+}
+
+/* Prevent theme transition during initial load */
+html:not([data-theme-loaded="true"]) * {
+  transition: none !important;
+}
+/* === END CRITICAL FLASH PREVENTION === */
+
 /* Add Font Imports if needed - Placed near top */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
@@ -438,6 +459,11 @@ html.theme-transitioning *::after {
 /* Allow post content font size to transition smoothly (e.g., for reading mode) */
 .post-content {
   transition: font-size 0.2s ease-out;
+}
+
+/* Ensure hero content is centered */
+.hero-content {
+  text-align: center !important;
 }
 
 /* Global @property for animations if needed */
