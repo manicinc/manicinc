@@ -10,7 +10,7 @@ interface ThemeToggleProps {
 
 export default function ThemeToggle({ className = '', size = 'md' }: ThemeToggleProps) {
   // Use the theme context for a reliable source of the current theme state
-  const { isDarkMode } = useTheme();
+  const { isDarkMode, toggleTheme: contextToggleTheme } = useTheme();
   const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
   const [mounted, setMounted] = useState<boolean>(false);
 
@@ -28,42 +28,19 @@ export default function ThemeToggle({ className = '', size = 'md' }: ThemeToggle
     setMounted(true);
   }, []);
 
-  // Toggle theme using the global function from LayoutClient
-  const toggleTheme = () => {
-    if (isTransitioning) return;
+  // Toggle theme using the provided context function
+  const handleToggleTheme = () => {
+    if (isTransitioning || !mounted) return;
 
     setIsTransitioning(true);
+    
+    // Use the context's toggle function for consistency
+    contextToggleTheme();
 
-    // Use the global function if available, otherwise fallback
-    if (typeof window.toggleTheme === 'function') {
-      window.toggleTheme();
-
-      // Wait for transition to complete
-      setTimeout(() => {
-        setIsTransitioning(false);
-      }, 600); // Allow time for animations
-    } else {
-      // Fallback if global function is not available
-      const htmlElement = document.documentElement;
-      const currentTheme = htmlElement.classList.contains('dark') ? 'dark' : 'light';
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-      // Add transition class
-      htmlElement.classList.add('theme-transitioning');
-
-      // Toggle theme
-      htmlElement.classList.remove(currentTheme);
-      htmlElement.classList.add(newTheme);
-
-      // Store preference
-      localStorage.setItem('theme', newTheme);
-
-      // Remove transition class after animation
-      setTimeout(() => {
-        htmlElement.classList.remove('theme-transitioning');
-        setIsTransitioning(false);
-      }, 600);
-    }
+    // Reset transition state after animation completes
+    setTimeout(() => {
+      setIsTransitioning(false);
+    }, 600); // Allow time for animations
   };
 
   // If not mounted yet (SSR), render a placeholder of the same size
@@ -79,7 +56,7 @@ export default function ThemeToggle({ className = '', size = 'md' }: ThemeToggle
   return (
     <div className={`relative ${className}`}>
       <button
-        onClick={toggleTheme}
+        onClick={handleToggleTheme}
         className={`flex items-center justify-center ${buttonSize} rounded-md
                     bg-bg-tertiary border border-border-primary
                     focus:outline-none transition-all duration-300
@@ -87,6 +64,7 @@ export default function ThemeToggle({ className = '', size = 'md' }: ThemeToggle
                     hover:shadow-md hover:border-accent-primary`}
         aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
         disabled={isTransitioning}
+        type="button"
       >
         {!isTransitioning ? (
           isDarkMode ? (

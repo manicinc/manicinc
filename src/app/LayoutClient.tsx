@@ -2,7 +2,8 @@
 'use client';
 
 import { usePathname } from "next/navigation";
-import { useState, useEffect, useCallback } from "react"; // Added useCallback
+import { useState, useEffect, useCallback } from "react";
+import { useTheme } from '@/context/ThemeContext';
 
 // Type definition for window augmentation
 declare global {
@@ -13,6 +14,8 @@ declare global {
 
 export default function LayoutClient() {
   const pathname = usePathname();
+  const { setTheme } = useTheme(); // Use the theme context
+  
   // State to track if we are on a single blog post page (e.g., /blog/category/slug)
   const [isBlogArticlePage, setIsBlogArticlePage] = useState(false);
   // State to track if we are anywhere within the blog section (e.g., /blog/*)
@@ -20,9 +23,9 @@ export default function LayoutClient() {
 
   // Determine page type based on pathname
   useEffect(() => {
-    const isBlog = pathname.startsWith('/blog');
+    const isBlog = pathname?.startsWith('/blog') || false;
     // Matches /blog/some-category/some-slug format
-    const isArticle = /^\/blog\/.+\/.+$/.test(pathname);
+    const isArticle = /^\/blog\/.+\/.+$/.test(pathname || '');
 
     setIsBlogSection(isBlog);
     setIsBlogArticlePage(isArticle);
@@ -31,15 +34,18 @@ export default function LayoutClient() {
 
   // Add/Remove body classes based on path and type
   useEffect(() => {
+    if (typeof document === 'undefined') return; // SSR check
+    
     const body = document.body;
 
     // --- Path Class ---
     // Remove any existing path-* classes first
-    const pathClasses = body.className.split(' ').filter(cls => cls.startsWith('path-'));
-    body.classList.remove(...pathClasses);
+    const pathClasses = Array.from(body.classList).filter(cls => cls.startsWith('path-'));
+    pathClasses.forEach(cls => body.classList.remove(cls));
+    
     // Add new path class (handles '/' -> 'home')
-    const pathSlug = pathname === '/' ? 'home' : pathname.substring(1).replace(/\//g, '-');
-    body.classList.add(`path-${pathSlug || 'unknown'}`); // Add fallback
+    const pathSlug = pathname === '/' ? 'home' : pathname?.substring(1).replace(/\//g, '-') || 'unknown';
+    body.classList.add(`path-${pathSlug}`);
 
     // --- Blog Section Class ---
     if (isBlogSection) {
@@ -55,114 +61,111 @@ export default function LayoutClient() {
       body.classList.remove('is-blog-article');
     }
 
-    // Cleanup function on component unmount or path change
-    return () => {
-      // Use the slug captured when effect ran for removal
-      body.classList.remove(`path-${pathSlug || 'unknown'}`);
-      // Clean up other classes just in case of race conditions
-      body.classList.remove('is-blog');
-      body.classList.remove('is-blog-article');
-    };
-  }, [pathname, isBlogSection, isBlogArticlePage]); // Dependencies
-
-
-  // --- Page Transition Class (Basic version) ---
-  useEffect(() => {
-    const handleStart = () => document.documentElement.classList.add('page-transitioning');
-    const handleEnd = () => document.documentElement.classList.remove('page-transitioning');
-
-    // Handle browser navigation/refresh start
-    window.addEventListener('beforeunload', handleStart);
-    // Handle initial load complete (optional, removes class after first load)
-    // Note: This doesn't handle SPA transitions well
-    window.addEventListener('load', handleEnd);
-
-    // Basic attempt to hook into Next.js navigation events (may need adjustment based on Next version/setup)
-    // This part is less reliable without importing router events directly
-    const handleRouteChangeStart = () => handleStart();
-    const handleRouteChangeComplete = () => handleEnd();
-
-    // Try attaching to history changes as a proxy for SPA nav (imperfect)
-    // window.addEventListener('popstate', handleRouteChangeComplete);
-    // Emitting custom events from Link components might be more robust
-
-    // Cleanup listeners
-    return () => {
-      window.removeEventListener('beforeunload', handleStart);
-      window.removeEventListener('load', handleEnd);
-      // window.removeEventListener('popstate', handleRouteChangeComplete);
-      handleEnd(); // Ensure class is removed on unmount
-    };
-  }, []);
+    // No cleanup needed - future effects will handle removing classes
+  }, [pathname, isBlogSection, isBlogArticlePage]);
 
   // --- Theme Management ---
+  // SIMPLIFIED theme transition function
   const applyThemeTransition = useCallback((newTheme: string, currentTheme: string) => {
+    if (newTheme === currentTheme) return; // No change needed
+    
     const htmlEl = document.documentElement;
+    
+    // Add transition class
     htmlEl.classList.add('theme-transitioning');
+    
+    // Apply theme changes
     htmlEl.classList.remove(currentTheme);
     htmlEl.classList.add(newTheme);
-    htmlEl.style.setProperty('color-scheme', newTheme); // Update color-scheme
-    localStorage.setItem('theme', newTheme);
+    htmlEl.style.setProperty('color-scheme', newTheme);
+    
+    // Store preference - CRITICAL for persistence
+    try {
+      localStorage.setItem('theme', newTheme);
+    } catch (e) {
+      console.warn('Could not save theme preference');
+    }
 
-    // ***** ADD THIS GISCUS POSTMESSAGE LOGIC *****
+    // Update Giscus theme if present
     const giscusFrame = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame');
     if (giscusFrame && giscusFrame.contentWindow) {
-      const newIsDarkMode = newTheme === 'dark'; // Check if the new theme is dark
-      // Determine the theme string Giscus expects
-      const giscusThemeToSet = newIsDarkMode ? 'transparent_dark' : 'light'; // Or use 'dark'/'light'
-      const giscusThemeMessage = {
-        giscus: {
-          setConfig: {
-            theme: giscusThemeToSet,
-          }
-        }
-      };
-      // Send the message to the Giscus iframe
-      giscusFrame.contentWindow.postMessage(giscusThemeMessage, 'https://giscus.app');
-      console.log(`LayoutClient: Sent theme '${giscusThemeToSet}' to Giscus`); // Debugging line
-    } else {
-       console.log("LayoutClient: Giscus iframe not found for theme update."); // Debugging line
+      try {
+        const giscusThemeToSet = newTheme === 'dark' ? 'transparent_dark' : 'light';
+        giscusFrame.contentWindow.postMessage(
+          { giscus: { setConfig: { theme: giscusThemeToSet } } },
+          'https://giscus.app'
+        );
+      } catch (e) {
+        console.warn('Error updating Giscus theme');
+      }
     }
-    // ***** END GISCUS POSTMESSAGE LOGIC *****
 
-    // Remove transition class after animation
+    // Remove transition class after animation completes
     setTimeout(() => {
       htmlEl.classList.remove('theme-transitioning');
-    }, 300); // Match transition duration (adjust if your theme transition is different)
-  }, []); // Empty dependency array is fine here
+    }, 300); // Match transition duration in CSS
+    
+    // Update React context (important!)
+    setTheme(newTheme as 'light' | 'dark');
+  }, [setTheme]);
 
-  
-  // Listener for SYSTEM preference changes (Keep as is)
+  // System preference change listener
   useEffect(() => {
+    if (typeof window === 'undefined') return; // SSR check
+    
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    
     const handleChange = (e: MediaQueryListEvent) => {
-      if (!localStorage.getItem('theme')) { // Only respect system if no manual choice
-        const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-        const newTheme = e.matches ? 'dark' : 'light';
-        if (newTheme !== currentTheme) {
-            applyThemeTransition(newTheme, currentTheme);
-            // If using ThemeContext, you might need to update its state here too
+      try {
+        // Only apply if user hasn't set a preference
+        if (!localStorage.getItem('theme')) {
+          const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+          const newTheme = e.matches ? 'dark' : 'light';
+          applyThemeTransition(newTheme, currentTheme);
         }
+      } catch (err) {
+        console.warn('Error handling color scheme change:', err);
       }
     };
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, [applyThemeTransition]); // Need applyThemeTransition as dependency
+    
+    // Use the correct event listener based on browser support
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', handleChange);
+      return () => mediaQuery.removeEventListener('change', handleChange);
+    } else {
+      // Fallback for older browsers
+      mediaQuery.addListener(handleChange);
+      return () => mediaQuery.removeListener(handleChange);
+    }
+  }, [applyThemeTransition]);
 
-  // Expose theme toggle function globally
+  // Expose global theme toggle
   useEffect(() => {
-    // This FUNCTION is called by the theme toggle buttons
+    if (typeof window === 'undefined') return; // SSR check
+    
+    // Global toggle function
     window.toggleTheme = () => {
       const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      // applyThemeTransition now handles class changes, localStorage, AND Giscus update
       applyThemeTransition(newTheme, currentTheme);
-      // If using ThemeContext, you might need to update its state here too
     };
-    // Cleanup global function
+    
+    // Cleanup
     return () => { delete window.toggleTheme; };
-  }, [applyThemeTransition]); // Need applyThemeTransition as dependency
+  }, [applyThemeTransition]);
 
-  // This component manages side effects, doesn't render UI itself
+  // Mark theme as loaded after initial render
+  useEffect(() => {
+    if (typeof document === 'undefined') return; // SSR check
+    
+    // Set the loaded attribute to show content
+    if (!document.documentElement.hasAttribute('data-theme-loaded')) {
+      requestAnimationFrame(() => {
+        document.documentElement.setAttribute('data-theme-loaded', 'true');
+      });
+    }
+  }, []);
+
+  // This component doesn't render UI
   return null;
 }
