@@ -36,7 +36,8 @@ interface OrnamentalThemeToggleProps {
 }
 
 export default function OrnamentalThemeToggle({ className = '', size = 'md' }: OrnamentalThemeToggleProps) {
-    const { isDarkMode } = useTheme();
+    // Use the theme context for synchronized state
+    const { isDarkMode, toggleTheme: contextToggleTheme } = useTheme();
     const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
     const [mounted, setMounted] = useState<boolean>(false);
 
@@ -47,33 +48,33 @@ export default function OrnamentalThemeToggle({ className = '', size = 'md' }: O
     };
     const { button: buttonSize, icon: iconSize } = iconSizes[size];
 
+    // Client-side only
     useEffect(() => {
         setMounted(true);
     }, []);
 
-    const toggleTheme = () => {
+    // Improved toggle function that uses the context
+    const handleToggleTheme = () => {
         if (isTransitioning || !mounted) return;
         setIsTransitioning(true);
 
-        // Use the same global toggle function
-        if (typeof window.toggleTheme === 'function') {
-            window.toggleTheme();
-            setTimeout(() => setIsTransitioning(false), 700); // Match CSS transition duration
-        } else {
-            console.error("window.toggleTheme function not found.");
-            // Add fallback logic if needed, similar to standard ThemeToggle
+        // Use the context's toggle function for consistency
+        contextToggleTheme();
+        
+        // Reset transition state after animation completes
+        setTimeout(() => {
             setIsTransitioning(false);
-        }
+        }, 700); // Match CSS transition duration
     };
 
-    // Render a placeholder if not mounted
+    // Render a placeholder if not mounted (SSR)
     if (!mounted) {
         return <div className={`${buttonSize} ${styles.ornateTogglePlaceholder} ${className}`} aria-hidden="true" />;
     }
 
     return (
         <button
-            onClick={toggleTheme}
+            onClick={handleToggleTheme}
             className={`${styles.ornateToggleButton} ${buttonSize} ${className} ${isTransitioning ? styles.ornateToggleTransitioning : ''}`}
             aria-label={isDarkMode ? "Switch to light mode (ornate)" : "Switch to dark mode (ornate)"}
             disabled={isTransitioning}
