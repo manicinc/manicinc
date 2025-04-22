@@ -1,0 +1,74 @@
+/* src/styles/textures.css */
+/* Add this file to your project to replace missing texture images */
+
+/* Fix for missing noise.png */
+.noise-bg {
+    /* Replace with CSS-only noise effect instead of image */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.1'/%3E%3C/svg%3E");
+    background-position: 0 0;
+    background-size: 200px 200px;
+  }
+  
+  /* Fix for missing footer-texture.png */
+  .footer-texture {
+    /* Replace with CSS gradient pattern */
+    background-image: 
+      linear-gradient(to right, rgba(var(--bg-tertiary-rgb), 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(var(--bg-tertiary-rgb), 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 0 0;
+  }
+  
+  /* To use these classes, add them to your elements: */
+  /*
+    <div className="noise-bg">...</div>
+    <footer className="footer-texture">...</footer>
+  */
+  
+  /* Alternative: Apply as utility classes in your CSS */
+  html.dark body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.1'/%3E%3C/svg%3E");
+    background-position: 0 0;
+    background-size: 200px 200px;
+    opacity: 0.15;
+  }
+  
+  html.light body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.1'/%3E%3C/svg%3E");
+    background-position: 0 0;
+    background-size: 200px 200px;
+    opacity: 0.05;
+  }
+  
+  footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: 
+      linear-gradient(to right, rgba(var(--bg-tertiary-rgb), 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(var(--bg-tertiary-rgb), 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 0 0;
+    opacity: 0.5;
+    z-index: -1;
+  }

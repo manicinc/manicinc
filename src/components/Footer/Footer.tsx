@@ -27,11 +27,6 @@ const Footer = () => {
             text-[color:var(--text-secondary)]
         `}>
             {/* Background texture */}
-            <div className={`
-                absolute inset-0 bg-[url('/assets/images/footer-texture.png')] bg-repeat -z-10
-                ${isBlog ? 'opacity-[0.03]' : 'opacity-[0.02]'}
-            `}></div>
-
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Top section Grid - REVISED LAYOUT */}
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-12 mb-14">
