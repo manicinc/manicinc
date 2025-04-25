@@ -2,53 +2,91 @@
 3:I[99861,["5878","static/chunks/5878-fc40e01cdd981ac7.js","6246","static/chunks/6246-a2a792a2156d3711.js","8117","static/chunks/8117-01b29fa1c95ef4fd.js","9169","static/chunks/app/open-source/page-4809dd3d282e0ea3.js"],"default",1]
 4:I[4707,[],""]
 5:I[36423,[],""]
-7:I[12025,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5214","static/chunks/5214-799ba3c3b5d6a85f.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-148b89eeee2bb944.js"],"ThemeProvider"]
-8:I[83551,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5214","static/chunks/5214-799ba3c3b5d6a85f.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-148b89eeee2bb944.js"],"default"]
-9:I[51052,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5214","static/chunks/5214-799ba3c3b5d6a85f.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-148b89eeee2bb944.js"],"Nav"]
+7:I[12025,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5214","static/chunks/5214-799ba3c3b5d6a85f.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-2a80910d2315b03d.js"],"ThemeProvider"]
+8:I[83551,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5214","static/chunks/5214-799ba3c3b5d6a85f.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-2a80910d2315b03d.js"],"default"]
+9:I[51052,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5214","static/chunks/5214-799ba3c3b5d6a85f.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-2a80910d2315b03d.js"],"Nav"]
 a:I[79229,["2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","9160","static/chunks/app/not-found-be0e1788a49b9521.js"],"default"]
-b:I[85745,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5214","static/chunks/5214-799ba3c3b5d6a85f.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-148b89eeee2bb944.js"],"default"]
-c:I[16049,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5214","static/chunks/5214-799ba3c3b5d6a85f.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-148b89eeee2bb944.js"],"default"]
-d:I[31214,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5214","static/chunks/5214-799ba3c3b5d6a85f.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-148b89eeee2bb944.js"],"default"]
-6:T52d,(function(){ 
-    function getInitialTheme() { 
-      try { 
-        // First priority: Check localStorage
-        const storedTheme = localStorage.getItem('theme'); 
-        if (storedTheme === 'light' || storedTheme === 'dark') {
-          return storedTheme;
-        }
-      } catch(e){
-        console.warn('Failed to access localStorage:', e);
-      } 
-      
-      // Second priority: Check system preference
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        return 'dark';
-      }
-      
-      // Default fallback
-      return 'light'; 
-    } 
-    
-    // Get and apply the theme
-    const theme = getInitialTheme(); 
-    document.documentElement.classList.remove('dark', 'light');
-    document.documentElement.classList.add(theme); 
-    document.documentElement.style.setProperty('color-scheme', theme);
-    
-    // Ensure the theme is stored in localStorage
-    try {
-      localStorage.setItem('theme', theme);
-    } catch(e) {
-      console.warn('Failed to store theme in localStorage:', e);
-    }
-    
-    // Wait for styles to load, then mark as loaded to reveal content
-    window.addEventListener('load', function() {
-      requestAnimationFrame(function() {
-        document.documentElement.setAttribute('data-theme-loaded', 'true');
-      });
-    });
-  })();0:["7mvWFGdAqWUBaVUM701n1",[[["",{"children":["open-source",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",{"children":["open-source",{"children":["__PAGE__",{},[["$L1",["$","$L2",null,{"props":{"params":{},"searchParams":{}},"Component":"$3"}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/4da5fbdfb3941170.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","open-source","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/4d852f2c8ce754fb.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/c649557dbac30f08.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/6caeac075b299e14.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/f4e66633597a8a7a.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/90f93c18c564bce3.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/a9e7dbab6fdd77e4.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/e829e805ff5eba8d.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n                __variable_d65c78\n                __variable_de8755\n                __variable_c24da7\n                __variable_088c69\n                __variable_881712\n                __variable_5ac533\n            ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$6"}}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"\n  /* Pre-set background colors matching theme.css */\n  html.dark { background-color: #22182b; }\n  html.light { background-color: #fbf6ef; }\n  /* Hide body content until theme is marked as loaded */\n  html:not([data-theme-loaded=\"true\"]) body { opacity: 0; }\n  /* Prevent transitions during initial load */\n  html:not([data-theme-loaded=\"true\"]) * { transition: none !important; }\n  /* Ensure hero content is centered (keep if necessary) */\n  .hero-content { text-align: center !important; }\n"}}]]}],["$","body",null,{"children":["$","$L7",null,{"children":[["$","$L8",null,{}],["$","$L9",null,{}],["$","main",null,{"role":"main","children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$La",null,{}],"notFoundStyles":[]}]}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{}]]}]}]]}]],null],null],["$Le",null]]]]
+b:I[85745,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5214","static/chunks/5214-799ba3c3b5d6a85f.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-2a80910d2315b03d.js"],"default"]
+c:I[16049,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5214","static/chunks/5214-799ba3c3b5d6a85f.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-2a80910d2315b03d.js"],"default"]
+d:I[31214,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5214","static/chunks/5214-799ba3c3b5d6a85f.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-2a80910d2315b03d.js"],"default"]
+6:Te83,
+        (function() {
+          try {
+            // Don't run this script during server-side rendering
+            if (typeof window === 'undefined' || typeof document === 'undefined') return;
+            
+            console.log('Theme initialization script running');
+            
+            // 1. Check localStorage - the source of truth for user preference
+            let storedTheme = localStorage.getItem('theme');
+            console.log('Theme from localStorage:', storedTheme);
+            
+            // 2. If no stored theme, check system preference
+            if (!storedTheme) {
+              const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+              storedTheme = systemPrefersDark ? 'dark' : 'light';
+              console.log('No theme in localStorage, using system preference:', storedTheme);
+              // Save this to localStorage for next time
+              localStorage.setItem('theme', storedTheme);
+            }
+            
+            // Wait for DOM to be ready
+            const applyTheme = () => {
+              // Safety check that DOM is ready
+              if (!document || !document.documentElement) return;
+              
+              // 3. Ensure clean state
+              document.documentElement.classList.remove('dark', 'light');
+              
+              // 4. Apply theme class and colorScheme
+              document.documentElement.classList.add(storedTheme);
+              document.documentElement.style.colorScheme = storedTheme;
+              
+              // 5. Apply immediate colors to prevent flash - with !important
+              if (storedTheme === 'dark') {
+                document.documentElement.style.setProperty('background-color', '#22182b', 'important');
+                document.documentElement.style.setProperty('color', '#f5f0e6', 'important');
+                
+                // Only set body properties if body exists
+                if (document.body) {
+                  document.body.style.setProperty('background-color', '#22182b', 'important');
+                  document.body.style.setProperty('color', '#f5f0e6', 'important');
+                }
+              } else {
+                document.documentElement.style.setProperty('background-color', '#fbf6ef', 'important');
+                document.documentElement.style.setProperty('color', '#4a3f35', 'important');
+                
+                // Only set body properties if body exists
+                if (document.body) {
+                  document.body.style.setProperty('background-color', '#fbf6ef', 'important');
+                  document.body.style.setProperty('color', '#4a3f35', 'important');
+                }
+              }
+              
+              // 6. Store for React
+              window.__NEXT_THEME_INITIAL = storedTheme;
+              
+              console.log('Theme initialization complete:', storedTheme);
+            };
+            
+            // Apply theme immediately
+            applyTheme();
+            
+            // Also apply after DOM is fully loaded (for safety)
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', applyTheme);
+            }
+            
+          } catch (e) {
+            console.error('Theme initialization error:', e);
+            // Fallback to light
+            if (document && document.documentElement) {
+              document.documentElement.classList.add('light');
+              document.documentElement.style.setProperty('background-color', '#fbf6ef', 'important');
+              document.documentElement.style.setProperty('color', '#4a3f35', 'important');
+            }
+          }
+        })();
+      0:["Szncb1zvFO7zh1DveIu_g",[[["",{"children":["open-source",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",{"children":["open-source",{"children":["__PAGE__",{},[["$L1",["$","$L2",null,{"props":{"params":{},"searchParams":{}},"Component":"$3"}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/4da5fbdfb3941170.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","open-source","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f8dc78762b9ecb81.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/6caeac075b299e14.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/4f09f364f5483d9f.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/90f93c18c564bce3.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/001374b7a2e778f8.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/e829e805ff5eba8d.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_d65c78\n            __variable_de8755\n            __variable_c24da7\n            __variable_088c69\n            __variable_881712\n            __variable_5ac533\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$6"}}]}],["$","body",null,{"children":["$","$L7",null,{"children":[["$","$L8",null,{}],["$","$L9",null,{}],["$","main",null,{"role":"main","children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$La",null,{}],"notFoundStyles":[]}]}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{}]]}]}]]}]],null],null],["$Le",null]]]]
 e:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#FBF6EF"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#22182B"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"Manic Agency"}],["$","meta","5",{"name":"description","content":"Manic Agency: Metaverses intersect here. Exploring Web3, AI, AR/VR, and creative technology."}],["$","link","6",{"rel":"author","href":"https://manicinc.github.io"}],["$","meta","7",{"name":"author","content":"Manic Inc"}],["$","meta","8",{"name":"keywords","content":"Web Development,Design,AR,VR,AI,Web3,Digital Agency,Los Angeles,Lagos,Creative Technology,SynthStack,Manic Inc"}],["$","meta","9",{"name":"creator","content":"Manic Inc"}],["$","meta","10",{"name":"publisher","content":"Manic Inc"}],["$","meta","11",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","12",{"property":"og:title","content":"Manic Agency"}],["$","meta","13",{"property":"og:description","content":"Manic Agency: Metaverses intersect here. Exploring Web3, AI, AR/VR, and creative technology."}],["$","meta","14",{"property":"og:url","content":"https://manicinc.github.io"}],["$","meta","15",{"property":"og:site_name","content":"Manic Agency"}],["$","meta","16",{"property":"og:locale","content":"en_US"}],["$","meta","17",{"property":"og:image","content":"https://manicinc.github.io/og-default.png"}],["$","meta","18",{"property":"og:image:width","content":"1200"}],["$","meta","19",{"property":"og:image:height","content":"630"}],["$","meta","20",{"property":"og:image:alt","content":"Manic Agency - Manic Agency"}],["$","meta","21",{"property":"og:type","content":"website"}],["$","meta","22",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","23",{"name":"twitter:site","content":"@manicagency"}],["$","meta","24",{"name":"twitter:creator","content":"@manicagency"}],["$","meta","25",{"name":"twitter:title","content":"Manic Agency"}],["$","meta","26",{"name":"twitter:description","content":"Manic Agency: Metaverses intersect here. Exploring Web3, AI, AR/VR, and creative technology."}],["$","meta","27",{"name":"twitter:image","content":"https://manicinc.github.io/og-default.png"}],["$","link","28",{"rel":"shortcut icon","href":"/favicon-16x16.png"}],["$","link","29",{"rel":"icon","href":"/favicon.ico"}],["$","link","30",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","meta","31",{"name":"next-size-adjust"}]]
 1:null
