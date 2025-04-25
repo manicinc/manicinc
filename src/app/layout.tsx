@@ -1,25 +1,23 @@
-// src/app/layout.tsx
+// src/app/layout.tsx (fixed)
 import { ReactNode } from "react";
-import Script from 'next/script';
 import { Inter, Lato, EB_Garamond, Playfair_Display, Merriweather, Dancing_Script } from 'next/font/google';
 
 // Import Components & Providers
 import { Nav } from "@/components/Nav";
 import Footer from "@/components/Footer/Footer";
-import LayoutClient from "./LayoutClient"; // Renders client-side logic (path classes)
-import { ThemeProvider } from '@/context/ThemeContext'; // Provides theme state
+import LayoutClient from "./LayoutClient"; 
+import { ThemeProvider } from '@/context/ThemeContext';
 import DynamicFavicon from '@/components/Base/DynamicFavicon';
 import ScrollToTopHandler from '@/components/ScrollBtns/ScrollToTopHandler';
 import type { Metadata, Viewport } from 'next';
 
 // Import Styles
-import "./styles/globals.css"; // Includes theme.css via @import or direct rules
+import "./styles/globals.css";
 
 // Import SEO helper
 import { generateSEOMetadata } from '@/lib/getSEOMetadata';
 
 // --- Font Definitions ---
-// (Keep your existing font definitions)
 const inter = Inter({ subsets: ['latin'], variable: '--font-body', display: 'swap' });
 const lato = Lato({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-display-orig', display: 'swap' });
 const ebGaramond = EB_Garamond({ subsets: ['latin'], weight: ['400', '700'], style: ['normal', 'italic'], variable: '--font-meta-blog', display: 'swap' });
@@ -28,118 +26,120 @@ const merriweather = Merriweather({ subsets: ['latin'], weight: ['400'], style: 
 const dancingScript = Dancing_Script({ subsets: ['latin'], weight: ['400'], variable: '--font-script-blog', display: 'swap' });
 
 export const viewport: Viewport = {
-    themeColor: [
-      { media: '(prefers-color-scheme: light)', color: '#FBF6EF' }, // Use your light theme background
-      { media: '(prefers-color-scheme: dark)', color: '#22182B' },  // Use your dark theme background
-    ],
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  };
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#FBF6EF' },
+    { media: '(prefers-color-scheme: dark)', color: '#22182B' },
+  ],
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 // Generate default metadata for the root layout
 export const metadata: Metadata = generateSEOMetadata('/');
 
-// --- Theme Initialization Script (Inline in <head>) ---
-// This script runs BEFORE React hydrates. It's crucial for:
-// 1. Reading the persisted theme from localStorage or system preference.
-// 2. Applying the theme class (dark/light) to the <html> element immediately.
-// 3. Preventing the "flash of wrong theme" (FOUC).
-// Includes console logs for debugging persistence issues.
-const InitializeThemeScript = `(function(){ 
-    function getInitialTheme() { 
-      try { 
-        // First priority: Check localStorage
-        const storedTheme = localStorage.getItem('theme'); 
-        if (storedTheme === 'light' || storedTheme === 'dark') {
-          return storedTheme;
-        }
-      } catch(e){
-        console.warn('Failed to access localStorage:', e);
-      } 
-      
-      // Second priority: Check system preference
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        return 'dark';
-      }
-      
-      // Default fallback
-      return 'light'; 
-    } 
-    
-    // Get and apply the theme
-    const theme = getInitialTheme(); 
-    document.documentElement.classList.remove('dark', 'light');
-    document.documentElement.classList.add(theme); 
-    document.documentElement.style.setProperty('color-scheme', theme);
-    
-    // Ensure the theme is stored in localStorage
-    try {
-      localStorage.setItem('theme', theme);
-    } catch(e) {
-      console.warn('Failed to store theme in localStorage:', e);
-    }
-    
-    // Wait for styles to load, then mark as loaded to reveal content
-    window.addEventListener('load', function() {
-      requestAnimationFrame(function() {
-        document.documentElement.setAttribute('data-theme-loaded', 'true');
-      });
-    });
-  })();`;
-
-// --- Critical CSS (Inline in <head>) ---
-// Works with InitializeThemeScript to prevent flash of unstyled content (FOUC)
-// and flash of the wrong theme background.
-const CriticalCSS = `
-  /* Pre-set background colors matching theme.css */
-  html.dark { background-color: #22182b; }
-  html.light { background-color: #fbf6ef; }
-  /* Hide body content until theme is marked as loaded */
-  html:not([data-theme-loaded="true"]) body { opacity: 0; }
-  /* Prevent transitions during initial load */
-  html:not([data-theme-loaded="true"]) * { transition: none !important; }
-  /* Ensure hero content is centered (keep if necessary) */
-  .hero-content { text-align: center !important; }
-`;
-
 export default function RootLayout({ children }: { children: ReactNode }) {
-    return (
-        // Apply font variables to HTML tag
-        <html lang="en" className={`
-                ${inter.variable}
-                ${lato.variable}
-                ${ebGaramond.variable}
-                ${playfairDisplay.variable}
-                ${merriweather.variable}
-                ${dancingScript.variable}
-            `} suppressHydrationWarning /* Suppress warning about class/style mismatch due to inline script */ >
-            <head>
-                {/* Inline Theme Script: MUST be high in <head> to run ASAP */}
-                <script dangerouslySetInnerHTML={{ __html: InitializeThemeScript }} />
+  return (
+    <html lang="en" className={`
+            ${inter.variable}
+            ${lato.variable}
+            ${ebGaramond.variable}
+            ${playfairDisplay.variable}
+            ${merriweather.variable}
+            ${dancingScript.variable}
+        `} suppressHydrationWarning>
+      <head>
 
-                {/* Inline Critical CSS: Prevents FOUC and theme flash */}
-                <style dangerouslySetInnerHTML={{ __html: CriticalCSS }} />
-
-                {/* Other head elements: favicons, meta tags generated by Next.js */}
-            </head>
-            <body>
-                {/* Wrap the application with ThemeProvider */}
-                <ThemeProvider>
-                    {/* Add DynamicFavicon if needed */}
-                    <DynamicFavicon />
-
-                    {/* Main application structure */}
-                    <Nav />
-                    <main role="main">{children}</main>
-                    <Footer />
-
-                    {/* Utility components */}
-                    <ScrollToTopHandler />
-                    {/* LayoutClient handles client-side body class management */}
-                    <LayoutClient />
-                </ThemeProvider>
-            </body>
-        </html>
-    );
+      <script dangerouslySetInnerHTML={{ __html: `
+        (function() {
+          try {
+            // Don't run this script during server-side rendering
+            if (typeof window === 'undefined' || typeof document === 'undefined') return;
+            
+            console.log('Theme initialization script running');
+            
+            // 1. Check localStorage - the source of truth for user preference
+            let storedTheme = localStorage.getItem('theme');
+            console.log('Theme from localStorage:', storedTheme);
+            
+            // 2. If no stored theme, check system preference
+            if (!storedTheme) {
+              const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+              storedTheme = systemPrefersDark ? 'dark' : 'light';
+              console.log('No theme in localStorage, using system preference:', storedTheme);
+              // Save this to localStorage for next time
+              localStorage.setItem('theme', storedTheme);
+            }
+            
+            // Wait for DOM to be ready
+            const applyTheme = () => {
+              // Safety check that DOM is ready
+              if (!document || !document.documentElement) return;
+              
+              // 3. Ensure clean state
+              document.documentElement.classList.remove('dark', 'light');
+              
+              // 4. Apply theme class and colorScheme
+              document.documentElement.classList.add(storedTheme);
+              document.documentElement.style.colorScheme = storedTheme;
+              
+              // 5. Apply immediate colors to prevent flash - with !important
+              if (storedTheme === 'dark') {
+                document.documentElement.style.setProperty('background-color', '#22182b', 'important');
+                document.documentElement.style.setProperty('color', '#f5f0e6', 'important');
+                
+                // Only set body properties if body exists
+                if (document.body) {
+                  document.body.style.setProperty('background-color', '#22182b', 'important');
+                  document.body.style.setProperty('color', '#f5f0e6', 'important');
+                }
+              } else {
+                document.documentElement.style.setProperty('background-color', '#fbf6ef', 'important');
+                document.documentElement.style.setProperty('color', '#4a3f35', 'important');
+                
+                // Only set body properties if body exists
+                if (document.body) {
+                  document.body.style.setProperty('background-color', '#fbf6ef', 'important');
+                  document.body.style.setProperty('color', '#4a3f35', 'important');
+                }
+              }
+              
+              // 6. Store for React
+              window.__NEXT_THEME_INITIAL = storedTheme;
+              
+              console.log('Theme initialization complete:', storedTheme);
+            };
+            
+            // Apply theme immediately
+            applyTheme();
+            
+            // Also apply after DOM is fully loaded (for safety)
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', applyTheme);
+            }
+            
+          } catch (e) {
+            console.error('Theme initialization error:', e);
+            // Fallback to light
+            if (document && document.documentElement) {
+              document.documentElement.classList.add('light');
+              document.documentElement.style.setProperty('background-color', '#fbf6ef', 'important');
+              document.documentElement.style.setProperty('color', '#4a3f35', 'important');
+            }
+          }
+        })();
+      `}} />
+      </head>
+      <body>
+        <ThemeProvider>
+          <DynamicFavicon />
+          <Nav />
+          <main role="main">{children}</main>
+          <Footer />
+          <ScrollToTopHandler />
+          <LayoutClient />
+        </ThemeProvider>
+      </body>
+    </html>
+  );
 }
