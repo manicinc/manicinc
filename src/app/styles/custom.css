@@ -17,7 +17,7 @@
   display: inline-block;
   padding: 0.8rem 1.6rem;
   background-color: var(--brand-cyan); /* Consider using theme variables if brand colors change with theme */
-  color: var(--color-abyss); /* Consider using theme variables */
+  color: var(--color-ink, #4a3f35); /* Use text color variable with fallback */
   font-family: var(--font-mono);
   font-weight: bold;
   text-transform: uppercase;
