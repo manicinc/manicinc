@@ -8,13 +8,13 @@ interface ThemeToggleProps {
   size?: 'sm' | 'md' | 'lg';
 }
 
-export default function ThemeToggle({ className = '', size = 'md' }: ThemeToggleProps) {
-  // Use the theme context for a reliable source of the current theme state
-  const { isDarkMode, toggleTheme: contextToggleTheme } = useTheme();
+export default function DirectThemeToggle({ className = '', size = 'md' }: ThemeToggleProps) {
+  // Use the theme context instead of managing local state
+  const { isDarkMode, toggleTheme } = useTheme();
   const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
   const [mounted, setMounted] = useState<boolean>(false);
 
-  // Determine icon size based on the size prop
+  // Size mappings
   const iconSizes = {
     sm: { button: 'w-8 h-8', icon: 'w-4 h-4' },
     md: { button: 'w-10 h-10', icon: 'w-5 h-5' },
@@ -28,22 +28,22 @@ export default function ThemeToggle({ className = '', size = 'md' }: ThemeToggle
     setMounted(true);
   }, []);
 
-  // Toggle theme using the provided context function
+  // Handle theme toggle with transition state
   const handleToggleTheme = () => {
     if (isTransitioning || !mounted) return;
-
+    
     setIsTransitioning(true);
     
-    // Use the context's toggle function for consistency
-    contextToggleTheme();
-
-    // Reset transition state after animation completes
+    // Use the context toggle function
+    toggleTheme();
+    
+    // Set a timeout to re-enable the button after transition
     setTimeout(() => {
       setIsTransitioning(false);
-    }, 600); // Allow time for animations
+    }, 350);
   };
 
-  // If not mounted yet (SSR), render a placeholder of the same size
+  // SSR placeholder
   if (!mounted) {
     return (
       <div
@@ -83,7 +83,7 @@ export default function ThemeToggle({ className = '', size = 'md' }: ThemeToggle
           </div>
         )}
 
-        {/* Subtle glow on hover (neumorphism / retro-futurism hint) */}
+        {/* Subtle glow on hover */}
         <span className="absolute inset-0 rounded-md opacity-0 transition-opacity duration-200
                        bg-accent-primary/10 hover:opacity-30"></span>
       </button>

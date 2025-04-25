@@ -1,14 +1,19 @@
 /* src/styles/theme.css */
-/* Updated with brighter colors, improved contrast, and structural fixes */
+/* Dark mode flashing fix with proper specificity */
 
 /* === CRITICAL FLASH PREVENTION === */
-/* Add this to the top to prevent theme flash */
-html.dark {
-  background-color: #22182b; /* Your dark background color */
+/* Set initial background colors for immediate application */
+html {
+  background-color: #fbf6ef; /* Light theme as default */
+  color: #4a3f35;
 }
 
-html.light {
-  background-color: #fbf6ef; /* Your light background color */
+/* DARK MODE CRITICAL OVERRIDES - HIGHEST SPECIFICITY */
+html.dark,
+html.dark body,
+html[class*="dark"] {
+  background-color: #22182b !important; /* Dark background color with !important */
+  color: #f5f0e6 !important;
 }
 
 /* Prevent content flash */
@@ -22,18 +27,6 @@ html:not([data-theme-loaded="true"]) * {
 }
 /* === END CRITICAL FLASH PREVENTION === */
 
-/* Add Font Imports if needed - Placed near top */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
-
-
 *,
 *::before,
 *::after {
@@ -41,7 +34,7 @@ html:not([data-theme-loaded="true"]) * {
 }
 
 /* ==========================================================================
-   Theme Variables Definition
+   Theme Variables Definition - LIGHT THEME AS DEFAULT
    ========================================================================== */
 
 :root {
@@ -49,107 +42,122 @@ html:not([data-theme-loaded="true"]) * {
   --font-display: "Lato", sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
-  --font-logo: "Mona Sans", sans-serif; /* Added explicit logo font */
+  --font-logo: "Mona Sans", sans-serif;
 
-  /* --- Original Blog Fonts (Keep if used elsewhere, otherwise optional) --- */
-  --font-heading-blog-orig: "Playfair Display", serif;
-  --font-body-blog-orig: "Merriweather", serif;
-  --font-script-blog-orig: "Dancing Script", cursive;
-  --font-meta-blog-orig: "Lato", sans-serif;
-
-  /* --- Primary Blog Fonts (Defined once for both modes) --- */
+  /* --- Primary Blog Fonts --- */
   --font-heading-blog: "Playfair Display", serif;
   --font-body-blog: "Merriweather", serif;
   --font-script-blog: "Dancing Script", cursive;
-  --font-meta-blog: "EB Garamond", serif; /* Previously defined only in .light */
+  --font-meta-blog: "EB Garamond", serif;
 
-  /* --- Intro Neon & Font Variables (Dark Theme) --- */
+  /* --- Decorative --- */
   --font-decorative: 'Cinzel Decorative', 'Playfair Display', serif;
-  --intro-neon-text: #00ffff;      /* Cyan */
-  --intro-neon-glow-1: #00ffff;    /* Cyan Glow */
-  --intro-neon-glow-2: #ff00ff;    /* Magenta Glow */
-  --intro-deco-border: rgba(var(--accent-highlight-rgb), 0.5);
 
-  /* Ensure background overlay vars are defined */
-  --bg-overlay-start: rgba(34, 24, 43, 0.85); /* Updated RGB */
-  --bg-overlay-end: rgba(34, 24, 43, 0.98); /* Updated RGB */
+  /* --- LIGHT THEME (Default) Core Colors --- */
+  --color-light-parchment: #fbf6ef;
+  --color-light-paper: #f5ede1;
+  --color-light-cream: #ede4d6;
+  --color-light-ink: #4a3f35;
+  --color-light-sepia: #7a6d60;
+  --color-ink-rgb: 74, 63, 53;
 
-  /* --- Core Colors (Dark Theme - Adjusted) --- */
-  --color-dark-bg: #22182b;        /* Slightly richer dark purple */
-  --color-mid-bg: #402e46;         /* Adjusted mid */
-  --color-light-bg: #5f4867;        /* Adjusted light */
-  --color-ink: #1a111b;             /* Keep ink dark */
-  --color-parchment: #f5f0e6;       /* Brighter parchment/off-white */
+  /* --- LIGHT THEME Accent Colors --- */
+  --color-light-burgundy: #b66880;
+  --color-light-sage: #7ea196;
+  --color-light-gold: #b88e62;
+  --color-light-rose: #d4bbc9;
+  --color-light-blue: #b5c7d8;
+  --color-light-alert: #d07676;
 
-  /* --- Accent Colors (Dark Theme - Brighter) --- */
-  --color-burgundy: #d65076;       /* Brighter, more vibrant primary */
-  --color-sage: #88b0a4;            /* Brighter sage */
-  --color-antique-gold: #d4ac80;   /* Brighter gold */
-  --color-dusty-rose: #c8a2ba;     /* Brighter rose */
-  --color-powder-blue: #a0b4cb;    /* Brighter blue */
-  --color-alert: #e66767;           /* Brighter, clearer red alert */
+  /* --- LIGHT THEME VARIABLES (Default) --- */
+  --bg-primary: var(--color-light-parchment);
+  --bg-primary-rgb: 251, 246, 239;
+  --bg-secondary: var(--color-light-paper);
+  --bg-secondary-rgb: 245, 237, 225;
+  --bg-tertiary: var(--color-light-cream);
+  --bg-tertiary-rgb: 237, 228, 214;
+  --bg-code: #f0e7db;
+  --bg-blog-paper: #faf3e9;
+  --bg-blog-paper-rgb: 250, 243, 233;
 
-  /* --- Text Colors (Dark Theme - Brighter) --- */
-  --color-text-light: var(--color-parchment); /* Using the brighter parchment */
-  --color-text-mid: #d8cce6;       /* Lighter secondary text */
-  --color-text-dark: var(--color-ink);
-  --color-text-primary-rgb: 245, 240, 230; /* Added RGB for text-primary */
-  --color-text-secondary-rgb: 216, 204, 230; /* Added RGB for text-secondary */
+  /* --- Text Colors --- */
+  --text-primary: var(--color-light-ink);
+  --text-primary-rgb: var(--color-ink-rgb);
+  --text-secondary: #8a7d70;
+  --text-secondary-rgb: 138, 125, 112;
+  --text-muted: #c0b2a3;
+  --text-heading: var(--color-light-ink);
+  --text-code: #635548;
+  --text-on-accent: #ffffff;
 
-  /* --- Dark Mode Mapping (Updated) --- */
-  --bg-primary: var(--color-dark-bg);
-  --bg-primary-rgb: 34, 24, 43;     /* Updated RGB */
-  --bg-secondary: var(--color-mid-bg);
-  --bg-secondary-rgb: 64, 46, 70;   /* Updated RGB */
-  --bg-tertiary: var(--color-light-bg);
-  --bg-tertiary-rgb: 95, 72, 103;   /* Updated RGB */
-  --bg-code: #201a24;               /* Adjusted code bg */
-  --bg-blog-paper: #302435;         /* Adjusted dark paper */
-  --bg-blog-paper-rgb: 48, 36, 53;  /* Updated RGB */
+  /* --- Accent Colors --- */
+  --accent-primary: var(--color-light-burgundy);
+  --accent-primary-rgb: 182, 104, 128;
+  --accent-secondary: var(--color-light-sage);
+  --accent-secondary-rgb: 126, 161, 150;
+  --accent-highlight: var(--color-light-gold);
+  --accent-highlight-rgb: 184, 142, 98;
+  --accent-muted1: var(--color-light-rose);
+  --accent-muted1-rgb: 212, 187, 201;
+  --accent-muted2: var(--color-light-blue);
+  --accent-muted2-rgb: 181, 199, 216;
+  --accent-alert: var(--color-light-alert);
+  --accent-alert-rgb: 208, 118, 118;
 
-  --text-primary: var(--color-text-light);
-  --text-primary-rgb: var(--color-text-primary-rgb);
-  --text-secondary: var(--color-text-mid);
-  --text-secondary-rgb: var(--color-text-secondary-rgb);
-  --text-muted: #a899b8;            /* Lighter muted text */
-  --text-heading: #ffffff;          /* Keep white headings */
-  --text-code: var(--color-text-mid); /* Use lighter secondary text */
-  --text-on-accent: #ffffff;        /* Keep white on accent for contrast */
+  /* --- Background Overlays --- */
+  --bg-overlay-start: rgba(251, 246, 239, 0.8);
+  --bg-overlay-end: rgba(251, 246, 239, 0.9);
 
-  --accent-primary: var(--color-burgundy);
-  --accent-primary-rgb: 214, 80, 118; /* Updated RGB */
-  --accent-secondary: var(--color-sage);
-  --accent-secondary-rgb: 136, 176, 164; /* Updated RGB */
-  --accent-highlight: var(--color-antique-gold);
-  --accent-highlight-rgb: 212, 172, 128; /* Updated RGB */
-  --accent-muted1: var(--color-dusty-rose);
-  --accent-muted1-rgb: 200, 162, 186; /* Updated RGB */
-  --accent-muted2: var(--color-powder-blue);
-  --accent-muted2-rgb: 160, 180, 203; /* Updated RGB */
-  --accent-alert: var(--color-alert);
-  --accent-alert-rgb: 230, 103, 103; /* Updated RGB */
+  /* --- Intro Neon --- */
+  --intro-neon-text: #8A2BE2;
+  --intro-neon-glow-1: #8A2BE2;
+  --intro-neon-glow-2: #FF69B4;
+  --intro-deco-border: rgba(var(--accent-highlight-rgb), 0.6);
 
-  /* --- Flower Colors (Dark Theme) --- */
-  --flower-color-base: var(--accent-highlight);
-  --flower-color-alt: #fde047;
+  /* --- Nav Variables --- */
+  --bg-nav-start: rgba(251, 246, 239, 0.97);
+  --bg-nav-end: rgba(245, 237, 225, 0.99);
+  --bg-nav-scrolled-start: rgba(251, 246, 239, 1.0);
+  --bg-nav-scrolled-end: rgba(245, 237, 225, 1.0);
+  --nav-border-start: rgba(126, 161, 150, 0.25);
+  --nav-border-mid1: rgba(184, 142, 98, 0.65);
+  --nav-border-mid2: rgba(182, 104, 128, 0.75);
+  --nav-border-end: rgba(126, 161, 150, 0.25);
+  --nav-shadow: rgba(var(--color-ink-rgb), 0.30);
 
-  /* --- Functional Variables --- */
-  --shadow-color: rgba(12, 10, 12, 0.4); /* Adjusted shadow base color */
-  --shadow-color-rgb: 12, 10, 12; /* Added shadow RGB */
-  --shadow-color-light: rgba(12, 10, 12, 0.2); /* Adjusted light shadow base */
+  /* --- Shadow Variables --- */
+  --shadow-color: rgba(var(--color-ink-rgb), 0.18);
+  --shadow-color-rgb: var(--color-ink-rgb);
+  --shadow-color-light: rgba(var(--color-ink-rgb), 0.10);
   --shadow-soft: 0 5px 18px var(--shadow-color-light);
   --shadow-medium: 0 8px 25px var(--shadow-color);
   --shadow-inset: inset 0 2px 5px var(--shadow-color-light);
+
+  /* --- Flower Colors --- */
+  --flower-color-base: var(--color-light-gold);
+  --flower-color-alt: #fbbf24;
+
+  /* --- Vibrant Accents --- */
+  --accent-vibrant: #e5237b;
+  --accent-vibrant-rgb: 229, 35, 123;
+  --accent-cool: #00b8d4;
+  --accent-cool-rgb: 0, 184, 212;
+  --accent-vibrant-dark: #b71561;
+  --accent-cool-dark: #008a9e;
+  --accent-vibrant-light: #ff69b4;
+  --accent-cool-light: #61dafb;
+
+  /* --- Functional Variables --- */
   --header-height: 60px;
   --sidebar-width: 300px;
   --sidebar-width-collapsed: 65px;
   --reading-mode-max-width: 700px;
-  --blog-content-max-width: 900px; /* Increased */
+  --blog-content-max-width: 900px;
   --global-font-size-base: 17px;
   --blog-font-size-base: 18px;
   --radius-sharp: 0px;
   --radius-base: 4px;
-  --radius-md: 6px; /* Added medium radius */
+  --radius-md: 6px;
   --radius-lg: 8px;
   --radius-xl: 12px;
   --radius-pill: 9999px;
@@ -158,158 +166,144 @@ html:not([data-theme-loaded="true"]) * {
   --transition-theme: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
   --transition-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-  /* --- Nav Specific Dark Vars (Adjusted base colors) --- */
-  --bg-nav-dark-start: rgba(64, 46, 70, 0.96);  /* Using adjusted mid-bg */
-  --bg-nav-dark-end: rgba(34, 24, 43, 0.98);    /* Using adjusted dark-bg */
-  --bg-nav-dark-scrolled-start: rgba(64, 46, 70, 1.0);
-  --bg-nav-dark-scrolled-end: rgba(34, 24, 43, 1.0);
-  --nav-border-dark-start: rgba(136, 176, 164, 0.15); /* Adjusted sage */
-  --nav-border-dark-mid1: rgba(212, 172, 128, 0.7);   /* Adjusted gold */
-  --nav-border-dark-mid2: rgba(214, 80, 118, 0.8);   /* Adjusted burgundy */
-  --nav-border-dark-end: rgba(136, 176, 164, 0.15);   /* Adjusted sage */
-  --nav-shadow-dark: rgba(26, 17, 27, 0.7);
-
-  /* --- Misc --- */
-  /* --- Vibrant Accents (Ensure these or similar exist) --- */
-  --accent-vibrant: #ff2e88; /* Ultraviolent Pink/Magenta */
-  --accent-vibrant-rgb: 255, 46, 136;
-  --accent-cool: #00f6ff;    /* Bright Cyan */
-  --accent-cool-rgb: 0, 246, 255;
-  --accent-vibrant-dark: #d9006c;
-  --accent-cool-dark: #00c4cc;
-  --accent-vibrant-light: #ff7cc4;
-  --accent-cool-light: #99feff;
-
-  /* --- Additional shadows for effects --- */
-  --shadow-glow-vibrant: 0 0 12px 2px rgba(var(--accent-vibrant-rgb), 0.6);
-  --shadow-glow-cool: 0 0 12px 2px rgba(var(--accent-cool-rgb), 0.5);
-  --text-shadow-vibrant: 0 0 5px rgba(var(--accent-vibrant-rgb), 0.7), 0 0 10px rgba(var(--accent-vibrant-rgb), 0.5);
-  --text-shadow-cool: 0 0 5px rgba(var(--accent-cool-rgb), 0.7), 0 0 10px rgba(var(--accent-cool-rgb), 0.5);
-  --text-shadow-header: 1px 1px 0px rgba(var(--shadow-color-rgb), 0.3), 2px 2px 3px rgba(var(--shadow-color-rgb), 0.2);
-
-  /* --- Neomorphism Shadows (Dark) --- */
-  --shadow-neo-light: 3px 3px 6px rgba(var(--shadow-color-rgb), 0.1), -3px -3px 6px rgba(var(--bg-tertiary-rgb), 0.05); /* Adjusted intensity */
-  --shadow-neo-dark: 3px 3px 6px rgba(0, 0, 0, 0.4), -3px -3px 6px rgba(var(--bg-tertiary-rgb), 0.1); /* Darker shadow */
-  --shadow-neo-inset-light: inset 2px 2px 4px rgba(var(--shadow-color-rgb), 0.1), inset -2px -2px 4px rgba(var(--bg-tertiary-rgb), 0.05); /* Adjusted intensity */
-  --shadow-neo-inset-dark: inset 2px 2px 4px rgba(0, 0, 0, 0.5), inset -2px -2px 4px rgba(var(--bg-tertiary-rgb), 0.1); /* Darker inset */
-
-  color-scheme: dark;
-}
-
-
-/* === Light Mode Theme (Adjusted) === */
-.light {
-  /* --- Blog Fonts are defined in :root --- */
-
-  /* --- Intro Neon & Font Variables (Light Theme) --- */
-  --font-decorative: 'Cinzel Decorative', 'Playfair Display', serif;
-  --intro-neon-text: #8A2BE2;      /* BlueViolet */
-  --intro-neon-glow-1: #8A2BE2;    /* BlueViolet Glow */
-  --intro-neon-glow-2: #FF69B4;    /* HotPink Glow */
-  --intro-deco-border: rgba(var(--accent-highlight-rgb), 0.6);
-
-  /* Ensure background overlay vars are defined */
-  --bg-overlay-start: rgba(251, 246, 239, 0.8);
-  --bg-overlay-end: rgba(251, 246, 239, 0.9);
-
-  /* --- Core Colors (Light Theme) --- */
-  --color-light-parchment: #fbf6ef;
-  --color-light-paper: #f5ede1;
-  --color-light-cream: #ede4d6;
-  --color-light-ink: #4a3f35;
-  --color-light-sepia: #7a6d60;
-  --color-ink-rgb: 74, 63, 53; /* Added RGB for ink */
-
-  /* --- Accent Colors (Light Theme - Brighter) --- */
-  --color-light-burgundy: #b66880; /* Brighter burgundy */
-  --color-light-sage: #7ea196;     /* Brighter sage */
-  --color-light-gold: #b88e62;     /* Brighter gold */
-  --color-light-rose: #d4bbc9;     /* Brighter rose */
-  --color-light-blue: #b5c7d8;     /* Brighter blue */
-  --color-light-alert: #d07676;    /* Brighter alert */
-
-  /* --- Theme Variable Mapping (Light Mode - Updated) --- */
-  --bg-primary: var(--color-light-parchment);
-  --bg-primary-rgb: 251, 246, 239;
-  --bg-secondary: var(--color-light-paper);
-  --bg-secondary-rgb: 245, 237, 225;
-  --bg-tertiary: var(--color-light-cream);
-  --bg-tertiary-rgb: 237, 228, 214;
-  --bg-code: #f0e7db;
-  --bg-blog-paper: #faf3e9; /* Light paper */
-  --bg-blog-paper-rgb: 250, 243, 233;
-
-  /* --- Text Colors (Light Mode - Adjusted) --- */
-  --text-primary: var(--color-light-ink); /* Keep dark ink for main text */
-  --text-primary-rgb: var(--color-ink-rgb); /* Map primary RGB */
-  --text-secondary: #8a7d70;        /* Slightly lighter sepia */
-  --text-secondary-rgb: 138, 125, 112; /* Added RGB for text-secondary */
-  --text-muted: #c0b2a3;            /* Lighter muted */
-  --text-heading: var(--color-light-ink); /* Keep dark ink for headings */
-  --text-code: #635548;
-  --text-on-accent: #ffffff;        /* Keep white on accents */
-
-  /* Accents (Updated) */
-  --accent-primary: var(--color-light-burgundy);
-  --accent-primary-rgb: 182, 104, 128; /* Updated RGB */
-  --accent-secondary: var(--color-light-sage);
-  --accent-secondary-rgb: 126, 161, 150; /* Updated RGB */
-  --accent-highlight: var(--color-light-gold);
-  --accent-highlight-rgb: 184, 142, 98; /* Updated RGB */
-  --accent-muted1: var(--color-light-rose);
-  --accent-muted1-rgb: 212, 187, 201; /* Updated RGB */
-  --accent-muted2: var(--color-light-blue);
-  --accent-muted2-rgb: 181, 199, 216; /* Updated RGB */
-  --accent-alert: var(--color-light-alert);
-  --accent-alert-rgb: 208, 118, 118; /* Updated RGB */
-
-  /* --- Flower Colors (Light Theme) --- */
-  --flower-color-base-light: var(--accent-highlight);
-  --flower-color-alt-light: #fbbf24;
-
-  /* Shadows (Adjusted for light theme) */
-  --shadow-color: rgba(var(--color-ink-rgb), 0.18); /* Use ink RGB */
-  --shadow-color-rgb: var(--color-ink-rgb); /* Use ink RGB */
-  --shadow-color-light: rgba(var(--color-ink-rgb), 0.10); /* Use ink RGB */
-  --shadow-soft: 0 5px 18px var(--shadow-color);
-  --shadow-medium: 0 8px 25px var(--shadow-color);
-  --shadow-inset: inset 0 2px 5px var(--shadow-color-light);
-
-  /* --- Nav Specific Light Vars (Adjusted base colors) --- */
-  --bg-nav-light-start: rgba(251, 246, 239, 0.97);
-  --bg-nav-light-end: rgba(245, 237, 225, 0.99);
-  --bg-nav-light-scrolled-start: rgba(251, 246, 239, 1.0);
-  --bg-nav-light-scrolled-end: rgba(245, 237, 225, 1.0);
-  --nav-border-light-start: rgba(126, 161, 150, 0.25); /* Adjusted sage */
-  --nav-border-light-mid1: rgba(184, 142, 98, 0.65);   /* Adjusted gold */
-  --nav-border-light-mid2: rgba(182, 104, 128, 0.75); /* Adjusted burgundy */
-  --nav-border-light-end: rgba(126, 161, 150, 0.25);   /* Adjusted sage */
-  --nav-shadow-light: rgba(var(--color-ink-rgb), 0.30); /* Use ink RGB */
-
-  /* --- Vibrant Accents (Light Theme) --- */
-  --accent-vibrant: #e5237b; /* Slightly adjusted vibrant pink for light */
-  --accent-vibrant-rgb: 229, 35, 123;
-  --accent-cool: #00b8d4;    /* Slightly adjusted cyan for light */
-  --accent-cool-rgb: 0, 184, 212;
-  --accent-vibrant-dark: #b71561;
-  --accent-cool-dark: #008a9e;
-  --accent-vibrant-light: #ff69b4; /* HotPink */
-  --accent-cool-light: #61dafb; /* Lighter cyan */
-
-  /* --- Additional shadows (Light) --- */
+  /* --- Additional Shadows --- */
   --shadow-glow-vibrant: 0 0 12px 2px rgba(var(--accent-vibrant-rgb), 0.5);
   --shadow-glow-cool: 0 0 12px 2px rgba(var(--accent-cool-rgb), 0.4);
   --text-shadow-vibrant: 0 0 5px rgba(var(--accent-vibrant-rgb), 0.6), 0 0 10px rgba(var(--accent-vibrant-rgb), 0.4);
   --text-shadow-cool: 0 0 5px rgba(var(--accent-cool-rgb), 0.6), 0 0 10px rgba(var(--accent-cool-rgb), 0.4);
   --text-shadow-header: 1px 1px 0px rgba(var(--shadow-color-rgb), 0.3), 2px 2px 3px rgba(var(--shadow-color-rgb), 0.2);
 
-  /* --- Neomorphism Shadows (Light) --- */
-  --shadow-neo-light: 3px 3px 6px rgba(var(--shadow-color-rgb), 0.1), -3px -3px 6px rgba(255, 255, 255, 0.7); /* Light mode outer shadow */
-  --shadow-neo-dark: 3px 3px 6px rgba(var(--shadow-color-rgb), 0.15), -3px -3px 6px rgba(255, 255, 255, 0.7); /* Darker outer shadow for contrast */
-  --shadow-neo-inset-light: inset 2px 2px 4px rgba(var(--shadow-color-rgb), 0.1), inset -2px -2px 4px rgba(255, 255, 255, 0.7); /* Light mode inset */
-  --shadow-neo-inset-dark: inset 2px 2px 4px rgba(var(--shadow-color-rgb), 0.15), inset -2px -2px 4px rgba(255, 255, 255, 0.7); /* Darker inset for contrast */
+  /* --- Neo Shadows --- */
+  --shadow-neo-light: 3px 3px 6px rgba(var(--shadow-color-rgb), 0.1), -3px -3px 6px rgba(255, 255, 255, 0.7);
+  --shadow-neo-dark: 3px 3px 6px rgba(var(--shadow-color-rgb), 0.15), -3px -3px 6px rgba(255, 255, 255, 0.7);
+  --shadow-neo-inset-light: inset 2px 2px 4px rgba(var(--shadow-color-rgb), 0.1), inset -2px -2px 4px rgba(255, 255, 255, 0.7);
+  --shadow-neo-inset-dark: inset 2px 2px 4px rgba(var(--shadow-color-rgb), 0.15), inset -2px -2px 4px rgba(255, 255, 255, 0.7);
 
+  /* Default color scheme */
   color-scheme: light;
+}
+
+/* === DARK THEME OVERRIDES - Higher Specificity === */
+html.dark,
+html[class*="dark"] {
+  /* --- Core Dark Colors --- */
+  --color-dark-bg: #22182b;
+  --color-mid-bg: #402e46;
+  --color-light-bg: #5f4867;
+  --color-ink: #1a111b;
+  --color-parchment: #f5f0e6;
+
+  /* --- Dark Accent Colors --- */
+  --color-burgundy: #d65076;
+  --color-sage: #88b0a4;
+  --color-antique-gold: #d4ac80;
+  --color-dusty-rose: #c8a2ba;
+  --color-powder-blue: #a0b4cb;
+  --color-alert: #e66767;
+
+  /* --- Dark Text Colors --- */
+  --color-text-light: var(--color-parchment);
+  --color-text-mid: #d8cce6;
+  --color-text-dark: var(--color-ink);
+  --color-text-primary-rgb: 245, 240, 230;
+  --color-text-secondary-rgb: 216, 204, 230;
+
+  /* --- DARK THEME VARIABLES --- */
+  --bg-primary: var(--color-dark-bg) !important;
+  --bg-primary-rgb: 34, 24, 43;
+  --bg-secondary: var(--color-mid-bg) !important;
+  --bg-secondary-rgb: 64, 46, 70;
+  --bg-tertiary: var(--color-light-bg) !important;
+  --bg-tertiary-rgb: 95, 72, 103;
+  --bg-code: #201a24 !important;
+  --bg-blog-paper: #302435 !important;
+  --bg-blog-paper-rgb: 48, 36, 53;
+
+  --text-primary: var(--color-text-light) !important;
+  --text-primary-rgb: var(--color-text-primary-rgb);
+  --text-secondary: var(--color-text-mid) !important;
+  --text-secondary-rgb: var(--color-text-secondary-rgb);
+  --text-muted: #a899b8 !important;
+  --text-heading: #ffffff !important;
+  --text-code: var(--color-text-mid) !important;
+  --text-on-accent: #ffffff !important;
+
+  --accent-primary: var(--color-burgundy) !important;
+  --accent-primary-rgb: 214, 80, 118;
+  --accent-secondary: var(--color-sage) !important;
+  --accent-secondary-rgb: 136, 176, 164;
+  --accent-highlight: var(--color-antique-gold) !important;
+  --accent-highlight-rgb: 212, 172, 128;
+  --accent-muted1: var(--color-dusty-rose) !important;
+  --accent-muted1-rgb: 200, 162, 186;
+  --accent-muted2: var(--color-powder-blue) !important;
+  --accent-muted2-rgb: 160, 180, 203;
+  --accent-alert: var(--color-alert) !important;
+  --accent-alert-rgb: 230, 103, 103;
+
+  /* --- Background Overlays --- */
+  --bg-overlay-start: rgba(34, 24, 43, 0.85) !important;
+  --bg-overlay-end: rgba(34, 24, 43, 0.98) !important;
+
+  /* --- Intro Neon --- */
+  --intro-neon-text: #00ffff !important;
+  --intro-neon-glow-1: #00ffff !important;
+  --intro-neon-glow-2: #ff00ff !important;
+  --intro-deco-border: rgba(var(--accent-highlight-rgb), 0.5) !important;
+
+  /* --- Nav Variables --- */
+  --bg-nav-start: rgba(64, 46, 70, 0.96) !important;
+  --bg-nav-end: rgba(34, 24, 43, 0.98) !important;
+  --bg-nav-scrolled-start: rgba(64, 46, 70, 1.0) !important;
+  --bg-nav-scrolled-end: rgba(34, 24, 43, 1.0) !important;
+  --nav-border-start: rgba(136, 176, 164, 0.15) !important;
+  --nav-border-mid1: rgba(212, 172, 128, 0.7) !important;
+  --nav-border-mid2: rgba(214, 80, 118, 0.8) !important;
+  --nav-border-end: rgba(136, 176, 164, 0.15) !important;
+  --nav-shadow: rgba(26, 17, 27, 0.7) !important;
+
+  /* --- Shadow Variables --- */
+  --shadow-color: rgba(12, 10, 12, 0.4) !important;
+  --shadow-color-rgb: 12, 10, 12;
+  --shadow-color-light: rgba(12, 10, 12, 0.2) !important;
+
+  /* --- Flower Colors --- */
+  --flower-color-base: var(--accent-highlight) !important;
+  --flower-color-alt: #fde047 !important;
+
+  /* --- Neo Shadows --- */
+  --shadow-neo-light: 3px 3px 6px rgba(var(--shadow-color-rgb), 0.1), -3px -3px 6px rgba(var(--bg-tertiary-rgb), 0.05) !important;
+  --shadow-neo-dark: 3px 3px 6px rgba(0, 0, 0, 0.4), -3px -3px 6px rgba(var(--bg-tertiary-rgb), 0.1) !important;
+  --shadow-neo-inset-light: inset 2px 2px 4px rgba(var(--shadow-color-rgb), 0.1), inset -2px -2px 4px rgba(var(--bg-tertiary-rgb), 0.05) !important;
+  --shadow-neo-inset-dark: inset 2px 2px 4px rgba(0, 0, 0, 0.5), inset -2px -2px 4px rgba(var(--bg-tertiary-rgb), 0.1) !important;
+
+  /* Update color scheme */
+  color-scheme: dark;
+}
+
+/* Ensure dark mode overrides have sufficient specificity */
+html.dark body,
+html[class*="dark"] body {
+  background-color: #22182b !important;
+  color: #f5f0e6 !important;
+}
+
+/* Apply background transitions */
+html, body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ensure theme transitions apply to all elements */
+html.theme-transitioning,
+html.theme-transitioning body,
+html.theme-transitioning nav,
+html.theme-transitioning header,
+html.theme-transitioning footer,
+html.theme-transitioning main,
+html.theme-transitioning section,
+html.theme-transitioning div {
+  transition: var(--transition-theme) !important;
+  transition-delay: 0ms !important;
 }
 
 /* ==========================================================================
@@ -322,13 +316,23 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
-html, body {
+body {
   margin: 0;
   padding: 0;
   font-family: var(--font-body);
+  line-height: 1.75;
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  line-height: 1.75;
+}
+
+/* Fix for buttons and interactive elements in dark mode */
+html.dark button,
+html.dark .btn,
+html.dark a.btn,
+html[class*="dark"] button,
+html[class*="dark"] .btn,
+html[class*="dark"] a.btn {
+  color: var(--text-primary) !important;
 }
 
 /* ==========================================================================
@@ -340,8 +344,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.3;
   margin: 1.8em 0 0.8em;
-  /* Optional Text Shadow */
-  /* text-shadow: var(--text-shadow-header); */
 }
 h1 { font-size: clamp(2.3rem, 5.5vw, 3.4rem); letter-spacing: -0.02em; }
 h2 { font-size: clamp(1.9rem, 4.5vw, 2.8rem); }
@@ -350,7 +352,7 @@ h4 { font-size: clamp(1.25rem, 3.5vw, 1.7rem); }
 p {
   margin-bottom: 1.4em;
   color: var(--text-primary);
-  max-width: 70ch; /* Good default for readability */
+  max-width: 70ch;
 }
 a {
   color: var(--accent-primary);
@@ -363,9 +365,9 @@ a:hover, a:focus {
   color: var(--accent-highlight);
   border-bottom-color: var(--accent-highlight);
   border-bottom-style: solid;
-  outline: none; /* Add specific outline for focus later if needed */
+  outline: none;
 }
-strong { font-weight: 600; color: inherit; } /* Use 600 or 700 for strong */
+strong { font-weight: 600; color: inherit; }
 em { font-style: italic; color: var(--accent-secondary); }
 
 /* ==========================================================================
@@ -379,7 +381,7 @@ code:not(pre > code) {
   font-size: 0.9em;
   font-family: var(--font-mono);
   border: 1px solid var(--bg-tertiary);
-  word-wrap: break-word; /* Ensure long code snippets wrap */
+  word-wrap: break-word;
 }
 pre {
   font-family: var(--font-mono);
@@ -388,7 +390,7 @@ pre {
   padding: 1.4rem 1.6rem;
   border-radius: var(--radius-lg);
   margin: 2rem 0;
-  overflow-x: auto; /* Allow horizontal scroll for long lines */
+  overflow-x: auto;
   border: 1px solid var(--bg-tertiary);
   font-size: 0.95rem;
   line-height: 1.75;
@@ -400,12 +402,11 @@ pre > code {
   border: none;
   font-size: inherit;
   color: inherit;
-  /* Override inline code styles within pre */
   border-radius: 0;
   margin: 0;
-  display: block; /* Ensure it takes full width for scrolling */
-  overflow-x: visible; /* Let pre handle scrolling */
-  word-wrap: normal; /* Prevent wrapping inside pre */
+  display: block;
+  overflow-x: visible;
+  word-wrap: normal;
 }
 blockquote {
   border-left: 4px solid var(--accent-muted1);
@@ -419,7 +420,7 @@ blockquote {
 blockquote p { margin-bottom: 0.5em; }
 blockquote p:last-child { margin-bottom: 0; }
 blockquote footer {
-  font-family: var(--font-meta-blog); /* Use blog meta font */
+  font-family: var(--font-meta-blog);
   font-style: normal;
   font-size: 0.9em;
   color: var(--text-muted);
@@ -435,11 +436,35 @@ hr {
 }
 
 /* ==========================================================================
+   Custom Button Styles
+   ========================================================================== */
+
+/* Fix for contact button text color */
+.contact-btn {
+  color: var(--color-light-ink, #4a3f35) !important; /* Light mode - dark text */
+  transition: all 0.2s ease-out, color 0.3s ease;
+}
+
+html.dark .contact-btn,
+html[class*="dark"] .contact-btn {
+  color: white !important; /* Dark mode - white text */
+}
+
+.contact-btn:hover {
+  color: var(--color-light-ink, #4a3f35) !important; /* Light mode hover */
+}
+
+html.dark .contact-btn:hover,
+html[class*="dark"] .contact-btn:hover {
+  color: white !important; /* Dark mode hover */
+}
+
+/* ==========================================================================
    Other Base Styles
    ========================================================================== */
 ::selection {
   background-color: rgba(var(--accent-highlight-rgb), 0.8);
-  color: var(--bg-primary); /* Text color on selection */
+  color: var(--bg-primary);
 }
 
 /* Basic Scrollbar Styling */
@@ -456,7 +481,7 @@ html.theme-transitioning *::after {
   transition-delay: 0ms !important;
 }
 
-/* Allow post content font size to transition smoothly (e.g., for reading mode) */
+/* Allow post content font size to transition smoothly */
 .post-content {
   transition: font-size 0.2s ease-out;
 }
@@ -471,4 +496,42 @@ html.theme-transitioning *::after {
   syntax: '<angle>';
   initial-value: 0deg;
   inherits: false;
+}
+
+/* Force dark styles at root level */
+.force-dark,
+html.dark body *, 
+html[class*="dark"] body * {
+  --bg-color: var(--bg-primary) !important;
+  --text-color: var(--text-primary) !important;
+}
+
+/* Debug helper - use to identify which class isn't getting dark styles */
+.theme-debug {
+  position: relative;
+}
+
+.theme-debug::after {
+  content: attr(class);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: red;
+  color: white;
+  font-size: 10px;
+  z-index: 9999;
+  padding: 2px;
+}
+
+/* Tailwind CSS conflicts fix */
+html.dark [class*="bg-"],
+html[class*="dark"] [class*="bg-"] {
+  --tw-bg-opacity: 1 !important;
+  background-color: var(--bg-primary) !important;
+}
+
+html.dark [class*="text-"],
+html[class*="dark"] [class*="text-"] {
+  --tw-text-opacity: 1 !important;
+  color: var(--text-primary) !important;
 }
