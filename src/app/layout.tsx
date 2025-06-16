@@ -41,6 +41,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = generateSEOMetadata('/');
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  console.log("GA_ID == ", GA_ID); // Debugging line to check GA_ID
   return (
     <html lang="en" className={`
             ${inter.variable}
