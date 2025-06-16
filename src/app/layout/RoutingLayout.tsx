@@ -2,9 +2,7 @@
 import ComponentLayout from "./ComponentLayout";
 import { usePathname } from "next/navigation";
 import { PropsWithChildren } from "react";
-import Script from "next/script";
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID; // Read GA ID from env
 
 export default function RoutingLayout({ children }: PropsWithChildren) {
   const pathname = usePathname();
@@ -35,26 +33,7 @@ export default function RoutingLayout({ children }: PropsWithChildren) {
           <link rel="manifest" href="/site.webmanifest" />
           <title>Velvet Web</title>
 
-          {/* Google Analytics */}
-          {GA_ID && (
-            <>
-              <Script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
-              <Script
-                id="google-analytics"
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                  __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', '${GA_ID}', {
-                      page_path: window.location.pathname,
-                    });
-                  `,
-                }}
-              />
-            </>
-          )}
+          
 
           <meta
             name="description"
