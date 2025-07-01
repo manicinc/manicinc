@@ -81,6 +81,16 @@ draft: false
 ✅ **Accessibility**: WCAG compliance, semantic HTML  
 ✅ **Analytics**: Privacy-first tracking with consent management  
 
+### Configuration
+
+```typescript
+// src/app/open-source/OpenSourcePageClient.tsx
+const GITHUB_USERNAME = 'manicinc';           // Change to your GitHub username
+const GITHUB_SPONSOR_URL = `https://github.com/sponsors/${GITHUB_USERNAME}`;
+const TWITTER_HANDLE = "manicagency";         // Optional: X/Twitter handle
+const BUYMEACOFFEE_USERNAME = null;           // Optional: Buy Me a Coffee username
+```
+
 ## Build Optimization
 
 **Smart Image Processing**: Detects already-optimized images, skips unnecessary work  
@@ -101,7 +111,7 @@ draft: false
 
 **Local Testing**: `npm run build:static && npm run start:static`
 
-### Development Features
+### Development Featuresgit status
 - **Intelligent Optimization**: Detects already-compressed images
 - **Force Override**: `--force` flag for complete re-optimization  
 - **Build Statistics**: Shows exactly what was optimized vs skipped
