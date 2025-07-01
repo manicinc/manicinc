@@ -20,6 +20,9 @@
   line-height: 1.3;
   margin: 2.5em 0 1.2em;
   clear: both;
+  /* Remove any text decoration */
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 /* Add specific heading styles as needed */
 .blog-content .md-h2 {
@@ -84,9 +87,20 @@
   background-image: linear-gradient(to right, rgba(var(--accent-highlight-rgb), 0.1) 0%, rgba(var(--accent-highlight-rgb), 0) 100%);
   background-position: 0 100%; background-repeat: no-repeat; background-size: 0% 2px;
   transition: color 0.3s ease, border-color 0.3s ease, background-size 0.3s ease;
+  /* Prevent code inside links from inheriting link decoration */
+  text-underline-offset: 4px;
 }
 .blog-content .md-link:hover, .blog-content .md-link:focus {
   color: var(--accent-highlight); border-bottom-color: transparent; background-size: 100% 2px; outline: none;
+}
+
+/* Ensure code inside links doesn't inherit link styling */
+.blog-content .md-link code,
+.blog-content .md-link .inline-code {
+  color: var(--accent-primary) !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
+  background: rgba(var(--accent-primary-rgb), 0.15) !important;
 }
 
 /* --- Lists --- */
@@ -119,6 +133,8 @@
   position: relative; margin: 2.5rem 0; border: 1px solid var(--bg-tertiary);
   border-radius: var(--radius-lg); overflow: hidden;
   box-shadow: var(--shadow-inset), 0 2px 5px rgba(var(--shadow-color), 0.1);
+  /* Prevent any text decoration bleeding */
+  text-decoration: none;
 }
 .code-block-header {
   display: flex; justify-content: space-between; align-items: center;
@@ -128,16 +144,23 @@
 .code-language {
   font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);
   text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;
+  /* Remove any inherited text decoration */
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 .code-copy-button {
   font-family: var(--font-meta-blog); font-size: 0.75rem; font-weight: 600;
   background-color: var(--bg-secondary); color: var(--text-secondary);
   border: 1px solid var(--bg-tertiary); padding: 0.3rem 0.8rem; border-radius: var(--radius-base);
   cursor: pointer; transition: all var(--transition-fast); line-height: 1;
+  /* Remove any text decoration */
+  text-decoration: none !important;
+  border-bottom: 1px solid var(--bg-tertiary) !important; /* Keep only the border we want */
 }
 .code-copy-button:hover {
   background-color: var(--accent-secondary); color: var(--text-on-accent);
   border-color: var(--accent-secondary); transform: scale(1.05);
+  text-decoration: none !important;
 }
 .code-copy-button:active { transform: scale(0.98); }
 
@@ -151,13 +174,21 @@
   overflow-x: auto !important; white-space: pre !important; /* Ensure pre formatting */
   /* Themed scrollbar */
   scrollbar-color: var(--accent-muted2) var(--bg-tertiary); scrollbar-width: thin;
-  /* Force removal of potential artifacts from inline styles */
-  & code, & code *, & .token {
+  /* Force removal of any text decoration from syntax highlighter */
+  text-decoration: none !important;
+  
+  /* Ensure all syntax highlighter content has no text decoration */
+  & code,
+  & code *,
+  & .token,
+  & span {
      text-shadow: none !important;
      outline: none !important;
      border: none !important;
      box-shadow: none !important;
      text-decoration: none !important;
+     text-underline-offset: unset !important;
+     border-bottom: none !important;
   }
 }
 .code-block-wrapper > div[class*="react-syntax-highlighter"]::-webkit-scrollbar { height: 8px; width: 8px; background-color: var(--bg-tertiary); }
@@ -167,12 +198,33 @@
 
 /* --- Inline Code --- */
 .blog-content .inline-code {
-  font-family: var(--font-mono); color: var(--accent-primary); /* Use accent */
-  background: rgba(var(--accent-primary-rgb), 0.1); /* Tinted background */
+  font-family: var(--font-mono);
+  color: var(--accent-primary);
+  background: rgba(var(--accent-primary-rgb), 0.1);
   border: 1px solid rgba(var(--accent-primary-rgb), 0.2);
-  border-radius: var(--radius-base); font-size: 0.88em; /* Slightly smaller */
-  padding: 0.15em 0.4em; margin: 0 0.1em; /* Add slight margin */
-  word-wrap: break-word; white-space: normal;
+  border-radius: var(--radius-base);
+  font-size: 0.88em;
+  padding: 0.15em 0.4em;
+  margin: 0 0.1em;
+  word-wrap: break-word;
+  white-space: normal;
+  /* Remove any text decoration */
+  text-decoration: none !important;
+  text-underline-offset: unset !important;
+  border-bottom: none !important;
+  /* Prevent highlighting issues */
+  background-clip: padding-box;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Override any inherited link styles for inline code */
+.blog-content a .inline-code,
+.blog-content .md-link .inline-code {
+  color: var(--accent-primary) !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  background: rgba(var(--accent-primary-rgb), 0.15) !important;
 }
 
 /* --- Blockquotes (Standard) --- */

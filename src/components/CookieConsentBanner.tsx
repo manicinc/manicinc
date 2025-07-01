@@ -569,15 +569,27 @@ export function CookieConsentBanner({ onConsentChange }: CookieConsentBannerProp
             .cookie-consent-banner {
               margin: 0;
               border-radius: 12px 12px 0 0;
+              max-height: calc(100vh - 60px); /* Prevent overlapping with nav */
+              overflow-y: auto; /* Allow scrolling if content is too tall */
             }
 
             .cookie-banner-content {
               padding: 1.25rem;
+              max-height: calc(100vh - 120px); /* Account for banner padding */
+              overflow-y: auto;
+            }
+            
+            .cookie-preferences-details {
+              max-height: 50vh; /* Limit expanded details height */
+              overflow-y: auto;
+              padding-top: 0.75rem;
+              margin-bottom: 1rem;
             }
 
             .cookie-category-header {
               flex-direction: column;
               gap: 0.75rem;
+              padding: 0.5rem;
             }
 
             .cookie-category-toggle {
@@ -593,6 +605,50 @@ export function CookieConsentBanner({ onConsentChange }: CookieConsentBannerProp
               flex: 1;
               justify-content: center;
               min-width: 0;
+              font-size: 0.75rem; /* Smaller text on mobile */
+              padding: 0.4rem 0.8rem; /* Smaller padding */
+            }
+            
+            /* Ensure modal doesn't go above viewport */
+            .cookie-banner-header {
+              position: sticky;
+              top: 0;
+              background: rgba(var(--bg-primary-rgb), 0.98);
+              z-index: 10;
+              margin-bottom: 0.75rem;
+              padding-bottom: 0.5rem;
+              border-bottom: 1px solid rgba(var(--text-primary-rgb), 0.1);
+            }
+            
+            .cookie-banner-actions {
+              position: sticky;
+              bottom: 0;
+              background: rgba(var(--bg-primary-rgb), 0.98);
+              padding-top: 0.75rem;
+              border-top: 1px solid rgba(var(--text-primary-rgb), 0.1);
+              margin-top: 0.75rem;
+              margin-bottom: 0;
+            }
+          }
+
+          /* Ultra-small screens */
+          @media (max-width: 480px) {
+            .cookie-consent-banner {
+              max-height: calc(100vh - 40px); /* Even more conservative on tiny screens */
+            }
+            
+            .cookie-banner-content {
+              padding: 1rem;
+              max-height: calc(100vh - 80px);
+            }
+            
+            .cookie-preferences-details {
+              max-height: 40vh; /* Even smaller on tiny screens */
+            }
+            
+            .cookie-btn {
+              font-size: 0.7rem;
+              padding: 0.35rem 0.6rem;
             }
           }
 
