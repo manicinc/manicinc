@@ -2,8 +2,51 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Manic Agency', // Adjust title
-  // Add description if needed
+    title: 'Privacy Policy - Data Protection & Privacy | Manic Agency',
+    description: 'Learn how Manic Agency protects your privacy and handles your data. Read our comprehensive privacy policy covering data collection, cookies, and your rights.',
+    keywords: [
+        'privacy policy',
+        'data protection',
+        'privacy rights',
+        'cookie policy',
+        'data collection',
+        'GDPR compliance',
+        'user privacy',
+        'data security',
+        'personal information',
+        'privacy practices'
+    ],
+    authors: [{ name: 'Manic Agency', url: 'https://manic.agency' }],
+    alternates: {
+        canonical: '/privacy'
+    },
+    openGraph: {
+        type: 'website',
+        url: '/privacy',
+        title: 'Privacy Policy - Data Protection & Privacy | Manic Agency',
+        description: 'Learn how Manic Agency protects your privacy and handles your data. Read our comprehensive privacy policy.',
+        images: [
+            {
+                url: '/og-default.png',
+                width: 1200,
+                height: 630,
+                alt: 'Manic Agency Privacy Policy'
+            }
+        ]
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Privacy Policy - Data Protection & Privacy | Manic Agency',
+        description: 'Learn how Manic Agency protects your privacy and handles your data. Read our comprehensive privacy policy.',
+        images: [{
+            url: '/og-default.png',
+            alt: 'Manic Agency Privacy Policy'
+        }]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
 };
 
 // Basic page structure - use your standard layout components

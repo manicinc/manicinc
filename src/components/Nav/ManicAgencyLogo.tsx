@@ -46,12 +46,13 @@ const ManicAgencyLogo = () => {
             </defs>
 
             <g transform="translate(0, 5)">
-                {/* Base Text Style Attributes */}
+                {/* Base Text Style Attributes - Desktop Version */}
                 <text
                     textAnchor="middle" x="190" y="50%" dominantBaseline="central"
                     fontFamily="var(--font-logo, Mona Sans, sans-serif)" fontSize="40"
                     fontWeight="900" letterSpacing="3" lengthAdjust="spacingAndGlyphs"
                     fill={`url(#${gradientId})`}
+                    className="logo-text-desktop"
                 >
                     {/* MANIC Text - Animated Opacity */}
                     <tspan>MANIC AGENCY</tspan>
@@ -67,8 +68,40 @@ const ManicAgencyLogo = () => {
                     fontFamily="var(--font-logo, Mona Sans, sans-serif)" fontSize="40"
                     fontWeight="900" letterSpacing="3" lengthAdjust="spacingAndGlyphs"
                     fill={`url(#${gradientId}-alert)`} opacity="0"
+                    className="logo-text-desktop"
                 >
                     <tspan>PANIC AGENCY</tspan>
+                    <animate
+                        attributeName="opacity" values={panicOpacityValues}
+                        keyTimes={keyTimes} dur={duration} repeatCount="indefinite"
+                    />
+                </text>
+
+                {/* Mobile/Tablet Version - Shorter Text */}
+                <text
+                    textAnchor="middle" x="190" y="50%" dominantBaseline="central"
+                    fontFamily="var(--font-logo, Mona Sans, sans-serif)" fontSize="40"
+                    fontWeight="900" letterSpacing="3" lengthAdjust="spacingAndGlyphs"
+                    fill={`url(#${gradientId})`}
+                    className="logo-text-mobile"
+                >
+                    {/* MANIC Text - Animated Opacity */}
+                    <tspan>MANIC</tspan>
+                    <animate
+                        attributeName="opacity" values={manicOpacityValues}
+                        keyTimes={keyTimes} dur={duration} repeatCount="indefinite"
+                    />
+                </text>
+
+                {/* PANIC Text - Mobile Version */}
+                <text
+                    textAnchor="middle" x="190" y="50%" dominantBaseline="central"
+                    fontFamily="var(--font-logo, Mona Sans, sans-serif)" fontSize="40"
+                    fontWeight="900" letterSpacing="3" lengthAdjust="spacingAndGlyphs"
+                    fill={`url(#${gradientId}-alert)`} opacity="0"
+                    className="logo-text-mobile"
+                >
+                    <tspan>PANIC</tspan>
                     <animate
                         attributeName="opacity" values={panicOpacityValues}
                         keyTimes={keyTimes} dur={duration} repeatCount="indefinite"

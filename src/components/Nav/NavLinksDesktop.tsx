@@ -80,6 +80,14 @@ const NavLinksDesktop: React.FC<NavLinksDesktopProps> = ({ isBlog, isActivePath,
                 </a>
             </Link>
 
+            {/* Games Button (Always shown) */}
+            <Link href="https://games.manic.agency" legacyBehavior>
+                <a className={styles.gamesBtn} data-nav-id="games" onClick={closeMenu} target="_blank" rel="noopener noreferrer">
+                    <span>Games</span>
+                    <img src="/controller-button.svg" alt="Game Controller" className={styles.gamesSvg} />
+                </a>
+            </Link>
+
             {/* Contact Button (Always shown) */}
             <Link href="/contact" legacyBehavior>
                  <a

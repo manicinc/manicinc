@@ -3,15 +3,15 @@ import { Metadata } from 'next';
 
 // Constants for your site
 const SITE_NAME = 'Manic Agency';
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://manicinc.github.io';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://manic.agency';
 const TWITTER_HANDLE = '@manicagency';
 
 // SEO configuration for different sections
 const seoConfig = {
   default: {
     title: SITE_NAME,
-    description: 'Manic Agency: Metaverses intersect here. Exploring Web3, AI, AR/VR, and creative technology.',
-    keywords: ['Web Development', 'Design', 'AR', 'VR', 'AI', 'Web3', 'Digital Agency', 'Los Angeles', 'Lagos', 'Creative Technology', 'SynthStack', 'Manic Inc'],
+    description: 'Manic Agency: Where metaverses intersect. Digital agency specializing in Web3, AI, AR/VR, creative technology, and innovative game publishing through Manic Games platform.',
+    keywords: ['Web Development', 'Design', 'AR', 'VR', 'AI', 'Web3', 'Digital Agency', 'Los Angeles', 'Lagos', 'Creative Technology', 'SynthStack', 'Manic Inc', 'Game Publishing', 'Manic Games', 'Text Games', 'Game Development', 'Publishing Platform'],
     ogImage: '/og-default.png',
     themeColor: {
       light: '#FBF6EF', // Light mode theme color

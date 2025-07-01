@@ -123,6 +123,40 @@
      background: linear-gradient(135deg, var(--accent-cool) 0%, var(--accent-vibrant) 70%, var(--accent-vibrant-dark) 100%); /* Keep same gradient for light mode? Adjust if needed */
 }
 
+/* ======================================== */
+/* Responsive Logo Text Behavior            */
+/* ======================================== */
+
+/* Desktop version - show full "MANIC AGENCY" / "PANIC AGENCY" */
+.manicLogoSvg .logo-text-desktop {
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+}
+
+.manicLogoSvg .logo-text-mobile {
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+
+/* Tablet/smaller screens - show short "MANIC" / "PANIC" with fade transition */
+@media (max-width: 1200px) {
+    .manicLogoSvg .logo-text-desktop {
+        opacity: 0;
+    }
+    
+    .manicLogoSvg .logo-text-mobile {
+        opacity: 1;
+    }
+}
+
+/* Further optimize for very small screens */
+@media (max-width: 640px) {
+    .manicLogoSvg {
+        width: auto;
+        height: 2rem; /* Smaller logo on mobile */
+    }
+}
+
 
 @keyframes animatedGradientCoolVibrant {
   0% { background-position: 0% 50%; }
@@ -869,6 +903,13 @@
     /* .tagline { display: none; } */
 }
 
+/* NEW: Hide tagline around 800px where links get too crowded */
+@media (min-width: 768px) and (max-width: 1200px) {
+    .tagline {
+        display: none !important; /* Hide "metaverses intersect here" tagline */
+    }
+}
+
 /* Slightly larger screens if still needed */
 @media (min-width: 1024px) and (max-width: 1199px) {
      .navLink {
@@ -889,158 +930,179 @@
     }
 }
 
-/* src/components/Nav/Nav.module.css */
+/* ======================================== */
+/* Games Button Styles                      */
+/* ======================================== */
 
-/* Add these new rules */
-
-/* ====================================================== */
-/* Conditional Hover Effects (Looking Glass / Mirror)     */
-/* ====================================================== */
-
-/* --- 1. Blog Link Hover (When NOT on Blog Page) --- */
-
-/* Target: Blog nav link hover, when body does NOT have .is-blog class */
-/* We'll use a pseudo-element for the "reflection" */
-
-/* --- 1. Blog Link Hover (When NOT on Blog Page) --- */
-
-/* Target: Blog nav link hover, when body does NOT have .is-blog class */
-:global(body:not(.is-blog)) .navLink[data-nav-id="blog"] {
-    position: relative; /* Ensure positioning context */
-    /* overflow: visible !important; */ /* Explicitly allow overflow if needed, but removing from base .navLink is better */
-}
-
-:global(body:not(.is-blog)) .navLink[data-nav-id="blog"]::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 100%; /* Start below the link */
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
+.gamesBtn {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    font-family: inherit;
-    font-weight: inherit;
-    letter-spacing: inherit;
-    color: var(--accent-highlight);
-    text-shadow: 0 0 8px rgba(var(--accent-highlight-rgb), 0.6);
-    /* Optional subtle background */
-    /* background: linear-gradient(to bottom, rgba(var(--bg-secondary-rgb), 0.1) 0%, rgba(var(--bg-secondary-rgb), 0.5) 100%); */
-    opacity: 0; /* Start fully transparent */
-    transform: scaleY(-1) translateY(10%); /* Start slightly lower & flipped */
-    transform-origin: center top;
-    filter: blur(2px); /* Start more blurred */
-    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
-                opacity 0.3s ease, /* Fade in */
-                filter 0.4s cubic-bezier(0.23, 1, 0.32, 1); /* Unblur */
-    pointer-events: none;
-    z-index: 1; /* Below main text */
-}
-
-:global(body:not(.is-blog)) .navLink[data-nav-id="blog"]:hover .linkText {
-    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), color 0.2s ease;
-    transform: translateY(-20%); /* Move original text up more */
-    color: var(--accent-highlight);
-}
-
-:global(body:not(.is-blog)) .navLink[data-nav-id="blog"]:hover::after {
-    opacity: 1; /* Fade in */
-    transform: scaleY(-1) translateY(-100%); /* Slide up into view */
-    filter: blur(0); /* Remove blur */
-}
-
-/* --- 2. Logo Hover (When ON Blog Page) - (Keep this section as is from before) --- */
-.logoLink {
-    perspective: 800px;
-}
-.logoText,
-.ManicAgencyLogoComponentInternalTextClass {
-     display: inline-block;
-     transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-     transform-style: preserve-3d;
-     will-change: transform;
-     position: relative;
-     z-index: 1;
-}
-/* Optional Backface styles here if you added them */
-/* :global(body.is-blog) .logoLink:hover .logoText, etc... */
-:global(body.is-blog) .logoLink:hover .logoText,
-:global(body.is-blog) .logoLink:hover .ManicAgencyLogoComponentInternalTextClass {
-    transform: rotateY(180deg);
-}
-
-/* Adjustments for light mode */
-:global(.light body:not(.is-blog)) .navLink[data-nav-id="blog"]::after {
-    /* Optional light mode background adjustment if needed */
-    /* background: linear-gradient(to bottom, rgba(var(--bg-secondary-rgb), 0.1) 0%, rgba(var(--bg-secondary-rgb), 0.5) 100%); */
-    color: var(--accent-highlight);
-    text-shadow: 0 0 8px rgba(var(--accent-highlight-rgb), 0.5);
-}
-/* Light mode for logo hover if needed */
-/* :global(.light body.is-blog) .logoText::after, etc... */
-
-/* --- 2. Logo Hover (When ON Blog Page) --- */
-
-/* Target: Logo link hover, when body HAS .is-blog class */
-/* We'll add a 3D flip effect to the logo text container */
-.logoLink {
-    /* Ensure perspective is set for 3D transforms */
-    perspective: 800px;
-}
-
-/* The inner text element needs transform-style */
-.logoText,
-.ManicAgencyLogoComponentInternalTextClass {
-     display: inline-block; /* Needed for transform */
-     transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1); /* Add transition */
-     transform-style: preserve-3d; /* Crucial for 3D */
-     will-change: transform;
-     position: relative; /* For pseudo-element if needed */
-     z-index: 1;
-}
-
-/* Optional: Add a "backface" element */
-/* .logoText::after,
-.ManicAgencyLogoComponentInternalTextClass::after {
-    content: "HOME"; // Or an icon like ←
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.8em; // Smaller text
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    background: 
+        linear-gradient(90deg, #000, #000) padding-box,
+        linear-gradient(45deg, #00ff41, #0080ff, #ff0080, #00ff41) border-box;
+    color: #00ff41;
+    text-decoration: none !important;
+    border-bottom: none !important;
     font-family: var(--font-mono);
-    color: var(--accent-cool); // Different color
-    background: var(--bg-secondary); // Solid background
-    transform: rotateY(180deg); // Pre-rotated
-    backface-visibility: hidden; // Hide when facing away
-    z-index: 0;
-    border-radius: inherit; // Match parent rounding if any
-} */
-
-/* Apply the flip on hover when .is-blog is present */
-:global(body.is-blog) .logoLink:hover .logoText,
-:global(body.is-blog) .logoLink:hover .ManicAgencyLogoComponentInternalTextClass {
-    transform: rotateY(180deg); /* Flip the text */
-     /* If using ::after for backface: */
-     /* Add slight delay so backface shows after flip starts */
-     /* transition-delay: 0.1s; */
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: visible;
+    min-height: 36px;
+    justify-content: center;
+    transform: translateZ(0);
+    will-change: transform, filter, text-shadow;
+    white-space: nowrap;
+    box-shadow: 
+        0 0 10px rgba(0, 255, 65, 0.3),
+        inset 0 0 10px rgba(0, 255, 65, 0.1);
+    filter: brightness(1);
 }
 
-/* Hide the original text's front face during flip */
-/* :global(body.is-blog) .logoLink:hover .logoText {
-     backface-visibility: hidden;
-} */
-
-/* Adjustments for light mode if needed */
-:global(.light body:not(.is-blog)) .navLink[data-nav-id="blog"]::after {
-    background: linear-gradient(to bottom, rgba(var(--bg-secondary-rgb), 0.1) 0%, rgba(var(--bg-secondary-rgb), 0.5) 100%);
-    color: var(--accent-highlight); /* Ensure color matches */
-    text-shadow: 0 0 8px rgba(var(--accent-highlight-rgb), 0.5);
+/* Terminal brackets */
+.gamesBtn::before {
+    content: "[ ";
+    color: #0080ff;
+    font-weight: 400;
 }
 
-:global(.light body.is-blog) .logoText::after,
-:global(.light body.is-blog) .ManicAgencyLogoComponentInternalTextClass::after {
-    /* Adjust backface style for light mode if using it */
-     /* color: var(--accent-cool); */
-     /* background: var(--bg-secondary); */
+.gamesBtn::after {
+    content: " ]";
+    color: #0080ff;
+    font-weight: 400;
+}
+
+.gamesBtn:hover,
+.gamesBtn:focus-visible {
+    transform: translateY(-2px);
+    color: #ffffff;
+    background: 
+        linear-gradient(90deg, rgba(0, 255, 65, 0.1), rgba(0, 255, 65, 0.1)) padding-box,
+        linear-gradient(45deg, #00ff41, #0080ff, #ff0080, #00ff41) border-box;
+    box-shadow: 
+        0 0 20px rgba(0, 255, 65, 0.6),
+        0 0 40px rgba(0, 255, 65, 0.3),
+        inset 0 0 20px rgba(0, 255, 65, 0.2);
+    filter: brightness(1.2);
+    text-shadow: 
+        0 0 5px rgba(0, 255, 65, 0.8),
+        0 0 10px rgba(0, 255, 65, 0.6);
+    animation: holographicPulse 2s ease-in-out infinite;
+}
+
+.gamesBtn:hover::before,
+.gamesBtn:hover::after {
+    color: #ff0080;
+    text-shadow: 0 0 3px rgba(255, 0, 128, 0.8);
+}
+
+.gamesBtn:active {
+    transform: translateY(0);
+    filter: brightness(0.9);
+}
+
+/* Light mode adjustments */
+:global(.light) .gamesBtn {
+    background: 
+        linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)) padding-box,
+        linear-gradient(45deg, #00ff41, #0080ff, #ff0080, #00ff41) border-box;
+    color: #0080ff;
+    box-shadow: 
+        0 0 8px rgba(0, 128, 255, 0.4),
+        inset 0 0 8px rgba(0, 128, 255, 0.1);
+}
+
+:global(.light) .gamesBtn::before,
+:global(.light) .gamesBtn::after {
+    color: #00ff41;
+}
+
+:global(.light) .gamesBtn:hover {
+    color: #0080ff;
+    background: 
+        linear-gradient(90deg, rgba(0, 128, 255, 0.1), rgba(0, 128, 255, 0.1)) padding-box,
+        linear-gradient(45deg, #00ff41, #0080ff, #ff0080, #00ff41) border-box;
+    box-shadow: 
+        0 0 15px rgba(0, 128, 255, 0.6),
+        0 0 30px rgba(0, 128, 255, 0.3),
+        inset 0 0 15px rgba(0, 128, 255, 0.2);
+}
+
+.gamesSvg {
+    width: 1.2em;
+    height: 1.2em;
+    transition: transform var(--transition-fast);
+    animation: gamesPulse 2s ease-in-out infinite;
+    filter: brightness(1);
+}
+
+.gamesBtn:hover .gamesSvg {
+    animation: gamesRotate 0.6s ease-out, gamesPulse 2s ease-in-out infinite;
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+@keyframes holographicPulse {
+    0%, 100% { 
+        filter: brightness(1.2) hue-rotate(0deg);
+        text-shadow: 
+            0 0 5px rgba(0, 255, 65, 0.8),
+            0 0 10px rgba(0, 255, 65, 0.6);
+    }
+    33% { 
+        filter: brightness(1.3) hue-rotate(30deg);
+        text-shadow: 
+            0 0 8px rgba(0, 128, 255, 0.9),
+            0 0 12px rgba(0, 128, 255, 0.7);
+    }
+    66% { 
+        filter: brightness(1.4) hue-rotate(60deg);
+        text-shadow: 
+            0 0 6px rgba(255, 0, 128, 0.8),
+            0 0 12px rgba(255, 0, 128, 0.6);
+    }
+}
+
+@keyframes gamesPulse {
+    0%, 100% { 
+        opacity: 1; 
+        filter: drop-shadow(0 0 4px currentColor);
+    }
+    50% { 
+        opacity: 0.8; 
+        filter: drop-shadow(0 0 8px currentColor);
+    }
+}
+
+@keyframes gamesRotate {
+    0% { transform: rotate(0deg) scale(1.1); }
+    50% { transform: rotate(180deg) scale(1.2); }
+    100% { transform: rotate(360deg) scale(1.1); }
+}
+
+
+
+/* Mobile games button */
+.mobileGames {
+    margin: 0.5rem 1.5rem;
+    display: block;
+    text-align: center;
+    width: calc(100% - 3rem);
+    font-size: 0.85rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    /* Inherit holographic styling from .gamesBtn */
+    font-family: var(--font-mono);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    white-space: nowrap;
 }

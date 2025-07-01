@@ -2,38 +2,60 @@
 // V2 - CORRECTED: Server Component for the main project listing page
 
 import React from 'react';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 // Import your actual data fetching functions
 // Only need functions that get *all* data for the listing view
 import { getAllProjects, getFeaturedProjects, getProjectCategories } from '@/lib/getAllProjects';
 import { Project } from '@/types/project';
+import { getUniqueItems } from '@/lib/getUniqueItems';
 
 // Import the Client Component that handles display
 import ProjectsView from '@/components/Project/ProjectsView'; // Ensure path is correct
 
-// --- CORRECTED Metadata for the `/projects` LISTING page ---
-// This metadata is static or fetches general info, NOT a specific project
+// SEO Metadata for Projects Page
 export const metadata: Metadata = {
-  title: 'Our Works | Manic Agency Projects', // Title for the listing page
-  description: 'Browse a collection of experimental projects from Manic Agency, exploring AI, creative coding, and more.', // Description for the listing page
-  openGraph: {
-      title: 'Our Works | Manic Agency Projects',
-      description: 'Browse a collection of experimental projects.',
-      url: '/projects', // Canonical URL for THIS page
-      images: [
-          {
-              // Use a general OG image for the projects page
-              url: '/images/og-projects-default.png', // **IMPORTANT**: Create this image or use a relevant one
-              width: 1200,
-              height: 630,
-              alt: 'Manic Agency Projects Showcase',
-          },
-      ],
-      type: 'website', // This page represents a collection
-  },
-  // Add other relevant static metadata
-  // twitter: { ... },
+    title: 'Our Projects - Creative Development Portfolio | Manic Agency',
+    description: 'Explore Manic Agency\'s portfolio of innovative projects: AR/VR experiences, blockchain solutions, AI implementations, and experimental web applications. See our creative development work.',
+    keywords: [
+        'manic agency projects',
+        'creative development portfolio',
+        'AR VR projects',
+        'blockchain development',
+        'AI implementation projects',
+        'experimental web applications',
+        'Los Angeles development work',
+        'innovative software projects',
+        'custom development portfolio',
+        'creative technology showcases'
+    ],
+    authors: [{ name: 'Manic Agency', url: 'https://manic.agency' }],
+    alternates: {
+        canonical: '/projects'
+    },
+    openGraph: {
+        type: 'website',
+        url: '/projects',
+        title: 'Our Projects - Creative Development Portfolio | Manic Agency',
+        description: 'Explore Manic Agency\'s portfolio of innovative projects: AR/VR experiences, blockchain solutions, AI implementations, and experimental web applications.',
+        images: [
+            {
+                url: '/og-default.png',
+                width: 1200,
+                height: 630,
+                alt: 'Manic Agency Projects Portfolio'
+            }
+        ]
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Our Projects - Creative Development Portfolio | Manic Agency',
+        description: 'Explore Manic Agency\'s portfolio of innovative projects: AR/VR experiences, blockchain solutions, AI implementations, and experimental web applications.',
+        images: [{
+            url: '/og-default.png',
+            alt: 'Manic Agency Projects Portfolio'
+        }]
+    }
 };
 
 // --- Page Component (Server Component) ---

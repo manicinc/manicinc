@@ -1,42 +1,53 @@
 // next.config.js
 const path = require('path');
-// Set this to your repository name
-const repoName = 'manicinc'; // <---- Make sure this matches your repo name!
+
+// Bundle analyzer for performance optimization
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
 const isProd = process.env.NODE_ENV === 'production';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  
+  // Image optimization for static export
   images: {
-    unoptimized: true,
+    unoptimized: true, // Required for static export
+    formats: ['image/webp'], // Cloudflare will auto-convert
   },
+  
+  // Sass configuration
   sassOptions: {
     includePaths: [path.join(__dirname, 'src/app/styles')],
   },
   
-  // Output as static HTML/CSS/JS
+  // Static export for GitHub Pages
   output: 'export',
   
-  // Skip TypeScript checking during build
+  // TypeScript and ESLint configuration
   typescript: {
+    // Only disable if absolutely necessary
     // ignoreBuildErrors: true,
   },
-  
-  // Skip ESLint checking during build
   eslint: {
     ignoreDuringBuilds: true,
   },
   
-  // Configure base path and asset prefix for GitHub Pages
-  // basePath: isProd ? `/${repoName}` : '',
-  // assetPrefix: isProd ? `/${repoName}/` : '', // <---- Note trailing slash here!  // For local development, don't use any base path
-  basePath: process.env.NODE_ENV === 'production' && process.env.GITHUB_ACTIONS 
-  ? '' 
-  : '',
-
-  assetPrefix: process.env.NODE_ENV === 'production' && process.env.GITHUB_ACTIONS 
-    ? '' 
-    : '',
+  // GitHub Pages configuration
+  // No basePath needed since using custom domain (manic.agency)
+  basePath: '',
+  assetPrefix: '',
+  
+  // Performance optimizations
+  compress: true,
+  poweredByHeader: false,
+  
+  // Generate unique build ID for cache busting
+  async generateBuildId() {
+    return 'manic-agency-' + Date.now();
+  },
 };
 
-module.exports = nextConfig;
+module.exports = withBundleAnalyzer(nextConfig);
