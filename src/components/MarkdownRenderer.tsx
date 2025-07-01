@@ -310,8 +310,30 @@ export function CustomMarkdownRenderer({ children: rawMarkdown, className = "" }
                              style={isDarkMode ? coldarkDark : prism as any} // Choose theme based on mode
                              language={language}
                              PreTag="div" // Use div for better styling control
-                             customStyle={{ /* Keep necessary custom styles */ borderRadius: '0 0 var(--radius-lg) var(--radius-lg)', marginTop: '0', marginBottom: '0', padding: '1.2rem 1.5rem', border: 'none', boxShadow: 'none', textShadow: 'none', backgroundColor: 'transparent', }}
-                             codeTagProps={{ style: { /* Keep necessary custom styles */ fontFamily: 'var(--font-mono)', fontSize: '0.95rem', lineHeight: '1.75', textShadow: 'none', textDecoration: 'none', } }}
+                             customStyle={{ 
+                                 borderRadius: '0 0 var(--radius-lg) var(--radius-lg)', 
+                                 marginTop: '0', 
+                                 marginBottom: '0', 
+                                 padding: '1.2rem 1.5rem', 
+                                 border: 'none', 
+                                 boxShadow: 'none', 
+                                 textShadow: 'none', 
+                                 backgroundColor: 'transparent',
+                                 textDecoration: 'none',
+                                 textUnderlineOffset: 'unset',
+                                 borderBottom: 'none'
+                             }}
+                             codeTagProps={{ 
+                                 style: { 
+                                     fontFamily: 'var(--font-mono)', 
+                                     fontSize: '0.95rem', 
+                                     lineHeight: '1.75', 
+                                     textShadow: 'none', 
+                                     textDecoration: 'none',
+                                     textUnderlineOffset: 'unset',
+                                     borderBottom: 'none'
+                                 } 
+                             }}
                              {...props}
                          >
                              {codeString}
@@ -319,7 +341,29 @@ export function CustomMarkdownRenderer({ children: rawMarkdown, className = "" }
                      </div>
                  );
              } else { // Inline Code
-                 return (<code className={`inline-code ${codeClassName || ''}`} {...props}>{codeChildren}</code>);
+                 return (
+                     <code 
+                         className={`inline-code ${codeClassName || ''}`} 
+                         style={{ 
+                             textDecoration: 'none', 
+                             textUnderlineOffset: 'unset', 
+                             borderBottom: 'none',
+                             backgroundColor: 'rgba(var(--accent-primary-rgb), 0.1)',
+                             color: 'var(--accent-primary)',
+                             fontFamily: 'var(--font-mono)',
+                             fontSize: '0.88em',
+                             padding: '0.15em 0.4em',
+                             margin: '0 0.1em',
+                             borderRadius: 'var(--radius-base)',
+                             border: '1px solid rgba(var(--accent-primary-rgb), 0.2)',
+                             wordWrap: 'break-word',
+                             whiteSpace: 'normal'
+                         }}
+                         {...props}
+                     >
+                         {codeChildren}
+                     </code>
+                 );
              }
          },
 

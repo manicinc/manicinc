@@ -235,7 +235,7 @@
   position: relative !important;
 }
 .gsc-comment .gsc-comment-body blockquote::before {
-   content: '“' !important;
+   content: '"' !important;
    font-family: var(--font-display-blog) !important; /* Or --font-heading-blog */
    font-size: 3em !important;
    color: rgba(var(--accent-muted1-rgb), 0.3) !important;
@@ -384,4 +384,235 @@
    color: var(--accent-highlight) !important;
    border-bottom-color: var(--accent-highlight) !important;
    border-bottom-style: solid;
+}
+
+/* Mobile responsiveness for Giscus comments */
+@media (max-width: 768px) {
+  /* Main container adjustments */
+  .gsc-main {
+    font-size: 0.95rem !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  
+  /* Header adjustments */
+  .gsc-header {
+    padding-bottom: 0.6rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .gsc-comments-count,
+  .giscus-title {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.4rem !important;
+  }
+  
+  /* Comment box mobile optimization */
+  .gsc-comment-box {
+    margin-top: 1.5rem !important;
+    border-radius: var(--radius-base) !important;
+  }
+  
+  .gsc-comment-box-tabs {
+    padding: 0 0.75rem !important;
+    border-radius: var(--radius-base) var(--radius-base) 0 0 !important;
+  }
+  
+  .gsc-tab {
+    padding: 0.6rem 0.8rem !important;
+    font-size: 0.85rem !important;
+  }
+  
+  /* Text area mobile adjustments */
+  .gsc-comment-box-main {
+    padding: 1rem !important;
+  }
+  
+  .gsc-comment-box-textarea {
+    font-size: 0.95rem !important;
+    padding: 0.7rem 0.8rem !important;
+    min-height: 100px !important;
+    line-height: 1.6 !important;
+  }
+  
+  /* Bottom bar mobile optimization */
+  .gsc-comment-box-bottom {
+    padding: 0.8rem 1rem 1rem !important;
+    flex-direction: column !important;
+    gap: 0.6rem !important;
+    align-items: stretch !important;
+  }
+  
+  .gsc-comment-box-bottom button[type="submit"],
+  .gsc-comment-box-bottom a[href*="github.com/login"] {
+    font-size: 0.85rem !important;
+    padding: 0.7rem 1rem !important;
+    order: unset !important;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  
+  /* Individual comments mobile optimization */
+  .gsc-comment {
+    padding-top: 1rem !important;
+    margin-top: 1rem !important;
+  }
+  
+  .gsc-comment .gsc-comment-header {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.4rem !important;
+    flex-wrap: wrap !important;
+    gap: 0.3rem !important;
+  }
+  
+  .gsc-comment .gsc-comment-author {
+    font-size: 0.9rem !important;
+    margin-right: auto !important;
+  }
+  
+  .gsc-comment time {
+    font-size: 0.8rem !important;
+  }
+  
+  /* Comment body mobile adjustments */
+  .gsc-comment .gsc-comment-body {
+    font-size: 0.95rem !important;
+    line-height: 1.7 !important;
+    margin-top: 0.6rem !important;
+  }
+  
+  .gsc-comment .gsc-comment-body p {
+    margin-bottom: 0.8em !important;
+  }
+  
+  /* Mobile blockquotes in comments */
+  .gsc-comment .gsc-comment-body blockquote {
+    margin: 1rem -0.5rem 1rem 0 !important;
+    padding: 0.8rem 1rem 0.8rem 1.5rem !important;
+    font-size: 0.9em !important;
+    line-height: 1.6 !important;
+  }
+  
+  .gsc-comment .gsc-comment-body blockquote::before {
+    font-size: 2.5em !important;
+    left: 0.3rem !important;
+    top: -0.2rem !important;
+  }
+  
+  /* Mobile code blocks in comments */
+  .gsc-comment .gsc-comment-body pre {
+    margin: 1rem -0.5rem !important;
+    padding: 0.8rem 1rem !important;
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+    border-radius: var(--radius-base) !important;
+  }
+  
+  /* Mobile inline code in comments */
+  .gsc-comment .gsc-comment-body code:not(pre > code) {
+    font-size: 0.85em !important;
+    padding: 0.15em 0.4em !important;
+  }
+  
+  /* Mobile reactions */
+  .gsc-reactions {
+    margin-top: 0.8rem !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.4rem !important;
+  }
+  
+  .gsc-reaction-button {
+    padding: 0.4rem 0.6rem !important;
+    font-size: 0.85rem !important;
+    min-height: 32px !important;
+  }
+  
+  .gsc-reaction-button > span:first-child {
+    font-size: 0.9em !important;
+  }
+  
+  .gsc-reaction-button > span:last-child {
+    font-size: 0.8em !important;
+  }
+  
+  /* Mobile footer */
+  .gsc-footer {
+    margin-top: 1.5rem !important;
+    padding-top: 0.8rem !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+/* Ultra-small screens for comments */
+@media (max-width: 480px) {
+  .gsc-main {
+    font-size: 0.9rem !important;
+  }
+  
+  .gsc-comments-count,
+  .giscus-title {
+    font-size: 1rem !important;
+  }
+  
+  .gsc-comment-box-main {
+    padding: 0.8rem !important;
+  }
+  
+  .gsc-comment-box-textarea {
+    font-size: 0.9rem !important;
+    padding: 0.6rem 0.7rem !important;
+    min-height: 80px !important;
+  }
+  
+  .gsc-comment-box-bottom {
+    padding: 0.6rem 0.8rem 0.8rem !important;
+  }
+  
+  .gsc-comment-box-bottom button[type="submit"],
+  .gsc-comment-box-bottom a[href*="github.com/login"] {
+    font-size: 0.8rem !important;
+    padding: 0.6rem 0.8rem !important;
+  }
+  
+  .gsc-comment .gsc-comment-body {
+    font-size: 0.9rem !important;
+  }
+  
+  .gsc-comment .gsc-comment-body blockquote {
+    padding: 0.6rem 0.8rem 0.6rem 1.2rem !important;
+    font-size: 0.85em !important;
+  }
+  
+  .gsc-comment .gsc-comment-body pre {
+    padding: 0.6rem 0.8rem !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+/* Ensure comments don't cause horizontal overflow */
+.gsc-main,
+.gsc-comment-box,
+.gsc-comment,
+.gsc-comment .gsc-comment-body,
+.gsc-comment .gsc-comment-body * {
+  max-width: 100% !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
+/* Fix for very long code in comments */
+.gsc-comment .gsc-comment-body pre,
+.gsc-comment .gsc-comment-body code {
+  white-space: pre-wrap !important;
+  word-break: break-all !important;
+  overflow-wrap: break-word !important;
+}
+
+/* Touch-friendly reaction buttons */
+@media (max-width: 768px) {
+  .gsc-reaction-button {
+    min-height: 44px !important; /* iOS recommended touch target */
+    min-width: 44px !important;
+  }
 }

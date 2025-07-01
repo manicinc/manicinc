@@ -477,7 +477,7 @@
     border-radius: var(--radius-lg);
     transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
     box-shadow: 4px 4px 0px rgba(var(--accent-primary-rgb), 0.6); /* Brutalist shadow */
-    cursor: pointer;
+    cursor: pointer !important; /* Ensure cursor pointer */
     backdrop-filter: blur(8px);
     position: relative;
     overflow: hidden;
@@ -487,18 +487,21 @@
     flex-direction: column;
     opacity: 0; /* Controlled by IntersectionObserver */
     /* Ensure pointer events */
-    pointer-events: auto;
+    pointer-events: auto !important;
+    transform: translateY(20px); /* Start position for animation */
   }
   
   .repositoryCard.isVisible {
     opacity: 1;
+    transform: translateY(0); /* End position for animation */
   }
   
   .repositoryCard:hover {
-    transform: translate(-3px, -3px);
-    box-shadow: 6px 6px 0px var(--accent-primary), 0 0 20px rgba(var(--accent-primary-rgb), 0.2);
-    border-color: var(--accent-primary);
-    background: rgba(var(--bg-secondary-rgb), 0.9);
+    transform: translate(-3px, -3px) !important;
+    box-shadow: 6px 6px 0px var(--accent-primary), 0 0 20px rgba(var(--accent-primary-rgb), 0.2) !important;
+    border-color: var(--accent-primary) !important;
+    background: rgba(var(--bg-secondary-rgb), 0.9) !important;
+    cursor: pointer !important;
   }
   
   .repositoryCard:focus-visible { /* Accessibility */
@@ -639,19 +642,22 @@
     font-size: 0.88rem;
     background: transparent;
     transition: background-color 0.25s ease, transform 0.25s ease;
-    cursor: pointer;
+    cursor: pointer !important; /* Ensure cursor pointer */
     border-bottom: 1px solid var(--border-color-light, rgba(var(--border-color-rgb, 50, 50, 70), 0.2));
+    pointer-events: auto !important;
   }
   .listItem:last-child { border-bottom: none; }
   .listItem:hover {
-    background: rgba(var(--accent-primary-rgb), 0.08);
-    transform: translateX(4px);
+    background: rgba(var(--accent-primary-rgb), 0.08) !important;
+    transform: translateX(4px) !important;
+    cursor: pointer !important;
   }
   .listItem:focus-visible { /* Accessibility */
     background: rgba(var(--accent-highlight-rgb), 0.1);
     transform: translateX(4px);
     outline: 1px solid var(--accent-highlight);
     outline-offset: -1px;
+    cursor: pointer !important;
   }
   
   /* Column definitions */
