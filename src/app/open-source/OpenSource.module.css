@@ -485,10 +485,10 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    opacity: 0; /* Controlled by IntersectionObserver */
+    opacity: 1; /* Made immediately visible */
     /* Ensure pointer events */
     pointer-events: auto !important;
-    transform: translateY(20px); /* Start position for animation */
+    transform: translateY(0); /* Start in final position */
   }
   
   .repositoryCard.isVisible {
@@ -702,7 +702,7 @@
      Stats View
      ======================================== */
   .statsViewContainer {
-    opacity: 0; /* Controlled by IntersectionObserver */
+    opacity: 1; /* Made immediately visible */
     transition: opacity 0.6s ease-out;
     margin-top: 2rem; /* Add space */
   }
@@ -898,7 +898,7 @@
   
   .modalStatsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1rem 1.5rem; margin-bottom: 2rem; padding-bottom: 1.5rem;
     border-bottom: 1px dashed var(--border-color-light, rgba(var(--border-color-rgb, 50, 50, 70), 0.2));
   }
@@ -920,6 +920,10 @@
   .statItem .forkIcon { color: var(--color-powder-blue, #8fa4bb); }
   .statItem .watchIcon { color: var(--color-sage, #789990); }
   .statItem .issueIcon { color: var(--color-dusty-rose, #b88faa); }
+  .statItem .usersIcon { color: var(--accent-secondary); }
+  .statItem .commitIcon { color: var(--accent-highlight); }
+  .statItem .prIcon { color: var(--accent-primary); }
+  .statItem .releaseIcon { color: var(--color-antique-gold, #c49a6c); }
   .statItem .licenseIcon { color: var(--accent-secondary); }
   .statItem .sizeIcon { color: var(--accent-muted1); }
   .statItem .createdIcon { color: var(--text-muted); }
@@ -927,6 +931,111 @@
   
   .statItem strong {
     font-weight: 600; color: var(--text-primary); font-size: 0.95rem;
+  }
+  
+  /* Loading animation for stats */
+  .loadingDots {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    animation: loadingPulse 1.5s ease-in-out infinite;
+  }
+  @keyframes loadingPulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+  
+  /* Modal Detail Sections */
+  .modalDetailSections {
+    margin-top: 1.5rem;
+  }
+  
+  .detailSection {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(var(--bg-tertiary-rgb), 0.3);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color-light, rgba(var(--border-color-rgb, 50, 50, 70), 0.2));
+  }
+  
+  .detailGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .detailItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.8rem;
+    background: rgba(var(--bg-secondary-rgb), 0.5);
+    border-radius: var(--radius-base);
+    border: 1px solid var(--border-color-light, rgba(var(--border-color-rgb, 50, 50, 70), 0.1));
+  }
+  
+  .detailLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .detailValue {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .langDotInline {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid rgba(0,0,0,0.3);
+  }
+  
+  /* Activity Summary Grid */
+  .activityGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+  
+  .activityItem {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(var(--bg-secondary-rgb), 0.7);
+    border-radius: var(--radius-base);
+    border: 1px solid var(--border-color-light, rgba(var(--border-color-rgb, 50, 50, 70), 0.2));
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .activityItem:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(var(--accent-primary-rgb), 0.15);
+  }
+  
+  .activityValue {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    font-family: var(--font-display);
+    margin-bottom: 0.3rem;
+  }
+  
+  .activityLabel {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
   }
   
   .modalTopics { margin-bottom: 2rem; }
@@ -967,28 +1076,23 @@
     composes: modalButton;
     background: linear-gradient(45deg, var(--accent-primary), var(--accent-highlight));
     color: var(--bg-primary); border-color: transparent;
+    border-radius: var(--radius-base);
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    text-decoration: none; font-weight: 600;
+    transition: all 0.3s ease;
   }
   .modalButtonPrimary:hover { filter: brightness(1.1); }
   
   .modalButtonOutline {
     composes: modalButton;
-    border-color: var(--accent-secondary); color: var(--accent-secondary);
-    background: rgba(var(--accent-secondary-rgb), 0.1);
+    background: transparent; color: var(--accent-primary);
+    border: 1px solid var(--accent-primary); border-radius: var(--radius-base);
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    text-decoration: none; font-weight: 600;
+    transition: all 0.3s ease;
   }
   .modalButtonOutline:hover {
-     background: rgba(var(--accent-secondary-rgb), 0.2);
-     color: var(--text-primary);
-     border-color: var(--accent-highlight);
-  }
-  
-  .modalButtonClose { /* Subtle close button */
-     composes: modalButtonOutline; /* Inherit outline style */
-     border-color: var(--text-muted); color: var(--text-muted);
-     background: rgba(var(--text-muted-rgb), 0.1);
-  }
-  .modalButtonClose:hover {
-     border-color: var(--text-secondary); color: var(--text-secondary);
-     background: rgba(var(--text-secondary-rgb), 0.2);
+    background: var(--accent-primary); color: var(--bg-primary);
   }
   
   
