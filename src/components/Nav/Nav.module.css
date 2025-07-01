@@ -11,9 +11,9 @@
     width: 100%;
     min-height: 60px; /* Adjusted min-height */
     transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, min-height 0.4s ease;
-    /* Subtle Gradient + Noise Texture */
+    /* Subtle Gradient + CSS Noise Texture */
      background-color: var(--bg-nav-dark-end, rgba(var(--bg-secondary-rgb), 0.95));
-    background-image: linear-gradient(170deg, var(--bg-nav-dark-start, rgba(var(--bg-primary-rgb), 0.92)) 0%, var(--bg-nav-dark-end, rgba(var(--bg-secondary-rgb), 0.95)) 100%);
+    background-image: linear-gradient(170deg, var(--bg-nav-dark-start, rgba(var(--bg-primary-rgb), 0.92)) 0%, var(--bg-nav-dark-end, rgba(var(--bg-secondary-rgb), 0.95)) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.1'/%3E%3C/svg%3E");
     background-blend-mode: overlay; /* Blend noise */
     background-size: auto, 150px 150px; /* Control noise tile size */
     backdrop-filter: blur(18px) saturate(120%);
@@ -27,11 +27,11 @@
         rgba(var(--accent-cool-rgb), 0.1) 100%
     );
     box-shadow: 0 4px 15px -2px rgba(var(--accent-vibrant-rgb), 0.15), 0 8px 30px -10px var(--nav-shadow-dark, rgba(var(--shadow-color-rgb), 0.5));
-    z-index: 100;
+    z-index: 1000; /* Increased z-index for proper stickiness */
 }
 
 .navScrolled {
-    background: linear-gradient(170deg, var(--bg-nav-dark-scrolled-start, rgba(var(--bg-primary-rgb), 1.0)) 0%, var(--bg-nav-dark-scrolled-end, rgba(var(--bg-secondary-rgb), 1.0)) 100%), url('/noise.png');
+    background: linear-gradient(170deg, var(--bg-nav-dark-scrolled-start, rgba(var(--bg-primary-rgb), 1.0)) 0%, var(--bg-nav-dark-scrolled-end, rgba(var(--bg-secondary-rgb), 1.0)) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.1'/%3E%3C/svg%3E");
     background-blend-mode: overlay;
     background-size: auto, 150px 150px;
     box-shadow: 0 6px 20px -3px rgba(var(--accent-vibrant-rgb), 0.2), 0 10px 35px -8px var(--nav-shadow-dark, rgba(var(--shadow-color-rgb), 0.6));
@@ -44,7 +44,7 @@
 
 /* --- Light Mode --- */
 :global(.light) .navContainer {
-    background: linear-gradient(170deg, var(--bg-nav-light-start, rgba(var(--bg-primary-rgb), 0.95)) 0%, var(--bg-nav-light-end, rgba(var(--bg-secondary-rgb), 0.98)) 100%), url('/noise.png');
+    background: linear-gradient(170deg, var(--bg-nav-light-start, rgba(var(--bg-primary-rgb), 0.95)) 0%, var(--bg-nav-light-end, rgba(var(--bg-secondary-rgb), 0.98)) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
     background-blend-mode: multiply; /* Different blend for light */
     background-size: auto, 150px 150px;
     border-image-source: linear-gradient(to right,
@@ -56,7 +56,7 @@
 }
 
 :global(.light) .navScrolled {
-    background: linear-gradient(170deg, var(--bg-nav-light-scrolled-start, rgba(var(--bg-primary-rgb), 1.0)) 0%, var(--bg-nav-light-scrolled-end, rgba(var(--bg-secondary-rgb), 1.0)) 100%), url('/noise.png');
+    background: linear-gradient(170deg, var(--bg-nav-light-scrolled-start, rgba(var(--bg-primary-rgb), 1.0)) 0%, var(--bg-nav-light-scrolled-end, rgba(var(--bg-secondary-rgb), 1.0)) 100%), url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
     background-blend-mode: multiply;
     background-size: auto, 150px 150px;
     box-shadow: 0 6px 20px -3px rgba(var(--accent-vibrant-rgb), 0.15), 0 10px 35px -8px var(--nav-shadow-light, rgba(var(--shadow-color-rgb), 0.4));
@@ -126,46 +126,6 @@
 /* ======================================== */
 /* Responsive Logo Text Behavior            */
 /* ======================================== */
-
-/* === CRITICAL LOGO TEXT VISIBILITY FIXES === */
-
-/* Desktop version - show full "MANIC AGENCY" / "PANIC AGENCY" only above 1000px */
-.manic-logo-svg .logo-text-desktop {
-    opacity: 0; /* Hide by default */
-    transition: opacity 0.4s ease-out;
-}
-
-.manic-logo-svg .logo-text-mobile {
-    opacity: 1; /* Show mobile version by default */
-    transition: opacity 0.4s ease-out;
-}
-
-/* Show desktop version only above 1000px */
-@media (min-width: 1000px) {
-    .manic-logo-svg .logo-text-desktop {
-        opacity: 1;
-    }
-    
-    .manic-logo-svg .logo-text-mobile {
-        opacity: 0;
-    }
-}
-
-/* Ensure tagline is completely hidden below 1000px */
-@media (max-width: 999px) {
-    .tagline {
-        display: none !important;
-    }
-}
-
-/* Further optimize for very small screens */
-@media (max-width: 640px) {
-    .manic-logo-svg {
-        width: auto;
-        height: 2rem; /* Smaller logo on mobile */
-    }
-}
-
 
 @keyframes animatedGradientCoolVibrant {
   0% { background-position: 0% 50%; }
@@ -977,7 +937,7 @@
 }
 
 /* Terminal brackets */
-.gamesBtn::before {
+/* .gamesBtn::before {
     content: "[ ";
     color: #0080ff;
     font-weight: 400;
@@ -987,7 +947,7 @@
     content: " ]";
     color: #0080ff;
     font-weight: 400;
-}
+} */
 
 .gamesBtn:hover,
 .gamesBtn:focus-visible {
@@ -1007,12 +967,6 @@
     animation: holographicPulse 2s ease-in-out infinite;
 }
 
-.gamesBtn:hover::before,
-.gamesBtn:hover::after {
-    color: #ff0080;
-    text-shadow: 0 0 3px rgba(255, 0, 128, 0.8);
-}
-
 .gamesBtn:active {
     transform: translateY(0);
     filter: brightness(0.9);
@@ -1027,22 +981,6 @@
     box-shadow: 
         0 0 8px rgba(0, 128, 255, 0.4),
         inset 0 0 8px rgba(0, 128, 255, 0.1);
-}
-
-:global(.light) .gamesBtn::before,
-:global(.light) .gamesBtn::after {
-    color: #00ff41;
-}
-
-:global(.light) .gamesBtn:hover {
-    color: #0080ff;
-    background: 
-        linear-gradient(90deg, rgba(0, 128, 255, 0.1), rgba(0, 128, 255, 0.1)) padding-box,
-        linear-gradient(45deg, #00ff41, #0080ff, #ff0080, #00ff41) border-box;
-    box-shadow: 
-        0 0 15px rgba(0, 128, 255, 0.6),
-        0 0 30px rgba(0, 128, 255, 0.3),
-        inset 0 0 15px rgba(0, 128, 255, 0.2);
 }
 
 .gamesSvg {
@@ -1105,25 +1043,25 @@
     display: block;
     text-align: center;
     width: calc(100% - 3rem);
-    font-size: 0.7rem !important; /* Reduced from 0.85rem */
-    padding: 0.6rem 1rem !important; /* Reduced padding */
+    font-size: 0.6rem !important; /* Even smaller */
+    padding: 0.5rem 0.8rem !important; /* Reduced padding more */
     border-radius: 4px;
     /* Inherit holographic styling from .gamesBtn */
     font-family: var(--font-mono);
     font-weight: 700;
-    letter-spacing: 0.08em !important; /* Reduced from 0.12em */
+    letter-spacing: 0.06em !important; /* Reduced letter spacing more */
     text-transform: uppercase;
     white-space: nowrap !important;
-    min-height: 36px;
-    line-height: 1.2 !important;
+    min-height: 32px; /* Smaller height */
+    line-height: 1.1 !important;
     max-width: 100% !important;
     overflow: hidden !important;
 }
 
 /* Ensure the games button icon is smaller on mobile */
 .mobileGames .gamesSvg {
-    width: 1em !important; /* Reduced from 1.2em */
-    height: 1em !important;
+    width: 0.9em !important; /* Smaller icon */
+    height: 0.9em !important;
     margin-left: 0.2rem !important; /* Reduce gap */
     flex-shrink: 0 !important;
 }
@@ -1131,16 +1069,17 @@
 /* Additional mobile-specific adjustments for ultra-small screens */
 @media (max-width: 480px) {
     .mobileGames {
-        font-size: 0.65rem !important; /* Even smaller for very small screens */
-        padding: 0.5rem 0.8rem !important;
-        letter-spacing: 0.06em !important;
+        font-size: 0.55rem !important; /* Even smaller for very small screens */
+        padding: 0.4rem 0.6rem !important;
+        letter-spacing: 0.04em !important;
         margin: 0.5rem 1rem !important; /* Slightly smaller margins */
         width: calc(100% - 2rem) !important;
+        min-height: 30px !important;
     }
     
     .mobileGames .gamesSvg {
-        width: 0.9em !important;
-        height: 0.9em !important;
+        width: 0.8em !important;
+        height: 0.8em !important;
     }
 }
 

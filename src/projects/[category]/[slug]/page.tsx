@@ -406,6 +406,9 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                     border: 1px solid var(--bg-tertiary); border-radius: var(--radius-base);
                     overflow: hidden; box-shadow: var(--shadow-soft);
                     transition: transform 0.2s ease, box-shadow 0.2s ease;
+                    position: relative;
+                    aspect-ratio: 16 / 9; /* Provide proper aspect ratio for fill images */
+                    height: 200px; /* Provide explicit height for fill images */
                 }
                  .gallery-image-wrapper:hover {
                      transform: scale(1.03); box-shadow: var(--shadow-raised); /* Example */
