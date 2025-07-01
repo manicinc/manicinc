@@ -94,14 +94,6 @@ const NavLinksMobile: React.FC<NavLinksMobileProps> = ({
                         </a>
                     </Link>
 
-                    {/* Render Children Here if needed */}
-                    {children && <div className="mt-4 px-4">{children}</div>}
-
-                    {/* Theme Toggle */}
-                    <div className="mt-4 mb-2 px-4"> {/* Added padding */}
-                        <ThemeToggle size="md" /> {/* Or 'lg' if you prefer */}
-                    </div>
-
                     {/* Contact Button - Using Link */}
                     <Link href="/contact" legacyBehavior>
                         <a
@@ -115,6 +107,14 @@ const NavLinksMobile: React.FC<NavLinksMobileProps> = ({
                             </span>
                         </a>
                     </Link>
+
+                    {/* Render Children Here if needed */}
+                    {children && <div className="mt-4 px-4">{children}</div>}
+
+                    {/* Theme Toggle */}
+                    <div className="mt-4 mb-2 px-4"> {/* Added padding */}
+                        <ThemeToggle size="md" /> {/* Or 'lg' if you prefer */}
+                    </div>
 
                 </div> {/* End Link/Button Container */}
 
