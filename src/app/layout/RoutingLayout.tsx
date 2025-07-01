@@ -3,6 +3,7 @@ import ComponentLayout from "./ComponentLayout";
 import { usePathname } from "next/navigation";
 import { PropsWithChildren } from "react";
 
+
 export default function RoutingLayout({ children }: PropsWithChildren) {
   const pathname = usePathname();
   console.log(pathname);
@@ -31,8 +32,6 @@ export default function RoutingLayout({ children }: PropsWithChildren) {
           />
           <link rel="manifest" href="/site.webmanifest" />
           <title>Velvet Web</title>
-
-
 
           <meta
             name="description"
