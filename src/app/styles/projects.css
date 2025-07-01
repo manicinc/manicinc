@@ -56,7 +56,7 @@
     align-items: center;
     justify-content: center;
     /* Transparent or very subtle tint */
-    background-color: rgba(10, 10, 15, 0.2); /* Very subtle dark tint */
+    background-color: rgba(var(--bg-primary-rgb), 0.2); /* Very subtle tint */
     z-index: 10; /* Above blurred content */
     padding: 1rem;
     pointer-events: none;
@@ -157,7 +157,7 @@
 .terminal-btn:disabled .cursor { opacity: 0.3; animation: none; }
 .terminal-divider { color: rgba(var(--accent-highlight-rgb), 0.7); font-size: 1rem; font-weight: bold; text-shadow: 0 0 3px rgba(var(--accent-highlight-rgb), 0.5); }
 .cursor { display: inline-block; width: 9px; height: 1em; background-color: var(--accent-highlight); margin-left: 4px; animation: blink 1.1s steps(1) infinite; box-shadow: 0 0 4px var(--accent-highlight); vertical-align: bottom; border-radius: 1px; }
-.terminal-btn:hover:not(:disabled) .cursor { background-color: white; box-shadow: 0 0 6px white; }
+.terminal-btn:hover:not(:disabled) .cursor { background-color: var(--text-on-accent); box-shadow: 0 0 6px var(--text-on-accent); }
 @keyframes blink { 50% { opacity: 0; } }
 .scanline { position: absolute; inset: 0; pointer-events: none; background: linear-gradient( to bottom, transparent 49%, rgba(var(--bg-primary-rgb), 0.25) 50%, rgba(var(--bg-primary-rgb), 0.25) 51%, transparent 52% ); background-size: 100% 2.5px; opacity: 0.12; animation: scan 9s linear infinite; z-index: 1; }
 @keyframes scan { from { background-position: 0 0; } to { background-position: 0 70px; } }

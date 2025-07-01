@@ -89,19 +89,19 @@ body.reading-mode-active {
      .post-content a::after { display: none !important; }
 
     .post-content code:not(pre > code) { /* Inline code */
-        background: rgba(128, 128, 128, 0.12) !important;
+        background: var(--bg-secondary) !important;
         color: inherit !important; /* Inherit text color */
         padding: 0.1em 0.35em !important;
         font-size: 0.88em !important;
-        border: 1px solid rgba(128, 128, 128, 0.15) !important;
+        border: 1px solid var(--bg-tertiary) !important;
         border-radius: 3px !important;
         text-shadow: none !important;
     }
 
     .post-content pre { /* Code blocks */
-        background: var(--reading-code-bg, #efefef) !important;
-        color: var(--reading-code-text, #444) !important;
-        border: 1px solid rgba(128, 128, 128, 0.2) !important;
+        background: var(--bg-code) !important;
+        color: var(--text-code) !important;
+        border: 1px solid var(--bg-tertiary) !important;
         box-shadow: none !important;
         padding: 1.2em 1.5em !important; /* Adjust padding */
         margin: 1.8em 0 !important;
@@ -112,7 +112,7 @@ body.reading-mode-active {
     .post-content pre::before { display: none !important; }
 
     .post-content blockquote {
-        border-left: 3px solid rgba(128, 128, 128, 0.4) !important;
+        border-left: 3px solid var(--accent-muted1) !important;
         background: none !important;
         padding: 0.5em 1.5em !important;
         margin: 1.8rem 0 !important;
@@ -127,7 +127,7 @@ body.reading-mode-active {
     .post-content img,
     .post-content figure {
          box-shadow: none !important;
-         border: 1px solid rgba(128, 128, 128, 0.25) !important; /* Slightly darker border */
+         border: 1px solid var(--bg-tertiary) !important;
          margin: 1.8rem auto !important;
          max-width: 100% !important;
          height: auto !important;
@@ -143,9 +143,9 @@ body.reading-mode-active {
         top: 15px;
         right: 15px;
         z-index: 1100; /* Above reading mode content */
-        background-color: rgba(128, 128, 128, 0.2); /* Semi-transparent */
-        color: var(--reading-text, #333); /* Use reading text color */
-        border: 1px solid rgba(128, 128, 128, 0.3);
+        background-color: var(--bg-secondary); /* Use theme background */
+        color: var(--text-primary); /* Use theme text color */
+        border: 1px solid var(--bg-tertiary);
         width: 36px;
         height: 36px;
         border-radius: 50%;
@@ -157,21 +157,21 @@ body.reading-mode-active {
         backdrop-filter: blur(5px); /* Optional blur */
     }
     .exit-reading-mode-btn:hover {
-        background-color: rgba(128, 128, 128, 0.4);
-        color: var(--reading-link, #0000cd); /* Use reading link color */
+        background-color: var(--accent-primary);
+        color: var(--text-on-accent);
         transform: scale(1.1);
     }
     /* High contrast style for exit button if needed */
     body.high-contrast-active .exit-reading-mode-btn {
-        background: #000 !important;
-        color: yellow !important;
-        border-color: yellow !important;
+        background: var(--bg-primary) !important;
+        color: var(--accent-alert) !important;
+        border-color: var(--accent-alert) !important;
     }
 
      /* Ensure scrollbar matches reading mode */
      /* Styles might need !important if overridden */
-    ::-webkit-scrollbar { background: var(--reading-bg, #f5f5dc); }
-    ::-webkit-scrollbar-track { background: rgba(128, 128, 128, 0.1); }
-    ::-webkit-scrollbar-thumb { background: rgba(128, 128, 128, 0.4); }
-    ::-webkit-scrollbar-thumb:hover { background: rgba(128, 128, 128, 0.6); }
+    ::-webkit-scrollbar { background: var(--bg-primary); }
+    ::-webkit-scrollbar-track { background: var(--bg-secondary); }
+    ::-webkit-scrollbar-thumb { background: var(--bg-tertiary); }
+    ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
 }
