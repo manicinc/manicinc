@@ -16,7 +16,7 @@
 .contact-btn {
   display: inline-block;
   padding: 0.8rem 1.6rem;
-  background-color: var(--brand-cyan); /* Consider using theme variables if brand colors change with theme */
+      background-color: var(--accent-cool); /* Use theme variable */
   color: var(--color-ink, #4a3f35); /* Use text color variable with fallback */
   font-family: var(--font-mono);
   font-weight: bold;
@@ -24,19 +24,19 @@
   letter-spacing: 0.08em;
   border-radius: var(--radius-sm);
   transition: all 0.1s ease-out;
-  box-shadow: 4px 4px 0 var(--brand-pink), 7px 7px 0 var(--brand-blue); /* Consider theme variables */
+      box-shadow: 4px 4px 0 var(--accent-vibrant), 7px 7px 0 var(--accent-secondary); /* Use theme variables */
   position: relative;
   text-decoration: none;
   border: 2px solid var(--color-abyss); /* Consider theme variables */
   cursor: pointer;
 }
 .contact-btn:hover {
-  background-color: #3ff; /* Consider theme variables */
-  box-shadow: 2px 2px 0 var(--brand-pink), 4px 4px 0 var(--brand-blue); /* Consider theme variables */
+      background-color: var(--accent-cool); /* Use theme variable */
+      box-shadow: 2px 2px 0 var(--accent-vibrant), 4px 4px 0 var(--accent-secondary); /* Use theme variables */
   transform: translate(3px, 3px);
 }
 .contact-btn:active {
-  box-shadow: 1px 1px 0 var(--brand-pink), 2px 2px 0 var(--brand-blue); /* Consider theme variables */
+      box-shadow: 1px 1px 0 var(--accent-vibrant), 2px 2px 0 var(--accent-secondary); /* Use theme variables */
   transform: translate(5px, 5px);
 }
 
@@ -473,7 +473,7 @@
   text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 .accordion-panel .info-block a {
-  color: var(--brand-cyan); /* Consider theme variable */
+      color: var(--accent-cool); /* Use theme variable */
   font-weight: bold;
   pointer-events: auto; /* Make links clickable */
   border-bottom: none;
