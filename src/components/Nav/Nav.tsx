@@ -107,12 +107,8 @@ export const Nav = () => {
 
                 {/* Logo Area: Wrapped in Link, independent of mobile button */}
                  <div className="order-1 flex-shrink-1 flex items-center"> {/* Container for logo+tagline */}
-                    <Link href="/" passHref legacyBehavior>
-                        <a className={styles.logoLink} aria-label="Manic Agency Home" onClick={closeMenu}>
-                            {/* Render the NavLogo component inside the link */}
-                            <NavLogo isBlog={isBlog} toggleMenu={toggleMenu}/>
-                        </a>
-                    </Link>
+                    {/* Render the NavLogo component directly - it handles its own links */}
+                    <NavLogo isBlog={isBlog} toggleMenu={closeMenu}/>
                     {/* Tagline can be included here if NavLogo doesn't render it */}
                     {/* <span className={`${styles.tagline} ${isBlog ? styles.taglineBlog : ''} hidden sm:inline-flex items-center`}>
                          (metaverses intersect here)
