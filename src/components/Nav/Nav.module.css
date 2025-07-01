@@ -5,7 +5,7 @@
 /* ======================================== */
 
 .navContainer {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -27,7 +27,7 @@
         rgba(var(--accent-cool-rgb), 0.1) 100%
     );
     box-shadow: 0 4px 15px -2px rgba(var(--accent-vibrant-rgb), 0.15), 0 8px 30px -10px var(--nav-shadow-dark, rgba(var(--shadow-color-rgb), 0.5));
-    z-index: 1000; /* Increased z-index for proper stickiness */
+    z-index: 10002; /* Highest z-index to ensure navbar stays on top */
 }
 
 .navScrolled {

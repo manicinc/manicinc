@@ -76,6 +76,11 @@
      max-width: 100vw;
    }
 
+   /* Offset for fixed navbar */
+   body {
+     padding-top: var(--header-height, 60px); /* Account for fixed navbar height */
+   }
+
    /* Prevent code blocks from causing horizontal scroll */
    pre, code, .code-block-wrapper {
      max-width: 100%;
