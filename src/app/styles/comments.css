@@ -249,7 +249,7 @@
     position: relative !important;
 }
 .gsc-comment .gsc-comment-body blockquote::before {
-     content: '“' !important;
+     content: '"' !important;
      font-family: var(--font-display-blog) !important;
      font-size: 3em !important;
      color: rgba(var(--accent-muted1-rgb), 0.3) !important;
@@ -586,3 +586,77 @@
          font-size: 1.5rem !important;
      }
  }
+
+/* Mobile responsiveness for unified comments */
+@media (max-width: 768px) {
+  .comments-container {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+  }
+  
+  .comments-title {
+    font-size: clamp(1.4rem, 4vw, 1.8rem) !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Mobile Disqus adjustments */
+  #disqus_thread .thread__wrapper,
+  #disqus_thread .thread__container {
+    padding: 1rem !important;
+    margin-bottom: 0.8rem !important;
+    border-radius: var(--radius-base) !important;
+  }
+  
+  #disqus_thread [role="textbox"][data-slate-editor="true"] {
+    padding: 0.7rem 0.8rem !important;
+    min-height: 80px !important;
+    font-size: 0.95rem !important;
+  }
+  
+  #disqus_thread ._menu_k0g7a_41 {
+    padding: 0.4rem 0.8rem !important;
+  }
+  
+  #disqus_thread ._menu_k0g7a_41 ._button_12m5a_1,
+  #disqus_thread ._menu_k0g7a_41 ._button_1559b_1,
+  #disqus_thread ._menu_k0g7a_41 ._button_1wqlf_1 {
+    padding: 0.4rem !important;
+    min-height: 36px;
+    min-width: 36px;
+  }
+  
+  #disqus_thread button[type="submit"] {
+    font-size: 0.9rem !important;
+    padding: 0.7rem 1rem !important;
+    width: 100% !important;
+    margin-top: 0.5rem !important;
+  }
+  
+  #disqus_thread input[name="display_name"] {
+    padding: 0.7rem 0.8rem !important;
+    font-size: 0.95rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .comments-container {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+  }
+  
+  .comments-title {
+    font-size: 1.3rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  #disqus_thread .thread__wrapper,
+  #disqus_thread .thread__container {
+    padding: 0.8rem !important;
+  }
+  
+  #disqus_thread [role="textbox"][data-slate-editor="true"] {
+    padding: 0.6rem 0.7rem !important;
+    min-height: 70px !important;
+    font-size: 0.9rem !important;
+  }
+}

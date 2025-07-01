@@ -36,8 +36,9 @@ export const viewport: Viewport = {
     { media: '(prefers-color-scheme: dark)', color: '#22182B' },
   ],
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
+  maximumScale: 5, // Allow zooming up to 5x for accessibility
+  userScalable: true, // Allow user to zoom for accessibility
+  width: 'device-width',
 };
 
 // Generate default metadata for the root layout

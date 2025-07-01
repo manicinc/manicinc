@@ -66,4 +66,55 @@
    /* Example: Reduced motion preferences (already included in custom.css, keep it there or move here) */
    /* @media (prefers-reduced-motion: reduce) { ... } */
    
+   /* Ensure mobile CSS is properly loaded */
+   @import './mobile.css';
+
+   /* Global mobile overflow prevention */
+   html, body {
+     overflow-x: hidden;
+     width: 100%;
+     max-width: 100vw;
+   }
+
+   /* Prevent code blocks from causing horizontal scroll */
+   pre, code, .code-block-wrapper {
+     max-width: 100%;
+     overflow-x: auto;
+     word-wrap: break-word;
+   }
+
+   /* Mobile-first responsive images */
+   img, svg, video, canvas {
+     max-width: 100%;
+     height: auto;
+     box-sizing: border-box;
+   }
+
+   /* Touch-friendly focus styles */
+   @media (max-width: 768px) {
+     button:focus,
+     a:focus,
+     input:focus,
+     textarea:focus,
+     select:focus {
+       outline: 2px solid var(--accent-highlight);
+       outline-offset: 2px;
+     }
+   }
+
+   /* Prevent zoom on input focus for iOS */
+   @media screen and (max-width: 768px) {
+     input[type="text"],
+     input[type="email"],
+     input[type="password"],
+     input[type="search"],
+     textarea,
+     select {
+       font-size: 16px !important;
+       transform: translateZ(0);
+       -webkit-appearance: none;
+       border-radius: 0;
+     }
+   }
+   
    

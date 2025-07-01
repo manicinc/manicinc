@@ -4,29 +4,156 @@
 /* Mobile Overrides & Fixes                 */
 /* ======================================== */
 
-/* --- Prevent Horizontal Overflow --- */
-/* Apply to body or your main page wrapper */
-body, #__next, .main-page-wrapper { /* Adjust selectors as needed */
+/* --- Prevent Horizontal Overflow (Comprehensive) --- */
+html, body, #__next, .main-page-wrapper, main {
     overflow-x: hidden;
-    /* Consider adding position: relative if absolutely positioned children cause overflow */
-    /* position: relative; */
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+/* --- Prevent Input Zoom on iOS --- */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+    font-size: 16px; /* Prevents zoom on iOS */
+}
+
+@media (max-width: 768px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="search"],
+    textarea,
+    select {
+        font-size: 16px !important; /* Force 16px on mobile to prevent zoom */
+    }
 }
 
 /* --- General Mobile Element Adjustments --- */
-/* Example: Ensure images don't overflow their containers */
 img, svg, video, canvas, iframe {
     max-width: 100%;
     height: auto;
-    display: block; /* Prevents potential bottom space */
+    display: block;
+    box-sizing: border-box;
 }
 
-/* Example: Force long words/URLs to break */
-.force-break-word {
+/* --- Force Long Content to Break --- */
+.force-break-word,
+.blog-content,
+.post-content,
+.markdown-content,
+pre,
+code {
     word-break: break-word;
     overflow-wrap: break-word;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     hyphens: auto;
+}
+
+/* --- Mobile-Specific Blog Improvements --- */
+@media (max-width: 768px) {
+    /* Reduce blog container padding on mobile */
+    .blog-post-container {
+        padding: 1.5rem 1rem !important;
+        margin: 0.5rem !important;
+        border-radius: var(--radius-base) !important;
+    }
+    
+    /* Improve mobile text readability */
+    .blog-content {
+        font-size: 1rem !important;
+        line-height: 1.7 !important;
+    }
+    
+    /* Better mobile heading sizes */
+    .blog-content .md-h1 { font-size: 1.8rem !important; }
+    .blog-content .md-h2 { font-size: 1.6rem !important; }
+    .blog-content .md-h3 { font-size: 1.4rem !important; }
+    .blog-content .md-h4 { font-size: 1.2rem !important; }
+    
+    /* Mobile-friendly code blocks */
+    .code-block-wrapper {
+        margin: 1.5rem -1rem !important; /* Break out of container */
+        border-radius: 0 !important;
+        border-left: none !important;
+        border-right: none !important;
+    }
+    
+    .code-block-wrapper > div[class*="react-syntax-highlighter"] {
+        padding: 1rem !important;
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    /* Mobile table improvements */
+    .table-wrapper {
+        margin: 1.5rem -1rem !important; /* Break out of container */
+        border-radius: 0 !important;
+        border-left: none !important;
+        border-right: none !important;
+    }
+    
+    /* Mobile blockquote improvements */
+    .blog-content .standard-blockquote,
+    .blog-content .styled-quote {
+        margin: 1.5rem -0.5rem !important;
+        padding: 1rem !important;
+        border-radius: var(--radius-base) !important;
+    }
+    
+    /* Reduce margins for mobile */
+    .blog-content p {
+        margin-bottom: 1.2em !important;
+    }
+    
+    .blog-content .md-h2,
+    .blog-content .md-h3,
+    .blog-content .md-h4 {
+        margin: 1.5em 0 1em !important;
+    }
+}
+
+/* --- Ultra-small screens (phones in portrait) --- */
+@media (max-width: 480px) {
+    .blog-post-container {
+        padding: 1rem 0.75rem !important;
+        margin: 0.25rem !important;
+    }
+    
+    .blog-content {
+        font-size: 0.95rem !important;
+    }
+    
+    /* Even smaller headings for tiny screens */
+    .blog-content .md-h1 { font-size: 1.6rem !important; }
+    .blog-content .md-h2 { font-size: 1.4rem !important; }
+    .blog-content .md-h3 { font-size: 1.25rem !important; }
+}
+
+/* --- Touch-Friendly Interactive Elements --- */
+@media (max-width: 768px) {
+    button, .btn, a.btn {
+        min-height: 44px; /* iOS recommended touch target */
+        min-width: 44px;
+        padding: 0.75rem 1rem;
+    }
+    
+    /* Mobile navigation improvements */
+    .nav-link {
+        padding: 0.75rem 1rem !important;
+        font-size: 1rem !important;
+    }
+    
+    /* Mobile sidebar improvements */
+    .blog-sidebar {
+        width: 90vw !important;
+        max-width: 300px !important;
+    }
 }
 
 /* Add any other mobile-specific global overrides here */

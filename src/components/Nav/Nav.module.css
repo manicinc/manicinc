@@ -127,31 +127,40 @@
 /* Responsive Logo Text Behavior            */
 /* ======================================== */
 
-/* Desktop version - show full "MANIC AGENCY" / "PANIC AGENCY" */
-.manicLogoSvg .logo-text-desktop {
-    opacity: 1;
+/* === CRITICAL LOGO TEXT VISIBILITY FIXES === */
+
+/* Desktop version - show full "MANIC AGENCY" / "PANIC AGENCY" only above 1000px */
+.manic-logo-svg .logo-text-desktop {
+    opacity: 0; /* Hide by default */
     transition: opacity 0.4s ease-out;
 }
 
-.manicLogoSvg .logo-text-mobile {
-    opacity: 0;
+.manic-logo-svg .logo-text-mobile {
+    opacity: 1; /* Show mobile version by default */
     transition: opacity 0.4s ease-out;
 }
 
-/* Tablet/smaller screens - show short "MANIC" / "PANIC" with fade transition */
-@media (max-width: 1200px) {
-    .manicLogoSvg .logo-text-desktop {
-        opacity: 0;
+/* Show desktop version only above 1000px */
+@media (min-width: 1000px) {
+    .manic-logo-svg .logo-text-desktop {
+        opacity: 1;
     }
     
-    .manicLogoSvg .logo-text-mobile {
-        opacity: 1;
+    .manic-logo-svg .logo-text-mobile {
+        opacity: 0;
+    }
+}
+
+/* Ensure tagline is completely hidden below 1000px */
+@media (max-width: 999px) {
+    .tagline {
+        display: none !important;
     }
 }
 
 /* Further optimize for very small screens */
 @media (max-width: 640px) {
-    .manicLogoSvg {
+    .manic-logo-svg {
         width: auto;
         height: 2rem; /* Smaller logo on mobile */
     }
@@ -1096,13 +1105,51 @@
     display: block;
     text-align: center;
     width: calc(100% - 3rem);
-    font-size: 0.85rem;
-    padding: 0.8rem 1.5rem;
+    font-size: 0.7rem !important; /* Reduced from 0.85rem */
+    padding: 0.6rem 1rem !important; /* Reduced padding */
     border-radius: 4px;
     /* Inherit holographic styling from .gamesBtn */
     font-family: var(--font-mono);
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.08em !important; /* Reduced from 0.12em */
     text-transform: uppercase;
-    white-space: nowrap;
+    white-space: nowrap !important;
+    min-height: 36px;
+    line-height: 1.2 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+}
+
+/* Ensure the games button icon is smaller on mobile */
+.mobileGames .gamesSvg {
+    width: 1em !important; /* Reduced from 1.2em */
+    height: 1em !important;
+    margin-left: 0.2rem !important; /* Reduce gap */
+    flex-shrink: 0 !important;
+}
+
+/* Additional mobile-specific adjustments for ultra-small screens */
+@media (max-width: 480px) {
+    .mobileGames {
+        font-size: 0.65rem !important; /* Even smaller for very small screens */
+        padding: 0.5rem 0.8rem !important;
+        letter-spacing: 0.06em !important;
+        margin: 0.5rem 1rem !important; /* Slightly smaller margins */
+        width: calc(100% - 2rem) !important;
+    }
+    
+    .mobileGames .gamesSvg {
+        width: 0.9em !important;
+        height: 0.9em !important;
+    }
+}
+
+/* Make sure mobile nav links don't conflict with games button */
+@media (max-width: 768px) {
+    .mobileNavLink {
+        font-size: 1rem !important; /* Ensure other links stay readable */
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
 }
