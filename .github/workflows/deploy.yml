@@ -24,6 +24,8 @@ jobs:
       - name: Build
         # This runs 'next build' and automatically exports to 'out'
         run: npm run build
+        env:
+          NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
 
       - name: Create .nojekyll file
         # Ensures GitHub Pages serves correctly
