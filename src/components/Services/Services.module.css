@@ -3,7 +3,8 @@
     position: relative;
     overflow: hidden;
     /* Use a subtle gradient instead of solid color for depth */
-    background: linear-gradient(170deg, var(--color-space-purple) 0%, var(--bg-secondary) 100%);
+    background: linear-gradient(170deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    transition: background 0.3s ease;
 }
 
 /* --- Background Enhancements --- */
@@ -26,9 +27,10 @@
     position: absolute; width: 60%; height: 60%; border-radius: 50%;
     filter: blur(130px); opacity: 0.12; z-index: -1;
     animation: pulseGlow 10s infinite alternate ease-in-out;
+    transition: background-color 0.3s ease;
 }
 .glowEffectTop { top: -25%; left: -20%; background-color: var(--accent-highlight); } /* Pink */
-.glowEffectBottom { bottom: -25%; right: -20%; background-color: var(--brand-cyan); animation-delay: -5s; } /* Cyan */
+.glowEffectBottom { bottom: -25%; right: -20%; background-color: var(--accent-cool); animation-delay: -5s; } /* Cyan */
 
 @keyframes pulseGlow {
     from { opacity: 0.1; transform: scale(0.9); }
@@ -39,8 +41,9 @@
     position: absolute; width: 100%; height: 100%; overflow: hidden; z-index: -2;
 }
 .star { /* Keep stars */
-    position: absolute; background-color: var(--color-transmission); border-radius: 50%; opacity: 0;
+    position: absolute; background-color: var(--accent-secondary); border-radius: 50%; opacity: 0;
     animation: twinkle 6s infinite linear alternate; /* Slightly slower */
+    transition: background-color 0.3s ease;
 }
 @keyframes twinkle { /* Keep twinkle */
     0% { opacity: 0.1; transform: scale(0.8); }
@@ -326,9 +329,9 @@
     pointer-events: auto !important; /* Ensure clickable */
     transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.3s ease;
     text-shadow: /* Keep complex shadow */
-        0 0 3px rgba(var(--color-transmission-rgb), 0.6),
-        0 0 9px rgba(var(--brand-cyan-rgb, 0, 255, 255), 0.4),
-        0 0 18px rgba(var(--brand-pink-rgb, 255, 0, 255), 0.3),
+        0 0 3px rgba(var(--accent-secondary-rgb), 0.6),
+        0 0 9px rgba(var(--accent-cool-rgb), 0.4),
+        0 0 18px rgba(var(--accent-vibrant-rgb), 0.3),
         0 0 30px rgba(var(--accent-primary-rgb), 0.2);
 }
 @media (min-width: 768px) { .ornateLink { font-size: 2rem; } }
@@ -336,12 +339,12 @@
 
 /* Hover state for link */
 .ornateLink:hover {
-    color: var(--brand-cyan); /* Bright cyan hover */
+    color: var(--accent-cool); /* Bright cyan hover */
     transform: scale(1.02);
     text-shadow: /* Intensify glow */
-        0 0 5px var(--color-transmission),
-        0 0 15px var(--brand-cyan),
-        0 0 25px var(--brand-pink),
+        0 0 5px var(--accent-secondary),
+        0 0 15px var(--accent-cool),
+        0 0 25px var(--accent-vibrant),
         0 0 40px var(--accent-highlight);
 }
 
@@ -366,7 +369,7 @@
 }
 .ornateLink:hover .ctaArrowSpan {
     transform: translateX(10px) rotate(10deg) scale(1.1);
-    color: var(--brand-pink); /* Pink arrow on hover */
+    color: var(--accent-vibrant); /* Pink arrow on hover */
     opacity: 1;
 }
 
