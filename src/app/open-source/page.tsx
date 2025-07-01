@@ -1,4 +1,6 @@
+// src/app/open-source/page.tsx
 import type { Metadata } from 'next';
+import OpenSourcePageClient from './OpenSourcePageClient';
 
 // SEO Metadata for Open Source Page
 export const metadata: Metadata = {
@@ -47,17 +49,5 @@ export const metadata: Metadata = {
 
 // Server Component
 export default function OpenSourcePage() {
-    return (
-        <div className="container mx-auto px-4 py-12">
-            <div className="max-w-4xl mx-auto text-center">
-                <h1 className="text-4xl font-bold mb-4">Open Source Projects</h1>
-                <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-                    Our contributions to the developer community
-                </p>
-                <p className="text-sm text-gray-500">
-                    This page is being restructured for better SEO compliance.
-                </p>
-            </div>
-        </div>
-    );
+    return <OpenSourcePageClient />;
 } 
