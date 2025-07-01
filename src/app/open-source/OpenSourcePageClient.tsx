@@ -15,7 +15,7 @@ import styles from './OpenSource.module.css';
 // Inline SVG Icons
 const Icons = {
   GitHub: ({ className = '' }) => (
-    <svg className={className} width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+    <svg className={className} width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
       <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
     </svg>
   ),
@@ -26,17 +26,17 @@ const Icons = {
   ),
   Fork: ({ className = '' }) => (
     <svg className={className} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <circle cx="12" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><path d="M18 9v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9"/><line x1="12" y1="12" x2="12" y2="15"/>
+      <circle cx="12" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><path d="M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9"/><path d="M12 12v3"/>
     </svg>
   ),
   Code: ({ className = '' }) => (
-    <svg className={className} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+    <svg className={className} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <polyline points="16,18 22,12 16,6"/><polyline points="8,6 2,12 8,18"/>
     </svg>
   ),
   ExternalLink: ({ className = '' }) => (
     <svg className={className} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/>
     </svg>
   ),
   Clock: ({ className = '' }) => (
@@ -56,7 +56,7 @@ const Icons = {
   ),
   Archive: ({ className = '' }) => (
     <svg className={className} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/>
+      <polyline points="21,8 21,21 3,21 3,8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/>
     </svg>
   ),
   X: ({ className = '' }) => (
@@ -65,8 +65,8 @@ const Icons = {
     </svg>
   ),
   Search: ({ className = '' }) => (
-    <svg className={className} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+    <svg className={className} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
     </svg>
   ),
   Filter: ({ className = '' }) => (
@@ -116,7 +116,37 @@ const Icons = {
   ),
   Refresh: ({ className = '' }) => (
     <svg className={className} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+      <polyline points="23,4 23,10 17,10"/><polyline points="1,20 1,14 7,14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/>
+    </svg>
+  ),
+  Eye: ({ className = '' }) => (
+    <svg className={className} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+    </svg>
+  ),
+  Calendar: ({ className = '' }) => (
+    <svg className={className} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+    </svg>
+  ),
+  Database: ({ className = '' }) => (
+    <svg className={className} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+    </svg>
+  ),
+  Shield: ({ className = '' }) => (
+    <svg className={className} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+    </svg>
+  ),
+  GitCommit: ({ className = '' }) => (
+    <svg className={className} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <circle cx="12" cy="12" r="4"/><line x1="1.05" y1="12" x2="7" y2="12"/><line x1="17.01" y1="12" x2="22.96" y2="12"/>
+    </svg>
+  ),
+  GitPullRequest: ({ className = '' }) => (
+    <svg className={className} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/>
     </svg>
   ),
 };
@@ -150,6 +180,26 @@ interface Repository {
         avatar_url: string;
         html_url: string;
     };
+    // Additional metadata that we'll fetch on-demand
+    contributors_count?: number;
+    commits_count?: number;
+    pull_requests_count?: number;
+    default_branch?: string;
+    has_issues?: boolean;
+    has_projects?: boolean;
+    has_wiki?: boolean;
+    has_pages?: boolean;
+    has_downloads?: boolean;
+    subscribers_count?: number;
+}
+
+// Additional interface for detailed repository stats
+interface DetailedRepoStats {
+    contributors_count: number;
+    commits_count: number;
+    pull_requests_count: number;
+    closed_pull_requests_count: number;
+    releases_count: number;
 }
 
 interface GitHubUserOrg {
@@ -210,6 +260,8 @@ export default function OpenSourcePageClient() {
     const [sortBy, setSortBy] = useState<'pushed' | 'stars' | 'name'>('pushed');
     const [searchQuery, setSearchQuery] = useState('');
     const [viewMode, setViewMode] = useState<'grid' | 'list' | 'stats'>('grid');
+    const [loadingDetails, setLoadingDetails] = useState(false);
+    const [detailedStats, setDetailedStats] = useState<DetailedRepoStats | null>(null);
     const repositoryRefs = useRef<{ [key: number]: HTMLDivElement | null }>({});
 
     // Helper Functions
@@ -217,6 +269,30 @@ export default function OpenSourcePageClient() {
         if (!language) return languageColors.Default;
         return languageColors[language as keyof typeof languageColors] || languageColors.Default;
     }, []);
+
+    // Helper function to format dates
+    const formatDate = (dateString: string | undefined): string => {
+        if (!dateString) return "N/A";
+        try {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            });
+        } catch (e) {
+            return "Invalid date";
+        }
+    };
+
+    // Helper function to format bytes
+    const formatBytes = (bytes: number): string => {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    };
 
     const timeAgo = (dateString: string | undefined): string => {
         if (!dateString) return "N/A";
@@ -249,17 +325,81 @@ export default function OpenSourcePageClient() {
         return (num / 1000000).toFixed(1) + 'm';
     };
 
-    const openRepoModal = useCallback((repo: Repository) => {
+    // Fetch detailed repository statistics
+    const fetchDetailedStats = useCallback(async (repo: Repository): Promise<DetailedRepoStats> => {
+        try {
+            const [contributorsRes, commitsRes, pullRequestsRes, releasesRes] = await Promise.all([
+                fetch(`https://api.github.com/repos/${repo.full_name}/contributors?per_page=1`),
+                fetch(`https://api.github.com/repos/${repo.full_name}/commits?per_page=1`),
+                fetch(`https://api.github.com/repos/${repo.full_name}/pulls?state=all&per_page=1`),
+                fetch(`https://api.github.com/repos/${repo.full_name}/releases`)
+            ]);
+
+            // Extract counts from Link headers for pagination info
+            const getCountFromLink = (response: Response): number => {
+                const linkHeader = response.headers.get('Link');
+                if (!linkHeader) return response.status === 200 ? 1 : 0;
+                
+                const match = linkHeader.match(/page=(\d+)>; rel="last"/);
+                return match ? parseInt(match[1]) : 1;
+            };
+
+            const contributors_count = contributorsRes.status === 200 ? getCountFromLink(contributorsRes) : 0;
+            const commits_count = commitsRes.status === 200 ? getCountFromLink(commitsRes) : 0;
+            const pull_requests_count = pullRequestsRes.status === 200 ? getCountFromLink(pullRequestsRes) : 0;
+            
+            // Get releases count
+            const releases = releasesRes.status === 200 ? await releasesRes.json() : [];
+            const releases_count = Array.isArray(releases) ? releases.length : 0;
+
+            // Get closed PRs count
+            const closedPRsRes = await fetch(`https://api.github.com/repos/${repo.full_name}/pulls?state=closed&per_page=1`);
+            const closed_pull_requests_count = closedPRsRes.status === 200 ? getCountFromLink(closedPRsRes) : 0;
+
+            return {
+                contributors_count,
+                commits_count,
+                pull_requests_count,
+                closed_pull_requests_count,
+                releases_count
+            };
+        } catch (error) {
+            console.error('Error fetching detailed stats:', error);
+            return {
+                contributors_count: 0,
+                commits_count: 0,
+                pull_requests_count: 0,
+                closed_pull_requests_count: 0,
+                releases_count: 0
+            };
+        }
+    }, []);
+
+    const openRepoModal = useCallback(async (repo: Repository) => {
         setSelectedRepo(repo);
         setShowModal(true);
+        setLoadingDetails(true);
+        setDetailedStats(null);
         document.body.style.overflow = 'hidden';
-    }, []);
+
+        // Fetch detailed stats in the background
+        try {
+            const stats = await fetchDetailedStats(repo);
+            setDetailedStats(stats);
+        } catch (error) {
+            console.error('Failed to fetch detailed stats:', error);
+        } finally {
+            setLoadingDetails(false);
+        }
+    }, [fetchDetailedStats]);
 
     const closeRepoModal = useCallback(() => {
         setShowModal(false);
         document.body.style.overflow = '';
         setTimeout(() => {
             setSelectedRepo(null);
+            setDetailedStats(null);
+            setLoadingDetails(false);
         }, 300);
     }, []);
 
@@ -478,7 +618,7 @@ export default function OpenSourcePageClient() {
                                         type="text"
                                         placeholder="Search repositories..."
                                         value={searchQuery}
-                                        onChange={(e) => setSearchQuery(e.target.value)}
+                                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
                                         className={styles.filterInput}
                                     />
                                 </div>
@@ -488,7 +628,7 @@ export default function OpenSourcePageClient() {
                                     <label className={styles.filterLabel}>Language</label>
                                     <select
                                         value={filterLanguage || ''}
-                                        onChange={(e) => setFilterLanguage(e.target.value || null)}
+                                        onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setFilterLanguage(e.target.value || null)}
                                         className={styles.filterSelect}
                                     >
                                         <option value="">All Languages</option>
@@ -503,7 +643,7 @@ export default function OpenSourcePageClient() {
                                     <label className={styles.filterLabel}>Topic</label>
                                     <select
                                         value={filterTopic || ''}
-                                        onChange={(e) => setFilterTopic(e.target.value || null)}
+                                        onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setFilterTopic(e.target.value || null)}
                                         className={styles.filterSelect}
                                     >
                                         <option value="">All Topics</option>
@@ -518,7 +658,7 @@ export default function OpenSourcePageClient() {
                                     <label className={styles.filterLabel}>Sort by</label>
                                     <select
                                         value={sortBy}
-                                        onChange={(e) => setSortBy(e.target.value as 'pushed' | 'stars' | 'name')}
+                                        onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setSortBy(e.target.value as 'pushed' | 'stars' | 'name')}
                                         className={styles.filterSelect}
                                     >
                                         <option value="pushed">Recently Updated</option>
@@ -613,7 +753,7 @@ export default function OpenSourcePageClient() {
                                         onClick={() => openRepoModal(repo)}
                                         tabIndex={0}
                                         role="button"
-                                        onKeyDown={(e) => {
+                                        onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => {
                                             if (['Enter', ' '].includes(e.key)) {
                                                 e.preventDefault();
                                                 openRepoModal(repo);
@@ -673,96 +813,175 @@ export default function OpenSourcePageClient() {
                                     {filteredRepositories.length} of {repositories.length} repositories
                                 </div>
                             </div>
-                            <div className={styles.listViewGrid}>
-                                {filteredRepositories.map(repo => (
-                                    <div key={repo.id} className={styles.listItem} onClick={() => openRepoModal(repo)}>
-                                        <div className={styles.listItemHeader}>
-                                            <h3 className={styles.listItemName}>
-                                                <Icons.Code />
-                                                {repo.name}
-                                                {repo.archived && <span className={styles.archivedTag}>Archived</span>}
-                                            </h3>
-                                            <div className={styles.listItemStats}>
-                                                <span><Icons.Star /> {repo.stargazers_count}</span>
-                                                <span><Icons.Fork /> {repo.forks_count}</span>
-                                                <span><Icons.Issues /> {repo.open_issues_count}</span>
-                                            </div>
-                                        </div>
-                                        <p className={styles.listItemDesc}>
-                                            {repo.description || "No description available"}
-                                        </p>
-                                        <div className={styles.listItemFooter}>
-                                            {repo.language && (
-                                                <div className={styles.langDisplay}>
-                                                    <span 
-                                                        className={styles.langDot}
-                                                        style={{ backgroundColor: getLanguageColor(repo.language) }}
-                                                    ></span>
-                                                    <span>{repo.language}</span>
-                                                </div>
-                                            )}
-                                            <span className={styles.listItemTime}>
-                                                <Icons.Clock /> {timeAgo(repo.pushed_at)}
-                                            </span>
-                                        </div>
-                                    </div>
-                                ))}
+                            
+                            <div className={styles.listHeader}>
+                                <div className={styles.colName}>Repository</div>
+                                <div className={styles.colLang}>Language</div>
+                                <div className={styles.colStars}>Stars</div>
+                                <div className={styles.colForks}>Forks</div>
+                                <div className={styles.colUpdated}>Last Update</div>
                             </div>
+                            
+                            {filteredRepositories.map(repo => (
+                                <div key={repo.id} className={styles.listItem} onClick={() => openRepoModal(repo)}>
+                                    <div className={styles.colName}>
+                                        <Icons.Code className={styles.icon} />
+                                        <span>{repo.full_name}</span>
+                                        {repo.archived && <Icons.Archive className={styles.archivedIconList} />}
+                                    </div>
+                                    <div className={styles.colLang}>
+                                        {repo.language ? (
+                                            <>
+                                                <span 
+                                                    className={styles.langDot}
+                                                    style={{ backgroundColor: getLanguageColor(repo.language) }}
+                                                ></span>
+                                                <span className={styles.langName}>{repo.language}</span>
+                                            </>
+                                        ) : (
+                                            <span className={styles.noLang}>-</span>
+                                        )}
+                                    </div>
+                                    <div className={styles.colStars}>
+                                        <Icons.Star className={styles.icon} />
+                                        {formatLargeNumber(repo.stargazers_count)}
+                                    </div>
+                                    <div className={styles.colForks}>
+                                        <Icons.Fork className={styles.icon} />
+                                        {formatLargeNumber(repo.forks_count)}
+                                    </div>
+                                    <div className={styles.colUpdated}>
+                                        {timeAgo(repo.pushed_at)}
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     )}
 
                     {/* Stats view */}
                     {!loading && !error && repositories.length > 0 && viewMode === 'stats' && (
                         <div className={styles.statsViewContainer}>
-                            <div className={styles.statsGrid}>
-                                <div className={styles.statCard}>
-                                    <h3>Total Repositories</h3>
-                                    <p className={styles.statNumber}>{repositories.length}</p>
+                            {/* Grid for large stat boxes */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                                <div className={`${styles.statBoxLg} ${styles.borderPrimary}`}>
+                                    <div className={styles.statHeader}>
+                                        <Icons.Code />
+                                        Total Repos
+                                    </div>
+                                    <div className={styles.statValue}>{repositories.length.toLocaleString()}</div>
+                                    <p className={styles.statSubtext}>Last Push: {repositories.length > 0 ? timeAgo(repositories[0].pushed_at) : 'N/A'}</p>
                                 </div>
-                                <div className={styles.statCard}>
-                                    <h3>Total Stars</h3>
-                                    <p className={styles.statNumber}>
+                                <div className={`${styles.statBoxLg} ${styles.borderYellow}`}>
+                                    <div className={styles.statHeader}>
+                                        <Icons.Star />
+                                        Total Stars
+                                    </div>
+                                    <div className={styles.statValue}>
                                         {formatLargeNumber(repositories.reduce((sum, repo) => sum + repo.stargazers_count, 0))}
+                                    </div>
+                                    <p className={styles.statSubtext}>
+                                        Avg per Repo: {repositories.length > 0 ? (repositories.reduce((sum, repo) => sum + repo.stargazers_count, 0) / repositories.length).toFixed(1) : '0'}
                                     </p>
                                 </div>
-                                <div className={styles.statCard}>
-                                    <h3>Total Forks</h3>
-                                    <p className={styles.statNumber}>
+                                <div className={`${styles.statBoxLg} ${styles.borderSecondary}`}>
+                                    <div className={styles.statHeader}>
+                                        <Icons.Fork />
+                                        Total Forks
+                                    </div>
+                                    <div className={styles.statValue}>
                                         {formatLargeNumber(repositories.reduce((sum, repo) => sum + repo.forks_count, 0))}
+                                    </div>
+                                    <p className={styles.statSubtext}>
+                                        Avg per Repo: {repositories.length > 0 ? (repositories.reduce((sum, repo) => sum + repo.forks_count, 0) / repositories.length).toFixed(1) : '0'}
                                     </p>
                                 </div>
-                                <div className={styles.statCard}>
-                                    <h3>Open Issues</h3>
-                                    <p className={styles.statNumber}>
-                                        {formatLargeNumber(repositories.reduce((sum, repo) => sum + repo.open_issues_count, 0))}
+                                <div className={`${styles.statBoxLg} ${styles.borderOrange}`}>
+                                    <div className={styles.statHeader}>
+                                        <Icons.Issues />
+                                        Open Issues
+                                    </div>
+                                    <div className={styles.statValue}>
+                                        {repositories.reduce((sum, repo) => sum + repo.open_issues_count, 0).toLocaleString()}
+                                    </div>
+                                    <p className={styles.statSubtext}>
+                                        Avg per Repo: {repositories.length > 0 ? (repositories.reduce((sum, repo) => sum + repo.open_issues_count, 0) / repositories.length).toFixed(1) : '0'}
                                     </p>
                                 </div>
                             </div>
                             
-                            <div className={styles.languageStats}>
-                                <h3>Languages Used</h3>
-                                <div className={styles.languageGrid}>
-                                    {Object.entries(
-                                        repositories.reduce((acc, repo) => {
-                                            if (repo.language) {
-                                                acc[repo.language] = (acc[repo.language] || 0) + 1;
-                                            }
-                                            return acc;
-                                        }, {} as Record<string, number>)
-                                    )
-                                    .sort(([,a], [,b]) => b - a)
-                                    .map(([lang, count]) => (
-                                        <div key={lang} className={styles.languageStat}>
-                                            <div className={styles.langStatHeader}>
-                                                <span 
-                                                    className={styles.langDot}
-                                                    style={{ backgroundColor: getLanguageColor(lang) }}
-                                                ></span>
-                                                <span>{lang}</span>
+                            {/* Grid for themed boxes (languages, topics) */}
+                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                                <div className={`${styles.themedBox} lg:col-span-2`}>
+                                    <div className={styles.boxHeaderSimple}>
+                                        <Icons.Code className={styles.headerIconLang} />
+                                        <h3 className={styles.boxTitle}>Language Distribution</h3>
+                                    </div>
+                                    <div className={styles.boxContent}>
+                                        {languages.length > 0 ? (
+                                            <div className={styles.languageBars}>
+                                                {languages.slice(0, 8).map((lang) => {
+                                                    const count = repositories.filter(r => r.language === lang).length;
+                                                    const percentage = Math.round((count / repositories.length) * 100);
+                                                    return (
+                                                        <div key={lang} className={styles.languageBarItem}>
+                                                            <div className={styles.langLabel}>
+                                                                <span>
+                                                                    <span 
+                                                                        className={styles.langDotInline}
+                                                                        style={{ backgroundColor: getLanguageColor(lang) }}
+                                                                    ></span>
+                                                                    {lang}
+                                                                </span>
+                                                                <span className={styles.langPercent}>{percentage}%</span>
+                                                            </div>
+                                                            <div className={styles.langBarBg}>
+                                                                <motion.div
+                                                                    className={styles.langBarFg}
+                                                                    style={{ 
+                                                                        backgroundColor: getLanguageColor(lang),
+                                                                        boxShadow: `0 0 8px 0px ${getLanguageColor(lang)}`
+                                                                    }}
+                                                                    initial={{ width: '0%' }}
+                                                                    animate={{ width: `${percentage}%` }}
+                                                                    transition={{ duration: 0.8, ease: 'easeOut' }}
+                                                                ></motion.div>
+                                                            </div>
+                                                        </div>
+                                                    );
+                                                })}
                                             </div>
-                                            <span className={styles.langCount}>{count} repos</span>
+                                        ) : (
+                                            <p className="text-sm text-muted italic p-4 text-center">No language data available.</p>
+                                        )}
+                                    </div>
+                                </div>
+                                <div className={styles.themedBox}>
+                                    <div className={styles.boxHeaderSimple}>
+                                        <Icons.Tag className={styles.headerIconTopic} />
+                                        <h3 className={styles.boxTitle}>Popular Topics</h3>
+                                    </div>
+                                    <div className={styles.boxContent}>
+                                        <div className="flex flex-wrap gap-2">
+                                            {topics.length > 0 ? topics.slice(0, 18).map(topic => {
+                                                const count = repositories.filter(r => r.topics?.includes(topic)).length;
+                                                return (
+                                                    <button 
+                                                        key={topic} 
+                                                        onClick={() => { 
+                                                            setFilterTopic(topic); 
+                                                            setViewMode('grid');
+                                                        }} 
+                                                        className={`${styles.topicPill} ${filterTopic === topic ? styles.active : ''}`}
+                                                        title={`Filter by ${topic} (${count})`}
+                                                    >
+                                                        {topic}
+                                                    </button>
+                                                );
+                                            }) : (
+                                                <p className="text-sm text-muted italic text-center w-full">No common topics found.</p>
+                                            )}
                                         </div>
-                                    ))}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -784,7 +1003,7 @@ export default function OpenSourcePageClient() {
                                 initial={{ opacity: 0, scale: 0.9, y: 20 }}
                                 animate={{ opacity: 1, scale: 1, y: 0 }}
                                 exit={{ opacity: 0, scale: 0.95, y: 15 }}
-                                onClick={(e) => e.stopPropagation()}
+                                onClick={(e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()}
                             >
                                 <div className={styles.modalHeader}>
                                     <div className={styles.modalTitle}>
@@ -808,23 +1027,136 @@ export default function OpenSourcePageClient() {
                                     <div className={styles.modalDescription}>
                                         {selectedRepo.description || <span className={styles.noDesc}>No description available</span>}
                                     </div>
+                                    
+                                    {/* Main Stats Grid */}
                                     <div className={styles.modalStatsGrid}>
                                         <div className={styles.statItem}>
-                                            <span><Icons.Star /> Stars</span>
+                                            <span><Icons.Star className={styles.starIcon} /> Stars</span>
                                             <strong>{selectedRepo.stargazers_count?.toLocaleString()}</strong>
                                         </div>
                                         <div className={styles.statItem}>
-                                            <span><Icons.Fork /> Forks</span>
+                                            <span><Icons.Eye className={styles.watchIcon} /> Watchers</span>
+                                            <strong>{selectedRepo.watchers_count?.toLocaleString()}</strong>
+                                        </div>
+                                        <div className={styles.statItem}>
+                                            <span><Icons.Fork className={styles.forkIcon} /> Forks</span>
                                             <strong>{selectedRepo.forks_count?.toLocaleString()}</strong>
                                         </div>
                                         <div className={styles.statItem}>
-                                            <span><Icons.Issues /> Issues</span>
+                                            <span><Icons.Issues className={styles.issueIcon} /> Open Issues</span>
                                             <strong>{selectedRepo.open_issues_count?.toLocaleString()}</strong>
                                         </div>
+                                        
+                                        {/* Additional Stats - Show with loading state */}
                                         <div className={styles.statItem}>
-                                            <span><Icons.Clock /> Updated</span>
-                                            <strong>{timeAgo(selectedRepo.updated_at)}</strong>
+                                            <span><Icons.Users className={styles.usersIcon} /> Contributors</span>
+                                            <strong>
+                                                {loadingDetails ? (
+                                                    <span className={styles.loadingDots}>Loading...</span>
+                                                ) : (
+                                                    detailedStats?.contributors_count?.toLocaleString() || '0'
+                                                )}
+                                            </strong>
                                         </div>
+                                        <div className={styles.statItem}>
+                                            <span><Icons.GitCommit className={styles.commitIcon} /> Commits</span>
+                                            <strong>
+                                                {loadingDetails ? (
+                                                    <span className={styles.loadingDots}>Loading...</span>
+                                                ) : (
+                                                    detailedStats?.commits_count?.toLocaleString() || '0'
+                                                )}
+                                            </strong>
+                                        </div>
+                                        <div className={styles.statItem}>
+                                            <span><Icons.GitPullRequest className={styles.prIcon} /> Pull Requests</span>
+                                            <strong>
+                                                {loadingDetails ? (
+                                                    <span className={styles.loadingDots}>Loading...</span>
+                                                ) : (
+                                                    detailedStats?.pull_requests_count?.toLocaleString() || '0'
+                                                )}
+                                            </strong>
+                                        </div>
+                                        <div className={styles.statItem}>
+                                            <span><Icons.Tag className={styles.releaseIcon} /> Releases</span>
+                                            <strong>
+                                                {loadingDetails ? (
+                                                    <span className={styles.loadingDots}>Loading...</span>
+                                                ) : (
+                                                    detailedStats?.releases_count?.toLocaleString() || '0'
+                                                )}
+                                            </strong>
+                                        </div>
+                                    </div>
+
+                                    {/* Detailed Information Sections */}
+                                    <div className={styles.modalDetailSections}>
+                                        {/* Repository Details */}
+                                        <div className={styles.detailSection}>
+                                            <h4 className={styles.subHeading}>Repository Details</h4>
+                                            <div className={styles.detailGrid}>
+                                                <div className={styles.detailItem}>
+                                                    <span className={styles.detailLabel}><Icons.Calendar /> Created</span>
+                                                    <span className={styles.detailValue}>{formatDate(selectedRepo.created_at)}</span>
+                                                </div>
+                                                <div className={styles.detailItem}>
+                                                    <span className={styles.detailLabel}><Icons.Clock /> Last Updated</span>
+                                                    <span className={styles.detailValue}>{timeAgo(selectedRepo.updated_at)}</span>
+                                                </div>
+                                                <div className={styles.detailItem}>
+                                                    <span className={styles.detailLabel}><Icons.GitCommit /> Last Push</span>
+                                                    <span className={styles.detailValue}>{timeAgo(selectedRepo.pushed_at)}</span>
+                                                </div>
+                                                <div className={styles.detailItem}>
+                                                    <span className={styles.detailLabel}><Icons.Database /> Size</span>
+                                                    <span className={styles.detailValue}>{formatBytes(selectedRepo.size * 1024)}</span>
+                                                </div>
+                                                {selectedRepo.language && (
+                                                    <div className={styles.detailItem}>
+                                                        <span className={styles.detailLabel}><Icons.Code /> Language</span>
+                                                        <span className={styles.detailValue}>
+                                                            <span 
+                                                                className={styles.langDotInline}
+                                                                style={{ backgroundColor: getLanguageColor(selectedRepo.language) }}
+                                                            ></span>
+                                                            {selectedRepo.language}
+                                                        </span>
+                                                    </div>
+                                                )}
+                                                {selectedRepo.license && (
+                                                    <div className={styles.detailItem}>
+                                                        <span className={styles.detailLabel}><Icons.Shield /> License</span>
+                                                        <span className={styles.detailValue}>{selectedRepo.license.name}</span>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        </div>
+
+                                        {/* Activity Summary */}
+                                        {detailedStats && !loadingDetails && (
+                                            <div className={styles.detailSection}>
+                                                <h4 className={styles.subHeading}>Activity Summary</h4>
+                                                <div className={styles.activityGrid}>
+                                                    <div className={styles.activityItem}>
+                                                        <div className={styles.activityValue}>{detailedStats.pull_requests_count}</div>
+                                                        <div className={styles.activityLabel}>Total PRs</div>
+                                                    </div>
+                                                    <div className={styles.activityItem}>
+                                                        <div className={styles.activityValue}>{detailedStats.closed_pull_requests_count}</div>
+                                                        <div className={styles.activityLabel}>Closed PRs</div>
+                                                    </div>
+                                                    <div className={styles.activityItem}>
+                                                        <div className={styles.activityValue}>{Math.max(0, detailedStats.pull_requests_count - detailedStats.closed_pull_requests_count)}</div>
+                                                        <div className={styles.activityLabel}>Open PRs</div>
+                                                    </div>
+                                                    <div className={styles.activityItem}>
+                                                        <div className={styles.activityValue}>{detailedStats.contributors_count}</div>
+                                                        <div className={styles.activityLabel}>Contributors</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )}
                                     </div>
                                     {selectedRepo.topics && selectedRepo.topics.length > 0 && (
                                         <div className={styles.modalTopics}>
@@ -865,4 +1197,4 @@ export default function OpenSourcePageClient() {
             </main>
         </>
     );
-}
+} 
