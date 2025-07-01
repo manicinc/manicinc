@@ -1,4 +1,4 @@
-// src/app/layout.tsx (fixed)
+// src/app/layout.tsx (with Google Analytics)
 import { ReactNode } from "react";
 import { Inter, Lato, EB_Garamond, Playfair_Display, Merriweather, Dancing_Script } from 'next/font/google';
 
@@ -19,6 +19,8 @@ import "./styles/globals.css";
 
 // Import SEO helper
 import { generateSEOMetadata } from '@/lib/getSEOMetadata';
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID; // Read GA ID from env
 
 // --- Font Definitions ---
 const inter = Inter({ subsets: ['latin'], variable: '--font-body', display: 'swap' });
@@ -52,8 +54,27 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             ${dancingScript.variable}
         `} suppressHydrationWarning>
       <head>
+        {/* Google Analytics */}
+        {GA_ID && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_ID}');
+                `,
+              }}
+            />
+          </>
+        )}
 
-      <script dangerouslySetInnerHTML={{ __html: `
+        <script dangerouslySetInnerHTML={{ __html: `
         (function() {
           try {
             // Don't run this script during server-side rendering
