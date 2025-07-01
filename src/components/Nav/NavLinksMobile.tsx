@@ -82,6 +82,18 @@ const NavLinksMobile: React.FC<NavLinksMobileProps> = ({
                         </a>
                     </Link>
 
+                    {/* --- Games Link (Always Shown) --- */}
+                    <Link href="https://games.manic.agency" legacyBehavior>
+                        <a className={`${styles.gamesBtn} ${styles.mobileGames}`}
+                           data-nav-id="games"
+                           onClick={closeAndNavigate}
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                             <span>Games</span>
+                             <img src="/controller-button.svg" alt="Game Controller" className={styles.gamesSvg} />
+                        </a>
+                    </Link>
+
                     {/* Render Children Here if needed */}
                     {children && <div className="mt-4 px-4">{children}</div>}
 
@@ -108,7 +120,7 @@ const NavLinksMobile: React.FC<NavLinksMobileProps> = ({
 
                 {/* Footer */}
                 <div className={styles.mobileMenuFooter}>
-                    Manic Agency &copy; {currentYear} // metaverses intersect here
+                    Manic Agency &copy; {currentYear}
                 </div>
             </div>
         </div>

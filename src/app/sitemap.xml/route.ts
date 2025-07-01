@@ -4,7 +4,7 @@ import { getAllProjects } from '@/lib/getAllProjects';
 import { BlogPost } from '@/types/blog';
 import { Project } from '@/types/project';
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://manicinc.github.io';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://manic.agency';
 
 function formatDate(date: string) {
   return date ? new Date(date).toISOString() : new Date().toISOString();
@@ -35,7 +35,50 @@ export async function GET() {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
-    // Add other static routes
+    {
+      url: `${BASE_URL}/open-source`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/team`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/mission`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/process`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/contact`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/privacy`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
+      url: `${BASE_URL}/terms`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    // External link to games platform (for reference, not included in sitemap)
+    // games.manic.agency will have its own sitemap
   ];
 
   // Extract categories for blog and projects

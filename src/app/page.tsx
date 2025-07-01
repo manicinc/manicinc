@@ -11,6 +11,71 @@ import Services from "@/components/Services/Services";
 import Intro from "@/components/Intro/Intro";
 import HomePageSkeleton from '@/components/Skeletons/HomePageSkeleton'; // Keep Skeleton import
 
+// SEO Metadata for Homepage
+export const metadata: Metadata = {
+    title: 'Manic Agency - Experimental Creative Development & Design Studio',
+    description: 'Los Angeles-based creative development agency specializing in AR/VR, blockchain solutions, AI implementation, and innovative web applications. We forge reality from digital ether.',
+    keywords: [
+        'creative development agency',
+        'Los Angeles web development', 
+        'AR VR development',
+        'blockchain solutions',
+        'AI implementation',
+        'experimental design',
+        'digital innovation',
+        'custom software development',
+        'creative technology',
+        'digital transformation'
+    ],
+    authors: [{ name: 'Manic Agency', url: 'https://manic.agency' }],
+    creator: 'Manic Agency',
+    publisher: 'Manic Agency LLC',
+    alternates: {
+        canonical: '/'
+    },
+    openGraph: {
+        type: 'website',
+        locale: 'en_US',
+        url: '/',
+        siteName: 'Manic Agency',
+        title: 'Manic Agency - Experimental Creative Development & Design Studio',
+        description: 'Los Angeles-based creative development agency specializing in AR/VR, blockchain solutions, AI implementation, and innovative web applications.',
+        images: [
+            {
+                url: '/og-default.png',
+                width: 1200,
+                height: 630,
+                alt: 'Manic Agency - Experimental Creative Development'
+            }
+        ]
+    },
+    twitter: {
+        card: 'summary_large_image',
+        site: '@manicagency',
+        creator: '@manicagency',
+        title: 'Manic Agency - Experimental Creative Development & Design Studio',
+        description: 'Los Angeles-based creative development agency specializing in AR/VR, blockchain solutions, AI implementation, and innovative web applications.',
+        images: [{
+            url: '/og-default.png',
+            alt: 'Manic Agency - Experimental Creative Development'
+        }]
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1
+        }
+    },
+    verification: {
+        google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    }
+};
+
 // Keep your getFeaturedItems function exactly as it is
 // (Could also be moved to a separate file like './actions.ts' if preferred)
 async function getFeaturedItems(): Promise<HeroFeedItem[]> {

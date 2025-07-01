@@ -37,6 +37,14 @@ export const footerNavigationData: FooterSection[] = [
     ],
   },
   {
+    title: 'Platform',
+    links: [
+        { title: 'Manic Games', href: 'https://games.manic.agency' },
+        { title: 'Publishing', href: 'https://games.manic.agency/publishing' },
+        { title: 'Licensing', href: 'https://games.manic.agency/licensing' },
+    ],
+  },
+  {
     title: 'Company',
     links: [ /* ... your main company links ... */
         { title: 'About Us', href: '/team' },

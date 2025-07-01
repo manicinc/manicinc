@@ -2,8 +2,51 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Manic Agency', // Adjust title
-  // Add description if needed
+    title: 'Terms of Service - User Agreement & Legal Terms | Manic Agency',
+    description: 'Read Manic Agency\'s Terms of Service including user agreements, intellectual property rights, prohibited activities, and legal terms governing website usage.',
+    keywords: [
+        'terms of service',
+        'user agreement',
+        'legal terms',
+        'terms and conditions',
+        'intellectual property',
+        'website terms',
+        'user rights',
+        'legal agreement',
+        'service terms',
+        'user responsibilities'
+    ],
+    authors: [{ name: 'Manic Agency', url: 'https://manic.agency' }],
+    alternates: {
+        canonical: '/terms'
+    },
+    openGraph: {
+        type: 'website',
+        url: '/terms',
+        title: 'Terms of Service - User Agreement & Legal Terms | Manic Agency',
+        description: 'Read Manic Agency\'s Terms of Service including user agreements, intellectual property rights, and legal terms governing website usage.',
+        images: [
+            {
+                url: '/og-default.png',
+                width: 1200,
+                height: 630,
+                alt: 'Manic Agency Terms of Service'
+            }
+        ]
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Terms of Service - User Agreement & Legal Terms | Manic Agency',
+        description: 'Read Manic Agency\'s Terms of Service including user agreements, intellectual property rights, and legal terms governing website usage.',
+        images: [{
+            url: '/og-default.png',
+            alt: 'Manic Agency Terms of Service'
+        }]
+    },
+    robots: {
+        index: true,
+        follow: true
+    }
 };
 
 // Basic page structure - use your standard layout components
