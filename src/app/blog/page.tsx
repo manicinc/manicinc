@@ -7,9 +7,47 @@ import "@/app/styles/blogs.css"; // Import blog styles
 
 // Static Metadata for the main blog index
 export const metadata: Metadata = {
-  title: 'Looking Glass Chronicles', // Specific title for /blog
-  description: 'Dispatches, discoveries, and coded Visions from the Synthetic Publishing Platform powered by Manic Agency.',
-  // Add other specific OG/Twitter data if desired
+    title: 'Looking Glass Chronicles - Insights & Experiments | Manic Agency',
+    description: 'Dispatches, discoveries, and coded visions from the Synthetic Publishing Platform. Explore experimental development insights, AI implementations, and creative technology.',
+    keywords: [
+        'manic agency blog',
+        'looking glass chronicles',
+        'experimental development insights',
+        'AI implementation blog',
+        'creative technology articles',
+        'development experiments',
+        'innovative coding insights',
+        'synthetic publishing platform',
+        'tech innovations',
+        'developer insights'
+    ],
+    authors: [{ name: 'Manic Agency', url: 'https://manic.agency' }],
+    alternates: {
+        canonical: '/blog'
+    },
+    openGraph: {
+        type: 'website',
+        url: '/blog',
+        title: 'Looking Glass Chronicles - Insights & Experiments | Manic Agency',
+        description: 'Dispatches, discoveries, and coded visions from the Synthetic Publishing Platform. Explore experimental development insights and creative technology.',
+        images: [
+            {
+                url: '/og-default.png',
+                width: 1200,
+                height: 630,
+                alt: 'Looking Glass Chronicles - Manic Agency Blog'
+            }
+        ]
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Looking Glass Chronicles - Insights & Experiments | Manic Agency',
+        description: 'Dispatches, discoveries, and coded visions from the Synthetic Publishing Platform. Explore experimental development insights and creative technology.',
+        images: [{
+            url: '/og-default.png',
+            alt: 'Looking Glass Chronicles - Manic Agency Blog'
+        }]
+    }
 };
 
 // Loading Fallback Component

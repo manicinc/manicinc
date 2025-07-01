@@ -1,0 +1,12 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+
+# Host
+Host: https://manic.agency
+
+# Sitemaps
+Sitemap: https://manic.agency/sitemap.xml

@@ -10,6 +10,7 @@ import GlitchAnimation from "./GlitchAnimation"; // Ensure path is correct
 import AsciiArtPlaceholder from "../lib/asciiPlaceholders"; // Ensure path is correct
 import { HeroFeedItem } from "@/types/common"; // Ensure path is correct
 import { motion } from 'framer-motion';
+import { useCookieConsent } from '@/context/CookieConsentContext';
 
 // --- Dynamic Quote System ---
 const LOCAL_STORAGE_KEY = 'manicAgencyHeroVisitData';
@@ -52,6 +53,7 @@ interface HeroSectionProps { featuredItems: HeroFeedItem[]; }
 // --- Component ---
 export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
     const router = useRouter();
+    const { setItem, getItem } = useCookieConsent();
     const [currentQuote, setCurrentQuote] = useState<string>(" "); // Start blank
     const [mounted, setMounted] = useState(false);
     const [glitchingQuote, setGlitchingQuote] = useState(false);
@@ -90,10 +92,10 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
 
         // Update last quote shown in localStorage
         try {
-            const storedData = localStorage.getItem(LOCAL_STORAGE_KEY);
+            const storedData = getItem(LOCAL_STORAGE_KEY);
             const visitData: VisitData = storedData ? JSON.parse(storedData) : { count: 0, lastVisitTimestamp: 0 };
             visitData.lastQuote = newQuote;
-            localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(visitData));
+            setItem(LOCAL_STORAGE_KEY, JSON.stringify(visitData), 'functional');
         } catch (e) { console.error("LS error (update lastQuote):", e); }
     }, [currentQuote]); // Re-memoize only when currentQuote changes
 
@@ -108,7 +110,7 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
         let lastQuoteFromStorage: string | undefined = undefined;
 
         try {
-            const storedData = localStorage.getItem(LOCAL_STORAGE_KEY);
+            const storedData = getItem(LOCAL_STORAGE_KEY);
             if (storedData) {
                 visitData = JSON.parse(storedData);
                 visitData.count = Number(visitData.count) || 0;
@@ -135,17 +137,17 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                 }
                 visitData.lastVisitTimestamp = now;
                 // Update storage with new count/timestamp, but clear lastQuote (it gets set in triggerQuoteChange)
-                localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify({ ...visitData, lastQuote: undefined }));
+                setItem(LOCAL_STORAGE_KEY, JSON.stringify({ ...visitData, lastQuote: undefined }), 'functional');
             } else {
                  console.log("Determined: First Visit Ever (no storage)"); // DEBUG
                 initialQuote = getRandomQuote(quoteCategories.FIRST_VISIT);
                 visitData = { count: 1, lastVisitTimestamp: Date.now(), lastQuote: undefined };
-                localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(visitData));
+                setItem(LOCAL_STORAGE_KEY, JSON.stringify(visitData), 'functional');
             }
         } catch (error) {
             console.error("LS error (initial quote):", error);
             initialQuote = getRandomQuote(quoteCategories.FIRST_VISIT);
-            try { localStorage.removeItem(LOCAL_STORAGE_KEY); } catch (e) {}
+            // Note: No need to remove from localStorage as consent-aware setItem handles this
         }
 
         console.log("Initial quote selected:", initialQuote); // DEBUG
