@@ -12,7 +12,7 @@ const seoConfig = {
     title: SITE_NAME,
     description: 'Manic Agency: Where metaverses intersect. Digital agency specializing in Web3, AI, AR/VR, creative technology, and innovative game publishing through Manic Games platform.',
     keywords: ['Web Development', 'Design', 'AR', 'VR', 'AI', 'Web3', 'Digital Agency', 'Los Angeles', 'Lagos', 'Creative Technology', 'SynthStack', 'Manic Inc', 'Game Publishing', 'Manic Games', 'Text Games', 'Game Development', 'Publishing Platform'],
-    ogImage: '/og-default.png',
+    ogImage: '/og-default.webp',
     themeColor: {
       light: '#FBF6EF', // Light mode theme color
       dark: '#22182B' // Dark mode theme color

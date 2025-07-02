@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         description: 'Get in touch with Manic Agency for creative development projects, collaborations, or inquiries. Based in Los Angeles with global reach.',
         images: [
             {
-                url: '/og-default.png',
+                url: '/og-default.webp',
                 width: 1200,
                 height: 630,
                 alt: 'Contact Manic Agency - Creative Development Studio'
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         title: 'Contact Us - Open a Dialogue | Manic Agency',
         description: 'Get in touch with Manic Agency for creative development projects, collaborations, or inquiries. Based in Los Angeles with global reach.',
         images: [{
-            url: '/og-default.png',
+            url: '/og-default.webp',
             alt: 'Contact Manic Agency - Creative Development Studio'
         }]
     }

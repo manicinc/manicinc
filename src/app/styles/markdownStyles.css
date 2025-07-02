@@ -133,8 +133,6 @@
   position: relative; margin: 2.5rem 0; border: 1px solid var(--bg-tertiary);
   border-radius: var(--radius-lg); overflow: hidden;
   box-shadow: var(--shadow-inset), 0 2px 5px rgba(var(--shadow-color), 0.1);
-  /* Prevent any text decoration bleeding */
-  text-decoration: none;
 }
 .code-block-header {
   display: flex; justify-content: space-between; align-items: center;
@@ -144,52 +142,28 @@
 .code-language {
   font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);
   text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;
-  /* Remove any inherited text decoration */
-  text-decoration: none !important;
-  border-bottom: none !important;
 }
 .code-copy-button {
   font-family: var(--font-meta-blog); font-size: 0.75rem; font-weight: 600;
   background-color: var(--bg-secondary); color: var(--text-secondary);
   border: 1px solid var(--bg-tertiary); padding: 0.3rem 0.8rem; border-radius: var(--radius-base);
   cursor: pointer; transition: all var(--transition-fast); line-height: 1;
-  /* Remove any text decoration */
-  text-decoration: none !important;
-  border-bottom: 1px solid var(--bg-tertiary) !important; /* Keep only the border we want */
 }
 .code-copy-button:hover {
   background-color: var(--accent-secondary); color: var(--text-on-accent);
   border-color: var(--accent-secondary); transform: scale(1.05);
-  text-decoration: none !important;
 }
 .code-copy-button:active { transform: scale(0.98); }
 
 /* Container rendered by SyntaxHighlighter (PreTag="div") */
-/* Background/Colors are handled by inline styles from theme object */
 .code-block-wrapper > div[class*="react-syntax-highlighter"] {
   margin: 0 !important; padding: 1.2rem 1.5rem !important;
   border-radius: 0 0 var(--radius-lg) var(--radius-lg) !important;
   border: none !important;
   font-family: var(--font-mono) !important; font-size: 0.95rem !important; line-height: 1.75 !important;
-  overflow-x: auto !important; white-space: pre !important; /* Ensure pre formatting */
+  overflow-x: auto !important; white-space: pre !important;
   /* Themed scrollbar */
   scrollbar-color: var(--accent-muted2) var(--bg-tertiary); scrollbar-width: thin;
-  /* Force removal of any text decoration from syntax highlighter */
-  text-decoration: none !important;
-  
-  /* Ensure all syntax highlighter content has no text decoration */
-  & code,
-  & code *,
-  & .token,
-  & span {
-     text-shadow: none !important;
-     outline: none !important;
-     border: none !important;
-     box-shadow: none !important;
-     text-decoration: none !important;
-     text-underline-offset: unset !important;
-     border-bottom: none !important;
-  }
 }
 .code-block-wrapper > div[class*="react-syntax-highlighter"]::-webkit-scrollbar { height: 8px; width: 8px; background-color: var(--bg-tertiary); }
 .code-block-wrapper > div[class*="react-syntax-highlighter"]::-webkit-scrollbar-thumb { background-color: var(--accent-muted2); border-radius: 4px; border: 2px solid var(--bg-tertiary); }
@@ -208,12 +182,7 @@
   margin: 0 0.1em;
   word-wrap: break-word;
   white-space: normal;
-  /* Remove any text decoration */
-  text-decoration: none !important;
-  text-underline-offset: unset !important;
-  border-bottom: none !important;
-  /* Prevent highlighting issues */
-  background-clip: padding-box;
+  /* Ensure no text decoration issues */
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
@@ -222,9 +191,43 @@
 .blog-content a .inline-code,
 .blog-content .md-link .inline-code {
   color: var(--accent-primary) !important;
+  background: rgba(var(--accent-primary-rgb), 0.15) !important;
+}
+
+/* Fix the problematic global CSS that's affecting code styling */
+.post-content code:not(pre > code),
+.blog-content code:not(pre > code),
+.markdown-content code:not(pre > code) {
+  font-family: var(--font-mono) !important;
+  color: var(--accent-primary) !important;
+  background: rgba(var(--accent-primary-rgb), 0.1) !important;
+  border: 1px solid rgba(var(--accent-primary-rgb), 0.2) !important;
+  border-radius: var(--radius-base) !important;
+  font-size: 0.88em !important;
+  padding: 0.15em 0.4em !important;
+  word-wrap: break-word !important;
+  /* Remove all problematic styling */
+  text-decoration: none !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  text-underline-offset: unset !important;
+  border-bottom: none !important;
+  /* Force clean styling */
+  background-clip: padding-box !important;
+  box-decoration-break: clone !important;
+  -webkit-box-decoration-break: clone !important;
+  vertical-align: baseline !important;
+  white-space: pre-wrap !important;
+}
+
+/* Remove any inherited link/anchor styling from code */
+a code:not(pre > code),
+.md-link code:not(pre > code) {
+  color: var(--accent-primary) !important;
+  background: rgba(var(--accent-primary-rgb), 0.15) !important;
   text-decoration: none !important;
   border-bottom: none !important;
-  background: rgba(var(--accent-primary-rgb), 0.15) !important;
 }
 
 /* --- Blockquotes (Standard) --- */
@@ -369,11 +372,20 @@
 
 
 /* --- Images --- */
-.blog-content img { max-width: 100%; height: auto; border-radius: var(--radius-base); display: block; }
-.markdown-image-wrapper { margin: 2rem auto; } /* Default center */
+.blog-content img { 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: var(--radius-base); 
+    display: block; 
+    margin: 2rem auto; /* Center images by default */
+}
+.markdown-image-wrapper { 
+    margin: 2rem auto; /* Default center */
+    text-align: center; /* Ensure wrapper is centered */
+}
 .markdown-image-wrapper.align-left { margin: 0.5rem 1.5rem 1rem 0; float: left; max-width: 50%; clear: left; }
 .markdown-image-wrapper.align-right { margin: 0.5rem 0 1rem 1.5rem; float: right; max-width: 50%; clear: right; }
-.markdown-image-wrapper.align-center { margin: 2rem auto; display: block; float: none; clear: both; max-width: 100%; }
+.markdown-image-wrapper.align-center { margin: 2rem auto; display: block; float: none; clear: both; max-width: 100%; text-align: center; }
 /* Ensure paragraph after floated image clears */
 .markdown-image-wrapper.align-left + p,
 .markdown-image-wrapper.align-right + p {

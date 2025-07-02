@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description: 'Los Angeles-based creative development agency specializing in AR/VR, blockchain solutions, AI implementation, and innovative web applications.',
         images: [
             {
-                url: '/og-default.png',
+                url: '/og-default.webp',
                 width: 1200,
                 height: 630,
                 alt: 'Manic Agency - Experimental Creative Development'
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         title: 'Manic Agency - Experimental Creative Development & Design Studio',
         description: 'Los Angeles-based creative development agency specializing in AR/VR, blockchain solutions, AI implementation, and innovative web applications.',
         images: [{
-            url: '/og-default.png',
+            url: '/og-default.webp',
             alt: 'Manic Agency - Experimental Creative Development'
         }]
     },

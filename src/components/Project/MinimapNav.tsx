@@ -94,6 +94,65 @@ const MinimapNav: React.FC<MinimapNavProps> = ({ toc }) => {
             box-shadow: var(--shadow-medium), 0 0 12px rgba(var(--accent-highlight-rgb), 0.15);
             scrollbar-width: none;
         }
+        
+        /* Mobile responsive - 50% smaller */
+        @media (max-width: 1023px) {
+            .minimap-container {
+                transform: translateY(-50%) scale(0.5); /* Make 50% smaller */
+                transform-origin: right center; /* Scale from right edge */
+                right: 0.5rem; /* Adjust position since it's smaller */
+                padding: 0.3rem 0.25rem; /* Reduce padding proportionally */
+                gap: 2.5px; /* Reduce gap proportionally */
+                max-height: calc(50vh - 4rem); /* Reduce max height */
+            }
+            
+            /* Mobile-specific indicator styling - very thin lines for inactive */
+            .minimap-indicator {
+                width: 1px !important; /* Very thin default */
+                background-color: var(--accent-primary);
+                opacity: 0.4 !important; /* Low opacity for inactive */
+                transition: all 0.2s ease-out;
+            }
+            
+            /* Inactive State - keep very thin */
+            .minimap-indicator.inactive {
+                width: 1px !important; /* Very thin line */
+                background-color: var(--accent-primary);
+                box-shadow: none;
+                opacity: 0.4 !important; /* Low opacity for inactive on mobile */
+            }
+            
+            .minimap-indicator.inactive:hover {
+                width: 2px !important; /* Slightly thicker on hover */
+                background-color: var(--accent-secondary);
+                opacity: 0.7 !important; 
+                transform: scaleX(1.2); /* Less dramatic scaling on mobile */
+                box-shadow: 0 0 3px var(--accent-secondary);
+            }
+            
+            /* Active State - thick line */
+            .minimap-indicator.active {
+                width: 3px !important; /* Thick line for active */
+                background-color: var(--accent-highlight);
+                transform: scaleX(1.3); /* Slight additional scaling */
+                opacity: 1 !important;
+                box-shadow: 0 0 6px var(--accent-highlight), 0 0 10px rgba(var(--accent-highlight-rgb), 0.4);
+            }
+            
+            /* Fade inactive when one is active - more pronounced on mobile */
+            .minimap-container:has(.active) .minimap-indicator.inactive {
+                opacity: 0.2 !important; /* Very dimmed on mobile */
+                width: 0.5px !important; /* Ultra-thin when active exists */
+                transform: scaleX(0.8);
+            }
+            
+            .minimap-container:has(.active) .minimap-indicator.inactive:hover {
+                opacity: 0.6 !important;
+                width: 1.5px !important;
+                transform: scaleX(1.1);
+            }
+        }
+        
          .minimap-container::-webkit-scrollbar { display: none; }
 
         .minimap-indicator {

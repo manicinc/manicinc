@@ -535,3 +535,21 @@ html[class*="dark"] [class*="text-"] {
   --tw-text-opacity: 1 !important;
   color: var(--text-primary) !important;
 }
+
+/* Move theme toggle styling for mobile navigation positioning */
+/* This ensures theme toggle appears below other buttons in mobile nav */
+.mobile-nav-theme-toggle {
+  order: 999; /* Ensure it comes last */
+  margin-top: 1rem;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Ensure theme toggle in mobile nav has proper spacing */
+@media (max-width: 1023px) {
+  .mobile-nav-theme-toggle {
+    margin-top: 1.5rem;
+    padding-bottom: 1rem;
+  }
+}

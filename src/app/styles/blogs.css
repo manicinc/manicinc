@@ -14,21 +14,53 @@ body.is-blog {
   --font-mono: var(--font-mono); /* Inherit from theme */
 
   font-family: var(--font-body); /* Apply blog body font */
-  background-color: var(--bg-blog-paper);
-  /* UPDATE PATHS AS NEEDED */
-  background-image: url('/assets/images/paper-texture-subtle-light.png');
-  background-blend-mode: multiply;
+  background-color: var(--bg-blog-paper) !important;
+  /* Default light theme background */
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(var(--accent-muted1-rgb), 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(var(--accent-muted2-rgb), 0.02) 0%, transparent 50%),
+    linear-gradient(135deg, transparent 0%, rgba(var(--accent-highlight-rgb), 0.01) 50%, transparent 100%) !important;
+  background-size: 800px 800px, 600px 600px, 100% 100%;
+  background-position: 0 0, 100% 100%, 0 0;
   background-attachment: fixed; /* Keep texture fixed */
-  background-size: cover;
   color: var(--text-primary);
   font-size: var(--blog-font-size-base, 18px); /* Base size for blog pages */
   line-height: 1.85; /* Generous base line height */
+  transition: background-color 0.3s ease, background-image 0.3s ease;
 }
 
-.dark body.is-blog {
-  /* UPDATE PATHS AS NEEDED */
-  background-image: url('/assets/images/paper-texture-subtle-dark.png');
-  background-blend-mode: luminosity; /* Better blend mode for dark */
+/* Dark mode background adjustments - use proper theme class selectors with higher specificity */
+html.dark body.is-blog,
+body.is-blog.dark {
+  background-color: var(--bg-blog-paper) !important;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(var(--accent-primary-rgb), 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(var(--accent-secondary-rgb), 0.03) 0%, transparent 50%),
+    linear-gradient(135deg, transparent 0%, rgba(var(--accent-highlight-rgb), 0.02) 50%, transparent 100%) !important;
+  background-size: 600px 600px, 800px 800px, 100% 100%;
+  background-position: 100% 100%, 0 0, 0 0;
+}
+
+/* Additional specificity for theme transitions */
+html[class*="dark"] body.is-blog {
+  background-color: var(--bg-blog-paper) !important;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(var(--accent-primary-rgb), 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(var(--accent-secondary-rgb), 0.03) 0%, transparent 50%),
+    linear-gradient(135deg, transparent 0%, rgba(var(--accent-highlight-rgb), 0.02) 50%, transparent 100%) !important;
+  background-size: 600px 600px, 800px 800px, 100% 100%;
+  background-position: 100% 100%, 0 0, 0 0;
+}
+
+/* Force light mode backgrounds */
+html:not(.dark) body.is-blog {
+  background-color: var(--bg-blog-paper) !important;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(var(--accent-muted1-rgb), 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(var(--accent-muted2-rgb), 0.02) 0%, transparent 50%),
+    linear-gradient(135deg, transparent 0%, rgba(var(--accent-highlight-rgb), 0.01) 50%, transparent 100%) !important;
+  background-size: 800px 800px, 600px 600px, 100% 100%;
+  background-position: 0 0, 100% 100%, 0 0;
 }
 
 /* No longer needed as --text-primary handles this via theme switching */

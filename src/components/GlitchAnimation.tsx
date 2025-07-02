@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
+import { motion } from "framer-motion";
+import { useTheme } from '@/context/ThemeContext';
 
 // --- Interfaces ---
 // Basic style props
@@ -190,10 +192,15 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
     className = '',
     performanceMode = 'medium'
 }) => {
-    // Theme state
-    const [theme, setTheme] = useState<'light' | 'dark'>('light');
-    const [themeVars, setThemeVars] = useState(LIGHT_THEME);
-    
+    const { isDarkMode } = useTheme(); // Use theme context
+    const svgRef = useRef<SVGSVGElement>(null);
+    const animationFrameRef = useRef<number | null>(null);
+    const lastUpdateRef = useRef<number>(0);
+    const burstTimeoutRef = useRef<number | null>(null);
+
+    // Choose theme based on context
+    const currentTheme = isDarkMode ? DARK_THEME : LIGHT_THEME;
+
     // Get appropriate config based on performance mode
     const getConfigForPerformanceMode = useCallback((mode: 'high' | 'medium' | 'low'): AnimationConfig => {
         switch(mode) {
@@ -213,14 +220,8 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
 
     // Animation state
     const [animationState, setAnimationState] = useState<AnimationState>(initialState);
-    const [isChaosBurstActive, setIsChaosBurstActive] = useState(false);
+    const [isChaosBurstActive, setIsChaosBurstActive] = useState<boolean>(false);
     const [currentConfig, setCurrentConfig] = useState<AnimationConfig>(getConfigForPerformanceMode(performanceMode));
-    
-    const baseConfigRef = useRef<AnimationConfig>(getConfigForPerformanceMode(performanceMode));
-    const burstConfigRef = useRef<AnimationConfig>(BURST_CONFIG);
-    const reducedMotionRef = useRef<boolean>(false);
-    const animationFrameRef = useRef<number>();
-    const lastRegenerateTimeRef = useRef<number>(0);
 
     // Theme detection and monitoring
     useEffect(() => {
@@ -270,17 +271,13 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
     // Set initial config based on performance mode
     useEffect(() => {
         const config = getConfigForPerformanceMode(performanceMode);
-        baseConfigRef.current = config;
         setCurrentConfig(config);
     }, [performanceMode, getConfigForPerformanceMode]);
 
     // Reduced Motion Check
     useEffect(() => {
         const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-        reducedMotionRef.current = mediaQuery.matches;
-        
         const handleReducedMotionChange = (e: MediaQueryListEvent) => {
-            reducedMotionRef.current = e.matches;
             if (e.matches) {
                 // Set minimal animation config when reduced motion is enabled
                 setCurrentConfig({
@@ -289,18 +286,16 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
                     regenerateInterval: 60000, // Very infrequent updates
                 });
             } else {
-                setCurrentConfig(baseConfigRef.current);
+                setCurrentConfig(getConfigForPerformanceMode(performanceMode));
             }
         };
 
         mediaQuery.addEventListener('change', handleReducedMotionChange);
         return () => mediaQuery.removeEventListener('change', handleReducedMotionChange);
-    }, []);
+    }, [performanceMode, getConfigForPerformanceMode]);
 
     // Chaos Burst Timer - with reduced frequency and throttling
     useEffect(() => {
-        if (reducedMotionRef.current) return;
-        
         let burstTimer: NodeJS.Timeout | null = null; 
         let intervalTimer: NodeJS.Timeout | null = null;
         
@@ -332,10 +327,8 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
 
     // Update currentConfig based on burst state
     useEffect(() => {
-        if (!reducedMotionRef.current) {
-            setCurrentConfig(isChaosBurstActive ? burstConfigRef.current : baseConfigRef.current);
-        }
-    }, [isChaosBurstActive]);
+        setCurrentConfig(isChaosBurstActive ? BURST_CONFIG : getConfigForPerformanceMode(performanceMode));
+    }, [isChaosBurstActive, getConfigForPerformanceMode, performanceMode]);
 
     // Optimized Animation Loop with RAF throttling
     useEffect(() => {
@@ -344,19 +337,6 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
         let frameCount = 0;
         
         const animate = (time: number) => {
-            if (reducedMotionRef.current) {
-                animationFrameRef.current = requestAnimationFrame(animate);
-                return;
-            }
-            
-            // Throttle updates based on performance mode
-            frameCount++;
-            const skipFrames = performanceMode === 'low' ? 3 : (performanceMode === 'medium' ? 2 : 1);
-            if (frameCount % skipFrames !== 0) {
-                animationFrameRef.current = requestAnimationFrame(animate);
-                return;
-            }
-            
             const deltaTime = time - lastTime; 
             lastTime = time; 
             const deltaSeconds = deltaTime / 1000;
@@ -402,11 +382,11 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
         const now = performance.now();
         
         // Throttle regeneration
-        if (now - lastRegenerateTimeRef.current < config.regenerateInterval) {
+        if (now - lastUpdateRef.current < config.regenerateInterval) {
             return;
         }
         
-        lastRegenerateTimeRef.current = now;
+        lastUpdateRef.current = now;
 
         setAnimationState(prevState => {
             const { spiralRotation: currentRotation, fallingObjects: prevFallingObjects } = prevState;
@@ -527,8 +507,6 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
 
     // Regeneration timer
     useEffect(() => {
-        if (reducedMotionRef.current) return;
-        
         // Initial generation
         generateElements();
         
@@ -547,7 +525,7 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
                 timeSinceLastRegeneration = 0;
             }
             
-            regenerationFrameRef.current = requestAnimationFrame(checkRegenerationInterval);
+            animationFrameRef.current = requestAnimationFrame(checkRegenerationInterval);
         };
         
         const regenerationFrameRef = { current: requestAnimationFrame(checkRegenerationInterval) };
@@ -562,7 +540,7 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
     // Regenerate elements when theme changes
     useEffect(() => {
         // Force regeneration of elements when theme changes
-        lastRegenerateTimeRef.current = 0;
+        lastUpdateRef.current = 0;
         generateElements();
     }, [theme, generateElements]);
 
@@ -954,33 +932,38 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
             </svg>
 
             {/* --- CSS with Theme Variables --- */}
-            <style jsx global>{`
-                /* Theme-aware variables - uses CSS variables with raw values from current theme */
+            <style jsx>{`
                 .glitch-animation-container {
-                    /* Base theme variables - dynamically set based on theme */
-                    --bg-center: ${themeVars.bgCenter};
-                    --bg-mid: ${themeVars.bgMid};
-                    --bg-outer: ${themeVars.bgOuter};
-                    --bg-edge: ${themeVars.bgEdge};
-                    --primary-color: ${themeVars.primaryColor};
-                    --secondary-color: ${themeVars.secondaryColor};
-                    --accent-color: ${themeVars.accentColor};
-                    --accent2-color: ${themeVars.accent2Color};
-                    --text-color-primary: ${themeVars.textColorPrimary};
-                    --text-color-secondary: ${themeVars.textColorSecondary};
-                    --text-stroke: ${themeVars.textStroke};
-                    --rabbit-fill: ${themeVars.rabbitFill};
-                    --rabbit-stroke: ${themeVars.rabbitStroke};
-                    --alice-fill: ${themeVars.aliceFill};
-                    --alice-opacity: ${themeVars.aliceOpacity};
+                    /* Background gradient using current theme */
+                    --bg-center: ${currentTheme.bgCenter};
+                    --bg-mid: ${currentTheme.bgMid};
+                    --bg-outer: ${currentTheme.bgOuter};
+                    --bg-edge: ${currentTheme.bgEdge};
                     
-                    /* Derived variables based on theme values */
+                    /* Element colors using current theme */
+                    --primary-color: ${currentTheme.primaryColor};
+                    --secondary-color: ${currentTheme.secondaryColor};
+                    --accent-color: ${currentTheme.accentColor};
+                    --accent2-color: ${currentTheme.accent2Color};
+                    
+                    /* Text colors using current theme */
+                    --text-color-primary: ${currentTheme.textColorPrimary};
+                    --text-color-secondary: ${currentTheme.textColorSecondary};
+                    --text-stroke: ${currentTheme.textStroke};
+                    
+                    /* Character colors using current theme */
+                    --rabbit-fill: ${currentTheme.rabbitFill};
+                    --rabbit-stroke: ${currentTheme.rabbitStroke};
+                    --alice-fill: ${currentTheme.aliceFill};
+                    --alice-opacity: ${currentTheme.aliceOpacity};
+                    
+                    /* Element stroke/fill colors using current theme */
+                    --element-fill-primary: var(--primary-color);
+                    --element-fill-secondary: var(--secondary-color);
+                    --element-fill-accent: var(--accent-color);
+                    --element-fill-accent2: var(--accent2-color);
                     --element-stroke-primary: var(--primary-color);
                     --element-stroke-secondary: var(--secondary-color);
-                    --element-fill-primary: ${theme === 'light' ? 'rgba(90, 110, 192, 0.4)' : 'rgba(200, 182, 240, 0.35)'};
-                    --element-fill-secondary: ${theme === 'light' ? 'rgba(232, 106, 164, 0.4)' : 'rgba(88, 207, 240, 0.35)'};
-                    --element-fill-accent: ${theme === 'light' ? 'rgba(0, 224, 192, 0.45)' : 'rgba(255, 82, 150, 0.5)'};
-                    --element-fill-accent2: ${theme === 'light' ? 'rgba(255, 171, 64, 0.45)' : 'rgba(118, 255, 3, 0.5)'};
                     --element-stroke-accent: var(--accent-color);
                     --element-stroke-accent2: var(--accent2-color);
                     

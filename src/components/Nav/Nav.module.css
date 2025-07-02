@@ -1040,46 +1040,47 @@
 /* Mobile games button */
 .mobileGames {
     margin: 0.5rem 1.5rem;
-    display: block;
+    display: flex !important; /* Use flex to align text and icon */
+    align-items: center !important; /* Center align items vertically */
+    justify-content: center !important; /* Center align content horizontally */
     text-align: center;
     width: calc(100% - 3rem);
-    font-size: 0.6rem !important; /* Even smaller */
-    padding: 0.5rem 0.8rem !important; /* Reduced padding more */
+    font-size: 1rem !important; /* Match reach us button size */
+    padding: 0.9rem 1.5rem !important; /* Match reach us button padding */
     border-radius: 4px;
     /* Inherit holographic styling from .gamesBtn */
     font-family: var(--font-mono);
     font-weight: 700;
-    letter-spacing: 0.06em !important; /* Reduced letter spacing more */
+    letter-spacing: 0.06em !important;
     text-transform: uppercase;
     white-space: nowrap !important;
-    min-height: 32px; /* Smaller height */
-    line-height: 1.1 !important;
+    min-height: auto; /* Let padding control height */
+    line-height: 1.2 !important;
     max-width: 100% !important;
     overflow: hidden !important;
+    gap: 0.5em !important; /* Add gap between text and icon */
 }
 
-/* Ensure the games button icon is smaller on mobile */
 .mobileGames .gamesSvg {
-    width: 0.9em !important; /* Smaller icon */
-    height: 0.9em !important;
-    margin-left: 0.2rem !important; /* Reduce gap */
-    flex-shrink: 0 !important;
+    width: 1.2em !important;
+    height: 1.2em !important;
+    margin-left: 0 !important; /* Remove margin since we're using gap */
+    vertical-align: middle !important;
+    flex-shrink: 0 !important; /* Prevent icon from shrinking */
 }
 
-/* Additional mobile-specific adjustments for ultra-small screens */
 @media (max-width: 480px) {
     .mobileGames {
-        font-size: 0.55rem !important; /* Even smaller for very small screens */
-        padding: 0.4rem 0.6rem !important;
-        letter-spacing: 0.04em !important;
-        margin: 0.5rem 1rem !important; /* Slightly smaller margins */
-        width: calc(100% - 2rem) !important;
-        min-height: 30px !important;
+        font-size: 0.9rem !important;
+        padding: 0.8rem 1.2rem !important;
+        margin: 0.5rem 1rem;
+        width: calc(100% - 2rem);
+        gap: 0.4em !important; /* Smaller gap on very small screens */
     }
-    
+
     .mobileGames .gamesSvg {
-        width: 0.8em !important;
-        height: 0.8em !important;
+        width: 1.1em !important;
+        height: 1.1em !important;
     }
 }
 
