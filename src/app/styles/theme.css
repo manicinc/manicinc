@@ -10,7 +10,6 @@ html {
 
 /* DARK MODE CRITICAL OVERRIDES - HIGHEST SPECIFICITY */
 html.dark,
-html.dark body,
 html[class*="dark"] {
   background-color: #22182b !important; /* Dark background color with !important */
   color: #f5f0e6 !important;
@@ -281,13 +280,6 @@ html[class*="dark"] {
   color-scheme: dark;
 }
 
-/* Ensure dark mode overrides have sufficient specificity */
-html.dark body,
-html[class*="dark"] body {
-  background-color: #22182b !important;
-  color: #f5f0e6 !important;
-}
-
 /* Apply background transitions */
 html, body {
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -552,4 +544,15 @@ html[class*="dark"] [class*="text-"] {
     margin-top: 1.5rem;
     padding-bottom: 1rem;
   }
+}
+
+/* Ensure dark mode overrides have sufficient specificity for non-body elements */
+/* Removed body targeting to allow blog-specific backgrounds */
+
+/* EXPLICIT LIGHT MODE OVERRIDES - Ensure light mode works when switching from dark */
+html:not(.dark),
+html.light,
+html[data-theme="light"] {
+  --bg-blog-paper: #faf3e9;
+  --bg-blog-paper-rgb: 250, 243, 233;
 }

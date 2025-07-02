@@ -130,7 +130,7 @@ const NavLinksMobile: React.FC<NavLinksMobileProps> = ({
                         © {currentYear} Manic Agency. 
                         <br />
                         <span className={styles.footerTagline}>
-                            Where realities converge.
+                            metaverses intersect here
                         </span>
                     </p>
                 </div>

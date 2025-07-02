@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
-import { motion } from "framer-motion";
-import { useTheme } from '@/context/ThemeContext';
 
 // --- Interfaces ---
 // Basic style props
@@ -47,7 +45,7 @@ interface GlitchAnimationProps {
 const TEXT_CONTENT = ['FOLLOW', 'RABBIT', 'HOLE', 'DOWN', 'DEEPER', '???', '...', 'TIME', 'LOST', 'FALLING', 'ENDLESS', 'VOID', 'WONDERLAND', '404', 'GLITCH', 'SURREAL', 'WILD', 'MANIC', 'SYSTEM', 'ERROR', 'REALITY', 'UNLOCK', 'MATRIX', '0xDEADBEEF', 'DATA_STREAM'];
 const ICON_PATHS: Record<string, string> = { /* ... same as before ... */ };
 const ICON_KEYS = Object.keys(ICON_PATHS);
-const GRADIENT_CLASSES = ["stroke-grad-1", "stroke-grad-2", "stroke-grad-3", "stroke-grad-4"];
+const GRADIENT_CLASSES = ["stroke-grad-1", "stroke-grad-2", "stroke-grad-3", "stroke-grad-4"]; 
 
 // --- Performance-optimized configurations ---
 const LOW_PERFORMANCE_CONFIG: AnimationConfig = {
@@ -110,7 +108,7 @@ const BURST_CONFIG: AnimationConfig = {
     regenerateInterval: 2000, // Less frequent updates (2s)
     applyGlitchEffect: true, applyBackgroundFilter: true, 
     backgroundPulseOpacity: 0.5, // Reduced intensity
-};
+}; 
 
 // --- Theme Variables ---
 // Light theme colors
@@ -183,7 +181,7 @@ const generateSpiralPoints = (centerX: number, centerY: number, spins: number, p
     }
     
     return points.trim();
-};
+}; 
 
 // --- Component ---
 const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
@@ -192,15 +190,10 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
     className = '',
     performanceMode = 'medium'
 }) => {
-    const { isDarkMode } = useTheme(); // Use theme context
-    const svgRef = useRef<SVGSVGElement>(null);
-    const animationFrameRef = useRef<number | null>(null);
-    const lastUpdateRef = useRef<number>(0);
-    const burstTimeoutRef = useRef<number | null>(null);
-
-    // Choose theme based on context
-    const currentTheme = isDarkMode ? DARK_THEME : LIGHT_THEME;
-
+    // Theme state
+    const [theme, setTheme] = useState<'light' | 'dark'>('light');
+    const [themeVars, setThemeVars] = useState(LIGHT_THEME);
+    
     // Get appropriate config based on performance mode
     const getConfigForPerformanceMode = useCallback((mode: 'high' | 'medium' | 'low'): AnimationConfig => {
         switch(mode) {
@@ -220,13 +213,59 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
 
     // Animation state
     const [animationState, setAnimationState] = useState<AnimationState>(initialState);
-    const [isChaosBurstActive, setIsChaosBurstActive] = useState<boolean>(false);
+    const [isChaosBurstActive, setIsChaosBurstActive] = useState(false);
     const [currentConfig, setCurrentConfig] = useState<AnimationConfig>(getConfigForPerformanceMode(performanceMode));
-
+    
     const baseConfigRef = useRef<AnimationConfig>(getConfigForPerformanceMode(performanceMode));
     const burstConfigRef = useRef<AnimationConfig>(BURST_CONFIG);
     const reducedMotionRef = useRef<boolean>(false);
+    const animationFrameRef = useRef<number>();
     const lastRegenerateTimeRef = useRef<number>(0);
+
+    // Theme detection and monitoring
+    useEffect(() => {
+        // Initial theme detection based on HTML element class
+        const detectTheme = () => {
+            const htmlElement = document.documentElement;
+            const isDarkMode = htmlElement.classList.contains('dark');
+            const isLightMode = htmlElement.classList.contains('light');
+            
+            // Default to system preference if no explicit class is set
+            if (!isDarkMode && !isLightMode) {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                setTheme(prefersDark ? 'dark' : 'light');
+                setThemeVars(prefersDark ? DARK_THEME : LIGHT_THEME);
+                return;
+            }
+            
+            // Use explicitly set theme
+            if (isDarkMode) {
+                setTheme('dark');
+                setThemeVars(DARK_THEME);
+            } else {
+                setTheme('light');
+                setThemeVars(LIGHT_THEME);
+            }
+        };
+
+        // Detect initial theme
+        detectTheme();
+
+        // Set up mutation observer to detect theme changes
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.attributeName === 'class') {
+                    detectTheme();
+                }
+            });
+        });
+
+        // Start observing the HTML element for class changes
+        observer.observe(document.documentElement, { attributes: true });
+
+        // Clean up observer on component unmount
+        return () => observer.disconnect();
+    }, []);
 
     // Set initial config based on performance mode
     useEffect(() => {
@@ -488,6 +527,8 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
 
     // Regeneration timer
     useEffect(() => {
+        if (reducedMotionRef.current) return;
+        
         // Initial generation
         generateElements();
         
@@ -506,7 +547,7 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
                 timeSinceLastRegeneration = 0;
             }
             
-            animationFrameRef.current = requestAnimationFrame(checkRegenerationInterval);
+            regenerationFrameRef.current = requestAnimationFrame(checkRegenerationInterval);
         };
         
         const regenerationFrameRef = { current: requestAnimationFrame(checkRegenerationInterval) };
@@ -521,9 +562,9 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
     // Regenerate elements when theme changes
     useEffect(() => {
         // Force regeneration of elements when theme changes
-        lastUpdateRef.current = 0;
+        lastRegenerateTimeRef.current = 0;
         generateElements();
-    }, [isDarkMode, generateElements]);
+    }, [theme, generateElements]);
 
     // --- Optimized Render Methods ---
     // Memoized paths
@@ -747,7 +788,7 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
                 overflow: 'hidden', 
                 background: 'var(--bg-edge)' 
             }}
-            data-theme={isDarkMode ? 'dark' : 'light'} // Add data attribute for explicit theme
+            data-theme={theme} // Add data attribute for explicit theme
         >
             <svg 
                 width="100%" 
@@ -913,38 +954,33 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
             </svg>
 
             {/* --- CSS with Theme Variables --- */}
-            <style jsx>{`
+            <style jsx global>{`
+                /* Theme-aware variables - uses CSS variables with raw values from current theme */
                 .glitch-animation-container {
-                    /* Background gradient using current theme */
-                    --bg-center: ${currentTheme.bgCenter};
-                    --bg-mid: ${currentTheme.bgMid};
-                    --bg-outer: ${currentTheme.bgOuter};
-                    --bg-edge: ${currentTheme.bgEdge};
+                    /* Base theme variables - dynamically set based on theme */
+                    --bg-center: ${themeVars.bgCenter};
+                    --bg-mid: ${themeVars.bgMid};
+                    --bg-outer: ${themeVars.bgOuter};
+                    --bg-edge: ${themeVars.bgEdge};
+                    --primary-color: ${themeVars.primaryColor};
+                    --secondary-color: ${themeVars.secondaryColor};
+                    --accent-color: ${themeVars.accentColor};
+                    --accent2-color: ${themeVars.accent2Color};
+                    --text-color-primary: ${themeVars.textColorPrimary};
+                    --text-color-secondary: ${themeVars.textColorSecondary};
+                    --text-stroke: ${themeVars.textStroke};
+                    --rabbit-fill: ${themeVars.rabbitFill};
+                    --rabbit-stroke: ${themeVars.rabbitStroke};
+                    --alice-fill: ${themeVars.aliceFill};
+                    --alice-opacity: ${themeVars.aliceOpacity};
                     
-                    /* Element colors using current theme */
-                    --primary-color: ${currentTheme.primaryColor};
-                    --secondary-color: ${currentTheme.secondaryColor};
-                    --accent-color: ${currentTheme.accentColor};
-                    --accent2-color: ${currentTheme.accent2Color};
-                    
-                    /* Text colors using current theme */
-                    --text-color-primary: ${currentTheme.textColorPrimary};
-                    --text-color-secondary: ${currentTheme.textColorSecondary};
-                    --text-stroke: ${currentTheme.textStroke};
-                    
-                    /* Character colors using current theme */
-                    --rabbit-fill: ${currentTheme.rabbitFill};
-                    --rabbit-stroke: ${currentTheme.rabbitStroke};
-                    --alice-fill: ${currentTheme.aliceFill};
-                    --alice-opacity: ${currentTheme.aliceOpacity};
-                    
-                    /* Element stroke/fill colors using current theme */
-                    --element-fill-primary: var(--primary-color);
-                    --element-fill-secondary: var(--secondary-color);
-                    --element-fill-accent: var(--accent-color);
-                    --element-fill-accent2: var(--accent2-color);
+                    /* Derived variables based on theme values */
                     --element-stroke-primary: var(--primary-color);
                     --element-stroke-secondary: var(--secondary-color);
+                    --element-fill-primary: ${theme === 'light' ? 'rgba(90, 110, 192, 0.4)' : 'rgba(200, 182, 240, 0.35)'};
+                    --element-fill-secondary: ${theme === 'light' ? 'rgba(232, 106, 164, 0.4)' : 'rgba(88, 207, 240, 0.35)'};
+                    --element-fill-accent: ${theme === 'light' ? 'rgba(0, 224, 192, 0.45)' : 'rgba(255, 82, 150, 0.5)'};
+                    --element-fill-accent2: ${theme === 'light' ? 'rgba(255, 171, 64, 0.45)' : 'rgba(118, 255, 3, 0.5)'};
                     --element-stroke-accent: var(--accent-color);
                     --element-stroke-accent2: var(--accent2-color);
                     
@@ -1021,4 +1057,4 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
     );
 };
 
-export default GlitchAnimation;
+export default GlitchAnimation; 

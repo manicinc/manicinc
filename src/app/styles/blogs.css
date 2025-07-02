@@ -14,12 +14,12 @@ body.is-blog {
   --font-mono: var(--font-mono); /* Inherit from theme */
 
   font-family: var(--font-body); /* Apply blog body font */
-  background-color: var(--bg-blog-paper) !important;
+  background-color: var(--bg-blog-paper);
   /* Default light theme background */
   background-image: 
     radial-gradient(circle at 25% 25%, rgba(var(--accent-muted1-rgb), 0.03) 0%, transparent 50%),
     radial-gradient(circle at 75% 75%, rgba(var(--accent-muted2-rgb), 0.02) 0%, transparent 50%),
-    linear-gradient(135deg, transparent 0%, rgba(var(--accent-highlight-rgb), 0.01) 50%, transparent 100%) !important;
+    linear-gradient(135deg, transparent 0%, rgba(var(--accent-highlight-rgb), 0.01) 50%, transparent 100%);
   background-size: 800px 800px, 600px 600px, 100% 100%;
   background-position: 0 0, 100% 100%, 0 0;
   background-attachment: fixed; /* Keep texture fixed */
@@ -32,41 +32,58 @@ body.is-blog {
 /* Dark mode background adjustments - use proper theme class selectors with higher specificity */
 html.dark body.is-blog,
 body.is-blog.dark {
-  background-color: var(--bg-blog-paper) !important;
+  background-color: #302435 !important;
+  color: #f5f0e6 !important;
   background-image: 
-    radial-gradient(circle at 25% 25%, rgba(var(--accent-primary-rgb), 0.04) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(var(--accent-secondary-rgb), 0.03) 0%, transparent 50%),
-    linear-gradient(135deg, transparent 0%, rgba(var(--accent-highlight-rgb), 0.02) 50%, transparent 100%) !important;
+    radial-gradient(circle at 25% 25%, rgba(214, 80, 118, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(136, 176, 164, 0.03) 0%, transparent 50%),
+    linear-gradient(135deg, transparent 0%, rgba(212, 172, 128, 0.02) 50%, transparent 100%) !important;
   background-size: 600px 600px, 800px 800px, 100% 100%;
   background-position: 100% 100%, 0 0, 0 0;
 }
 
 /* Additional specificity for theme transitions */
 html[class*="dark"] body.is-blog {
-  background-color: var(--bg-blog-paper) !important;
+  background-color: #302435 !important;
+  color: #f5f0e6 !important;
   background-image: 
-    radial-gradient(circle at 25% 25%, rgba(var(--accent-primary-rgb), 0.04) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(var(--accent-secondary-rgb), 0.03) 0%, transparent 50%),
-    linear-gradient(135deg, transparent 0%, rgba(var(--accent-highlight-rgb), 0.02) 50%, transparent 100%) !important;
+    radial-gradient(circle at 25% 25%, rgba(214, 80, 118, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(136, 176, 164, 0.03) 0%, transparent 50%),
+    linear-gradient(135deg, transparent 0%, rgba(212, 172, 128, 0.02) 50%, transparent 100%) !important;
   background-size: 600px 600px, 800px 800px, 100% 100%;
   background-position: 100% 100%, 0 0, 0 0;
 }
 
 /* Force light mode backgrounds */
-html:not(.dark) body.is-blog {
-  background-color: var(--bg-blog-paper) !important;
+html:not(.dark) body.is-blog,
+html.light body.is-blog {
+  background-color: #faf3e9 !important;
+  color: #4a3f35 !important;
   background-image: 
-    radial-gradient(circle at 25% 25%, rgba(var(--accent-muted1-rgb), 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(var(--accent-muted2-rgb), 0.02) 0%, transparent 50%),
-    linear-gradient(135deg, transparent 0%, rgba(var(--accent-highlight-rgb), 0.01) 50%, transparent 100%) !important;
+    radial-gradient(circle at 25% 25%, rgba(212, 187, 201, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(181, 199, 216, 0.02) 0%, transparent 50%),
+    linear-gradient(135deg, transparent 0%, rgba(184, 142, 98, 0.01) 50%, transparent 100%) !important;
   background-size: 800px 800px, 600px 600px, 100% 100%;
   background-position: 0 0, 100% 100%, 0 0;
 }
 
-/* No longer needed as --text-primary handles this via theme switching */
-/* .light body.is-blog {
-  color: var(--color-light-ink);
-} */
+/* Ensure proper theme switching with increased specificity - Override inline styles */
+html.dark body.is-blog,
+html[data-theme="dark"] body.is-blog {
+  --bg-blog-paper: #302435 !important;
+  --bg-blog-paper-rgb: 48, 36, 53;
+  background-color: #302435 !important;
+  color: #f5f0e6 !important;
+}
+
+html:not(.dark) body.is-blog,
+html.light body.is-blog,
+html[data-theme="light"] body.is-blog {
+  --bg-blog-paper: #faf3e9 !important;
+  --bg-blog-paper-rgb: 250, 243, 233;
+  background-color: #faf3e9 !important;
+  color: #4a3f35 !important;
+}
 
 /* Ornate Horizontal Rule Utility */
 hr.ornate-rule {
@@ -472,6 +489,22 @@ hr.ornate-rule::before {
   position: relative; /* For pseudo-elements */
   z-index: 1; /* Above main area background */
   border: 1px solid rgba(var(--accent-highlight-rgb), 0.3); /* Subtle border */
+}
+
+/* DARK MODE BLOG POST CONTAINER OVERRIDE */
+html.dark .blog-post-container,
+html[data-theme="dark"] .blog-post-container,
+html[class*="dark"] .blog-post-container {
+  background-color: rgba(var(--bg-blog-paper-rgb), 0.9); /* Use CSS variable */
+}
+
+/* LIGHT MODE BLOG POST CONTAINER OVERRIDE */
+html:not(.dark) .blog-post-container,
+html:not([data-theme="dark"]) .blog-post-container,
+html:not([class*="dark"]) .blog-post-container,
+html.light .blog-post-container,
+html[data-theme="light"] .blog-post-container {
+  background-color: rgba(var(--bg-blog-paper-rgb), 0.9); /* Use CSS variable */
 }
 
 /* ======================================== */
