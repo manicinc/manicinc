@@ -108,25 +108,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               document.documentElement.classList.add(storedTheme);
               document.documentElement.style.colorScheme = storedTheme;
               
-              // 5. Apply immediate colors to prevent flash - with !important
+              // 5. Apply immediate colors to prevent flash - only to html element
               if (storedTheme === 'dark') {
                 document.documentElement.style.setProperty('background-color', '#22182b', 'important');
                 document.documentElement.style.setProperty('color', '#f5f0e6', 'important');
-                
-                // Only set body properties if body exists
-                if (document.body) {
-                  document.body.style.setProperty('background-color', '#22182b', 'important');
-                  document.body.style.setProperty('color', '#f5f0e6', 'important');
-                }
               } else {
                 document.documentElement.style.setProperty('background-color', '#fbf6ef', 'important');
                 document.documentElement.style.setProperty('color', '#4a3f35', 'important');
-                
-                // Only set body properties if body exists
-                if (document.body) {
-                  document.body.style.setProperty('background-color', '#fbf6ef', 'important');
-                  document.body.style.setProperty('color', '#4a3f35', 'important');
-                }
               }
               
               // 6. Store for React
@@ -145,7 +133,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             
           } catch (e) {
             console.error('Theme initialization error:', e);
-            // Fallback to light
+            // Fallback to light - only set on html element
             if (document && document.documentElement) {
               document.documentElement.classList.add('light');
               document.documentElement.style.setProperty('background-color', '#fbf6ef', 'important');

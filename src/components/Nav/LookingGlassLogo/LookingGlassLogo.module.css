@@ -69,7 +69,7 @@
 @media (min-width: 768px) { /* Adjust breakpoint (e.g., 768px, 1024px) as needed */
   .lookingGlassSvg {
     /* --- Desktop Size Override --- */
-    height: 5.5em; /* <<< Use 'em' unit for desktop height */
+    height: 4.2em; /* <<< Reduced from 5.5em to match manic agency height */
   }
 
   /* Optional: Adjust negative margin on wrapper for desktop if needed */

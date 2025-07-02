@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         description: 'Discover Manic Agency\'s mission: experimental creative development & design agency forging reality from digital ether.',
         images: [
             {
-                url: '/og-default.png',
+                url: '/og-default.webp',
                 width: 1200,
                 height: 630,
                 alt: 'Manic Agency Mission - Charting Uncharted Code'
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         title: 'Our Mission - Charting Uncharted Code | Manic Agency',
         description: 'Discover Manic Agency\'s mission: experimental creative development & design agency forging reality from digital ether.',
         images: [{
-            url: '/og-default.png',
+            url: '/og-default.webp',
             alt: 'Manic Agency Mission - Charting Uncharted Code'
         }]
     }

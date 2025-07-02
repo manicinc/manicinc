@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         description: 'Learn how Manic Agency protects your privacy and handles your data. Read our comprehensive privacy policy.',
         images: [
             {
-                url: '/og-default.png',
+                url: '/og-default.webp',
                 width: 1200,
                 height: 630,
                 alt: 'Manic Agency Privacy Policy'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         title: 'Privacy Policy - Data Protection & Privacy | Manic Agency',
         description: 'Learn how Manic Agency protects your privacy and handles your data. Read our comprehensive privacy policy.',
         images: [{
-            url: '/og-default.png',
+            url: '/og-default.webp',
             alt: 'Manic Agency Privacy Policy'
         }]
     },

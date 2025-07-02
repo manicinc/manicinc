@@ -5,7 +5,7 @@ excerpt: "Learn how to contribute your experimental ideas and digital exploratio
 author: "Manic Agency"
 category: "documentation"
 tags: ["contribution", "guide", "markdown", "writing", "open source"]
-image: "/og-default.png"
+image: "/og-default.webp"
 ---
 
 # ⟨/⟩ Contribute to the Synthetic Publishing Platform

@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         description: 'Explore Manic Agency\'s portfolio of innovative projects: AR/VR experiences, blockchain solutions, AI implementations, and experimental web applications.',
         images: [
             {
-                url: '/og-default.png',
+                url: '/og-default.webp',
                 width: 1200,
                 height: 630,
                 alt: 'Manic Agency Projects Portfolio'
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
         title: 'Our Projects - Creative Development Portfolio | Manic Agency',
         description: 'Explore Manic Agency\'s portfolio of innovative projects: AR/VR experiences, blockchain solutions, AI implementations, and experimental web applications.',
         images: [{
-            url: '/og-default.png',
+            url: '/og-default.webp',
             alt: 'Manic Agency Projects Portfolio'
         }]
     }

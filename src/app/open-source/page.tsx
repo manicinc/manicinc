@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         description: 'Discover Manic Agency\'s open source contributions to the developer community. Explore our public repositories and collaborative projects.',
         images: [
             {
-                url: '/og-default.png',
+                url: '/og-default.webp',
                 width: 1200,
                 height: 630,
                 alt: 'Manic Agency Open Source Projects'
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         title: 'Open Source Projects - Community Contributions | Manic Agency',
         description: 'Discover Manic Agency\'s open source contributions to the developer community. Explore our public repositories and collaborative projects.',
         images: [{
-            url: '/og-default.png',
+            url: '/og-default.webp',
             alt: 'Manic Agency Open Source Projects'
         }]
     }

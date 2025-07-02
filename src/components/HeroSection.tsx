@@ -426,35 +426,56 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                  .group\/link:hover .card-arrow { transform: translateX(3px); }
 
                  /* --- Enter Archives Button --- */
-                 .rabbit-trail { display: inline-flex; align-items: center; justify-content: center; padding: 0.7rem 1.5rem; font-family: var(--font-display); font-size: 0.9rem; font-weight: 600; color: var(--text-primary); background: var(--bg-secondary); border: 1px solid rgba(var(--accent-secondary-rgb), 0.4); border-radius: 5px; box-shadow: var(--shadow-medium); text-decoration: none; position: relative; overflow: hidden; transition: all 0.3s ease; letter-spacing: 0.03em; }
-                 .rabbit-trail:hover { background: var(--bg-tertiary); border-color: var(--accent-secondary); color: var(--accent-secondary); box-shadow: var(--shadow-lifted), 0 0 15px rgba(var(--accent-secondary-rgb), 0.2); transform: translateY(-2px); }
-                 .rabbit-hole-animation { display: inline-flex; align-items: center; margin-left: 0.8rem; position: relative; width: 20px; height: 20px; }
-                 .rabbit-icon { width: 18px; height: 18px; color: var(--accent-secondary); transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease-out; z-index: 2; position: relative; }
-                 .rabbit-hole { width: 100%; height: 100%; position: relative; display: flex; align-items: center; justify-content: center; }
-                 .hole-svg { width: 100%; height: 100%; color: rgba(var(--accent-secondary-rgb), 0.5); transition: transform 0.3s ease, color 0.3s ease; position: absolute; inset: 0; }
-                 .hole-circle-bg { transition: fill 0.3s ease, opacity 0.3s ease; fill: transparent; }
-                 .hole-circle-border { transition: color 0.3s ease, stroke-width 0.3s ease; }
-                 .hole-spiral { transition: stroke-dashoffset 0.5s ease, opacity 0.3s ease; stroke-dashoffset: 0; animation: spin 10s linear infinite reverse; transform-origin: center; opacity: 0.5; }
-                 .rabbit-trail:hover .rabbit-icon { transform: translateX(8px) rotate(10deg) scale(0.95); }
-                 .rabbit-trail:hover .hole-svg { transform: scale(1.15); color: var(--accent-highlight); }
-                 .rabbit-trail:hover .hole-circle-bg { fill: rgba(var(--accent-highlight-rgb), 0.15); }
-                 .rabbit-trail:hover .hole-spiral { stroke-dashoffset: 15; opacity: 0.8; }
-                 .rabbit-trail:active .rabbit-icon { transform: translate(10px, -2px) scale(0); opacity: 0; transition-duration: 0.2s; } /* Move into hole */
-                 .rabbit-trail:active .hole-svg { transform: scale(1.1); }
-                 .rabbit-trail:active .hole-circle-bg { fill: var(--accent-highlight); transition-duration: 0.15s; opacity: 0.6; } /* Fill solid */
-                 .rabbit-trail:active .hole-circle-border { color: var(--accent-highlight); stroke-width: 5; transition-duration: 0.15s; }
-                 .rabbit-trail:active .hole-spiral { opacity: 0; transition-duration: 0.1s; }
+                 .rabbit-trail { 
+                     display: inline-flex; align-items: center; justify-content: center; 
+                     padding: 0.7rem 1.5rem; font-family: var(--font-display); font-size: 0.9rem; font-weight: 600; 
+                     color: var(--text-primary); background: var(--bg-secondary); 
+                     border: 1px solid rgba(var(--accent-secondary-rgb), 0.4); border-radius: 5px; 
+                     box-shadow: var(--shadow-medium); text-decoration: none; position: relative; overflow: hidden; 
+                     transition: all 0.3s ease; letter-spacing: 0.03em; 
+                 }
+                 
+                 /* Light mode specific styling for rabbit trail */
+                 :root .rabbit-trail {
+                     color: var(--color-light-ink); /* Dark text for light mode */
+                     background: var(--color-light-paper);
+                     border-color: rgba(var(--color-light-burgundy), 0.4);
+                 }
+                 
+                 /* Dark mode specific styling for rabbit trail */
+                 html.dark .rabbit-trail {
+                     color: var(--text-primary); /* Light text for dark mode */
+                     background: var(--bg-secondary);
+                     border-color: rgba(var(--accent-secondary-rgb), 0.4);
+                 }
+                 
+                 .rabbit-trail:hover { 
+                     background: var(--bg-tertiary); border-color: var(--accent-secondary); 
+                     color: var(--accent-secondary); box-shadow: var(--shadow-lifted), 0 0 15px rgba(var(--accent-secondary-rgb), 0.2); 
+                     transform: translateY(-2px); 
+                 }
+                 
+                 /* Light mode hover styling */
+                 :root .rabbit-trail:hover {
+                     background: var(--color-light-cream);
+                     border-color: var(--color-light-burgundy);
+                     color: var(--color-light-burgundy);
+                 }
+                 
+                 /* Dark mode hover styling */
+                 html.dark .rabbit-trail:hover {
+                     background: var(--bg-tertiary);
+                     border-color: var(--accent-secondary);
+                     color: var(--accent-secondary);
+                 }
 
-
-                
-
-                /* --- Animation & Utility --- */
-                @keyframes fadeInUp { from { opacity: 0; transform: translateY(12px); filter: blur(2px); } to { opacity: 1; transform: translateY(0); filter: blur(0); } }
-                .fade-in-up { animation: fadeInUp 0.45s ease-out both; }
-                .delay-100 { animation-delay: 0.1s; } .delay-200 { animation-delay: 0.18s; } .delay-300 { animation-delay: 0.26s; } .delay-350 { animation-delay: 0.30s; } .delay-500 { animation-delay: 0.4s; } .delay-700 { animation-delay: 0.5s; }
-                .animated-underline::after { content: ''; position: absolute; width: 0; height: 1.5px; display: block; margin-top: 2px; right: 0; background: var(--accent-highlight); transition: width .3s ease; }
-                .animated-underline:hover::after { width: 100%; left: 0; background: var(--accent-highlight); }
-                .empty-state { text-align: center; padding: 1.5rem; color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem; border: 1px dashed var(--bg-tertiary); border-radius: var(--radius-base); background: rgba(var(--bg-secondary-rgb), 0.2); margin-top: 1.5rem; /* Compressed */ }
+                 /* --- Animation & Utility --- */
+                 @keyframes fadeInUp { from { opacity: 0; transform: translateY(12px); filter: blur(2px); } to { opacity: 1; transform: translateY(0); filter: blur(0); } }
+                 .fade-in-up { animation: fadeInUp 0.45s ease-out both; }
+                 .delay-100 { animation-delay: 0.1s; } .delay-200 { animation-delay: 0.18s; } .delay-300 { animation-delay: 0.26s; } .delay-350 { animation-delay: 0.30s; } .delay-500 { animation-delay: 0.4s; } .delay-700 { animation-delay: 0.5s; }
+                 .animated-underline::after { content: ''; position: absolute; width: 0; height: 1.5px; display: block; margin-top: 2px; right: 0; background: var(--accent-highlight); transition: width .3s ease; }
+                 .animated-underline:hover::after { width: 100%; left: 0; background: var(--accent-highlight); }
+                 .empty-state { text-align: center; padding: 1.5rem; color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem; border: 1px dashed var(--bg-tertiary); border-radius: var(--radius-base); background: rgba(var(--bg-secondary-rgb), 0.2); margin-top: 1.5rem; /* Compressed */ }
 
             `}</style>
         </div>

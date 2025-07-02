@@ -11,7 +11,9 @@ import React, {
     isValidElement,
     ComponentPropsWithoutRef,
     CSSProperties,
-    Children
+    Children,
+    useState,
+    useEffect
 } from 'react';
 
 // --- Markdown Processing Libraries ---
@@ -166,6 +168,58 @@ const CustomQuote: React.FC<CustomQuoteProps> = ({ children, attribution }) => {
     );
 };
 
+// --- Helper component for optimized image loading ---
+const OptimizedImage: React.FC<{ src: string; alt: string; [key: string]: any }> = ({ src, alt, ...props }) => {
+    const [imageSrc, setImageSrc] = useState<string>(src);
+    const [imageError, setImageError] = useState<boolean>(false);
+    
+    useEffect(() => {
+        // Try WebP first, then fallback to PNG
+        const tryFormats = async () => {
+            const baseSrc = src.replace(/\.(png|jpg|jpeg)$/i, '');
+            const formats = ['.webp', '.png', '.jpg', '.jpeg'];
+            
+            for (const format of formats) {
+                try {
+                    const testSrc = baseSrc + format;
+                    const response = await fetch(testSrc, { method: 'HEAD' });
+                    if (response.ok) {
+                        setImageSrc(testSrc);
+                        return;
+                    }
+                } catch (error) {
+                    // Continue to next format
+                }
+            }
+            
+            // If all formats fail, use original src
+            setImageSrc(src);
+        };
+        
+        tryFormats();
+    }, [src]);
+    
+    const handleError = () => {
+        setImageError(true);
+        // Try original src as final fallback
+        if (imageSrc !== src) {
+            setImageSrc(src);
+        }
+    };
+    
+    if (imageError && imageSrc === src) {
+        return <AsciiArtPlaceholder className="mx-auto my-8" />;
+    }
+    
+    return (
+        <img 
+            src={imageSrc} 
+            alt={alt} 
+            onError={handleError}
+            {...props}
+        />
+    );
+};
 
 // ==================================
 // === Main Renderer Component ===
@@ -307,31 +361,22 @@ export function CustomMarkdownRenderer({ children: rawMarkdown, className = "" }
                              <button type="button" className="code-copy-button" onClick={handleCopy} aria-label="Copy code to clipboard" title="Copy code"><Copy size={14} /></button>
                          </div>
                          <SyntaxHighlighter
-                             style={isDarkMode ? coldarkDark : prism as any} // Choose theme based on mode
+                             style={isDarkMode ? coldarkDark : prism as any}
                              language={language}
-                             PreTag="div" // Use div for better styling control
+                             PreTag="div"
                              customStyle={{ 
                                  borderRadius: '0 0 var(--radius-lg) var(--radius-lg)', 
                                  marginTop: '0', 
                                  marginBottom: '0', 
                                  padding: '1.2rem 1.5rem', 
-                                 border: 'none', 
-                                 boxShadow: 'none', 
-                                 textShadow: 'none', 
-                                 backgroundColor: 'transparent',
-                                 textDecoration: 'none',
-                                 textUnderlineOffset: 'unset',
-                                 borderBottom: 'none'
+                                 border: 'none',
+                                 background: 'transparent'
                              }}
                              codeTagProps={{ 
                                  style: { 
                                      fontFamily: 'var(--font-mono)', 
                                      fontSize: '0.95rem', 
-                                     lineHeight: '1.75', 
-                                     textShadow: 'none', 
-                                     textDecoration: 'none',
-                                     textUnderlineOffset: 'unset',
-                                     borderBottom: 'none'
+                                     lineHeight: '1.75'
                                  } 
                              }}
                              {...props}
@@ -345,9 +390,6 @@ export function CustomMarkdownRenderer({ children: rawMarkdown, className = "" }
                      <code 
                          className={`inline-code ${codeClassName || ''}`} 
                          style={{ 
-                             textDecoration: 'none', 
-                             textUnderlineOffset: 'unset', 
-                             borderBottom: 'none',
                              backgroundColor: 'rgba(var(--accent-primary-rgb), 0.1)',
                              color: 'var(--accent-primary)',
                              fontFamily: 'var(--font-mono)',
@@ -402,9 +444,9 @@ export function CustomMarkdownRenderer({ children: rawMarkdown, className = "" }
                       });
                   }
 
-                  // Render using the ZoomableImage component
+                  // Render using the ZoomableImage component with optimized loading
                   return (
-                      <div className={`markdown-image-wrapper align-${imageAlign}`}>
+                      <div className={`markdown-image-wrapper align-${imageAlign}`} style={{ textAlign: imageAlign }}>
                           <ZoomableImage
                               src={src}
                               alt={altText}
@@ -413,6 +455,7 @@ export function CustomMarkdownRenderer({ children: rawMarkdown, className = "" }
                               effect={imageEffect}
                               border={imageBorder}
                               zoomable={isZoomable}
+                              ImageComponent={OptimizedImage} // Use optimized loading
                               {...props} // Spread the *rest* of the valid props
                           />
                       </div>

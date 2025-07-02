@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         description: 'Read Manic Agency\'s Terms of Service including user agreements, intellectual property rights, and legal terms governing website usage.',
         images: [
             {
-                url: '/og-default.png',
+                url: '/og-default.webp',
                 width: 1200,
                 height: 630,
                 alt: 'Manic Agency Terms of Service'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         title: 'Terms of Service - User Agreement & Legal Terms | Manic Agency',
         description: 'Read Manic Agency\'s Terms of Service including user agreements, intellectual property rights, and legal terms governing website usage.',
         images: [{
-            url: '/og-default.png',
+            url: '/og-default.webp',
             alt: 'Manic Agency Terms of Service'
         }]
     },

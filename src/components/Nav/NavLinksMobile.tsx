@@ -1,6 +1,7 @@
 // src/components/Nav/NavLinksMobile.tsx
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import ThemeToggle from '../Theme/ThemeToggle';
 import { HourglassIcon } from './Icons'; // Assuming Icons.tsx is in the same dir or adjust path
 import styles from './Nav.module.css';
@@ -31,6 +32,10 @@ const NavLinksMobile: React.FC<NavLinksMobileProps> = ({
     };
 
     const currentYear = new Date().getFullYear();
+    const pathname = usePathname();
+    
+    // Hide games button on velvet/looking glass pages
+    const shouldShowGames = !pathname?.includes('/velvet');
 
     return (
         <div
@@ -82,17 +87,19 @@ const NavLinksMobile: React.FC<NavLinksMobileProps> = ({
                         </a>
                     </Link>
 
-                    {/* --- Games Link (Always Shown) --- */}
-                    <Link href="https://games.manic.agency" legacyBehavior>
-                        <a className={`${styles.gamesBtn} ${styles.mobileGames}`}
-                           data-nav-id="games"
-                           onClick={closeAndNavigate}
-                           target="_blank" 
-                           rel="noopener noreferrer">
-                             <span>Games</span>
-                             <img src="/controller-button.svg" alt="Game Controller" className={styles.gamesSvg} />
-                        </a>
-                    </Link>
+                    {/* --- Games Link (Conditionally Shown) --- */}
+                    {shouldShowGames && (
+                        <Link href="https://games.manic.agency" legacyBehavior>
+                            <a className={`${styles.gamesBtn} ${styles.mobileGames}`}
+                               data-nav-id="games"
+                               onClick={closeAndNavigate}
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                                 <span>Games</span>
+                                 <img src="/controller-button.svg" alt="Game Controller" className={styles.gamesSvg} />
+                            </a>
+                        </Link>
+                    )}
 
                     {/* Contact Button - Using Link */}
                     <Link href="/contact" legacyBehavior>
@@ -112,15 +119,20 @@ const NavLinksMobile: React.FC<NavLinksMobileProps> = ({
                     {children && <div className="mt-4 px-4">{children}</div>}
 
                     {/* Theme Toggle */}
-                    <div className="mt-4 mb-2 px-4"> {/* Added padding */}
-                        <ThemeToggle size="md" /> {/* Or 'lg' if you prefer */}
+                    <div className="mobile-nav-theme-toggle">
+                        <ThemeToggle size="lg" />
                     </div>
-
-                </div> {/* End Link/Button Container */}
+                </div>
 
                 {/* Footer */}
                 <div className={styles.mobileMenuFooter}>
-                    Manic Agency &copy; {currentYear}
+                    <p className={styles.footerText}>
+                        © {currentYear} Manic Agency. 
+                        <br />
+                        <span className={styles.footerTagline}>
+                            metaverses intersect here
+                        </span>
+                    </p>
                 </div>
             </div>
         </div>

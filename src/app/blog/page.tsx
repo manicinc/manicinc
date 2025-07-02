@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         description: 'Dispatches, discoveries, and coded visions from the Synthetic Publishing Platform. Explore experimental development insights and creative technology.',
         images: [
             {
-                url: '/og-default.png',
+                url: '/og-default.webp',
                 width: 1200,
                 height: 630,
                 alt: 'Looking Glass Chronicles - Manic Agency Blog'
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         title: 'Looking Glass Chronicles - Insights & Experiments | Manic Agency',
         description: 'Dispatches, discoveries, and coded visions from the Synthetic Publishing Platform. Explore experimental development insights and creative technology.',
         images: [{
-            url: '/og-default.png',
+            url: '/og-default.webp',
             alt: 'Looking Glass Chronicles - Manic Agency Blog'
         }]
     }

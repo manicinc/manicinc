@@ -1,4 +1,3 @@
-
 /* ... (keep other tagline styles like :hover, scope icon, ascii) ... */
 
 /* ======================================== */
@@ -20,7 +19,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%; /* Circular button */
-    border: 2px solid var(--accent-secondary); /* Victorian border */
+    border: 2px solid var(--accent-secondary); /* Victorian border - will change with theme */
     background: linear-gradient(145deg, rgba(var(--bg-tertiary-rgb), 0.8), rgba(var(--bg-secondary-rgb), 0.9));
     box-shadow: inset 0 0 5px rgba(var(--shadow-color-rgb), 0.2),
                 2px 2px 4px rgba(var(--shadow-color-rgb), 0.3),
@@ -29,6 +28,24 @@
     overflow: hidden;
     transition: transform 0.3s var(--transition-bounce), box-shadow 0.3s ease, border-color 0.3s ease;
     color: var(--accent-highlight); /* Default icon color */
+}
+
+/* Light mode specific styling */
+:root .ornateToggleButton {
+    border-color: var(--color-light-burgundy);
+    background: linear-gradient(145deg, rgba(var(--color-light-cream), 0.9), rgba(var(--color-light-paper), 0.95));
+    box-shadow: inset 0 0 5px rgba(var(--color-ink-rgb), 0.15),
+                2px 2px 4px rgba(var(--color-ink-rgb), 0.25),
+                -1px -1px 2px rgba(255, 255, 255, 0.6);
+}
+
+/* Dark mode specific styling */
+html.dark .ornateToggleButton {
+    border-color: var(--accent-secondary);
+    background: linear-gradient(145deg, rgba(var(--bg-tertiary-rgb), 0.8), rgba(var(--bg-secondary-rgb), 0.9));
+    box-shadow: inset 0 0 5px rgba(var(--shadow-color-rgb), 0.2),
+                2px 2px 4px rgba(var(--shadow-color-rgb), 0.3),
+                -1px -1px 2px rgba(var(--text-on-accent-rgb), 0.1);
 }
 
 .ornateToggleButton:hover {
@@ -73,13 +90,25 @@
     transform: scale(1) rotate(0deg); /* Final state */
 }
 
-.ornateSun {
-    color: var(--accent-highlight); /* Color for light mode icon */
+/* Light mode icon colors */
+:root .ornateSun {
+    color: var(--color-light-burgundy); /* Darker color for light mode */
+    filter: drop-shadow(0 0 3px var(--color-light-burgundy));
+}
+
+:root .ornateMoon {
+    color: var(--color-light-sage); /* Darker color for light mode */
+    filter: drop-shadow(0 0 3px var(--color-light-sage));
+}
+
+/* Dark mode icon colors */
+html.dark .ornateSun {
+    color: var(--accent-highlight); /* Bright color for dark mode */
     filter: drop-shadow(0 0 3px var(--accent-highlight));
 }
 
-.ornateMoon {
-    color: var(--accent-secondary); /* Color for dark mode icon */
+html.dark .ornateMoon {
+    color: var(--accent-secondary); /* Bright color for dark mode */
     filter: drop-shadow(0 0 3px var(--accent-secondary));
 }
 
