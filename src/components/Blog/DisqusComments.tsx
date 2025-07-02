@@ -39,7 +39,7 @@ export default function DisqusComments({
     if (disqusRef.current && initialThemeDetected) {
       disqusRef.current.setAttribute('data-disqus-theme', isDarkMode ? 'dark' : 'light');
       
-      // Reset Disqus when theme changes (but not on initial load)
+      // Reset Disqus when theme changes to apply new styling
       if (disqusLoaded && 'DISQUS' in window) {
         try {
           // @ts-ignore - DISQUS is added to window by the Disqus script
@@ -51,6 +51,7 @@ export default function DisqusComments({
               this.page.title = postTitle;
             }
           });
+          console.log('Disqus reset for theme change:', isDarkMode ? 'dark' : 'light');
         } catch (err) {
           console.warn("Error resetting Disqus:", err);
         }

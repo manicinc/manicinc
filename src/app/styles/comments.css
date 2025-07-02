@@ -567,4 +567,80 @@ html:not(.dark) #disqus_thread .prompt {
   }
 }
 
-/* Clean approach - let Disqus handle its own styling within our themed container */
+/* Enhanced Disqus theme forcing - override iframe content */
+
+/* Force theme immediately on all Disqus elements */
+#disqus_thread div,
+#disqus_thread span,
+#disqus_thread p,
+#disqus_thread a,
+#disqus_thread button,
+#disqus_thread input,
+#disqus_thread textarea {
+    transition: background-color 0.3s ease, color 0.3s ease !important;
+}
+
+/* Dark mode forcing */
+html.dark #disqus_thread div,
+html.dark #disqus_thread span,
+html.dark #disqus_thread p,
+html.dark #disqus_thread a,
+html.dark #disqus_thread .post-message,
+html.dark #disqus_thread .comment-content,
+html.dark #disqus_thread .text-bold,
+html.dark #disqus_thread .author {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+}
+
+html.dark #disqus_thread .post-meta,
+html.dark #disqus_thread .comment-meta,
+html.dark #disqus_thread .prompt,
+html.dark #disqus_thread .time {
+    color: var(--text-muted) !important;
+}
+
+/* Light mode forcing */
+html:not(.dark) #disqus_thread div,
+html:not(.dark) #disqus_thread span,
+html:not(.dark) #disqus_thread p,
+html:not(.dark) #disqus_thread a,
+html:not(.dark) #disqus_thread .post-message,
+html:not(.dark) #disqus_thread .comment-content,
+html:not(.dark) #disqus_thread .text-bold,
+html:not(.dark) #disqus_thread .author {
+    background-color: var(--bg-blog-paper) !important;
+    color: var(--text-primary) !important;
+}
+
+html:not(.dark) #disqus_thread .post-meta,
+html:not(.dark) #disqus_thread .comment-meta,
+html:not(.dark) #disqus_thread .prompt,
+html:not(.dark) #disqus_thread .time {
+    color: var(--text-muted) !important;
+}
+
+/* Force container backgrounds */
+#disqus_thread .thread__wrapper,
+#disqus_thread .thread__container,
+#disqus_thread .reactions__container,
+#disqus_thread .form-refresh,
+#disqus_thread .form-refresh-v2,
+#disqus_thread .postbox {
+    background-color: inherit !important;
+}
+
+/* Reaction buttons and navigation */
+#disqus_thread .reaction-item,
+#disqus_thread .nav-tab {
+    background-color: var(--bg-primary) !important;
+    color: var(--text-secondary) !important;
+    border-color: var(--bg-tertiary) !important;
+}
+
+#disqus_thread .nav-tab.active,
+#disqus_thread .nav-tab:hover {
+    background-color: var(--bg-secondary) !important;
+    color: var(--accent-primary) !important;
+    border-color: var(--accent-primary) !important;
+}
