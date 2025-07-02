@@ -1,0 +1,12 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f5f0e6" stroke="#4a3f35" stroke-width="2"/>
+  <text x="200" y="140" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#4a3f35">
+    Image: input-noise-locked-behind-paywalls.png
+  </text>
+  <text x="200" y="160" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666">
+    [Placeholder - Original image missing]
+  </text>
+  <text x="200" y="180" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#999">
+    Maddened by paygates
+  </text>
+</svg> 
