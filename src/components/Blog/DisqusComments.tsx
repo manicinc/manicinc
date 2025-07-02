@@ -243,15 +243,26 @@ export default function DisqusComments({
           padding-bottom: 2rem;
           /* Force proper background and text colors */
           background-color: ${isDarkMode ? '#302435' : '#faf3e9'} !important;
-          color: ${isDarkMode ? '#d8cce6' : '#4a3f35'} !important;
+          color: ${isDarkMode ? '#f5f0e6' : '#4a3f35'} !important;
+          /* Ensure minimum height to prevent layout shift */
+          min-height: 200px;
         }
+        
+                 /* Force all nested elements to inherit theme colors immediately */
+         #disqus_thread *,
+         #disqus_thread *::before,
+         #disqus_thread *::after {
+           background-color: ${isDarkMode ? '#302435' : '#faf3e9'} !important;
+           color: ${isDarkMode ? '#f5f0e6' : '#4a3f35'} !important;
+           border-color: ${isDarkMode ? '#5a4a60' : '#d4c4b6'} !important;
+         }
         
         /* Disqus container theming */
         #disqus_thread,
         #disqus_thread .disqus-container,
         #disqus_thread [data-testid="disqus-container"] {
           background-color: ${isDarkMode ? '#302435' : '#faf3e9'} !important;
-          color: ${isDarkMode ? '#d8cce6' : '#4a3f35'} !important;
+          color: ${isDarkMode ? '#f5f0e6' : '#4a3f35'} !important;
         }
         
         /* Force Disqus iframe to use proper theme immediately */
@@ -264,17 +275,17 @@ export default function DisqusComments({
         /* Reactions container styling */
         #reactions__container,
         #reactions__container * {
-          background-color: ${isDarkMode ? '#402e46' : '#f5ede1'} !important;
-          color: ${isDarkMode ? '#d8cce6' : '#4a3f35'} !important;
+          background-color: ${isDarkMode ? '#302435' : '#f5ede1'} !important;
+          color: ${isDarkMode ? '#f5f0e6' : '#4a3f35'} !important;
         }
         
         /* Reaction items */
         .reaction-item,
         .reaction-item__button,
         .reaction-item__text {
-          background-color: ${isDarkMode ? '#5f4867' : '#ede4d6'} !important;
-          color: ${isDarkMode ? '#d8cce6' : '#4a3f35'} !important;
-          border-color: ${isDarkMode ? '#6f586f' : '#d4c4b6'} !important;
+          background-color: ${isDarkMode ? '#302435' : '#ede4d6'} !important;
+          color: ${isDarkMode ? '#f5f0e6' : '#4a3f35'} !important;
+          border-color: ${isDarkMode ? '#5a4a60' : '#d4c4b6'} !important;
         }
         
         .reaction-item__button:hover {
@@ -290,11 +301,11 @@ export default function DisqusComments({
         /* Apply theme-specific styles immediately based on current theme */
         ${isDarkMode ? `
           #disqus_thread {
-            --disqus-text-color: #d8cce6;
-            --disqus-background: #402e46;
-            --disqus-input-background: #22182b;
+            --disqus-text-color: #f5f0e6;
+            --disqus-background: #302435;
+            --disqus-input-background: #302435;
             --disqus-link-color: #d65076;
-            --disqus-text-light: #a896b8;
+            --disqus-text-light: #f5f0e6;
             --disqus-border-color: #5a4a60;
           }
           
@@ -302,21 +313,21 @@ export default function DisqusComments({
           #disqus_thread .reply-content,
           #disqus_thread button,
           #disqus_thread .publisher-desc {
-            color: #d8cce6 !important;
-            background-color: #402e46 !important;
+            color: #f5f0e6 !important;
+            background-color: #302435 !important;
           }
           
           #disqus_thread .textarea,
           #disqus_thread textarea {
             color: #f5f0e6 !important;
-            background: #22182b !important;
+            background: #302435 !important;
             border-color: #5a4a60 !important;
           }
           
           #disqus_thread .publisher,
           #disqus_thread .reply-content,
           #disqus_thread .comment-content {
-            background: #402e46 !important;
+            background: #302435 !important;
             border-color: #5a4a60 !important;
           }
           

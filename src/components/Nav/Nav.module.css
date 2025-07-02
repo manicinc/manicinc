@@ -1093,3 +1093,99 @@
         text-overflow: ellipsis !important;
     }
 }
+
+/* ======================================== */
+/* Velvet/Looking Glass Specific Styles     */
+/* ======================================== */
+
+/* Force velvet pages to use exact same nav height and constrain logo */
+:global([data-pathname="/velvet"]) .navContainer,
+:global([data-pathname*="/velvet/"]) .navContainer {
+    min-height: 60px !important;
+    max-height: 60px !important;
+    height: 60px !important;
+    padding: 0 !important;
+    overflow: hidden !important; /* Prevent any overflow */
+}
+
+/* Desktop-specific logo constraints */
+@media (min-width: 769px) {
+    :global([data-pathname="/velvet"]) .logoText,
+    :global([data-pathname*="/velvet/"]) .logoText {
+        font-size: 1.1rem !important;
+        max-height: 36px !important;
+        line-height: 1.1 !important;
+        overflow: hidden !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    :global([data-pathname="/velvet"]) .navLink,
+    :global([data-pathname*="/velvet/"]) .navLink {
+        min-height: 48px !important;
+        max-height: 48px !important;
+        padding: 0 1rem !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    :global([data-pathname="/velvet"]) .contactBtnFinal,
+    :global([data-pathname*="/velvet/"]) .contactBtnFinal {
+        min-height: 48px !important;
+        max-height: 48px !important;
+        padding: 0.6rem 1.2rem !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    /* Constrain the entire logo link container */
+    :global([data-pathname="/velvet"]) .logoLink,
+    :global([data-pathname*="/velvet/"]) .logoLink {
+        max-height: 40px !important;
+        overflow: hidden !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+}
+
+/* Mobile-specific velvet nav height fixes */
+@media (max-width: 768px) {
+    :global([data-pathname="/velvet"]) .navContainer,
+    :global([data-pathname*="/velvet/"]) .navContainer {
+        min-height: 45px !important;
+        max-height: 45px !important;
+        height: 45px !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    :global([data-pathname="/velvet"]) .logoText,
+    :global([data-pathname*="/velvet/"]) .logoText {
+        font-size: 0.9rem !important;
+        max-height: 28px !important;
+        line-height: 1.1 !important;
+    }
+
+    :global([data-pathname="/velvet"]) .mobileMenuBtn,
+    :global([data-pathname*="/velvet/"]) .mobileMenuBtn {
+        min-height: 36px !important;
+        max-height: 36px !important;
+        width: 36px !important;
+        padding: 8px !important;
+    }
+
+    :global([data-pathname="/velvet"]) .hamburgerIconWrapper,
+    :global([data-pathname*="/velvet/"]) .hamburgerIconWrapper {
+        width: 18px !important;
+        height: 12px !important;
+    }
+
+    :global([data-pathname="/velvet"]) .logoLink,
+    :global([data-pathname*="/velvet/"]) .logoLink {
+        max-height: 32px !important;
+        overflow: hidden !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+}

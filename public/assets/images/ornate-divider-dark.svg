@@ -1,0 +1,40 @@
+<svg width="150" height="25" viewBox="0 0 150 25" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="darkGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#d65076;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#d65076;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#d65076;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Central ornament -->
+  <circle cx="75" cy="12.5" r="3" fill="url(#darkGradient)" />
+  <circle cx="75" cy="12.5" r="1.5" fill="#d65076" />
+  
+  <!-- Side flourishes -->
+  <path d="M 60 12.5 Q 67.5 8 75 12.5 Q 82.5 17 90 12.5" 
+        stroke="url(#darkGradient)" 
+        stroke-width="1" 
+        fill="none" 
+        opacity="0.6"/>
+  
+  <path d="M 30 12.5 Q 37.5 8 45 12.5 Q 52.5 17 60 12.5" 
+        stroke="url(#darkGradient)" 
+        stroke-width="0.8" 
+        fill="none" 
+        opacity="0.4"/>
+        
+  <path d="M 90 12.5 Q 97.5 8 105 12.5 Q 112.5 17 120 12.5" 
+        stroke="url(#darkGradient)" 
+        stroke-width="0.8" 
+        fill="none" 
+        opacity="0.4"/>
+  
+  <!-- End dots -->
+  <circle cx="15" cy="12.5" r="1" fill="#d65076" opacity="0.5" />
+  <circle cx="135" cy="12.5" r="1" fill="#d65076" opacity="0.5" />
+  
+  <!-- Decorative lines -->
+  <line x1="0" y1="12.5" x2="12" y2="12.5" stroke="#d65076" stroke-width="0.5" opacity="0.3"/>
+  <line x1="138" y1="12.5" x2="150" y2="12.5" stroke="#d65076" stroke-width="0.5" opacity="0.3"/>
+</svg> 

@@ -404,16 +404,79 @@ hr.ornate-rule::before {
   padding: 1rem 1.2rem;
   background: linear-gradient(to bottom, var(--bg-tertiary), var(--bg-secondary));
   border-bottom: 1px solid var(--accent-primary);
-  flex-shrink: 0; box-shadow: 0 2px 5px rgba(var(--shadow-color), 0.1);
+  flex-shrink: 0; 
+  box-shadow: 0 2px 5px rgba(var(--shadow-color), 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 20; /* Increased z-index */
+  backdrop-filter: blur(12px); /* Stronger blur */
+  -webkit-backdrop-filter: blur(12px);
+  /* Ensure it stays above content */
+  margin-bottom: 0;
 }
 .mobile-toc-title { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--text-heading); margin: 0; }
-.mobile-toc-close { background: none; border: none; padding: 0.5rem; color: var(--text-secondary); cursor: pointer; transition: color 0.2s ease, transform 0.2s ease; border-radius: 50%; }
-.mobile-toc-close:hover { color: var(--accent-alert); transform: scale(1.1) rotate(90deg); background-color: rgba(var(--accent-alert-rgb), 0.1); }
-.mobile-toc-close svg { width: 26px; height: 26px; display: block; }
+.mobile-toc-close { 
+  background: rgba(var(--bg-secondary-rgb), 0.8); 
+  border: 1px solid var(--bg-tertiary); 
+  padding: 0.6rem; 
+  color: var(--text-secondary); 
+  cursor: pointer; 
+  transition: all 0.2s ease; 
+  border-radius: 50%; 
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 4px rgba(var(--shadow-color-rgb), 0.2);
+}
+.mobile-toc-close:hover { 
+  color: var(--accent-alert); 
+  transform: scale(1.1) rotate(90deg); 
+  background-color: rgba(var(--accent-alert-rgb), 0.1); 
+  border-color: var(--accent-alert);
+  box-shadow: 0 4px 8px rgba(var(--accent-alert-rgb), 0.3);
+}
+.mobile-toc-close:active { transform: scale(0.95) rotate(90deg); }
+.mobile-toc-close svg { width: 24px; height: 24px; display: block; }
 
 .mobile-toc-content {
-  flex-grow: 1; overflow-y: auto; background-color: transparent;
-  padding-bottom: 2rem; -webkit-overflow-scrolling: touch;
+  flex-grow: 1; 
+  overflow-y: auto; 
+  background-color: transparent;
+  padding-bottom: 2rem; 
+  -webkit-overflow-scrolling: touch;
+  /* Fix height constraints for proper scrolling */
+  max-height: calc(100vh - 120px); /* Account for header and navigation */
+  min-height: 0; /* Essential for flex scrolling */
+  /* Custom scrollbar styling for mobile TOC */
+  scrollbar-width: auto; /* Use auto instead of thin for better visibility */
+  scrollbar-color: var(--accent-primary) rgba(var(--bg-secondary-rgb), 0.8);
+  /* Add padding to the right to make space for scrollbar */
+  padding-right: 1rem;
+}
+
+/* Webkit scrollbar styling for mobile TOC */
+.mobile-toc-content::-webkit-scrollbar {
+  width: 12px !important; /* Make scrollbar more visible on mobile */
+}
+
+.mobile-toc-content::-webkit-scrollbar-track {
+  background: rgba(var(--bg-secondary-rgb), 0.6) !important; /* More visible track */
+  border-radius: 6px;
+  border: 1px solid rgba(var(--bg-tertiary-rgb), 0.5);
+}
+
+.mobile-toc-content::-webkit-scrollbar-thumb {
+  background-color: var(--accent-primary) !important;
+  border-radius: 6px;
+  border: 2px solid rgba(var(--bg-tertiary-rgb), 0.8);
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 4px rgba(var(--shadow-color-rgb), 0.3);
+}
+
+.mobile-toc-content::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-highlight);
+}
+
+.mobile-toc-content::-webkit-scrollbar-thumb:active {
+  background-color: var(--accent-secondary);
 }
 /* Reuse TOC Nav styles */
 .mobile-toc-navigation {
@@ -421,12 +484,49 @@ hr.ornate-rule::before {
     display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1.2rem;
     border-bottom: 1px solid; border-image: linear-gradient(to right, transparent, rgba(var(--accent-muted1-rgb), 0.4), transparent) 1 100%;
     background-color: rgba(var(--bg-secondary-rgb), 0.5); flex-shrink: 0;
+    position: relative; /* Needed for collapse button positioning */
 }
 .mobile-toc-navigation button { background: none; border: none; color: var(--accent-secondary); padding: 0.5rem; cursor: pointer; border-radius: 50%; transition: all 0.2s ease-out; }
 .mobile-toc-navigation button:hover { color: var(--accent-highlight); background-color: rgba(var(--accent-highlight-rgb), 0.1); transform: scale(1.1); }
 .mobile-toc-navigation button:active { transform: scale(0.9); }
 .mobile-toc-navigation button svg { width: 22px; height: 22px; display: block; }
 .mobile-toc-navigation .toc-nav-label { font-family: var(--font-meta); font-size: 1rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* Mobile TOC Navigation Collapse Button */
+.mobile-toc-nav-collapse {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    background: rgba(var(--bg-tertiary-rgb), 0.8);
+    border: 1px solid var(--accent-muted1);
+    padding: 0.4rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 4px rgba(var(--shadow-color-rgb), 0.2);
+    z-index: 10;
+}
+
+.mobile-toc-nav-collapse:hover {
+    color: var(--accent-alert);
+    transform: translateY(-50%) scale(1.1);
+    background-color: rgba(var(--accent-alert-rgb), 0.1);
+    border-color: var(--accent-alert);
+    box-shadow: 0 4px 8px rgba(var(--accent-alert-rgb), 0.3);
+}
+
+.mobile-toc-nav-collapse:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.mobile-toc-nav-collapse svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
 
 /* Reuse TOC List styles with slight adjustments for mobile */
 .mobile-toc-content .toc-list { list-style: none; padding: 1.5rem 1.2rem; margin: 0; counter-reset: toc-level-1; }
