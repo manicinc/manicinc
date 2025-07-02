@@ -168,58 +168,7 @@ const CustomQuote: React.FC<CustomQuoteProps> = ({ children, attribution }) => {
     );
 };
 
-// --- Helper component for optimized image loading ---
-const OptimizedImage: React.FC<{ src: string; alt: string; [key: string]: any }> = ({ src, alt, ...props }) => {
-    const [imageSrc, setImageSrc] = useState<string>(src);
-    const [imageError, setImageError] = useState<boolean>(false);
-    
-    useEffect(() => {
-        // Try WebP first, then fallback to PNG
-        const tryFormats = async () => {
-            const baseSrc = src.replace(/\.(png|jpg|jpeg)$/i, '');
-            const formats = ['.webp', '.png', '.jpg', '.jpeg'];
-            
-            for (const format of formats) {
-                try {
-                    const testSrc = baseSrc + format;
-                    const response = await fetch(testSrc, { method: 'HEAD' });
-                    if (response.ok) {
-                        setImageSrc(testSrc);
-                        return;
-                    }
-                } catch (error) {
-                    // Continue to next format
-                }
-            }
-            
-            // If all formats fail, use original src
-            setImageSrc(src);
-        };
-        
-        tryFormats();
-    }, [src]);
-    
-    const handleError = () => {
-        setImageError(true);
-        // Try original src as final fallback
-        if (imageSrc !== src) {
-            setImageSrc(src);
-        }
-    };
-    
-    if (imageError && imageSrc === src) {
-        return <AsciiArtPlaceholder className="mx-auto my-8" />;
-    }
-    
-    return (
-        <img 
-            src={imageSrc} 
-            alt={alt} 
-            onError={handleError}
-            {...props}
-        />
-    );
-};
+
 
 // ==================================
 // === Main Renderer Component ===
@@ -444,7 +393,7 @@ export function CustomMarkdownRenderer({ children: rawMarkdown, className = "" }
                       });
                   }
 
-                  // Render using the ZoomableImage component with optimized loading
+                  // Render using the ZoomableImage component
                   return (
                       <div className={`markdown-image-wrapper align-${imageAlign}`} style={{ textAlign: imageAlign }}>
                           <ZoomableImage
@@ -455,8 +404,6 @@ export function CustomMarkdownRenderer({ children: rawMarkdown, className = "" }
                               effect={imageEffect}
                               border={imageBorder}
                               zoomable={isZoomable}
-                              ImageComponent={OptimizedImage} // Use optimized loading
-                              {...props} // Spread the *rest* of the valid props
                           />
                       </div>
                   );
