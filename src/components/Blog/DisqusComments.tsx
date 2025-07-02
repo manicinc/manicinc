@@ -2,7 +2,7 @@
 
 import { DiscussionEmbed } from "disqus-react";
 import { useTheme } from "@/context/ThemeContext";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface DisqusCommentsProps {
   postTitle: string;
@@ -17,146 +17,85 @@ export default function DisqusComments({
   postIdentifier,
   className = '',
 }: DisqusCommentsProps) {
-  const { isDarkMode } = useTheme();
+  const { isDarkMode, mounted } = useTheme();
   const disqusRef = useRef<HTMLDivElement>(null);
+  const [disqusLoaded, setDisqusLoaded] = useState(false);
+  const [initialThemeDetected, setInitialThemeDetected] = useState(false);
   
   // Get the full URL for Disqus
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://manic.agency';
   const fullUrl = `${siteUrl}${postUrl}`;
   
-  // Define a function to apply theme-specific styles
-  const applyThemeStyles = () => {
-    if (!disqusRef.current) return;
-    
-    // Add a data attribute to the container for CSS targeting
-    disqusRef.current.setAttribute('data-disqus-theme', isDarkMode ? 'dark' : 'light');
-    
-    // Method 1: Target the Disqus iframe if it exists (most reliable but may be blocked by CORS)
-    const disqusIframe = document.getElementById('dsq-app2') as HTMLIFrameElement;
-    if (disqusIframe && disqusIframe.contentDocument) {
-      try {
-        const iframeHead = disqusIframe.contentDocument.head;
-        
-        // Create a style element if it doesn't exist
-        let styleEl = iframeHead.querySelector('#manic-disqus-theme');
-        if (!styleEl) {
-          styleEl = document.createElement('style');
-          styleEl.id = 'manic-disqus-theme';
-          iframeHead.appendChild(styleEl);
-        }
-        
-        // Apply different styles based on theme
-        styleEl.textContent = isDarkMode 
-          ? `.post-message, .reply-content, button, .publisher-desc { color: #d8cce6 !important; }
-             .textarea { color: #f5f0e6 !important; background: #22182b !important; }
-             .publisher, .reply-content, .comment-content { background: #402e46 !important; }
-             body { background: transparent !important; }
-             a, .publisher-anchor-color, .publisher-anchor-hover-color { color: #d65076 !important; }`
-          : `.post-message, .reply-content, button { color: #4a3f35 !important; }
-             .textarea { color: #4a3f35 !important; background: #fbf6ef !important; }
-             .publisher, .reply-content, .comment-content { background: #f5ede1 !important; }
-             body { background: transparent !important; }
-             a, .publisher-anchor-color, .publisher-anchor-hover-color { color: #b66880 !important; }`;
-      } catch (err) {
-        console.warn("Could not inject styles into Disqus iframe:", err);
-      }
-    }
-    
-    // Method 2: Use postMessage API to communicate with Disqus iframe
-    try {
-      const iframes = document.querySelectorAll('iframe');
-      iframes.forEach(iframe => {
-        if (iframe.src && iframe.src.includes('disqus.com')) {
-          const message = {
-            cssOverride: isDarkMode
-              ? `.post-message, .reply-content, button, .publisher-desc { color: #d8cce6 !important; }
-                 .textarea { color: #f5f0e6 !important; background: #22182b !important; }
-                 .publisher, .reply-content, .comment-content { background: #402e46 !important; }
-                 body { background: transparent !important; }
-                 a, .publisher-anchor-color, .publisher-anchor-hover-color { color: #d65076 !important; }`
-              : `.post-message, .reply-content, button { color: #4a3f35 !important; }
-                 .textarea { color: #4a3f35 !important; background: #fbf6ef !important; }
-                 .publisher, .reply-content, .comment-content { background: #f5ede1 !important; }
-                 body { background: transparent !important; }
-                 a, .publisher-anchor-color, .publisher-anchor-hover-color { color: #b66880 !important; }`,
-            theme: isDarkMode ? 'dark' : 'light'
-          };
-          iframe.contentWindow?.postMessage(message, '*');
-        }
-      });
-    } catch (err) {
-      console.warn("Could not communicate with Disqus iframe via postMessage:", err);
-    }
-  };
-  
-  // Effect to handle theme changes (including initial load)
+  // Detect initial theme from DOM before loading Disqus
   useEffect(() => {
-    // Apply theme immediately on mount and theme changes
-    const initialTimer = setTimeout(applyThemeStyles, 100);
-    const secondTimer = setTimeout(applyThemeStyles, 1000);
-    const thirdTimer = setTimeout(applyThemeStyles, 2000);
-    const fourthTimer = setTimeout(applyThemeStyles, 3000);
-    
-    // Dispatch a custom event that our other effect can listen for
-    const themeChangeEvent = new CustomEvent('themeChanged', {
-      detail: { isDarkMode }
-    });
-    document.dispatchEvent(themeChangeEvent);
-
-    // Reset Disqus if it exists and this isn't the initial load
-    if ('DISQUS' in window) {
-      try {
-        // @ts-ignore - DISQUS is added to window by the Disqus script
-        window.DISQUS.reset({
-          reload: true,
-          config: function () {
-            this.page.identifier = postIdentifier;
-            this.page.url = fullUrl;
-            this.page.title = postTitle;
-          }
-        });
-        console.log("Disqus reset with theme:", isDarkMode ? 'dark' : 'light');
-      } catch (err) {
-        console.error("Error resetting Disqus:", err);
-      }
+    if (mounted) {
+      // Theme context is ready, we can proceed
+      setInitialThemeDetected(true);
     }
-    
-    // Set up a mutation observer to watch for Disqus iframe being added/changed
-    let observer: MutationObserver | null = null;
-    if (disqusRef.current) {
-      observer = new MutationObserver((mutations) => {
-        mutations.forEach(() => {
-          applyThemeStyles();
-        });
-      });
-      
-      observer.observe(disqusRef.current, { 
-        childList: true, 
-        subtree: true,
-        attributes: true,
-        attributeFilter: ['src', 'style', 'class']
-      });
-    }
-    
-    // Also listen for theme changes in the parent document
-    const handleThemeChange = () => {
-      setTimeout(applyThemeStyles, 500);
-    };
-    document.addEventListener('themeChanged', handleThemeChange);
-    
-    // Cleanup
-    return () => {
-      clearTimeout(initialTimer);
-      clearTimeout(secondTimer);
-      clearTimeout(thirdTimer);
-      clearTimeout(fourthTimer);
-      if (observer) {
-        observer.disconnect();
-      }
-      document.removeEventListener('themeChanged', handleThemeChange);
-    };
-  }, [isDarkMode, fullUrl, postIdentifier, postTitle]);
+  }, [mounted]);
   
+  // Set theme attributes and handle theme changes
+  useEffect(() => {
+    if (disqusRef.current && initialThemeDetected) {
+      disqusRef.current.setAttribute('data-disqus-theme', isDarkMode ? 'dark' : 'light');
+      
+      // Reset Disqus when theme changes (but not on initial load)
+      if (disqusLoaded && 'DISQUS' in window) {
+        try {
+          // @ts-ignore - DISQUS is added to window by the Disqus script
+          window.DISQUS.reset({
+            reload: true,
+            config: function () {
+              this.page.identifier = postIdentifier;
+              this.page.url = fullUrl;
+              this.page.title = postTitle;
+            }
+          });
+        } catch (err) {
+          console.warn("Error resetting Disqus:", err);
+        }
+      }
+    }
+  }, [isDarkMode, postIdentifier, fullUrl, postTitle, disqusLoaded, initialThemeDetected]);
+  
+  // Track when Disqus is loaded
+  useEffect(() => {
+    if (!initialThemeDetected) return;
+    
+    const checkDisqusLoaded = () => {
+      if (document.getElementById('disqus_thread')?.innerHTML.trim()) {
+        setDisqusLoaded(true);
+      }
+    };
+    
+    const timer = setTimeout(checkDisqusLoaded, 1000);
+    const observer = new MutationObserver(checkDisqusLoaded);
+    
+    if (disqusRef.current) {
+      observer.observe(disqusRef.current, { childList: true, subtree: true });
+    }
+    
+    return () => {
+      clearTimeout(timer);
+      observer.disconnect();
+    };
+  }, [initialThemeDetected]);
+  
+  // Don't render Disqus until theme is properly detected
+  if (!mounted || !initialThemeDetected) {
+    return (
+      <div className={`disqus-comments-container ${className} loading`}>
+        <div className="disqus-header">
+          <h3 className="disqus-title">Comments from Disqus</h3>
+          <div className="disqus-divider"></div>
+        </div>
+        <div className="disqus-loading">
+          <p>Loading comments...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div 
       ref={disqusRef}
@@ -233,147 +172,43 @@ export default function DisqusComments({
         }
       `}</style>
       
-      {/* Enhanced global styles for Disqus with initial theme support */}
+      {/* Clean container styling */}
       <style jsx global>{`
-        /* Critical styles that override Disqus defaults - apply immediately */
+        /* Clean container that respects your theme */
         #disqus_thread {
-          color-scheme: ${isDarkMode ? 'dark' : 'light'} !important;
-          font-family: var(--font-body-blog) !important;
-          position: relative;
-          padding-bottom: 2rem;
-          /* Force proper background and text colors */
-          background-color: ${isDarkMode ? '#302435' : '#faf3e9'} !important;
-          color: ${isDarkMode ? '#f5f0e6' : '#4a3f35'} !important;
-          /* Ensure minimum height to prevent layout shift */
+          background-color: ${isDarkMode ? 'var(--bg-secondary)' : 'var(--bg-blog-paper)'} !important;
+          border-radius: var(--radius-lg);
+          padding: 1rem;
           min-height: 200px;
+          position: relative;
+          transition: background-color 0.3s ease;
+          border: 1px solid ${isDarkMode ? 'rgba(var(--accent-primary-rgb), 0.2)' : 'rgba(var(--text-muted-rgb), 0.1)'};
         }
         
-                 /* Force all nested elements to inherit theme colors immediately */
-         #disqus_thread *,
-         #disqus_thread *::before,
-         #disqus_thread *::after {
-           background-color: ${isDarkMode ? '#302435' : '#faf3e9'} !important;
-           color: ${isDarkMode ? '#f5f0e6' : '#4a3f35'} !important;
-           border-color: ${isDarkMode ? '#5a4a60' : '#d4c4b6'} !important;
-         }
-        
-        /* Disqus container theming */
-        #disqus_thread,
-        #disqus_thread .disqus-container,
-        #disqus_thread [data-testid="disqus-container"] {
-          background-color: ${isDarkMode ? '#302435' : '#faf3e9'} !important;
-          color: ${isDarkMode ? '#f5f0e6' : '#4a3f35'} !important;
+        /* Loading state styling */
+        .disqus-loading {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 200px;
+          color: var(--text-muted);
+          font-family: var(--font-meta-blog);
+          font-size: 0.9rem;
         }
         
-        /* Force Disqus iframe to use proper theme immediately */
-        iframe[src*="disqus.com"],
-        iframe#dsq-app2 {
-          color-scheme: ${isDarkMode ? 'dark' : 'light'} !important;
-          background-color: ${isDarkMode ? '#302435' : '#faf3e9'} !important;
+        #disqus_thread:empty::after {
+          content: "Loading Disqus comments...";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: var(--text-muted);
+          font-family: var(--font-meta-blog);
+          font-size: 0.9rem;
+          text-align: center;
         }
         
-        /* Reactions container styling */
-        #reactions__container,
-        #reactions__container * {
-          background-color: ${isDarkMode ? '#302435' : '#f5ede1'} !important;
-          color: ${isDarkMode ? '#f5f0e6' : '#4a3f35'} !important;
-        }
-        
-        /* Reaction items */
-        .reaction-item,
-        .reaction-item__button,
-        .reaction-item__text {
-          background-color: ${isDarkMode ? '#302435' : '#ede4d6'} !important;
-          color: ${isDarkMode ? '#f5f0e6' : '#4a3f35'} !important;
-          border-color: ${isDarkMode ? '#5a4a60' : '#d4c4b6'} !important;
-        }
-        
-        .reaction-item__button:hover {
-          background-color: ${isDarkMode ? '#d65076' : '#b66880'} !important;
-          color: ${isDarkMode ? '#ffffff' : '#ffffff'} !important;
-        }
-        
-        .reaction-item__selected {
-          background-color: ${isDarkMode ? '#d65076' : '#b66880'} !important;
-          color: ${isDarkMode ? '#ffffff' : '#ffffff'} !important;
-        }
-        
-        /* Apply theme-specific styles immediately based on current theme */
-        ${isDarkMode ? `
-          #disqus_thread {
-            --disqus-text-color: #f5f0e6;
-            --disqus-background: #302435;
-            --disqus-input-background: #302435;
-            --disqus-link-color: #d65076;
-            --disqus-text-light: #f5f0e6;
-            --disqus-border-color: #5a4a60;
-          }
-          
-          #disqus_thread .post-message,
-          #disqus_thread .reply-content,
-          #disqus_thread button,
-          #disqus_thread .publisher-desc {
-            color: #f5f0e6 !important;
-            background-color: #302435 !important;
-          }
-          
-          #disqus_thread .textarea,
-          #disqus_thread textarea {
-            color: #f5f0e6 !important;
-            background: #302435 !important;
-            border-color: #5a4a60 !important;
-          }
-          
-          #disqus_thread .publisher,
-          #disqus_thread .reply-content,
-          #disqus_thread .comment-content {
-            background: #302435 !important;
-            border-color: #5a4a60 !important;
-          }
-          
-          #disqus_thread a,
-          #disqus_thread .publisher-anchor-color,
-          #disqus_thread .publisher-anchor-hover-color {
-            color: #d65076 !important;
-          }
-        ` : `
-          #disqus_thread {
-            --disqus-text-color: #4a3f35;
-            --disqus-background: #f5ede1;
-            --disqus-input-background: #fbf6ef;
-            --disqus-link-color: #b66880;
-            --disqus-text-light: #7a6d60;
-            --disqus-border-color: #d4c4b6;
-          }
-          
-          #disqus_thread .post-message,
-          #disqus_thread .reply-content,
-          #disqus_thread button,
-          #disqus_thread .publisher-desc {
-            color: #4a3f35 !important;
-            background-color: #f5ede1 !important;
-          }
-          
-          #disqus_thread .textarea,
-          #disqus_thread textarea {
-            color: #4a3f35 !important;
-            background: #fbf6ef !important;
-            border-color: #d4c4b6 !important;
-          }
-          
-          #disqus_thread .publisher,
-          #disqus_thread .reply-content,
-          #disqus_thread .comment-content {
-            background: #f5ede1 !important;
-            border-color: #d4c4b6 !important;
-          }
-          
-          #disqus_thread a,
-          #disqus_thread .publisher-anchor-color,
-          #disqus_thread .publisher-anchor-hover-color {
-            color: #b66880 !important;
-          }
-        `}
+
       `}</style>
     </div>
   );

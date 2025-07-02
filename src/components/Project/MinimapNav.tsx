@@ -59,11 +59,18 @@ const MinimapNav: React.FC<MinimapNavProps> = ({ toc }) => {
   if (!toc || toc.length < 3) return null; // Only show if enough sections
 
   return (
-    <div ref={minimapContainerRef} className="minimap-container hidden lg:flex">
+    <div ref={minimapContainerRef} className="minimap-container">
       {toc.map((item) => {
-        // Adjust height/opacity based on level for visual hierarchy
-        const heightClass = item.level === 1 ? 'h-4' : item.level === 2 ? 'h-3' : 'h-2.5'; // Tailwind height classes
-        const opacityClass = item.level === 1 ? 'opacity-95' : item.level === 2 ? 'opacity-75' : 'opacity-60';
+        // Different shapes and sizes based on heading level
+        const getIndicatorClass = () => {
+          const baseClass = 'minimap-indicator';
+          const levelClass = `level-${item.level}`;
+          const shapeClass = item.level === 1 ? 'shape-circle' : 
+                           item.level === 2 ? 'shape-rectangle' : 
+                           'shape-diamond';
+          const activeClass = activeSlug === item.slug ? 'active' : 'inactive';
+          return `${baseClass} ${levelClass} ${shapeClass} ${activeClass}`;
+        };
 
         return (
           <button
@@ -71,7 +78,7 @@ const MinimapNav: React.FC<MinimapNavProps> = ({ toc }) => {
             data-slug={item.slug}
             onClick={() => handleScrollTo(item.slug)}
             title={item.text}
-            className={`minimap-indicator group ${heightClass} ${opacityClass} ${activeSlug === item.slug ? 'active' : 'inactive'}`}
+            className={getIndicatorClass()}
             aria-label={`Scroll to ${item.text}`}
             aria-pressed={activeSlug === item.slug}
           >
@@ -81,131 +88,257 @@ const MinimapNav: React.FC<MinimapNavProps> = ({ toc }) => {
         );
      })}
 
-     {/* JSX Styles for MinimapNav */}
+     {/* Enhanced JSX Styles for MinimapNav */}
      <style jsx>{`
+        /* ===== CONTAINER ===== */
         .minimap-container {
-            position: fixed; top: 50%; transform: translateY(-50%); right: 1rem; /* Closer */
-            z-index: 40; display: flex; flex-direction: column; gap: 5px; /* Increased gap */
-            max-height: calc(100vh - 8rem); /* Adjusted height */ overflow-y: auto;
-            padding: 0.6rem 0.5rem; /* Adjusted padding */
-            background: rgba(var(--bg-secondary-rgb), 0.6); /* More opaque */
-            border: 1px solid rgba(var(--accent-highlight-rgb), 0.4); /* Stronger border */
-            border-radius: var(--radius-base); backdrop-filter: blur(7px);
-            box-shadow: var(--shadow-medium), 0 0 12px rgba(var(--accent-highlight-rgb), 0.15);
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 1.5rem;
+            z-index: 40;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-height: calc(100vh - 10rem);
+            overflow-y: auto;
+            padding: 1rem 0.8rem;
+            background: rgba(var(--bg-secondary-rgb), 0.85);
+            border: 2px solid rgba(var(--accent-highlight-rgb), 0.3);
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(12px);
+            box-shadow: 
+                var(--shadow-large),
+                0 0 20px rgba(var(--accent-highlight-rgb), 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
             scrollbar-width: none;
+            transition: all 0.3s ease;
         }
         
-        /* Mobile responsive - 50% smaller */
-        @media (max-width: 1023px) {
-            .minimap-container {
-                transform: translateY(-50%) scale(0.5); /* Make 50% smaller */
-                transform-origin: right center; /* Scale from right edge */
-                right: 0.5rem; /* Adjust position since it's smaller */
-                padding: 0.3rem 0.25rem; /* Reduce padding proportionally */
-                gap: 2.5px; /* Reduce gap proportionally */
-                max-height: calc(50vh - 4rem); /* Reduce max height */
-            }
-            
-            /* Mobile-specific indicator styling - very thin lines for inactive */
-            .minimap-indicator {
-                width: 1px !important; /* Very thin default */
-                background-color: var(--accent-primary);
-                opacity: 0.4 !important; /* Low opacity for inactive */
-                transition: all 0.2s ease-out;
-            }
-            
-            /* Inactive State - keep very thin */
-            .minimap-indicator.inactive {
-                width: 1px !important; /* Very thin line */
-                background-color: var(--accent-primary);
-                box-shadow: none;
-                opacity: 0.4 !important; /* Low opacity for inactive on mobile */
-            }
-            
-            .minimap-indicator.inactive:hover {
-                width: 2px !important; /* Slightly thicker on hover */
-                background-color: var(--accent-secondary);
-                opacity: 0.7 !important; 
-                transform: scaleX(1.2); /* Less dramatic scaling on mobile */
-                box-shadow: 0 0 3px var(--accent-secondary);
-            }
-            
-            /* Active State - thick line */
-            .minimap-indicator.active {
-                width: 3px !important; /* Thick line for active */
-                background-color: var(--accent-highlight);
-                transform: scaleX(1.3); /* Slight additional scaling */
-                opacity: 1 !important;
-                box-shadow: 0 0 6px var(--accent-highlight), 0 0 10px rgba(var(--accent-highlight-rgb), 0.4);
-            }
-            
-            /* Fade inactive when one is active - more pronounced on mobile */
-            .minimap-container:has(.active) .minimap-indicator.inactive {
-                opacity: 0.2 !important; /* Very dimmed on mobile */
-                width: 0.5px !important; /* Ultra-thin when active exists */
-                transform: scaleX(0.8);
-            }
-            
-            .minimap-container:has(.active) .minimap-indicator.inactive:hover {
-                opacity: 0.6 !important;
-                width: 1.5px !important;
-                transform: scaleX(1.1);
-            }
-        }
+        .minimap-container::-webkit-scrollbar { display: none; }
         
-         .minimap-container::-webkit-scrollbar { display: none; }
+                 /* Show on all screen sizes */
+         .minimap-container {
+             display: flex;
+         }
 
+        /* ===== BASE INDICATOR STYLES ===== */
         .minimap-indicator {
-            width: 5px; /* Slightly thicker */ border-radius: 2px; cursor: pointer;
-            transition: all 0.25s ease-out; /* Slightly faster */
-            position: relative; flex-shrink: 0;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: none;
+            background: transparent;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-         /* Inactive State */
-        .minimap-indicator.inactive {
-            background-color: var(--accent-primary);
-            box-shadow: inset 0 0 1px rgba(0,0,0,0.2);
-        }
-        .minimap-indicator.inactive:hover {
-             background-color: var(--accent-highlight);
-             opacity: 1 !important; transform: scaleX(1.6); /* Widen more */
-             box-shadow: 0 0 6px var(--accent-highlight);
-        }
-        /* Active State */
-        .minimap-indicator.active {
-            background-color: var(--accent-highlight);
-            transform: scaleX(2.8); /* Widen significantly */
-            opacity: 1 !important;
-            box-shadow: 0 0 12px var(--accent-highlight), 0 0 18px rgba(var(--accent-highlight-rgb), 0.4); /* Stronger glow */
-        }
-         /* Fade inactive when one is active */
-         .minimap-container:has(.active) .minimap-indicator.inactive {
-              opacity: 0.4 !important; /* Dim more */
-              transform: scaleX(0.7);
-         }
-         .minimap-container:has(.active) .minimap-indicator.inactive:hover {
-             opacity: 1 !important; transform: scaleX(1.6); /* Restore hover */
-         }
-         /* Tooltip */
-         .tooltip-text {
-             position: absolute; right: calc(100% + 12px); top: 50%; transform: translateY(-50%);
-             background-color: var(--bg-tooltip, var(--bg-tertiary)); color: var(--text-tooltip, var(--text-primary));
-             padding: 0.25rem 0.6rem; border-radius: var(--radius-base);
-             border: 1px solid rgba(var(--accent-highlight-rgb), 0.5);
-             font-size: 0.7rem; font-family: var(--font-mono); white-space: nowrap;
-             opacity: 0; visibility: hidden; transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s; /* Delay showing */
-             pointer-events: none; z-index: 10; box-shadow: var(--shadow-soft);
-         }
-         .minimap-indicator:hover .tooltip-text { opacity: 1; visibility: visible; }
 
-        /* Tailwind height classes need to be defined if not using Tailwind */
-        .h-5 { height: 1.25rem; } /* 20px */
-        .h-4 { height: 1rem; } /* 16px */
-        .h-3 { height: 0.75rem; } /* 12px */
-        .h-2\\.5 { height: 0.625rem; } /* 10px */
-        /* Opacity classes */
-        .opacity-95 { opacity: 0.95; }
-        .opacity-75 { opacity: 0.75; }
-        .opacity-60 { opacity: 0.60; }
+        /* ===== SHAPES FOR DIFFERENT LEVELS ===== */
+        /* Level 1: Large Circle */
+        .minimap-indicator.level-1 {
+            width: 14px;
+            height: 14px;
+        }
+        
+        .minimap-indicator.level-1.shape-circle {
+            border-radius: 50%;
+            background: var(--accent-primary);
+        }
+
+        /* Level 2: Rectangle */
+        .minimap-indicator.level-2 {
+            width: 12px;
+            height: 8px;
+        }
+        
+        .minimap-indicator.level-2.shape-rectangle {
+            border-radius: 2px;
+            background: var(--accent-secondary);
+        }
+
+        /* Level 3+: Diamond */
+        .minimap-indicator.level-3,
+        .minimap-indicator.level-4,
+        .minimap-indicator.level-5,
+        .minimap-indicator.level-6 {
+            width: 8px;
+            height: 8px;
+        }
+        
+        .minimap-indicator.shape-diamond {
+            transform: rotate(45deg);
+            background: var(--accent-cool);
+            border-radius: 1px;
+        }
+
+        /* ===== INACTIVE STATES ===== */
+        .minimap-indicator.inactive {
+            opacity: 0.5;
+            box-shadow: 
+                0 2px 4px rgba(var(--shadow-color-rgb), 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+                 /* ===== HOVER STATES ===== */
+         .minimap-indicator.inactive:hover {
+             opacity: 0.8;
+             transform: scale(1.2);
+             background: var(--accent-highlight) !important;
+             box-shadow: 
+                 0 2px 8px rgba(var(--accent-highlight-rgb), 0.3),
+                 0 0 12px rgba(var(--accent-highlight-rgb), 0.2);
+         }
+
+         /* Special hover for diamonds */
+         .minimap-indicator.inactive.shape-diamond:hover {
+             transform: rotate(45deg) scale(1.2);
+         }
+
+                 /* ===== ACTIVE STATES (Subtle) ===== */
+         .minimap-indicator.active {
+             opacity: 1;
+             background: var(--accent-highlight) !important;
+             box-shadow: 
+                 0 3px 12px rgba(var(--accent-highlight-rgb), 0.4),
+                 0 0 16px rgba(var(--accent-highlight-rgb), 0.3),
+                 inset 0 1px 0 rgba(255, 255, 255, 0.15);
+             animation: subtlePulse 3s ease-in-out infinite;
+         }
+
+                 /* Active scaling - more subtle */
+         .minimap-indicator.active.level-1 {
+             transform: scale(1.4);
+             width: 14px;
+             height: 14px;
+         }
+
+         .minimap-indicator.active.level-2 {
+             transform: scale(1.3);
+             width: 12px;
+             height: 8px;
+         }
+
+         .minimap-indicator.active.shape-diamond {
+             transform: rotate(45deg) scale(1.5);
+             width: 8px;
+             height: 8px;
+         }
+
+        /* ===== DIMMING INACTIVE WHEN ACTIVE EXISTS ===== */
+        .minimap-container:has(.active) .minimap-indicator.inactive {
+            opacity: 0.25;
+            filter: grayscale(0.3);
+        }
+
+        .minimap-container:has(.active) .minimap-indicator.inactive:hover {
+            opacity: 0.7;
+            filter: grayscale(0);
+        }
+
+                 /* ===== SUBTLE PULSE ANIMATION ===== */
+         @keyframes subtlePulse {
+             0%, 100% { 
+                 box-shadow: 
+                     0 3px 12px rgba(var(--accent-highlight-rgb), 0.4),
+                     0 0 16px rgba(var(--accent-highlight-rgb), 0.3),
+                     inset 0 1px 0 rgba(255, 255, 255, 0.15);
+                 opacity: 1;
+             }
+             50% { 
+                 box-shadow: 
+                     0 4px 16px rgba(var(--accent-highlight-rgb), 0.5),
+                     0 0 20px rgba(var(--accent-highlight-rgb), 0.4),
+                     inset 0 1px 0 rgba(255, 255, 255, 0.2);
+                 opacity: 0.9;
+             }
+         }
+
+        /* ===== TOOLTIP ===== */
+        .tooltip-text {
+            position: absolute;
+            right: calc(100% + 16px);
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--bg-tooltip, var(--bg-tertiary));
+            color: var(--text-tooltip, var(--text-primary));
+            padding: 0.4rem 0.8rem;
+            border-radius: var(--radius-base);
+            border: 1px solid rgba(var(--accent-highlight-rgb), 0.4);
+            font-size: 0.75rem;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease 0.3s;
+            pointer-events: none;
+            z-index: 50;
+            box-shadow: var(--shadow-medium);
+            backdrop-filter: blur(8px);
+        }
+
+        .minimap-indicator:hover .tooltip-text {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(-50%) translateX(-4px);
+        }
+
+                 /* ===== MOBILE RESPONSIVE ===== */
+         @media (max-width: 768px) {
+             .minimap-container {
+                 right: 0.75rem;
+                 padding: 0.3rem 0.25rem;
+                 gap: 3px;
+                 max-height: calc(100vh - 12rem);
+                 transform: translateY(-50%) scale(0.7);
+                 transform-origin: right center;
+             }
+             
+             /* Much smaller mobile indicators */
+             .minimap-indicator.level-1 { width: 6px; height: 6px; }
+             .minimap-indicator.level-2 { width: 5px; height: 4px; }
+             .minimap-indicator.level-3,
+             .minimap-indicator.level-4,
+             .minimap-indicator.level-5,
+             .minimap-indicator.level-6 { width: 4px; height: 4px; }
+             
+             /* Very subtle active states on mobile */
+             .minimap-indicator.active.level-1 {
+                 transform: scale(1.2);
+             }
+             .minimap-indicator.active.level-2 {
+                 transform: scale(1.15);
+             }
+             .minimap-indicator.active.shape-diamond {
+                 transform: rotate(45deg) scale(1.2);
+             }
+             
+             /* Minimal hover effects on mobile */
+             .minimap-indicator.inactive:hover {
+                 transform: scale(1.05);
+             }
+             .minimap-indicator.inactive.shape-diamond:hover {
+                 transform: rotate(45deg) scale(1.05);
+             }
+         }
+
+         /* Tablet-specific adjustments */
+         @media (min-width: 769px) and (max-width: 1280px) {
+             .minimap-container {
+                 right: 1rem;
+                 padding: 0.8rem 0.6rem;
+                 gap: 6px;
+             }
+             
+             .minimap-indicator.level-1 { width: 12px; height: 12px; }
+             .minimap-indicator.level-2 { width: 10px; height: 6px; }
+             .minimap-indicator.level-3,
+             .minimap-indicator.level-4,
+             .minimap-indicator.level-5,
+             .minimap-indicator.level-6 { width: 6px; height: 6px; }
+         }
 
      `}</style>
     </div>

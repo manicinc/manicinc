@@ -367,509 +367,116 @@
 
 
 /* ======================================== */
-/* Disqus Specific Styles (Attempted Overrides) */
+/* Disqus Theme Support (Working Purple/Light Control) */
 /* ======================================== */
 
-/* Target the main container Disqus injects */
+/* Core Disqus container styling */
 #disqus_thread {
-    background-color: var(--bg-secondary) !important; /* Force theme background immediately */
-    color: var(--text-primary) !important;
-    font-family: var(--font-body-blog) !important; /* Attempt font (might not work) */
-    border-radius: var(--radius-lg); /* Apply radius if desired */
-    padding: 1px; /* Prevent margin collapse issues */
-    /* Force color scheme for immediate application */
-    color-scheme: dark light !important;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    min-height: 200px;
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+    border: 1px solid var(--bg-tertiary);
+    position: relative;
 }
 
-/* Force immediate background and text colors for all nested elements */
-#disqus_thread,
-#disqus_thread * {
+/* Light theme styling */
+[data-disqus-theme="light"] #disqus_thread,
+.disqus-comments-container.light #disqus_thread,
+html:not(.dark) #disqus_thread {
+    background-color: var(--bg-blog-paper) !important;
+    border-color: rgba(var(--text-muted-rgb), 0.1);
+}
+
+/* Dark theme styling with purple background */
+[data-disqus-theme="dark"] #disqus_thread,
+.disqus-comments-container.dark #disqus_thread,
+html.dark #disqus_thread {
     background-color: var(--bg-secondary) !important;
+    border-color: rgba(var(--accent-primary-rgb), 0.2);
+}
+
+/* Force proper text colors in dark mode */
+html.dark #disqus_thread,
+html.dark #disqus_thread * {
+    color: var(--text-primary) !important;
+}
+
+html.dark #disqus_thread .post-message,
+html.dark #disqus_thread .comment-content,
+html.dark #disqus_thread .text-bold,
+html.dark #disqus_thread .author {
+    color: var(--text-primary) !important;
+}
+
+html.dark #disqus_thread .post-meta,
+html.dark #disqus_thread .comment-meta,
+html.dark #disqus_thread .prompt {
+    color: var(--text-muted) !important;
+}
+
+/* Force proper text colors in light mode */
+html:not(.dark) #disqus_thread,
+html:not(.dark) #disqus_thread * {
+    color: var(--text-primary) !important;
+}
+
+html:not(.dark) #disqus_thread .post-message,
+html:not(.dark) #disqus_thread .comment-content,
+html:not(.dark) #disqus_thread .text-bold,
+html:not(.dark) #disqus_thread .author {
+    color: var(--text-primary) !important;
+}
+
+html:not(.dark) #disqus_thread .post-meta,
+html:not(.dark) #disqus_thread .comment-meta,
+html:not(.dark) #disqus_thread .prompt {
+    color: var(--text-muted) !important;
+}
+
+/* Force input and button theming */
+#disqus_thread input,
+#disqus_thread textarea,
+#disqus_thread [role="textbox"] {
+    background-color: var(--bg-primary) !important;
     color: var(--text-primary) !important;
     border-color: var(--bg-tertiary) !important;
 }
 
-/* Override any white/light backgrounds immediately */
-#disqus_thread iframe,
-#disqus_thread iframe * {
-    background-color: var(--bg-secondary) !important;
-    color: var(--text-primary) !important;
-}
-
-/* Force dark theme background and text colors on all Disqus elements */
-#disqus_thread,
-#disqus_thread * {
-    background-color: var(--bg-secondary) !important;
-    color: var(--text-primary) !important;
-    font-family: var(--font-body-blog) !important;
-}
-
-/* Reactions container styling */
-#disqus_thread #reactions__container,
-#disqus_thread .reactions-refresh {
-    background-color: var(--bg-secondary) !important;
-    border: 1px solid var(--bg-tertiary) !important;
-    border-radius: var(--radius-lg) !important;
-    padding: 1.5rem !important;
-    margin-bottom: 1.5rem !important;
-}
-
-/* Reaction items styling */
-#disqus_thread .reaction-item,
-#disqus_thread .reaction-item--refresh {
-    background-color: var(--bg-tertiary) !important;
-    border: 1px solid var(--accent-secondary) !important;
-    border-radius: var(--radius-base) !important;
-    margin: 0.25rem !important;
-}
-
-#disqus_thread .reaction-item__button,
-#disqus_thread .reaction-item__button--refresh {
-    background-color: transparent !important;
-    color: var(--text-secondary) !important;
-    border: none !important;
-    padding: 0.5rem !important;
-    transition: all 0.2s ease !important;
-}
-
-#disqus_thread .reaction-item__button:hover {
-    background-color: var(--bg-primary) !important;
-    color: var(--accent-highlight) !important;
-}
-
-#disqus_thread .reaction-item__text {
-    color: var(--text-secondary) !important;
-    font-family: var(--font-meta-blog) !important;
-    font-size: 0.85rem !important;
-}
-
-#disqus_thread .reaction-item__votes,
-#disqus_thread .reaction-item__votes--refresh {
-    color: var(--accent-primary) !important;
-    font-weight: 600 !important;
-}
-
-/* Main navigation styling */
-#disqus_thread #main-nav,
-#disqus_thread .nav-primary,
-#disqus_thread .nav-primary--refresh {
-    background-color: var(--bg-secondary) !important;
-    border-bottom: 1px solid var(--bg-tertiary) !important;
-    padding: 1rem !important;
-}
-
-#disqus_thread .nav-tab,
-#disqus_thread .nav-tab--primary {
-    background-color: transparent !important;
-}
-
-#disqus_thread .comment-count,
-#disqus_thread .username,
-#disqus_thread .username--refresh {
-    color: var(--text-primary) !important;
-    font-family: var(--font-meta-blog) !important;
-}
-
-/* Dropdown menus */
-#disqus_thread .dropdown-menu,
-#disqus_thread .dropdown-menu--refresh {
-    background-color: var(--bg-tertiary) !important;
-    border: 1px solid var(--accent-secondary) !important;
-    border-radius: var(--radius-base) !important;
-    box-shadow: var(--shadow-medium) !important;
-}
-
-#disqus_thread .dropdown-menu a {
-    color: var(--text-secondary) !important;
-    padding: 0.5rem 1rem !important;
-    transition: all 0.2s ease !important;
-}
-
-#disqus_thread .dropdown-menu a:hover {
-    background-color: var(--bg-secondary) !important;
-    color: var(--accent-highlight) !important;
-}
-
-/* Conversation section */
-#disqus_thread #conversation {
-    background-color: var(--bg-secondary) !important;
-    border-radius: var(--radius-lg) !important;
-    padding: 1.5rem !important;
-    margin-top: 1rem !important;
-}
-
-/* Form styling */
-#disqus_thread .form-refresh,
-#disqus_thread .form-refresh-v2 {
-    background-color: var(--bg-tertiary) !important;
-    border: 1px solid var(--accent-secondary) !important;
-    border-radius: var(--radius-lg) !important;
-    padding: 1rem !important;
-}
-
-#disqus_thread .postbox {
-    background-color: transparent !important;
-}
-
-/* Avatar styling */
-#disqus_thread .avatar .user,
-#disqus_thread .avatar .user--refresh {
+#disqus_thread button {
     background-color: var(--accent-primary) !important;
     color: var(--text-on-accent) !important;
-    border-radius: 50% !important;
-    width: 40px !important;
-    height: 40px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    font-weight: 600 !important;
+    border-color: var(--accent-primary) !important;
 }
 
-/* Textarea wrapper and editor */
-#disqus_thread .textarea-wrapper,
-#disqus_thread .textarea-wrapper--refresh,
-#disqus_thread .textarea-wrapper--embedv2 {
-    background-color: var(--bg-primary) !important;
-    border: 1px solid var(--bg-tertiary) !important;
-    border-radius: var(--radius-base) !important;
+/* Loading state */
+#disqus_thread:empty::after {
+    content: "Loading Disqus comments...";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    color: var(--text-muted);
+    font-family: var(--font-meta-blog);
+    font-size: 0.9rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
-#disqus_thread ._editor_ylcfx_13,
-#disqus_thread ._container_ylcfx_1 {
-    background-color: var(--bg-primary) !important;
-    color: var(--text-primary) !important;
-    font-family: var(--font-body-blog) !important;
-    line-height: 1.7 !important;
-    min-height: 100px !important;
-    padding: 0.8rem !important;
-}
-
-#disqus_thread ._placeholder_s9avi_1 {
-    color: var(--text-muted) !important;
-    font-family: var(--font-body-blog) !important;
-}
-
-/* Secondary navigation */
-#disqus_thread #secondary-navigation,
-#disqus_thread .nav-secondary-refresh {
-    background-color: var(--bg-tertiary) !important;
-    border-top: 1px solid var(--accent-secondary) !important;
-    padding: 1rem !important;
-}
-
-#disqus_thread .share-bar-refresh,
-#disqus_thread .thread-share-wrapper {
-    background-color: transparent !important;
-}
-
-#disqus_thread .share-button-toggle,
-#disqus_thread .share-button-toggle--v2 {
-    color: var(--text-secondary) !important;
-    background-color: var(--bg-secondary) !important;
-    border: 1px solid var(--bg-tertiary) !important;
-    border-radius: var(--radius-base) !important;
-    padding: 0.5rem 1rem !important;
-    transition: all 0.2s ease !important;
-}
-
-#disqus_thread .share-button-toggle:hover {
-    background-color: var(--bg-primary) !important;
-    color: var(--accent-highlight) !important;
-    border-color: var(--accent-highlight) !important;
-}
-
-/* Sort menu */
-#disqus_thread .sort-menu-refresh {
-    background-color: transparent !important;
-}
-
-#disqus_thread .sort-menu-refresh__item a {
-    color: var(--text-secondary) !important;
-    padding: 0.5rem 1rem !important;
-    border-radius: var(--radius-base) !important;
-    transition: all 0.2s ease !important;
-}
-
-#disqus_thread .sort-menu-refresh__item.selected a,
-#disqus_thread .sort-menu-refresh__item a:hover {
-    background-color: var(--bg-secondary) !important;
-    color: var(--accent-primary) !important;
-}
-
-/* "Be the first to comment" message */
-#disqus_thread #no-posts {
-    color: var(--text-muted) !important;
-    font-family: var(--font-meta-blog) !important;
-    text-align: center !important;
-    padding: 2rem !important;
-    background-color: var(--bg-tertiary) !important;
-    border: 1px dashed var(--accent-secondary) !important;
-    border-radius: var(--radius-lg) !important;
-    font-style: italic !important;
-}
-
-/* Specific text elements in reactions */
-#disqus_thread .text-bold.align.align--center.spacing-bottom-small.prompt {
-    color: var(--text-primary) !important;
-    font-family: var(--font-heading-blog) !important;
-    font-size: 1.1rem !important;
-    margin-bottom: 0.5rem !important;
-}
-
-#disqus_thread .align.align--center.spacing-bottom {
-    color: var(--text-secondary) !important;
-    font-family: var(--font-meta-blog) !important;
-    font-size: 0.9rem !important;
-    margin-bottom: 1rem !important;
-}
-
-/* Reaction items container */
-#disqus_thread .reaction-items,
-#disqus_thread .reaction-items__container,
-#disqus_thread .reaction-items__container--refresh {
-    background-color: transparent !important;
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 0.5rem !important;
-    justify-content: center !important;
-}
-
-/* Individual reaction buttons */
-#disqus_thread .reaction-item.reaction-item--refresh.reaction-item__enabled {
-    background-color: var(--bg-primary) !important;
-    border: 1px solid var(--bg-tertiary) !important;
-    border-radius: var(--radius-base) !important;
-    transition: all 0.2s ease !important;
-    overflow: hidden !important;
-}
-
-#disqus_thread .reaction-item:hover {
-    border-color: var(--accent-secondary) !important;
-    background-color: var(--bg-secondary) !important;
-    transform: translateY(-1px) !important;
-}
-
-/* Reaction image wrapper */
-#disqus_thread .reaction-item__image-wrapper,
-#disqus_thread .reaction-item__image-wrapper--refresh {
-    background-color: transparent !important;
-    padding: 0.25rem !important;
-}
-
-#disqus_thread .reaction-item__image,
-#disqus_thread .reaction-item__image--refresh {
-    width: 24px !important;
-    height: 24px !important;
-    filter: brightness(0.8) !important;
-    transition: filter 0.2s ease !important;
-}
-
-#disqus_thread .reaction-item:hover .reaction-item__image {
-    filter: brightness(1) !important;
-}
-
-/* Reaction vote counts */
-#disqus_thread .reaction-vote,
-#disqus_thread .reaction-item__votes-wrapper,
-#disqus_thread .reaction-item__votes-wrapper--refresh {
-    background-color: transparent !important;
-    color: var(--accent-primary) !important;
-    font-weight: 600 !important;
-    font-size: 0.85rem !important;
-}
-
-/* Style common Disqus containers (Use !important heavily) */
-#disqus_thread .reactions__container,
-#disqus_thread .thread__wrapper,
-#disqus_thread .thread__container {
-    background: var(--bg-secondary) !important; /* Match Giscus box bg */
-    border: 1px solid var(--bg-tertiary) !important; /* Match Giscus box border */
-    border-radius: var(--radius-lg) !important;
-    padding: 1.5rem !important; /* Add padding */
-    margin-bottom: 1rem !important;
-}
-
-/* Header/Prompt text */
-#disqus_thread .text-bold.align--center.spacing-bottom-small.prompt {
-    font-family: var(--font-meta-blog) !important;
-    color: var(--text-secondary) !important;
-    font-size: 1rem !important;
-    font-weight: 600 !important;
-}
-
-/* Comment Input Area */
-#disqus_thread [role="textbox"][data-slate-editor="true"] {
-    background-color: var(--bg-primary) !important;
-    color: var(--text-primary) !important;
-    border: 1px solid var(--bg-tertiary) !important;
-    border-radius: var(--radius-base) !important;
-    padding: 0.8rem 1rem !important;
-    min-height: 100px !important; /* Adjust height */
-    font-family: var(--font-body-blog) !important; /* Attempt font */
-    line-height: 1.7 !important;
-}
-#disqus_thread [role="textbox"][data-slate-editor="true"]:focus {
-    border-color: var(--accent-highlight) !important;
-    box-shadow: 0 0 0 3px rgba(var(--accent-highlight-rgb), 0.25) !important;
-    outline: none !important;
-}
-
-/* Editor Menu Buttons (GIF, Image, Formatting) */
-#disqus_thread ._menu_k0g7a_41 {
-    background-color: var(--bg-tertiary) !important;
-    padding: 0.5rem 1rem !important;
-    border-bottom: 1px solid var(--bg-tertiary) !important;
-}
-#disqus_thread ._menu_k0g7a_41 ._button_12m5a_1, /* GIF/Image */
-#disqus_thread ._menu_k0g7a_41 ._button_1559b_1, /* Formatting */
-#disqus_thread ._menu_k0g7a_41 ._button_1wqlf_1 { /* Mention */
-    background: transparent !important;
-    border: none !important;
-    color: var(--text-secondary) !important;
-    padding: 0.3rem 0.5rem !important;
+/* Essential iframe styling */
+#disqus_thread iframe {
+    width: 100%;
+    border: none;
     border-radius: var(--radius-base);
-    transition: background-color var(--transition-fast), color var(--transition-fast) !important;
-}
-#disqus_thread ._menu_k0g7a_41 button:hover {
-    background-color: var(--bg-secondary) !important;
-    color: var(--text-primary) !important;
-}
-#disqus_thread ._menu_k0g7a_41 svg {
-    fill: currentColor !important;
-}
-#disqus_thread ._menu_k0g7a_41 ._separator_p7fwl_1 {
-    border-left: 1px solid var(--bg-secondary) !important; /* Adjust separator */
-    height: 1.2em !important;
-    align-self: center !important;
-    margin: 0 0.5rem !important;
+    background-color: transparent;
 }
 
-
-/* Login / Post Area */
-#disqus_thread .publisher-nav, /* Container for login/post buttons */
-#disqus_thread .nav.nav--primary {
-    border-top: 1px dashed var(--bg-tertiary) !important;
-    padding-top: 1rem !important;
-    margin-top: 1rem !important;
-}
-
-/* Login Buttons */
-#disqus_thread .connect__button {
-    background: var(--bg-tertiary) !important;
-    border: 1px solid var(--bg-tertiary) !important;
-    border-radius: var(--radius-base) !important;
-    padding: 0.5rem !important;
-    transition: background-color var(--transition-fast), border-color var(--transition-fast) !important;
-}
-#disqus_thread .connect__button:hover {
-    background: var(--bg-secondary) !important;
-    border-color: var(--text-secondary) !important;
-}
-#disqus_thread .connect__button i { /* Icons */
-    color: var(--text-secondary) !important;
-    font-size: 1.2em !important; /* Adjust icon size */
-}
-#disqus_thread .connect__heading {
-    color: var(--text-muted) !important;
-    font-family: var(--font-meta-blog) !important;
-    font-size: 0.85rem !important;
-    margin-bottom: 0.5rem !important;
-}
-
-
-/* Guest form / "sign up with disqus" */
-#disqus_thread .sign-up-wrapper-refresh {
-    margin-top: 1rem !important;
-}
-#disqus_thread .guest-form-title--refresh {
-    color: var(--text-muted) !important;
-    font-family: var(--font-meta-blog) !important;
-    font-size: 0.9rem !important;
-}
-#disqus_thread input[name="display_name"] { /* Guest name input */
-    background-color: var(--bg-primary) !important;
-    color: var(--text-primary) !important;
-    border: 1px solid var(--bg-tertiary) !important;
-    border-radius: var(--radius-base) !important;
-    padding: 0.6rem 1rem !important;
-    font-family: var(--font-body-blog) !important;
-    margin-top: 0.5rem !important;
-}
-#disqus_thread input[name="display_name"]:focus {
-    border-color: var(--accent-highlight) !important;
-    box-shadow: 0 0 0 3px rgba(var(--accent-highlight-rgb), 0.25) !important;
-    outline: none !important;
-}
-
-
-/* Post Button (if visible) */
-#disqus_thread button[type="submit"] { /* This might need refinement based on actual logged-in state */
-    font-family: var(--font-meta-blog) !important;
-    font-size: 0.9rem !important;
-    font-weight: 700 !important;
-    padding: 0.6rem 1.2rem !important;
-    border-radius: var(--radius-base) !important;
-    text-decoration: none !important;
-    cursor: pointer !important;
-    transition: all var(--transition-fast) !important;
-    background-color: var(--accent-primary) !important;
-    color: var(--text-on-accent) !important;
-    border: 1px solid var(--accent-primary) !important;
-}
-#disqus_thread button[type="submit"]:hover {
-    background-color: color-mix(in srgb, var(--accent-primary) 85%, black) !important;
-    border-color: color-mix(in srgb, var(--accent-primary) 85%, black) !important;
-    box-shadow: 0 2px 8px rgba(var(--accent-primary-rgb), 0.3) !important;
-}
-
-
-/* Individual Comments */
-#disqus_thread .post-message { /* The main comment text container */
-    color: var(--text-primary) !important;
-    font-family: var(--font-body-blog) !important;
-    line-height: 1.8 !important;
-}
-#disqus_thread .post-meta { /* Author, timestamp area */
-    color: var(--text-muted) !important;
-    font-family: var(--font-meta-blog) !important;
-    font-size: 0.9rem !important;
-}
-#disqus_thread .author a,
-#disqus_thread .author { /* Author name */
-    color: var(--text-primary) !important;
-    font-weight: 600 !important;
-    text-decoration: none !important;
-    border-bottom: none !important;
-}
-#disqus_thread .author a:hover {
-    color: var(--accent-primary) !important;
-}
-
-/* Footer Links within Disqus */
-#disqus_thread .disqus-footer__link {
-    color: var(--text-muted) !important;
-    font-family: var(--font-meta-blog) !important;
-    font-size: 0.85rem !important;
-}
-#disqus_thread .disqus-footer__link:hover {
-     color: var(--accent-highlight) !important;
-}
-#disqus_thread .disqus-footer__logo a { /* "Powered by Disqus" */
-    opacity: 0.6 !important; /* Make less prominent */
-}
-
-
-/* Dark Mode Color Scheme Hint */
-/* Applied via <style jsx global> in component, but good to have here too */
-/* Try removing from component if adding here */
-:global(.dark) #disqus_thread,
-:global(.dark) #disqus_thread iframe {
-    color-scheme: dark !important;
-}
-
-/* Fallback text color for elements missed */
-#disqus_thread *:not(a):not(button):not(input):not(textarea) {
-    color: var(--text-primary) !important; /* Try setting a base color */
+/* Container transitions */
+.disqus-comments-container {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Mobile responsiveness Adjustments */
@@ -960,216 +567,4 @@
   }
 }
 
-/* ======================================== */
-/* Enhanced Theme-Specific Overrides        */
-/* ======================================== */
-
-/* Dark theme specific styles */
-html.dark #disqus_thread,
-html[data-theme="dark"] #disqus_thread,
-.dark #disqus_thread {
-    background-color: var(--bg-secondary) !important;
-    color: var(--text-primary) !important;
-}
-
-html.dark #disqus_thread *,
-html[data-theme="dark"] #disqus_thread * {
-    color: var(--text-primary) !important;
-    background-color: transparent !important;
-}
-
-/* Light theme specific styles */
-html:not(.dark) #disqus_thread,
-html.light #disqus_thread,
-html[data-theme="light"] #disqus_thread {
-    background-color: var(--bg-blog-paper) !important;
-    color: var(--text-primary) !important;
-}
-
-html:not(.dark) #disqus_thread *,
-html.light #disqus_thread *,
-html[data-theme="light"] #disqus_thread * {
-    color: var(--text-primary) !important;
-    background-color: transparent !important;
-}
-
-/* Specific light mode text elements that need proper contrast */
-html:not(.dark) #disqus_thread .text-bold,
-html.light #disqus_thread .text-bold,
-html[data-theme="light"] #disqus_thread .text-bold {
-    color: var(--text-primary) !important;
-    font-weight: 700 !important;
-}
-
-html:not(.dark) #disqus_thread .prompt,
-html.light #disqus_thread .prompt,
-html[data-theme="light"] #disqus_thread .prompt {
-    color: var(--text-secondary) !important;
-}
-
-html:not(.dark) #disqus_thread .reaction-item__text,
-html.light #disqus_thread .reaction-item__text,
-html[data-theme="light"] #disqus_thread .reaction-item__text {
-    color: var(--text-secondary) !important;
-}
-
-html:not(.dark) #disqus_thread .reaction-item__votes,
-html.light #disqus_thread .reaction-item__votes,
-html[data-theme="light"] #disqus_thread .reaction-item__votes {
-    color: var(--accent-primary) !important;
-    font-weight: 600 !important;
-}
-
-/* Light mode navigation and interface elements */
-html:not(.dark) #disqus_thread .nav-tab,
-html:not(.dark) #disqus_thread .nav-link,
-html.light #disqus_thread .nav-tab,
-html.light #disqus_thread .nav-link,
-html[data-theme="light"] #disqus_thread .nav-tab,
-html[data-theme="light"] #disqus_thread .nav-link {
-    color: var(--text-secondary) !important;
-}
-
-html:not(.dark) #disqus_thread .nav-tab.active,
-html:not(.dark) #disqus_thread .nav-link.active,
-html.light #disqus_thread .nav-tab.active,
-html.light #disqus_thread .nav-link.active,
-html[data-theme="light"] #disqus_thread .nav-tab.active,
-html[data-theme="light"] #disqus_thread .nav-link.active {
-    color: var(--accent-primary) !important;
-    border-bottom-color: var(--accent-primary) !important;
-}
-
-/* Light mode comment text and metadata */
-html:not(.dark) #disqus_thread .post-message,
-html.light #disqus_thread .post-message,
-html[data-theme="light"] #disqus_thread .post-message {
-    color: var(--text-primary) !important;
-}
-
-html:not(.dark) #disqus_thread .post-meta,
-html.light #disqus_thread .post-meta,
-html[data-theme="light"] #disqus_thread .post-meta {
-    color: var(--text-muted) !important;
-}
-
-html:not(.dark) #disqus_thread .author,
-html:not(.dark) #disqus_thread .author a,
-html.light #disqus_thread .author,
-html.light #disqus_thread .author a,
-html[data-theme="light"] #disqus_thread .author,
-html[data-theme="light"] #disqus_thread .author a {
-    color: var(--text-primary) !important;
-}
-
-/* Force container backgrounds to use theme colors */
-#disqus_thread #reactions__container,
-#disqus_thread #conversation,
-#disqus_thread .form-refresh,
-#disqus_thread .form-refresh-v2,
-#disqus_thread .postbox,
-#disqus_thread .thread__wrapper,
-#disqus_thread .thread__container {
-    background-color: var(--bg-secondary) !important;
-}
-
-/* Ensure text inputs use proper theme colors */
-#disqus_thread input,
-#disqus_thread textarea,
-#disqus_thread [role="textbox"] {
-    background-color: var(--bg-primary) !important;
-    color: var(--text-primary) !important;
-    border-color: var(--bg-tertiary) !important;
-}
-
-/* Force button styling */
-#disqus_thread button {
-    background-color: var(--accent-primary) !important;
-    color: var(--text-on-accent) !important;
-    border-color: var(--accent-primary) !important;
-}
-
-/* Override any remaining white/light backgrounds */
-#disqus_thread .reaction-items,
-#disqus_thread .reaction-items__container,
-#disqus_thread .reaction-items__container--refresh,
-#disqus_thread .nav-primary,
-#disqus_thread .nav-primary--refresh,
-#disqus_thread .nav-secondary-refresh {
-    background-color: var(--bg-secondary) !important;
-}
-
-/* ======================================== */
-/* Immediate Theme Application (Before Disqus Loads) */
-/* ======================================== */
-
-/* Apply theme colors immediately to prevent flash */
-#disqus_thread::before {
-    content: "Loading comments...";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--bg-secondary) !important;
-    color: var(--text-muted) !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-meta-blog);
-    font-size: 0.9rem;
-    z-index: 1;
-    transition: opacity 0.3s ease;
-}
-
-/* Hide the loading overlay once Disqus content loads */
-#disqus_thread:not(:empty)::before {
-    opacity: 0;
-    pointer-events: none;
-}
-
-/* Force theme on any div that might be white */
-#disqus_thread div,
-#disqus_thread span,
-#disqus_thread p,
-#disqus_thread a,
-#disqus_thread button {
-    background-color: var(--bg-secondary) !important;
-    color: var(--text-primary) !important;
-}
-
-/* Dark mode specific immediate overrides */
-html.dark #disqus_thread,
-html.dark #disqus_thread *,
-html[data-theme="dark"] #disqus_thread,
-html[data-theme="dark"] #disqus_thread * {
-    background-color: var(--bg-secondary) !important;
-    color: var(--text-primary) !important;
-    border-color: var(--bg-tertiary) !important;
-}
-
-/* Light mode specific immediate overrides */
-html:not(.dark) #disqus_thread,
-html:not(.dark) #disqus_thread *,
-html.light #disqus_thread,
-html.light #disqus_thread *,
-html[data-theme="light"] #disqus_thread,
-html[data-theme="light"] #disqus_thread * {
-    background-color: var(--bg-blog-paper) !important;
-    color: var(--text-primary) !important;
-    border-color: var(--bg-tertiary) !important;
-}
-
-/* Override Disqus default styling with higher specificity */
-#disqus_thread[id] {
-    background-color: var(--bg-secondary) !important;
-}
-
-html.dark #disqus_thread[id] {
-    background-color: var(--bg-secondary) !important;
-}
-
-html:not(.dark) #disqus_thread[id],
-html.light #disqus_thread[id] {
-    background-color: var(--bg-blog-paper) !important;
-}
+/* Clean approach - let Disqus handle its own styling within our themed container */
