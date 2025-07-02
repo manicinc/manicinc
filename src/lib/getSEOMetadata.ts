@@ -9,8 +9,8 @@ const TWITTER_HANDLE = '@manicagency';
 // SEO configuration for different sections
 const seoConfig = {
   default: {
-    title: SITE_NAME,
-    description: 'Manic Agency: Where metaverses intersect. Digital agency specializing in Web3, AI, AR/VR, creative technology, and innovative game publishing through Manic Games platform.',
+    title: 'Manic Agency - Metaverses Intersection',
+    description: 'Metaverses Intersection - Where digital artistry meets cutting-edge technology. We craft immersive experiences that blur the lines between imagination and reality.',
     keywords: ['Web Development', 'Design', 'AR', 'VR', 'AI', 'Web3', 'Digital Agency', 'Los Angeles', 'Lagos', 'Creative Technology', 'SynthStack', 'Manic Inc', 'Game Publishing', 'Manic Games', 'Text Games', 'Game Development', 'Publishing Platform'],
     ogImage: '/og-default.webp',
     themeColor: {

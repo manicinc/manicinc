@@ -223,61 +223,25 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
     const [isChaosBurstActive, setIsChaosBurstActive] = useState<boolean>(false);
     const [currentConfig, setCurrentConfig] = useState<AnimationConfig>(getConfigForPerformanceMode(performanceMode));
 
-    // Theme detection and monitoring
-    useEffect(() => {
-        // Initial theme detection based on HTML element class
-        const detectTheme = () => {
-            const htmlElement = document.documentElement;
-            const isDarkMode = htmlElement.classList.contains('dark');
-            const isLightMode = htmlElement.classList.contains('light');
-            
-            // Default to system preference if no explicit class is set
-            if (!isDarkMode && !isLightMode) {
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                setTheme(prefersDark ? 'dark' : 'light');
-                setThemeVars(prefersDark ? DARK_THEME : LIGHT_THEME);
-                return;
-            }
-            
-            // Use explicitly set theme
-            if (isDarkMode) {
-                setTheme('dark');
-                setThemeVars(DARK_THEME);
-            } else {
-                setTheme('light');
-                setThemeVars(LIGHT_THEME);
-            }
-        };
-
-        // Detect initial theme
-        detectTheme();
-
-        // Set up mutation observer to detect theme changes
-        const observer = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-                if (mutation.attributeName === 'class') {
-                    detectTheme();
-                }
-            });
-        });
-
-        // Start observing the HTML element for class changes
-        observer.observe(document.documentElement, { attributes: true });
-
-        // Clean up observer on component unmount
-        return () => observer.disconnect();
-    }, []);
+    const baseConfigRef = useRef<AnimationConfig>(getConfigForPerformanceMode(performanceMode));
+    const burstConfigRef = useRef<AnimationConfig>(BURST_CONFIG);
+    const reducedMotionRef = useRef<boolean>(false);
+    const lastRegenerateTimeRef = useRef<number>(0);
 
     // Set initial config based on performance mode
     useEffect(() => {
         const config = getConfigForPerformanceMode(performanceMode);
+        baseConfigRef.current = config;
         setCurrentConfig(config);
     }, [performanceMode, getConfigForPerformanceMode]);
 
     // Reduced Motion Check
     useEffect(() => {
         const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+        reducedMotionRef.current = mediaQuery.matches;
+        
         const handleReducedMotionChange = (e: MediaQueryListEvent) => {
+            reducedMotionRef.current = e.matches;
             if (e.matches) {
                 // Set minimal animation config when reduced motion is enabled
                 setCurrentConfig({
@@ -286,16 +250,18 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
                     regenerateInterval: 60000, // Very infrequent updates
                 });
             } else {
-                setCurrentConfig(getConfigForPerformanceMode(performanceMode));
+                setCurrentConfig(baseConfigRef.current);
             }
         };
 
         mediaQuery.addEventListener('change', handleReducedMotionChange);
         return () => mediaQuery.removeEventListener('change', handleReducedMotionChange);
-    }, [performanceMode, getConfigForPerformanceMode]);
+    }, []);
 
     // Chaos Burst Timer - with reduced frequency and throttling
     useEffect(() => {
+        if (reducedMotionRef.current) return;
+        
         let burstTimer: NodeJS.Timeout | null = null; 
         let intervalTimer: NodeJS.Timeout | null = null;
         
@@ -327,8 +293,10 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
 
     // Update currentConfig based on burst state
     useEffect(() => {
-        setCurrentConfig(isChaosBurstActive ? BURST_CONFIG : getConfigForPerformanceMode(performanceMode));
-    }, [isChaosBurstActive, getConfigForPerformanceMode, performanceMode]);
+        if (!reducedMotionRef.current) {
+            setCurrentConfig(isChaosBurstActive ? burstConfigRef.current : baseConfigRef.current);
+        }
+    }, [isChaosBurstActive]);
 
     // Optimized Animation Loop with RAF throttling
     useEffect(() => {
@@ -337,6 +305,19 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
         let frameCount = 0;
         
         const animate = (time: number) => {
+            if (reducedMotionRef.current) {
+                animationFrameRef.current = requestAnimationFrame(animate);
+                return;
+            }
+            
+            // Throttle updates based on performance mode
+            frameCount++;
+            const skipFrames = performanceMode === 'low' ? 3 : (performanceMode === 'medium' ? 2 : 1);
+            if (frameCount % skipFrames !== 0) {
+                animationFrameRef.current = requestAnimationFrame(animate);
+                return;
+            }
+            
             const deltaTime = time - lastTime; 
             lastTime = time; 
             const deltaSeconds = deltaTime / 1000;
@@ -382,11 +363,11 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
         const now = performance.now();
         
         // Throttle regeneration
-        if (now - lastUpdateRef.current < config.regenerateInterval) {
+        if (now - lastRegenerateTimeRef.current < config.regenerateInterval) {
             return;
         }
         
-        lastUpdateRef.current = now;
+        lastRegenerateTimeRef.current = now;
 
         setAnimationState(prevState => {
             const { spiralRotation: currentRotation, fallingObjects: prevFallingObjects } = prevState;
@@ -542,7 +523,7 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
         // Force regeneration of elements when theme changes
         lastUpdateRef.current = 0;
         generateElements();
-    }, [theme, generateElements]);
+    }, [isDarkMode, generateElements]);
 
     // --- Optimized Render Methods ---
     // Memoized paths
@@ -766,7 +747,7 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
                 overflow: 'hidden', 
                 background: 'var(--bg-edge)' 
             }}
-            data-theme={theme} // Add data attribute for explicit theme
+            data-theme={isDarkMode ? 'dark' : 'light'} // Add data attribute for explicit theme
         >
             <svg 
                 width="100%" 
