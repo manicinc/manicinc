@@ -1,3 +1,5 @@
+"use client";
+
 import Link from 'next/link';
 import Image from 'next/image';
 import velvetLogo from "../images/velvet-web-logo.png"
