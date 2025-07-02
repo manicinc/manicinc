@@ -114,17 +114,7 @@ export function generateSEOMetadata(
       creator: TWITTER_HANDLE,
       images: [config.ogImage],
     },
-    // Define viewport and themeColor separately
-    viewport: {
-      initialScale: 1,
-      maximumScale: 1,
-      userScalable: false,
-    },
-    // themeColor as a separate field, not inside viewport
-    themeColor: [
-      { media: '(prefers-color-scheme: light)', color: config.themeColor.light },
-      { media: '(prefers-color-scheme: dark)', color: config.themeColor.dark },
-    ],
+    // Note: viewport and themeColor should be exported separately from pages, not in metadata
     // Default icons (will be dynamically updated by the DynamicFavicon component)
     icons: {
       icon: '/favicon.ico',
@@ -171,8 +161,6 @@ export function generateSEOMetadata(
   }
   
   // And other objects
-  if (customMetadata.viewport) result.viewport = customMetadata.viewport;
-  if (customMetadata.themeColor) result.themeColor = customMetadata.themeColor;
   if (customMetadata.icons) result.icons = customMetadata.icons;
   
   return result;
