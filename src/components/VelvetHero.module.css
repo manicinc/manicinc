@@ -23,3 +23,198 @@
     transform: scale(1);
   }
 }
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.heroBackground {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bgGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--accent-primary-rgb), 0.1) 0%,
+    rgba(var(--accent-secondary-rgb), 0.05) 50%,
+    rgba(var(--accent-highlight-rgb), 0.1) 100%
+  );
+  transition: background 0.3s ease;
+}
+
+.bgPattern {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(var(--accent-primary-rgb), 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(var(--accent-secondary-rgb), 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(var(--accent-highlight-rgb), 0.1) 0%, transparent 50%);
+  transition: background-image 0.3s ease;
+}
+
+.bgGlow1 {
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(
+    circle,
+    rgba(var(--accent-primary-rgb), 0.15) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(100px);
+  animation: float 20s ease-in-out infinite;
+  transition: background 0.3s ease;
+}
+
+.bgGlow2 {
+  position: absolute;
+  bottom: -20%;
+  right: -20%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(var(--accent-secondary-rgb), 0.15) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: float 25s ease-in-out infinite reverse;
+  transition: background 0.3s ease;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(30px, -30px) rotate(120deg);
+  }
+  66% {
+    transform: translate(-20px, 20px) rotate(240deg);
+  }
+}
+
+.heroContent {
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--text-heading);
+  text-shadow: 0 4px 20px rgba(var(--accent-primary-rgb), 0.3);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.accent {
+  color: var(--accent-primary);
+  background: linear-gradient(
+    45deg,
+    var(--accent-primary),
+    var(--accent-highlight)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background 0.3s ease;
+}
+
+.heroSubtitle {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: var(--accent-secondary);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.heroDescription {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: color 0.3s ease;
+}
+
+.heroActions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  background: linear-gradient(
+    45deg,
+    var(--accent-primary),
+    var(--accent-highlight)
+  );
+  color: var(--text-on-accent);
+  padding: 1rem 2rem;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(var(--accent-primary-rgb), 0.3);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(var(--accent-primary-rgb), 0.4);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: var(--accent-secondary);
+  padding: 1rem 2rem;
+  border: 2px solid var(--accent-secondary);
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.secondaryButton:hover {
+  background: var(--accent-secondary);
+  color: var(--text-on-accent);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .heroActions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ctaButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 300px;
+  }
+}

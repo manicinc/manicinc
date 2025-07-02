@@ -31,7 +31,7 @@ const OPTIMIZATION_CONFIG = {
 
 // Files to optimize (large images)
 const TARGET_FILES = [
-  'og-default.png',
+      'og-default.webp',
   'logo-black.png', 
   'logo-transparent.png',
   'velvet-bg.jpg',

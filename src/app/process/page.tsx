@@ -31,7 +31,7 @@ export const metadata: Metadata = {
         description: 'Discover Manic Agency\'s signature methodology: The Manic Blueprint. Our 7-phase process combines creative mania with rigorous engineering to deliver exceptional digital experiences.',
         images: [
             {
-                url: '/og-default.png',
+                url: '/og-default.webp',
                 width: 1200,
                 height: 630,
                 alt: 'Manic Agency Development Process - The Manic Blueprint'
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         title: 'The Manic Blueprint - Our Development Process | Manic Agency',
         description: 'Discover Manic Agency\'s signature methodology: The Manic Blueprint. Our 7-phase process combines creative mania with rigorous engineering.',
         images: [{
-            url: '/og-default.png',
+            url: '/og-default.webp',
             alt: 'Manic Agency Development Process - The Manic Blueprint'
         }]
     }

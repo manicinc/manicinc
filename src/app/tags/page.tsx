@@ -30,7 +30,7 @@ export const metadata: Metadata = {
         description: 'Explore Manic Agency content organized by tags and topics. Browse articles by AI, blockchain, creative development, and more.',
         images: [
             {
-                url: '/og-default.png',
+                url: '/og-default.webp',
                 width: 1200,
                 height: 630,
                 alt: 'Manic Agency Content Tags'
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         title: 'Content Tags - Browse by Topics | Manic Agency',
         description: 'Explore Manic Agency content organized by tags and topics. Browse articles by AI, blockchain, creative development, and more.',
         images: [{
-            url: '/og-default.png',
+            url: '/og-default.webp',
             alt: 'Manic Agency Content Tags'
         }]
     }

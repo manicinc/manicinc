@@ -242,7 +242,7 @@ export default function BlogSidebarClient({ tableOfContents = [], postTitle }: P
             </aside>
 
             {/* --- Mobile TOC Toggle --- */}
-            {tableOfContents.filter(h => h.level !== 1).length > 0 && ( // Only show if there are actual sections
+            {tableOfContents.length > 0 && ( // Show if there are any sections at all
                 <button type="button" className="mobile-toc-toggle-button" onClick={toggleMobileToc} aria-label="Open Table of Contents" aria-expanded={isMobileTocOpen} aria-controls="mobile-toc-overlay">
                     <BookOpen size={22} />
                 </button>
@@ -259,6 +259,10 @@ export default function BlogSidebarClient({ tableOfContents = [], postTitle }: P
                         <button onClick={() => navigateSection('prev')} aria-label="Previous Section" title="Previous Section"><IconPageTurnPrev /></button>
                         <span className="toc-nav-label">Section</span>
                         <button onClick={() => navigateSection('next')} aria-label="Next Section" title="Next Section"><IconPageTurnNext /></button>
+                        {/* Add collapse button to mobile TOC navigation */}
+                        <button onClick={toggleMobileToc} className="mobile-toc-nav-collapse" aria-label="Close Table of Contents" title="Close TOC">
+                            <X size={16} />
+                        </button>
                     </div>
                     {/* Render the updated TOC list */}
                     <nav aria-label="Article Sections Mobile">{renderTocList()}</nav>

@@ -45,7 +45,7 @@ interface GlitchAnimationProps {
 const TEXT_CONTENT = ['FOLLOW', 'RABBIT', 'HOLE', 'DOWN', 'DEEPER', '???', '...', 'TIME', 'LOST', 'FALLING', 'ENDLESS', 'VOID', 'WONDERLAND', '404', 'GLITCH', 'SURREAL', 'WILD', 'MANIC', 'SYSTEM', 'ERROR', 'REALITY', 'UNLOCK', 'MATRIX', '0xDEADBEEF', 'DATA_STREAM'];
 const ICON_PATHS: Record<string, string> = { /* ... same as before ... */ };
 const ICON_KEYS = Object.keys(ICON_PATHS);
-const GRADIENT_CLASSES = ["stroke-grad-1", "stroke-grad-2", "stroke-grad-3", "stroke-grad-4"];
+const GRADIENT_CLASSES = ["stroke-grad-1", "stroke-grad-2", "stroke-grad-3", "stroke-grad-4"]; 
 
 // --- Performance-optimized configurations ---
 const LOW_PERFORMANCE_CONFIG: AnimationConfig = {
@@ -108,7 +108,7 @@ const BURST_CONFIG: AnimationConfig = {
     regenerateInterval: 2000, // Less frequent updates (2s)
     applyGlitchEffect: true, applyBackgroundFilter: true, 
     backgroundPulseOpacity: 0.5, // Reduced intensity
-};
+}; 
 
 // --- Theme Variables ---
 // Light theme colors
@@ -181,7 +181,7 @@ const generateSpiralPoints = (centerX: number, centerY: number, spins: number, p
     }
     
     return points.trim();
-};
+}; 
 
 // --- Component ---
 const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
@@ -1057,4 +1057,4 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
     );
 };
 
-export default GlitchAnimation;
+export default GlitchAnimation; 

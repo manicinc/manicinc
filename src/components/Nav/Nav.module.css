@@ -1040,46 +1040,47 @@
 /* Mobile games button */
 .mobileGames {
     margin: 0.5rem 1.5rem;
-    display: block;
+    display: flex !important; /* Use flex to align text and icon */
+    align-items: center !important; /* Center align items vertically */
+    justify-content: center !important; /* Center align content horizontally */
     text-align: center;
     width: calc(100% - 3rem);
-    font-size: 0.6rem !important; /* Even smaller */
-    padding: 0.5rem 0.8rem !important; /* Reduced padding more */
+    font-size: 1rem !important; /* Match reach us button size */
+    padding: 0.9rem 1.5rem !important; /* Match reach us button padding */
     border-radius: 4px;
     /* Inherit holographic styling from .gamesBtn */
     font-family: var(--font-mono);
     font-weight: 700;
-    letter-spacing: 0.06em !important; /* Reduced letter spacing more */
+    letter-spacing: 0.06em !important;
     text-transform: uppercase;
     white-space: nowrap !important;
-    min-height: 32px; /* Smaller height */
-    line-height: 1.1 !important;
+    min-height: auto; /* Let padding control height */
+    line-height: 1.2 !important;
     max-width: 100% !important;
     overflow: hidden !important;
+    gap: 0.5em !important; /* Add gap between text and icon */
 }
 
-/* Ensure the games button icon is smaller on mobile */
 .mobileGames .gamesSvg {
-    width: 0.9em !important; /* Smaller icon */
-    height: 0.9em !important;
-    margin-left: 0.2rem !important; /* Reduce gap */
-    flex-shrink: 0 !important;
+    width: 1.2em !important;
+    height: 1.2em !important;
+    margin-left: 0 !important; /* Remove margin since we're using gap */
+    vertical-align: middle !important;
+    flex-shrink: 0 !important; /* Prevent icon from shrinking */
 }
 
-/* Additional mobile-specific adjustments for ultra-small screens */
 @media (max-width: 480px) {
     .mobileGames {
-        font-size: 0.55rem !important; /* Even smaller for very small screens */
-        padding: 0.4rem 0.6rem !important;
-        letter-spacing: 0.04em !important;
-        margin: 0.5rem 1rem !important; /* Slightly smaller margins */
-        width: calc(100% - 2rem) !important;
-        min-height: 30px !important;
+        font-size: 0.9rem !important;
+        padding: 0.8rem 1.2rem !important;
+        margin: 0.5rem 1rem;
+        width: calc(100% - 2rem);
+        gap: 0.4em !important; /* Smaller gap on very small screens */
     }
-    
+
     .mobileGames .gamesSvg {
-        width: 0.8em !important;
-        height: 0.8em !important;
+        width: 1.1em !important;
+        height: 1.1em !important;
     }
 }
 
@@ -1090,5 +1091,101 @@
         white-space: nowrap !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
+    }
+}
+
+/* ======================================== */
+/* Velvet/Looking Glass Specific Styles     */
+/* ======================================== */
+
+/* Force velvet pages to use exact same nav height and constrain logo */
+:global([data-pathname="/velvet"]) .navContainer,
+:global([data-pathname*="/velvet/"]) .navContainer {
+    min-height: 60px !important;
+    max-height: 60px !important;
+    height: 60px !important;
+    padding: 0 !important;
+    overflow: hidden !important; /* Prevent any overflow */
+}
+
+/* Desktop-specific logo constraints */
+@media (min-width: 769px) {
+    :global([data-pathname="/velvet"]) .logoText,
+    :global([data-pathname*="/velvet/"]) .logoText {
+        font-size: 1.1rem !important;
+        max-height: 36px !important;
+        line-height: 1.1 !important;
+        overflow: hidden !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    :global([data-pathname="/velvet"]) .navLink,
+    :global([data-pathname*="/velvet/"]) .navLink {
+        min-height: 48px !important;
+        max-height: 48px !important;
+        padding: 0 1rem !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    :global([data-pathname="/velvet"]) .contactBtnFinal,
+    :global([data-pathname*="/velvet/"]) .contactBtnFinal {
+        min-height: 48px !important;
+        max-height: 48px !important;
+        padding: 0.6rem 1.2rem !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    /* Constrain the entire logo link container */
+    :global([data-pathname="/velvet"]) .logoLink,
+    :global([data-pathname*="/velvet/"]) .logoLink {
+        max-height: 40px !important;
+        overflow: hidden !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+}
+
+/* Mobile-specific velvet nav height fixes */
+@media (max-width: 768px) {
+    :global([data-pathname="/velvet"]) .navContainer,
+    :global([data-pathname*="/velvet/"]) .navContainer {
+        min-height: 45px !important;
+        max-height: 45px !important;
+        height: 45px !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    :global([data-pathname="/velvet"]) .logoText,
+    :global([data-pathname*="/velvet/"]) .logoText {
+        font-size: 0.9rem !important;
+        max-height: 28px !important;
+        line-height: 1.1 !important;
+    }
+
+    :global([data-pathname="/velvet"]) .mobileMenuBtn,
+    :global([data-pathname*="/velvet/"]) .mobileMenuBtn {
+        min-height: 36px !important;
+        max-height: 36px !important;
+        width: 36px !important;
+        padding: 8px !important;
+    }
+
+    :global([data-pathname="/velvet"]) .hamburgerIconWrapper,
+    :global([data-pathname*="/velvet/"]) .hamburgerIconWrapper {
+        width: 18px !important;
+        height: 12px !important;
+    }
+
+    :global([data-pathname="/velvet"]) .logoLink,
+    :global([data-pathname*="/velvet/"]) .logoLink {
+        max-height: 32px !important;
+        overflow: hidden !important;
+        display: flex !important;
+        align-items: center !important;
     }
 }
