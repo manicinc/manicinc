@@ -1,48 +1,69 @@
 'use client'; // Add if using hooks for state management
 
 import React, { useState } from 'react'; // Import useState if managing form state here
-import Script from 'next/script';
 import { Send } from 'lucide-react'; // Icon for submit button
 
 const ContactForm = () => {
-  // Basic state example (optional, implement full logic as needed)
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [messageSent, setMessageSent] = useState(false);
+  const [error, setError] = useState('');
 
-  // Placeholder for submission logic
+  // Formspree submission logic
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsSubmitting(true);
-    // Add your EmailJS or backend submission logic here
-    console.log("Form submitted (placeholder)");
-    // Simulate network request
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setMessageSent(true); // Show success message
-    setIsSubmitting(false);
-    // Optionally reset form: event.currentTarget.reset();
+    setError('');
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xldnkngd', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setMessageSent(true);
+        form.reset(); // Reset the form
+      } else {
+        const data = await response.json();
+        if (data.errors) {
+          setError(data.errors.map((error: any) => error.message).join(', '));
+        } else {
+          setError('There was a problem submitting your form. Please try again.');
+        }
+      }
+    } catch (error) {
+      setError('There was a problem submitting your form. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <>
-      {/* Keep EmailJS scripts if you are using them */}
-      {/* <Script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" /> */}
-      {/* <Script src="./email.js" /> */}
-      {/* <Script src="./send.js" /> */}
-
       {/* Success Message Div - Styled via global CSS */}
       <div className={`messageSuccess ${messageSent ? 'visible' : 'hidden'}`}>
-          Thank you for your inquiry! We will be in touch soon.
+        Thank you for your inquiry! We will be in touch soon.
       </div>
+
+      {/* Error Message */}
+      {error && (
+        <div className="messageError text-red-600 p-4 mb-4 border border-red-200 rounded">
+          {error}
+        </div>
+      )}
 
       {/* Apply the theme class here */}
       <form
         id="contact-form"
         className={`themed-contact-form space-y-6 ${messageSent ? 'hidden' : ''}`} // Hide form on success
-        onSubmit={handleSubmit}
+        onSubmit={handleSubmit} // Connect the submit handler
       >
-        {/* Work Inquiries Title (Optional - can be removed if redundant) */}
-        {/* <h2 className="text-lg font-semibold text-[color:var(--text-heading)]">Work inquiries</h2> */}
-
         <div className="space-y-4">
           {/* Name Input */}
           <div>
@@ -96,11 +117,11 @@ const ContactForm = () => {
 
         {/* Submit Button */}
         <button
-            type="submit"
-            disabled={isSubmitting} // Disable button while submitting
+          type="submit"
+          disabled={isSubmitting} // Disable button while submitting
         >
-            {isSubmitting ? 'Sending...' : "Send Inquiry"}
-            {!isSubmitting && <Send size={18} className="ml-2"/>}
+          {isSubmitting ? 'Sending...' : "Send Inquiry"}
+          {!isSubmitting && <Send size={18} className="ml-2"/>}
         </button>
       </form>
     </>
