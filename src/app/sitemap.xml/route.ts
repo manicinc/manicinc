@@ -72,11 +72,18 @@ export async function GET() {
       priority: 0.3,
     },
     {
+      url: `${BASE_URL}/sitemap`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${BASE_URL}/terms`,
       lastModified: new Date().toISOString(),
       changeFrequency: 'yearly',
       priority: 0.3,
     },
+
     // External link to games platform (for reference, not included in sitemap)
     // games.manic.agency will have its own sitemap
   ];
