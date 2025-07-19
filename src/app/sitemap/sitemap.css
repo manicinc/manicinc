@@ -1,0 +1,206 @@
+.sitemap-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px 100px;
+}
+
+.sitemap-header {
+    text-align: center;
+    margin-bottom: 80px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--bg-tertiary);
+}
+
+.sitemap-header h1 {
+    font-family: var(--font-decorative);
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 700;
+    color: var(--text-heading);
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    text-shadow: var(--text-shadow-header);
+}
+
+.sitemap-header .subtitle {
+    font-family: var(--font-heading-blog);
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+.sitemap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 32px;
+    margin-bottom: 80px;
+}
+
+.sitemap-section {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    border: 1px solid var(--bg-tertiary);
+    transition: all var(--transition-medium);
+    position: relative;
+    box-shadow: var(--shadow-soft);
+}
+
+.sitemap-section:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--accent-primary);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--bg-tertiary);
+}
+
+.section-icon {
+    font-size: 1.8rem;
+    margin-right: 16px;
+    opacity: 0.8;
+    transition: opacity var(--transition-fast);
+}
+
+.sitemap-section:hover .section-icon {
+    opacity: 1;
+}
+
+.section-header h2 {
+    font-family: var(--font-display);
+    color: var(--text-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+
+.sitemap-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sitemap-section li {
+    margin-bottom: 14px;
+}
+
+.sitemap-section a {
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 10px 16px;
+    display: block;
+    border-radius: var(--radius-base);
+    transition: all var(--transition-fast);
+    font-size: 0.95rem;
+    border-left: 3px solid transparent;
+    background: rgba(var(--bg-tertiary-rgb), 0.3);
+}
+
+.sitemap-section a:hover {
+    background: var(--bg-tertiary);
+    border-left-color: var(--accent-primary);
+    transform: translateX(6px);
+    color: var(--text-heading);
+    box-shadow: var(--shadow-inset);
+}
+
+.priority-critical {
+    border-left: 4px solid var(--accent-primary);
+}
+
+.priority-high {
+    border-left: 4px solid var(--accent-secondary);
+}
+
+.priority-medium {
+    border-left: 4px solid var(--accent-highlight);
+}
+
+.priority-low {
+    border-left: 4px solid var(--accent-muted1);
+}
+
+.experimental-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-highlight));
+    color: var(--bg-primary);
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    border-radius: var(--radius-xl);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    box-shadow: var(--shadow-soft);
+}
+
+.sitemap-footer {
+    text-align: center;
+    margin-top: 80px;
+    padding-top: 50px;
+    border-top: 1px solid var(--bg-tertiary);
+    position: relative;
+}
+
+.sitemap-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent-primary), transparent);
+}
+
+.footer-brand {
+    font-family: var(--font-decorative);
+    font-weight: 700;
+    color: var(--text-heading);
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.footer-tagline {
+    font-family: var(--font-heading-blog);
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.last-updated {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-family: var(--font-body);
+}
+
+@media (max-width: 768px) {
+    .sitemap-container {
+        padding: 40px 20px 80px;
+    }
+    
+    .sitemap-header {
+        margin-bottom: 60px;
+    }
+    
+    .sitemap-header h1 {
+        font-size: clamp(2.2rem, 8vw, 3.5rem);
+    }
+    
+    .sitemap-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+    
+    .sitemap-section {
+        padding: 28px 24px;
+    }
+}
