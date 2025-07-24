@@ -4,7 +4,7 @@ description: An AI development assistant that integrates deeply with your workfl
 longDescription: A specialized language model that understands code, design principles, and creative constraints. It doesn't just generate code—it helps you explore possibilities, refine ideas, and overcome technical challenges through natural conversation.
 date: 2025-02-15
 category: AI
-tags: [AI, Development, Creative Coding, Open Source, featured]
+tags: [ai, development, creative-coding, open-source, featured]
 # image: /projects/ai/synthgpt.jpg
 # images: 
 #   - /projects/ai/synthgpt-ui.jpg

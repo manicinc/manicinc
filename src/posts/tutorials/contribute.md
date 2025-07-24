@@ -4,7 +4,7 @@ date: "2025-04-10"
 excerpt: "Learn how to contribute your experimental ideas and digital explorations to our synthetic publishing platform."
 author: "Manic Agency"
 category: "documentation"
-tags: ["contribution", "guide", "markdown", "writing", "open source"]
+tags: ["contribution", "guide", "markdown", "writing", "open-source"]
 image: "/og-default.webp"
 ---
 
