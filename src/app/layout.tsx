@@ -12,6 +12,7 @@ import DynamicFavicon from '@/components/Base/DynamicFavicon';
 import CookieConsentBanner from '@/components/CookieConsentBanner';
 import Analytics from '@/components/Analytics';
 import ScrollToTopHandler from '@/components/ScrollBtns/ScrollToTopHandler';
+import TrailingSlashHandler from '@/components/TrailingSlashHandler';
 import type { Metadata, Viewport } from 'next';
 
 // Import Styles
@@ -23,12 +24,49 @@ import { generateSEOMetadata } from '@/lib/getSEOMetadata';
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID; // Read GA ID from env
 
 // --- Font Definitions ---
-const inter = Inter({ subsets: ['latin'], variable: '--font-body', display: 'swap' });
-const lato = Lato({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-display-orig', display: 'swap' });
-const ebGaramond = EB_Garamond({ subsets: ['latin'], weight: ['400', '700'], style: ['normal', 'italic'], variable: '--font-meta-blog', display: 'swap' });
-const playfairDisplay = Playfair_Display({ subsets: ['latin'], weight: ['700'], variable: '--font-heading-blog', display: 'swap' });
-const merriweather = Merriweather({ subsets: ['latin'], weight: ['400'], style: ['normal', 'italic'], variable: '--font-body-blog', display: 'swap' });
-const dancingScript = Dancing_Script({ subsets: ['latin'], weight: ['400'], variable: '--font-script-blog', display: 'swap' });
+const inter = Inter({ 
+  subsets: ['latin'], 
+  variable: '--font-body', 
+  display: 'swap',
+  fallback: ['system-ui', 'arial'] 
+});
+const lato = Lato({ 
+  subsets: ['latin'], 
+  weight: ['400', '700'], 
+  variable: '--font-display-orig', 
+  display: 'swap',
+  fallback: ['system-ui', 'arial']
+});
+const ebGaramond = EB_Garamond({ 
+  subsets: ['latin'], 
+  weight: ['400', '700'], 
+  style: ['normal', 'italic'], 
+  variable: '--font-meta-blog', 
+  display: 'swap',
+  fallback: ['Times New Roman', 'serif']
+});
+const playfairDisplay = Playfair_Display({ 
+  subsets: ['latin'], 
+  weight: ['700'], 
+  variable: '--font-heading-blog', 
+  display: 'swap',
+  fallback: ['Times New Roman', 'serif']
+});
+const merriweather = Merriweather({ 
+  subsets: ['latin'], 
+  weight: ['400'], 
+  style: ['normal', 'italic'], 
+  variable: '--font-body-blog', 
+  display: 'swap',
+  fallback: ['Times New Roman', 'serif']
+});
+const dancingScript = Dancing_Script({ 
+  subsets: ['latin'], 
+  weight: ['400'], 
+  variable: '--font-script-blog', 
+  display: 'swap',
+  fallback: ['cursive']
+});
 
 export const viewport: Viewport = {
   themeColor: [
@@ -146,6 +184,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <ThemeProvider>
           <CookieConsentProvider>
+            <TrailingSlashHandler />
             <DynamicFavicon />
             <Nav />
             <main role="main">{children}</main>

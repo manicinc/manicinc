@@ -346,18 +346,53 @@ a code:not(pre > code),
 .table-wrapper::-webkit-scrollbar-thumb { background-color: var(--accent-muted2); border-radius: 4px; border: 2px solid var(--bg-secondary); }
 .table-wrapper::-webkit-scrollbar-thumb:hover { background-color: var(--accent-secondary); }
 
+/* Support for .table-container class as well */
+.blog-content .table-container {
+  overflow-x: auto;
+  margin: 2.5rem 0;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--bg-tertiary);
+  box-shadow: var(--shadow-soft);
+}
+
+.blog-content .table-container table {
+  margin: 0;
+  border: none;
+  width: max-content;
+  min-width: 100%;
+}
+
 .blog-content table {
   width: 100%; border-collapse: collapse; /* Collapse for cleaner lines */
   border-spacing: 0; margin: 0; border-radius: 0; overflow: visible;
   box-shadow: none; font-size: 0.95rem; line-height: 1.6;
   border: 1px solid var(--bg-tertiary); /* Add border to table itself */
+  table-layout: auto; /* Auto-size columns based on content */
 }
 .blog-content th, .blog-content td {
   padding: 0.9rem 1.2rem; text-align: left;
   border-bottom: 1px solid var(--bg-tertiary); vertical-align: top;
   border-left: 1px solid var(--bg-tertiary);
+  min-width: fit-content;
+  max-width: none;
+  word-wrap: break-word;
+  white-space: normal;
 }
-.blog-content th:first-child, .blog-content td:first-child { border-left: none; }
+.blog-content th:first-child, .blog-content td:first-child { 
+  border-left: none; 
+  min-width: 120px; /* Task names need space */
+}
+.blog-content th:not(:first-child):not(:last-child),
+.blog-content td:not(:first-child):not(:last-child) {
+  min-width: 80px; /* Model columns */
+  max-width: 120px;
+  text-align: center;
+}
+.blog-content th:last-child,
+.blog-content td:last-child {
+  min-width: 150px; /* Prevent last column from getting too wide */
+  max-width: 200px;
+}
 .blog-content th {
   background: rgba(var(--bg-tertiary-rgb), 0.7); /* Lighter header */
   font-family: var(--font-meta-blog); /* Meta font for headers */
@@ -369,6 +404,33 @@ a code:not(pre > code),
 /* Remove striping for cleaner look? Optional. */
 /* .blog-content tr:nth-child(even) td { background: rgba(var(--bg-secondary-rgb), 0.3); } */
 .blog-content tr:hover td { background: rgba(var(--accent-highlight-rgb), 0.08); }
+
+/* Symbol alignment for results tables */
+.blog-content td:has(↑),
+.blog-content td:has(↓),
+.blog-content td:has(→),
+.blog-content td:has(∼) {
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Mobile responsiveness for tables */
+@media (max-width: 768px) {
+  .blog-content table {
+    font-size: 0.85rem;
+  }
+  
+  .blog-content th,
+  .blog-content td {
+    padding: 0.6rem 0.8rem;
+    min-width: 60px;
+  }
+  
+  .blog-content th:first-child,
+  .blog-content td:first-child {
+    min-width: 100px;
+  }
+}
 
 
 /* --- Images --- */
@@ -392,10 +454,10 @@ a code:not(pre > code),
   clear: both;
 }
 /* Add ZoomableImage component classes if not defined elsewhere */
-.content-image {/* Base styles */}
-.image-small { max-width: 300px; margin-left: auto; margin-right: auto; }
-.image-medium { max-width: 500px; margin-left: auto; margin-right: auto; }
-.image-large { max-width: 800px; margin-left: auto; margin-right: auto; }
+.content-image { display: block; max-width: 100%; height: auto; margin: 2rem auto; }
+.image-small { max-width: 400px; margin-left: auto; margin-right: auto; }
+.image-medium { max-width: 700px; margin-left: auto; margin-right: auto; }
+.image-large { max-width: 900px; margin-left: auto; margin-right: auto; }
 .image-full { max-width: 100%; width: 100%; }
 /* Apply alignment margins primarily to the wrapper now */
 .align-left .content-image { margin-left: 0; margin-right: 0; }
@@ -414,6 +476,121 @@ a code:not(pre > code),
   text-align: center; color: var(--text-muted); font-size: 0.9rem;
   padding-top: 0.8rem; margin-top: -0.2rem; /* Pull caption closer */
   font-style: italic; font-family: var(--font-body-blog);
+}
+
+/* Enhanced image sizing for markdown attributes */
+.blog-content img[alt*="size=small"] {
+  max-width: 400px;
+  width: 100%;
+  margin: 2rem auto;
+  display: block;
+}
+
+.blog-content img[alt*="size=medium"] {
+  max-width: 700px; /* Increased from ~500px */
+  width: 100%;
+  margin: 2rem auto;
+  display: block;
+}
+
+.blog-content img[alt*="size=large"] {
+  max-width: 900px; /* Increased from ~800px */
+  width: 100%;
+  margin: 2rem auto;
+  display: block;
+}
+
+.blog-content img[alt*="size=full"] {
+  max-width: 100%;
+  width: 100%;
+  margin: 2rem auto;
+  display: block;
+}
+
+/* Image alignment */
+.blog-content img[alt*="align=left"] {
+  float: left;
+  margin-right: 1.5rem;
+  margin-left: 0;
+  margin-bottom: 1rem;
+}
+
+.blog-content img[alt*="align=right"] {
+  float: right;
+  margin-left: 1.5rem;
+  margin-right: 0;
+  margin-bottom: 1rem;
+}
+
+.blog-content img[alt*="align=center"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Image effects */
+.blog-content img[alt*="effect=shadow"] {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.blog-content img[alt*="effect=glow"] {
+  box-shadow: 0 0 20px rgba(var(--accent-primary-rgb), 0.3);
+}
+
+.blog-content img[alt*="effect=hover"] {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-content img[alt*="effect=hover"]:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.15);
+}
+
+/* Image borders */
+.blog-content img[alt*="border=simple"] {
+  border: 1px solid var(--bg-tertiary);
+  padding: 4px;
+  background: var(--bg-primary);
+}
+
+.blog-content img[alt*="border=thick"] {
+  border: 3px solid var(--bg-tertiary);
+  padding: 4px;
+  background: var(--bg-primary);
+}
+
+.blog-content img[alt*="border=gradient"] {
+  padding: 3px;
+  background: linear-gradient(45deg, var(--accent-primary), var(--accent-highlight));
+  border-radius: var(--radius-base);
+}
+
+.blog-content img[alt*="border=gradient"] {
+  border-radius: calc(var(--radius-base) - 2px);
+}
+
+/* Responsive adjustments for larger images */
+@media (max-width: 1024px) {
+  .blog-content img[alt*="size=large"] {
+    max-width: 800px; /* Slightly smaller on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-content img[alt*="size=medium"],
+  .blog-content img[alt*="size=large"] {
+    max-width: 100%; /* Full width on mobile */
+  }
+  
+  .blog-content img {
+    margin: 1.5rem auto; /* Reduced margins on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-content img {
+    margin: 1rem auto; /* Further reduced margins on small mobile */
+  }
 }
 
 
