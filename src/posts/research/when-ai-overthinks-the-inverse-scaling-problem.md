@@ -73,7 +73,7 @@ With 16k tokens of reasoning: 85% accuracy.
 
 The model doesn't just consider the probability—it obsesses over it. Reasoning traces show the AI cycling through increasingly baroque interpretations of what "61% probability" might mean for the counting task. This mirrors research from cognitive science on analysis paralysis: humans given too much time to deliberate simple decisions often perform worse than those forced to rely on intuition (Dijksterhuis et al., 2006).
 
-![Ring chart of failure modes|size=large|align=center|effect=glow|border=gradient|caption=Aggregated failure taxonomy drawn from paper figs. 3–10](/assets/blog/research/when-ai-overthinks-the-inverse/when-ai-overthinks-the-inverse/inverse-scaling_failure-modes_ring-clean.png)
+![Ring chart of failure modes|size=large|align=center|effect=glow|border=gradient|caption=Aggregated failure taxonomy drawn from paper figs. 3–10](/assets/blog/research/when-ai-overthinks-the-inverse/inverse-scaling_failure-modes_ring-clean.png)
 
 1. **Distraction** – irrelevant statistics hijack the chain
 2. **Over-fitting** – model matches surface patterns, not underlying query
@@ -162,7 +162,7 @@ This mirrors concerns from the original Inverse Scaling Prize (McKenzie et al., 
 
 ## ⑤ Mitigation Strategies
 
-![Three-step mitigation flowchart|size=large|align=center|effect=glow|border=gradient|caption=Three-step counter-measure roadmap](/assets/blog/research/when-ai-overthinks-the-inverse/when-ai-overthinks-the-inverse/inverse-scaling_mitigation-playbook_flowchart_v2.png)
+![Three-step mitigation flowchart|size=large|align=center|effect=glow|border=gradient|caption=Three-step counter-measure roadmap](/assets/blog/research/when-ai-overthinks-the-inverse/inverse-scaling_mitigation-playbook_flowchart_v2.png)
 
 ### A. Hard Budget Limits
 Cap reasoning at ~2k tokens for arithmetic tasks. Anthropic's data shows diminishing returns beyond this threshold.
