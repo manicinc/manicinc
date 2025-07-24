@@ -151,7 +151,7 @@ html:not([data-theme-loaded="true"]) * {
   --sidebar-width: 300px;
   --sidebar-width-collapsed: 65px;
   --reading-mode-max-width: 700px;
-  --blog-content-max-width: 900px;
+  --blog-content-max-width: 1000px;
   --global-font-size-base: 17px;
   --blog-font-size-base: 18px;
   --radius-sharp: 0px;

@@ -44,6 +44,11 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   
+  // Trailing slash configuration
+  trailingSlash: false, // Ensures consistent behavior - no trailing slashes
+  
+  // Note: redirects don't work with static export, handled client-side instead
+  
   // Generate unique build ID for cache busting
   async generateBuildId() {
     return 'manic-agency-' + Date.now();
