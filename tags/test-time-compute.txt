@@ -1,0 +1,83 @@
+2:I[72972,["2972","static/chunks/2972-359ceb67daf90d6f.js","3605","static/chunks/app/tags/%5Btag%5D/page-3e7b38d8e6210f58.js"],""]
+3:I[4707,[],""]
+5:I[36423,[],""]
+7:I[12025,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","9884","static/chunks/9884-6ce6b305d65da4b3.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-eac395e6a0c92cb1.js"],"ThemeProvider"]
+8:I[96489,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","9884","static/chunks/9884-6ce6b305d65da4b3.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-eac395e6a0c92cb1.js"],"CookieConsentProvider"]
+9:I[83551,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","9884","static/chunks/9884-6ce6b305d65da4b3.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-eac395e6a0c92cb1.js"],"default"]
+a:I[51052,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","9884","static/chunks/9884-6ce6b305d65da4b3.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-eac395e6a0c92cb1.js"],"Nav"]
+b:I[79229,["2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","9160","static/chunks/app/not-found-da8cbadeec2995a7.js"],"default"]
+c:I[85745,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","9884","static/chunks/9884-6ce6b305d65da4b3.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-eac395e6a0c92cb1.js"],"default"]
+d:I[16049,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","9884","static/chunks/9884-6ce6b305d65da4b3.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-eac395e6a0c92cb1.js"],"default"]
+e:I[26143,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","9884","static/chunks/9884-6ce6b305d65da4b3.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-eac395e6a0c92cb1.js"],"default"]
+f:I[18133,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","9884","static/chunks/9884-6ce6b305d65da4b3.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-eac395e6a0c92cb1.js"],"default"]
+10:I[31214,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","9884","static/chunks/9884-6ce6b305d65da4b3.js","301","static/chunks/301-dce5ed0fea1b7bda.js","3185","static/chunks/app/layout-eac395e6a0c92cb1.js"],"default"]
+4:["tag","test-time-compute","d"]
+6:Tc37,
+        (function() {
+          try {
+            // Don't run this script during server-side rendering
+            if (typeof window === 'undefined' || typeof document === 'undefined') return;
+            
+            console.log('Theme initialization script running');
+            
+            // 1. Check localStorage - the source of truth for user preference
+            let storedTheme = localStorage.getItem('theme');
+            console.log('Theme from localStorage:', storedTheme);
+            
+            // 2. If no stored theme, check system preference
+            if (!storedTheme) {
+              const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+              storedTheme = systemPrefersDark ? 'dark' : 'light';
+              console.log('No theme in localStorage, using system preference:', storedTheme);
+              // Save this to localStorage for next time
+              localStorage.setItem('theme', storedTheme);
+            }
+            
+            // Wait for DOM to be ready
+            const applyTheme = () => {
+              // Safety check that DOM is ready
+              if (!document || !document.documentElement) return;
+              
+              // 3. Ensure clean state
+              document.documentElement.classList.remove('dark', 'light');
+              
+              // 4. Apply theme class and colorScheme
+              document.documentElement.classList.add(storedTheme);
+              document.documentElement.style.colorScheme = storedTheme;
+              
+              // 5. Apply immediate colors to prevent flash - only to html element
+              if (storedTheme === 'dark') {
+                document.documentElement.style.setProperty('background-color', '#22182b', 'important');
+                document.documentElement.style.setProperty('color', '#f5f0e6', 'important');
+              } else {
+                document.documentElement.style.setProperty('background-color', '#fbf6ef', 'important');
+                document.documentElement.style.setProperty('color', '#4a3f35', 'important');
+              }
+              
+              // 6. Store for React
+              window.__NEXT_THEME_INITIAL = storedTheme;
+              
+              console.log('Theme initialization complete:', storedTheme);
+            };
+            
+            // Apply theme immediately
+            applyTheme();
+            
+            // Also apply after DOM is fully loaded (for safety)
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', applyTheme);
+            }
+            
+          } catch (e) {
+            console.error('Theme initialization error:', e);
+            // Fallback to light - only set on html element
+            if (document && document.documentElement) {
+              document.documentElement.classList.add('light');
+              document.documentElement.style.setProperty('background-color', '#fbf6ef', 'important');
+              document.documentElement.style.setProperty('color', '#4a3f35', 'important');
+            }
+          }
+        })();
+      0:["manic-agency-1753319385590",[[["",{"children":["tags",{"children":[["tag","test-time-compute","d"],{"children":["__PAGE__?{\"tag\":\"test-time-compute\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["tags",{"children":[["tag","test-time-compute","d"],{"children":["__PAGE__",{},[["$L1",["$","main",null,{"className":"blog-container","children":[["$","div",null,{"className":"blog-header","children":[["$","h1",null,{"className":"blog-title","children":["#","test-time-compute"]}],["$","p",null,{"className":"blog-meta","children":["Posts tagged with “","test-time-compute","”"]}]]}],["$","div",null,{"className":"blog-grid","children":[["$","article","inverse-scaling-in-test-time-compute-how-extra-tokens",{"className":"blog-card","children":[["$","img",null,{"src":"/assets/research/tutorials/inverse-scaling-in-test-time-compute-how-extra-tokensinverse-scaling_accuracy-vs-reasoning-tokens_gradient.png","alt":"Inverse Scaling in Test‑Time Compute: How Extra Tokens Cripple Frontier LLMs","className":"blog-card-image"}],["$","div",null,{"className":"blog-date","children":["$","time",null,{"dateTime":"2025-07-23","children":"7/23/2025"}]}],["$","div",null,{"className":"blog-category","children":["$","$L2",null,{"href":"/category/research","children":"RESEARCH"}]}],["$","h2",null,{"className":"blog-entry-title","children":["$","$L2",null,{"href":"/blog/research/inverse-scaling-in-test-time-compute-how-extra-tokens","className":"blog-link","children":"Inverse Scaling in Test‑Time Compute: How Extra Tokens Cripple Frontier LLMs"}]}],["$","p",null,{"className":"blog-excerpt","children":"A new Anthropic × OpenAI study reveals a counter‑intuitive truth: letting an LLM ‘think longer’ can drain accuracy, spur distractions, and even awaken self‑preservation. We unpack the data, the failures, and the fixes—complete with visuals."}],["$","div",null,{"className":"blog-tags","children":[["$","span","inverse-scaling",{"className":"blog-tag","children":["#","inverse-scaling"]}],["$","span","large-language-models",{"className":"blog-tag","children":["#","large-language-models"]}],["$","span","ai-safety",{"className":"blog-tag","children":["#","ai-safety"]}],["$","span","reasoning-tokens",{"className":"blog-tag","children":["#","reasoning-tokens"]}],["$","span","test-time-compute",{"className":"blog-tag","children":["#","test-time-compute"]}],["$","span","featured",{"className":"blog-tag","children":["#","featured"]}]]}],["$","div",null,{"className":"readmore-container","children":["$","$L2",null,{"href":"/blog/research/inverse-scaling-in-test-time-compute-how-extra-tokens","className":"readmore-link","children":"Read More →"}]}]]}]]}]]}],null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","tags","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","tags","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/b9ff2aff06433e0b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/fb4b0eee9f3771b4.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/65d3bfa38c58f4ce.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/b4eacda97dc640b7.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/9a8095b924bb8c34.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/6f74c1c86b1d71f3.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/c67ac1b6f804f257.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_e8ce0c\n            __variable_de8755\n            __variable_886fda\n            __variable_5b6717\n            __variable_881712\n            __variable_87ec87\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[[["$","script",null,{"async":true,"src":"https://www.googletagmanager.com/gtag/js?id=G-82PQNT8L14"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n                  window.dataLayer = window.dataLayer || [];\n                  function gtag(){dataLayer.push(arguments);}\n                  gtag('js', new Date());\n                  gtag('config', 'G-82PQNT8L14');\n                "}}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$6"}}]]}],["$","body",null,{"children":["$","$L7",null,{"children":["$","$L8",null,{"children":[["$","$L9",null,{}],["$","$La",null,{}],["$","main",null,{"role":"main","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$Lb",null,{}],"notFoundStyles":[]}]}],["$","$Lc",null,{}],["$","$Ld",null,{}],["$","$Le",null,{}],["$","$Lf",null,{}],["$","$L10",null,{}]]}]}]}]]}]],null],null],["$L11",null]]]]
+11:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#FBF6EF"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#22182B"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"Manic Agency - Metaverses Intersection"}],["$","meta","5",{"name":"description","content":"Metaverses Intersection - Where digital artistry meets cutting-edge technology. We craft immersive experiences that blur the lines between imagination and reality."}],["$","link","6",{"rel":"author","href":"https://manic.agency"}],["$","meta","7",{"name":"author","content":"Manic Inc"}],["$","meta","8",{"name":"keywords","content":"Web Development,Design,AR,VR,AI,Web3,Digital Agency,Los Angeles,Lagos,Creative Technology,SynthStack,Manic Inc,Game Publishing,Manic Games,Text Games,Game Development,Publishing Platform"}],["$","meta","9",{"name":"creator","content":"Manic Inc"}],["$","meta","10",{"name":"publisher","content":"Manic Inc"}],["$","meta","11",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","12",{"property":"og:title","content":"Manic Agency - Metaverses Intersection"}],["$","meta","13",{"property":"og:description","content":"Metaverses Intersection - Where digital artistry meets cutting-edge technology. We craft immersive experiences that blur the lines between imagination and reality."}],["$","meta","14",{"property":"og:url","content":"https://manic.agency"}],["$","meta","15",{"property":"og:site_name","content":"Manic Agency"}],["$","meta","16",{"property":"og:locale","content":"en_US"}],["$","meta","17",{"property":"og:image","content":"https://manic.agency/og-default.webp"}],["$","meta","18",{"property":"og:image:width","content":"1200"}],["$","meta","19",{"property":"og:image:height","content":"630"}],["$","meta","20",{"property":"og:image:alt","content":"Manic Agency - Metaverses Intersection - Manic Agency"}],["$","meta","21",{"property":"og:type","content":"website"}],["$","meta","22",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","23",{"name":"twitter:site","content":"@manicagency"}],["$","meta","24",{"name":"twitter:creator","content":"@manicagency"}],["$","meta","25",{"name":"twitter:title","content":"Manic Agency - Metaverses Intersection"}],["$","meta","26",{"name":"twitter:description","content":"Metaverses Intersection - Where digital artistry meets cutting-edge technology. We craft immersive experiences that blur the lines between imagination and reality."}],["$","meta","27",{"name":"twitter:image","content":"https://manic.agency/og-default.webp"}],["$","link","28",{"rel":"shortcut icon","href":"/favicon-16x16.png"}],["$","link","29",{"rel":"icon","href":"/favicon.ico"}],["$","link","30",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","meta","31",{"name":"next-size-adjust"}]]
+1:null
