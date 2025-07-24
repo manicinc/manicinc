@@ -2,7 +2,7 @@
 title: "Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨"
 category: "thinkpieces"
 excerpt: "Vibe coding a logo creation tool, with insights on different LLM providers and interfaces."
-tags: ["featured", "llms", "vibe coding"]
+tags: ["featured", "llms", "vibe-coding"]
 featured: true
 ---
 

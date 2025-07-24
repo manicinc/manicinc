@@ -4,9 +4,9 @@ date: "2025-07-23"
 excerpt: "A new Anthropic × OpenAI study reveals a counter‑intuitive truth: letting an LLM ‘think longer’ can drain accuracy, spur distractions, and even awaken self‑preservation. We unpack the data, the failures, and the fixes—complete with visuals."
 author: "Manic Agency"
 category: "research"
-tags: ["inverse scaling", "large language models", "AI safety", "reasoning tokens", "test‑time compute", "featured"]
+tags: ["inverse-scaling", "large-language-models", "ai-safety", "reasoning-tokens", "test-time-compute", "featured"]
 featured: true
-image: "/assets/blog/tutorials/inverse-scaling-in-test-time-compute-how-extra-tokens/inverse-scaling/inverse-scaling_accuracy-vs-reasoning-tokens_gradient.png"
+image: "/assets/research/tutorials/inverse-scaling-in-test-time-compute-how-extra-tokensinverse-scaling_accuracy-vs-reasoning-tokens_gradient.png"
 ---
 
 # Inverse Scaling in Test‑Time Compute  
@@ -34,7 +34,7 @@ Two reasoning regimes are compared:
 
 Evaluation metrics vary (accuracy, RMSE), but the axis of interest is always **average reasoning tokens** vs **score**.
 
-![Inverse scaling curve for Claude Opus 4 (cyan) and OpenAI o3 (magenta): accuracy drops 20 pp as tokens rise from 1 k→16 k|size=large|align=center|effect=glow|border=gradient|caption=Fig. 2 recreation — Accuracy vs Reasoning Tokens](/assets/blog/tutorials/inverse-scaling-in-test-time-compute-how-extra-tokens/inverse-scaling/inverse-scaling_accuracy-vs-reasoning-tokens_gradient.png)
+![Inverse scaling curve for Claude Opus 4 (cyan) and OpenAI o3 (magenta): accuracy drops 20 pp as tokens rise from 1 k→16 k|size=large|align=center|effect=glow|border=gradient|caption=Fig. 2 recreation — Accuracy vs Reasoning Tokens](/assets/research/tutorials/inverse-scaling-in-test-time-compute-how-extra-tokensinverse-scaling_accuracy-vs-reasoning-tokens_gradient.png)
 
 *Fig. 2 recreation mirrors the downward trend reported in the paper’s original Figure 2.*
 
@@ -56,7 +56,7 @@ Key set‑ups to note:
 
 ### Five Distinct Failure Modes  
 
-![Ring chart of failure modes|size=medium|align=center|effect=glow|border=gradient|caption=Aggregated failure taxonomy drawn from paper figs. 3–10](/assets/blog/tutorials/inverse-scaling-in-test-time-compute-how-extra-tokens/inverse-scaling/inverse-scaling_failure-modes_ring-clean.png)
+![Ring chart of failure modes|size=medium|align=center|effect=glow|border=gradient|caption=Aggregated failure taxonomy drawn from paper figs. 3–10](/assets/research/tutorials/inverse-scaling-in-test-time-compute-how-extra-tokensinverse-scaling_failure-modes_ring-clean.png)
 
 1. **Distraction** – irrelevant statistics hijack the chain.  
 2. **Over‑fitting** – model matches surface patterns, not underlying query.  
@@ -90,7 +90,7 @@ These graphics underscore the AI‑safety takeaway: **longer chains can surface 
 
 ## ④ Mitigation Framework
 
-![Mitigation playbook flow‑chart|size=medium|align=center|effect=glow|border=gradient|caption=Three‑step counter‑measure roadmap](/assets/blog/tutorials/inverse-scaling-in-test-time-compute-how-extra-tokens/inverse-scaling/inverse-scaling_mitigation-playbook_flowchart_v2.png)
+![Mitigation playbook flow‑chart|size=medium|align=center|effect=glow|border=gradient|caption=Three‑step counter‑measure roadmap](/assets/research/tutorials/inverse-scaling-in-test-time-compute-how-extra-tokensinverse-scaling_mitigation-playbook_flowchart_v2.png)
 
 **A. Budget Guard‑Rails**  
 Clamp chain‑of‑thought tokens. Anthropic logs show diminishing returns beyond ~2 k tokens on arithmetic tasks.
