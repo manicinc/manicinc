@@ -654,12 +654,50 @@ html[data-theme="light"] .blog-post-container {
   border-bottom: 1px dashed rgba(var(--accent-muted1-rgb), 0.4);
 }
 .meta-item { display: inline-flex; align-items: center; gap: 0.6rem; line-height: 1.4; }
-.meta-icon { color: var(--accent-muted2); width: 19px; height: 19px; flex-shrink: 0; opacity: 0.9; }
+.meta-icon { 
+  color: var(--accent-muted2); 
+  width: 19px; 
+  height: 19px; 
+  flex-shrink: 0; 
+  opacity: 0.9; 
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 1px 2px rgba(var(--accent-highlight-rgb), 0.1));
+}
+.meta-icon:hover {
+  color: var(--accent-highlight);
+  opacity: 1;
+  transform: scale(1.1);
+  filter: drop-shadow(0 2px 4px rgba(var(--accent-highlight-rgb), 0.3));
+}
+
+/* Art Deco styling for ornate icons */
+.meta-icon[class*="IconOrnate"] {
+  position: relative;
+}
+.meta-icon[class*="IconOrnate"]:before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, 
+    rgba(var(--accent-primary-rgb), 0.1), 
+    rgba(var(--accent-secondary-rgb), 0.1),
+    rgba(var(--accent-highlight-rgb), 0.1)
+  );
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+.meta-icon[class*="IconOrnate"]:hover:before {
+  opacity: 1;
+}
 .meta-item a.post-category-link { color: var(--accent-secondary); border-bottom: 1px dotted; text-decoration: none; transition: color 0.2s ease, border-color 0.2s ease; }
 .meta-item a.post-category-link:hover { color: var(--accent-highlight); border-color: var(--accent-highlight); }
 .meta-item time { font-variant-numeric: lining-nums; } /* Use lining numbers for dates */
-.author-avatar { width: 30px; height: 30px; border-radius: 50%; margin-right: 0.5rem; border: 2px solid var(--bg-tertiary); box-shadow: 0 1px 3px rgba(var(--shadow-color), 0.25); }
-.meta-item.author span { font-weight: 600; color: var(--text-primary); font-size: 1em; }
+.meta-item.author { position: relative; }
+.meta-item.author .author-info { display: flex; align-items: center; gap: 0.5rem; }
+.meta-item.author .author-avatar { width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--bg-tertiary); box-shadow: 0 1px 3px rgba(var(--shadow-color), 0.25); }
+.meta-item.author .author-name { font-weight: 600; color: var(--text-primary); font-size: 1em; }
 .meta-item.last-modified { color: var(--text-muted); font-size: 0.9em; font-style: italic; }
 .meta-item.last-modified .meta-icon { color: var(--text-muted); width: 16px; height: 16px; }
 
@@ -837,8 +875,11 @@ html[data-theme="light"] .blog-post-container {
   position: absolute; left: -0.2em; top: 0.1em; /* Adjust position */
   color: var(--accent-highlight); font-size: 0.9em; opacity: 0.9; font-family: serif;
 }
-/* Ordered List Marker (Default browser styles usually suffice) */
-.post-content ol { counter-reset: list-item; }
+/* Ordered List Marker (Using custom counters, disable default list-style) */
+.post-content ol { 
+  counter-reset: list-item; 
+  list-style: none; /* Disable default numbering to prevent double numbering */
+}
 .post-content ol > li::before {
   content: counter(list-item) ".";
   counter-increment: list-item;
@@ -854,7 +895,10 @@ html[data-theme="light"] .blog-post-container {
   margin-top: 0.8em; margin-bottom: 0.8em; margin-left: 0.5em;
 }
 .post-content ul ul > li::before { content: '▸'; color: var(--accent-secondary); font-size: 1em; top: 0; } /* Nested bullet */
-.post-content ol ol { counter-reset: list-item-alpha; }
+.post-content ol ol { 
+  counter-reset: list-item-alpha; 
+  list-style: none; /* Disable default numbering for nested lists too */
+}
 .post-content ol ol > li::before { content: counter(list-item-alpha, lower-alpha) "."; counter-increment: list-item-alpha; font-weight: normal; }
 .post-content ol ul > li::before { content: '–'; font-weight: bold; color: var(--text-secondary); }
 
@@ -1433,12 +1477,14 @@ html[data-theme="light"] .blog-post-container {
   background-color: var(--bg-tertiary); /* Fallback color */
   border-bottom: 1px solid rgba(var(--accent-highlight-rgb), 0.25);
 }
-.blog-card-image img {
+.blog-card-image img,
+.blog-card-image .blog-card-img {
   display: block; width: 100%; height: 100%; object-fit: cover; /* Cover aspect ratio */
   transition: transform 0.6s ease, filter 0.6s ease;
   filter: saturate(0.9) contrast(0.95); /* Slightly muted base */
 }
-.blog-card:hover .blog-card-image img { transform: scale(1.12); filter: saturate(1.15) contrast(1); }
+.blog-card:hover .blog-card-image img,
+.blog-card:hover .blog-card-image .blog-card-img { transform: scale(1.12); filter: saturate(1.15) contrast(1); }
 .blog-card-placeholder { /* Style for placeholder */
   display: flex; align-items: center; justify-content: center; height: 100%; width: 100%;
   background-color: var(--bg-code); overflow: hidden;
@@ -1475,6 +1521,32 @@ html[data-theme="light"] .blog-post-container {
 }
 .blog-card:hover .blog-entry-title .blog-link::after { width: 100%; }
 
+.blog-meta {
+  font-family: var(--font-meta); font-size: 0.85rem; color: var(--text-secondary);
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; margin-bottom: 1rem; align-items: center;
+}
+.blog-meta span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.blog-meta svg { 
+  color: var(--accent-muted2); width: 16px; height: 16px; 
+  transition: color 0.2s ease, transform 0.2s ease;
+  filter: drop-shadow(0 1px 2px rgba(var(--accent-highlight-rgb), 0.1));
+}
+.blog-card:hover .blog-meta svg {
+  color: var(--accent-highlight);
+  transform: scale(1.05);
+  filter: drop-shadow(0 2px 4px rgba(var(--accent-highlight-rgb), 0.2));
+}
+.blog-meta .author-link { 
+  color: var(--text-primary); text-decoration: none; font-weight: 500; 
+  transition: color 0.2s ease;
+}
+.blog-meta .author-link:hover { 
+  color: var(--accent-highlight); 
+}
+.blog-meta .author-name { 
+  color: var(--text-primary); font-weight: 500; 
+}
+/* Legacy support for existing blog-date class */
 .blog-date {
   font-family: var(--font-meta); font-size: 0.85rem; color: var(--text-secondary);
   display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; margin-bottom: 1rem; align-items: center;

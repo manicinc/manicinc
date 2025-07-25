@@ -116,7 +116,10 @@
 .blog-content .md-ul .md-ul, .blog-content .md-ol .md-ol,
 .blog-content .md-ul .md-ol, .blog-content .md-ol .md-ul { margin: 0.8em 0 0.8em 0.5em; }
 .blog-content .md-ul .md-ul > .md-li::before { content: '▸'; color: var(--accent-secondary); }
-.blog-content .md-ol { list-style: decimal; } /* Basic ordered list style */
+.blog-content .md-ol { 
+  list-style: none; /* Disable default numbering since we use custom counters in blogs.css */
+  /* Counter styling is handled in blogs.css for consistency */
+}
 /* Add more specific OL styles if needed */
 
 

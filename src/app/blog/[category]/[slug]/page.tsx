@@ -22,7 +22,7 @@ import BlogPageClient from './BlogPageClient'; // Client wrapper for reading mod
 import { formatDate } from '@/util/formatDate';
 // Icons (Ensure these are correctly imported/defined in Icons.tsx)
 import {
-    IconOrnateCalendar, IconOrnateClock, IconOrnateTag, IconOrnateEdit, IconOrnateUser, IconArrowLeft
+    IconOrnateCalendar, IconOrnateClock, IconOrnateTag, IconOrnateAuthor, IconArrowLeft
 } from '@/components/Icons'; // Adjust path
 
 // Styles
@@ -164,45 +164,39 @@ export default async function BlogPostPage({ params }: PageProps) {
 
                                 {/* === Updated Post Meta Section === */}
                                 <div className="post-meta">
-                                    {/* Author Info */}
+                                    {/* Author Info with Art Deco Icon */}
                                     {post.author && (
                                         <div className="meta-item author">
-                                            {post.author.avatarUrl && (
-                                                <Image
-                                                    src={post.author.avatarUrl}
-                                                    alt={post.author.name}
-                                                    width={30} height={30}
-                                                    className="author-avatar"
-                                                />
-                                            )}
-                                            {/* Link author name if GitHub username exists */}
-                                            {post.author.githubUsername ? (
-                                                <a href={`https://github.com/${post.author.githubUsername}`} target="_blank" rel="noopener noreferrer" className="hover:text-accent-highlight transition-colors">
-                                                    <span>{post.author.name}</span>
-                                                </a>
-                                            ) : (
-                                                <span>{post.author.name}</span>
-                                            )}
+                                            <IconOrnateAuthor className="meta-icon" aria-hidden="true" />
+                                            <div className="author-info">
+                                                {post.author.avatarUrl && (
+                                                    <Image
+                                                        src={post.author.avatarUrl}
+                                                        alt={post.author.name}
+                                                        width={24} height={24}
+                                                        className="author-avatar"
+                                                    />
+                                                )}
+                                                {/* Link author name if GitHub username exists */}
+                                                {post.author.githubUsername ? (
+                                                    <a href={`https://github.com/${post.author.githubUsername}`} target="_blank" rel="noopener noreferrer" className="author-name hover:text-accent-highlight transition-colors">
+                                                        {post.author.name}
+                                                    </a>
+                                                ) : (
+                                                    <span className="author-name">{post.author.name}</span>
+                                                )}
+                                            </div>
                                         </div>
                                     )}
-                                    {/* Date */}
+                                    {/* Published Date */}
                                     {post.date && (
                                         <div className="meta-item date">
                                             <IconOrnateCalendar className="meta-icon" aria-hidden="true" />
                                             <time dateTime={new Date(post.date).toISOString()}>
-                                                {formatDate(post.date, 'long')}
+                                                Published {formatDate(post.date, 'long')}
                                             </time>
                                         </div>
                                     )}
-                                     {/* Last Modified (only if different from publish date) */}
-                                    {post.lastModified && post.lastModified !== post.date && (
-                                         <div className="meta-item last-modified">
-                                             <IconOrnateEdit className="meta-icon" aria-hidden="true" />
-                                             <time dateTime={new Date(post.lastModified).toISOString()}>
-                                                 Updated: {formatDate(post.lastModified, 'short')}
-                                             </time>
-                                         </div>
-                                     )}
                                     {/* Reading Time */}
                                     {post.readingTime && (
                                         <div className="meta-item reading-time">

@@ -51,8 +51,7 @@
     "lfs:pull": "git lfs pull || echo 'Git LFS not available or no LFS files to pull'",
     "lfs:status": "git lfs status",
     "lfs:check": "node scripts/check-lfs.js",
-    "images:find-missing": "node scripts/find-missing-images.js",
-    "prebuild": "npm run optimize:images"
+    "images:find-missing": "node scripts/find-missing-images.js"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

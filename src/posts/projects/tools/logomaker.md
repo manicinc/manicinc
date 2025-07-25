@@ -1,7 +1,7 @@
 ---
 title: Logomaker — Free Text Logo Generator
 description: A fun, client-side text logo generator with 400+ fonts, animations, and offline support - built as an AI collaboration experiment.
-date: 2025-03
+date: 2025-04-20
 category: tools
 tags: [design, typography, generative, ai, experiment, vibe-coding]
 link: https://manicinc.github.io/logomaker/

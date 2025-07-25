@@ -26,8 +26,8 @@ interface IconCalendarProps extends Omit<React.SVGProps<SVGSVGElement>, 'childre
 }
 
 // --- CORRECTED createIcon Helper ---
-const createIcon = (pathData: string | JSX.Element, viewBox = "0 0 24 24") =>
-    React.forwardRef<SVGSVGElement, CreatedIconProps>(({
+const createIcon = (pathData: string | JSX.Element, viewBox = "0 0 24 24") => {
+    const IconComponent = React.forwardRef<SVGSVGElement, CreatedIconProps>(({
         size = "1em",
         className,
         strokeWidth = 1.5, // Default strokeWidth applied here
@@ -52,6 +52,10 @@ const createIcon = (pathData: string | JSX.Element, viewBox = "0 0 24 24") =>
             {typeof pathData === 'string' ? <path d={pathData} /> : pathData}
         </svg>
     ));
+    
+    IconComponent.displayName = 'Icon';
+    return IconComponent;
+};
 
 
 // --- Corrected IconCalendar ---
@@ -191,11 +195,64 @@ export const IconArrowLeft = createIcon(
 export const IconOpenFlourish = createIcon(<> <path d="M3 12h18M3 6h18M3 18h18" strokeWidth="1.5"/><path d="M3 8 C 1 9, 0 11, 1 13 M21 8 C 23 9, 24 11, 23 13" strokeWidth="0.7" opacity="0.9"/><path d="M12 6V3M12 18v3" strokeWidth="0.7" opacity="0.9"/> </>);
 export const IconCloseFlourish = createIcon(<> <path d="M18 6L6 18M6 6l12 12" strokeWidth="1.5"/><circle cx="12" cy="12" r="10" strokeWidth="0.7" opacity="0.5" strokeDasharray="3 3"/> </>);
 export const IconOrnateUpArrow = createIcon(<> <path d="M12 19 V 5 M 5 12 l 7 -7 l 7 7" strokeWidth="1.5"/> <path d="M5 15 C 7 11, 17 11, 19 15" strokeWidth="1" opacity="0.7"/> <path d="M9 20 C 10 18, 14 18, 15 20" strokeWidth="0.5"/> </>, "0 0 24 24"); // Removed strokeWidth=1.5
-export const IconOrnateCalendar = createIcon(<> <rect x="4" y="5" width="16" height="16" rx="1.5" ry="1.5" strokeWidth="1"/> <circle cx="8" cy="4" r="1" fill="currentColor"/><circle cx="16" cy="4" r="1" fill="currentColor"/> <line x1="4" y1="10" x2="20" y2="10" strokeWidth="1"/> <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01" strokeWidth="1.5"/> <path d="M4 6 Q 6 3, 12 3 T 20 6" strokeWidth="0.5"/> <path d="M4 20 Q 6 22, 12 22 T 20 20" strokeWidth="0.5"/> </>);
-export const IconOrnateClock = createIcon(<> <circle cx="12" cy="12" r="10" strokeWidth="0.75" /> <path d="M12 6.5 V 12 L 16 14" strokeWidth="1.5"/> <circle cx="12" cy="12" r=".75" fill="currentColor"/> <path d="M12 2 V 4 M22 12 H 20 M12 22 V 20 M2 12 H 4 M19.07 4.93 L 17.66 6.34 M4.93 19.07 L 6.34 17.66 M19.07 19.07 L 17.66 17.66 M4.93 4.93 L 6.34 6.34" strokeWidth="0.5"/> </>);
-export const IconOrnateTag = createIcon(<> <path d="M19.4 14.8L12 22.2a1 1 0 0 1-1.4 0l-8-8V4.6a1 1 0 0 1 1-1h7.8a1 1 0 0 1 .7.3l7.3 7.3a1 1 0 0 1 0 1.4z" strokeWidth="1"/> <circle cx="7.5" cy="7.5" r="1.5" fill="currentColor"/> <path d="M11 2 Q 9 5, 9 7 C 9 9, 10 11, 12 12 M 2 11 C 1 13, 1 15, 2 17" strokeWidth="0.5"/> </>);
+export const IconOrnateCalendar = createIcon(<> 
+  {/* Main calendar structure */}
+  <rect x="4" y="5" width="16" height="16" rx="1.5" ry="1.5" strokeWidth="1"/> 
+  <circle cx="8" cy="4" r="1" fill="currentColor"/>
+  <circle cx="16" cy="4" r="1" fill="currentColor"/> 
+  <line x1="4" y1="10" x2="20" y2="10" strokeWidth="1"/> 
+  {/* Calendar date dots */}
+  <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01" strokeWidth="1.5"/> 
+  {/* Art Deco flourishes */}
+  <path d="M4 6 Q 6 3, 12 3 T 20 6" strokeWidth="0.5"/> 
+  <path d="M4 20 Q 6 22, 12 22 T 20 20" strokeWidth="0.5"/> 
+  {/* Additional Art Deco geometric elements */}
+  <path d="M6 8 L 8 6 L 8 8 M18 8 L 16 6 L 16 8" strokeWidth="0.3" opacity="0.6"/>
+  <circle cx="12" cy="12" r="0.5" fill="currentColor" opacity="0.3"/>
+ </>);
+export const IconOrnateClock = createIcon(<> 
+  {/* Main clock face */}
+  <circle cx="12" cy="12" r="10" strokeWidth="0.75" /> 
+  {/* Clock hands */}
+  <path d="M12 6.5 V 12 L 16 14" strokeWidth="1.5"/> 
+  <circle cx="12" cy="12" r=".75" fill="currentColor"/> 
+  {/* Hour markers */}
+  <path d="M12 2 V 4 M22 12 H 20 M12 22 V 20 M2 12 H 4 M19.07 4.93 L 17.66 6.34 M4.93 19.07 L 6.34 17.66 M19.07 19.07 L 17.66 17.66 M4.93 4.93 L 6.34 6.34" strokeWidth="0.5"/> 
+  {/* Art Deco decorative elements */}
+  <path d="M8 4 Q 12 2, 16 4 M8 20 Q 12 22, 16 20" strokeWidth="0.3" opacity="0.5"/>
+  <circle cx="12" cy="5" r="0.5" fill="currentColor" opacity="0.3"/>
+  <circle cx="12" cy="19" r="0.5" fill="currentColor" opacity="0.3"/>
+  <circle cx="5" cy="12" r="0.5" fill="currentColor" opacity="0.3"/>
+  <circle cx="19" cy="12" r="0.5" fill="currentColor" opacity="0.3"/>
+ </>);
+export const IconOrnateTag = createIcon(<> 
+  {/* Main tag shape */}
+  <path d="M19.4 14.8L12 22.2a1 1 0 0 1-1.4 0l-8-8V4.6a1 1 0 0 1 1-1h7.8a1 1 0 0 1 .7.3l7.3 7.3a1 1 0 0 1 0 1.4z" strokeWidth="1"/> 
+  <circle cx="7.5" cy="7.5" r="1.5" fill="currentColor"/> 
+  {/* Art Deco flourishes */}
+  <path d="M11 2 Q 9 5, 9 7 C 9 9, 10 11, 12 12 M 2 11 C 1 13, 1 15, 2 17" strokeWidth="0.5"/> 
+  {/* Additional geometric elements */}
+  <path d="M4 4 L 6 6 M4 8 L 6 6" strokeWidth="0.3" opacity="0.5"/>
+  <path d="M15 15 Q 17 16, 18 18" strokeWidth="0.3" opacity="0.6"/>
+  <circle cx="5" cy="6" r="0.3" fill="currentColor" opacity="0.4"/>
+ </>);
 export const IconOrnateShare = createIcon(<> <path d="M18 5a3 3 0 1 0 0-6 3 3 0 0 0 0 6z M6 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6z M18 19a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" strokeWidth="1"/> <path d="M8.59 13.51 C 10 15, 14 16, 15.42 17.49 M15.41 6.51 C 14 8, 10 9, 8.59 10.49" strokeWidth="1"/> <path d="M12 2 C 6 4, 4 8, 4 12 S 6 20, 12 22 C 18 20, 20 16, 20 12 S 18 4, 12 2 Z" strokeWidth="0.5" opacity="0.3" strokeDasharray="3 3"/> </>);
 export const IconOrnateUser = createIcon(<> <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" strokeWidth="1"/> <circle cx="12" cy="7" r="4" strokeWidth="1"/> <path d="M8 3 C 6 4, 5 6, 5 7 M16 3 C 18 4, 19 6, 19 7" strokeWidth="0.5"/> </>);
+export const IconOrnateAuthor = createIcon(<> 
+  {/* Main person silhouette */}
+  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" strokeWidth="1"/> 
+  <circle cx="12" cy="7" r="4" strokeWidth="1"/> 
+  {/* Art Deco decorative elements */}
+  <path d="M6 15 C 8 12, 16 12, 18 15" strokeWidth="0.5" opacity="0.7"/> 
+  <path d="M9 20 C 10 19, 14 19, 15 20" strokeWidth="0.5" opacity="0.8"/> 
+  <path d="M8 3 Q 12 1, 16 3" strokeWidth="0.5" opacity="0.6"/> 
+  {/* Art Deco geometric accents */}
+  <circle cx="9" cy="5" r="0.5" fill="currentColor" opacity="0.4"/> 
+  <circle cx="15" cy="5" r="0.5" fill="currentColor" opacity="0.4"/> 
+  {/* Additional flourishes for Art Deco style */}
+  <path d="M7 16 L 9 14 M17 16 L 15 14" strokeWidth="0.3" opacity="0.5"/>
+  <path d="M12 2 L 11 4 L 13 4 Z" strokeWidth="0.3" fill="currentColor" opacity="0.3"/>
+ </>);
 export const IconOrnateEdit = createIcon(<> <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" strokeWidth="1"/> <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" strokeWidth="1"/> <path d="M17 11 C 18 10, 19 10, 20 11" strokeWidth="0.5"/> </>);
 export const IconPageTurnNext = createIcon(<> <path d="M9 4 L 15 12 L 9 20" strokeWidth="1.5"/> <path d="M15 4 V 20 C 18 17, 18 7, 15 4 Z" strokeWidth="0.5" fill="currentColor" fillOpacity="0.05"/> <path d="M8 4 H 15 M 8 20 H 15" strokeWidth="0.5"/> </>);
 export const IconPageTurnPrev = createIcon(<> <path d="M15 4 L 9 12 L 15 20" strokeWidth="1.5"/> <path d="M9 4 V 20 C 6 17, 6 7, 9 4 Z" strokeWidth="0.5" fill="currentColor" fillOpacity="0.05"/> <path d="M16 4 H 9 M 16 20 H 9" strokeWidth="0.5"/> </>);

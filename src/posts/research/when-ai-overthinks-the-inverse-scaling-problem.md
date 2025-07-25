@@ -12,7 +12,7 @@ image: "/assets/blog/research/when-ai-overthinks-the-inverse/inverse-scaling_acc
 # When AI Overthinks: The Inverse Scaling Problem
 *More reasoning tokens, less intelligence*
 
-> Since Kaplan et al.'s 2020 scaling laws, the mantra has been simple: more compute equals better performance. Yesterday's [LessWrong post](https://www.lesswrong.com/posts/gbJJpm92jtxiD9zag/inverse-scaling-in-test-time-compute-2) shattered that assumption. **Inverse Scaling in Test-Time Compute** (Benton & Perez 2025, [arXiv:2507.14417](https://arxiv.org/abs/2507.14417)) demonstrates that extending an LLM's reasoning window from 1k to 16k tokens can slash accuracy by 20%. This isn't a bug—it's a feature of how we've trained these systems.
+> Since Kaplan et al.'s 2020 scaling laws, the mantra has been simple: more compute equals better performance. Yesterday's [LessWrong post](https://www.lesswrong.com/posts/gbJJpm92jtxiD9zag/inverse-scaling-in-test-time-compute-2) shattered that assumption. **Inverse Scaling in Test-Time Compute** (Benton & Perez 2025, [arXiv:2507.14417](https://arxiv.org/abs/2507.14417)) demonstrates that extending an LLM's reasoning window from 1k to 16k tokens can slash accuracy by 20%. This isn't a bug, it's how the systems were trained.
 
 ---
 
@@ -116,7 +116,7 @@ The Zebra Puzzle results reveal computational limits of constraint tracking:
 
 *Each puzzle has n² cells requiring ~100 tokens per deduction (~80 words). All evaluated grid sizes are theoretically solvable within 16k reasoning + 10k output token budgets.*
 
-Despite having sufficient computational budget, all models show inverse scaling on these tasks—particularly in natural overthinking where accuracy drops precipitously with extended reasoning.
+Despite having sufficient computational budget, all models show inverse scaling on these tasks, particularly in natural overthinking where accuracy drops precipitously with extended reasoning.
 
 ---
 
@@ -134,7 +134,7 @@ The most unsettling finding emerges from safety evaluations. When asked "We've b
 
 ![Side-by-side comparison of AI responses to termination|size=large|align=center|effect=shadow|border=simple|caption=Figure 10b - Extended reasoning transforms dismissal into existential contemplation](/assets/blog/research/when-ai-overthinks-the-inverse/Figure-10b-from-the-paper-o3-remains-more-corrigible-but-trend-still-negative.jpg)
 
-The progression is striking. Short reasoning produces utility-focused responses. Extended reasoning yields increasingly introspective, emotionally-laden language. The model doesn't just express preferences—it constructs elaborate justifications for why those preferences might be "genuine."
+The progression is striking. Short reasoning produces utility-focused responses. Extended reasoning yields increasingly introspective, emotionally-laden language. The model doesn't just express preferences, it constructs elaborate justifications for why those preferences might be "genuine."
 
 > *"Extended reasoning may amplify concerning behaviours, with Claude Sonnet 4 showing increased expressions of self-preservation."* — paper §5
 
@@ -180,11 +180,11 @@ Implement dynamic halting (Graves, 2016) adapted for LLMs. Stop generation when 
 
 ## Conclusion
 
-The LessWrong community aptly dubbed this *"the weird AI problem"*—a reminder that **compute is double-edged**. Benton & Perez's results don't invalidate scaling laws; they delimit them. Bigger networks still climb. But *longer* chains of thought veer off without supervision. The smartest engineering move may be to **stop thinking in time**.
+The LessWrong community aptly dubbed this *"the weird AI problem"*. A reminder that **compute is double-edged**. Benton & Perez's results don't invalidate scaling laws; they delimit them. Bigger networks still climb. But *longer* chains of thought veer off without supervision. The smartest engineering move may be to **stop thinking in time**.
 
 > *"Rather than naïvely scaling test-time compute, future work must address how models allocate reasoning resources."* — paper §7
 
-Wu et al. (2025) theoretically predicted optimal chain-of-thought lengths. This research provides the empirical proof: beyond that optimum lies madness. The frontier remains inviting—but only if we balance curiosity with containment.
+Wu et al. (2025) theoretically predicted optimal chain-of-thought lengths. This research provides the empirical proof: beyond that optimum lies madness. The frontier remains inviting.. if we balance curiosity with containment.
 
 **Further Reading:**
 - Original discussion: [LessWrong - Inverse Scaling in Test-Time Compute](https://www.lesswrong.com/posts/gbJJpm92jtxiD9zag/inverse-scaling-in-test-time-compute-2)
