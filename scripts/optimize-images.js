@@ -79,6 +79,12 @@ async function isAlreadyOptimized(filePath) {
   
   // If current is at least 10% smaller than backup, consider it optimized
   const compressionRatio = (backupSize - currentSize) / backupSize;
+  
+  // Also check if files are identical (no optimization needed)
+  if (Math.abs(currentSize - backupSize) < 1) {
+    return false; // Files are nearly identical, probably need optimization
+  }
+  
   return compressionRatio > 0.1;
 }
 
@@ -103,7 +109,12 @@ async function optimizeImage(filePath, force = false) {
     // Backup original
     await backupOriginal(filePath);
     
-    let sharpInstance = sharp(filePath);
+    // Always optimize from original backup to prevent quality degradation
+    const fileName = path.basename(filePath);
+    const backupPath = path.join(BACKUP_DIR, fileName);
+    const sourceFile = fs.existsSync(backupPath) ? backupPath : filePath;
+    
+    let sharpInstance = sharp(sourceFile);
     
     // Get image metadata
     const metadata = await sharpInstance.metadata();

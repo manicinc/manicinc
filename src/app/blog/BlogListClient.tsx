@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation'; // Now using hook *only* in useEffect
 import { BlogPost } from '@/types/blog';
 import { AsciiArtPlaceholder } from '@/lib/asciiPlaceholders';
@@ -12,7 +13,7 @@ import { EB_Garamond } from 'next/font/google';
 // Import Icons
 import {
     IconChevronDown, IconOrnateSliders, IconOrnateSearch, IconOrnateX,
-    IconCalendar, IconOrnateCalendar, IconOrnateTag, IconOrnateClock,
+    IconOrnateCalendar, IconOrnateTag, IconOrnateClock, IconOrnateAuthor,
     IconArrowRight
     // Add specific sort icons if available
 } from '@/components/Icons'; // Adjust path
@@ -169,8 +170,8 @@ export default function BlogListClient({ initialPosts }: BlogListClientProps) {
                     <div className="filter-group sort-filter-group">
                         <label className="filter-label">Arrange By:</label>
                         <div className="sort-buttons">
-                             <button onClick={() => handleSortChange('dateDesc')} className={`sort-button ${sortBy === 'dateDesc' ? 'active' : ''}`}><IconOrnateCalendar /> Date (Newest)</button>
-                             <button onClick={() => handleSortChange('dateAsc')} className={`sort-button ${sortBy === 'dateAsc' ? 'active' : ''}`}><IconOrnateCalendar style={{transform: 'scaleY(-1)'}}/> Date (Oldest)</button>
+                             <button onClick={() => handleSortChange('dateDesc')} className={`sort-button ${sortBy === 'dateDesc' ? 'active' : ''}`}><IconOrnateCalendar /> Published (Newest)</button>
+                             <button onClick={() => handleSortChange('dateAsc')} className={`sort-button ${sortBy === 'dateAsc' ? 'active' : ''}`}><IconOrnateCalendar style={{transform: 'scaleY(-1)'}}/> Published (Oldest)</button>
                              <button onClick={() => handleSortChange('titleAsc')} className={`sort-button ${sortBy === 'titleAsc' ? 'active' : ''}`}><IconOrnateTag /> Title (A-Z)</button>
                              <button onClick={() => handleSortChange('titleDesc')} className={`sort-button ${sortBy === 'titleDesc' ? 'active' : ''}`}><IconOrnateTag style={{transform: 'scaleY(-1)'}}/> Title (Z-A)</button>
                         </div>
@@ -187,7 +188,7 @@ export default function BlogListClient({ initialPosts }: BlogListClientProps) {
                 <div className="filter-summary">
                     <span className="results-count">Filtered Results ({filteredAndSortedPosts.length} found):</span>
                     <div className="active-filters">
-                        {searchTerm && (<span className="active-filter"><span>Search: "{searchTerm}"</span><button onClick={clearSearch} aria-label="Clear search term"><IconOrnateX size={12}/></button></span>)}
+                        {searchTerm && (<span className="active-filter"><span>Search: &ldquo;{searchTerm}&rdquo;</span><button onClick={clearSearch} aria-label="Clear search term"><IconOrnateX size={12}/></button></span>)}
                         {selectedCategory && (<span className="active-filter"><span>Chapter: {selectedCategory.replace(/-/g, ' ')}</span><button onClick={() => handleCategoryClick(null)} aria-label={`Remove category filter ${selectedCategory}`}><IconOrnateX size={12}/></button></span>)}
                         {selectedTags.map(tag => (<span key={tag} className="active-filter"><span>Term: #{tag}</span><button onClick={() => handleTagClick(tag)} aria-label={`Remove tag filter ${tag}`}><IconOrnateX size={12}/></button></span>))}
                     </div>
@@ -200,13 +201,28 @@ export default function BlogListClient({ initialPosts }: BlogListClientProps) {
                 <div className="blog-grid">
                     {filteredAndSortedPosts.map(post => (
                         <div key={post.slug} className="blog-card">
-                             <Link href={`/blog/${post.category || 'uncategorized'}/${post.slug}`} className="blog-card-image-link" aria-label={post.title}><div className="blog-card-image">{post.image ? (<img src={post.image} alt="" loading="lazy" />) : (<div className="blog-card-placeholder"><AsciiArtPlaceholder animate={true} width="100%" height="100%"/></div>)}</div></Link>
+                             <Link href={`/blog/${post.category || 'uncategorized'}/${post.slug}`} className="blog-card-image-link" aria-label={post.title}><div className="blog-card-image">{post.image ? (<Image src={post.image} alt={post.title || 'Blog post image'} width={400} height={250} loading="lazy" className="blog-card-img" />) : (<div className="blog-card-placeholder"><AsciiArtPlaceholder animate={true} width="100%" height="100%"/></div>)}</div></Link>
                              <div className="blog-card-content">
                                 {post.category && (<div className="blog-category"><button onClick={() => handleCategoryClick(post.category || null)} className="category-name">{post.category.replace(/-/g, ' ')}</button></div>)}
                                 <h2 className="blog-entry-title"><Link href={`/blog/${post.category || 'uncategorized'}/${post.slug}`} className="blog-link">{post.title || 'Untitled Post'}</Link></h2>
-                                <div className="blog-date">
-                                     {post.date && (<span><IconCalendar dateString={post.date} size={14}/> <time dateTime={post.date ? new Date(post.date).toISOString() : undefined}>{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' })}</time></span>)}
-                                     {post.readingTime && (<span><IconOrnateClock size={14}/> {post.readingTime} min read</span>)}
+                                <div className="blog-meta">
+                                     {/* Author */}
+                                     {post.author && (
+                                         <span className="blog-author">
+                                             <IconOrnateAuthor size={14}/> 
+                                             {post.author.githubUsername ? (
+                                                 <a href={`https://github.com/${post.author.githubUsername}`} target="_blank" rel="noopener noreferrer" className="author-link">
+                                                     {post.author.name}
+                                                 </a>
+                                             ) : (
+                                                 <span className="author-name">{post.author.name}</span>
+                                             )}
+                                         </span>
+                                     )}
+                                     {/* Published Date */}
+                                     {post.date && (<span className="blog-date"><IconOrnateCalendar size={14}/> <time dateTime={post.date ? new Date(post.date).toISOString() : undefined}>{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' })}</time></span>)}
+                                     {/* Reading Time */}
+                                     {post.readingTime && (<span className="blog-reading-time"><IconOrnateClock size={14}/> {post.readingTime} min read</span>)}
                                  </div>
                                 <p className="blog-excerpt">{post.excerpt || 'No excerpt available...'}</p>
                                 {post.tags && post.tags.length > 0 && (<div className="blog-tags">{post.tags.slice(0, 3).map(tag => (<button key={tag} onClick={() => handleTagClick(tag)} className="blog-tag">#{tag}</button>))} {post.tags.length > 3 && (<span className="blog-tag-ellipsis">...</span>)}</div>)}
