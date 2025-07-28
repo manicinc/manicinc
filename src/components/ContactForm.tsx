@@ -93,7 +93,7 @@ Submitted: ${new Date().toISOString()}`,
         setState(prev => ({ 
           ...prev, 
           status: 'success', 
-          statusMessage: result.message || 'Transmission received. We\'ll respond within 24 hours.',
+          statusMessage: result.message || 'Transmission received. We&apos;ll respond within 24 hours.',
           name: '',
           email: '',
           company: '',

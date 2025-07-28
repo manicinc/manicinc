@@ -80,7 +80,7 @@ export default function NewsletterForm({
     setState(prev => ({ 
       ...prev, 
       status: 'already_subscribed',
-      message: 'You\'re already part of our network! Thanks for being a subscriber.',
+      message: 'You&apos;re already part of our network! Thanks for being a subscriber.',
       showUnsubscribe: true
     }));
   };
@@ -102,7 +102,7 @@ export default function NewsletterForm({
     setState(prev => ({ 
       ...prev, 
       status: 'unsubscribed',
-      message: 'You\'ve been unsubscribed. We won\'t show this form again.',
+      message: 'You&apos;ve been unsubscribed. We won&apos;t show this form again.',
       showUnsubscribe: false
     }));
 
@@ -320,7 +320,7 @@ export default function NewsletterForm({
                     className="text-text-secondary hover:text-accent-alert transition-colors text-sm flex items-center gap-2 group"
                   >
                     <UnsubscribeIcon />
-                    <span className="group-hover:underline">Unsubscribe & don't show this again</span>
+                    <span className="group-hover:underline">Unsubscribe & don&apos;t show this again</span>
                   </button>
                   <p className="text-xs text-text-muted">
                     Need help? Contact{' '}

@@ -1,14 +1,30 @@
 // src/lib/emailjs.ts
 import emailjs from '@emailjs/browser';
 
-// EmailJS configuration
-const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'default_service';
-const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'newsletter_template';
-const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'your_public_key';
+// EmailJS configuration - NEVER commit hardcoded credentials
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+const EMAILJS_NEWSLETTER_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_NEWSLETTER_TEMPLATE_ID || 'template_k3v4qm9';
+const EMAILJS_CONTACT_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID || 'template_rq6cbua';
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+// Validate required environment variables
+if (!EMAILJS_SERVICE_ID || !EMAILJS_NEWSLETTER_TEMPLATE_ID || !EMAILJS_CONTACT_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+  if (process.env.NODE_ENV === 'production') {
+    console.warn('EmailJS environment variables not configured. Forms will show fallback messages.');
+  }
+}
 
 // Initialize EmailJS
 export const initializeEmailJS = () => {
+  if (!EMAILJS_PUBLIC_KEY) {
+    // Silent fail in development, only warn in production
+    if (process.env.NODE_ENV === 'production') {
+      console.warn('EmailJS Public Key not configured');
+    }
+    return false;
+  }
   emailjs.init(EMAILJS_PUBLIC_KEY);
+  return true;
 };
 
 // Newsletter subscription function
@@ -20,12 +36,29 @@ export const subscribeToNewsletter = async (data: {
 }) => {
   try {
     // Initialize EmailJS if not already done
-    initializeEmailJS();
+    if (!initializeEmailJS()) {
+      return {
+        success: false,
+        error: process.env.NODE_ENV === 'production' 
+          ? 'Email service not configured. Please contact team@manic.agency directly.'
+          : 'EmailJS not configured (development mode). Add environment variables for production.'
+      };
+    }
+
+    // Validate required environment variables
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_NEWSLETTER_TEMPLATE_ID) {
+      return {
+        success: false,
+        error: process.env.NODE_ENV === 'production'
+          ? 'Email service not properly configured. Please contact team@manic.agency directly.'
+          : 'EmailJS templates not configured (development mode).'
+      };
+    }
 
     // Send email using EmailJS
     const result = await emailjs.send(
       EMAILJS_SERVICE_ID,
-      EMAILJS_TEMPLATE_ID,
+      EMAILJS_NEWSLETTER_TEMPLATE_ID,
       {
         to_email: 'team@manic.agency', // Your email to receive notifications
         subscriber_email: data.email,
@@ -33,8 +66,11 @@ export const subscribeToNewsletter = async (data: {
         subscriber_company: data.company || 'Not provided',
         subscription_source: data.source || 'unknown',
         reply_to: data.email,
-        // Include all data for the email template
-        ...data,
+        // Include additional data for the email template
+        email: data.email,
+        name: data.name,
+        company: data.company,
+        source: data.source,
       }
     );
 
@@ -64,20 +100,39 @@ export const sendContactMessage = async (data: {
   subject?: string;
 }) => {
   try {
-    initializeEmailJS();
+    if (!initializeEmailJS()) {
+      return {
+        success: false,
+        error: process.env.NODE_ENV === 'production'
+          ? 'Email service not configured. Please contact team@manic.agency directly.'
+          : 'EmailJS not configured (development mode). Add environment variables for production.'
+      };
+    }
+
+    // Validate required environment variables
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_CONTACT_TEMPLATE_ID) {
+      return {
+        success: false,
+        error: process.env.NODE_ENV === 'production'
+          ? 'Email service not properly configured. Please contact team@manic.agency directly.'
+          : 'EmailJS templates not configured (development mode).'
+      };
+    }
 
     const result = await emailjs.send(
       EMAILJS_SERVICE_ID,
-      process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID || 'contact_template',
+      EMAILJS_CONTACT_TEMPLATE_ID,
       {
         to_email: 'team@manic.agency',
         from_name: data.name,
         from_email: data.email,
         company: data.company || 'Not provided',
-        message: data.message,
+        message_content: data.message,
         subject: data.subject || 'New Contact Form Submission',
         reply_to: data.email,
-        ...data,
+        // Additional template variables
+        name: data.name,
+        email: data.email,
       }
     );
 
