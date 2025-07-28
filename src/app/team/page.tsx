@@ -351,6 +351,8 @@ const SynergyNetworkSVG = ({ className = "" }: { className?: string }) => (
 const executives = [
     { id: 'jd', name: 'Johnny Dunn', title: 'Lead Engineering & Co-founder', emoji: '🦁', description: 'A NLP wiz navigating the digital ether. Full-stack engineer & artist specializing in crafting complex data pipelines, training SOTA models, and tailoring bespoke web/app experiences. Previously architected systems at eBay & blockchain solutions at Tilting Point.', icon: <GitBranch size={18} /> },
     { id: 'nathan', name: 'Nathan Franc', title: 'Lead Design & Co-founder', emoji: '🦊', description: 'Multidisciplinary Design Principal based in Melbourne, AU. Expertise spans Product Design (UI/UX), intricate Design Systems, and Brand Identity. Explores the liminal space where Generative AI intersects with meaningful, human-centered design applications. Cautiously optimistic alchemist.', icon: <Palette size={18} /> },
+    { id: 'godwin', name: 'Godwin', title: 'Junior Marketer', emoji: '🦋', description: 'Gradually forging their mark in the digital marketing world, Godwin is becoming a staple in web3 communities globally, and a knack for managing social media content.', icon: <BrainCircuit size={18} /> },
+
 ];
 
 // --- ASCII Art ---
@@ -361,7 +363,7 @@ const teamArtSet = [
   ██║╚██╗╚════██║ ╚════██║
   ██║ ╚██╗███████║ ███████║
   ╚═╝  ╚═╝╚══════╝ ╚══════╝
-« CORE ARCHITECTS // MANIC »`,
+« CORE ARCHITECTS // MANIC.AGENCY »`,
 `  ╔═══════╗ ╔═══════╗ ╔═══════╗
  ║ INPUT  ║═║ LOGIC  ║═║ OUTPUT║
  ╚═══════╝ ╚═══════╝ ╚═══════╝
@@ -429,7 +431,7 @@ const TeamsPage = () => {
                     </motion.div>
                     <h1 className="projects-title project-header-glitch text-shadow-glow">Meet the Manics<span className="accent-dot">.</span></h1>
                          <motion.p variants={fadeIn} className={`${styles.sectionSubtitle} max-w-3xl`}>
-                             We are a curated collective of senior engineers, visionary designers, and strategic operators – the navigators of the Manic Blueprint. We synthesize diverse expertise to transform ambitious ideas into tangible, impactful digital realities.
+                             Manic Agency is comprised of a curated collective of senior engineers, visionary designers, and strategic operators – the navigators of the Manic Blueprint. We synthesize diverse expertise to transform ambitious ideas into tangible, impactful digital realities.
                          </motion.p>
                          <OrnateDividerSVG className="text-[color:var(--accent-secondary)]" />
                      </div>
@@ -484,7 +486,7 @@ const TeamsPage = () => {
                     <motion.div className="max-w-3xl mx-auto text-center mb-10 md:mb-12" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={staggerContainer}>
                         <motion.h2 variants={fadeIn} className={`${styles.sectionTitle}`}>Operational Nexus</motion.h2>
                         <motion.p variants={fadeIn} className={`${styles.sectionSubtitle}`}>
-                            Our core operates in multiple hemispheres, with a seamless collaborative workflow ensnared within a collective consciousness.
+                            Manic operates in multiple hemispheres, with a seamless collaborative workflow ensnared within a collective consciousness.
                         </motion.p>
                     </motion.div>
 

@@ -1,69 +1,231 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# =====================================================
+# Manic Agency - Git Ignore Configuration
+# =====================================================
 
 # Dependencies
-/node_modules
-/.pnp
+# =====================================================
+node_modules/
+.pnp
 .pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
 
-# Testing
-/coverage
+# Testing & Coverage
+# =====================================================
+coverage/
+.nyc_output/
 
-# Next.js
-/.next/
-/out/
+# Next.js Build Output
+# =====================================================
+.next/
+out/
+build/
+dist/
 
-# Production
-/build
+# Production & Deployment
+# =====================================================
+.vercel
+.netlify
 
-# Environment variables
+# Environment Variables
+# =====================================================
+# Local env files (never commit these!)
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# Debug logs
+# Debug & Log Files
+# =====================================================
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-
-# Vercel
-.vercel
+lerna-debug.log*
+.pnpm-debug.log*
 
 # TypeScript
+# =====================================================
 *.tsbuildinfo
 next-env.d.ts
 
-# IDE/Editor files
+# Image Optimization System
+# =====================================================
+# Local backup directory (contains original unoptimized images)
+public/_originals/
+
+# Optimization cache, logs, and reports
+scripts/.image-optimization-cache.json
+scripts/.image-optimization.log
+scripts/.optimization-report.json
+
+# Temporary files created during optimization
+*.tmp
+*.jpg.tmp
+*.png.tmp
+*.webp.tmp
+*.avif.tmp
+
+# Generated modern formats (uncomment if you want to regenerate on each build)
+# Note: Keeping these tracked means faster builds but larger repo
+# *.webp
+# *.avif
+
+# Custom image processing logs
+image-processing-*.log
+
+# Test images directory
+public/test-images/
+
+# Bundle Analyzer
+# =====================================================
+.next/analyze/
+analyze/
+stats.json
+
+# IDE & Editor Files
+# =====================================================
+# VS Code
 .vscode/
+*.code-workspace
+
+# IntelliJ/WebStorm
 .idea/
+*.iml
+*.iws
+*.ipr
+
+# Vim
 *.swp
 *.swo
-.aider*
+*~
+.netrwhist
 
-# OS generated files
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# AI Assistants
+.aider*
+.cursor*
+.github/copilot*
+
+# OS Generated Files
+# =====================================================
+# macOS
 .DS_Store
 .DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
-ehthumbs.db
+.AppleDouble
+.LSOverride
+Icon
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
 Thumbs.db
-*.pem
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
 
-# Bundle analyzer
-/.next/analyze/
+# Linux
+.directory
+.Trash-*
 
-# Temporary files
+# Temporary Files
+# =====================================================
 *.tmp
 *.temp
+*.bak
+*.backup
+*.old
+.tmp/
+tmp/
+temp/
 
-# Image optimization backups
-/public/_originals/
+# Security & Certificates
+# =====================================================
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
 
-# Lock files (optional - uncomment if using pnpm only)
-# package-lock.json
+# Package Manager Lock Files
+# =====================================================
+# Uncomment the lock files you DON'T use
+# We use npm, so we keep package-lock.json
 # yarn.lock
+# pnpm-lock.yaml
+# bun.lockb
 
+# Misc
+# =====================================================
+# Backup files
+*.backup
+*.bak
+scripts/*.bak
 
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Logs not covered above
+logs/
+*.log
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+
+# Cache directories
+.cache/
+.parcel-cache/
+.turbo/
+
+# Optional: Python (if using any Python scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+
+# =====================================================
+# Project-Specific Ignores
+# =====================================================
+# Add any project-specific files or directories here
+
+# Example: Ignore specific test data
+# test-data/
+
+# Example: Ignore generated documentation
+# docs/generated/
+
+# =====================================================
+# Notes:
+# - Git LFS tracked files (.jpg, .png, etc.) are NOT ignored
+# - public/_originals/ contains backup images and should NEVER be committed
+# - WebP/AVIF files are currently tracked for faster builds
+# - To regenerate WebP/AVIF on each build, uncomment the relevant lines above
+# =====================================================

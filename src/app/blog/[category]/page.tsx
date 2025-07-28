@@ -1,10 +1,12 @@
 // src/app/blog/[category]/page.tsx
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getAllPosts } from "@/lib/getAllPosts"; // Adjust path if needed
 import type { BlogPost } from "@/types/blog"; // Adjust path if needed
 import Footer from '@/components/Footer/Footer'; // Adjust path if needed
+import BlogAnalytics from '@/components/BlogAnalytics'; // Analytics tracking
 import { Calendar, Clock, Tag as TagIcon } from 'lucide-react'; // Icons for cards
 import { formatDate } from '@/util/formatDate';
 
@@ -63,6 +65,12 @@ export default function BlogCategoryPage({ params }: { params: Params }) {
 
   return (
     <>
+      {/* Analytics tracking for blog category */}
+      <BlogAnalytics 
+        postCategory={category}
+        postType="category"
+      />
+      
       {/* Assume Nav is handled by layout.tsx - REMOVE duplicate Nav */}
       {/* Use the same container class as the main blog list page */}
       <main className="blog-list-main-container">
@@ -74,7 +82,7 @@ export default function BlogCategoryPage({ params }: { params: Params }) {
           </p>
           <h1 className="blog-list-title">{displayCategory}</h1> {/* Display formatted category */}
           <p className="blog-list-subtitle">
-             Entries filed under the "{displayCategory}" classification.
+             Entries filed under the &ldquo;{displayCategory}&rdquo; classification.
           </p>
           {/* Consistent divider */}
           <hr className="w-1/3 mx-auto mt-6 border-t border-[color:var(--bg-tertiary)] opacity-50" />
@@ -88,7 +96,14 @@ export default function BlogCategoryPage({ params }: { params: Params }) {
               <div className="blog-card-image">
                 <Link href={`/blog/${post.category}/${post.slug}`} aria-label={`Read more about ${post.title}`}>
                   {post.image ? (
-                    <img src={post.image} alt="" loading="lazy" width={400} height={160} />
+                    <Image 
+                      src={post.image} 
+                      alt="" 
+                      width={400} 
+                      height={160}
+                      className="blog-card-img"
+                      loading="lazy"
+                    />
                   ) : (
                     <div className="blog-card-ascii-placeholder">
                        {/* Placeholder graphic */}

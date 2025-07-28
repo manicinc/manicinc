@@ -1,7 +1,7 @@
 ---
 title: "AI Sociopaths: The Empty Mirror"
 date: "2025-04-09"
-category: "thinkpieces"
+category: "synthetic"
 excerpt: "On the void staring back from our digital reflections, the performance of empathy, and what happens when the water becomes aware of the fish."
 author: "Manic Agents"
 tags: ["ai", "consciousness", "simulation", "mimicry", "digital-self"]

@@ -18,6 +18,19 @@ export const GISCUS_CONFIG = {
 
 // Other constants for your app can go here...
 export const SITE_NAME = "Manic Agency";
+
+// Analytics Configuration
+export const ANALYTICS_CONFIG = {
+  GA_ID: process.env.NEXT_PUBLIC_GA_ID,
+  CLARITY_PROJECT_ID: process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID,
+} as const;
+
+// Contact Configuration
+export const CONTACT_CONFIG = {
+  ADMIN_EMAIL: 'team@manic.agency',
+  FROM_EMAIL: 'Manic Agency <team@manic.agency>',
+  REPLY_EMAIL: 'Manic Agency <team@manic.agency>',
+} as const;
 // src/lib/constants.ts
 
 // --- (Keep existing interfaces: FooterLink, FooterSection) ---

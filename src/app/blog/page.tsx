@@ -2,6 +2,8 @@
 import React, { Suspense } from 'react';
 import BlogListClient from './BlogListClient'; // Import Client Component
 import { getAllPosts } from '@/lib/getAllPosts'; // Adjust path if needed
+import BlogAnalytics from '@/components/BlogAnalytics'; // Analytics tracking
+import NewsletterSection from '@/components/NewsletterSection'; // Newsletter signup
 import type { Metadata } from 'next';
 import "@/app/styles/blogs.css"; // Import blog styles
 
@@ -64,6 +66,9 @@ export default function BlogIndexPage() {
 
     return (
         <div className="blog-scope">
+            {/* Analytics tracking for blog listing */}
+            <BlogAnalytics postType="list" />
+            
             <main className="blog-main-content-area">
                 <div className="blog-list-main-container">
                     <header className="blog-list-page-header">
@@ -78,6 +83,13 @@ export default function BlogIndexPage() {
                         <BlogListClient initialPosts={posts} />
                     </Suspense>
                 </div>
+                
+                {/* Newsletter signup for blog */}
+                <NewsletterSection 
+                    variant="blog" 
+                    background="accent"
+                    className="mt-16"
+                />
             </main>
         </div>
     );

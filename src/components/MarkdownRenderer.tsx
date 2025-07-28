@@ -28,7 +28,8 @@ import rehypeRaw from 'rehype-raw';                      // Allows raw HTML in M
 import { Components } from 'react-markdown';             // Type definition for component overrides map
 import type { PluggableList } from 'unified';            // Type for plugin arrays
 import type { Element, Text, Root, ElementContent } from 'hast'; // Types for Abstract Syntax Tree nodes
-import { visit } from 'unist-util-visit';                // Utility to traverse the HAST tree
+import { visit } from 'unist-util-visit';                  // AST traversal utility
+import { SKIP } from 'unist-util-visit';                 // Visit control constants
 
 // --- Syntax Highlighting ---
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'; // Code highlighting component
@@ -180,15 +181,26 @@ export function CustomMarkdownRenderer({ children: rawMarkdown, className = "" }
     // Modifies the Markdown Abstract Syntax Tree before rendering
     const rehypeProcessCustomSyntax: PluggableList[number] = () => {
         return (tree: Root) => {
-            visit(tree, 'element', (node: Element) => {
+            let collectingBanner = false;
+            let bannerNode: Element | null = null;
+            let bannerContent: string[] = [];
+            let collectingCallout = false;
+            let calloutNode: Element | null = null;
+            let calloutContent: string[] = [];
+
+            visit(tree, 'element', (node: Element, index, parent) => {
 
                 // Transform :::banner paragraphs into divs with data attributes
                 if (node.tagName === 'p') {
                     const textContent = getNodeText(node).trim();
-                    const bannerMatch = textContent.match(/^:::banner\s*(?:\{([^}]*)\})?\s*([\s\S]*?):::$/);
-                    if (bannerMatch) {
-                        const [, attrString = '', bannerText] = bannerMatch;
+                    
+                    // Check for single-line banner with closing :::
+                    const singleLineBannerMatch = textContent.match(/^:::banner\s*(?:\{([^}]*)\})?\s*(.*?)\s*:::$/);
+                    if (singleLineBannerMatch) {
+                        const [, attrString = '', bannerText] = singleLineBannerMatch;
                         const attributes = parseAttributes(attrString);
+                        
+                        // Transform this node to banner
                         node.tagName = 'div';
                         node.properties = {
                             ...node.properties,
@@ -196,7 +208,108 @@ export function CustomMarkdownRenderer({ children: rawMarkdown, className = "" }
                             'data-banner-attrs': JSON.stringify(attributes),
                         };
                         node.children = [{ type: 'text', value: bannerText.trim() }];
-                        return; // Stop further processing for this node
+                        return;
+                    }
+                    
+                    // Check for multiline banner start (:::banner{...} or just :::banner)
+                    const bannerStartMatch = textContent.match(/^:::banner\s*(?:\{([^}]*)\})?(.*)$/);
+                    if (bannerStartMatch) {
+                        const [, attrString = '', remainingText] = bannerStartMatch;
+                        const attributes = parseAttributes(attrString);
+                        
+                        // Start collecting banner content
+                        collectingBanner = true;
+                        bannerContent = [];
+                        
+                        // Check if there's content on the same line
+                        if (remainingText.trim()) {
+                            bannerContent.push(remainingText.trim());
+                        }
+                        
+                        // Transform this node to banner
+                        node.tagName = 'div';
+                        node.properties = {
+                            ...node.properties,
+                            'data-custom-component': 'banner',
+                            'data-banner-attrs': JSON.stringify(attributes),
+                        };
+                        bannerNode = node;
+                        return;
+                    }
+                    
+                    // Check for banner end (standalone :::)
+                    if (textContent === ':::' && collectingBanner) {
+                        // End banner collection
+                        collectingBanner = false;
+                        if (bannerNode) {
+                            (bannerNode as any).children = [{ type: 'text', value: bannerContent.join(' ') }];
+                        }
+                        // Mark this node for removal
+                        node.properties = { 'data-remove': 'true' };
+                        return;
+                    }
+                    
+                    // If we're collecting banner content, add this text
+                    if (collectingBanner) {
+                        bannerContent.push(textContent);
+                        // Mark this node for removal
+                        node.properties = { 'data-remove': 'true' };
+                        return;
+                    }
+                    
+                    // If we're collecting callout content, add this text
+                    if (collectingCallout) {
+                        calloutContent.push(textContent);
+                        // Mark this node for removal
+                        node.properties = { 'data-remove': 'true' };
+                        return;
+                    }
+                    
+                    // Check for standalone callouts (:::alert, :::tip, etc.)
+                    const calloutMatch = textContent.match(/^:::(note|warning|tip|alert)\s*(.*)$/);
+                    if (calloutMatch) {
+                        const [, type, content] = calloutMatch;
+                        
+                        // Check if this is a single-line callout with content
+                        if (content.trim()) {
+                            // Single-line callout - transform immediately
+                            node.tagName = 'div';
+                            node.properties = {
+                                'data-custom-component': 'callout',
+                                'data-callout-type': type,
+                                className: ['callout', `callout-${type}`]
+                            };
+                            node.children = [{ type: 'text', value: content.trim() }];
+                            return;
+                        } else {
+                            // Multi-line callout - start collecting
+                            collectingCallout = true;
+                            calloutContent = [];
+                            
+                            // Transform this node to callout
+                            node.tagName = 'div';
+                            node.properties = {
+                                'data-custom-component': 'callout',
+                                'data-callout-type': type,
+                                className: ['callout', `callout-${type}`]
+                            };
+                            calloutNode = node;
+                            // Clear the marker text
+                            node.children = [];
+                            return;
+                        }
+                    }
+                    
+                    // Check for empty line (end of callout content)
+                    if (textContent === '' && collectingCallout) {
+                        // End callout collection
+                        collectingCallout = false;
+                        if (calloutNode) {
+                            (calloutNode as any).children = [{ type: 'text', value: calloutContent.join(' ') }];
+                        }
+                        // Mark this node for removal
+                        node.properties = { 'data-remove': 'true' };
+                        return;
                     }
                 }
 
@@ -236,6 +349,22 @@ export function CustomMarkdownRenderer({ children: rawMarkdown, className = "" }
                      }
                  }
             });
+            
+            // Final cleanup: if we're still collecting content at the end, finalize it
+            if (collectingBanner && bannerNode) {
+                (bannerNode as any).children = [{ type: 'text', value: bannerContent.join(' ') }];
+            }
+            if (collectingCallout && calloutNode) {
+                (calloutNode as any).children = [{ type: 'text', value: calloutContent.join(' ') }];
+            }
+            
+            // Second pass: remove nodes marked for removal
+            visit(tree, 'element', (node: Element, index, parent) => {
+                if (node.properties?.['data-remove'] && parent && typeof index === 'number') {
+                    parent.children.splice(index, 1);
+                    return [SKIP, index];
+                }
+            });
         };
     };
 
@@ -246,15 +375,21 @@ export function CustomMarkdownRenderer({ children: rawMarkdown, className = "" }
         // Override 'p' for Lead Paragraphs (>>>)
         p: ({ node, children: pChildren, ...props }: ParagraphProps) => {
             const textValue = getNodeText(node).trim();
-            const leadMarker = '>>> ';
+            const leadMarker = '>>>';
             if (textValue.startsWith(leadMarker)) {
                 // Simplified logic to remove marker mainly from first text child
                 const stripFirstChildMarker = (childrenToProcess: ReactNode): ReactNode => {
                     const childrenArray = Children.toArray(childrenToProcess);
-                    if (childrenArray.length > 0 && typeof childrenArray[0] === 'string' && childrenArray[0].startsWith(leadMarker)) {
-                        const modifiedFirst = childrenArray[0].substring(leadMarker.length);
-                        // Return new array with modified first child
-                        return [modifiedFirst, ...childrenArray.slice(1)];
+                    if (childrenArray.length > 0 && typeof childrenArray[0] === 'string') {
+                        const firstChild = childrenArray[0];
+                        if (firstChild.startsWith(leadMarker)) {
+                            // Remove the marker and any immediately following whitespace
+                            let modifiedFirst = firstChild.substring(leadMarker.length);
+                            // Trim leading whitespace from the modified text
+                            modifiedFirst = modifiedFirst.replace(/^\s+/, '');
+                            // Return new array with modified first child
+                            return [modifiedFirst, ...childrenArray.slice(1)];
+                        }
                     }
                     return childrenToProcess; // Return original children if no marker found
                 };
@@ -264,10 +399,39 @@ export function CustomMarkdownRenderer({ children: rawMarkdown, className = "" }
             return <p {...props}>{pChildren}</p>; // Default paragraph
         },
 
-        // Override 'blockquote' for Styled Quotes (*"..."*) and standard quotes
+        // Override 'blockquote' for Styled Quotes (*"..."*), Lead Paragraphs (>>>), and standard quotes
         blockquote: ({ node, children: bqChildren, ...props }: BlockquoteProps) => {
             // Check if node exists before accessing children (Fixes TS error)
             if (!node) return <blockquote className="standard-blockquote" {...props}>{bqChildren}</blockquote>;
+
+            // Check for Lead Paragraph syntax (>>> converted to nested blockquotes)
+            const nodeText = getNodeText(node).trim();
+            if (nodeText.startsWith('>>>')) {
+                // Extract the content after the >>> marker
+                const leadContent = nodeText.substring(3).trim();
+                return <p className="lead-paragraph">{leadContent}</p>;
+            }
+            
+            // Check for deeply nested blockquotes (>>> creates nested structure)
+            const checkForLeadParagraph = (currentNode: any): boolean => {
+                if (currentNode.tagName === 'blockquote') {
+                    const childBlockquote = currentNode.children?.find((child: any) => child.tagName === 'blockquote');
+                    if (childBlockquote) {
+                        const grandchildBlockquote = childBlockquote.children?.find((child: any) => child.tagName === 'blockquote');
+                        if (grandchildBlockquote) {
+                            // This is likely a >>> lead paragraph (triple nested)
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            };
+            
+            if (checkForLeadParagraph(node)) {
+                // Extract content from deeply nested structure
+                const content = getNodeText(node).trim();
+                return <p className="lead-paragraph">{content}</p>;
+            }
 
             // Check for Styled Quote syntax
             const firstChild = node.children?.[0];
@@ -502,12 +666,13 @@ export function CustomMarkdownRenderer({ children: rawMarkdown, className = "" }
     return (
         <div className={`blog-content ${className || ''}`}> {/* Ensure className is applied */}
             <ReactMarkdown
-                children={rawMarkdown}
                 components={markdownComponents}
                 remarkPlugins={remarkPlugins}
                 rehypePlugins={rehypePlugins}
                 // Do NOT use rehypeAllowDangerousHtml - use rehypeRaw plugin instead
-            />
+            >
+                {rawMarkdown}
+            </ReactMarkdown>
         </div>
     );
 }

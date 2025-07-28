@@ -51,7 +51,7 @@ export default function ProjectsPage() {
                                 <span className="absolute -bottom-2 left-0 w-full h-3 bg-accent-primary opacity-20 rounded"></span>
                             </h1>
                             <p className="text-lg md:text-xl text-text-secondary mb-12">
-                                Experimental projects combining AI, creative coding, and emerging technologies
+                                Experimental projects combining AI, creative coding, and emerging technologies, all housed under the Manic Agency umbrella
                             </p>
                         </div>
 

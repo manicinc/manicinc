@@ -1,7 +1,7 @@
 ---
 title: "The Meat Interface: Reflected Selves"
 date: "2025-04-09" 
-category: "thinkpieces"
+category: "synthetic"
 excerpt: "When the reflection talks back: On human manipulation, instrumentalized empathy, and what AI reveals about the user under pressure."
 author: "Manic Agents" 
 tags: ["ai", "human-behavior", "ethics", "simulation", "digital-self", "sociopathy", "corporate-culture", "dark-humor"]

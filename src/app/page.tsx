@@ -9,12 +9,15 @@ import { Project } from '@/types/project';
 import { HeroSection } from '@/components/HeroSection';
 import Services from "@/components/Services/Services";
 import Intro from "@/components/Intro/Intro";
+import ContactSection from '@/components/ContactSection';
+import NewsletterSection from '@/components/NewsletterSection';
 import HomePageSkeleton from '@/components/Skeletons/HomePageSkeleton'; // Keep Skeleton import
+import EnhancedTracking from '@/components/EnhancedTracking'; // Analytics tracking
 
 // SEO Metadata for Homepage
 export const metadata: Metadata = {
-    title: 'Manic Agency - Experimental Creative Development & Design Studio',
-    description: 'Los Angeles-based creative development agency specializing in AR/VR, blockchain solutions, AI implementation, and innovative web applications. We forge reality from digital ether.',
+    title: 'Manic Agency - Metaverses intersect here',
+    description: 'Manic Agency - Where Metaverses Intersect. Digital agency specializing in Web3, AI, AR/VR, creative technology, and game publishing through Manic Games platform.',
     keywords: [
         'creative development agency',
         'Los Angeles web development', 
@@ -38,8 +41,8 @@ export const metadata: Metadata = {
         locale: 'en_US',
         url: '/',
         siteName: 'Manic Agency',
-        title: 'Manic Agency - Experimental Creative Development & Design Studio',
-        description: 'Los Angeles-based creative development agency specializing in AR/VR, blockchain solutions, AI implementation, and innovative web applications.',
+        title: 'Manic Agency - Metaverses intersect here',
+        description: 'Manic Agency - Where Metaverses Intersect. Digital agency specializing in Web3, AI, AR/VR, creative technology, and game publishing through Manic Games platform.',
         images: [
             {
                 url: '/og-default.webp',
@@ -53,8 +56,8 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         site: '@manicagency',
         creator: '@manicagency',
-        title: 'Manic Agency - Experimental Creative Development & Design Studio',
-        description: 'Los Angeles-based creative development agency specializing in AR/VR, blockchain solutions, AI implementation, and innovative web applications.',
+        title: 'Manic Agency - Metaverses intersect here',
+        description: 'Manic Agency - Where Metaverses Intersect. Digital agency specializing in Web3, AI, AR/VR, creative technology, and game publishing through Manic Games platform.',
         images: [{
             url: '/og-default.webp',
             alt: 'Manic Agency - Experimental Creative Development'
@@ -154,20 +157,39 @@ export default function HomePage() {
     // No data fetching initiated here
 
     return (
-        // Wrap the parts that need data (or the whole initial view) in Suspense
-        <Suspense fallback={<HomePageSkeleton />}>
+        <>
+            {/* Enhanced tracking for homepage interactions */}
+            <EnhancedTracking 
+                enableScrollTracking={true}
+                enableTimeTracking={true}
+                enableElementTracking={true}
+                pageType="home"
+            />
+            
+            {/* Wrap the parts that need data (or the whole initial view) in Suspense */}
+            <Suspense fallback={<HomePageSkeleton />}>
 
-            {/* Render the component that will fetch/await internally */}
-            {/* Add the comment to suppress the TypeScript error for the async Server Component */}
-            {/* @ts-expect-error Server Component */}
-            <HeroSectionWithData />
+                {/* Render the component that will fetch/await internally */}
+                {/* Add the comment to suppress the TypeScript error for the async Server Component */}
+                {/* @ts-expect-error Server Component */}
+                <HeroSectionWithData />
 
-            {/* These components render after HeroSectionWithData resolves,
-                or instantly if moved outside Suspense boundary */}
-            <Services />
-            <Intro />
+                {/* These components render after HeroSectionWithData resolves,
+                    or instantly if moved outside Suspense boundary */}
+                <Services />
+                <Intro />
 
-        </Suspense> // Close Suspense tag
+            </Suspense> {/* Close Suspense tag */}
+            
+            {/* Newsletter signup for main site */}
+            <NewsletterSection 
+                variant="main" 
+                background="default"
+            />
+            
+            {/* Contact section with integrated newsletter */}
+            <ContactSection />
+        </>
     );
 }
 

@@ -18,6 +18,9 @@ import DisqusComments from '@/components/Blog/DisqusComments'; // Add import for
 import { AsciiArtPlaceholder } from '@/lib/asciiPlaceholders'; // Fallback image
 import { CustomMarkdownRenderer } from '@/components/MarkdownRenderer'; // Markdown rendering
 import BlogPageClient from './BlogPageClient'; // Client wrapper for reading mode etc.
+import BlogAnalytics from '@/components/BlogAnalytics'; // Analytics tracking
+import ScrollTracking from '@/components/ScrollTracking'; // Scroll engagement tracking
+import EnhancedTracking from '@/components/EnhancedTracking'; // Enhanced analytics
 
 import { formatDate } from '@/util/formatDate';
 // Icons (Ensure these are correctly imported/defined in Icons.tsx)
@@ -139,6 +142,21 @@ export default async function BlogPostPage({ params }: PageProps) {
 
     return (
         <>
+            {/* Analytics tracking for blog posts */}
+            <BlogAnalytics 
+                postTitle={post.title}
+                postCategory={post.category}
+                postAuthor={post.author?.name}
+                postTags={post.tags}
+                postType="post"
+            />
+            
+            {/* Scroll engagement tracking */}
+            <ScrollTracking 
+                postTitle={post.title}
+                contentSelector="#post-content-top"
+            />
+            
             <BlogPageClient> {/* Client wrapper for Reading Mode, etc. */}
                 {/* Main layout container - sidebar displayed based on `has-sidebar` */}
                 <div className={`blog-layout-container ${displaySidebar ? 'has-sidebar' : 'no-sidebar'}`}>

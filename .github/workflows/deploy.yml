@@ -38,6 +38,7 @@ jobs:
         run: npm run build:static:lfs
         env:
           NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
+          NEXT_PUBLIC_CLARITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_CLARITY_PROJECT_ID }}
 
       - name: Create .nojekyll file
         # Ensures GitHub Pages serves correctly

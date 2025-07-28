@@ -556,6 +556,69 @@
 }
 
 /* ======================================== */
+/* Games Button Styles                      */
+/* ======================================== */
+.gamesBtn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none !important;
+    border-bottom: none !important;
+    border: 1px solid rgba(var(--text-primary-rgb), 0.2);
+    border-radius: var(--radius-base);
+    min-height: 48px;
+    background: rgba(var(--bg-secondary-rgb), 0.8);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    will-change: transform, box-shadow, background, border-color;
+}
+
+:global(.light) .gamesBtn {
+    border-color: rgba(var(--text-primary-rgb), 0.15);
+    background: rgba(var(--bg-secondary-rgb), 0.9);
+}
+
+.gamesBtn:hover {
+    background: rgba(var(--accent-secondary-rgb), 0.1);
+    border-color: rgba(var(--accent-secondary-rgb), 0.4);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(var(--accent-secondary-rgb), 0.2);
+}
+
+:global(.light) .gamesBtn:hover {
+    background: rgba(var(--accent-secondary-rgb), 0.08);
+    border-color: rgba(var(--accent-secondary-rgb), 0.3);
+}
+
+.gamesSvg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    /* Improve visibility in dark mode */
+    filter: brightness(1.2) contrast(1.1);
+}
+
+:global(.light) .gamesSvg {
+    filter: brightness(0.8) contrast(1.1);
+}
+
+.gamesBtn:hover .gamesSvg {
+    transform: scale(1.1) rotate(-2deg);
+    filter: brightness(1.4) contrast(1.2);
+}
+
+:global(.light) .gamesBtn:hover .gamesSvg {
+    filter: brightness(0.6) contrast(1.2);
+}
+
+/* ======================================== */
 /* Mobile Menu Button (Ornamental Hamburger) */
 /* ======================================== */
 .mobileMenuBtn {

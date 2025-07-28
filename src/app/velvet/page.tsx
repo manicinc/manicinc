@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Velvet Web - AI-Powered Community for Innovators",
-    description: "Join an innovative community of founders, creators, and developers. Get AI-powered insights, project management, advanced code analysis tools, and curated crypto/tech news.",
+    title: "Velvet Web - AI-Powered Community for Innovators // Manic Agency",
+    description: "Join an innovative community of founders, creators, and developers. Get AI-powered insights, project management, advanced code analysis tools, and curated crypto/tech news. Launched by Manic.agency.",
     keywords: [
         'velvet web',
         'AI-powered community',

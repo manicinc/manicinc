@@ -56,9 +56,9 @@ html:not([data-theme-loaded="true"]) * {
   --color-light-parchment: #fbf6ef;
   --color-light-paper: #f5ede1;
   --color-light-cream: #ede4d6;
-  --color-light-ink: #4a3f35;
+  --color-light-ink: #3a2f25;
   --color-light-sepia: #7a6d60;
-  --color-ink-rgb: 74, 63, 53;
+  --color-ink-rgb: 58, 47, 37;
 
   /* --- LIGHT THEME Accent Colors --- */
   --color-light-burgundy: #b66880;
@@ -152,8 +152,8 @@ html:not([data-theme-loaded="true"]) * {
   --sidebar-width-collapsed: 65px;
   --reading-mode-max-width: 700px;
   --blog-content-max-width: 1000px;
-  --global-font-size-base: 17px;
-  --blog-font-size-base: 18px;
+  --global-font-size-base: 18px;
+  --blog-font-size-base: 20px;
   --radius-sharp: 0px;
   --radius-base: 4px;
   --radius-md: 6px;
@@ -201,11 +201,11 @@ html[class*="dark"] {
   --color-alert: #e66767;
 
   /* --- Dark Text Colors --- */
-  --color-text-light: var(--color-parchment);
-  --color-text-mid: #d8cce6;
+  --color-text-light: #ffffff !important;
+  --color-text-mid: #e8dce6 !important;
   --color-text-dark: var(--color-ink);
-  --color-text-primary-rgb: 245, 240, 230;
-  --color-text-secondary-rgb: 216, 204, 230;
+  --color-text-primary-rgb: 255, 255, 255;
+  --color-text-secondary-rgb: 232, 220, 230;
 
   /* --- DARK THEME VARIABLES --- */
   --bg-primary: var(--color-dark-bg) !important;
@@ -214,31 +214,31 @@ html[class*="dark"] {
   --bg-secondary-rgb: 64, 46, 70;
   --bg-tertiary: var(--color-light-bg) !important;
   --bg-tertiary-rgb: 95, 72, 103;
-  --bg-code: #201a24 !important;
-  --bg-blog-paper: #302435 !important;
-  --bg-blog-paper-rgb: 48, 36, 53;
+  --bg-code: #1a1220 !important;
+  --bg-blog-paper: #252033 !important;
+  --bg-blog-paper-rgb: 37, 32, 51;
 
   --text-primary: var(--color-text-light) !important;
   --text-primary-rgb: var(--color-text-primary-rgb);
   --text-secondary: var(--color-text-mid) !important;
   --text-secondary-rgb: var(--color-text-secondary-rgb);
-  --text-muted: #a899b8 !important;
+  --text-muted: #c2b8d1 !important;
   --text-heading: #ffffff !important;
   --text-code: var(--color-text-mid) !important;
   --text-on-accent: #ffffff !important;
 
-  --accent-primary: var(--color-burgundy) !important;
-  --accent-primary-rgb: 214, 80, 118;
-  --accent-secondary: var(--color-sage) !important;
-  --accent-secondary-rgb: 136, 176, 164;
-  --accent-highlight: var(--color-antique-gold) !important;
-  --accent-highlight-rgb: 212, 172, 128;
-  --accent-muted1: var(--color-dusty-rose) !important;
-  --accent-muted1-rgb: 200, 162, 186;
-  --accent-muted2: var(--color-powder-blue) !important;
-  --accent-muted2-rgb: 160, 180, 203;
-  --accent-alert: var(--color-alert) !important;
-  --accent-alert-rgb: 230, 103, 103;
+  --accent-primary: #e85a88 !important;
+  --accent-primary-rgb: 232, 90, 136;
+  --accent-secondary: #7de8c9 !important;
+  --accent-secondary-rgb: 125, 232, 201;
+  --accent-highlight: #f4c892 !important;
+  --accent-highlight-rgb: 244, 200, 146;
+  --accent-muted1: #d9c2d6 !important;
+  --accent-muted1-rgb: 217, 194, 214;
+  --accent-muted2: #b8c8d8 !important;
+  --accent-muted2-rgb: 184, 200, 216;
+  --accent-alert: #ff7979 !important;
+  --accent-alert-rgb: 255, 121, 121;
 
   /* --- Background Overlays --- */
   --bg-overlay-start: rgba(34, 24, 43, 0.85) !important;
@@ -401,7 +401,7 @@ pre > code {
   word-wrap: normal;
 }
 blockquote {
-  border-left: 4px solid var(--accent-muted1);
+  border-left: 4px solid var(--text-muted);
   background-color: rgba(var(--bg-secondary-rgb), 0.3);
   padding: 1rem 1.5rem 1rem 1.8rem;
   margin: 2rem 0 2rem 0.5rem;

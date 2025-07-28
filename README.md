@@ -1,6 +1,8 @@
-# Manic Agency
+# Manic Agency // The Looking Glass
 
-> Digital agency specializing in Web3, AI, AR/VR, and creative technology. Open source Next.js site with advanced SEO and performance optimization.
+> Digital agency specializing in Web3, AI, AR/VR, and creative technology at manic.agency. Blog for thinkpieces, research, and mad writings with open submissions at manic.agency/blog.
+
+> Open source Next.js site with advanced SEO and image optimization pipelines and static exports.
 
 **Live Site**: [manic.agency](https://manic.agency) | **Repo**: [manicinc/manicinc](https://github.com/manicinc/manicinc)
 
@@ -9,10 +11,13 @@
 - [Quick Start](#quick-start)
 - [Git LFS Setup](#git-lfs-setup)
 - [Package Scripts Reference](#package-scripts-reference)
+- [Image Optimization](#image-optimization)
 - [Development Workflow](#development-workflow)
 - [Architecture](#architecture)
 - [Content Management](#content-management)
+- [Branding & Design System](#branding--design-system)
 - [SEO & Performance Features](#seo--performance-features)
+  - [Analytics Configuration](#analytics-configuration)
 - [Build Optimization](#build-optimization)
 - [Deployment Pipeline](#deployment-pipeline)
 - [Contributing](#contributing)
@@ -67,34 +72,6 @@ npm run images:find-missing    # Find missing images in markdown files
 3. Commit and push as usual: `git commit -m "Add image"`
 4. Others pull with: `git lfs pull`
 
-### Missing Images Issue
-
-Some images referenced in blog posts were **never committed to the repository** and need to be added fresh:
-
-- `this-is-aider.png` - Aider CLI screenshot  
-- `her-movie-screenshot-warner-bros.png` - Movie screenshot
-- Various tutorial placeholder images
-
-**To fix**: Source the actual image files and add them to the repository. They'll automatically be tracked by LFS.
-
-### Troubleshooting
-
-**Images appear as small text files?**
-```bash
-npm run lfs:pull    # Download actual LFS files
-```
-
-**Build failing with missing images?**
-```bash
-npm run images:find-missing    # See what's missing
-```
-
-**LFS not working?**
-```bash
-git lfs version     # Check if LFS is installed
-git lfs install     # Install LFS hooks
-```
-
 ## Package Scripts Reference
 
 ### Development Scripts
@@ -107,9 +84,9 @@ npm run lint             # ESLint + auto-fix
 
 ### Build Scripts
 ```bash
-npm run build            # Standard production build + sitemap
-npm run build:lfs        # Production build with LFS pull + sitemap
-npm run build:static     # Standard static export for GitHub Pages
+npm run build            # Production build with auto image optimization + sitemap
+npm run build:lfs        # Production build with LFS pull + optimization + sitemap
+npm run build:static     # Static export for GitHub Pages
 npm run build:static:lfs # Static export with LFS pull for deployment
 npm run start            # Start production server
 npm run start:static     # Test static build locally
@@ -117,18 +94,33 @@ npm run start:static     # Test static build locally
 
 ### LFS & Image Management
 ```bash
-npm run lfs:pull         # Pull all Git LFS files
-npm run lfs:status       # Check Git LFS status
-npm run lfs:check        # Comprehensive LFS + missing image check
+npm run lfs:pull             # Pull all Git LFS files
+npm run lfs:status           # Check Git LFS status
+npm run lfs:check            # Comprehensive LFS + missing image check
 npm run images:find-missing  # Find all missing images in markdown
+npm run images:status        # Check image optimization status
+npm run images:report        # View last optimization report
 ```
 
 ### Optimization Scripts
 ```bash
-npm run optimize:images        # Smart compression (skips optimized)
-npm run optimize:images:force  # Force re-optimize all images
-npm run clean                  # Clean build artifacts and backups
-npm run clean:images           # Re-optimize all images from scratch
+npm run optimize:images          # Interactive optimization (asks for each image)
+npm run optimize:images:force    # Force re-optimize all images
+npm run optimize:images:auto     # Non-interactive with auto-resize (used in build)
+npm run optimize:images:preview  # Preview changes without modifying files
+npm run optimize:images:resize   # Check and resize oversized images only
+npm run optimize:images:safe     # Compress only, no resizing
+npm run optimize:images:avif     # Generate AVIF versions for better compression
+```
+
+### Restore & Cleanup Scripts
+```bash
+npm run restore:images             # Quick restore all from local backup
+npm run restore:images:external    # Restore all from external backup
+npm run restore:images:interactive # Interactive restore menu
+npm run clean                      # Clean build artifacts
+npm run clean:images               # Remove optimization cache and logs
+npm run clean:all                  # Full cleanup including Next.js cache
 ```
 
 ### Analysis & SEO
@@ -138,13 +130,47 @@ npm run analyze          # Bundle size analysis (requires ANALYZE=true)
 npm run postbuild        # Post-build sitemap generation (auto-runs)
 ```
 
-### Build Process Flow
+## Image Optimization
 
-1. **Development**: `npm run dev` → Next.js dev server (fast startup)
-2. **Development with LFS**: `npm run dev:lfs` → LFS check → Next.js dev server  
-3. **Production**: `npm run build:lfs` → LFS pull → image optimization → Next.js build → sitemap
-4. **Static Deploy**: `npm run build:static:lfs` → LFS pull → static export → GitHub Pages ready
-5. **CI/CD**: GitHub Actions runs LFS install → LFS pull → `build:static:lfs` → deploy
+The project includes an advanced image optimization system that automatically runs during builds, featuring parallel processing, smart resizing, and modern format generation.
+
+### Automatic Optimization
+
+Images are **automatically optimized** during `npm run build` with:
+- **Smart Detection**: Skips already-optimized images (10x faster rebuilds)
+- **Parallel Processing**: Uses multiple CPU cores for speed
+- **Modern Formats**: Generates WebP versions, optionally AVIF
+- **Intelligent Resizing**: Detects and resizes oversized images
+- **Backup Safety**: Preserves originals in `public/_originals/` and `../../image-backups/`
+
+### Build Integration
+
+```bash
+# Standard build (includes auto optimization)
+npm run build
+
+# What happens:
+# 1. Runs optimize:images:auto (non-interactive)
+# 2. Processes only new/changed images
+# 3. Generates WebP versions
+# 4. Shows optimization report
+# 5. Continues with Next.js build
+```
+
+### Restoring Images
+
+If you need to restore original images:
+
+```bash
+# Quick restore all images
+npm run restore:images
+
+# Interactive restore (choose specific files/directories)
+npm run restore:images:interactive
+
+# View what was changed
+npm run images:status
+```
 
 ## Development Workflow
 
@@ -164,7 +190,7 @@ npm run images:find-missing    # Check for missing images
 
 # Before committing
 npm run build                  # Test production build
-npm run build:lfs              # Test with LFS if working with images
+npm run optimize:images:preview # Preview image optimizations
 ```
 
 ### Adding New Images
@@ -176,8 +202,9 @@ git add public/assets/blog/my-post/my-screenshot.png
 git commit -m "Add screenshot for blog post"
 git push
 
-# Others can then pull the image
-git lfs pull
+# Images are automatically optimized during build
+# To optimize manually:
+npm run optimize:images
 ```
 
 ## Architecture
@@ -185,7 +212,7 @@ git lfs pull
 **Stack**: Next.js 14 + TypeScript + Tailwind + Framer Motion  
 **Content**: Markdown with gray-matter frontmatter  
 **SEO**: Dynamic metadata + structured data + auto-sitemaps  
-**Analytics**: Vercel Analytics + Google Analytics (GDPR compliant)  
+**Analytics**: Vercel Analytics + Google Analytics + Microsoft Clarity (GDPR compliant)  
 **Deployment**: GitHub Actions → GitHub Pages → Cloudflare CDN  
 
 ## Content Management
@@ -213,18 +240,227 @@ draft: false
 ---
 ```
 
+## Branding & Design System
+
+### Core Brand Colors
+
+| Color | Hex Code | Usage | Role |
+|-------|----------|-------|------|
+| **Light Parchment** | `#fbf6ef` | Primary light background | Warm base |
+| **Light Paper** | `#f5ede1` | Secondary light background | Paper texture |
+| **Light Cream** | `#ede4d6` | Tertiary light background | Subtle accent |
+| **Dark Ink** | `#3a2f25` | Primary text (light theme) | Rich sepia |
+| **Light Sepia** | `#7a6d60` | Secondary text (light theme) | Muted sepia |
+| **Dark Background** | `#22182b` | Primary dark background | Deep purple |
+| **Mid Background** | `#402e46` | Secondary dark background | Medium purple |
+| **Light Background** | `#5f4867` | Tertiary dark background | Light purple |
+| **Pure White** | `#ffffff` | Text on dark theme | Crisp contrast |
+| **Light Mid** | `#e8dce6` | Secondary dark text | Soft white |
+
+### Accent Colors
+
+| Color | Hex Code | Light Theme Use | Dark Theme Use |
+|-------|----------|-----------------|----------------|
+| **Burgundy** | `#b66880` → `#e85a88` | Primary accent | Brighter pink |
+| **Sage** | `#7ea196` → `#7de8c9` | Secondary accent | Mint green |
+| **Gold** | `#b88e62` → `#f4c892` | Highlight accent | Warm gold |
+| **Rose** | `#d4bbc9` → `#d9c2d6` | Muted accent 1 | Soft lavender |
+| **Blue** | `#b5c7d8` → `#b8c8d8` | Muted accent 2 | Powder blue |
+| **Alert** | `#d07676` → `#ff7979` | Error/warning | Bright coral |
+
+### Current Theme Implementation
+
+The site uses a sophisticated dual-theme system with warm, editorial colors:
+
+**Light Theme**:
+- Background: `#fbf6ef` (warm parchment)
+- Text: `#3a2f25` (dark sepia)
+- Accent: `#b66880` (burgundy), `#7ea196` (sage), `#b88e62` (gold)
+
+**Dark Theme**:
+- Background: `#22182b` (deep purple)
+- Text: `#ffffff` (pure white)
+- Accent: `#e85a88` (pink), `#7de8c9` (mint), `#f4c892` (warm gold)
+
+### Typography Stack
+
+- **Display**: Lato (clean sans-serif)
+- **Body**: Inter (system UI optimized)
+- **Mono**: IBM Plex Mono (code)
+- **Blog Headings**: Playfair Display (elegant serif)
+- **Blog Body**: Merriweather (readable serif)
+- **Script**: Dancing Script (decorative)
+
+### Theme Variables
+
+All colors are defined in `src/app/styles/theme.css` using CSS custom properties for easy customization:
+
+```css
+/* Light theme */
+--bg-primary: #fbf6ef;
+--text-primary: #4a3f35;
+--accent-primary: #b66880;
+
+/* Dark theme overrides */
+html.dark {
+  --bg-primary: #22182b;
+  --text-primary: #ffffff;
+  --accent-primary: #e85a88;
+}
+```
+
 ## SEO & Performance Features
 
 ✅ **Automated SEO**: Dynamic meta tags, OpenGraph, Twitter cards  
 ✅ **Structured Data**: JSON-LD for rich snippets  
-✅ **Sitemaps**: Auto-generated with `next-sitemap` (46 pages)  
-✅ **Smart Image Optimization**: Intelligent compression (50-70% reduction)  
-✅ **WebP Generation**: Modern format with automatic fallbacks  
-✅ **Performance**: Core Web Vitals optimized, lazy loading  
+✅ **Sitemaps**: Auto-generated with `next-sitemap`
+✅ **Smart Image Optimization**: Parallel processing, automatic presets  
+✅ **Modern Formats**: WebP + optional AVIF generation  
 ✅ **Accessibility**: WCAG compliance, semantic HTML  
-✅ **Analytics**: Privacy-first tracking with consent management  
+✅ **Analytics**: Privacy-first tracking with consent management, GDPR-compliant
 
-### Configuration
+### Analytics Configuration
+
+This project supports **Google Analytics** and **Microsoft Clarity** with full cookie consent integration.
+
+#### Environment Setup
+
+**GitHub Secrets Only Approach:**
+This project uses GitHub Secrets exclusively - no local environment files needed.
+
+**For Production (Required):**
+Add these as GitHub Secrets (Repository Settings > Secrets and variables > Actions):
+
+```
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+NEXT_PUBLIC_CLARITY_PROJECT_ID=your_clarity_project_id
+RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxxxx
+RESEND_AUDIENCE_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+```
+
+Resend is used for contact forms and newsletter submissions (and can be used for sending emails). Google Analytics and Clarity are used for analytics, are fully GDPR-compliant, and are not necessary to run.
+
+**For Local Development:**
+No setup required! Analytics and newsletter will be gracefully disabled if environment variables are missing.
+Just run `npm run dev` and the app handles missing values automatically.
+
+#### Getting Your Analytics IDs
+
+**Google Analytics**:
+1. Create a GA4 property at [analytics.google.com](https://analytics.google.com)
+2. Copy your Measurement ID (format: `G-XXXXXXXXXX`)
+3. Add to environment variables
+
+**Microsoft Clarity**:
+1. Create a project at [clarity.microsoft.com](https://clarity.microsoft.com)
+2. Go to Settings > Overview to find your Project ID
+3. Add to environment variables
+
+**Resend Newsletter**:
+1. Create an account at [resend.com](https://resend.com)
+2. Verify your domain
+3. Create an API key in the API Keys section
+4. (Optional) Create an audience for subscriber management
+5. Add both keys to environment variables
+
+#### Usage
+
+```typescript
+// Use the analytics hook in components
+import { useAnalytics } from '@/components/Analytics';
+
+const { trackEvent, trackPageView, setUserTag, canTrack } = useAnalytics();
+
+// Track custom events (only if user consented)
+trackEvent('button_click', { button_id: 'download', section: 'hero' });
+
+// Set user segments for Clarity
+setUserTag('user_type', 'returning_visitor');
+```  
+
+### Newsletter System
+
+The project includes a comprehensive newsletter system with **Resend** integration, featuring GDPR compliance and context-aware messaging.
+
+#### Components
+
+**NewsletterForm**: Reusable form component with multiple variants
+```typescript
+import NewsletterForm from '@/components/NewsletterForm';
+
+// Main site version
+<NewsletterForm variant="main" />
+
+// Blog version with different messaging
+<NewsletterForm variant="blog" />
+
+// Compact inline version
+<NewsletterForm variant="main" compact inline />
+```
+
+**NewsletterSection**: Full-featured section with social proof
+```typescript
+import NewsletterSection from '@/components/NewsletterSection';
+
+// For main pages
+<NewsletterSection variant="main" background="accent" />
+
+// For blog pages
+<NewsletterSection variant="blog" background="default" />
+```
+
+#### API Endpoints
+
+- **POST /api/subscribe**: Subscribe users with welcome emails
+- **POST/GET /api/unsubscribe**: GDPR-compliant unsubscribe with confirmation
+
+#### GDPR Features
+
+- ✅ **One-click unsubscribe** links in all emails
+- ✅ **Permanent dismissal** with localStorage persistence  
+- ✅ **Context-aware messaging** (blog vs main site)
+- ✅ **Welcome email automation** based on subscription source
+- ✅ **Privacy policy integration** with cookie consent
+- ✅ **Graceful degradation** when API keys are missing
+
+#### Email Templates
+
+The system automatically sends different welcome emails based on subscription context:
+
+- **Blog subscribers**: "Welcome to The Looking Glass Chronicles"
+- **Main site subscribers**: "Welcome to Manic Agency"
+
+All emails include unsubscribe links and match the site's visual branding.
+
+### Contact Form System
+
+The project includes a comprehensive contact form system using **Resend** for email delivery, featuring rate limiting, validation, and professional email templates.
+
+#### Features
+
+- ✅ **Rate Limiting**: 5 requests per 15-minute window per IP
+- ✅ **Form Validation**: Email format, message length, required fields
+- ✅ **Professional Templates**: Branded emails for both admin and user
+- ✅ **Auto-Reply**: Confirmation emails to users with next steps
+- ✅ **Direct Reply**: Admin emails configured for direct replies
+- ✅ **GDPR Compliant**: Privacy policy integration and consent notices
+- ✅ **Graceful Degradation**: Fallback to direct email if API fails
+
+#### Configuration
+
+The contact form uses the same `RESEND_API_KEY` as the newsletter system. Admin emails are sent to `team@manic.agency` (configured in `src/lib/constants.ts`).
+
+#### API Endpoint
+
+- **POST /api/contact**: Processes contact form submissions with validation and email delivery
+
+#### Contact Form Fields
+
+- **Required**: Name, Email, Message (12 char minimum)
+- **Optional**: Company, Phone, Subject, Budget Range
+- **Features**: Real-time validation, submission analytics, cookie consent integration
+
+### Other Configuration
 
 ```typescript
 // src/app/open-source/OpenSourcePageClient.tsx
@@ -234,57 +470,13 @@ const TWITTER_HANDLE = "manicagency";         // Optional: X/Twitter handle
 const BUYMEACOFFEE_USERNAME = null;           // Optional: Buy Me a Coffee username
 ```
 
-## Build Optimization
-
-**Smart Image Processing**: Detects already-optimized images, skips unnecessary work  
-**Automated Compression**: 50-70% size reduction with WebP generation  
-**Bundle Analysis**: `npm run analyze` for detailed size inspection  
-**Static Export**: Optimized for GitHub Pages with proper asset paths  
-**CDN Ready**: Cloudflare auto-optimization (Brotli, modern formats, caching)  
-**Intelligent Pipeline**: Only processes what's needed, preserves originals  
-
-## Deployment Pipeline
-
-### GitHub Actions Workflow
-
-1. **Push to `main`** → GitHub Actions triggered
-2. **LFS Setup**: Install Git LFS and pull all files
-3. **Dependencies**: Install npm packages with caching
-4. **LFS Verification**: Check LFS status and file availability
-5. **Build Process**: `npm run build` (includes LFS pull + optimization)
-6. **Deploy**: Files pushed to `gh-pages` branch
-7. **CDN**: Cloudflare serves from custom domain with optimization
-
-### Local Testing
-
-```bash
-# Test full production build
-npm run build:static && npm run start:static
-
-# Check LFS status before deploying
-npm run lfs:check
-```
-
-### CI/CD Features
-
-- **Automatic LFS Handling**: All image files pulled during build
-- **Smart Optimization**: Only processes changed/new images (10x faster)
-- **LFS Verification**: Ensures all required files are available
-- **Build Statistics**: Shows exactly what was optimized vs skipped
-- **Backup Safety**: Original files preserved in `public/_originals/`
-- **Cache Optimization**: npm dependencies cached between builds
-
 ## Contributing
 
 **Content**: Add `.md` files to `src/posts/` with proper frontmatter  
-**Features**: TypeScript required, follow existing patterns  
-**SEO**: Metadata automatically generated, test with build  
+**Images**: Add to `public/assets/`, automatically optimized on build  
 
 See [contribution guide](https://manic.agency/blog/tutorials/contribute) for detailed guidelines.
 
-## Configuration Files
+------------------------------
 
-- `next.config.js` - Build and export settings
-- `next-sitemap.config.js` - SEO sitemap generation  
-- `tailwind.config.js` - Design system configuration
-- `tsconfig.json` - TypeScript strict mode settings
+Built by manic.agency

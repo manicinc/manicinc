@@ -3,8 +3,8 @@
 /* --- Basic Content Styles --- */
 .blog-content {
   color: var(--text-primary);
-  line-height: 1.8;
-  font-size: 1.1rem;
+  line-height: 1.85;
+  font-size: 1.25rem; /* Increased from 1.15rem */
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -50,9 +50,18 @@
   display: inline-block; max-width: 100%; margin-top: 2.2em;
 }
 
+/* Dark mode heading contrast improvements */
+.dark .blog-content .md-h3 {
+  color: #ff6bb3 !important; /* Brighter pink for better contrast */
+}
+.dark .blog-content .md-h4 {
+  color: #7de8c9 !important; /* Use the brighter green we defined */
+}
+
 /* Paragraphs */
 .blog-content p {
   margin-bottom: 1.6em; line-height: 1.9; color: var(--text-primary); max-width: 70ch;
+  font-size: 1.2rem; /* Slightly increased for better readability */
 }
 .light .blog-content p { color: var(--color-light-ink); }
 
@@ -92,6 +101,27 @@
 }
 .blog-content .md-link:hover, .blog-content .md-link:focus {
   color: var(--accent-highlight); border-bottom-color: transparent; background-size: 100% 2px; outline: none;
+}
+
+/* External links with ornate SVG icon */
+.blog-content .md-link[target="_blank"]::after {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: 4px;
+  margin-right: 3px; /* Added right margin for spacing */
+  margin-bottom: -1px;
+  background-image: url('/assets/images/external-link-icon.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.blog-content .md-link[target="_blank"]:hover::after {
+  opacity: 1;
+  transform: translateX(2px) translateY(-1px);
 }
 
 /* Ensure code inside links doesn't inherit link styling */
@@ -236,20 +266,50 @@ a code:not(pre > code),
 /* --- Blockquotes (Standard) --- */
 .blog-content .standard-blockquote {
   font-family: var(--font-body-blog); border: none;
-  border-left: 4px solid var(--accent-muted1); /* Simpler border */
+  border-left: 4px solid var(--text-muted); /* Use neutral text-muted instead of accent colors */
   padding: 1.2rem 1.8rem; margin: 2.5rem 0;
   background: rgba(var(--bg-secondary-rgb), 0.3);
-  color: var(--text-secondary); font-style: italic; font-size: 1.05em; line-height: 1.8;
+  color: var(--text-secondary) !important; font-style: italic; font-size: 1.05em; line-height: 1.8;
   box-shadow: none; border-radius: var(--radius-base); position: relative;
 }
+
+/* Better contrast for blockquotes in light/dark modes - higher specificity */
+.light .blog-content .standard-blockquote,
+.light .blog-content blockquote {
+  color: #4a4a4a !important; /* Much darker grey in light mode for better readability */
+  border-left-color: #7a7a7a !important; /* Darker border in light mode */
+}
+
+html.dark .blog-content .standard-blockquote,
+html.dark .blog-content blockquote {
+  color: #e0e0e0 !important; /* Much brighter grey in dark mode for better readability */
+  border-left-color: #b0b0b0 !important; /* Brighter border in dark mode */
+}
+
+/* Fix em (italic) elements inside blockquotes to inherit blockquote color instead of accent-secondary */
+.blog-content .standard-blockquote em,
+.blog-content blockquote em {
+  color: inherit !important;
+}
+
+.light .blog-content .standard-blockquote em,
+.light .blog-content blockquote em {
+  color: #4a4a4a !important; /* Match light mode blockquote color */
+}
+
+html.dark .blog-content .standard-blockquote em,
+html.dark .blog-content blockquote em {
+  color: #e0e0e0 !important; /* Match dark mode blockquote color */
+}
+
 /* Remove ornate styling if desired for standard quotes */
 /* .blog-content .standard-blockquote::before { content: none; } */
-.blog-content .standard-blockquote p { margin-bottom: 0.8em; font-style: italic; color: var(--text-secondary); }
+.blog-content .standard-blockquote p { margin-bottom: 0.8em; font-style: italic; color: inherit; }
 .blog-content .standard-blockquote p:last-child { margin-bottom: 0; }
 .blog-content .standard-blockquote footer {
   font-family: var(--font-meta-blog); font-style: normal; font-size: 0.9em;
   color: var(--text-muted); text-align: right; margin-top: 1em; padding-top: 0.5rem;
-  border-top: 1px dotted var(--accent-muted1);
+  border-top: 1px dotted var(--text-muted); /* Use text-muted instead of accent color */
 }
 .blog-content .standard-blockquote footer::before { content: '— '; }
 
@@ -602,8 +662,17 @@ a code:not(pre > code),
 .image-grid img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16 / 9; border-radius: var(--radius-base); }
 
 /* --- Banner --- */
-.banner { box-shadow: var(--shadow-soft); }
-.banner p { margin: 0; } /* Reset potential prose margins */
+.banner { 
+  box-shadow: var(--shadow-soft); 
+  margin: 2rem 0;
+  border-radius: var(--radius-base);
+  max-width: 70ch; /* Match paragraph width */
+  width: 100%;
+}
+.banner p { 
+  margin: 0; /* Reset potential prose margins */
+  max-width: none !important; /* Override paragraph width constraints */
+}
 
 /* --- Math Formulas --- */
 .blog-content .katex-display { /* Target KaTeX display elements */
@@ -617,7 +686,7 @@ a code:not(pre > code),
 
 /* --- Media Queries --- */
 @media (max-width: 768px) {
-  .blog-content { font-size: 1rem; }
+  .blog-content { font-size: 1.15rem; } /* Increased from 1.05rem */
   .blog-content .md-h1 { font-size: 2rem; }
   .blog-content .md-h2 { font-size: 1.75rem; }
   .blog-content .md-h3 { font-size: 1.5rem; }

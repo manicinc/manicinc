@@ -4,13 +4,14 @@
 'use client';
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ArrowRight, ArrowUpRight, Rabbit, ArrowUp, FileText, FolderGit2, RefreshCw } from 'lucide-react'; // Corrected Icons
 import GlitchAnimation from "./GlitchAnimation"; // Ensure path is correct
 import AsciiArtPlaceholder from "../lib/asciiPlaceholders"; // Ensure path is correct
 import { HeroFeedItem } from "@/types/common"; // Ensure path is correct
 import { motion } from 'framer-motion';
-import { useCookieConsent } from '@/context/CookieConsentContext';
+import { useCookieConsent } from '@/hooks/useCookieConsent';
 
 // --- Dynamic Quote System ---
 const LOCAL_STORAGE_KEY = 'manicAgencyHeroVisitData';
@@ -53,7 +54,27 @@ interface HeroSectionProps { featuredItems: HeroFeedItem[]; }
 // --- Component ---
 export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
     const router = useRouter();
-    const { setItem, getItem } = useCookieConsent();
+    const { canUseFunctional } = useCookieConsent();
+    
+    // Helper functions for localStorage with consent
+    const getStorageItem = useCallback((key: string) => {
+        if (!canUseFunctional) return null;
+        try {
+            return localStorage.getItem(key);
+        } catch (e) {
+            console.error("Error reading from localStorage:", e);
+            return null;
+        }
+    }, [canUseFunctional]);
+    
+    const setStorageItem = useCallback((key: string, value: string) => {
+        if (!canUseFunctional) return;
+        try {
+            localStorage.setItem(key, value);
+        } catch (e) {
+            console.error("Error writing to localStorage:", e);
+        }
+    }, [canUseFunctional]);
     const [currentQuote, setCurrentQuote] = useState<string>(" "); // Start blank
     const [mounted, setMounted] = useState(false);
     const [glitchingQuote, setGlitchingQuote] = useState(false);
@@ -92,12 +113,12 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
 
         // Update last quote shown in localStorage
         try {
-            const storedData = getItem(LOCAL_STORAGE_KEY);
+            const storedData = getStorageItem(LOCAL_STORAGE_KEY);
             const visitData: VisitData = storedData ? JSON.parse(storedData) : { count: 0, lastVisitTimestamp: 0 };
             visitData.lastQuote = newQuote;
-            setItem(LOCAL_STORAGE_KEY, JSON.stringify(visitData), 'functional');
+            setStorageItem(LOCAL_STORAGE_KEY, JSON.stringify(visitData));
         } catch (e) { console.error("LS error (update lastQuote):", e); }
-    }, [currentQuote]); // Re-memoize only when currentQuote changes
+    }, [currentQuote, getStorageItem, setStorageItem]); // Re-memoize when currentQuote, getStorageItem, or setStorageItem changes
 
     // Effect for **INITIAL** quote selection **ONLY**
     useEffect(() => {
@@ -110,7 +131,7 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
         let lastQuoteFromStorage: string | undefined = undefined;
 
         try {
-            const storedData = getItem(LOCAL_STORAGE_KEY);
+            const storedData = getStorageItem(LOCAL_STORAGE_KEY);
             if (storedData) {
                 visitData = JSON.parse(storedData);
                 visitData.count = Number(visitData.count) || 0;
@@ -137,17 +158,17 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                 }
                 visitData.lastVisitTimestamp = now;
                 // Update storage with new count/timestamp, but clear lastQuote (it gets set in triggerQuoteChange)
-                setItem(LOCAL_STORAGE_KEY, JSON.stringify({ ...visitData, lastQuote: undefined }), 'functional');
+                setStorageItem(LOCAL_STORAGE_KEY, JSON.stringify({ ...visitData, lastQuote: undefined }));
             } else {
                  console.log("Determined: First Visit Ever (no storage)"); // DEBUG
                 initialQuote = getRandomQuote(quoteCategories.FIRST_VISIT);
                 visitData = { count: 1, lastVisitTimestamp: Date.now(), lastQuote: undefined };
-                setItem(LOCAL_STORAGE_KEY, JSON.stringify(visitData), 'functional');
+                setStorageItem(LOCAL_STORAGE_KEY, JSON.stringify(visitData));
             }
         } catch (error) {
             console.error("LS error (initial quote):", error);
             initialQuote = getRandomQuote(quoteCategories.FIRST_VISIT);
-            // Note: No need to remove from localStorage as consent-aware setItem handles this
+            // Note: Storage operations are consent-aware through helper functions
         }
 
         console.log("Initial quote selected:", initialQuote); // DEBUG
@@ -169,7 +190,7 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
     // triggerQuoteChange is stable due to useCallback([]) or useCallback([currentQuote])
     // but putting it here could theoretically cause issues if its reference changed unexpectedly.
     // Relying solely on 'mounted' is the most robust way to ensure single execution.
-    }, [mounted]);
+    }, [mounted, getStorageItem, setStorageItem, triggerQuoteChange]);
 
     // Click handler for Manual Quote Change
     const handleQuoteClick = useCallback(() => {
@@ -208,7 +229,12 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                     {/* <div className={`hero-heading-container ${animationClass('delay-200')}`}>
                         <h1 className="hero-main-heading"> <span className="heading-perspective-wrapper"> <span className="main-heading-glitch main-heading-popout" data-text="mania-driven development"> mania-driven development </span> </span> </h1>
                     </div> */}
-                        <motion.div variants={fadeIn} className="mt-6">
+                        <motion.div 
+                            initial="hidden" 
+                            animate="visible" 
+                            variants={fadeIn} 
+                            className="mt-6"
+                        >
                                 <h2 className="mania-title mania-glitch-text">
                                     <span data-text="[ Mania-Driven Development ]">[ Mania-Driven Development ]</span>
                                 </h2>
@@ -216,7 +242,7 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                 </div>
                 {/* Terminal & Contact */}
                 <div className={`terminal-contact-row compact-row ${animationClass('delay-300')}`}>
-                    <div className="terminal-container"> <div className="terminal-header"><div className="terminal-buttons"><div className="terminal-button red"></div><div className="terminal-button yellow"></div><div className="terminal-button green"></div></div><div className="terminal-label">// ACTIVE_FEED <span className="ellipsis-anim"></span></div></div> <div ref={terminalRef} className="terminal-text-area"><span className="terminal-prompt">{'>'}</span><span className={`terminal-text ${isDecryptingTerminal ? 'decrypting' : ''}`} data-text={terminalText}>{terminalText}</span><span className={`terminal-cursor ${showCursor ? 'visible' : ''}`}>_</span></div> <div className="terminal-scanline"></div> </div>
+                    <div className="terminal-container"> <div className="terminal-header"><div className="terminal-buttons"><div className="terminal-button red"></div><div className="terminal-button yellow"></div><div className="terminal-button green"></div></div><div className="terminal-label">{/* ACTIVE_FEED */} <span className="ellipsis-anim"></span></div></div> <div ref={terminalRef} className="terminal-text-area"><span className="terminal-prompt">{'>'}</span><span className={`terminal-text ${isDecryptingTerminal ? 'decrypting' : ''}`} data-text={terminalText}>{terminalText}</span><span className={`terminal-cursor ${showCursor ? 'visible' : ''}`}>_</span></div> <div className="terminal-scanline"></div> </div>
                     <Link href="/contact" className={`contact-btn ${animationClass('delay-350')} `}><span className="contact-btn-content">Establish Connection<ArrowUpRight className="contact-btn-icon" /></span><span className="contact-btn-glow"></span></Link>
                 </div>
                 {/* Featured Items */}
@@ -229,11 +255,34 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                                  <div key={item.id || index} className={`featured-item-wrapper item-${index + 1}`}>
                                      <div className={`holographic-card group ${item.type === 'blog' ? 'card-is-blog' : 'card-is-project'} ${isDraft ? 'is-draft' : ''}`}>
                                           <div className="card-header"> {item.type === 'blog' ? <FileText size={14} className="icon" /> : <FolderGit2 size={14} className="icon" />} <span className="card-type-label">{item.type === 'blog' ? 'Log Entry' : 'Project File'}</span> {item.category && <div className="card-category-badge">{item.category.replace(/-/g, ' ')}</div>} </div>
-                                          <div className="card-image-container"> <div className="image-link-wrapper"> <Link href={url} aria-label={item.title} onClick={(e) => handleDecodeClick(e, url, isDraft)} className={`card-image-link ${isDraft ? 'draft-disabled' : ''}`} aria-disabled={isDraft} tabIndex={isDraft ? -1 : 0}> {item.image ? <img src={item.image} alt="" className="card-image" loading="lazy"/> : <AsciiArtPlaceholder className="card-ascii-placeholder" animate={true} height="140px" width="100%" />} <div className="card-image-overlay"></div> </Link> {isDraft && <div className="draft-overlay"><span className="draft-overlay-text">// ACCESS_PENDING //</span><span className="draft-overlay-subtext">[ COMING SOON ]</span></div>} </div> </div>
+                                          <div className="card-image-container"> 
+                                            <div className="image-link-wrapper"> 
+                                              <Link href={url} aria-label={item.title} onClick={(e) => handleDecodeClick(e, url, isDraft)} className={`card-image-link ${isDraft ? 'draft-disabled' : ''}`} aria-disabled={isDraft} tabIndex={isDraft ? -1 : 0}> 
+                                                {item.image ? (
+                                                  <div className="card-image-wrapper">
+                                                    <Image 
+                                                      src={item.image} 
+                                                      alt="" 
+                                                      className="card-image" 
+                                                      loading="lazy" 
+                                                      width={400}
+                                                      height={300}
+                                                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" 
+                                                    />
+                                                    <div className="card-image-gradient-overlay"></div>
+                                                  </div>
+                                                ) : (
+                                                  <AsciiArtPlaceholder className="card-ascii-placeholder" animate={true} height="140px" width="100%" />
+                                                )} 
+                                                <div className="card-image-overlay"></div> 
+                                              </Link> 
+                                              {isDraft && <div className="draft-overlay"><span className="draft-overlay-text">{/* ACCESS_PENDING */}</span><span className="draft-overlay-subtext">[ COMING SOON ]</span></div>} 
+                                            </div> 
+                                          </div>
                                           <div className="card-content-area">
                                                <h3 className={`card-title`}> {isDraft ? <span className="draft-title">{item.title}</span> : <Link href={url} className="animated-underline relative" onClick={(e) => handleDecodeClick(e, url, isDraft)}>{item.title}</Link>} </h3>
                                                <p className={`card-excerpt ${isDraft ? 'draft-excerpt' : ''}`}>{item.excerpt || (isDraft ? "// Metadata Redacted..." : "// No Description Available...")}</p>
-                                               {!isDraft && ( <div className="card-link-wrapper"> <Link href={url} onClick={(e) => handleDecodeClick(e, url, isDraft)} className="decrypt-link group/link"> {decryptingLink === url ? ( <span className="decrypting-text"><svg className="decrypt-spinner" /*...*/></svg>Decrypting...</span> ) : ( <> &gt; {item.type === 'blog' ? 'Read Entry' : 'View Project'} <ArrowRight size={12} className="card-arrow"/> </> )} </Link> </div> )}
+                                               {!isDraft && ( <div className="card-link-wrapper"> <Link href={url} onClick={(e) => handleDecodeClick(e, url, isDraft)} className="decrypt-link group/link"> {decryptingLink === url ? ( <span className="decrypting-text"><svg className="decrypt-spinner"></svg>Decrypting...</span> ) : ( <> &gt; {item.type === 'blog' ? 'Read Entry' : 'View Project'} <ArrowRight size={12} className="card-arrow"/> </> )} </Link> </div> )}
                                            </div>
                                      </div>
                                  </div>
@@ -242,7 +291,7 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                      </div>
                  )}
                  {/* Empty State */}
-                 {(!displayItems || displayItems.length === 0) && mounted && ( <div className={`empty-state compact-area ${animationClass('delay-500')}`}><p>// NO FEATURED TRANSMISSIONS //</p><p>[ Awaiting Signal Acquisition ]</p></div> )}
+                 {(!displayItems || displayItems.length === 0) && mounted && ( <div className={`empty-state compact-area ${animationClass('delay-500')}`}><p>{/* NO FEATURED TRANSMISSIONS */}</p><p>[ Awaiting Signal Acquisition ]</p></div> )}
                 {/* Enter Archives Button */}
                  <div className={`text-center mt-8 md:mt-10 ${animationClass('delay-700')}`}> <Link href="/blog" className="rabbit-trail group"> <span className="relative z-10">Enter the Archives</span> <div className="rabbit-hole-animation"> <Rabbit size={16} className="rabbit-icon"/> <div className="rabbit-hole"><svg viewBox="0 0 100 100" className="hole-svg"><circle cx="50" cy="50" r="45" fill="var(--bg-primary)" stroke="currentColor" strokeWidth="3" className="hole-circle-bg"/><circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="4" className="hole-circle-border"/><path d="M 50,50 m -40,0 a 40,40 0 1,0 80,0 a 40,40 0 1,0 -80,0" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 4" className="hole-spiral"/></svg></div> </div> </Link> </div>
             </div> {/* End Container */}
@@ -271,18 +320,6 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                 margin-left: auto !important;
                 margin-right: auto !important;
                 position: relative !important;
-                }
-
-                /* Hide content until styles are properly loaded */
-                .mania-title {
-                opacity: 0;
-                animation: fade-in 0.3s ease-in forwards;
-                animation-delay: 0.1s;
-                }
-
-                @keyframes fade-in {
-                from { opacity: 0; }
-                to { opacity: 1; }
                 }
 
                 /* Prevent layout shift for title */
@@ -398,14 +435,22 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                  .card-header { padding: 0.3rem 0.5rem; display: flex; align-items: center; gap: 0.35rem; border-bottom: 1px solid rgba(var(--text-primary-rgb), 0.05); background: rgba(var(--bg-secondary-rgb), 0.25); }
                  .card-header .icon { width: 14px; height: 14px; flex-shrink: 0; } .card-type-label { font-family: var(--font-mono); font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.8; } .card-category-badge { padding: 0.1rem 0.4rem; font-size: 0.55rem; font-weight: 600; border-radius: 3px; text-transform: capitalize; margin-left: auto; }
                  .card-is-blog .card-header .icon { color: var(--accent-secondary); } .card-is-blog .card-category-badge { background-color: rgba(var(--accent-secondary-rgb), 0.2); color: var(--accent-secondary); border: 1px solid rgba(var(--accent-secondary-rgb), 0.3); }
+                 .card-is-blog .card-image-container { border-color: rgba(var(--accent-secondary-rgb), 0.2); }
                  .card-is-project .card-header .icon { color: var(--accent-primary); } .card-is-project .card-category-badge { background-color: rgba(var(--accent-primary-rgb), 0.2); color: var(--accent-primary); border: 1px solid rgba(var(--accent-primary-rgb), 0.3); }
-                 .card-image-container { position: relative; aspect-ratio: 16 / 9.5; overflow: hidden; }
+                 .card-is-project .card-image-container { border-color: rgba(var(--accent-primary-rgb), 0.2); }
+                 .card-image-container { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 6px 2px 8px 3px; border: 1px solid rgba(var(--accent-primary-rgb), 0.15); }
                  .image-link-wrapper { position: relative; display: block; width: 100%; height: 100%; }
+                 .card-image-link { position: relative; display: block; width: 100%; height: 100%; border-radius: inherit; overflow: hidden; }
                  .card-image-link.draft-disabled { cursor: default; }
-                 .card-image { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease, filter 0.4s ease; filter: saturate(0.9); }
+                 .card-image-wrapper { position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: inherit; background: var(--bg-secondary); }
+                 .card-image { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.4s ease, filter 0.4s ease; filter: saturate(0.9); border-radius: inherit; }
+                 .card-image-gradient-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(var(--accent-primary-rgb), 0.15) 0%, transparent 30%, rgba(var(--accent-highlight-rgb), 0.08) 70%, transparent 100%), linear-gradient(to top, rgba(var(--bg-primary-rgb), 0.4) 0%, transparent 50%); pointer-events: none; border-radius: inherit; z-index: 1; }
                  .group:hover .holographic-card:not(.is-draft) .card-image { transform: scale(1.05); filter: saturate(1.1); }
+                 .group:hover .holographic-card:not(.is-draft) .card-image-gradient-overlay { background: linear-gradient(135deg, rgba(var(--accent-primary-rgb), 0.2) 0%, transparent 25%, rgba(var(--accent-highlight-rgb), 0.12) 75%, transparent 100%), linear-gradient(to top, rgba(var(--bg-primary-rgb), 0.3) 0%, transparent 60%); }
                  .card-ascii-placeholder { padding: 0.5rem; height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; background: var(--bg-secondary); color: var(--accent-primary); opacity: 0.6; font-size: 0.6rem; line-height: 1; }
-                 .card-image-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(var(--bg-primary-rgb), 0.5) 0%, transparent 40%); pointer-events: none; }
+                 .card-image-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(var(--bg-primary-rgb), 0.7) 0%, rgba(var(--bg-primary-rgb), 0.2) 30%, transparent 60%), linear-gradient(135deg, rgba(var(--accent-primary-rgb), 0.1) 0%, transparent 40%); pointer-events: none; border-radius: inherit; }
+                 .card-image-container::after { content: ''; position: absolute; inset: 0; background: linear-gradient(45deg, transparent 40%, rgba(var(--accent-highlight-rgb), 0.05) 50%, transparent 60%); pointer-events: none; opacity: 0; transition: opacity 0.3s ease; border-radius: inherit; }
+                 .group:hover .card-image-container::after { opacity: 1; }
                  .draft-overlay { position: absolute; inset: 0; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(var(--bg-primary-rgb), 0.88); backdrop-filter: blur(1.5px); color: var(--accent-alert); text-align: center; font-family: var(--font-mono); opacity: 0; animation: fade-in-draft-overlay 0.4s ease forwards; border-top: 1px dashed rgba(var(--accent-alert-rgb), 0.4); }
                  @keyframes fade-in-draft-overlay { from { opacity: 0; } to { opacity: 1; } }
                  .draft-overlay-text { font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.2rem; text-shadow: 0 0 4px var(--accent-alert); }

@@ -574,7 +574,7 @@ export default function OpenSourcePageClient() {
                         >
                             {GITHUB_SPONSOR_URL && (
                                 <a href={GITHUB_SPONSOR_URL} target="_blank" rel="noopener noreferrer" className={styles.sponsorButton}>
-                                    <Icons.Heart /> Sponsor
+                                    <Icons.Heart /> Sponsor Manic Agency
                                 </a>
                             )}
                             {/* View Mode Toggle */}
@@ -616,7 +616,7 @@ export default function OpenSourcePageClient() {
                                     <Icons.Search />
                                     <input
                                         type="text"
-                                        placeholder="Search repositories..."
+                                        placeholder="Search manicinc repositories..."
                                         value={searchQuery}
                                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
                                         className={styles.filterInput}
@@ -675,7 +675,7 @@ export default function OpenSourcePageClient() {
                                         {searchQuery && (
                                             <span className={`${styles.filterPill} ${styles.search}`}>
                                                 <Icons.Search />
-                                                Search: "{searchQuery}"
+                                                Search: &quot;{searchQuery}&quot;
                                                 <button onClick={() => setSearchQuery('')}>×</button>
                                             </span>
                                         )}
@@ -726,7 +726,7 @@ export default function OpenSourcePageClient() {
                     {error && (
                         <div className={styles.errorState}>
                             <Icons.AlertTriangle />
-                            <h3 className={styles.stateTitle}>Failed to Load Repositories</h3>
+                            <h3 className={styles.stateTitle}>Failed to Load Repositories for </h3> <strong>manicinc</strong>
                             <p className={styles.stateDesc}>Error: {error}</p>
                         </div>
                     )}

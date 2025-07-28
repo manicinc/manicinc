@@ -7,9 +7,8 @@ import { Nav } from "@/components/Nav";
 import Footer from "@/components/Footer/Footer";
 import LayoutClient from "./LayoutClient"; 
 import { ThemeProvider } from '@/context/ThemeContext';
-import { CookieConsentProvider } from '@/context/CookieConsentContext';
+import { CookieProvider } from '@/context/CookieProvider';
 import DynamicFavicon from '@/components/Base/DynamicFavicon';
-import CookieConsentBanner from '@/components/CookieConsentBanner';
 import Analytics from '@/components/Analytics';
 import ScrollToTopHandler from '@/components/ScrollBtns/ScrollToTopHandler';
 import TrailingSlashHandler from '@/components/TrailingSlashHandler';
@@ -183,17 +182,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body>
         <ThemeProvider>
-          <CookieConsentProvider>
+          <CookieProvider>
             <TrailingSlashHandler />
             <DynamicFavicon />
             <Nav />
             <main role="main">{children}</main>
             <Footer />
             <ScrollToTopHandler />
-            <CookieConsentBanner />
             <Analytics />
             <LayoutClient />
-          </CookieConsentProvider>
+          </CookieProvider>
         </ThemeProvider>
       </body>
     </html>

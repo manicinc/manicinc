@@ -1,0 +1,438 @@
+// src/components/NewsletterForm.tsx
+'use client';
+
+import { useState, useEffect, useRef } from 'react';
+import { useAnalytics } from './Analytics';
+import { useCookieConsent } from '@/hooks/useCookieConsent';
+import { motion, AnimatePresence } from 'framer-motion';
+
+interface NewsletterFormProps {
+  variant?: 'main' | 'blog';
+  className?: string;
+  compact?: boolean;
+  inline?: boolean;
+}
+
+interface NewsletterState {
+  email: string;
+  name: string;
+  company: string;
+  status: 'idle' | 'loading' | 'success' | 'error';
+  message: string;
+  dismissed: boolean;
+  expanded: boolean;
+}
+
+export default function NewsletterForm({ 
+  variant = 'main', 
+  className = '',
+  compact = false,
+  inline = false
+}: NewsletterFormProps) {
+  const { trackEvent, canTrack } = useAnalytics();
+  const { hasConsent, canUseMarketing } = useCookieConsent();
+  const emailInputRef = useRef<HTMLInputElement>(null);
+  const [state, setState] = useState<NewsletterState>({
+    email: '',
+    name: '',
+    company: '',
+    status: 'idle',
+    message: '',
+    dismissed: false,
+    expanded: false
+  });
+
+  useEffect(() => {
+    const dismissed = localStorage.getItem('newsletter-dismissed');
+    if (dismissed) {
+      setState(prev => ({ ...prev, dismissed: true }));
+    }
+  }, []);
+
+  if (state.dismissed) return null;
+
+  const handleEmailFocus = () => {
+    setState(prev => ({ ...prev, expanded: true }));
+    if (canTrack) {
+      trackEvent('newsletter_form_engaged', { variant });
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!state.email || !state.email.includes('@')) {
+      setState(prev => ({ 
+        ...prev, 
+        status: 'error', 
+        message: 'Valid email address required for transmission.' 
+      }));
+      return;
+    }
+
+    if (!canUseMarketing) {
+      setState(prev => ({ 
+        ...prev, 
+        status: 'error', 
+        message: 'Marketing consent required. Please accept marketing cookies to subscribe to our newsletter.' 
+      }));
+      return;
+    }
+
+    setState(prev => ({ ...prev, status: 'loading', message: '' }));
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          email: state.email,
+          name: state.name,
+          company: state.company,
+          source: variant 
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setState(prev => ({ 
+          ...prev, 
+          status: 'success', 
+          message: data.message || 'Transmission channel established successfully.',
+          email: '',
+          name: '',
+          company: ''
+        }));
+        
+        if (canTrack) {
+          trackEvent('newsletter_subscribe', { 
+            variant,
+            has_name: !!state.name,
+            has_company: !!state.company,
+            email_domain: state.email.split('@')[1] 
+          });
+        }
+      } else {
+        setState(prev => ({ 
+          ...prev, 
+          status: 'error', 
+          message: data.error || 'Transmission failed. Please verify connection and retry.' 
+        }));
+      }
+    } catch (error) {
+      setState(prev => ({ 
+        ...prev, 
+        status: 'error', 
+        message: 'Network protocol error. Please check your connection.' 
+      }));
+    }
+  };
+
+  const handleDismiss = () => {
+    localStorage.setItem('newsletter-dismissed', 'true');
+    setState(prev => ({ ...prev, dismissed: true }));
+    
+    if (canTrack) {
+      trackEvent('newsletter_dismissed', { variant });
+    }
+  };
+
+  const copy = variant === 'blog' ? {
+    title: 'Initialize Research Feed',
+    subtitle: 'Technical analysis and philosophical frameworks from the digital frontier.',
+    placeholder: 'signal@address.xyz',
+    namePlaceholder: 'Identifier (optional)',
+    companyPlaceholder: 'Organization (optional)',
+    button: 'Establish Channel',
+    successTitle: 'Channel Synchronized',
+    successMessage: 'Welcome transmission imminent. Check your signal receiver.'
+  } : {
+    title: 'Agency Transmission Protocol',
+    subtitle: 'Strategic intelligence on digital transformation and synthetic futures.',
+    placeholder: 'your@coordinates.xyz',
+    namePlaceholder: 'Name (optional)',
+    companyPlaceholder: 'Collective (optional)',
+    button: 'Open Channel',
+    successTitle: 'Link Established',
+    successMessage: 'Initialization complete. First transmission incoming.'
+  };
+
+  return (
+    <div className={`newsletter-form-container ${className}`}>
+      <div className="flex items-center justify-between mb-4">
+        <h3 className={`font-display font-semibold ${
+          compact ? 'text-lg' : 'text-xl'
+        } text-text-primary`}>
+          {copy.title}
+        </h3>
+        <button
+          onClick={handleDismiss}
+          className="text-text-secondary hover:text-text-primary transition-all duration-200 p-1 rounded-lg hover:bg-bg-tertiary"
+          aria-label="Dismiss permanently"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      {!compact && (
+        <p className="text-text-secondary mb-6 leading-relaxed">
+          {copy.subtitle}
+        </p>
+      )}
+
+      <AnimatePresence mode="wait">
+        {state.status === 'success' ? (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="success-state"
+          >
+            <div className="bg-accent-sage/10 border border-accent-sage/20 rounded-xl p-6 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 opacity-10">
+                <TransmissionSuccessIcon />
+              </div>
+              <h4 className="font-display font-semibold text-accent-sage mb-2">
+                {copy.successTitle}
+              </h4>
+              <p className="text-text-secondary">
+                {copy.successMessage}
+              </p>
+            </div>
+          </motion.div>
+        ) : (
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Email Input - Always Visible */}
+            <div className="relative group">
+              <input
+                ref={emailInputRef}
+                type="email"
+                value={state.email}
+                onChange={(e) => setState(prev => ({ ...prev, email: e.target.value }))}
+                onFocus={handleEmailFocus}
+                placeholder={copy.placeholder}
+                required
+                disabled={state.status === 'loading'}
+                className={`
+                  w-full px-4 py-3 rounded-xl border border-border 
+                  bg-bg-secondary focus:bg-bg-primary
+                  focus:border-accent-burgundy focus:ring-2 focus:ring-accent-burgundy/20
+                  transition-all duration-300
+                  disabled:opacity-50 disabled:cursor-not-allowed
+                  text-text-primary placeholder-text-secondary
+                  group-hover:border-accent-secondary
+                  ${compact ? 'py-2 text-sm' : ''}
+                `}
+              />
+              <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                <motion.div
+                  animate={{ opacity: state.email ? 0 : 1 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <EmailInputIcon />
+                </motion.div>
+              </div>
+            </div>
+
+            {/* Expanded Fields */}
+            <AnimatePresence>
+              {state.expanded && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: 'easeInOut' }}
+                  className="space-y-4 overflow-hidden"
+                >
+                  {/* Name Input */}
+                  <div className="relative group">
+                    <input
+                      type="text"
+                      value={state.name}
+                      onChange={(e) => setState(prev => ({ ...prev, name: e.target.value }))}
+                      placeholder={copy.namePlaceholder}
+                      disabled={state.status === 'loading'}
+                      className={`
+                        w-full px-4 py-3 rounded-xl border border-border 
+                        bg-bg-secondary focus:bg-bg-primary
+                        focus:border-accent-secondary focus:ring-2 focus:ring-accent-secondary/20
+                        transition-all duration-300
+                        disabled:opacity-50 disabled:cursor-not-allowed
+                        text-text-primary placeholder-text-secondary
+                        group-hover:border-accent-sage
+                        ${compact ? 'py-2 text-sm' : ''}
+                      `}
+                    />
+                    <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none opacity-30">
+                      <IdentifierIcon />
+                    </div>
+                  </div>
+
+                  {/* Company Input */}
+                  <div className="relative group">
+                    <input
+                      type="text"
+                      value={state.company}
+                      onChange={(e) => setState(prev => ({ ...prev, company: e.target.value }))}
+                      placeholder={copy.companyPlaceholder}
+                      disabled={state.status === 'loading'}
+                      className={`
+                        w-full px-4 py-3 rounded-xl border border-border 
+                        bg-bg-secondary focus:bg-bg-primary
+                        focus:border-accent-sage focus:ring-2 focus:ring-accent-sage/20
+                        transition-all duration-300
+                        disabled:opacity-50 disabled:cursor-not-allowed
+                        text-text-primary placeholder-text-secondary
+                        group-hover:border-accent-highlight
+                        ${compact ? 'py-2 text-sm' : ''}
+                      `}
+                    />
+                    <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none opacity-30">
+                      <CollectiveIcon />
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            {/* Submit Button */}
+            <motion.button
+              type="submit"
+              disabled={state.status === 'loading' || !state.email.trim() || !hasConsent}
+              className={`
+                relative w-full px-6 py-3 
+                bg-gradient-to-r from-accent-burgundy to-accent-highlight
+                hover:from-accent-highlight hover:to-accent-burgundy
+                text-white font-medium rounded-xl
+                transition-all duration-300
+                disabled:opacity-50 disabled:cursor-not-allowed
+                disabled:from-gray-400 disabled:to-gray-500
+                focus:ring-2 focus:ring-accent-burgundy/20
+                group overflow-hidden
+                ${compact ? 'py-2 px-4 text-sm' : ''}
+              `}
+              whileHover={{ scale: state.status === 'loading' ? 1 : 1.02 }}
+              whileTap={{ scale: state.status === 'loading' ? 1 : 0.98 }}
+              title={!hasConsent ? 'Marketing consent required to establish channel' : ''}
+            >
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                {state.status === 'loading' ? (
+                  <>
+                    <LoadingPulse />
+                    <span>Establishing Channel...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>{copy.button}</span>
+                    <TransmitIcon />
+                  </>
+                )}
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-accent-highlight/20 to-accent-burgundy/20 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+            </motion.button>
+          </form>
+        )}
+      </AnimatePresence>
+
+      {/* Error Message */}
+      <AnimatePresence>
+        {state.status === 'error' && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="mt-4 bg-accent-alert/10 border border-accent-alert/20 rounded-xl p-3"
+          >
+            <p className="text-accent-alert text-sm font-medium flex items-center gap-2">
+              <AlertIcon />
+              {state.message}
+            </p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Privacy Notice */}
+      {!compact && state.status !== 'success' && (
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="mt-6 space-y-2"
+        >
+          <p className="text-xs text-text-secondary leading-relaxed">
+            Your data sovereignty is absolute. Zero third-party sharing. 
+            One-click unsubscribe. Full GDPR compliance.{' '}
+            <a 
+              href="/privacy" 
+              className="text-accent-burgundy hover:text-accent-highlight transition-colors"
+            >
+              Privacy protocol
+            </a>
+          </p>
+          {!hasConsent && (
+            <p className="text-xs text-accent-alert flex items-start gap-1">
+              <span className="mt-0.5">⚡</span>
+              <span>Marketing consent required. Accept cookies to establish secure transmission channel.</span>
+            </p>
+          )}
+        </motion.div>
+      )}
+    </div>
+  );
+}
+
+// Icon Components
+const EmailInputIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-text-secondary">
+    <path d="M3 8L12 13L21 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" strokeWidth="1.5"/>
+  </svg>
+);
+
+const IdentifierIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="text-text-secondary">
+    <circle cx="12" cy="8" r="3" stroke="currentColor" strokeWidth="1.5"/>
+    <path d="M16 16C16 14.8954 14.2091 14 12 14C9.79086 14 8 14.8954 8 16V19H16V16Z" stroke="currentColor" strokeWidth="1.5"/>
+  </svg>
+);
+
+const CollectiveIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="text-text-secondary">
+    <path d="M3 12L12 3L21 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M5 10V19H19V10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <rect x="9" y="13" width="6" height="6" stroke="currentColor" strokeWidth="1.5"/>
+  </svg>
+);
+
+const TransmitIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-white">
+    <path d="M22 2L11 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const TransmissionSuccessIcon = () => (
+  <svg viewBox="0 0 64 64" className="w-full h-full">
+    <circle cx="32" cy="32" r="20" fill="none" stroke="var(--accent-sage)" strokeWidth="1.5" opacity="0.3"/>
+    <circle cx="32" cy="32" r="14" fill="none" stroke="var(--accent-sage)" strokeWidth="1" opacity="0.5"/>
+    <circle cx="32" cy="32" r="8" fill="none" stroke="var(--accent-sage)" strokeWidth="0.5"/>
+    <circle cx="32" cy="32" r="3" fill="var(--accent-sage)"/>
+  </svg>
+);
+
+const AlertIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-accent-alert">
+    <path d="M12 9V13M12 17H12.01M12 3L2 20H22L12 3Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const LoadingPulse = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" className="animate-spin">
+    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none" strokeDasharray="32" strokeDashoffset="32">
+      <animate attributeName="stroke-dashoffset" dur="1s" repeatCount="indefinite" from="32" to="0"/>
+    </circle>
+  </svg>
+);

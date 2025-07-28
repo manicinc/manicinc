@@ -29,7 +29,7 @@ module.exports = {
       '/contact': 0.8,
       '/open-source': 0.8,
       '/process': 0.7,
-      '/velvet': 0.8,
+      '/velvet': 0.4,
       '/privacy': 0.3,
       '/terms': 0.3
     }

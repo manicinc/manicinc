@@ -24,32 +24,32 @@ body.is-blog {
   background-position: 0 0, 100% 100%, 0 0;
   background-attachment: fixed; /* Keep texture fixed */
   color: var(--text-primary);
-  font-size: var(--blog-font-size-base, 18px); /* Base size for blog pages */
-  line-height: 1.85; /* Generous base line height */
+  font-size: var(--blog-font-size-base, 20px); /* Increased base size for blog pages */
+  line-height: 1.9; /* More generous base line height */
   transition: background-color 0.3s ease, background-image 0.3s ease;
 }
 
 /* Dark mode background adjustments - use proper theme class selectors with higher specificity */
 html.dark body.is-blog,
 body.is-blog.dark {
-  background-color: #302435 !important;
-  color: #f5f0e6 !important;
+  background-color: #252033 !important;
+  color: #ffffff !important;
   background-image: 
-    radial-gradient(circle at 25% 25%, rgba(214, 80, 118, 0.04) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(136, 176, 164, 0.03) 0%, transparent 50%),
-    linear-gradient(135deg, transparent 0%, rgba(212, 172, 128, 0.02) 50%, transparent 100%) !important;
+    radial-gradient(circle at 25% 25%, rgba(232, 90, 136, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(157, 212, 196, 0.03) 0%, transparent 50%),
+    linear-gradient(135deg, transparent 0%, rgba(244, 200, 146, 0.02) 50%, transparent 100%) !important;
   background-size: 600px 600px, 800px 800px, 100% 100%;
   background-position: 100% 100%, 0 0, 0 0;
 }
 
 /* Additional specificity for theme transitions */
 html[class*="dark"] body.is-blog {
-  background-color: #302435 !important;
-  color: #f5f0e6 !important;
+  background-color: #252033 !important;
+  color: #ffffff !important;
   background-image: 
-    radial-gradient(circle at 25% 25%, rgba(214, 80, 118, 0.04) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(136, 176, 164, 0.03) 0%, transparent 50%),
-    linear-gradient(135deg, transparent 0%, rgba(212, 172, 128, 0.02) 50%, transparent 100%) !important;
+    radial-gradient(circle at 25% 25%, rgba(232, 90, 136, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(157, 212, 196, 0.03) 0%, transparent 50%),
+    linear-gradient(135deg, transparent 0%, rgba(244, 200, 146, 0.02) 50%, transparent 100%) !important;
   background-size: 600px 600px, 800px 800px, 100% 100%;
   background-position: 100% 100%, 0 0, 0 0;
 }
@@ -824,14 +824,14 @@ html[data-theme="light"] .blog-post-container {
 /* Blockquotes */
 .post-content blockquote {
   font-family: var(--font-body); border: none; border-left: 5px solid;
-  border-image: linear-gradient(to bottom, var(--accent-muted1), var(--accent-muted2)) 1 10%; border-image-slice: 1;
+  border-image: linear-gradient(to bottom, var(--text-muted), var(--text-secondary)) 1 10%; border-image-slice: 1;
   padding: 1.5rem 2rem 1.5rem 2.5rem; margin: 2.5rem 0 2.5rem 1rem;
   background: linear-gradient(to right, rgba(var(--bg-secondary-rgb), 0.4), transparent);
   color: var(--text-secondary); font-style: italic; font-size: 1.05em; line-height: 1.8;
   box-shadow: none; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; position: relative;
 }
 .post-content blockquote::before {
-  content: '“'; font-family: var(--font-display); font-size: 4em; color: rgba(var(--accent-muted1-rgb), 0.3);
+  content: '“'; font-family: var(--font-display); font-size: 4em; color: rgba(var(--text-secondary-rgb), 0.3);
   position: absolute; left: 0.5rem; top: 0rem; line-height: 1; z-index: -1; opacity: 0.8;
 }
 .post-content blockquote p { margin-bottom: 0.8em; }
@@ -970,7 +970,7 @@ html[data-theme="light"] .blog-post-container {
 .post-comments { margin-top: 4rem; }
 .comments-title {
   font-family: var(--font-display); font-size: 2rem; color: var(--text-heading); font-weight: 700;
-  text-align: center; margin-bottom: 2.5rem; border-top: 1px solid rgba(var(--accent-muted1-rgb), 0.3); padding-top: 3rem;
+  text-align: center; margin-bottom: 2.5rem; border-top: 1px solid rgba(var(--text-secondary-rgb), 0.3); padding-top: 3rem;
 }
 
 /* --- Reading Mode --- */
@@ -1183,7 +1183,7 @@ html[data-theme="light"] .blog-post-container {
 }
 /* Open state */
 .filter-panel-container:not(.collapsed) {
-    border-color: rgba(var(--accent-muted1-rgb), 0.3);
+    border-color: rgba(var(--text-secondary-rgb), 0.3);
     background-color: rgba(var(--bg-secondary-rgb), 0.4);
     box-shadow: 0 4px 15px -5px rgba(var(--shadow-color), 0.1);
 }

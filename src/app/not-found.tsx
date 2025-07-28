@@ -154,7 +154,7 @@ export default function NotFound() {
 
                     {/* Subtitle */}
                     <p className="subtitle mb-8 text-center">
-                        Signal lost... this frequency doesn't resonate within the nexus.
+                        Signal lost... this frequency doesn&apos;t resonate within the nexus. Please return to the Manic.agency homepage.
                     </p>
 
                     {/* Return Button */}

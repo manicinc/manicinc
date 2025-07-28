@@ -10,12 +10,12 @@ const TWITTER_HANDLE = '@manicagency';
 const seoConfig = {
   default: {
     title: 'Manic Agency - Metaverses Intersection',
-    description: 'Metaverses Intersection - Where digital artistry meets cutting-edge technology. We craft immersive experiences that blur the lines between imagination and reality.',
-    keywords: ['Web Development', 'Design', 'AR', 'VR', 'AI', 'Web3', 'Digital Agency', 'Los Angeles', 'Lagos', 'Creative Technology', 'SynthStack', 'Manic Inc', 'Game Publishing', 'Manic Games', 'Text Games', 'Game Development', 'Publishing Platform'],
+    description: 'Manic Agency - Where Metaverses Intersect. Manic.agency specializes in Web3, AI, AR/VR, creative technology, and game publishing through Manic Games platform. Based internationally in LA and Lagos.',
+    keywords: ['Manic', 'Agency', 'Manic Agency', 'Manic.agency', 'Web Development', 'Design', 'AR', 'VR', 'AI', 'Web3', 'Digital Agency', 'Los Angeles', 'Lagos', 'Creative Technology', 'SynthStack', 'Manic Inc', 'Game Publishing', 'Manic Games', 'Text Games', 'Game Development', 'Publishing Platform'],
     ogImage: '/og-default.webp',
     themeColor: {
-      light: '#FBF6EF', // Light mode theme color
-      dark: '#22182B' // Dark mode theme color
+      light: '#fbf6ef', // Light Parchment - Primary light background
+      dark: '#22182b' // Dark Background - Primary dark background
     }
   },
   blog: {
@@ -24,8 +24,8 @@ const seoConfig = {
     keywords: ['Blog', 'AI', 'Tech', 'Web Development', 'Thinkpieces', 'Looking Glass', 'Innovation'],
     ogImage: '/og-blog.png',
     themeColor: {
-      light: '#F5F1EC', // Blog light mode theme color
-      dark: '#1F1527' // Blog dark mode theme color
+      light: '#f5ede1', // Light Paper - Secondary light background for blog
+      dark: '#402e46' // Mid Background - Secondary dark background for blog
     }
   },
   projects: {
@@ -34,8 +34,8 @@ const seoConfig = {
     keywords: ['Projects', 'Portfolio', 'Experiments', 'Creative Coding', 'Innovative Tech', 'Case Studies'],
     ogImage: '/og-projects.png',
     themeColor: {
-      light: '#F5F1EC', // Projects light mode theme color
-      dark: '#22182B' // Projects dark mode theme color
+      light: '#ede4d6', // Light Cream - Tertiary light background for projects
+      dark: '#5f4867' // Light Background - Tertiary dark background for projects
     }
   }
 };

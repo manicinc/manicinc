@@ -56,7 +56,7 @@ export default function ProcessPage() {
             <div className="container mx-auto px-4">
                 <h1 className="text-4xl font-bold text-center mb-8">The Manic Blueprint</h1>
                 <p className="text-center text-lg">
-                    Our signature methodology for delivering exceptional digital experiences.
+                    Manic.agency&apos;s signature methodology for delivering exceptional digital experiences.
                 </p>
                 <div className="mt-8 text-center">
                     <p>Coming soon: Interactive process visualization</p>

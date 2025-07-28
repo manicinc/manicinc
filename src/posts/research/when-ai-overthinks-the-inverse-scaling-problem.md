@@ -4,7 +4,7 @@ date: "2025-07-23"
 excerpt: "New research from Anthropic and OpenAI reveals that giving LLMs more time to think makes them worse at simple tasks. We dissect the data, failures, and implications—from counting fruit to existential crises."
 author: "Manic Agency"
 category: "research"
-tags: ["inverse-scaling", "large-language-models", "ai-safety", "reasoning-tokens", "test-time-compute", "overthinking", "claude", "gpt", "featured"]
+tags: ["ai", "inverse-scaling", "ai-safety", "test-time-compute", "overthinking", "featured"]
 featured: true
 image: "/assets/blog/research/when-ai-overthinks-the-inverse/inverse-scaling_accuracy-vs-reasoning-tokens_gradient.png"
 ---
