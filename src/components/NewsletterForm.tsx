@@ -19,7 +19,7 @@ interface NewsletterState {
   company: string;
   status: 'idle' | 'loading' | 'success' | 'error';
   message: string;
-  dismissed: boolean;
+  collapsed: boolean;
   expanded: boolean;
 }
 
@@ -38,18 +38,16 @@ export default function NewsletterForm({
     company: '',
     status: 'idle',
     message: '',
-    dismissed: false,
+    collapsed: false,
     expanded: false
   });
 
   useEffect(() => {
-    const dismissed = localStorage.getItem('newsletter-dismissed');
-    if (dismissed) {
-      setState(prev => ({ ...prev, dismissed: true }));
+    const collapsed = localStorage.getItem('newsletter-collapsed');
+    if (collapsed === 'true') {
+      setState(prev => ({ ...prev, collapsed: true }));
     }
   }, []);
-
-  if (state.dismissed) return null;
 
   const handleEmailFocus = () => {
     setState(prev => ({ ...prev, expanded: true }));
@@ -129,12 +127,13 @@ export default function NewsletterForm({
     }
   };
 
-  const handleDismiss = () => {
-    localStorage.setItem('newsletter-dismissed', 'true');
-    setState(prev => ({ ...prev, dismissed: true }));
+  const handleToggleCollapse = () => {
+    const newCollapsed = !state.collapsed;
+    localStorage.setItem('newsletter-collapsed', newCollapsed.toString());
+    setState(prev => ({ ...prev, collapsed: newCollapsed }));
     
     if (canTrack) {
-      trackEvent('newsletter_dismissed', { variant });
+      trackEvent('newsletter_toggled', { variant, collapsed: newCollapsed });
     }
   };
 
@@ -167,23 +166,38 @@ export default function NewsletterForm({
           {copy.title}
         </h3>
         <button
-          onClick={handleDismiss}
+          onClick={handleToggleCollapse}
           className="text-text-secondary hover:text-text-primary transition-all duration-200 p-1 rounded-lg hover:bg-bg-tertiary"
-          aria-label="Dismiss permanently"
+          aria-label={state.collapsed ? "Expand newsletter form" : "Collapse newsletter form"}
         >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
+          {state.collapsed ? (
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          ) : (
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+            </svg>
+          )}
         </button>
       </div>
 
-      {!compact && (
+      {!compact && !state.collapsed && (
         <p className="text-text-secondary mb-6 leading-relaxed">
           {copy.subtitle}
         </p>
       )}
 
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
+        {!state.collapsed && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="overflow-hidden"
+          >
+            <AnimatePresence mode="wait">
         {state.status === 'success' ? (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -339,7 +353,7 @@ export default function NewsletterForm({
 
       {/* Error Message */}
       <AnimatePresence>
-        {state.status === 'error' && (
+        {state.status === 'error' && !state.collapsed && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -355,7 +369,7 @@ export default function NewsletterForm({
       </AnimatePresence>
 
       {/* Privacy Notice */}
-      {!compact && state.status !== 'success' && (
+      {!compact && state.status !== 'success' && !state.collapsed && (
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -380,6 +394,9 @@ export default function NewsletterForm({
           )}
         </motion.div>
       )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 // src/app/privacy/page.tsx
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import CookieManageButton from '@/components/CookieManageButton';
 
 export const metadata: Metadata = {
     title: 'Privacy Policy - Data Protection & Privacy | Manic Agency',
@@ -786,12 +787,9 @@ export default function PrivacyPolicyPage() {
                     <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </Link>
-                <button
-                  onClick={() => window.dispatchEvent(new Event('show-cookie-consent'))}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-accent-sage text-accent-sage hover:bg-accent-sage hover:text-white font-medium rounded-xl transition-all duration-300"
-                >
+                <CookieManageButton className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-accent-sage text-accent-sage hover:bg-accent-sage hover:text-white font-medium rounded-xl transition-all duration-300">
                   Manage Cookies
-                </button>
+                </CookieManageButton>
               </div>
             </div>
           </section>
