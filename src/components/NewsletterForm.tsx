@@ -105,6 +105,10 @@ export default function NewsletterForm({
           company: ''
         }));
         
+        // Mark success in localStorage for modal detection
+        localStorage.setItem('newsletter-success', 'true');
+        localStorage.setItem('recent-newsletter-signup', new Date().toISOString());
+        
         // Call success callback if provided
         onSignupSuccess?.();
         

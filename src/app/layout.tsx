@@ -16,6 +16,7 @@ import type { Metadata, Viewport } from 'next';
 
 // Import Styles
 import "./styles/globals.css";
+import "./styles/blog-newsletter.css";
 
 // Import SEO helper
 import { generateSEOMetadata } from '@/lib/getSEOMetadata';

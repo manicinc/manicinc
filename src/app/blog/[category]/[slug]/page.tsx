@@ -300,14 +300,6 @@ export default async function BlogPostPage({ params }: PageProps) {
                                 <ShareButtons title={post.title || ''} url={`/blog/${post.category || 'uncategorized'}/${post.slug}`} />
                             </footer>
 
-                            {/* Newsletter signup for blog posts */}
-                            <section className="post-newsletter-signup mt-16">
-                                <BlogNewsletterSection 
-                                    variant="blog" 
-                                    background="accent"
-                                />
-                            </section>
-
                             {/* Comments Sections */}
                             <section className="post-comments" aria-labelledby="comments-heading">
                                 <h2 id="comments-heading" className="comments-title">Join the Discussion</h2>
@@ -328,6 +320,14 @@ export default async function BlogPostPage({ params }: PageProps) {
                                     </div>
                                     <GiscusClient />
                                 </div>
+                            </section>
+
+                            {/* Newsletter signup for blog posts - moved after comments */}
+                            <section className="post-newsletter-signup mt-16">
+                                <BlogNewsletterSection 
+                                    variant="blog" 
+                                    background="accent"
+                                />
                             </section>
                         </article>
                     </main> {/* End blog-main-content-area */}
