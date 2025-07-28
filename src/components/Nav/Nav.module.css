@@ -936,9 +936,9 @@
 }
 
 /* NEW: Hide tagline around 800px where links get too crowded */
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (max-width: 1280px) {
     .tagline {
-        display: none !important; /* Hide "metaverses intersect here" tagline */
+        display: none !important; /* Hide "metaverses intersect here" tagline below 1280px (xl breakpoint) */
     }
 }
 

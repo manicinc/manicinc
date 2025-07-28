@@ -5,6 +5,7 @@ import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAnalytics } from './Analytics';
 import { useCookieConsent } from '@/hooks/useCookieConsent';
+import { sendContactMessage } from '@/lib/emailjs';
 
 interface ContactFormState {
   name: string;
@@ -74,29 +75,25 @@ export default function ContactForm() {
     setState(prev => ({ ...prev, status: 'loading' }));
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: state.name,
-          email: state.email,
-          company: state.company,
-          phone: state.phone,
-          subject: state.subject || 'New Contact Form Submission',
-          message: state.message,
-          budget: state.budget,
-          timeline: state.timeline,
-          timestamp: new Date().toISOString()
-        })
+      const result = await sendContactMessage({
+        name: state.name,
+        email: state.email,
+        company: state.company,
+        message: `${state.message}
+
+--- Additional Details ---
+Phone: ${state.phone || 'Not provided'}
+Budget: ${state.budget || 'Not specified'}
+Timeline: ${state.timeline || 'Not specified'}
+Submitted: ${new Date().toISOString()}`,
+        subject: state.subject || 'New Contact Form Submission'
       });
 
-      const data = await response.json();
-
-      if (response.ok) {
+      if (result.success) {
         setState(prev => ({ 
           ...prev, 
           status: 'success', 
-          statusMessage: 'Transmission received. We\'ll respond within 24 hours.',
+          statusMessage: result.message || 'Transmission received. We\'ll respond within 24 hours.',
           name: '',
           email: '',
           company: '',
@@ -118,7 +115,7 @@ export default function ContactForm() {
         setState(prev => ({ 
           ...prev, 
           status: 'error', 
-          statusMessage: data.error || 'Transmission failed. Please try again.' 
+          statusMessage: result.error || 'Transmission failed. Please try again or contact team@manic.agency directly.' 
         }));
       }
     } catch (error) {

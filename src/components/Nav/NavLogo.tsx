@@ -71,8 +71,8 @@ const NavLogo: React.FC<NavLogoProps> = ({ toggleMenu, isBlog }) => { // Use isB
                     {/* Vertical Divider */}
                     <span className={`hidden md:inline-block self-center ${styles.dividerGradient}`}></span>
 
-                    {/* Main site tagline */}
-                    <div className={`hidden lg:flex items-center min-w-0 ${styles.tagline} text-xs xl:text-sm`}>
+                    {/* Main site tagline - Hidden until 1200px to prevent overlap */}
+                    <div className={`hidden xl:flex items-center min-w-0 ${styles.tagline} text-xs xl:text-sm`}>
                         <MainTagline />
                     </div>
                 </>

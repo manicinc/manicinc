@@ -19,10 +19,11 @@ interface NewsletterState {
   email: string;
   name: string;
   company: string;
-  status: 'idle' | 'loading' | 'success' | 'error';
+  status: 'idle' | 'loading' | 'success' | 'error' | 'already_subscribed' | 'unsubscribed';
   message: string;
   collapsed: boolean;
   expanded: boolean;
+  showUnsubscribe: boolean;
 }
 
 export default function NewsletterForm({ 
@@ -42,12 +43,23 @@ export default function NewsletterForm({
     status: 'idle',
     message: '',
     collapsed: false,
-    expanded: false
+    expanded: false,
+    showUnsubscribe: false
   });
 
+  // Check if user was already subscribed or unsubscribed
   useEffect(() => {
     const collapsed = localStorage.getItem('newsletter-collapsed');
+    const subscribedEmails = JSON.parse(localStorage.getItem('newsletter-subscribed-emails') || '[]');
+    const unsubscribedEmails = JSON.parse(localStorage.getItem('newsletter-unsubscribed-emails') || '[]');
+    const hideUntil = localStorage.getItem('newsletter-hide-until');
+    
     if (collapsed === 'true') {
+      setState(prev => ({ ...prev, collapsed: true }));
+    }
+
+    // Hide newsletter if user requested not to see it again
+    if (hideUntil && new Date(hideUntil) > new Date()) {
       setState(prev => ({ ...prev, collapsed: true }));
     }
   }, []);
@@ -59,6 +71,56 @@ export default function NewsletterForm({
     }
   };
 
+  const checkIfAlreadySubscribed = (email: string): boolean => {
+    const subscribedEmails = JSON.parse(localStorage.getItem('newsletter-subscribed-emails') || '[]');
+    return subscribedEmails.includes(email.toLowerCase());
+  };
+
+  const handleAlreadySubscribed = () => {
+    setState(prev => ({ 
+      ...prev, 
+      status: 'already_subscribed',
+      message: 'You\'re already part of our network! Thanks for being a subscriber.',
+      showUnsubscribe: true
+    }));
+  };
+
+  const handleUnsubscribe = () => {
+    const unsubscribedEmails = JSON.parse(localStorage.getItem('newsletter-unsubscribed-emails') || '[]');
+    const subscribedEmails = JSON.parse(localStorage.getItem('newsletter-subscribed-emails') || '[]');
+    
+    // Add to unsubscribed list
+    if (!unsubscribedEmails.includes(state.email.toLowerCase())) {
+      unsubscribedEmails.push(state.email.toLowerCase());
+      localStorage.setItem('newsletter-unsubscribed-emails', JSON.stringify(unsubscribedEmails));
+    }
+    
+    // Remove from subscribed list
+    const updatedSubscribed = subscribedEmails.filter((email: string) => email !== state.email.toLowerCase());
+    localStorage.setItem('newsletter-subscribed-emails', JSON.stringify(updatedSubscribed));
+    
+    setState(prev => ({ 
+      ...prev, 
+      status: 'unsubscribed',
+      message: 'You\'ve been unsubscribed. We won\'t show this form again.',
+      showUnsubscribe: false
+    }));
+
+    // Hide newsletter form for 30 days
+    const hideUntil = new Date();
+    hideUntil.setDate(hideUntil.getDate() + 30);
+    localStorage.setItem('newsletter-hide-until', hideUntil.toISOString());
+
+    if (canTrack) {
+      trackEvent('newsletter_unsubscribe', { variant, email_domain: state.email.split('@')[1] });
+    }
+
+    // Auto-hide after 3 seconds
+    setTimeout(() => {
+      setState(prev => ({ ...prev, collapsed: true }));
+    }, 3000);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -68,6 +130,12 @@ export default function NewsletterForm({
         status: 'error', 
         message: 'Valid email address required for transmission.' 
       }));
+      return;
+    }
+
+    // Check if already subscribed
+    if (checkIfAlreadySubscribed(state.email)) {
+      handleAlreadySubscribed();
       return;
     }
 
@@ -83,24 +151,25 @@ export default function NewsletterForm({
     setState(prev => ({ ...prev, status: 'loading', message: '' }));
 
     try {
-      const response = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
-          email: state.email,
-          name: state.name,
-          company: state.company,
-          source: variant 
-        })
+      const result = await subscribeToNewsletter({
+        email: state.email,
+        name: state.name,
+        company: state.company,
+        source: variant 
       });
 
-      const data = await response.json();
+      if (result.success) {
+        // Add email to subscribed list
+        const subscribedEmails = JSON.parse(localStorage.getItem('newsletter-subscribed-emails') || '[]');
+        if (!subscribedEmails.includes(state.email.toLowerCase())) {
+          subscribedEmails.push(state.email.toLowerCase());
+          localStorage.setItem('newsletter-subscribed-emails', JSON.stringify(subscribedEmails));
+        }
 
-      if (response.ok) {
         setState(prev => ({ 
           ...prev, 
           status: 'success', 
-          message: data.message || 'Transmission channel established successfully.',
+          message: result.message || 'Transmission channel established successfully.',
           email: '',
           name: '',
           company: ''
@@ -125,7 +194,7 @@ export default function NewsletterForm({
         setState(prev => ({ 
           ...prev, 
           status: 'error', 
-          message: data.error || 'Transmission failed. Please verify connection and retry.' 
+          message: result.error || 'Transmission failed. Please verify connection and retry.' 
         }));
       }
     } catch (error) {
@@ -224,6 +293,58 @@ export default function NewsletterForm({
               </h4>
               <p className="text-text-secondary">
                 {copy.successMessage}
+              </p>
+            </div>
+          </motion.div>
+        ) : state.status === 'already_subscribed' ? (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="already-subscribed-state"
+          >
+            <div className="bg-accent-burgundy/10 border border-accent-burgundy/20 rounded-xl p-6 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 opacity-10">
+                <SubscriberIcon />
+              </div>
+              <h4 className="font-display font-semibold text-accent-burgundy mb-2">
+                Welcome Back, Subscriber!
+              </h4>
+              <p className="text-text-secondary mb-4">
+                {state.message}
+              </p>
+              {state.showUnsubscribe && (
+                <div className="flex flex-col gap-3">
+                  <button
+                    onClick={handleUnsubscribe}
+                    className="text-text-secondary hover:text-accent-alert transition-colors text-sm flex items-center gap-2 group"
+                  >
+                    <UnsubscribeIcon />
+                    <span className="group-hover:underline">Unsubscribe & don't show this again</span>
+                  </button>
+                  <p className="text-xs text-text-muted">
+                    Need help? Contact{' '}
+                    <a href="mailto:team@manic.agency" className="text-accent-burgundy hover:text-accent-highlight transition-colors">
+                      team@manic.agency
+                    </a>
+                  </p>
+                </div>
+              )}
+            </div>
+          </motion.div>
+        ) : state.status === 'unsubscribed' ? (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="unsubscribed-state"
+          >
+            <div className="bg-accent-alert/10 border border-accent-alert/20 rounded-xl p-6 relative overflow-hidden">
+              <h4 className="font-display font-semibold text-accent-alert mb-2">
+                Unsubscribed Successfully
+              </h4>
+              <p className="text-text-secondary">
+                {state.message} If you change your mind, you can always resubscribe later.
               </p>
             </div>
           </motion.div>
@@ -469,5 +590,21 @@ const LoadingPulse = () => (
     <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none" strokeDasharray="32" strokeDashoffset="32">
       <animate attributeName="stroke-dashoffset" dur="1s" repeatCount="indefinite" from="32" to="0"/>
     </circle>
+  </svg>
+);
+
+const SubscriberIcon = () => (
+  <svg viewBox="0 0 64 64" className="w-full h-full">
+    <circle cx="32" cy="24" r="8" fill="none" stroke="var(--accent-burgundy)" strokeWidth="2" opacity="0.3"/>
+    <path d="M20 44c0-6.627 5.373-12 12-12s12 5.373 12 12v8H20v-8z" fill="none" stroke="var(--accent-burgundy)" strokeWidth="2" opacity="0.3"/>
+    <circle cx="32" cy="32" r="3" fill="var(--accent-burgundy)"/>
+    <path d="M28 32l3 3 7-7" stroke="var(--accent-sage)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const UnsubscribeIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-text-secondary">
+    <path d="M8 12L16 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
   </svg>
 );
