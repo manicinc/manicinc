@@ -7,129 +7,140 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ContactForm from "@/components/ContactForm";
 
 const ContactPage = () => {
-    const [hoveredSection, setHoveredSection] = useState<string | null>(null);
+    const [hoveredCard, setHoveredCard] = useState<string | null>(null);
+    const [isTeacupSteaming, setIsTeacupSteaming] = useState(true);
 
     return (
         <div className="contact-page-wrapper bg-bg-primary text-text-primary font-body min-h-screen">
-            {/* Header Section */}
+            {/* Header Section - Invitation Style */}
             <header className="py-20 sm:py-24 md:py-28 relative overflow-hidden">
-                {/* Geometric Background Pattern */}
-                <div className="absolute inset-0 opacity-[0.02]">
-                    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-                        <defs>
-                            <pattern id="contact-grid" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-                                <path d="M10,0 L0,0 L0,10" fill="none" stroke="var(--text-muted)" strokeWidth="0.5"/>
-                                <circle cx="10" cy="10" r="0.5" fill="var(--accent-highlight)" opacity="0.3"/>
-                            </pattern>
-                        </defs>
-                        <rect width="100" height="100" fill="url(#contact-grid)" />
-                    </svg>
+                {/* Ornate Pattern Background */}
+                <div className="absolute inset-0 opacity-[0.03]">
+                    <OrnatePattern />
                 </div>
 
-                {/* Animated Accent Lines */}
-                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-highlight to-transparent opacity-50" />
-                <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-burgundy to-transparent opacity-50" />
+                {/* Floating Tea Elements */}
+                <div className="absolute inset-0 pointer-events-none">
+                    <FloatingTeaElements />
+                </div>
 
                 <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <motion.h1 
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary mb-6"
-                    >
-                        Establish Connection
-                    </motion.h1>
-                    <motion.p 
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.1 }}
-                        className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto font-body leading-relaxed"
-                    >
-                        Open a direct channel to our creative collective. 
-                        We respond to all transmissions within 24 Earth hours.
-                    </motion.p>
+                    {/* Ornate Invitation Card */}
                     <motion.div
-                        initial={{ scaleX: 0 }}
-                        animate={{ scaleX: 1 }}
-                        transition={{ duration: 0.8, delay: 0.3 }}
-                        className="w-24 h-px bg-gradient-to-r from-transparent via-accent-highlight to-transparent mx-auto mt-8"
-                    />
+                        initial={{ opacity: 0, scale: 0.9, rotateX: -10 }}
+                        animate={{ opacity: 1, scale: 1, rotateX: 0 }}
+                        transition={{ duration: 0.8, type: "spring" }}
+                        className="invitation-card relative"
+                    >
+                        <div className="absolute inset-0">
+                            <InvitationBorder />
+                        </div>
+                        
+                        <div className="relative z-10 p-12">
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.3 }}
+                                className="mb-6"
+                            >
+                                <TeaPartyEmblem />
+                            </motion.div>
+                            
+                            <h1 className="font-script-blog text-5xl sm:text-6xl lg:text-7xl text-text-primary mb-4">
+                                You&apos;re Cordially Invited
+                            </h1>
+                            
+                            <div className="w-24 h-px bg-gradient-to-r from-transparent via-accent-gold to-transparent mx-auto my-6" />
+                            
+                            <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto font-body-blog italic leading-relaxed">
+                                Down the rabbit hole to our digital tea party. 
+                                Where mad ideas brew and curious minds convene.
+                            </p>
+                            
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 0.6 }}
+                                className="mt-8 flex justify-center"
+                            >
+                                <RabbitHoleIcon />
+                            </motion.div>
+                        </div>
+                    </motion.div>
                 </div>
             </header>
 
-            {/* Quick Links Section */}
-            <section className="py-16 bg-gradient-to-b from-bg-primary to-bg-secondary relative">
+            {/* Quick Links - Playing Cards Style */}
+            <section className="py-16 relative">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.h2 
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 0.4 }}
-                        className="text-xl font-display font-semibold text-text-heading mb-10 text-center"
+                        transition={{ delay: 0.7 }}
+                        className="text-2xl font-display font-semibold text-text-heading mb-10 text-center"
                     >
-                        Explore Our Digital Architecture
+                        Choose Your Adventure
                     </motion.h2>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
                             { 
                                 href: "/team", 
-                                title: "Creative Collective", 
-                                desc: "Meet the architects and engineers",
-                                icon: <CollectiveIcon />,
-                                id: "collective"
+                                title: "Meet the Mad Hatters", 
+                                desc: "Our wonderfully peculiar collective",
+                                icon: <MadHatterIcon />,
+                                id: "hatters"
                             },
                             { 
                                 href: "/projects", 
-                                title: "Project Archive", 
-                                desc: "Explore our digital constructions",
-                                icon: <ArchiveIcon />,
-                                id: "archive"
+                                title: "Curious Creations", 
+                                desc: "Adventures in digital wonderland",
+                                icon: <CheshireIcon />,
+                                id: "creations"
                             },
                             { 
                                 href: "/process", 
-                                title: "Methodologies", 
-                                desc: "Discover our creation protocols",
-                                icon: <MethodologyIcon />,
-                                id: "methodology"
+                                title: "The Method to Madness", 
+                                desc: "How we brew digital magic",
+                                icon: <PotionIcon />,
+                                id: "method"
                             }
                         ].map((item, index) => (
                             <motion.div
                                 key={item.id}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.5 + index * 0.1 }}
+                                initial={{ opacity: 0, y: 20, rotate: -5 + index * 2 }}
+                                animate={{ opacity: 1, y: 0, rotate: 0 }}
+                                transition={{ delay: 0.8 + index * 0.1 }}
+                                className="relative"
                             >
                                 <Link 
                                     href={item.href}
-                                    className="block relative group"
-                                    onMouseEnter={() => setHoveredSection(item.id)}
-                                    onMouseLeave={() => setHoveredSection(null)}
+                                    className="block playing-card"
+                                    onMouseEnter={() => setHoveredCard(item.id)}
+                                    onMouseLeave={() => setHoveredCard(null)}
                                 >
-                                    <div className="relative bg-bg-secondary border border-border rounded-2xl p-6 transition-all duration-300 group-hover:transform group-hover:translate-y-[-2px] group-hover:shadow-lg overflow-hidden">
-                                        {/* Neumorphic effect */}
-                                        <div className="absolute inset-0 bg-gradient-to-br from-bg-primary via-bg-secondary to-bg-tertiary opacity-0 group-hover:opacity-30 transition-opacity duration-300" />
+                                    <motion.div 
+                                        className="card-content"
+                                        whileHover={{ scale: 1.05, rotateY: 5 }}
+                                        transition={{ type: "spring", stiffness: 300 }}
+                                    >
+                                        <div className="card-corner top-left">♠</div>
+                                        <div className="card-corner top-right">♠</div>
+                                        <div className="card-corner bottom-left">♠</div>
+                                        <div className="card-corner bottom-right">♠</div>
                                         
-                                        <div className="relative z-10">
-                                            <div className="w-12 h-12 mb-4 text-accent-secondary group-hover:text-accent-primary transition-colors duration-300">
+                                        <div className="relative z-10 p-8">
+                                            <div className="w-16 h-16 mb-4 mx-auto text-accent-burgundy">
                                                 {item.icon}
                                             </div>
-                                            <h3 className="font-display text-lg font-semibold text-text-heading mb-2 group-hover:text-accent-primary transition-colors duration-300">
+                                            <h3 className="font-display text-xl font-semibold text-text-heading mb-2">
                                                 {item.title}
                                             </h3>
-                                            <p className="text-sm text-text-secondary">
+                                            <p className="text-sm text-text-secondary italic">
                                                 {item.desc}
                                             </p>
-                                            <div className="mt-4 text-sm font-mono text-accent-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-1">
-                                                <span>Access</span>
-                                                <motion.span
-                                                    animate={{ x: hoveredSection === item.id ? 5 : 0 }}
-                                                    transition={{ type: "spring", stiffness: 300 }}
-                                                >
-                                                    →
-                                                </motion.span>
-                                            </div>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                 </Link>
                             </motion.div>
                         ))}
@@ -137,126 +148,286 @@ const ContactPage = () => {
                 </div>
             </section>
 
-            {/* Main Contact Section */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 grid grid-cols-1 lg:grid-cols-5 gap-12">
-                {/* Contact Form */}
-                <motion.div 
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.6 }}
-                    className="lg:col-span-3"
-                >
-                    <h2 className="text-2xl sm:text-3xl font-display font-semibold text-text-heading mb-6 flex items-center gap-3">
-                        <TransmissionIcon />
-                        Transmit Message
-                    </h2>
-                    <ContactForm />
-                    <p className="mt-6 text-xs text-text-muted font-body italic">
-                        All transmissions are encrypted end-to-end. Your data remains sovereign.
-                    </p>
-                </motion.div>
-
-                {/* Contact Details */}
-                <motion.div 
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.7 }}
-                    className="lg:col-span-2 space-y-8"
-                >
-                    {/* Direct Channels */}
-                    <div>
-                        <h3 className="font-display text-lg font-semibold text-text-heading mb-4 flex items-center gap-2">
-                            <ChannelIcon />
-                            Direct Channels
-                        </h3>
-                        <dl className="space-y-3">
-                            <ContactLink 
-                                href="mailto:team@manic.agency"
-                                icon={<EmailIcon />}
-                                text="team@manic.agency"
-                                label="Primary Channel"
-                            />
-                            <ContactLink 
-                                href="https://discord.gg/manic"
-                                icon={<DiscordIcon />}
-                                text="Discord Collective"
-                                label="Community Hub"
-                                external
-                            />
-                            <ContactLink 
-                                href="https://github.com/manicinc"
-                                icon={<GithubIcon />}
-                                text="@manicinc"
-                                label="Source Repository"
-                                external
-                            />
-                            <ContactLink 
-                                href="https://linkedin.com/company/manic-agency-llc"
-                                icon={<LinkedInIcon />}
-                                text="Professional Network"
-                                label="LinkedIn"
-                                external
-                            />
-                            <ContactLink 
-                                href="https://x.com/manicagency"
-                                icon={<XIcon />}
-                                text="@manicagency"
-                                label="Broadcast Channel"
-                                external
-                            />
-                        </dl>
-                    </div>
-
-                    {/* Headquarters */}
-                    <div>
-                        <h3 className="font-display text-lg font-semibold text-text-heading mb-4 flex items-center gap-2">
-                            <LocationIcon />
-                            Physical Nexus
-                        </h3>
-                        <p className="text-text-secondary text-sm leading-relaxed mb-4">
-                            Primary operations anchored in Los Angeles, California. 
-                            Our collective spans the digital frontier, unbound by geography.
-                        </p>
-                        <div className="relative h-32 rounded-xl overflow-hidden border border-border">
-                            <LocationMap />
+            {/* Main Contact Section - Tea Table */}
+            <section className="relative py-16 lg:py-20">
+                <div className="absolute inset-0 opacity-[0.02]">
+                    <TeaTablePattern />
+                </div>
+                
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-5 gap-12">
+                    {/* Contact Form - Parchment Style */}
+                    <motion.div 
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 1 }}
+                        className="lg:col-span-3"
+                    >
+                        <div className="parchment-container">
+                            <div className="parchment-edges">
+                                <ParchmentEdges />
+                            </div>
+                            
+                            <div className="relative z-10 p-8">
+                                <h2 className="text-2xl sm:text-3xl font-script-blog text-text-heading mb-6 flex items-center gap-3">
+                                    <QuillIcon />
+                                    Pen Your Message
+                                </h2>
+                                <ContactForm />
+                                <p className="mt-6 text-xs text-text-muted font-body-blog italic text-center">
+                                    ✦ All correspondence sealed with digital wax ✦
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </motion.div>
+                    </motion.div>
+
+                    {/* Contact Details - Victorian Card */}
+                    <motion.div 
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 1.1 }}
+                        className="lg:col-span-2 space-y-8"
+                    >
+                        {/* Tea Service Hours */}
+                        <div className="victorian-card">
+                            <div className="card-ornament">
+                                <CardOrnament />
+                            </div>
+                            
+                            <h3 className="font-script-blog text-xl text-text-heading mb-4 text-center">
+                                Tea Service Hours
+                            </h3>
+                            
+                            <div className="space-y-3 text-sm">
+                                <div className="flex justify-between items-center py-2 border-b border-border/30">
+                                    <span className="text-text-secondary">Digital Realm</span>
+                                    <span className="font-medium text-text-primary">Always Open</span>
+                                </div>
+                                <div className="flex justify-between items-center py-2 border-b border-border/30">
+                                    <span className="text-text-secondary">Physical Nexus</span>
+                                    <span className="font-medium text-text-primary">By Appointment</span>
+                                </div>
+                                <div className="flex justify-between items-center py-2">
+                                    <span className="text-text-secondary">Response Time</span>
+                                    <span className="font-medium text-text-primary">24 Hours</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Direct Channels */}
+                        <div className="victorian-card">
+                            <h3 className="font-script-blog text-xl text-text-heading mb-4 text-center">
+                                Direct Portals
+                            </h3>
+                            
+                            <dl className="space-y-3">
+                                <ContactLink 
+                                    href="mailto:team@manic.agency"
+                                    icon={<EnvelopeIcon />}
+                                    text="team@manic.agency"
+                                    label="Primary Channel"
+                                />
+                                <ContactLink 
+                                    href="https://discord.gg/manic"
+                                    icon={<DiscordIcon />}
+                                    text="Discord Tea Room"
+                                    label="Community Parlor"
+                                    external
+                                />
+                                <ContactLink 
+                                    href="https://github.com/manicinc"
+                                    icon={<GithubIcon />}
+                                    text="@manicinc"
+                                    label="Code Garden"
+                                    external
+                                />
+                            </dl>
+                        </div>
+
+                        {/* Nexus Location */}
+                        <div className="victorian-card">
+                            <h3 className="font-script-blog text-xl text-text-heading mb-4 text-center">
+                                Physical Nexus
+                            </h3>
+                            
+                            <div className="relative h-32 rounded-xl overflow-hidden border border-border mb-4">
+                                <WonderlandMap />
+                            </div>
+                            
+                            <p className="text-sm text-text-secondary text-center italic">
+                                Los Angeles, California
+                                <br />
+                                <span className="text-xs">Where dreams and digital converge</span>
+                            </p>
+                        </div>
+                    </motion.div>
+                </div>
             </section>
 
-            {/* Call to Action */}
+            {/* Bottom CTA - Teacup Animation */}
             <section className="py-16 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-bg-secondary to-bg-primary opacity-50" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-secondary/30 to-bg-tertiary/50" />
+                
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.8 }}
+                    transition={{ delay: 1.5 }}
                     className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
                 >
-                    <h2 className="font-display text-2xl sm:text-3xl font-semibold text-text-heading mb-4">
-                        Ready to Create Something Extraordinary?
+                    <div className="mb-8 flex justify-center">
+                        <motion.div
+                            animate={{ y: [0, -5, 0] }}
+                            transition={{ duration: 3, repeat: Infinity }}
+                            onClick={() => setIsTeacupSteaming(!isTeacupSteaming)}
+                            className="cursor-pointer"
+                        >
+                            <AnimatedTeacup steaming={isTeacupSteaming} />
+                        </motion.div>
+                    </div>
+                    
+                    <h2 className="font-script-blog text-3xl sm:text-4xl text-text-heading mb-4">
+                        You&apos;re invited to the tea party!
                     </h2>
-                    <p className="text-text-secondary mb-8 max-w-2xl mx-auto">
-                        Whether you&apos;re building the next metaverse, exploring AI frontiers, 
-                        or crafting digital experiences, we&apos;re here to amplify your vision.
+                    <p className="text-text-secondary mb-8 max-w-2xl mx-auto italic">
+                        Whether you&apos;re chasing white rabbits or painting roses red, 
+                        we&apos;re here to guide your journey through the digital wonderland.
                     </p>
+                    
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link 
                             href="#contact-form"
-                            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent-burgundy hover:bg-accent-highlight text-white font-medium rounded-xl transition-all duration-300 hover:transform hover:scale-105"
+                            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent-burgundy hover:bg-accent-highlight text-white font-medium rounded-full transition-all duration-300 hover:transform hover:scale-105 shadow-lg"
                         >
-                            Start a Project
-                            <ArrowIcon />
+                            Begin the Conversation
+                            <RightArrowIcon />
                         </Link>
                         <Link 
                             href="/newsletter"
-                            className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-accent-secondary text-accent-secondary hover:bg-accent-secondary hover:text-white font-medium rounded-xl transition-all duration-300"
+                            className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-accent-sage text-accent-sage hover:bg-accent-sage hover:text-white font-medium rounded-full transition-all duration-300"
                         >
-                            Subscribe to Updates
+                            Join the Tea Party
                         </Link>
                     </div>
                 </motion.div>
             </section>
+
+            {/* Styles */}
+            <style jsx>{`
+                /* Invitation Card Styles */
+                .invitation-card {
+                    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+                    border-radius: 0.5rem;
+                    box-shadow: 
+                        0 20px 40px rgba(var(--shadow-color-rgb), 0.1),
+                        inset 0 0 60px rgba(var(--accent-gold-rgb, 184, 142, 98), 0.05);
+                }
+
+                /* Playing Card Styles */
+                .playing-card {
+                    display: block;
+                    transform-style: preserve-3d;
+                    perspective: 1000px;
+                }
+
+                .card-content {
+                    position: relative;
+                    background: var(--bg-primary);
+                    border: 2px solid var(--border);
+                    border-radius: 1rem;
+                    box-shadow: 0 10px 30px rgba(var(--shadow-color-rgb), 0.1);
+                    transition: all 0.3s ease;
+                }
+
+                .playing-card:hover .card-content {
+                    box-shadow: 
+                        0 15px 40px rgba(var(--shadow-color-rgb), 0.15),
+                        0 0 20px rgba(var(--accent-burgundy-rgb), 0.1);
+                    border-color: var(--accent-burgundy);
+                }
+
+                .card-corner {
+                    position: absolute;
+                    font-size: 1rem;
+                    color: var(--accent-burgundy);
+                    opacity: 0.3;
+                }
+                .card-corner.top-left { top: 0.5rem; left: 0.5rem; }
+                .card-corner.top-right { top: 0.5rem; right: 0.5rem; }
+                .card-corner.bottom-left { bottom: 0.5rem; left: 0.5rem; transform: rotate(180deg); }
+                .card-corner.bottom-right { bottom: 0.5rem; right: 0.5rem; transform: rotate(180deg); }
+
+                /* Parchment Styles */
+                .parchment-container {
+                    position: relative;
+                    background: linear-gradient(135deg, 
+                        var(--bg-blog-paper) 0%, 
+                        rgba(var(--bg-secondary-rgb), 0.5) 100%);
+                    border-radius: 0.25rem;
+                    box-shadow: 
+                        0 15px 35px rgba(var(--shadow-color-rgb), 0.1),
+                        inset 0 0 30px rgba(var(--accent-gold-rgb, 184, 142, 98), 0.05);
+                }
+
+                .parchment-edges {
+                    position: absolute;
+                    inset: -2px;
+                    opacity: 0.5;
+                    pointer-events: none;
+                }
+
+                /* Victorian Card Styles */
+                .victorian-card {
+                    position: relative;
+                    background: var(--bg-primary);
+                    border: 1px solid var(--border);
+                    border-radius: 1rem;
+                    padding: 1.5rem;
+                    box-shadow: 
+                        0 8px 20px rgba(var(--shadow-color-rgb), 0.08),
+                        inset 0 0 20px rgba(var(--accent-gold-rgb, 184, 142, 98), 0.03);
+                    overflow: hidden;
+                }
+
+                .card-ornament {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 100px;
+                    height: 30px;
+                    opacity: 0.3;
+                }
+
+                /* Contact Link Styles */
+                .contact-link {
+                    transition: all 0.2s ease;
+                }
+
+                .contact-link:hover {
+                    transform: translateX(5px);
+                }
+
+                /* Button Color Fixes for Light Mode */
+                .contact-btn,
+                a[href="#contact-form"],
+                a[href="/newsletter"] {
+                    color: var(--text-on-accent) !important;
+                }
+
+                /* Light mode specific overrides */
+                html:not(.dark) .contact-btn:hover,
+                html:not(.dark) a[href="#contact-form"]:hover {
+                    color: var(--text-on-accent) !important;
+                }
+
+                /* Ensure buttons in light mode have proper contrast */
+                html:not(.dark) .bg-accent-burgundy {
+                    color: white !important;
+                }
+
+                html:not(.dark) .border-accent-sage:hover {
+                    color: white !important;
+                }
+            `}</style>
         </div>
     );
 };
@@ -274,16 +445,16 @@ const ContactLink = ({ href, icon, text, label, external = false }: {
             href={href}
             target={external ? "_blank" : undefined}
             rel={external ? "noopener noreferrer" : undefined}
-            className="group flex items-start gap-3 p-2 -m-2 rounded-lg transition-all duration-200 hover:bg-bg-tertiary/30"
+            className="contact-link group flex items-center gap-3 p-2 -m-2 rounded-lg transition-all duration-200 hover:bg-bg-tertiary/30"
         >
-            <div className="w-10 h-10 rounded-xl bg-bg-tertiary/50 flex items-center justify-center text-accent-secondary group-hover:text-accent-primary group-hover:bg-accent-primary/10 transition-all duration-300">
+            <div className="w-10 h-10 rounded-full bg-bg-tertiary/50 flex items-center justify-center text-accent-burgundy group-hover:text-accent-highlight group-hover:bg-accent-burgundy/10 transition-all duration-300">
                 {icon}
             </div>
             <div className="flex-1">
-                <div className="text-text-primary font-medium group-hover:text-accent-primary transition-colors">
+                <div className="text-text-primary font-medium group-hover:text-accent-burgundy transition-colors">
                     {text}
                 </div>
-                <div className="text-xs text-text-muted">
+                <div className="text-xs text-text-muted italic">
                     {label}
                 </div>
             </div>
@@ -291,74 +462,375 @@ const ContactLink = ({ href, icon, text, label, external = false }: {
     </dd>
 );
 
-// SVG Icon Components
-const CollectiveIcon = () => (
-    <svg viewBox="0 0 48 48" className="w-full h-full">
+// Elaborate SVG Components
+const OrnatePattern = () => (
+    <svg className="w-full h-full" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice">
         <defs>
-            <linearGradient id="collective-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="currentColor" stopOpacity="0.8" />
-                <stop offset="100%" stopColor="currentColor" stopOpacity="1" />
+            <pattern id="ornate" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+                <g className="ornate-group">
+                    {/* Victorian Flourish */}
+                    <path d="M25 5 Q15 15 25 25 Q35 15 25 5" fill="none" stroke="var(--text-muted)" strokeWidth="0.5" opacity="0.5"/>
+                    <path d="M5 25 Q15 35 25 25 Q35 35 45 25" fill="none" stroke="var(--text-muted)" strokeWidth="0.5" opacity="0.5"/>
+                    <circle cx="25" cy="25" r="3" fill="none" stroke="var(--accent-gold)" strokeWidth="0.3" opacity="0.3"/>
+                    {/* Corner Ornaments */}
+                    <path d="M5 5 L10 5 L5 10" fill="none" stroke="var(--accent-burgundy)" strokeWidth="0.3" opacity="0.2"/>
+                    <path d="M45 5 L40 5 L45 10" fill="none" stroke="var(--accent-burgundy)" strokeWidth="0.3" opacity="0.2"/>
+                    <path d="M5 45 L10 45 L5 40" fill="none" stroke="var(--accent-burgundy)" strokeWidth="0.3" opacity="0.2"/>
+                    <path d="M45 45 L40 45 L45 40" fill="none" stroke="var(--accent-burgundy)" strokeWidth="0.3" opacity="0.2"/>
+                </g>
+            </pattern>
+        </defs>
+        <rect width="200" height="200" fill="url(#ornate)" />
+    </svg>
+);
+
+const FloatingTeaElements = () => (
+    <div className="absolute inset-0">
+        {[...Array(6)].map((_, i) => (
+            <motion.div
+                key={i}
+                className="absolute"
+                style={{
+                    left: `${10 + i * 15}%`,
+                    top: `${20 + (i % 2) * 40}%`
+                }}
+                animate={{
+                    y: [-20, 20, -20],
+                    rotate: [-5, 5, -5],
+                    opacity: [0.3, 0.6, 0.3]
+                }}
+                transition={{
+                    duration: 5 + i,
+                    repeat: Infinity,
+                    delay: i * 0.5
+                }}
+            >
+                {i % 3 === 0 ? <TeaLeafIcon /> : i % 3 === 1 ? <ClockIcon /> : <KeyIcon />}
+            </motion.div>
+        ))}
+    </div>
+);
+
+const InvitationBorder = () => (
+    <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 300" preserveAspectRatio="none">
+        <defs>
+            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="var(--accent-gold)" stopOpacity="0.3"/>
+                <stop offset="50%" stopColor="var(--accent-burgundy)" stopOpacity="0.5"/>
+                <stop offset="100%" stopColor="var(--accent-gold)" stopOpacity="0.3"/>
             </linearGradient>
         </defs>
-        <g className="animate-draw-in">
-            <circle cx="24" cy="12" r="5" fill="none" stroke="url(#collective-grad)" strokeWidth="1.5" />
-            <circle cx="12" cy="28" r="5" fill="none" stroke="url(#collective-grad)" strokeWidth="1.5" />
-            <circle cx="36" cy="28" r="5" fill="none" stroke="url(#collective-grad)" strokeWidth="1.5" />
-            <path d="M24 17 L12 23 M24 17 L36 23 M12 33 L36 33" stroke="url(#collective-grad)" strokeWidth="1" strokeDasharray="2 2" />
+        {/* Ornate Corner Flourishes */}
+        <g className="corner-flourishes">
+            {/* Top Left */}
+            <path d="M0 50 Q0 0 50 0 L100 0 Q80 10 60 10 T20 20 Q10 30 10 50" 
+                  fill="none" stroke="url(#goldGrad)" strokeWidth="1.5"/>
+            {/* Top Right */}
+            <path d="M350 0 Q400 0 400 50 L400 100 Q390 80 390 60 T380 20 Q370 10 350 10" 
+                  fill="none" stroke="url(#goldGrad)" strokeWidth="1.5"/>
+            {/* Bottom Left */}
+            <path d="M0 250 Q0 300 50 300 L100 300 Q80 290 60 290 T20 280 Q10 270 10 250" 
+                  fill="none" stroke="url(#goldGrad)" strokeWidth="1.5"/>
+            {/* Bottom Right */}
+            <path d="M350 300 Q400 300 400 250 L400 200 Q390 220 390 240 T380 280 Q370 290 350 290" 
+                  fill="none" stroke="url(#goldGrad)" strokeWidth="1.5"/>
+        </g>
+        {/* Center Ornament */}
+        <g transform="translate(200, 20)">
+            <path d="M0 0 Q-20 10 -20 20 T0 40 T20 20 T0 0" 
+                  fill="none" stroke="var(--accent-gold)" strokeWidth="0.5" opacity="0.5"/>
+            <circle cx="0" cy="20" r="3" fill="var(--accent-burgundy)" opacity="0.3"/>
         </g>
     </svg>
 );
 
-const ArchiveIcon = () => (
-    <svg viewBox="0 0 48 48" className="w-full h-full">
-        <g className="animate-draw-in">
-            <rect x="8" y="12" width="32" height="28" rx="2" fill="none" stroke="currentColor" strokeWidth="1.5" />
-            <path d="M8 20 L40 20" stroke="currentColor" strokeWidth="1.5" />
-            <rect x="20" y="8" width="8" height="4" rx="1" fill="none" stroke="currentColor" strokeWidth="1.5" />
-            <circle cx="24" cy="28" r="4" fill="none" stroke="currentColor" strokeWidth="1" />
-            <path d="M16 32 L32 32" stroke="currentColor" strokeWidth="1" strokeDasharray="3 2" />
+const TeaPartyEmblem = () => (
+    <svg width="80" height="80" viewBox="0 0 100 100" className="mx-auto">
+        <defs>
+            <radialGradient id="emblemGrad">
+                <stop offset="0%" stopColor="var(--accent-gold)" stopOpacity="0.6"/>
+                <stop offset="100%" stopColor="var(--accent-burgundy)" stopOpacity="0.3"/>
+            </radialGradient>
+        </defs>
+        {/* Outer Ring */}
+        <circle cx="50" cy="50" r="45" fill="none" stroke="url(#emblemGrad)" strokeWidth="1"/>
+        <circle cx="50" cy="50" r="40" fill="none" stroke="url(#emblemGrad)" strokeWidth="0.5"/>
+        
+        {/* Teacup */}
+        <g transform="translate(50, 50)">
+            <path d="M-15 -5 Q-15 10 0 15 Q15 10 15 -5 Z" 
+                  fill="none" stroke="var(--accent-burgundy)" strokeWidth="1.5"/>
+            <path d="M15 -2 Q22 -2 22 5 Q22 12 15 12" 
+                  fill="none" stroke="var(--accent-burgundy)" strokeWidth="1.5"/>
+            {/* Steam */}
+            <path d="M-5 -8 Q-3 -12 -1 -8 T3 -8" 
+                  fill="none" stroke="var(--accent-sage)" strokeWidth="1" opacity="0.6">
+                <animate attributeName="d" 
+                         values="M-5 -8 Q-3 -12 -1 -8 T3 -8;M-5 -10 Q-3 -14 -1 -10 T3 -10;M-5 -8 Q-3 -12 -1 -8 T3 -8" 
+                         dur="3s" repeatCount="indefinite"/>
+            </path>
+        </g>
+        
+        {/* Decorative Text Circle */}
+        <path id="textCircle" d="M50,50 m-35,0 a35,35 0 1,1 70,0 a35,35 0 1,1 -70,0" fill="none"/>
+        <text className="text-xs fill-text-muted" opacity="0.5">
+            <textPath href="#textCircle" startOffset="50%" textAnchor="middle">
+                ✦ WONDERLAND TEA SOCIETY ✦
+            </textPath>
+        </text>
+    </svg>
+);
+
+const RabbitHoleIcon = () => (
+    <svg width="60" height="60" viewBox="0 0 60 60" className="mx-auto">
+        <defs>
+            <radialGradient id="holeGrad" cx="50%" cy="50%">
+                <stop offset="0%" stopColor="var(--accent-burgundy)" stopOpacity="0"/>
+                <stop offset="50%" stopColor="var(--accent-burgundy)" stopOpacity="0.3"/>
+                <stop offset="100%" stopColor="var(--accent-burgundy)" stopOpacity="0.8"/>
+            </radialGradient>
+        </defs>
+        <g className="rabbit-hole-group">
+            {[...Array(5)].map((_, i) => (
+                <ellipse 
+                    key={i}
+                    cx="30" cy="30" 
+                    rx={25 - i * 5} ry={15 - i * 3}
+                    fill="none" 
+                    stroke="url(#holeGrad)" 
+                    strokeWidth="1"
+                    opacity={0.8 - i * 0.15}
+                    transform={`rotate(${i * 15} 30 30)`}
+                >
+                    <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        from={`${i * 15} 30 30`}
+                        to={`${360 + i * 15} 30 30`}
+                        dur={`${10 + i * 2}s`}
+                        repeatCount="indefinite"
+                    />
+                </ellipse>
+            ))}
+            <circle cx="30" cy="30" r="3" fill="var(--accent-burgundy)" opacity="0.8"/>
         </g>
     </svg>
 );
 
-const MethodologyIcon = () => (
-    <svg viewBox="0 0 48 48" className="w-full h-full">
-        <g className="animate-draw-in">
-            <path d="M24 8 L38 16 L38 32 L24 40 L10 32 L10 16 Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
-            <path d="M24 8 L24 24 M10 16 L24 24 M38 16 L24 24 M24 24 L24 40" stroke="currentColor" strokeWidth="1" />
-            <circle cx="24" cy="24" r="3" fill="currentColor" />
+const MadHatterIcon = () => (
+    <svg viewBox="0 0 80 80" className="w-full h-full">
+        <g className="mad-hatter-group">
+            {/* Hat */}
+            <path d="M20 50 L20 30 Q20 20 30 20 L50 20 Q60 20 60 30 L60 50" 
+                  fill="none" stroke="currentColor" strokeWidth="2"/>
+            <rect x="15" y="50" width="50" height="4" rx="2" fill="currentColor"/>
+            {/* Hat Band */}
+            <rect x="20" y="35" width="40" height="8" fill="currentColor" opacity="0.3"/>
+            {/* Card */}
+            <rect x="35" y="25" width="10" height="15" fill="none" stroke="currentColor" strokeWidth="1" transform="rotate(-10 40 32.5)"/>
+            <text x="40" y="35" textAnchor="middle" className="text-xs fill-current">10/6</text>
         </g>
     </svg>
 );
 
-const TransmissionIcon = () => (
-    <svg width="24" height="24" viewBox="0 0 48 48" fill="none">
-        <path d="M24 36 L24 12 M12 24 L24 12 L36 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        <circle cx="24" cy="12" r="2" fill="currentColor" />
-        <path d="M16 8 Q24 4 32 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
-        <path d="M12 4 Q24 0 36 4" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.3" />
+const CheshireIcon = () => (
+    <svg viewBox="0 0 80 80" className="w-full h-full">
+        <g className="cheshire-group">
+            {/* Smile */}
+            <path d="M20 45 Q40 55 60 45" 
+                  fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+            {/* Eyes */}
+            <circle cx="30" cy="35" r="3" fill="currentColor"/>
+            <circle cx="50" cy="35" r="3" fill="currentColor"/>
+            {/* Stripes */}
+            <path d="M15 30 Q40 20 65 30" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.3"/>
+            <path d="M15 50 Q40 60 65 50" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.3"/>
+        </g>
     </svg>
 );
 
-const ChannelIcon = () => (
-    <svg width="20" height="20" viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="3" fill="currentColor" />
-        <path d="M24 27 L24 38 M24 21 L24 10 M27 24 L38 24 M21 24 L10 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        <path d="M34 14 L36 12 M14 34 L12 36 M34 34 L36 36 M14 14 L12 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
+const PotionIcon = () => (
+    <svg viewBox="0 0 80 80" className="w-full h-full">
+        <g className="potion-group">
+            {/* Flask */}
+            <path d="M30 20 L30 35 L20 55 Q20 60 25 60 L55 60 Q60 60 60 55 L50 35 L50 20" 
+                  fill="none" stroke="currentColor" strokeWidth="2"/>
+            <line x1="25" y1="20" x2="55" y2="20" stroke="currentColor" strokeWidth="2"/>
+            {/* Liquid */}
+            <path d="M25 50 Q40 45 55 50 L55 55 Q55 58 52 58 L28 58 Q25 58 25 55 Z" 
+                  fill="currentColor" opacity="0.3"/>
+            {/* Bubbles */}
+            <circle cx="35" cy="52" r="2" fill="currentColor" opacity="0.5">
+                <animate attributeName="cy" values="52;48;52" dur="2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="45" cy="54" r="1.5" fill="currentColor" opacity="0.5">
+                <animate attributeName="cy" values="54;50;54" dur="2.5s" repeatCount="indefinite"/>
+            </circle>
+        </g>
     </svg>
 );
 
-const LocationIcon = () => (
-    <svg width="20" height="20" viewBox="0 0 48 48" fill="none">
-        <path d="M24 44 C24 44 38 32 38 20 C38 12 31 4 24 4 C17 4 10 12 10 20 C10 32 24 44 24 44 Z" fill="none" stroke="currentColor" strokeWidth="2" />
-        <circle cx="24" cy="20" r="4" fill="currentColor" />
+const ParchmentEdges = () => (
+    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <defs>
+            <filter id="roughPaper">
+                <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="5" result="noise"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="2"/>
+            </filter>
+        </defs>
+        <path d="M2 2 Q5 0 8 2 T15 2 T22 2 T29 2 T36 2 T43 2 T50 2 T57 2 T64 2 T71 2 T78 2 T85 2 T92 2 Q95 0 98 2 
+                 L98 98 Q95 100 92 98 T85 98 T78 98 T71 98 T64 98 T57 98 T50 98 T43 98 T36 98 T29 98 T22 98 T15 98 T8 98 Q5 100 2 98 Z" 
+              fill="none" 
+              stroke="var(--accent-gold)" 
+              strokeWidth="0.5" 
+              opacity="0.3"
+              filter="url(#roughPaper)"/>
     </svg>
 );
 
-const EmailIcon = () => (
+const CardOrnament = () => (
+    <svg viewBox="0 0 100 30" className="w-full h-full">
+        <path d="M10 15 Q30 5 50 15 Q70 25 90 15" 
+              fill="none" stroke="var(--accent-gold)" strokeWidth="1" opacity="0.5"/>
+        <circle cx="50" cy="15" r="3" fill="var(--accent-burgundy)" opacity="0.3"/>
+    </svg>
+);
+
+const QuillIcon = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M20 2L18 12L16 22L14 20L16 12L18 4L20 2Z" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M18 8L12 14L8 18L6 20L4 22L2 20L4 18L8 14L14 8" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M10 16L8 18" stroke="currentColor" strokeWidth="1.5"/>
+    </svg>
+);
+
+const TeaTablePattern = () => (
+    <svg className="w-full h-full" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <pattern id="lace" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                <circle cx="20" cy="20" r="15" fill="none" stroke="var(--text-muted)" strokeWidth="0.3" opacity="0.3"/>
+                <circle cx="20" cy="20" r="10" fill="none" stroke="var(--text-muted)" strokeWidth="0.3" opacity="0.2"/>
+                <circle cx="20" cy="20" r="5" fill="none" stroke="var(--text-muted)" strokeWidth="0.3" opacity="0.1"/>
+            </pattern>
+        </defs>
+        <rect width="200" height="200" fill="url(#lace)" />
+    </svg>
+);
+
+const WonderlandMap = () => (
+    <svg className="w-full h-full" viewBox="0 0 200 100">
+        <defs>
+            <linearGradient id="mapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="var(--accent-sage)" stopOpacity="0.2"/>
+                <stop offset="100%" stopColor="var(--accent-burgundy)" stopOpacity="0.2"/>
+            </linearGradient>
+        </defs>
+        
+        {/* Whimsical Map Elements */}
+        <path d="M20 50 Q50 20 80 50 T140 50 T180 50" 
+              fill="none" stroke="var(--accent-sage)" strokeWidth="1" opacity="0.5" strokeDasharray="3 3"/>
+        
+        {/* LA Marker - Teacup */}
+        <g transform="translate(60, 50)">
+            <circle r="15" fill="url(#mapGrad)"/>
+            <path d="M-8 -3 Q-8 5 0 8 Q8 5 8 -3 Z" fill="none" stroke="var(--accent-burgundy)" strokeWidth="1"/>
+            <path d="M8 -1 Q12 -1 12 3 Q12 7 8 7" fill="none" stroke="var(--accent-burgundy)" strokeWidth="1"/>
+        </g>
+        
+        {/* Decorative Elements */}
+        <text x="100" y="80" className="text-xs fill-text-muted italic" textAnchor="middle">
+            &apos;We&aquo;re all <s>mad</s> here&apos;
+        </text>
+    </svg>
+);
+
+const AnimatedTeacup = ({ steaming }: { steaming: boolean }) => (
+    <svg width="120" height="120" viewBox="0 0 120 120">
+        <defs>
+            <radialGradient id="teaGrad">
+                <stop offset="0%" stopColor="var(--accent-sage)" stopOpacity="0.3"/>
+                <stop offset="100%" stopColor="var(--accent-sage)" stopOpacity="0.1"/>
+            </radialGradient>
+        </defs>
+        
+        {/* Saucer */}
+        <ellipse cx="60" cy="95" rx="35" ry="8" fill="var(--bg-tertiary)" stroke="var(--accent-gold)" strokeWidth="1"/>
+        
+        {/* Cup */}
+        <path d="M30 50 Q30 75 60 85 Q90 75 90 50 Z" 
+              fill="var(--bg-secondary)" stroke="var(--accent-gold)" strokeWidth="1.5"/>
+        
+        {/* Handle */}
+        <path d="M90 55 Q100 55 100 65 Q100 75 90 75" 
+              fill="none" stroke="var(--accent-gold)" strokeWidth="1.5"/>
+        
+        {/* Tea */}
+        <path d="M35 55 Q60 50 85 55 L85 70 Q60 80 35 70 Z" fill="url(#teaGrad)"/>
+        
+        {/* Steam */}
+        {steaming && (
+            <g className="steam-group">
+                {[0, 1, 2].map((i) => (
+                    <path
+                        key={i}
+                        d={`M${50 + i * 10} 45 Q${52 + i * 10} 35 ${50 + i * 10} 25 T${50 + i * 10} 5`}
+                        fill="none"
+                        stroke="var(--accent-sage)"
+                        strokeWidth="1"
+                        opacity="0"
+                    >
+                        <animate
+                            attributeName="opacity"
+                            values="0;0.6;0"
+                            dur="3s"
+                            begin={`${i * 0.5}s`}
+                            repeatCount="indefinite"
+                        />
+                        <animateTransform
+                            attributeName="transform"
+                            type="translate"
+                            values="0,0; 2,-5; 0,-10"
+                            dur="3s"
+                            begin={`${i * 0.5}s`}
+                            repeatCount="indefinite"
+                        />
+                    </path>
+                ))}
+            </g>
+        )}
+        
+        {/* Cup Pattern */}
+        <g transform="translate(60, 65)">
+            <text className="text-xs fill-accent-burgundy" textAnchor="middle" opacity="0.5">♠</text>
+        </g>
+    </svg>
+);
+
+// Utility Icons
+const TeaLeafIcon = () => (
+    <svg width="30" height="30" viewBox="0 0 30 30" className="text-accent-sage">
+        <path d="M15 5 Q10 15 15 25 Q20 15 15 5" fill="currentColor" opacity="0.5"/>
+    </svg>
+);
+
+const ClockIcon = () => (
+    <svg width="30" height="30" viewBox="0 0 30 30" className="text-accent-gold">
+        <circle cx="15" cy="15" r="12" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.5"/>
+        <path d="M15 7 L15 15 L20 20" stroke="currentColor" strokeWidth="1" opacity="0.5"/>
+    </svg>
+);
+
+const KeyIcon = () => (
+    <svg width="30" height="30" viewBox="0 0 30 30" className="text-accent-burgundy">
+        <circle cx="10" cy="15" r="5" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.5"/>
+        <path d="M14 15 L25 15 L25 12 L22 12 L22 18" stroke="currentColor" strokeWidth="1" fill="currentColor" opacity="0.5"/>
+    </svg>
+);
+
+const EnvelopeIcon = () => (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-        <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" strokeWidth="1.5" />
-        <path d="M3 8 L12 13 L21 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M3 8 L12 13 L21 8" stroke="currentColor" strokeWidth="1.5"/>
     </svg>
 );
 
@@ -374,69 +846,10 @@ const GithubIcon = () => (
     </svg>
 );
 
-const LinkedInIcon = () => (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037c-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85c3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065c0-1.138.92-2.063 2.063-2.063c1.14 0 2.064.925 2.064 2.063c0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-    </svg>
-);
-
-const XIcon = () => (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-    </svg>
-);
-
-const ArrowIcon = () => (
+const RightArrowIcon = () => (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
         <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
 );
-
-const LocationMap = () => (
-    <svg className="w-full h-full" viewBox="0 0 200 100">
-        <defs>
-            <linearGradient id="map-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="var(--accent-secondary)" stopOpacity="0.2" />
-                <stop offset="100%" stopColor="var(--accent-burgundy)" stopOpacity="0.2" />
-            </linearGradient>
-        </defs>
-        {/* Abstract US West Coast */}
-        <path 
-            d="M20 20 Q30 15 40 20 L50 25 L55 35 L52 50 L48 65 L45 75 Q40 80 35 75 L30 60 L25 45 L20 30 Z"
-            fill="url(#map-gradient)"
-            stroke="var(--accent-secondary)"
-            strokeWidth="0.5"
-        />
-        {/* LA Marker */}
-        <circle cx="35" cy="55" r="3" fill="var(--accent-burgundy)" className="animate-pulse" />
-        <circle cx="35" cy="55" r="6" fill="none" stroke="var(--accent-burgundy)" strokeWidth="0.5" opacity="0.5" className="animate-ping" />
-        {/* Connection Lines */}
-        <path d="M35 55 L100 40 M35 55 L120 70 M35 55 L80 30" stroke="var(--accent-highlight)" strokeWidth="0.5" opacity="0.3" strokeDasharray="2 4" />
-        {/* Grid */}
-        <pattern id="map-grid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-            <path d="M20 0 L0 0 L0 20" fill="none" stroke="var(--text-muted)" strokeWidth="0.25" opacity="0.3"/>
-        </pattern>
-        <rect width="200" height="100" fill="url(#map-grid)" />
-    </svg>
-);
-
-// Add CSS for animations
-const styles = `
-@keyframes draw-in {
-    from {
-        stroke-dashoffset: 100;
-        opacity: 0;
-    }
-    to {
-        stroke-dashoffset: 0;
-        opacity: 1;
-    }
-}
-
-.animate-draw-in {
-    stroke-dasharray: 100;
-    animation: draw-in 1s ease-out forwards;
-}
-`;
 
 export default ContactPage;

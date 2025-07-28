@@ -602,7 +602,7 @@
     height: 20px;
     transition: transform 0.3s ease, filter 0.3s ease;
     /* Improve visibility in dark mode */
-    filter: brightness(1.2) contrast(1.1);
+    filter: brightness(1.8) contrast(1.3);
 }
 
 :global(.light) .gamesSvg {
@@ -611,11 +611,11 @@
 
 .gamesBtn:hover .gamesSvg {
     transform: scale(1.1) rotate(-2deg);
-    filter: brightness(1.4) contrast(1.2);
+    filter: brightness(1.8) contrast(1.3);
 }
 
 :global(.light) .gamesBtn:hover .gamesSvg {
-    filter: brightness(0.6) contrast(1.2);
+    filter: brightness(0.5) contrast(1.4);
 }
 
 /* ======================================== */
@@ -1051,13 +1051,13 @@
     height: 1.2em;
     transition: transform var(--transition-fast);
     animation: gamesPulse 2s ease-in-out infinite;
-    filter: brightness(1);
+    filter: brightness(1.6);
 }
 
 .gamesBtn:hover .gamesSvg {
     animation: gamesRotate 0.6s ease-out, gamesPulse 2s ease-in-out infinite;
     transform: scale(1.1);
-    filter: brightness(1.1);
+    filter: brightness(1.8);
 }
 
 @keyframes holographicPulse {

@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useAnalytics } from './Analytics';
 import { useCookieConsent } from '@/hooks/useCookieConsent';
 import { motion, AnimatePresence } from 'framer-motion';
+import { subscribeToNewsletter } from '@/lib/emailjs';
 
 interface NewsletterFormProps {
   variant?: 'main' | 'blog';
@@ -336,7 +337,15 @@ export default function NewsletterForm({
                 focus:ring-2 focus:ring-accent-burgundy/20
                 group overflow-hidden
                 ${compact ? 'py-2 px-4 text-sm' : ''}
+                [&]:not(.disabled):not([disabled]) {
+                  color: white !important;
+                  background: linear-gradient(to right, var(--accent-burgundy), var(--accent-highlight)) !important;
+                }
               `}
+              style={{
+                color: 'white',
+                background: 'linear-gradient(to right, var(--accent-burgundy), var(--accent-highlight))'
+              }}
               whileHover={{ scale: state.status === 'loading' ? 1 : 1.02 }}
               whileTap={{ scale: state.status === 'loading' ? 1 : 0.98 }}
               title={!hasConsent ? 'Marketing consent required to establish channel' : ''}

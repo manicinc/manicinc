@@ -73,7 +73,7 @@ const ContactSection = ({ onNewsletterSignup }: ContactSectionProps = {}) => {
                 className={`
                   px-6 py-3 rounded-lg font-medium transition-all duration-300
                   ${activeSection === 'contact' 
-                    ? 'bg-text-primary text-bg-primary shadow-lg' 
+                    ? 'bg-accent-primary text-white shadow-lg' 
                     : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary'
                   }
                 `}
@@ -85,7 +85,7 @@ const ContactSection = ({ onNewsletterSignup }: ContactSectionProps = {}) => {
                 className={`
                   px-6 py-3 rounded-lg font-medium transition-all duration-300
                   ${activeSection === 'newsletter' 
-                    ? 'bg-text-primary text-bg-primary shadow-lg' 
+                    ? 'bg-accent-primary text-white shadow-lg' 
                     : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary'
                   }
                 `}
