@@ -22,15 +22,17 @@ Traditional SEOs firms hold firm that "AI SEO = SEO." This view dominated __42%_
 
 ![Confused anime character looking at a butterfly labeled "LLM Optimization," asking "Is this SEO?"|size=large|align=center|effect=shadow|border=gradient|caption=Is this SEO?](/assets/blog/research/reddit-consenus-on-llm-seo/is-this-seo-or-llm-optimization-butterfly-meme.png)
 
-Not really; practitioners tracking actual AI traffic report fundamentally different patterns. Traditional metrics show pathetic correlation with AI visibility: Domain Authority (0.326), backlinks (0.218), organic traffic (0.274). Meanwhile, brand mentions hit 0.664 correlation. Content depth delivers __10x__ more citations at 10,000+ words versus 3,900.
+Not really; practitioners tracking actual AI traffic report fundamentally different patterns. Traditional metrics show quite low correlation with AI visibility: Domain Authority (0.326), backlinks (0.218), organic traffic (0.274). Meanwhile, brand mentions hit 0.664 correlation. 
+
+Content depth delivers __10x__ more citations at 10,000+ words versus 3,900.
 
 ![Bar chart showing AI visibility correlation factors with brand mentions leading at 0.664 followed by content depth at 0.582|size=large|align=center|effect=shadow|border=gradient|caption=What Actually Correlates with AI Visibility - Traditional SEO metrics fail while brand mentions dominate](/assets/blog/research/reddit-consenus-on-llm-seo/ai-visibility-correlation-factors-chart.png)
 
-The subreddits we researched comprised mostly of those specifically related to SEO, and content creation in regards to SEO, overlapping with some general entrepreneurial and startup subreddits. This creates a certain bias for industry experts by design while allowing for more holistic viewpoints / generalists.
+The subreddits we researched comprised mostly of those specifically related to SEO, and content creation in regards to SEO, overlapping with some general entrepreneurial and startup subreddits. This creates a certain bias for industry experts by design while allowing for more holistic viewpoints / generalists to creep in.
 
-These are the subreddits that we chose to scrape select threads from: r/SEO, r/SEO_Digital_Marketing, r/startups, r/indiehackers, r/Entrepreneur, r/PPC, r/DigitalMarketing, r/Blogging, r/SEO_Experts, r/seogrowth, r/SEO_for_AI, r/SaaSMarketing. 
+**These** are the subreddits that we chose to scrape select threads from: r/SEO, r/SEO_Digital_Marketing, r/startups, r/indiehackers, r/Entrepreneur, r/PPC, r/DigitalMarketing, r/Blogging, r/SEO_Experts, r/seogrowth, r/SEO_for_AI, r/SaaSMarketing. 
 
-One practitioner reveals this automation confession:
+One practitioner from our sources drops an automation confession that we've all suspected or have seen anecdotally or in practice:
 
 > *"We built an AI agent that handles reddit marketing on autopilot - tracks keywords, finds relevant discussions, engages naturally. Way cheaper than agencies and runs 24/7. The process is completely automated. It identifies threads, crafts responses that add value while mentioning our brand naturally, and even varies writing styles to avoid detection. We're seeing brand mentions in ChatGPT responses after about 3 weeks of consistent activity."*
 
@@ -39,17 +41,23 @@ One practitioner reveals this automation confession:
 > :::warning
 > Reddit automation violates platform terms of service and risks permanent bans. The effectiveness reported here doesn't justify the ethical and legal risks.
 
+But there's a slew of these platforms coming aloong, many of which you can find being launched on Reddit themselves.
+
 ## Real Traffic Reports
 
 A transcription platform owner dropped hard data:
 
-> *"AI assistants are sending more users than search engines. It started slowly - maybe 2-3% of traffic. Now it's 18% and climbing. The kicker? These visitors convert at 2.4x our Google organic rate. They arrive pre-qualified from their AI conversation. They've already decided they need our solution; they're just confirming we're the right choice. Our sales team loves these leads - they close themselves."*
+> *"AI assistants are sending more users than search engines. It started slowly - maybe 2-3% of traffic. Now it's 18% and climbing. 
 
-This one seems to have achieved traffic parity:
+>The kicker? These visitors convert at 2.4x our Google organic rate. They arrive pre-qualified from their AI conversation. 
+
+>They've already decided they need our solution; they're just confirming we're the right choice. Our sales team loves these leads - they close themselves."*
+
+This one claims traffic parity:
 
 > *"One of my sites is getting equal traffic from Google and ChatGPT. Started tracking this in January when I noticed chatgpt.com in referrals. By March, it was 20% of organic. Now in October, it's dead even with Google. Sales are up 37% year-over-year with the same ad spend. ChatGPT sends fewer visitors but they buy more. Way more."*
 
-And not all experiments succeeded. Here's a damning graph from one source:
+A damning data point from one source on AI writing:
 
 > *"Posted 100 AI-generated blogs over 12 months. All passed AI detectors, all 1,000-5,000 words, all optimized for keywords. Current traffic: 127 visitors per month. Total. Across all 100 posts. It's embarrassing. Pure AI content without human insight is digital pollution. Google knows it, users know it, and my analytics definitely know it."*
 
@@ -62,13 +70,21 @@ A picture draws a thousand words:
 
 ## Changing the Content Strategy
 
-Content depth emerged as the most controversial finding. Critics called it "more everything" strategy. Supporters showed receipts:
+Content depth emerged as the most controversial finding. 
 
-> *"We split-tested this across 20 articles in the same niche. Ten comprehensive guides at 8,000-12,000 words. Ten 'normal' posts at 2,000-3,000 words. After three months: Long content averaged 72 ChatGPT citations per article. Short content averaged 3. Same domain, same author, same promotion. Only variable was depth. The AI seems to prefer exhaustive resources over concise answers."*
+Critics called it "more everything" strategy. Supporters showed receipts:
+
+> *"We split-tested this across 20 articles in the same niche. Ten comprehensive guides at 8,000-12,000 words. Ten 'normal' posts at 2,000-3,000 words. 
+
+>After three months: Long content averaged 72 ChatGPT citations per article. Short content averaged 3. Same domain, same author, same promotion. Only variable was depth. The AI seems to prefer exhaustive resources over concise answers."*
 
 The most sophisticated strategy came from a WordPress operator managing four blogs:
 
-> *"I update existing posts rather than creating new ones. Google sees less risk in updated URLs. My process: Feed articles to GPT o1, generate 5-8 update ideas with detailed reasoning. Pick 2-3, generate new sections with GPT-4 for generic topics or Perplexity for fact-sensitive content. Critical part: Schedule updates over 6 months. Creates impression of a 20-person team. In reality it's me, AI, and smart scheduling. Results visible in 1-2 weeks. Traffic up 400% year-over-year."*
+> *"I update existing posts rather than creating new ones. Google sees less risk in updated URLs. My process: Feed articles to GPT o1, generate 5-8 update ideas with detailed reasoning. Pick 2-3, generate new sections with GPT-4 for generic topics or Perplexity for fact-sensitive content.
+
+> Critical part: Schedule updates over 6 months. Creates impression of a 20-person team. In reality it's me, AI, and smart scheduling. Results visible in 1-2 weeks. 
+
+> Traffic up 400% year-over-year."*
 
 ![Horizontal bar chart comparing content strategy performance showing content updates leading at 47% monthly traffic gain|size=large|align=center|effect=glow|border=gradient|caption=Content Strategy Performance by Approach - Updates outperform new content creation](/assets/blog/research/reddit-consenus-on-llm-seo/content-strategy-performance-comparison.png)
 
@@ -80,7 +96,9 @@ Nobody can properly track AI visibility. You can track clicks from LLMs, but you
 
 The fundamental problem:
 
-> *"You can track clicks from LLMs, but you will have no idea what the conversation was that led them there. With Google, I see 'best project management software' and know exactly what to optimize. With ChatGPT, I see a click but the user might have asked 'what's a good alternative to Asana that doesn't suck and works with European privacy laws?' Good luck reverse-engineering that."*
+> *"You can track clicks from LLMs, but you will have no idea what the conversation was that led them there. With Google, I see 'best project management software' and know exactly what to optimize. 
+
+> With ChatGPT, I see a click but the user might have asked 'what's a good alternative to Asana that doesn't suck and works with European privacy laws?' Good luck reverse-engineering that."*
 
 The tracking landscape:
 - **Manual prompt checking**: Labor-intensive, catches maybe 5% of mentions
@@ -99,7 +117,9 @@ A genuine technical breakthrough?
 
 The most relatable thread started with a plea for help:
 
-> *"Boss wants to get an LLM SEO agency to boost LLM visibility. He read some LinkedIn article about 'GEO being the new SEO' and now wants to hire specialists. The consultants will probably hold some meetings, tell us stuff and put procedures in place, but they'll be out before we see any tangible results. I'm fine with trying things out, but you know how SEO works. It's either you're early or you're late to the party and we can't afford to waste months on something that might or might not work."*
+> *"Boss wants to get an LLM SEO agency to boost LLM visibility. He read some LinkedIn article about 'GEO being the new SEO' and now wants to hire specialists. The consultants will probably hold some meetings, tell us stuff and put procedures in place, but they'll be out before we see any tangible results. 
+
+> I'm fine with trying things out, but you know how SEO works. It's either you're early or you're late to the party and we can't afford to waste months on something that might or might not work."*
 
 The responses revealed an industry-wide pattern:
 - Executives reading one article and demanding immediate "AI optimization"
@@ -127,7 +147,9 @@ No topic generated more rage than schema markup:
 
 **The Believers:**
 
-> *"Put FAQ schema at the end of articles. Generate the code with ChatGPT. Implement in HTML blocks. We tested this across 50 pages—FAQ schema pages got into AI Overviews 3x more than regular pages. It's not about Google understanding your content better. It's about making it easier for AI to extract and cite specific answers."*
+> *"Put FAQ schema at the end of articles. Generate the code with ChatGPT. Implement in HTML blocks. We tested this across 50 pages—FAQ schema pages got into AI Overviews 3x more than regular pages. It's not about Google understanding your content better.
+
+> It's about making it easier for AI to extract and cite specific answers."*
 
 **The Skeptics:**
 
@@ -187,7 +209,7 @@ Three camps emerged from the analysis:
 
 The truth incorporates all three perspectives. Traditional SEO provides foundation. Experimentation reveals new patterns. Pragmatic adaptation yields results.
 
->>> Final wisdom from the threads: "It's not about choosing between SEO and 'GEO'—it's about understanding how human search behavior evolves and adapting accordingly. The brands winning aren't waiting for best practices. They're creating them."
+>>> Final wisdom from the threads: "It's not about choosing between SEO and 'GEO'. It's about understanding how human search behavior evolves and adapting accordingly. The brands winning aren't waiting for best practices. They're creating them."
 
 ---
 

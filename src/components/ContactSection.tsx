@@ -6,7 +6,11 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import NewsletterForm from './NewsletterForm';
 
-const ContactSection = () => {
+interface ContactSectionProps {
+  onNewsletterSignup?: () => void;
+}
+
+const ContactSection = ({ onNewsletterSignup }: ContactSectionProps = {}) => {
   const [hoveredLocation, setHoveredLocation] = useState<string | null>(null);
   const [activeSection, setActiveSection] = useState<'contact' | 'newsletter'>('contact');
 
@@ -28,7 +32,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section className="relative mt-24 sm:mt-32 lg:mt-40 overflow-hidden">
+    <section className="relative mt-4 sm:mt-2 lg:mt-8 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-bg-primary via-bg-secondary to-bg-tertiary opacity-50" />
       <div className="absolute inset-0">
@@ -53,7 +57,7 @@ const ContactSection = () => {
             className="max-w-4xl mx-auto text-center mb-12"
           >
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-4">
-              Initialize Collaboration Protocol
+              Initialize Transmission
             </h2>
             <p className="text-lg text-text-secondary max-w-2xl mx-auto">
               Open a direct channel to our creative collective. 
@@ -63,14 +67,14 @@ const ContactSection = () => {
 
           {/* Toggle Section */}
           <div className="flex justify-center mb-12">
-            <div className="inline-flex rounded-xl bg-bg-primary/50 p-1 backdrop-blur-sm border border-border">
+            <div className="inline-flex rounded-xl bg-bg-secondary p-1 backdrop-blur-sm border border-border">
               <button
                 onClick={() => setActiveSection('contact')}
                 className={`
                   px-6 py-3 rounded-lg font-medium transition-all duration-300
                   ${activeSection === 'contact' 
-                    ? 'bg-accent-burgundy text-white shadow-lg' 
-                    : 'text-text-secondary hover:text-text-primary'
+                    ? 'bg-text-primary text-bg-primary shadow-lg' 
+                    : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary'
                   }
                 `}
               >
@@ -81,8 +85,8 @@ const ContactSection = () => {
                 className={`
                   px-6 py-3 rounded-lg font-medium transition-all duration-300
                   ${activeSection === 'newsletter' 
-                    ? 'bg-accent-burgundy text-white shadow-lg' 
-                    : 'text-text-secondary hover:text-text-primary'
+                    ? 'bg-text-primary text-bg-primary shadow-lg' 
+                    : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary'
                   }
                 `}
               >
@@ -260,7 +264,10 @@ const ContactSection = () => {
                   <p className="text-text-secondary text-center mb-8">
                     Receive curated intelligence on digital transformation, AI, Web3, and creative technology.
                   </p>
-                  <NewsletterForm variant="main" />
+                  <NewsletterForm 
+                    variant="main" 
+                    onSignupSuccess={onNewsletterSignup}
+                  />
                 </div>
               </motion.div>
             )}

@@ -13,7 +13,7 @@ try {
 
 export async function POST(request: NextRequest) {
   try {
-    const { email, source = 'unknown' } = await request.json();
+    const { email, name, company, source = 'unknown' } = await request.json();
 
     if (!email || !email.includes('@')) {
       return NextResponse.json(
@@ -25,25 +25,14 @@ export async function POST(request: NextRequest) {
     if (!resend || !process.env.RESEND_API_KEY) {
       console.error('RESEND_API_KEY not configured');
       return NextResponse.json(
-        { error: 'Newsletter service not configured' },
+        { error: 'Newsletter service not configured. Please contact team@manic.agency directly.' },
         { status: 500 }
       );
     }
 
-    // Add to Resend audience if configured
-    if (process.env.RESEND_AUDIENCE_ID) {
-      try {
-        await resend.contacts.create({
-          email,
-          audienceId: process.env.RESEND_AUDIENCE_ID,
-        });
-      } catch (error: any) {
-        // Handle duplicate emails gracefully
-        if (!error.message?.includes('already exists')) {
-          console.error('Failed to add to audience:', error);
-        }
-      }
-    }
+    // For now, just send a welcome email since we don't have an audience set up
+    // TODO: Set up RESEND_AUDIENCE_ID in environment variables
+    console.log('Newsletter signup:', { email, name, company, source });
 
     // Send welcome email based on source
     const welcomeSubject = source === 'blog' 

@@ -11,6 +11,7 @@ interface NewsletterFormProps {
   className?: string;
   compact?: boolean;
   inline?: boolean;
+  onSignupSuccess?: () => void;
 }
 
 interface NewsletterState {
@@ -27,7 +28,8 @@ export default function NewsletterForm({
   variant = 'main', 
   className = '',
   compact = false,
-  inline = false
+  inline = false,
+  onSignupSuccess
 }: NewsletterFormProps) {
   const { trackEvent, canTrack } = useAnalytics();
   const { hasConsent, canUseMarketing } = useCookieConsent();
@@ -103,6 +105,9 @@ export default function NewsletterForm({
           company: ''
         }));
         
+        // Call success callback if provided
+        onSignupSuccess?.();
+        
         if (canTrack) {
           trackEvent('newsletter_subscribe', { 
             variant,
@@ -138,17 +143,17 @@ export default function NewsletterForm({
   };
 
   const copy = variant === 'blog' ? {
-    title: 'Initialize Research Feed',
-    subtitle: 'Technical analysis and philosophical frameworks from the digital frontier.',
+    title: 'Subscribe to The Looking Glass Chronicles // Manic Agency',
+    subtitle: 'Strategic and unexplored intelligence on digital transformation and synthetic futures.',
     placeholder: 'signal@address.xyz',
-    namePlaceholder: 'Identifier (optional)',
+    namePlaceholder: 'Name (optional)',
     companyPlaceholder: 'Organization (optional)',
     button: 'Establish Channel',
     successTitle: 'Channel Synchronized',
     successMessage: 'Welcome transmission imminent. Check your signal receiver.'
   } : {
-    title: 'Agency Transmission Protocol',
-    subtitle: 'Strategic intelligence on digital transformation and synthetic futures.',
+    title: 'Subscribe to Manic Agency // The Looking Glass Chronicles',
+    subtitle: 'Strategic and unexplored intelligence on digital transformation and synthetic futures.',
     placeholder: 'your@coordinates.xyz',
     namePlaceholder: 'Name (optional)',
     companyPlaceholder: 'Collective (optional)',

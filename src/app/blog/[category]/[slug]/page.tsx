@@ -21,6 +21,8 @@ import BlogPageClient from './BlogPageClient'; // Client wrapper for reading mod
 import BlogAnalytics from '@/components/BlogAnalytics'; // Analytics tracking
 import ScrollTracking from '@/components/ScrollTracking'; // Scroll engagement tracking
 import EnhancedTracking from '@/components/EnhancedTracking'; // Enhanced analytics
+import BlogNewsletterWrapper from '@/components/BlogNewsletterProvider'; // Newsletter with modal
+import BlogNewsletterSection from '@/components/BlogNewsletterSection'; // Newsletter signup
 
 import { formatDate } from '@/util/formatDate';
 // Icons (Ensure these are correctly imported/defined in Icons.tsx)
@@ -141,7 +143,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     const postIdentifier = `blog-${category}-${slug}`;
 
     return (
-        <>
+        <BlogNewsletterWrapper>
             {/* Analytics tracking for blog posts */}
             <BlogAnalytics 
                 postTitle={post.title}
@@ -298,6 +300,14 @@ export default async function BlogPostPage({ params }: PageProps) {
                                 <ShareButtons title={post.title || ''} url={`/blog/${post.category || 'uncategorized'}/${post.slug}`} />
                             </footer>
 
+                            {/* Newsletter signup for blog posts */}
+                            <section className="post-newsletter-signup mt-16">
+                                <BlogNewsletterSection 
+                                    variant="blog" 
+                                    background="accent"
+                                />
+                            </section>
+
                             {/* Comments Sections */}
                             <section className="post-comments" aria-labelledby="comments-heading">
                                 <h2 id="comments-heading" className="comments-title">Join the Discussion</h2>
@@ -323,6 +333,6 @@ export default async function BlogPostPage({ params }: PageProps) {
                     </main> {/* End blog-main-content-area */}
                 </div> {/* End blog-layout-container */}
             </BlogPageClient>
-        </>
+        </BlogNewsletterWrapper>
     );
 }

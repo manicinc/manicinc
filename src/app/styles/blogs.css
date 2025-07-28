@@ -827,7 +827,7 @@ html[data-theme="light"] .blog-post-container {
   border-image: linear-gradient(to bottom, var(--text-muted), var(--text-secondary)) 1 10%; border-image-slice: 1;
   padding: 1.5rem 2rem 1.5rem 2.5rem; margin: 2.5rem 0 2.5rem 1rem;
   background: linear-gradient(to right, rgba(var(--bg-secondary-rgb), 0.4), transparent);
-  color: var(--text-secondary); font-style: italic; font-size: 1.05em; line-height: 1.8;
+  color: var(--text-secondary); font-style: normal; font-size: 1.05em; line-height: 1.8;
   box-shadow: none; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; position: relative;
 }
 .post-content blockquote::before {

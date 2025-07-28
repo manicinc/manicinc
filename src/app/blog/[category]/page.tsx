@@ -7,6 +7,8 @@ import { getAllPosts } from "@/lib/getAllPosts"; // Adjust path if needed
 import type { BlogPost } from "@/types/blog"; // Adjust path if needed
 import Footer from '@/components/Footer/Footer'; // Adjust path if needed
 import BlogAnalytics from '@/components/BlogAnalytics'; // Analytics tracking
+import BlogNewsletterWrapper from '@/components/BlogNewsletterProvider'; // Newsletter with modal
+import BlogNewsletterSection from '@/components/BlogNewsletterSection'; // Newsletter signup
 import { Calendar, Clock, Tag as TagIcon } from 'lucide-react'; // Icons for cards
 import { formatDate } from '@/util/formatDate';
 
@@ -64,7 +66,7 @@ export default function BlogCategoryPage({ params }: { params: Params }) {
   const displayCategory = category.charAt(0).toUpperCase() + category.slice(1).replace(/-/g, ' ');
 
   return (
-    <>
+    <BlogNewsletterWrapper>
       {/* Analytics tracking for blog category */}
       <BlogAnalytics 
         postCategory={category}
@@ -154,7 +156,15 @@ export default function BlogCategoryPage({ params }: { params: Params }) {
             </Link>
         </div>
 
+        {/* Newsletter signup for category pages */}
+        <div className="mt-16">
+          <BlogNewsletterSection 
+            variant="blog" 
+            background="accent"
+          />
+        </div>
+
       </main>
-    </>
+    </BlogNewsletterWrapper>
   );
 }

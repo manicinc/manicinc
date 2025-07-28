@@ -9,6 +9,7 @@ interface NewsletterSectionProps {
   variant?: 'main' | 'blog';
   className?: string;
   background?: 'default' | 'dark' | 'accent';
+  onSignupSuccess?: () => void;
 }
 
 interface Testimonial {
@@ -43,7 +44,8 @@ const testimonials: Testimonial[] = [
 export default function NewsletterSection({ 
   variant = 'main',
   className = '',
-  background = 'default'
+  background = 'default',
+  onSignupSuccess
 }: NewsletterSectionProps) {
   const [randomizedTestimonials, setRandomizedTestimonials] = useState<Testimonial[]>([]);
 
@@ -60,29 +62,31 @@ export default function NewsletterSection({
   };
 
   const copy = variant === 'blog' ? {
-    badge: 'Research Publication',
+    badge: 'Subscribe to our Digital Collective',
     title: 'The Looking Glass Chronicles',
     subtitle: 'Technical analysis and philosophical frameworks from the digital frontier.',
     features: [
-      'Deep technical architectures on AI, Web3, and quantum systems',
+      'Deep technical architectures on AI, metaverse, SaaS, defi, & quantum systems',
       'Philosophical explorations of digital consciousness and synthetic futures', 
       'Early access to experimental prototypes and research tools',
-      'Curated intelligence without algorithmic interference'
+      'Curated intelligence without algorithmic interference',
+      'Direct channel to our creative collective'
     ]
   } : {
-    badge: 'Digital Collective',
-    title: 'Manic Agency Transmissions',
+    badge: 'Subscribe to our Digital Collective',
+    title: 'Manic Agency Newsletter',
     subtitle: 'Strategic intelligence on digital transformation, metaverse architecture, and creative technology.',
     features: [
-      'Exclusive project architectures and development frameworks',
+      'Deep technical architectures on AI, metaverse, SaaS, defi, & quantum systems',
       'Partnership protocols and collaboration opportunities',
       'Industry insights on emerging technology adoption',
+      'Curated intelligence without algorithmic interference',
       'Direct channel to our creative collective'
     ]
   };
 
   return (
-    <section className={`py-16 sm:py-24 relative overflow-hidden ${className}`}>
+    <section id="newsletter-section" className={`py-16 sm:py-24 relative overflow-hidden ${className}`}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.015] pointer-events-none">
         <GridPattern />
@@ -191,6 +195,7 @@ export default function NewsletterSection({
                   <NewsletterForm 
                     variant={variant}
                     className="relative z-10"
+                    onSignupSuccess={onSignupSuccess}
                   />
                 </div>
               </motion.div>

@@ -3,7 +3,8 @@ import React, { Suspense } from 'react';
 import BlogListClient from './BlogListClient'; // Import Client Component
 import { getAllPosts } from '@/lib/getAllPosts'; // Adjust path if needed
 import BlogAnalytics from '@/components/BlogAnalytics'; // Analytics tracking
-import NewsletterSection from '@/components/NewsletterSection'; // Newsletter signup
+import BlogNewsletterWrapper from '@/components/BlogNewsletterProvider'; // Newsletter with modal
+import BlogNewsletterSection from '@/components/BlogNewsletterSection'; // Newsletter signup
 import type { Metadata } from 'next';
 import "@/app/styles/blogs.css"; // Import blog styles
 
@@ -65,32 +66,34 @@ export default function BlogIndexPage() {
     // No need to process searchParams here
 
     return (
-        <div className="blog-scope">
-            {/* Analytics tracking for blog listing */}
-            <BlogAnalytics postType="list" />
-            
-            <main className="blog-main-content-area">
-                <div className="blog-list-main-container">
-                    <header className="blog-list-page-header">
-                        {/* Use metadata title, but keep h1 for semantics */}
-                        <h1 className="blog-list-title">Chronicles from the Looking Glass</h1>
-                        {/* <p className="blog-list-subtitle">Discpatches, Discoveries, and Coded Visions</p> */}
-                    </header>
-
-                    {/* Suspense boundary is still good practice for client components */}
-                    <Suspense fallback={<LoadingFallback />}>
-                        {/* Pass ONLY initialPosts */}
-                        <BlogListClient initialPosts={posts} />
-                    </Suspense>
-                </div>
+        <BlogNewsletterWrapper>
+            <div className="blog-scope">
+                {/* Analytics tracking for blog listing */}
+                <BlogAnalytics postType="list" />
                 
-                {/* Newsletter signup for blog */}
-                <NewsletterSection 
-                    variant="blog" 
-                    background="accent"
-                    className="mt-16"
-                />
-            </main>
-        </div>
+                <main className="blog-main-content-area">
+                    <div className="blog-list-main-container">
+                        <header className="blog-list-page-header">
+                            {/* Use metadata title, but keep h1 for semantics */}
+                            <h1 className="blog-list-title">Chronicles from the Looking Glass</h1>
+                            {/* <p className="blog-list-subtitle">Discpatches, Discoveries, and Coded Visions</p> */}
+                        </header>
+
+                        {/* Suspense boundary is still good practice for client components */}
+                        <Suspense fallback={<LoadingFallback />}>
+                            {/* Pass ONLY initialPosts */}
+                            <BlogListClient initialPosts={posts} />
+                        </Suspense>
+                    </div>
+                    
+                    {/* Newsletter signup for blog */}
+                    <BlogNewsletterSection 
+                        variant="blog" 
+                        background="accent"
+                        className="mt-16"
+                    />
+                </main>
+            </div>
+        </BlogNewsletterWrapper>
     );
 }
