@@ -96,6 +96,9 @@ export const sendContactMessage = async (data: {
   name: string;
   email: string;
   company?: string;
+  phone?: string;
+  budget?: string;
+  timeline?: string;
   message: string;
   subject?: string;
 }) => {
@@ -126,13 +129,18 @@ export const sendContactMessage = async (data: {
         to_email: 'team@manic.agency',
         from_name: data.name,
         from_email: data.email,
-        company: data.company || 'Not provided',
-        message_content: data.message,
+        company: data.company || '',
+        phone: data.phone || '',
+        budget: data.budget || '',
+        timeline: data.timeline || '',
+        message: data.message,
         subject: data.subject || 'New Contact Form Submission',
         reply_to: data.email,
-        // Additional template variables
+        timestamp: new Date().toISOString(),
+        // Legacy template variables for compatibility
         name: data.name,
         email: data.email,
+        message_content: data.message,
       }
     );
 

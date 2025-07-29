@@ -182,6 +182,35 @@ export default function NewsletterForm({
         // Call success callback if provided
         onSignupSuccess?.();
         
+        // Mark as signed up in blog newsletter modal context (if available)
+        // Use localStorage to communicate with the modal system
+        const modalState = localStorage.getItem('blog-newsletter-modal-state');
+        if (modalState) {
+          try {
+            const state = JSON.parse(modalState);
+            localStorage.setItem('blog-newsletter-modal-state', JSON.stringify({
+              ...state,
+              hasSignedUp: true
+            }));
+          } catch (error) {
+            // Create new state if parsing fails
+            localStorage.setItem('blog-newsletter-modal-state', JSON.stringify({
+              hasSignedUp: true,
+              hasClickedNeverShow: false,
+              hasSeenModal: false,
+              lastShownDate: null
+            }));
+          }
+        } else {
+          // Create new state
+          localStorage.setItem('blog-newsletter-modal-state', JSON.stringify({
+            hasSignedUp: true,
+            hasClickedNeverShow: false,
+            hasSeenModal: false,
+            lastShownDate: null
+          }));
+        }
+        
         if (canTrack) {
           trackEvent('newsletter_subscribe', { 
             variant,

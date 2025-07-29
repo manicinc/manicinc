@@ -79,13 +79,10 @@ export default function ContactForm() {
         name: state.name,
         email: state.email,
         company: state.company,
-        message: `${state.message}
-
---- Additional Details ---
-Phone: ${state.phone || 'Not provided'}
-Budget: ${state.budget || 'Not specified'}
-Timeline: ${state.timeline || 'Not specified'}
-Submitted: ${new Date().toISOString()}`,
+        phone: state.phone,
+        budget: state.budget,
+        timeline: state.timeline,
+        message: state.message,
         subject: state.subject || 'New Contact Form Submission'
       });
 
