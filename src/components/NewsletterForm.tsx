@@ -103,8 +103,9 @@ export default function NewsletterForm({
       const embedForm = () => {
         if (typeof window === 'undefined') return;
         
-        // Check if sender is available
-        if (!(window as any).sender) {
+        // Check if sender is available AND properly initialized
+        const sender = (window as any).sender;
+        if (!sender || typeof sender !== 'function') {
           checkAttempts++;
           if (checkAttempts < maxAttempts) {
             setTimeout(embedForm, 100);
@@ -115,24 +116,9 @@ export default function NewsletterForm({
           return;
         }
 
-        try {
-          // Clear any existing content
-          if (formRef.current) {
-            formRef.current.innerHTML = '';
-          }
-
-          // Use sender's embed function
-          (window as any).sender('embed', formId, {
-            selector: `.sender-form-${formId}`,
-            width: '100%'
-          });
-          
-          setIsLoaded(true);
-          console.log('Sender form embedded successfully');
-        } catch (error) {
-          console.error('Failed to embed Sender form:', error);
-          setLoadError(true);
-        }
+        // Just set loaded to true - the data attribute will handle the rest
+        setIsLoaded(true);
+        console.log('Sender form ready');
       };
 
       // Start trying to embed the form

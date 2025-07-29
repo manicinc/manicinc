@@ -46,7 +46,7 @@ const ContactPage = () => {
                                 <TeaPartyEmblem />
                             </motion.div>
                             
-                            <h1 className="font-script-blog text-5xl sm:text-6xl lg:text-7xl text-text-primary mb-4">
+                            <h1 className="font-script-blog text-3xl sm:text-4xl lg:text-5xl text-text-primary mb-4">
                                 You&apos;re Cordially Invited
                             </h1>
                             
