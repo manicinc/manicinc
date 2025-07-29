@@ -70,19 +70,9 @@ export default function NewsletterForm({
   inline = false, 
   onSignupSuccess 
 }: NewsletterFormProps) {
-  const [isLoaded, setIsLoaded] = useState(false);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   useEffect(() => {
-    // Load Sender.net script and initialize form
-    const script = document.createElement('script');
-    script.src = 'https://assets.sender.net/accounts/MTY4Mzk=/widgets//widget.js';
-    script.async = true;
-    script.onload = () => {
-      setIsLoaded(true);
-    };
-    document.head.appendChild(script);
-
     // Testimonial rotation
     const interval = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
@@ -90,13 +80,29 @@ export default function NewsletterForm({
 
     return () => {
       clearInterval(interval);
-      // Cleanup script
-      const existingScript = document.querySelector(`script[src="${script.src}"]`);
-      if (existingScript) {
-        document.head.removeChild(existingScript);
-      }
     };
   }, []);
+
+  // Simple Sender form component with error handling
+  const SenderForm = ({ className = "" }) => {
+    const formId = process.env.NEXT_PUBLIC_SENDER_FORM_ID;
+    
+    if (!formId) {
+      return (
+        <div className={`p-4 text-center text-gray-500 ${className}`}>
+          <p>Newsletter form unavailable</p>
+        </div>
+      );
+    }
+
+    return (
+      <div 
+        className={`sender-form-field ${className}`}
+        data-sender-form-id={formId}
+        style={{ textAlign: 'left' }}
+      />
+    );
+  };
 
   // If no onClose is provided, render inline version
   if (!onClose) {
@@ -112,11 +118,7 @@ export default function NewsletterForm({
             </p>
           </div>
 
-          <div 
-            id="sender-form-"
-            className="sender-form-widget"
-            style={{ minHeight: '200px' }}
-          ></div>
+          <SenderForm className="min-h-[200px]" />
 
           <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
             <div className="flex items-center justify-center space-x-6 text-sm text-gray-500 dark:text-gray-400">
@@ -365,24 +367,7 @@ export default function NewsletterForm({
 
                       {/* Sender.net Embed Form */}
                       <div className="relative">
-                        {!isLoaded && (
-                          <div className="flex items-center justify-center h-64 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 rounded-2xl">
-                            <div className="text-center">
-                              <motion.div
-                                animate={{ rotate: 360 }}
-                                transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                                className="w-8 h-8 border-4 border-[#b66880] border-t-transparent rounded-full mx-auto mb-2"
-                              ></motion.div>
-                              <p className="text-gray-600 dark:text-gray-400">Loading form...</p>
-                            </div>
-                          </div>
-                        )}
-                        
-                        <div 
-                          id="sender-form-"
-                          className={`sender-form-widget ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
-                          style={{ minHeight: '200px' }}
-                        ></div>
+                        <SenderForm className="min-h-[200px]" />
                       </div>
 
                       {/* Trust Indicators */}

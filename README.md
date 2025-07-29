@@ -340,6 +340,7 @@ NEXT_PUBLIC_CLARITY_PROJECT_ID=your_clarity_project_id
 NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your_web3forms_access_key
 
 # Newsletter (Sender.net - Free)
+NEXT_PUBLIC_SENDER_ACCOUNT_ID=your_sender_account_id
 NEXT_PUBLIC_SENDER_FORM_ID=your_sender_form_id
 
 # Legacy EmailJS (Fallback - Optional)
@@ -362,8 +363,9 @@ RESEND_AUDIENCE_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 ### Sender.net (Newsletter)
 1. ✅ **Already Set Up!** Your form: https://stats.sender.net/forms//view
-2. Add `NEXT_PUBLIC_SENDER_FORM_ID=` to GitHub Secrets
-3. Deploy and your newsletter will work immediately!
+2. Add `NEXT_PUBLIC_SENDER_ACCOUNT_ID=` to GitHub Secrets
+3. Add `NEXT_PUBLIC_SENDER_FORM_ID=` to GitHub Secrets
+4. Deploy and your newsletter will work immediately!
 
 **For Local Development:**
 No setup required! Forms will show graceful fallback messages if environment variables are missing.
