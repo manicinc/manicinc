@@ -218,4 +218,24 @@ export function useAnalytics() {
   };
 }
 
-export default Analytics; 
+export default Analytics;
+
+// Debug function for ConfigDebug component (development only)
+export const debugAnalyticsConfig = () => {
+  if (process.env.NODE_ENV === 'development') {
+    console.group('🔍 Analytics Configuration Debug');
+    console.log('Environment:', process.env.NODE_ENV);
+    console.log('Google Analytics ID:', GA_ID ? '✅ Set' : '❌ Missing');
+    console.log('Clarity Project ID:', CLARITY_PROJECT_ID ? '✅ Set' : '❌ Missing');
+    console.log('Vercel Analytics:', '✅ Enabled (no config needed)');
+    console.log('Vercel Speed Insights:', '✅ Enabled (no config needed)');
+    
+    if (typeof window !== 'undefined') {
+      console.log('Google Analytics Ready:', !!(window as any).gtag ? '✅ Yes' : '❌ No');
+      console.log('Clarity Ready:', !!(window as any).clarity ? '✅ Yes' : '❌ No');
+    }
+    
+    console.info('💡 Missing variables in development is expected - they are in GitHub Secrets');
+    console.groupEnd();
+  }
+}; 
