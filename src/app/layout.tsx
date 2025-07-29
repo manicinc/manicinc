@@ -120,17 +120,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             // Don't run this script during server-side rendering
             if (typeof window === 'undefined' || typeof document === 'undefined') return;
             
-            console.log('Theme initialization script running');
-            
             // 1. Check localStorage - the source of truth for user preference
             let storedTheme = localStorage.getItem('theme');
-            console.log('Theme from localStorage:', storedTheme);
             
             // 2. If no stored theme, check system preference
             if (!storedTheme) {
               const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
               storedTheme = systemPrefersDark ? 'dark' : 'light';
-              console.log('No theme in localStorage, using system preference:', storedTheme);
               // Save this to localStorage for next time
               localStorage.setItem('theme', storedTheme);
             }
@@ -158,8 +154,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               
               // 6. Store for React
               window.__NEXT_THEME_INITIAL = storedTheme;
-              
-              console.log('Theme initialization complete:', storedTheme);
             };
             
             // Apply theme immediately

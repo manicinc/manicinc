@@ -51,7 +51,6 @@ export default function DisqusComments({
               this.page.title = postTitle;
             }
           });
-          console.log('Disqus reset for theme change:', isDarkMode ? 'dark' : 'light');
         } catch (err) {
           console.warn("Error resetting Disqus:", err);
         }

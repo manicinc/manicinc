@@ -449,12 +449,14 @@ import NewsletterSection from '@/components/NewsletterSection';
 <NewsletterSection variant="blog" background="default" />
 ```
 
-#### API Endpoints
+#### Legacy API Endpoints (Used by Resend/EmailJS integrations)
 
-- **POST /api/subscribe**: Subscribe users with welcome emails
-- **POST/GET /api/unsubscribe**: GDPR-compliant unsubscribe with confirmation
+**Note:** These are not used by the current Sender.net embed forms, but are available for custom implementations using Resend or EmailJS libraries.
 
-#### GDPR Features
+- **POST /api/subscribe**: Subscribe users with welcome emails (via Resend)
+- **POST/GET /api/unsubscribe**: GDPR-compliant unsubscribe with confirmation (via Resend)
+
+#### GDPR Features (Sender.net handles this automatically)
 
 - ✅ **One-click unsubscribe** links in all emails
 - ✅ **Permanent dismissal** with localStorage persistence  

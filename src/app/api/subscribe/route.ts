@@ -32,7 +32,6 @@ export async function POST(request: NextRequest) {
 
     // For now, just send a welcome email since we don't have an audience set up
     // TODO: Set up RESEND_AUDIENCE_ID in environment variables
-    console.log('Newsletter signup:', { email, name, company, source });
 
     // Send welcome email based on source
     const welcomeSubject = source === 'blog' 

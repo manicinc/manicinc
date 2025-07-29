@@ -21,7 +21,6 @@ type Params = {
 
 // generateStaticParams should generate paths like { category: 'thinkpieces' }, etc.
 export async function generateStaticParams(): Promise<Params[]> {
-  console.log("[generateStaticParams] Generating params for /blog/[category]");
   try {
     const posts = getAllPosts();
     // Use Set to get unique, valid categories
@@ -37,7 +36,6 @@ export async function generateStaticParams(): Promise<Params[]> {
     }
 
     const params = Array.from(categories).map(cat => ({ category: cat }));
-    console.log(`[generateStaticParams Category] Generated params: ${params.map(p => p.category).join(', ')}`);
     return params;
 
   } catch (error) {
@@ -58,7 +56,6 @@ export default function BlogCategoryPage({ params }: { params: Params }) {
 
   // Handle cases where category exists but has no posts (or invalid direct access)
   if (postsInCategory.length === 0) {
-    console.log(`No posts found for category "${category}" during page render.`);
     notFound(); // Show 404
   }
 

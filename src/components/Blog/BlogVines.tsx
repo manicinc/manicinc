@@ -151,14 +151,12 @@ const BlogVines: React.FC = () => {
     // Updated to generate and set both paths and flowers
     const generateAllPathsAndFlowers = useCallback((): void => {
         if (!svgRef.current || currentDimensions.width === 0 || currentDimensions.height === 0) {
-            console.log("Skipping generation: No SVG ref or zero dimensions.");
             setAllPaths([]);
             setAllFlowers([]);
             return;
         }
         const { width, height } = currentDimensions;
         const navHeightEstimate = 60;
-        console.log(`Generating paths/flowers for dimensions: ${width}x${height}`);
 
         const generatedPaths: VinePathData[] = [];
         const generatedFlowers: FlowerData[] = []; // Temp array for flowers
@@ -193,7 +191,6 @@ const BlogVines: React.FC = () => {
             generatedFlowers.push(...result.flowers); // Collect flowers
         });
 
-        console.log(`Generated ${generatedPaths.length} paths and ${generatedFlowers.length} flowers.`);
         setAllPaths(generatedPaths);
         setAllFlowers(generatedFlowers); // Set the flower state
     }, [currentDimensions]); // Regenerate if dimensions change

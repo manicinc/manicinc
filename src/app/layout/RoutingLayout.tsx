@@ -6,7 +6,6 @@ import { PropsWithChildren } from "react";
 
 export default function RoutingLayout({ children }: PropsWithChildren) {
   const pathname = usePathname();
-  console.log(pathname);
 
   // If the segment matches your excluded route
   if (pathname === "/velvet") {

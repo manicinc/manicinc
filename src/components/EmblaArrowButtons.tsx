@@ -21,14 +21,12 @@ import React, {
     const [nextBtnDisabled, setNextBtnDisabled] = useState(true)
   
     const onPrevButtonClick = useCallback(() => {
-        console.log("EmpblaApi", emblaApi)
       if (!emblaApi) return
       emblaApi.scrollPrev()
       if (onButtonClick) onButtonClick(emblaApi)
     }, [emblaApi, onButtonClick])
   
     const onNextButtonClick = useCallback(() => {
-        console.log("emblaApi", emblaApi)
       if (!emblaApi) return
       emblaApi.scrollNext()
       if (onButtonClick) onButtonClick(emblaApi)

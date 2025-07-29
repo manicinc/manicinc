@@ -39,8 +39,6 @@ export function Analytics() {
             anonymize_ip: true, // GDPR compliance
             allow_ad_personalization_signals: false, // GDPR compliance
           });
-
-          console.log('✅ Google Analytics initialized with consent');
         } catch (error) {
           console.error('❌ Failed to initialize Google Analytics:', error);
         }
@@ -58,7 +56,6 @@ export function Analytics() {
           // Wait for Clarity to be ready before using it
           const checkClarityReady = () => {
             if (typeof window !== 'undefined' && (window as any).clarity) {
-              console.log('Microsoft Clarity initialized with consent');
             } else {
               setTimeout(checkClarityReady, 100);
             }
@@ -71,7 +68,6 @@ export function Analytics() {
         // Clarity already loaded, just give consent
         try {
           Clarity.consent(true);
-          console.log('Microsoft Clarity consent updated');
         } catch (error) {
           console.error('Failed to update Clarity consent:', error);
         }
@@ -129,7 +125,6 @@ export function useAnalytics() {
 
   const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
     if (!canUseAnalytics) {
-      console.log('Analytics tracking blocked - no consent');
       return;
     }
 
@@ -156,12 +151,10 @@ export function useAnalytics() {
     }
 
     // Track with Vercel Analytics (automatic, no additional code needed)
-    console.log('Event tracked:', eventName, parameters);
   };
 
   const trackPageView = (path: string, pageId?: string) => {
     if (!canUseAnalytics) {
-      console.log('Page view tracking blocked - no consent');
       return;
     }
 
@@ -190,7 +183,6 @@ export function useAnalytics() {
 
   const upgradeSession = (reason: string) => {
     if (!canUseAnalytics) {
-      console.log('Session upgrade blocked - no consent');
       return;
     }
 
@@ -205,7 +197,6 @@ export function useAnalytics() {
 
   const setUserTag = (key: string, value: string | string[]) => {
     if (!canUseAnalytics) {
-      console.log('User tagging blocked - no consent');
       return;
     }
 
@@ -228,23 +219,3 @@ export function useAnalytics() {
 }
 
 export default Analytics; 
-
-// Debug function to check analytics configuration
-export const debugAnalyticsConfig = () => {
-  console.group('🔍 Analytics Configuration Debug');
-  console.log('Environment:', process.env.NODE_ENV);
-  console.log('Google Analytics ID:', GA_ID ? '✅ Set' : '❌ Missing');
-  console.log('Clarity Project ID:', CLARITY_PROJECT_ID ? '✅ Set' : '❌ Missing');
-  console.log('Vercel Analytics:', '✅ Enabled (no config needed)');
-  console.log('Vercel Speed Insights:', '✅ Enabled (no config needed)');
-  
-  if (typeof window !== 'undefined') {
-    console.log('Google Analytics Ready:', !!(window as any).gtag ? '✅ Yes' : '❌ No');
-    console.log('Clarity Ready:', !!(window as any).clarity ? '✅ Yes' : '❌ No');
-  }
-  
-  if (process.env.NODE_ENV === 'development') {
-    console.info('💡 Missing variables in development is expected - they are in GitHub Secrets');
-  }
-  console.groupEnd();
-}; 

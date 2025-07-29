@@ -83,24 +83,105 @@ export default function NewsletterForm({
     };
   }, []);
 
-  // Simple Sender form component with error handling
+  // Enhanced Sender form component with iframe fallback
   const SenderForm = ({ className = "" }) => {
     const formId = process.env.NEXT_PUBLIC_SENDER_FORM_ID;
+    const accountId = process.env.NEXT_PUBLIC_SENDER_ACCOUNT_ID;
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [loadError, setLoadError] = useState(false);
+    const [useIframe, setUseIframe] = useState(false);
     
-    if (!formId) {
+    useEffect(() => {
+      if (!formId || !accountId) {
+        setLoadError(true);
+        return;
+      }
+
+      // Try JavaScript API first
+      const checkSender = () => {
+        if (typeof window !== 'undefined' && (window as any).sender) {
+          try {
+            // Try to embed the form using Sender's API
+            (window as any).sender('embed', formId, {
+              target: `.sender-form-${formId}`,
+              width: '100%'
+            });
+            setIsLoaded(true);
+          } catch (error) {
+            console.warn('Sender JS API failed, falling back to iframe:', error);
+            setUseIframe(true);
+            setIsLoaded(true);
+          }
+        } else {
+          // Keep checking for a while, then fall back to iframe
+          const timeElapsed = Date.now() - checkStartTime;
+          if (timeElapsed > 3000) { // 3 second timeout
+            console.warn('Sender script timeout, using iframe fallback');
+            setUseIframe(true);
+            setIsLoaded(true);
+          } else {
+            setTimeout(checkSender, 100);
+          }
+        }
+      };
+
+      const checkStartTime = Date.now();
+      const timeout = setTimeout(checkSender, 500);
+
+      return () => {
+        clearTimeout(timeout);
+      };
+    }, [formId, accountId]);
+    
+    if (!formId || !accountId) {
       return (
         <div className={`p-4 text-center text-gray-500 ${className}`}>
           <p>Newsletter form unavailable</p>
+          <p className="text-xs">Configuration missing</p>
+        </div>
+      );
+    }
+
+    if (loadError) {
+      return (
+        <div className={`p-4 text-center text-gray-500 ${className}`}>
+          <p>Unable to load newsletter form</p>
+          <p className="text-xs">Please try refreshing the page</p>
+        </div>
+      );
+    }
+
+    if (useIframe) {
+      // Fallback iframe approach
+      const iframeSrc = `https://app.sender.net/forms/${formId}/embed`;
+      return (
+        <div className={className}>
+          <iframe
+            src={iframeSrc}
+            width="100%"
+            height="400"
+            style={{ border: 'none', borderRadius: '8px' }}
+            title="Newsletter Signup"
+            loading="lazy"
+          />
         </div>
       );
     }
 
     return (
-      <div 
-        className={`sender-form-field ${className}`}
-        data-sender-form-id={formId}
-        style={{ textAlign: 'left' }}
-      />
+      <div className={className}>
+        <div 
+          className={`sender-form-${formId}`}
+          style={{ minHeight: isLoaded ? 'auto' : '120px' }}
+        >
+          {!isLoaded && (
+            <div className="flex items-center justify-center h-24">
+              <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-[#b66880]"></div>
+              <span className="ml-2 text-gray-500">Loading form...</span>
+            </div>
+          )}
+        </div>
+      </div>
     );
   };
 
@@ -130,6 +211,11 @@ export default function NewsletterForm({
                 <Heart className="h-4 w-4 text-[#b66880]" />
                 <span>Privacy first</span>
               </div>
+            </div>
+            <div className="flex items-center justify-center space-x-6 text-xs text-gray-400 dark:text-gray-500 mt-2">
+              <span>GDPR compliant</span>
+              <span>•</span>
+              <span>No sharing to third parties ever</span>
             </div>
           </div>
         </div>
@@ -385,6 +471,11 @@ export default function NewsletterForm({
                             <ArrowRight className="h-4 w-4 text-[#b88e62]" />
                             <span>Unsubscribe anytime</span>
                           </div>
+                        </div>
+                        <div className="flex items-center justify-center space-x-6 text-xs text-gray-400 dark:text-gray-500 mt-2">
+                          <span>GDPR compliant</span>
+                          <span>•</span>
+                          <span>No sharing to third parties ever</span>
                         </div>
                       </div>
                     </div>
