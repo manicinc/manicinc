@@ -135,6 +135,19 @@ export const subscribeToNewsletter = async (data: {
     }
   } catch (error) {
     console.error('Newsletter subscription error:', error);
+    
+    // Check for CORS-related errors
+    if (error instanceof Error && (
+        error.message.includes('CORS') || 
+        error.message.includes('Failed to fetch') ||
+        error.message.includes('Access to fetch')
+      )) {
+      return {
+        success: false,
+        error: 'Email service configuration issue. Please contact team@manic.agency directly or try again later.'
+      };
+    }
+    
     return {
       success: false,
       error: 'Failed to subscribe. Please try again or contact team@manic.agency directly.'
@@ -209,6 +222,19 @@ export const sendContactMessage = async (data: {
     }
   } catch (error) {
     console.error('Contact form error:', error);
+    
+    // Check for CORS-related errors
+    if (error instanceof Error && (
+        error.message.includes('CORS') || 
+        error.message.includes('Failed to fetch') ||
+        error.message.includes('Access to fetch')
+      )) {
+      return {
+        success: false,
+        error: 'Email service configuration issue. Please contact team@manic.agency directly or try again later.'
+      };
+    }
+    
     return {
       success: false,
       error: 'Failed to send message. Please try again or contact team@manic.agency directly.'

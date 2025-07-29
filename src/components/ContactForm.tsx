@@ -5,7 +5,7 @@ import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAnalytics } from './Analytics';
 import { useCookieConsent } from '@/hooks/useCookieConsent';
-import { sendContactMessage } from '@/lib/emailjs';
+import { sendContactForm } from '@/lib/web3forms';
 
 interface ContactFormState {
   name: string;
@@ -75,7 +75,7 @@ export default function ContactForm() {
     setState(prev => ({ ...prev, status: 'loading' }));
 
     try {
-      const result = await sendContactMessage({
+      const result = await sendContactForm({
         name: state.name,
         email: state.email,
         company: state.company,

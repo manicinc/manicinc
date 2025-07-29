@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useAnalytics } from './Analytics';
 import { useCookieConsent } from '@/hooks/useCookieConsent';
 import { motion, AnimatePresence } from 'framer-motion';
-import { subscribeToNewsletter } from '@/lib/emailjs';
+import { subscribeToNewsletter } from '@/lib/sender';
 
 interface NewsletterFormProps {
   variant?: 'main' | 'blog';

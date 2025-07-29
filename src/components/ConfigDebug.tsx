@@ -1,15 +1,16 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { debugEmailJSConfig } from '@/lib/emailjs';
+import { debugWeb3FormsConfig } from '@/lib/web3forms';
+import { debugSenderConfig } from '@/lib/sender';
 import { debugAnalyticsConfig } from '@/components/Analytics';
 
 interface ConfigStatus {
-  emailjs: {
-    serviceId: boolean;
-    newsletterTemplate: boolean;
-    contactTemplate: boolean;
-    publicKey: boolean;
+  web3forms: {
+    accessKey: boolean;
+  };
+  sender: {
+    formId: boolean;
   };
   analytics: {
     googleAnalytics: boolean;
@@ -29,11 +30,11 @@ export function ConfigDebug() {
     }
 
     const configStatus: ConfigStatus = {
-      emailjs: {
-        serviceId: !!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        newsletterTemplate: !!process.env.NEXT_PUBLIC_EMAILJS_NEWSLETTER_TEMPLATE_ID,
-        contactTemplate: !!process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID,
-        publicKey: !!process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+      web3forms: {
+        accessKey: !!process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+      },
+      sender: {
+        formId: !!process.env.NEXT_PUBLIC_SENDER_FORM_ID,
       },
       analytics: {
         googleAnalytics: !!process.env.NEXT_PUBLIC_GA_ID,
@@ -45,7 +46,8 @@ export function ConfigDebug() {
     setConfig(configStatus);
 
     // Show debug info in console (useful for development)
-    debugEmailJSConfig();
+    debugWeb3FormsConfig();
+    debugSenderConfig();
     debugAnalyticsConfig();
     
     // In development, inform about GitHub Secrets
@@ -91,12 +93,16 @@ export function ConfigDebug() {
             </div>
             
             <div>
-              <h4 className="text-yellow-400 font-semibold">EmailJS (GitHub Secrets)</h4>
+              <h4 className="text-yellow-400 font-semibold">Web3Forms (Contact)</h4>
               <div className="ml-2 space-y-1">
-                <div>Service ID: {config.emailjs.serviceId ? '✅' : '❌ (Expected in dev)'}</div>
-                <div>Newsletter Template: {config.emailjs.newsletterTemplate ? '✅' : '❌ (Expected in dev)'}</div>
-                <div>Contact Template: {config.emailjs.contactTemplate ? '✅' : '❌ (Expected in dev)'}</div>
-                <div>Public Key: {config.emailjs.publicKey ? '✅' : '❌ (Expected in dev)'}</div>
+                <div>Access Key: {config.web3forms.accessKey ? '✅' : '❌ (Expected in dev)'}</div>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-purple-400 font-semibold">Sender.net (Newsletter)</h4>
+              <div className="ml-2 space-y-1">
+                <div>Form ID: {config.sender.formId ? '✅' : '❌ (Expected in dev)'}</div>
               </div>
             </div>
 

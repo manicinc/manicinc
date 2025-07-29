@@ -8,8 +8,9 @@ interface LookingGlassLogoProps {
 }
 
 const LookingGlassLogo: React.FC<LookingGlassLogoProps> = ({ scale = 1 }) => {
-    // Unique IDs for SVG elements
-    const uniqueSuffix = React.useId ? React.useId().replace(/:/g, '') : Math.random().toString(36).substring(2, 9);
+    // Unique IDs for SVG elements - always call useId unconditionally
+    const reactId = React.useId();
+    const uniqueSuffix = reactId ? reactId.replace(/:/g, '') : Math.random().toString(36).substring(2, 9);
     const gradientId = `lg-grad-${uniqueSuffix}`;
     const warpFilterId = `lg-warp-${uniqueSuffix}`; // Original warp filter
     const maskId = `lg-mask-${uniqueSuffix}`;

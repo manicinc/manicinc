@@ -332,20 +332,41 @@ This project uses GitHub Secrets exclusively - no local environment files needed
 Add these as GitHub Secrets (Repository Settings > Secrets and variables > Actions):
 
 ```
+# Analytics (Optional but recommended)
 NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
 NEXT_PUBLIC_CLARITY_PROJECT_ID=your_clarity_project_id
-RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxxxx
-RESEND_AUDIENCE_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+# Contact Form (Web3Forms - Free)
+NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your_web3forms_access_key
+
+# Newsletter (Sender.net - Free)
+NEXT_PUBLIC_SENDER_FORM_ID=your_sender_form_id
+
+# Legacy EmailJS (Fallback - Optional)
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
 NEXT_PUBLIC_EMAILJS_NEWSLETTER_TEMPLATE_ID=template_k3v4qm9
 NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID=template_rq6cbua
 NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=CU78N6a7mfAlrjGWo
+
+# Resend (Server-side alternative - Optional)
+RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxxxx
+RESEND_AUDIENCE_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
-Resend is used for contact forms and newsletter submissions (and can be used for sending emails). EmailJS is used as a backup/alternative for contact forms in static deployments. Google Analytics and Clarity are used for analytics, are fully GDPR-compliant, and are not necessary to run.
+## Service Setup Instructions:
+
+### Web3Forms (Contact Form)
+1. Go to [web3forms.com](https://web3forms.com)
+2. Enter your email → Get instant access key
+3. Add `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` to GitHub Secrets
+
+### Sender.net (Newsletter)
+1. ✅ **Already Set Up!** Your form: https://stats.sender.net/forms//view
+2. Add `NEXT_PUBLIC_SENDER_FORM_ID=` to GitHub Secrets
+3. Deploy and your newsletter will work immediately!
 
 **For Local Development:**
-No setup required! Analytics and newsletter will be gracefully disabled if environment variables are missing.
+No setup required! Forms will show graceful fallback messages if environment variables are missing.
 Just run `npm run dev` and the app handles missing values automatically.
 
 #### Getting Your Analytics IDs

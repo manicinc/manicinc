@@ -12,7 +12,7 @@ import DynamicFavicon from '@/components/Base/DynamicFavicon';
 import Analytics from '@/components/Analytics';
 import ScrollToTopHandler from '@/components/ScrollBtns/ScrollToTopHandler';
 import TrailingSlashHandler from '@/components/TrailingSlashHandler';
-import { ConfigDebug } from '@/components/ConfigDebug';
+import { SenderScript } from '@/components/SenderScript';
 import type { Metadata, Viewport } from 'next';
 
 // Import Styles
@@ -192,7 +192,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <Footer />
             <ScrollToTopHandler />
             <Analytics />
-            <ConfigDebug />
+            <SenderScript formId={process.env.NEXT_PUBLIC_SENDER_FORM_ID} />
             <LayoutClient />
           </CookieProvider>
         </ThemeProvider>
