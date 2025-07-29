@@ -1,56 +1,65 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 interface SenderScriptProps {
   accountId?: string;
 }
 
 export function SenderScript({ accountId }: SenderScriptProps) {
-  const [scriptLoaded, setScriptLoaded] = useState(false);
-
   useEffect(() => {
-    // Only load if accountId is provided and script isn't already loaded
-    if (!accountId || (window as any).sender) {
-      if ((window as any).sender) setScriptLoaded(true);
+    // Only load if accountId is provided
+    if (!accountId) {
+      console.warn('SenderScript: No accountId provided');
       return;
     }
 
-    let script: HTMLScriptElement | null = null;
+    // Check if script is already loaded
+    if (typeof window !== 'undefined' && (window as any).sender) {
+      console.log('Sender script already loaded');
+      // Initialize with account ID if not already initialized
+      try {
+        (window as any).sender(accountId);
+      } catch (e) {
+        console.error('Error initializing Sender:', e);
+      }
+      return;
+    }
 
     try {
-      // Create and load the external Sender.net script directly
-      script = document.createElement('script');
-      script.async = true;
+      // Load the Sender script
+      const script = document.createElement('script');
       script.src = 'https://cdn.sender.net/accounts_resources/universal.js';
+      script.async = true;
+      
       script.onload = () => {
-        setScriptLoaded(true);
-        // Initialize Sender with account ID after script loads
-        setTimeout(() => {
-          if ((window as any).sender && accountId) {
-            try {
-              (window as any).sender(accountId);
-            } catch (err) {
-              console.warn('Sender initialization failed:', err);
-            }
+        console.log('Sender script loaded successfully');
+        
+        // Initialize Sender after script loads
+        if ((window as any).sender) {
+          try {
+            (window as any).sender(accountId);
+            console.log('Sender initialized with account:', accountId);
+          } catch (e) {
+            console.error('Error initializing Sender after load:', e);
           }
-        }, 100);
+        }
       };
+      
       script.onerror = () => {
-        console.warn('Failed to load Sender.net script from CDN');
+        console.error('Failed to load Sender script');
       };
       
       document.head.appendChild(script);
+      
+      // Cleanup
+      return () => {
+        // Don't remove the script as it might be used by other components
+        console.log('SenderScript cleanup');
+      };
     } catch (error) {
-      console.warn('Failed to load Sender.net script:', error);
+      console.error('Failed to load Sender.net script:', error);
     }
-
-    return () => {
-      // Cleanup if needed
-      if (script && script.parentNode) {
-        script.parentNode.removeChild(script);
-      }
-    };
   }, [accountId]);
 
   return null;

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Mail, Users, Heart, Star, Sparkles, CheckCircle, ArrowRight, Quote } from 'lucide-react';
 import FadeIn from '@/components/FadeIn';
@@ -83,13 +83,13 @@ export default function NewsletterForm({
     };
   }, []);
 
-  // Enhanced Sender form component with iframe fallback
+  // Enhanced Sender form component with proper error handling
   const SenderForm = ({ className = "" }) => {
     const formId = process.env.NEXT_PUBLIC_SENDER_FORM_ID;
     const accountId = process.env.NEXT_PUBLIC_SENDER_ACCOUNT_ID;
     const [isLoaded, setIsLoaded] = useState(false);
     const [loadError, setLoadError] = useState(false);
-    const [useIframe, setUseIframe] = useState(false);
+    const formRef = useRef<HTMLDivElement>(null);
     
     useEffect(() => {
       if (!formId || !accountId) {
@@ -97,39 +97,57 @@ export default function NewsletterForm({
         return;
       }
 
-      // Try JavaScript API first
-      const checkSender = () => {
-        if (typeof window !== 'undefined' && (window as any).sender) {
-          try {
-            // Try to embed the form using Sender's API
-            (window as any).sender('embed', formId, {
-              target: `.sender-form-${formId}`,
-              width: '100%'
-            });
-            setIsLoaded(true);
-          } catch (error) {
-            console.warn('Sender JS API failed, falling back to iframe:', error);
-            setUseIframe(true);
-            setIsLoaded(true);
+      let checkAttempts = 0;
+      const maxAttempts = 50; // 5 seconds max wait
+      
+      const embedForm = () => {
+        if (typeof window === 'undefined') return;
+        
+        // Check if sender is available
+        if (!(window as any).sender) {
+          checkAttempts++;
+          if (checkAttempts < maxAttempts) {
+            setTimeout(embedForm, 100);
+            return;
           }
-        } else {
-          // Keep checking for a while, then fall back to iframe
-          const timeElapsed = Date.now() - checkStartTime;
-          if (timeElapsed > 3000) { // 3 second timeout
-            console.warn('Sender script timeout, using iframe fallback');
-            setUseIframe(true);
-            setIsLoaded(true);
-          } else {
-            setTimeout(checkSender, 100);
+          console.error('Sender script not available after timeout');
+          setLoadError(true);
+          return;
+        }
+
+        try {
+          // Clear any existing content
+          if (formRef.current) {
+            formRef.current.innerHTML = '';
           }
+
+          // Use sender's embed function
+          (window as any).sender('embed', formId, {
+            selector: `.sender-form-${formId}`,
+            width: '100%'
+          });
+          
+          setIsLoaded(true);
+          console.log('Sender form embedded successfully');
+        } catch (error) {
+          console.error('Failed to embed Sender form:', error);
+          setLoadError(true);
         }
       };
 
-      const checkStartTime = Date.now();
-      const timeout = setTimeout(checkSender, 500);
+      // Start trying to embed the form
+      embedForm();
 
+      // Cleanup
       return () => {
-        clearTimeout(timeout);
+        // Optionally destroy the form if sender provides a destroy method
+        if ((window as any).sender && (window as any).sender.destroy) {
+          try {
+            (window as any).sender.destroy(formId);
+          } catch (e) {
+            // Ignore cleanup errors
+          }
+        }
       };
     }, [formId, accountId]);
     
@@ -137,7 +155,12 @@ export default function NewsletterForm({
       return (
         <div className={`p-4 text-center text-gray-500 ${className}`}>
           <p>Newsletter form unavailable</p>
-          <p className="text-xs">Configuration missing</p>
+          <p className="text-xs mt-2">Missing configuration. Please check:</p>
+          <ul className="text-xs mt-2 text-left inline-block">
+            <li>• NEXT_PUBLIC_SENDER_FORM_ID is set</li>
+            <li>• NEXT_PUBLIC_SENDER_ACCOUNT_ID is set</li>
+            <li>• Form is published in Sender.net</li>
+          </ul>
         </div>
       );
     }
@@ -146,24 +169,23 @@ export default function NewsletterForm({
       return (
         <div className={`p-4 text-center text-gray-500 ${className}`}>
           <p>Unable to load newsletter form</p>
-          <p className="text-xs">Please try refreshing the page</p>
-        </div>
-      );
-    }
-
-    if (useIframe) {
-      // Fallback iframe approach
-      const iframeSrc = `https://app.sender.net/forms/${formId}/embed`;
-      return (
-        <div className={className}>
-          <iframe
-            src={iframeSrc}
-            width="100%"
-            height="400"
-            style={{ border: 'none', borderRadius: '8px' }}
-            title="Newsletter Signup"
-            loading="lazy"
-          />
+          <p className="text-xs mt-2">The form couldn&apos;t be loaded. This might be due to:</p>
+          <ul className="text-xs mt-2 text-left inline-block">
+            <li>• Ad blockers or privacy extensions</li>
+            <li>• Network connectivity issues</li>
+            <li>• Form not published in Sender.net</li>
+          </ul>
+          <p className="text-xs mt-3">
+            Try disabling ad blockers or{' '}
+            <a 
+              href="https://app.sender.net/forms"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#b66880] underline"
+            >
+              sign up directly
+            </a>
+          </p>
         </div>
       );
     }
@@ -171,7 +193,9 @@ export default function NewsletterForm({
     return (
       <div className={className}>
         <div 
+          ref={formRef}
           className={`sender-form-${formId}`}
+          data-sender-form-id={formId}
           style={{ minHeight: isLoaded ? 'auto' : '120px' }}
         >
           {!isLoaded && (
