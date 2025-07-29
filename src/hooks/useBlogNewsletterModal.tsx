@@ -12,7 +12,7 @@ interface NewsletterModalState {
 const STORAGE_KEY = 'blog-newsletter-modal-state';
 const SCROLL_THRESHOLD = 0.25; // Show after scrolling 25% of page
 const DELAY_MS = 3000; // Wait 3 seconds after scroll threshold
-const COOLDOWN_DAYS = 7; // Don't show again for 7 days if dismissed
+const COOLDOWN_DAYS = 1; // Don't show again for 1 day if dismissed
 
 export function useBlogNewsletterModal() {
   const [showModal, setShowModal] = useState(false);

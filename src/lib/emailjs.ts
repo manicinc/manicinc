@@ -8,9 +8,17 @@ const EMAILJS_CONTACT_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMP
 const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
 // Validate required environment variables
-if (!EMAILJS_SERVICE_ID || !EMAILJS_NEWSLETTER_TEMPLATE_ID || !EMAILJS_CONTACT_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+const missingVars = [];
+if (!EMAILJS_SERVICE_ID) missingVars.push('NEXT_PUBLIC_EMAILJS_SERVICE_ID');
+if (!EMAILJS_NEWSLETTER_TEMPLATE_ID) missingVars.push('NEXT_PUBLIC_EMAILJS_NEWSLETTER_TEMPLATE_ID');
+if (!EMAILJS_CONTACT_TEMPLATE_ID) missingVars.push('NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID');
+if (!EMAILJS_PUBLIC_KEY) missingVars.push('NEXT_PUBLIC_EMAILJS_PUBLIC_KEY');
+
+if (missingVars.length > 0) {
   if (process.env.NODE_ENV === 'production') {
-    console.warn('EmailJS environment variables not configured. Forms will show fallback messages.');
+    console.warn(`EmailJS environment variables not configured: ${missingVars.join(', ')}. Forms will show fallback messages.`);
+  } else {
+    console.info(`EmailJS missing in development: ${missingVars.join(', ')}`);
   }
 }
 
@@ -40,8 +48,8 @@ export const subscribeToNewsletter = async (data: {
       return {
         success: false,
         error: process.env.NODE_ENV === 'production' 
-          ? 'Email service not configured. Please contact team@manic.agency directly.'
-          : 'EmailJS not configured (development mode). Add environment variables for production.'
+          ? 'Email service temporarily unavailable. Please contact team@manic.agency directly.'
+          : 'EmailJS not configured. Check environment variables: NEXT_PUBLIC_EMAILJS_PUBLIC_KEY'
       };
     }
 
@@ -50,8 +58,8 @@ export const subscribeToNewsletter = async (data: {
       return {
         success: false,
         error: process.env.NODE_ENV === 'production'
-          ? 'Email service not properly configured. Please contact team@manic.agency directly.'
-          : 'EmailJS templates not configured (development mode).'
+          ? 'Email service configuration incomplete. Please contact team@manic.agency directly.'
+          : `Missing EmailJS config: ${!EMAILJS_SERVICE_ID ? 'SERVICE_ID ' : ''}${!EMAILJS_NEWSLETTER_TEMPLATE_ID ? 'NEWSLETTER_TEMPLATE_ID' : ''}`
       };
     }
 
@@ -107,8 +115,8 @@ export const sendContactMessage = async (data: {
       return {
         success: false,
         error: process.env.NODE_ENV === 'production'
-          ? 'Email service not configured. Please contact team@manic.agency directly.'
-          : 'EmailJS not configured (development mode). Add environment variables for production.'
+          ? 'Email service temporarily unavailable. Please contact team@manic.agency directly.'
+          : 'EmailJS not configured. Check environment variables: NEXT_PUBLIC_EMAILJS_PUBLIC_KEY'
       };
     }
 
@@ -117,8 +125,8 @@ export const sendContactMessage = async (data: {
       return {
         success: false,
         error: process.env.NODE_ENV === 'production'
-          ? 'Email service not properly configured. Please contact team@manic.agency directly.'
-          : 'EmailJS templates not configured (development mode).'
+          ? 'Email service configuration incomplete. Please contact team@manic.agency directly.'
+          : `Missing EmailJS config: ${!EMAILJS_SERVICE_ID ? 'SERVICE_ID ' : ''}${!EMAILJS_CONTACT_TEMPLATE_ID ? 'CONTACT_TEMPLATE_ID' : ''}`
       };
     }
 

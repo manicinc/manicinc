@@ -102,13 +102,13 @@ export default function NewsletterForm({
     setState(prev => ({ 
       ...prev, 
       status: 'unsubscribed',
-      message: 'You&apos;ve been unsubscribed. We won&apos;t show this form again.',
+      message: 'You&apos;ve been unsubscribed. We won&apos;t show this form again today.',
       showUnsubscribe: false
     }));
 
-    // Hide newsletter form for 30 days
+    // Hide newsletter form for 1 day
     const hideUntil = new Date();
-    hideUntil.setDate(hideUntil.getDate() + 30);
+    hideUntil.setDate(hideUntil.getDate() + 1);
     localStorage.setItem('newsletter-hide-until', hideUntil.toISOString());
 
     if (canTrack) {
@@ -158,7 +158,7 @@ export default function NewsletterForm({
         source: variant 
       });
 
-      if (result.success) {
+      if (result && result.success) {
         // Add email to subscribed list
         const subscribedEmails = JSON.parse(localStorage.getItem('newsletter-subscribed-emails') || '[]');
         if (!subscribedEmails.includes(state.email.toLowerCase())) {
@@ -169,7 +169,7 @@ export default function NewsletterForm({
         setState(prev => ({ 
           ...prev, 
           status: 'success', 
-          message: result.message || 'Transmission channel established successfully.',
+          message: ('message' in result ? result.message : undefined) || 'Transmission channel established successfully.',
           email: '',
           name: '',
           company: ''
@@ -223,7 +223,7 @@ export default function NewsletterForm({
         setState(prev => ({ 
           ...prev, 
           status: 'error', 
-          message: result.error || 'Transmission failed. Please verify connection and retry.' 
+          message: (result && 'error' in result ? result.error : undefined) || 'Transmission failed. Please verify connection and retry.' 
         }));
       }
     } catch (error) {
@@ -478,29 +478,29 @@ export default function NewsletterForm({
               disabled={state.status === 'loading' || !state.email.trim() || !hasConsent}
               className={`
                 relative w-full px-6 py-3 
-                bg-gradient-to-r from-accent-burgundy to-accent-highlight
-                hover:from-accent-highlight hover:to-accent-burgundy
+                bg-gradient-to-r from-accent-burgundy to-accent-sage
+                hover:from-accent-sage hover:to-accent-gold
                 text-white font-medium rounded-xl
                 transition-all duration-300
                 disabled:opacity-50 disabled:cursor-not-allowed
                 disabled:from-gray-400 disabled:to-gray-500
                 focus:ring-2 focus:ring-accent-burgundy/20
                 group overflow-hidden
+                shadow-lg hover:shadow-xl
                 ${compact ? 'py-2 px-4 text-sm' : ''}
-                [&]:not(.disabled):not([disabled]) {
-                  color: white !important;
-                  background: linear-gradient(to right, var(--accent-burgundy), var(--accent-highlight)) !important;
-                }
               `}
               style={{
-                color: 'white',
-                background: 'linear-gradient(to right, var(--accent-burgundy), var(--accent-highlight))'
+                color: 'white !important',
+                background: 'linear-gradient(135deg, #b66880 0%, #7ea196 100%)'
               }}
-              whileHover={{ scale: state.status === 'loading' ? 1 : 1.02 }}
+              whileHover={{ 
+                scale: state.status === 'loading' ? 1 : 1.02,
+                boxShadow: '0 20px 40px rgba(182, 104, 128, 0.3)'
+              }}
               whileTap={{ scale: state.status === 'loading' ? 1 : 0.98 }}
               title={!hasConsent ? 'Marketing consent required to establish channel' : ''}
             >
-              <span className="relative z-10 flex items-center justify-center gap-2">
+              <span className="relative z-10 flex items-center justify-center gap-2 text-white font-semibold">
                 {state.status === 'loading' ? (
                   <>
                     <LoadingPulse />
@@ -513,7 +513,8 @@ export default function NewsletterForm({
                   </>
                 )}
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-accent-highlight/20 to-accent-burgundy/20 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-r from-accent-sage/30 to-accent-gold/30 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
             </motion.button>
           </form>
         )}

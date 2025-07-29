@@ -459,15 +459,24 @@ export default function ContactForm() {
           type="submit"
           disabled={state.status === 'loading' || !canUseFunctional}
           className={`
-            relative px-8 py-3 rounded-xl font-medium transition-all duration-300
+            relative px-8 py-3 rounded-xl font-medium transition-all duration-300 overflow-hidden group
             ${state.status === 'loading' || !canUseFunctional
               ? 'bg-bg-tertiary text-text-muted cursor-not-allowed'
-              : 'bg-gradient-to-r from-accent-burgundy to-accent-highlight text-white hover:shadow-lg hover:scale-105'
+              : 'bg-gradient-to-r from-accent-burgundy to-accent-sage text-white hover:shadow-xl shadow-lg'
             }
           `}
+          style={{
+            background: state.status === 'loading' || !canUseFunctional 
+              ? undefined 
+              : 'linear-gradient(135deg, #b66880 0%, #7ea196 100%)'
+          }}
+          whileHover={{ 
+            scale: state.status === 'loading' || !canUseFunctional ? 1 : 1.05,
+            boxShadow: state.status === 'loading' || !canUseFunctional ? undefined : '0 20px 40px rgba(182, 104, 128, 0.3)'
+          }}
           whileTap={{ scale: state.status === 'loading' ? 1 : 0.95 }}
         >
-          <span className="relative z-10 flex items-center gap-2">
+          <span className="relative z-10 flex items-center gap-2 text-white font-semibold">
             {state.status === 'loading' ? (
               <>
                 <LoadingSpinner />
@@ -480,6 +489,12 @@ export default function ContactForm() {
               </>
             )}
           </span>
+          {!(state.status === 'loading' || !canUseFunctional) && (
+            <>
+              <div className="absolute inset-0 bg-gradient-to-r from-accent-sage/30 to-accent-gold/30 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
+            </>
+          )}
         </motion.button>
       </motion.div>
 

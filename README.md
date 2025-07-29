@@ -339,7 +339,7 @@ RESEND_AUDIENCE_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
 NEXT_PUBLIC_EMAILJS_NEWSLETTER_TEMPLATE_ID=template_k3v4qm9
 NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID=template_rq6cbua
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=KbiQv-FTfMkW2Vjap8Whb
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=CU78N6a7mfAlrjGWo
 ```
 
 Resend is used for contact forms and newsletter submissions (and can be used for sending emails). EmailJS is used as a backup/alternative for contact forms in static deployments. Google Analytics and Clarity are used for analytics, are fully GDPR-compliant, and are not necessary to run.

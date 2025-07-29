@@ -76,6 +76,7 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
         }
     }, [canUseFunctional]);
     const [currentQuote, setCurrentQuote] = useState<string>(" "); // Start blank
+    const currentQuoteRef = useRef<string>(" "); // Ref to track current quote for click handler
     const [mounted, setMounted] = useState(false);
     const [glitchingQuote, setGlitchingQuote] = useState(false);
     const [decryptingLink, setDecryptingLink] = useState<string | null>(null);
@@ -94,37 +95,39 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
 
     // Memoized function to change quote and trigger glitch
     const triggerQuoteChange = useCallback((newQuote: string) => {
-        console.log("Attempting to change quote to:", newQuote); // DEBUG
-        // Prevent setting the exact same quote again unless it's the initial load placeholder
-        if (newQuote === currentQuote && currentQuote !== " ") {
-            console.log("Skipping identical quote."); // DEBUG
-            return;
-        }
+        // Use functional state update to avoid depending on currentQuote
+        setCurrentQuote(prevQuote => {
+            // Prevent setting the exact same quote again unless it's the initial load placeholder
+            if (newQuote === prevQuote && prevQuote !== " ") {
+                return prevQuote;
+            }
 
-        setGlitchingQuote(true);
-        setCurrentQuote(newQuote); // Update state first
-        console.log("Set quote state to:", newQuote); // DEBUG
+            // Update the ref for the click handler
+            currentQuoteRef.current = newQuote;
 
-        if (glitchTimeoutRef.current) clearTimeout(glitchTimeoutRef.current);
-        glitchTimeoutRef.current = setTimeout(() => {
-            setGlitchingQuote(false);
-            console.log("Glitch effect ended."); // DEBUG
-        }, QUOTE_GLITCH_DURATION_MS);
+            setGlitchingQuote(true);
 
-        // Update last quote shown in localStorage
-        try {
-            const storedData = getStorageItem(LOCAL_STORAGE_KEY);
-            const visitData: VisitData = storedData ? JSON.parse(storedData) : { count: 0, lastVisitTimestamp: 0 };
-            visitData.lastQuote = newQuote;
-            setStorageItem(LOCAL_STORAGE_KEY, JSON.stringify(visitData));
-        } catch (e) { console.error("LS error (update lastQuote):", e); }
-    }, [currentQuote, getStorageItem, setStorageItem]); // Re-memoize when currentQuote, getStorageItem, or setStorageItem changes
+            if (glitchTimeoutRef.current) clearTimeout(glitchTimeoutRef.current);
+            glitchTimeoutRef.current = setTimeout(() => {
+                setGlitchingQuote(false);
+            }, QUOTE_GLITCH_DURATION_MS);
+
+            // Update last quote shown in localStorage
+            try {
+                const storedData = getStorageItem(LOCAL_STORAGE_KEY);
+                const visitData: VisitData = storedData ? JSON.parse(storedData) : { count: 0, lastVisitTimestamp: 0 };
+                visitData.lastQuote = newQuote;
+                setStorageItem(LOCAL_STORAGE_KEY, JSON.stringify(visitData));
+            } catch (e) { console.error("LS error (update lastQuote):", e); }
+
+            return newQuote;
+        });
+    }, [getStorageItem, setStorageItem]); // Only depend on storage functions, not currentQuote
 
     // Effect for **INITIAL** quote selection **ONLY**
     useEffect(() => {
         // This effect now ONLY depends on 'mounted'. It will run exactly ONCE.
         if (!mounted) return;
-        console.log("Quote Initial useEffect RUNNING"); // DEBUG
 
         let initialQuote = "";
         let visitData: VisitData = { count: 0, lastVisitTimestamp: 0 };
@@ -141,18 +144,13 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                 const timeSinceLastVisit = now - visitData.lastVisitTimestamp;
                 const oneMinute = 60 * 1000;
 
-                console.log("Visit data:", visitData, "Time since last:", timeSinceLastVisit); // DEBUG
-
                 if (visitData.count === 0) {
-                    console.log("Determined: First Visit"); // DEBUG
                     initialQuote = getRandomQuote(quoteCategories.FIRST_VISIT);
                     visitData.count = 1;
                 } else if (visitData.count === 1 && timeSinceLastVisit > oneMinute) {
-                    console.log("Determined: Second Visit (Exclusive)"); // DEBUG
                     initialQuote = getRandomQuote(quoteCategories.SECOND_VISIT_EXCLUSIVE, lastQuoteFromStorage);
                     visitData.count = 2;
                 } else {
-                    console.log("Determined: Returning Visit"); // DEBUG
                     initialQuote = getRandomQuote(allGeneralQuotes, lastQuoteFromStorage);
                     visitData.count += 1;
                 }
@@ -160,7 +158,6 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                 // Update storage with new count/timestamp, but clear lastQuote (it gets set in triggerQuoteChange)
                 setStorageItem(LOCAL_STORAGE_KEY, JSON.stringify({ ...visitData, lastQuote: undefined }));
             } else {
-                 console.log("Determined: First Visit Ever (no storage)"); // DEBUG
                 initialQuote = getRandomQuote(quoteCategories.FIRST_VISIT);
                 visitData = { count: 1, lastVisitTimestamp: Date.now(), lastQuote: undefined };
                 setStorageItem(LOCAL_STORAGE_KEY, JSON.stringify(visitData));
@@ -171,8 +168,6 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
             // Note: Storage operations are consent-aware through helper functions
         }
 
-        console.log("Initial quote selected:", initialQuote); // DEBUG
-
         // Set the initial quote after a short delay
         const initialDelay = setTimeout(() => {
             triggerQuoteChange(initialQuote || getRandomQuote(allGeneralQuotes)); // Ensure a quote is set
@@ -181,23 +176,17 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
         // **NO INTERVAL TIMER IS SET HERE**
 
         return () => {
-            console.log("Quote Initial useEffect CLEANUP"); // DEBUG
             clearTimeout(initialDelay);
             if (glitchTimeoutRef.current) clearTimeout(glitchTimeoutRef.current);
         };
-    // **CRITICAL FIX: Dependency array only includes 'mounted'.**
-    // This guarantees the effect runs ONLY once when the component mounts.
-    // triggerQuoteChange is stable due to useCallback([]) or useCallback([currentQuote])
-    // but putting it here could theoretically cause issues if its reference changed unexpectedly.
-    // Relying solely on 'mounted' is the most robust way to ensure single execution.
-    }, [mounted, getStorageItem, setStorageItem, triggerQuoteChange]);
+    // **CRITICAL FIX: Only depend on 'mounted' to prevent infinite loops**
+    }, [mounted]);
 
     // Click handler for Manual Quote Change
     const handleQuoteClick = useCallback(() => {
-        console.log("handleQuoteClick triggered"); // DEBUG
-        const newQuote = getRandomQuote(allGeneralQuotes, currentQuote);
+        const newQuote = getRandomQuote(allGeneralQuotes, currentQuoteRef.current);
         triggerQuoteChange(newQuote); // Trigger change + glitch
-    }, [currentQuote, triggerQuoteChange]); // Okay for this to depend on currentQuote
+    }, [triggerQuoteChange]); // No need to depend on currentQuote anymore
 
     // --- Terminal Logic ---
     const startTitleCycle = useCallback(() => { if (cycleIntervalRef.current) clearInterval(cycleIntervalRef.current); if (decryptIntervalRef.current) clearInterval(decryptIntervalRef.current); if (!featuredItems?.length) { setTerminalText(abbreviateText("feed_offline::no_items")); setIsDecryptingTerminal(false); return; } const files = featuredItems.map(item => { const typePrefix = item.type === 'blog' ? 'LOG' : 'PRJ'; const safeSlug = item.slug?.toLowerCase().replace(/[^a-z0-9_-]/g, '_') || 'unknown'; return `${typePrefix}_${safeSlug}.dat`; }); let currentIndex = 0; const cycleToNextFile = () => { if (decryptIntervalRef.current) clearInterval(decryptIntervalRef.current); setIsDecryptingTerminal(true); const targetFilename = abbreviateText(files[currentIndex]); let currentIteration = 0; const maxIterations = 8; const decryptionSpeed = 60; decryptIntervalRef.current = setInterval(() => { if (currentIteration >= maxIterations) { clearInterval(decryptIntervalRef.current!); setTerminalText(targetFilename); setIsDecryptingTerminal(false); currentIndex = (currentIndex + 1) % files.length; } else { setTerminalText( targetFilename.split('').map((char, index) => { const revealThreshold = (currentIteration / maxIterations); const randomFactor = Math.random(); if (['_', '.', '…'].includes(char) || randomFactor < revealThreshold) { return char; } else { return "!<>-_#%*?/$".charAt(Math.floor(Math.random() * 10)); } }).join('') ); currentIteration++; } }, decryptionSpeed); }; cycleToNextFile(); cycleIntervalRef.current = setInterval(cycleToNextFile, 4000); }, [featuredItems]);
