@@ -12,6 +12,7 @@ import DynamicFavicon from '@/components/Base/DynamicFavicon';
 import Analytics from '@/components/Analytics';
 import ScrollToTopHandler from '@/components/ScrollBtns/ScrollToTopHandler';
 import TrailingSlashHandler from '@/components/TrailingSlashHandler';
+import { ConfigDebug } from '@/components/ConfigDebug';
 import type { Metadata, Viewport } from 'next';
 
 // Import Styles
@@ -191,6 +192,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <Footer />
             <ScrollToTopHandler />
             <Analytics />
+            <ConfigDebug />
             <LayoutClient />
           </CookieProvider>
         </ThemeProvider>

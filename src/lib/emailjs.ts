@@ -15,24 +15,63 @@ if (!EMAILJS_CONTACT_TEMPLATE_ID) missingVars.push('NEXT_PUBLIC_EMAILJS_CONTACT_
 if (!EMAILJS_PUBLIC_KEY) missingVars.push('NEXT_PUBLIC_EMAILJS_PUBLIC_KEY');
 
 if (missingVars.length > 0) {
-  if (process.env.NODE_ENV === 'production') {
-    console.warn(`EmailJS environment variables not configured: ${missingVars.join(', ')}. Forms will show fallback messages.`);
+  if (process.env.NODE_ENV === 'development') {
+    console.group('🔧 EmailJS Configuration Status (Development)');
+    console.info('Environment variables are stored in GitHub Secrets for production deployment');
+    console.info('The following variables are missing locally (this is expected):');
+    missingVars.forEach(varName => {
+      console.info(`  • ${varName}`);
+    });
+    console.info('📖 Forms will show fallback messages in development');
+    console.info('🚀 In production, these will be loaded from GitHub Secrets');
+    console.groupEnd();
   } else {
-    console.info(`EmailJS missing in development: ${missingVars.join(', ')}`);
+    console.group('🔧 EmailJS Configuration Status (Production)');
+    console.warn(`Missing environment variables: ${missingVars.join(', ')}`);
+    console.info('Required GitHub Secrets:');
+    missingVars.forEach(varName => {
+      console.info(`  • ${varName}`);
+    });
+    console.info('📖 See README.md for complete setup instructions');
+    console.groupEnd();
   }
+} else {
+  console.log('✅ All EmailJS environment variables configured');
 }
+
+// Debug function to check configuration
+export const debugEmailJSConfig = () => {
+  console.group('🔍 EmailJS Configuration Debug');
+  console.log('Environment:', process.env.NODE_ENV);
+  console.log('Service ID:', EMAILJS_SERVICE_ID ? '✅ Set' : '❌ Missing');
+  console.log('Newsletter Template:', EMAILJS_NEWSLETTER_TEMPLATE_ID ? '✅ Set' : '❌ Missing');
+  console.log('Contact Template:', EMAILJS_CONTACT_TEMPLATE_ID ? '✅ Set' : '❌ Missing');
+  console.log('Public Key:', EMAILJS_PUBLIC_KEY ? '✅ Set' : '❌ Missing');
+  
+  if (process.env.NODE_ENV === 'development') {
+    console.info('💡 Missing variables in development is expected - they are in GitHub Secrets');
+  }
+  console.groupEnd();
+};
 
 // Initialize EmailJS
 export const initializeEmailJS = () => {
   if (!EMAILJS_PUBLIC_KEY) {
-    // Silent fail in development, only warn in production
-    if (process.env.NODE_ENV === 'production') {
-      console.warn('EmailJS Public Key not configured');
-    }
+    // Enhanced debugging for missing public key
+    console.error('❌ EmailJS Public Key not configured');
+    console.info('💡 Add NEXT_PUBLIC_EMAILJS_PUBLIC_KEY to GitHub Secrets');
+    console.info('📖 See README.md for setup instructions');
     return false;
   }
-  emailjs.init(EMAILJS_PUBLIC_KEY);
-  return true;
+  
+  try {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+    console.log('✅ EmailJS initialized successfully');
+    return true;
+  } catch (error) {
+    console.error('❌ EmailJS initialization failed:', error);
+    return false;
+  }
 };
 
 // Newsletter subscription function
@@ -55,11 +94,15 @@ export const subscribeToNewsletter = async (data: {
 
     // Validate required environment variables
     if (!EMAILJS_SERVICE_ID || !EMAILJS_NEWSLETTER_TEMPLATE_ID) {
+      const missing = [];
+      if (!EMAILJS_SERVICE_ID) missing.push('NEXT_PUBLIC_EMAILJS_SERVICE_ID');
+      if (!EMAILJS_NEWSLETTER_TEMPLATE_ID) missing.push('NEXT_PUBLIC_EMAILJS_NEWSLETTER_TEMPLATE_ID');
+      
       return {
         success: false,
         error: process.env.NODE_ENV === 'production'
-          ? 'Email service configuration incomplete. Please contact team@manic.agency directly.'
-          : `Missing EmailJS config: ${!EMAILJS_SERVICE_ID ? 'SERVICE_ID ' : ''}${!EMAILJS_NEWSLETTER_TEMPLATE_ID ? 'NEWSLETTER_TEMPLATE_ID' : ''}`
+          ? 'Email service temporarily unavailable. Please contact team@manic.agency directly.'
+          : `EmailJS missing: ${missing.join(', ')}. Check GitHub Secrets configuration.`
       };
     }
 
@@ -122,11 +165,15 @@ export const sendContactMessage = async (data: {
 
     // Validate required environment variables
     if (!EMAILJS_SERVICE_ID || !EMAILJS_CONTACT_TEMPLATE_ID) {
+      const missing = [];
+      if (!EMAILJS_SERVICE_ID) missing.push('NEXT_PUBLIC_EMAILJS_SERVICE_ID');
+      if (!EMAILJS_CONTACT_TEMPLATE_ID) missing.push('NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID');
+      
       return {
         success: false,
         error: process.env.NODE_ENV === 'production'
-          ? 'Email service configuration incomplete. Please contact team@manic.agency directly.'
-          : `Missing EmailJS config: ${!EMAILJS_SERVICE_ID ? 'SERVICE_ID ' : ''}${!EMAILJS_CONTACT_TEMPLATE_ID ? 'CONTACT_TEMPLATE_ID' : ''}`
+          ? 'Email service temporarily unavailable. Please contact team@manic.agency directly.'
+          : `EmailJS missing: ${missing.join(', ')}. Check GitHub Secrets configuration.`
       };
     }
 
