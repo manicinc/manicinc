@@ -371,17 +371,6 @@ RESEND_AUDIENCE_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
    - The account ID is in the `sender('YOUR_ACCOUNT_ID')` line of the JavaScript snippet
    - Example: If you see `sender('')`, then `` is your account ID
 
-#### Configuration
-
-**For Production (GitHub Secrets):**
-1. Go to Repository Settings → Secrets and variables → Actions
-2. Add these secrets:
-   - `NEXT_PUBLIC_SENDER_ACCOUNT_ID` = Your account ID from the JavaScript snippet
-   - `NEXT_PUBLIC_SENDER_FORM_ID` = Your form ID from the dashboard
-
-**For Local Development:**
-No setup required! The app will show a fallback message when environment variables are missing.
-
 #### How It Works
 
 - **Global Script**: Loads once in the site header using your account ID
@@ -473,43 +462,6 @@ import NewsletterSection from '@/components/NewsletterSection';
 - ✅ **Welcome email automation** based on subscription source
 - ✅ **Privacy policy integration** with cookie consent
 - ✅ **Graceful degradation** when API keys are missing
-
-#### Email Templates
-
-The system automatically sends different welcome emails based on subscription context:
-
-- **Blog subscribers**: "Welcome to The Looking Glass Chronicles"
-- **Main site subscribers**: "Welcome to Manic Agency"
-
-All emails include unsubscribe links and match the site's visual branding.
-
-### Contact Form System
-
-The project includes a comprehensive contact form system using **Resend** for email delivery, featuring rate limiting, validation, and professional email templates.
-
-#### Features
-
-- ✅ **Rate Limiting**: 5 requests per 15-minute window per IP
-- ✅ **Form Validation**: Email format, message length, required fields
-- ✅ **Professional Templates**: Branded emails for both admin and user
-- ✅ **Auto-Reply**: Confirmation emails to users with next steps
-- ✅ **Direct Reply**: Admin emails configured for direct replies
-- ✅ **GDPR Compliant**: Privacy policy integration and consent notices
-- ✅ **Graceful Degradation**: Fallback to direct email if API fails
-
-#### Configuration
-
-The contact form uses the same `RESEND_API_KEY` as the newsletter system. Admin emails are sent to `team@manic.agency` (configured in `src/lib/constants.ts`).
-
-#### API Endpoint
-
-- **POST /api/contact**: Processes contact form submissions with validation and email delivery
-
-#### Contact Form Fields
-
-- **Required**: Name, Email, Message (12 char minimum)
-- **Optional**: Company, Phone, Subject, Budget Range
-- **Features**: Real-time validation, submission analytics, cookie consent integration
 
 ### Other Configuration
 
