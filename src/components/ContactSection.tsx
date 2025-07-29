@@ -265,7 +265,6 @@ const ContactSection = ({ onNewsletterSignup }: ContactSectionProps = {}) => {
                     Receive curated intelligence on digital transformation, AI, Web3, and creative technology.
                   </p>
                   <NewsletterForm 
-                    variant="main" 
                     onSignupSuccess={onNewsletterSignup}
                   />
                 </div>

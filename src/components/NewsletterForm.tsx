@@ -1,13 +1,13 @@
-// src/components/NewsletterForm.tsx
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
-import { useAnalytics } from './Analytics';
-import { useCookieConsent } from '@/hooks/useCookieConsent';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { subscribeToNewsletter } from '@/lib/sender';
+import { X, Mail, Users, Heart, Star, Sparkles, CheckCircle, ArrowRight, Quote } from 'lucide-react';
+import FadeIn from '@/components/FadeIn';
+import Border from '@/components/Border';
 
 interface NewsletterFormProps {
+  onClose?: () => void;
   variant?: 'main' | 'blog';
   className?: string;
   compact?: boolean;
@@ -15,626 +15,401 @@ interface NewsletterFormProps {
   onSignupSuccess?: () => void;
 }
 
-interface NewsletterState {
-  email: string;
-  name: string;
-  company: string;
-  status: 'idle' | 'loading' | 'success' | 'error' | 'already_subscribed' | 'unsubscribed';
-  message: string;
-  collapsed: boolean;
-  expanded: boolean;
-  showUnsubscribe: boolean;
-}
+const testimonials = [
+  {
+    name: "Dariq",
+    role: "Digital Pioneer",
+    content: "This is gold.",
+    rating: 5,
+    avatar: "D"
+  },
+  {
+    name: "FIFE1.btc",
+    role: "Web3 Developer", 
+    content: "The graphics explain it all",
+    rating: 5,
+    avatar: "F"
+  },
+  {
+    name: "Brainard",
+    role: "AI Researcher",
+    content: "A distilled masterclass in AI agent design.",
+    rating: 5,
+    avatar: "B"
+  },
+  {
+    name: "Legend",
+    role: "Tech Strategist",
+    content: "Straight to the point, practical, and actually battle-tested.",
+    rating: 5,
+    avatar: "L"
+  }
+];
+
+const stats = [
+  { number: "10K+", label: "Subscribers", icon: Users },
+  { number: "98%", label: "Open Rate", icon: Mail },
+  { number: "4.9/5", label: "Rating", icon: Star },
+  { number: "100%", label: "Privacy", icon: Heart }
+];
+
+const features = [
+  "Weekly industry insights and trends",
+  "Exclusive behind-the-scenes content",
+  "Early access to new tools and resources",
+  "Community-driven discussions",
+  "Expert interviews and case studies",
+  "No spam, unsubscribe anytime"
+];
 
 export default function NewsletterForm({ 
+  onClose, 
   variant = 'main', 
-  className = '',
-  compact = false,
-  inline = false,
-  onSignupSuccess
+  className = '', 
+  compact = false, 
+  inline = false, 
+  onSignupSuccess 
 }: NewsletterFormProps) {
-  const { trackEvent, canTrack } = useAnalytics();
-  const { hasConsent, canUseMarketing } = useCookieConsent();
-  const emailInputRef = useRef<HTMLInputElement>(null);
-  const [state, setState] = useState<NewsletterState>({
-    email: '',
-    name: '',
-    company: '',
-    status: 'idle',
-    message: '',
-    collapsed: false,
-    expanded: false,
-    showUnsubscribe: false
-  });
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
-  // Check if user was already subscribed or unsubscribed
   useEffect(() => {
-    const collapsed = localStorage.getItem('newsletter-collapsed');
-    const subscribedEmails = JSON.parse(localStorage.getItem('newsletter-subscribed-emails') || '[]');
-    const unsubscribedEmails = JSON.parse(localStorage.getItem('newsletter-unsubscribed-emails') || '[]');
-    const hideUntil = localStorage.getItem('newsletter-hide-until');
-    
-    if (collapsed === 'true') {
-      setState(prev => ({ ...prev, collapsed: true }));
-    }
+    // Load Sender.net script and initialize form
+    const script = document.createElement('script');
+    script.src = 'https://assets.sender.net/accounts/MTY4Mzk=/widgets//widget.js';
+    script.async = true;
+    script.onload = () => {
+      setIsLoaded(true);
+    };
+    document.head.appendChild(script);
 
-    // Hide newsletter if user requested not to see it again
-    if (hideUntil && new Date(hideUntil) > new Date()) {
-      setState(prev => ({ ...prev, collapsed: true }));
-    }
+    // Testimonial rotation
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+
+    return () => {
+      clearInterval(interval);
+      // Cleanup script
+      const existingScript = document.querySelector(`script[src="${script.src}"]`);
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
+    };
   }, []);
 
-  const handleEmailFocus = () => {
-    setState(prev => ({ ...prev, expanded: true }));
-    if (canTrack) {
-      trackEvent('newsletter_form_engaged', { variant });
-    }
-  };
+  // If no onClose is provided, render inline version
+  if (!onClose) {
+    return (
+      <div className={`inline-newsletter-form ${className}`}>
+        <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-600">
+          <div className="text-center mb-6">
+            <h3 className="text-xl font-bold mb-2 bg-gradient-to-r from-[#b66880] to-[#7ea196] bg-clip-text text-transparent">
+              Subscribe Now
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Join our exclusive community and never miss an update
+            </p>
+          </div>
 
-  const checkIfAlreadySubscribed = (email: string): boolean => {
-    const subscribedEmails = JSON.parse(localStorage.getItem('newsletter-subscribed-emails') || '[]');
-    return subscribedEmails.includes(email.toLowerCase());
-  };
+          <div 
+            id="sender-form-"
+            className="sender-form-widget"
+            style={{ minHeight: '200px' }}
+          ></div>
 
-  const handleAlreadySubscribed = () => {
-    setState(prev => ({ 
-      ...prev, 
-      status: 'already_subscribed',
-      message: 'You&apos;re already part of our network! Thanks for being a subscriber.',
-      showUnsubscribe: true
-    }));
-  };
-
-  const handleUnsubscribe = () => {
-    const unsubscribedEmails = JSON.parse(localStorage.getItem('newsletter-unsubscribed-emails') || '[]');
-    const subscribedEmails = JSON.parse(localStorage.getItem('newsletter-subscribed-emails') || '[]');
-    
-    // Add to unsubscribed list
-    if (!unsubscribedEmails.includes(state.email.toLowerCase())) {
-      unsubscribedEmails.push(state.email.toLowerCase());
-      localStorage.setItem('newsletter-unsubscribed-emails', JSON.stringify(unsubscribedEmails));
-    }
-    
-    // Remove from subscribed list
-    const updatedSubscribed = subscribedEmails.filter((email: string) => email !== state.email.toLowerCase());
-    localStorage.setItem('newsletter-subscribed-emails', JSON.stringify(updatedSubscribed));
-    
-    setState(prev => ({ 
-      ...prev, 
-      status: 'unsubscribed',
-      message: 'You&apos;ve been unsubscribed. We won&apos;t show this form again today.',
-      showUnsubscribe: false
-    }));
-
-    // Hide newsletter form for 1 day
-    const hideUntil = new Date();
-    hideUntil.setDate(hideUntil.getDate() + 1);
-    localStorage.setItem('newsletter-hide-until', hideUntil.toISOString());
-
-    if (canTrack) {
-      trackEvent('newsletter_unsubscribe', { variant, email_domain: state.email.split('@')[1] });
-    }
-
-    // Auto-hide after 3 seconds
-    setTimeout(() => {
-      setState(prev => ({ ...prev, collapsed: true }));
-    }, 3000);
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!state.email || !state.email.includes('@')) {
-      setState(prev => ({ 
-        ...prev, 
-        status: 'error', 
-        message: 'Valid email address required for transmission.' 
-      }));
-      return;
-    }
-
-    // Check if already subscribed
-    if (checkIfAlreadySubscribed(state.email)) {
-      handleAlreadySubscribed();
-      return;
-    }
-
-    if (!canUseMarketing) {
-      setState(prev => ({ 
-        ...prev, 
-        status: 'error', 
-        message: 'Marketing consent required. Please accept marketing cookies to subscribe to our newsletter.' 
-      }));
-      return;
-    }
-
-    setState(prev => ({ ...prev, status: 'loading', message: '' }));
-
-    try {
-      const result = await subscribeToNewsletter({
-        email: state.email,
-        name: state.name,
-        company: state.company,
-        source: variant 
-      });
-
-      if (result && result.success) {
-        // Add email to subscribed list
-        const subscribedEmails = JSON.parse(localStorage.getItem('newsletter-subscribed-emails') || '[]');
-        if (!subscribedEmails.includes(state.email.toLowerCase())) {
-          subscribedEmails.push(state.email.toLowerCase());
-          localStorage.setItem('newsletter-subscribed-emails', JSON.stringify(subscribedEmails));
-        }
-
-        setState(prev => ({ 
-          ...prev, 
-          status: 'success', 
-          message: ('message' in result ? result.message : undefined) || 'Transmission channel established successfully.',
-          email: '',
-          name: '',
-          company: ''
-        }));
-        
-        // Mark success in localStorage for modal detection
-        localStorage.setItem('newsletter-success', 'true');
-        localStorage.setItem('recent-newsletter-signup', new Date().toISOString());
-        
-        // Call success callback if provided
-        onSignupSuccess?.();
-        
-        // Mark as signed up in blog newsletter modal context (if available)
-        // Use localStorage to communicate with the modal system
-        const modalState = localStorage.getItem('blog-newsletter-modal-state');
-        if (modalState) {
-          try {
-            const state = JSON.parse(modalState);
-            localStorage.setItem('blog-newsletter-modal-state', JSON.stringify({
-              ...state,
-              hasSignedUp: true
-            }));
-          } catch (error) {
-            // Create new state if parsing fails
-            localStorage.setItem('blog-newsletter-modal-state', JSON.stringify({
-              hasSignedUp: true,
-              hasClickedNeverShow: false,
-              hasSeenModal: false,
-              lastShownDate: null
-            }));
-          }
-        } else {
-          // Create new state
-          localStorage.setItem('blog-newsletter-modal-state', JSON.stringify({
-            hasSignedUp: true,
-            hasClickedNeverShow: false,
-            hasSeenModal: false,
-            lastShownDate: null
-          }));
-        }
-        
-        if (canTrack) {
-          trackEvent('newsletter_subscribe', { 
-            variant,
-            has_name: !!state.name,
-            has_company: !!state.company,
-            email_domain: state.email.split('@')[1] 
-          });
-        }
-      } else {
-        setState(prev => ({ 
-          ...prev, 
-          status: 'error', 
-          message: (result && 'error' in result ? result.error : undefined) || 'Transmission failed. Please verify connection and retry.' 
-        }));
-      }
-    } catch (error) {
-      setState(prev => ({ 
-        ...prev, 
-        status: 'error', 
-        message: 'Network protocol error. Please check your connection.' 
-      }));
-    }
-  };
-
-  const handleToggleCollapse = () => {
-    const newCollapsed = !state.collapsed;
-    localStorage.setItem('newsletter-collapsed', newCollapsed.toString());
-    setState(prev => ({ ...prev, collapsed: newCollapsed }));
-    
-    if (canTrack) {
-      trackEvent('newsletter_toggled', { variant, collapsed: newCollapsed });
-    }
-  };
-
-  const copy = variant === 'blog' ? {
-    title: 'Subscribe to The Looking Glass Chronicles // Manic Agency',
-    subtitle: 'Strategic and unexplored intelligence on digital transformation and synthetic futures.',
-    placeholder: 'signal@address.xyz',
-    namePlaceholder: 'Name (optional)',
-    companyPlaceholder: 'Organization (optional)',
-    button: 'Establish Channel',
-    successTitle: 'Channel Synchronized',
-    successMessage: 'Welcome transmission imminent. Check your signal receiver.'
-  } : {
-    title: 'Subscribe to Manic Agency // The Looking Glass Chronicles',
-    subtitle: 'Strategic and unexplored intelligence on digital transformation and synthetic futures.',
-    placeholder: 'your@coordinates.xyz',
-    namePlaceholder: 'Name (optional)',
-    companyPlaceholder: 'Collective (optional)',
-    button: 'Open Channel',
-    successTitle: 'Link Established',
-    successMessage: 'Initialization complete. First transmission incoming.'
-  };
+          <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
+            <div className="flex items-center justify-center space-x-6 text-sm text-gray-500 dark:text-gray-400">
+              <div className="flex items-center space-x-1">
+                <CheckCircle className="h-4 w-4 text-[#7ea196]" />
+                <span>No spam</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <Heart className="h-4 w-4 text-[#b66880]" />
+                <span>Privacy first</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className={`newsletter-form-container ${className}`}>
-      <div className="flex items-center justify-between mb-4">
-        <h3 className={`font-display font-semibold ${
-          compact ? 'text-lg' : 'text-xl'
-        } text-text-primary`}>
-          {copy.title}
-        </h3>
-        <button
-          onClick={handleToggleCollapse}
-          className="text-text-secondary hover:text-text-primary transition-all duration-200 p-1 rounded-lg hover:bg-bg-tertiary"
-          aria-label={state.collapsed ? "Expand newsletter form" : "Collapse newsletter form"}
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+        onClick={onClose}
+      >
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0, y: 20 }}
+          animate={{ scale: 1, opacity: 1, y: 0 }}
+          exit={{ scale: 0.8, opacity: 0, y: 20 }}
+          transition={{ type: "spring", duration: 0.6, bounce: 0.3 }}
+          className="relative w-full max-w-6xl max-h-[90vh] overflow-hidden bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 rounded-3xl shadow-2xl"
+          onClick={(e: React.MouseEvent) => e.stopPropagation()}
         >
-          {state.collapsed ? (
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          ) : (
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-            </svg>
-          )}
-        </button>
-      </div>
+          {/* Decorative Elements */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-[#b66880] to-[#7ea196] rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-10 right-10 w-24 h-24 bg-gradient-to-br from-[#b88e62] to-[#b66880] rounded-full blur-2xl animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-gradient-to-br from-[#7ea196] to-[#b88e62] rounded-full blur-xl animate-bounce delay-2000"></div>
+          </div>
 
-      {!compact && !state.collapsed && (
-        <p className="text-text-secondary mb-6 leading-relaxed">
-          {copy.subtitle}
-        </p>
-      )}
+          {/* Close Button */}
+          <button
+            onClick={onClose}
+            className="absolute top-6 right-6 z-10 p-2 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200 dark:border-gray-600 shadow-lg hover:shadow-xl transition-all duration-300 group"
+          >
+            <X className="h-5 w-5 text-gray-600 dark:text-gray-300 group-hover:text-gray-800 dark:group-hover:text-white transition-colors" />
+          </button>
 
-      <AnimatePresence>
-        {!state.collapsed && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="overflow-hidden"
-          >
-            <AnimatePresence mode="wait">
-        {state.status === 'success' ? (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="success-state"
-          >
-            <div className="bg-accent-sage/10 border border-accent-sage/20 rounded-xl p-6 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 opacity-10">
-                <TransmissionSuccessIcon />
-              </div>
-              <h4 className="font-display font-semibold text-accent-sage mb-2">
-                {copy.successTitle}
-              </h4>
-              <p className="text-text-secondary">
-                {copy.successMessage}
-              </p>
-            </div>
-          </motion.div>
-        ) : state.status === 'already_subscribed' ? (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="already-subscribed-state"
-          >
-            <div className="bg-accent-burgundy/10 border border-accent-burgundy/20 rounded-xl p-6 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 opacity-10">
-                <SubscriberIcon />
-              </div>
-              <h4 className="font-display font-semibold text-accent-burgundy mb-2">
-                Welcome Back, Subscriber!
-              </h4>
-              <p className="text-text-secondary mb-4">
-                {state.message}
-              </p>
-              {state.showUnsubscribe && (
-                <div className="flex flex-col gap-3">
-                  <button
-                    onClick={handleUnsubscribe}
-                    className="text-text-secondary hover:text-accent-alert transition-colors text-sm flex items-center gap-2 group"
+          <div className="grid lg:grid-cols-2 gap-8 p-8 h-full overflow-y-auto">
+            {/* Left Column - Content */}
+            <div className="space-y-8">
+              {/* Header */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+              >
+                <div className="text-center lg:text-left">
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ delay: 0.2, type: "spring", bounce: 0.5 }}
+                    className="inline-flex items-center px-4 py-2 mb-4 bg-gradient-to-r from-[#b66880]/20 to-[#7ea196]/20 rounded-full border border-[#b66880]/30"
                   >
-                    <UnsubscribeIcon />
-                    <span className="group-hover:underline">Unsubscribe & don&apos;t show this again</span>
-                  </button>
-                  <p className="text-xs text-text-muted">
-                    Need help? Contact{' '}
-                    <a href="mailto:team@manic.agency" className="text-accent-burgundy hover:text-accent-highlight transition-colors">
-                      team@manic.agency
-                    </a>
+                    <Sparkles className="h-4 w-4 text-[#b66880] mr-2" />
+                    <span className="text-sm font-medium text-[#b66880]">Join Our Community</span>
+                  </motion.div>
+                  
+                  <h2 className="text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-[#b66880] via-[#7ea196] to-[#b88e62] bg-clip-text text-transparent">
+                    Stay Ahead of the Curve
+                  </h2>
+                  
+                  <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                    Get exclusive insights, industry trends, and behind-the-scenes content delivered directly to your inbox. 
+                    Join thousands of professionals who trust Manic for cutting-edge updates.
                   </p>
                 </div>
-              )}
-            </div>
-          </motion.div>
-        ) : state.status === 'unsubscribed' ? (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="unsubscribed-state"
-          >
-            <div className="bg-accent-alert/10 border border-accent-alert/20 rounded-xl p-6 relative overflow-hidden">
-              <h4 className="font-display font-semibold text-accent-alert mb-2">
-                Unsubscribed Successfully
-              </h4>
-              <p className="text-text-secondary">
-                {state.message} If you change your mind, you can always resubscribe later.
-              </p>
-            </div>
-          </motion.div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-4">
-            {/* Email Input - Always Visible */}
-            <div className="relative group">
-              <input
-                ref={emailInputRef}
-                type="email"
-                value={state.email}
-                onChange={(e) => setState(prev => ({ ...prev, email: e.target.value }))}
-                onFocus={handleEmailFocus}
-                placeholder={copy.placeholder}
-                required
-                disabled={state.status === 'loading'}
-                className={`
-                  w-full px-4 py-3 rounded-xl border border-border 
-                  bg-bg-secondary focus:bg-bg-primary
-                  focus:border-accent-burgundy focus:ring-2 focus:ring-accent-burgundy/20
-                  transition-all duration-300
-                  disabled:opacity-50 disabled:cursor-not-allowed
-                  text-text-primary placeholder-text-secondary
-                  group-hover:border-accent-secondary
-                  ${compact ? 'py-2 text-sm' : ''}
-                `}
-              />
-              <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
-                <motion.div
-                  animate={{ opacity: state.email ? 0 : 1 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <EmailInputIcon />
-                </motion.div>
-              </div>
-            </div>
+              </motion.div>
 
-            {/* Expanded Fields */}
-            <AnimatePresence>
-              {state.expanded && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3, ease: 'easeInOut' }}
-                  className="space-y-4 overflow-hidden"
-                >
-                  {/* Name Input */}
-                  <div className="relative group">
-                    <input
-                      type="text"
-                      value={state.name}
-                      onChange={(e) => setState(prev => ({ ...prev, name: e.target.value }))}
-                      placeholder={copy.namePlaceholder}
-                      disabled={state.status === 'loading'}
-                      className={`
-                        w-full px-4 py-3 rounded-xl border border-border 
-                        bg-bg-secondary focus:bg-bg-primary
-                        focus:border-accent-secondary focus:ring-2 focus:ring-accent-secondary/20
-                        transition-all duration-300
-                        disabled:opacity-50 disabled:cursor-not-allowed
-                        text-text-primary placeholder-text-secondary
-                        group-hover:border-accent-sage
-                        ${compact ? 'py-2 text-sm' : ''}
-                      `}
-                    />
-                    <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none opacity-30">
-                      <IdentifierIcon />
-                    </div>
+              {/* Stats */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+              >
+                <div className="grid grid-cols-2 gap-4">
+                  {stats.map((stat, index) => (
+                    <motion.div
+                      key={stat.label}
+                      initial={{ y: 20, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ delay: 0.4 + index * 0.1 }}
+                      className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-4 border border-gray-200/50 dark:border-gray-600/50 shadow-lg"
+                    >
+                      <div className="flex items-center space-x-3">
+                        <div className="p-2 bg-gradient-to-br from-[#b66880] to-[#7ea196] rounded-lg">
+                          <stat.icon className="h-4 w-4 text-white" />
+                        </div>
+                        <div>
+                          <div className="text-xl font-bold text-gray-900 dark:text-white">{stat.number}</div>
+                          <div className="text-sm text-gray-600 dark:text-gray-400">{stat.label}</div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Features */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+              >
+                <div className="space-y-3">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">What You&apos;ll Get:</h3>
+                  {features.map((feature, index) => (
+                    <motion.div
+                      key={feature}
+                      initial={{ x: -20, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{ delay: 0.6 + index * 0.1 }}
+                      className="flex items-center space-x-3"
+                    >
+                      <CheckCircle className="h-5 w-5 text-[#7ea196] flex-shrink-0" />
+                      <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Testimonials */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7 }}
+              >
+                <div className="relative">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">What Our Subscribers Say:</h3>
+                  <div className="relative h-48 overflow-hidden">
+                    <AnimatePresence mode="wait">
+                      <motion.div
+                        key={currentTestimonial}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.5 }}
+                        className="absolute inset-0"
+                      >
+                        <Border className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-6 rounded-2xl">
+                          <div className="flex items-start space-x-4">
+                            <Quote className="h-6 w-6 text-[#b66880] flex-shrink-0 mt-1" />
+                            <div className="flex-1">
+                              <p className="text-gray-700 dark:text-gray-300 mb-4 italic">
+                                &ldquo;{testimonials[currentTestimonial].content}&rdquo;
+                              </p>
+                              <div className="flex items-center justify-between">
+                                <div className="flex items-center space-x-3">
+                                  <div className="w-10 h-10 bg-gradient-to-br from-[#b66880] to-[#7ea196] rounded-full flex items-center justify-center text-white font-semibold text-sm">
+                                    {testimonials[currentTestimonial].avatar}
+                                  </div>
+                                  <div>
+                                    <div className="font-semibold text-gray-900 dark:text-white">
+                                      {testimonials[currentTestimonial].name}
+                                    </div>
+                                    <div className="text-sm text-gray-600 dark:text-gray-400">
+                                      {testimonials[currentTestimonial].role}
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="flex items-center space-x-1">
+                                  {Array.from({ length: testimonials[currentTestimonial].rating }).map((_, i) => (
+                                    <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </Border>
+                      </motion.div>
+                    </AnimatePresence>
                   </div>
 
-                  {/* Company Input */}
-                  <div className="relative group">
-                    <input
-                      type="text"
-                      value={state.company}
-                      onChange={(e) => setState(prev => ({ ...prev, company: e.target.value }))}
-                      placeholder={copy.companyPlaceholder}
-                      disabled={state.status === 'loading'}
-                      className={`
-                        w-full px-4 py-3 rounded-xl border border-border 
-                        bg-bg-secondary focus:bg-bg-primary
-                        focus:border-accent-sage focus:ring-2 focus:ring-accent-sage/20
-                        transition-all duration-300
-                        disabled:opacity-50 disabled:cursor-not-allowed
-                        text-text-primary placeholder-text-secondary
-                        group-hover:border-accent-highlight
-                        ${compact ? 'py-2 text-sm' : ''}
-                      `}
-                    />
-                    <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none opacity-30">
-                      <CollectiveIcon />
+                  {/* Testimonial Navigation Dots */}
+                  <div className="flex justify-center space-x-2 mt-4">
+                    {testimonials.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentTestimonial(index)}
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                          index === currentTestimonial
+                            ? 'bg-[#b66880] w-6'
+                            : 'bg-gray-300 dark:bg-gray-600 hover:bg-[#b66880]/50'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Right Column - Form */}
+            <div className="flex flex-col justify-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8 }}
+              >
+                <motion.div
+                  initial={{ x: 20, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 0.8 }}
+                  className="relative"
+                >
+                  {/* Ornate Container */}
+                  <div className="relative bg-gradient-to-br from-white via-gray-50/90 to-white dark:from-gray-800 dark:via-gray-700/90 dark:to-gray-800 rounded-3xl p-8 shadow-2xl border border-gray-200/50 dark:border-gray-600/50 backdrop-blur-sm">
+                    {/* Decorative corners */}
+                    <div className="absolute top-4 left-4 w-6 h-6 border-t-2 border-l-2 border-[#b66880] rounded-tl-lg"></div>
+                    <div className="absolute top-4 right-4 w-6 h-6 border-t-2 border-r-2 border-[#7ea196] rounded-tr-lg"></div>
+                    <div className="absolute bottom-4 left-4 w-6 h-6 border-b-2 border-l-2 border-[#b88e62] rounded-bl-lg"></div>
+                    <div className="absolute bottom-4 right-4 w-6 h-6 border-b-2 border-r-2 border-[#b66880] rounded-br-lg"></div>
+
+                    {/* Inner glow effect */}
+                    <div className="absolute inset-4 bg-gradient-to-br from-[#b66880]/10 via-transparent to-[#7ea196]/10 rounded-2xl pointer-events-none"></div>
+
+                    <div className="relative z-10">
+                      <div className="text-center mb-6">
+                        <motion.div
+                          animate={{ rotate: [0, 10, -10, 0] }}
+                          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                          className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#b66880] to-[#7ea196] rounded-2xl mb-4 shadow-lg"
+                        >
+                          <Mail className="h-8 w-8 text-white" />
+                        </motion.div>
+                        
+                        <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#b66880] to-[#7ea196] bg-clip-text text-transparent">
+                          Subscribe Now
+                        </h3>
+                        
+                        <p className="text-gray-600 dark:text-gray-400">
+                          Join our exclusive community and never miss an update
+                        </p>
+                      </div>
+
+                      {/* Sender.net Embed Form */}
+                      <div className="relative">
+                        {!isLoaded && (
+                          <div className="flex items-center justify-center h-64 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 rounded-2xl">
+                            <div className="text-center">
+                              <motion.div
+                                animate={{ rotate: 360 }}
+                                transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                                className="w-8 h-8 border-4 border-[#b66880] border-t-transparent rounded-full mx-auto mb-2"
+                              ></motion.div>
+                              <p className="text-gray-600 dark:text-gray-400">Loading form...</p>
+                            </div>
+                          </div>
+                        )}
+                        
+                        <div 
+                          id="sender-form-"
+                          className={`sender-form-widget ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
+                          style={{ minHeight: '200px' }}
+                        ></div>
+                      </div>
+
+                      {/* Trust Indicators */}
+                      <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-600">
+                        <div className="flex items-center justify-center space-x-6 text-sm text-gray-500 dark:text-gray-400">
+                          <div className="flex items-center space-x-1">
+                            <CheckCircle className="h-4 w-4 text-[#7ea196]" />
+                            <span>No spam</span>
+                          </div>
+                          <div className="flex items-center space-x-1">
+                            <Heart className="h-4 w-4 text-[#b66880]" />
+                            <span>Privacy first</span>
+                          </div>
+                          <div className="flex items-center space-x-1">
+                            <ArrowRight className="h-4 w-4 text-[#b88e62]" />
+                            <span>Unsubscribe anytime</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </motion.div>
-              )}
-            </AnimatePresence>
-
-            {/* Submit Button */}
-            <motion.button
-              type="submit"
-              disabled={state.status === 'loading' || !state.email.trim() || !hasConsent}
-              className={`
-                relative w-full px-6 py-3 
-                bg-gradient-to-r from-accent-burgundy to-accent-sage
-                hover:from-accent-sage hover:to-accent-gold
-                text-white font-medium rounded-xl
-                transition-all duration-300
-                disabled:opacity-50 disabled:cursor-not-allowed
-                disabled:from-gray-400 disabled:to-gray-500
-                focus:ring-2 focus:ring-accent-burgundy/20
-                group overflow-hidden
-                shadow-lg hover:shadow-xl
-                ${compact ? 'py-2 px-4 text-sm' : ''}
-              `}
-              style={{
-                color: 'white !important',
-                background: 'linear-gradient(135deg, #b66880 0%, #7ea196 100%)'
-              }}
-              whileHover={{ 
-                scale: state.status === 'loading' ? 1 : 1.02,
-                boxShadow: '0 20px 40px rgba(182, 104, 128, 0.3)'
-              }}
-              whileTap={{ scale: state.status === 'loading' ? 1 : 0.98 }}
-              title={!hasConsent ? 'Marketing consent required to establish channel' : ''}
-            >
-              <span className="relative z-10 flex items-center justify-center gap-2 text-white font-semibold">
-                {state.status === 'loading' ? (
-                  <>
-                    <LoadingPulse />
-                    <span>Establishing Channel...</span>
-                  </>
-                ) : (
-                  <>
-                    <span>{copy.button}</span>
-                    <TransmitIcon />
-                  </>
-                )}
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-accent-sage/30 to-accent-gold/30 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
-            </motion.button>
-          </form>
-        )}
-      </AnimatePresence>
-
-      {/* Error Message */}
-      <AnimatePresence>
-        {state.status === 'error' && !state.collapsed && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="mt-4 bg-accent-alert/10 border border-accent-alert/20 rounded-xl p-3"
-          >
-            <p className="text-accent-alert text-sm font-medium flex items-center gap-2">
-              <AlertIcon />
-              {state.message}
-            </p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Privacy Notice */}
-      {!compact && state.status !== 'success' && !state.collapsed && (
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="mt-6 space-y-2"
-        >
-          <p className="text-xs text-text-secondary leading-relaxed">
-            Your data sovereignty is absolute. Zero third-party sharing. 
-            One-click unsubscribe. Full GDPR compliance.{' '}
-            <a 
-              href="/privacy" 
-              className="text-accent-burgundy hover:text-accent-highlight transition-colors"
-            >
-              Privacy protocol
-            </a>
-          </p>
-          {!hasConsent && (
-            <p className="text-xs text-accent-alert flex items-start gap-1">
-              <span className="mt-0.5">⚡</span>
-              <span>Marketing consent required. Accept cookies to establish secure transmission channel.</span>
-            </p>
-          )}
+              </motion.div>
+            </div>
+          </div>
         </motion.div>
-      )}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+      </motion.div>
+    </AnimatePresence>
   );
 }
-
-// Icon Components
-const EmailInputIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-text-secondary">
-    <path d="M3 8L12 13L21 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-    <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" strokeWidth="1.5"/>
-  </svg>
-);
-
-const IdentifierIcon = () => (
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="text-text-secondary">
-    <circle cx="12" cy="8" r="3" stroke="currentColor" strokeWidth="1.5"/>
-    <path d="M16 16C16 14.8954 14.2091 14 12 14C9.79086 14 8 14.8954 8 16V19H16V16Z" stroke="currentColor" strokeWidth="1.5"/>
-  </svg>
-);
-
-const CollectiveIcon = () => (
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="text-text-secondary">
-    <path d="M3 12L12 3L21 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M5 10V19H19V10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-    <rect x="9" y="13" width="6" height="6" stroke="currentColor" strokeWidth="1.5"/>
-  </svg>
-);
-
-const TransmitIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-white">
-    <path d="M22 2L11 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
-);
-
-const TransmissionSuccessIcon = () => (
-  <svg viewBox="0 0 64 64" className="w-full h-full">
-    <circle cx="32" cy="32" r="20" fill="none" stroke="var(--accent-sage)" strokeWidth="1.5" opacity="0.3"/>
-    <circle cx="32" cy="32" r="14" fill="none" stroke="var(--accent-sage)" strokeWidth="1" opacity="0.5"/>
-    <circle cx="32" cy="32" r="8" fill="none" stroke="var(--accent-sage)" strokeWidth="0.5"/>
-    <circle cx="32" cy="32" r="3" fill="var(--accent-sage)"/>
-  </svg>
-);
-
-const AlertIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-accent-alert">
-    <path d="M12 9V13M12 17H12.01M12 3L2 20H22L12 3Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
-);
-
-const LoadingPulse = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" className="animate-spin">
-    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none" strokeDasharray="32" strokeDashoffset="32">
-      <animate attributeName="stroke-dashoffset" dur="1s" repeatCount="indefinite" from="32" to="0"/>
-    </circle>
-  </svg>
-);
-
-const SubscriberIcon = () => (
-  <svg viewBox="0 0 64 64" className="w-full h-full">
-    <circle cx="32" cy="24" r="8" fill="none" stroke="var(--accent-burgundy)" strokeWidth="2" opacity="0.3"/>
-    <path d="M20 44c0-6.627 5.373-12 12-12s12 5.373 12 12v8H20v-8z" fill="none" stroke="var(--accent-burgundy)" strokeWidth="2" opacity="0.3"/>
-    <circle cx="32" cy="32" r="3" fill="var(--accent-burgundy)"/>
-    <path d="M28 32l3 3 7-7" stroke="var(--accent-sage)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
-);
-
-const UnsubscribeIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-text-secondary">
-    <path d="M8 12L16 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-  </svg>
-);
