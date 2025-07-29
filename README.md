@@ -340,8 +340,8 @@ NEXT_PUBLIC_CLARITY_PROJECT_ID=your_clarity_project_id
 NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your_web3forms_access_key
 
 # Newsletter (Sender.net - Free)
-NEXT_PUBLIC_SENDER_ACCOUNT_ID=your_sender_account_id
-NEXT_PUBLIC_SENDER_FORM_ID=your_sender_form_id
+NEXT_PUBLIC_SENDER_ACCOUNT_ID=your_account_id_from_sender_js_snippet
+NEXT_PUBLIC_SENDER_FORM_ID=your_form_id_from_sender_dashboard
 
 # Legacy EmailJS (Fallback - Optional)
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
@@ -362,10 +362,34 @@ RESEND_AUDIENCE_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 3. Add `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` to GitHub Secrets
 
 ### Sender.net (Newsletter)
-1. ✅ **Already Set Up!** Your form: https://stats.sender.net/forms//view
-2. Add `NEXT_PUBLIC_SENDER_ACCOUNT_ID=` to GitHub Secrets
-3. Add `NEXT_PUBLIC_SENDER_FORM_ID=` to GitHub Secrets
-4. Deploy and your newsletter will work immediately!
+
+#### Getting Your Sender.net IDs
+
+1. **Form ID**: Go to your Sender.net dashboard → Forms → Select your form → The ID is shown (e.g., ``)
+
+2. **Account ID**: In the same form settings, look for "JavaScript integration instructions"
+   - The account ID is in the `sender('YOUR_ACCOUNT_ID')` line of the JavaScript snippet
+   - Example: If you see `sender('')`, then `` is your account ID
+
+#### Configuration
+
+**For Production (GitHub Secrets):**
+1. Go to Repository Settings → Secrets and variables → Actions
+2. Add these secrets:
+   - `NEXT_PUBLIC_SENDER_ACCOUNT_ID` = Your account ID from the JavaScript snippet
+   - `NEXT_PUBLIC_SENDER_FORM_ID` = Your form ID from the dashboard
+
+**For Local Development:**
+No setup required! The app will show a fallback message when environment variables are missing.
+
+#### How It Works
+
+- **Global Script**: Loads once in the site header using your account ID
+- **Form Embed**: Places forms using your form ID where needed
+- **Error Handling**: Graceful fallback if environment variables are missing
+
+**Account ID**: `` (for the JavaScript `sender()` call)  
+**Form ID**: `` (for the HTML `data-sender-form-id` attribute)
 
 **For Local Development:**
 No setup required! Forms will show graceful fallback messages if environment variables are missing.
