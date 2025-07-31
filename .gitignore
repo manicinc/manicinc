@@ -228,4 +228,4 @@ venv/
 # - public/_originals/ contains backup images and should NEVER be committed
 # - WebP/AVIF files are currently tracked for faster builds
 # - To regenerate WebP/AVIF on each build, uncomment the relevant lines above
-# =====================================================
+# =====================================================.env.local

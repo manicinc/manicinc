@@ -1,7 +1,10 @@
-// src/components/NewsletterSection.tsx
 'use client';
 
-import NewsletterForm from './NewsletterForm';
+// Option 1: Try embed (might not work due to Sender.net issues)
+// import SenderNewsletterEmbed from './SenderNewsletterEmbed';
+
+// Option 2: Simple button solution (guaranteed to work)
+import SenderNewsletterButton from './SenderNewsletterButton';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
@@ -192,11 +195,8 @@ export default function NewsletterSection({
                     <CircuitPattern />
                   </div>
                   
-                  <NewsletterForm 
-                    variant={variant}
-                    className="relative z-10"
-                    onSignupSuccess={onSignupSuccess}
-                  />
+                  {/* Using button solution since Sender.net embed is broken */}
+                  <SenderNewsletterButton className="relative z-10" variant={variant} />
                 </div>
               </motion.div>
             </div>
@@ -224,7 +224,7 @@ export default function NewsletterSection({
                     <div className="bg-bg-primary border border-border rounded-xl p-6 h-full transition-all duration-300 group-hover:border-accent-burgundy/30 group-hover:shadow-lg">
                       {/* Quote Mark */}
                       <div className="absolute -top-3 -left-2 text-6xl text-accent-burgundy/10 font-serif">
-                        &apos;
+                        &ldquo;
                       </div>
                       
                       <blockquote className="relative z-10">
@@ -289,7 +289,7 @@ export default function NewsletterSection({
   );
 }
 
-// SVG Components (same as before)
+// SVG Components
 const GridPattern = () => (
   <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
     <defs>

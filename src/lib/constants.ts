@@ -84,7 +84,8 @@ export const blogFooterNavigationData: FooterSection[] = [
       // Add links to categories, archives, etc. as desired
       // { title: 'Archives', href: '/blog/archives' },
       { title: 'Category: Tutorials', href: '/blog/category/tutorials' },
-      { title: 'Category: Insights', href: '/blog/category/insights' },
+      { title: 'Category: Research', href: '/blog/category/research' },
+      { title: 'Category: Thinkpieces', href: '/blog/category/thinkpieces'}
     ],
   },
   {

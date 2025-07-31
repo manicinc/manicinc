@@ -147,7 +147,7 @@ export default function BlogNewsletterModal({ onClose, onNeverShow }: BlogNewsle
             animate={{ scale: 1, opacity: 1, x: 0, y: 0 }}
             exit={{ scale: 0.8, opacity: 0, x: 100, y: 100 }}
             transition={{ type: 'spring', damping: 25, stiffness: 400 }}
-            className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-bg-primary border border-border rounded-xl p-4 sm:p-6 max-w-xs sm:max-w-sm w-full mx-2 sm:mx-4 shadow-2xl pointer-events-auto z-10"
+            className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-white dark:bg-gray-900 border border-border rounded-xl p-4 sm:p-6 max-w-xs sm:max-w-sm w-full mx-2 sm:mx-4 shadow-2xl pointer-events-auto z-10"
           >
             {/* Close Button */}
             <button
