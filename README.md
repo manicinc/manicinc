@@ -365,11 +365,11 @@ RESEND_AUDIENCE_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 #### Getting Your Sender.net IDs
 
-1. **Form ID**: Go to your Sender.net dashboard → Forms → Select your form → The ID is shown (e.g., ``)
+1. **Form ID**: Go to your Sender.net dashboard → Forms → Select your form → The ID is shown (e.g., `45678`)
 
 2. **Account ID**: In the same form settings, look for "JavaScript integration instructions"
    - The account ID is in the `sender('YOUR_ACCOUNT_ID')` line of the JavaScript snippet
-   - Example: If you see `sender('')`, then `` is your account ID
+   - Example: If you see `sender('1234563')`, then `1234563` is your account ID
 
 #### How It Works
 
@@ -377,8 +377,8 @@ RESEND_AUDIENCE_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 - **Form Embed**: Places forms using your form ID where needed
 - **Error Handling**: Graceful fallback if environment variables are missing
 
-**Account ID**: `` (for the JavaScript `sender()` call)  
-**Form ID**: `` (for the HTML `data-sender-form-id` attribute)
+**Account ID**: `1234563` (for the JavaScript `sender()` call)  
+**Form ID**: `45678` (for the HTML `data-sender-form-id` attribute)
 
 **For Local Development:**
 No setup required! Forms will show graceful fallback messages if environment variables are missing.

@@ -12,7 +12,7 @@ interface SenderNewsletterButtonProps {
 
 export default function SenderNewsletterButton({ 
   className = "",
-  formId = "",
+  formId = process.env.NEXT_PUBLIC_SENDER_FORM_ID || '',
   variant = 'main'
 }: SenderNewsletterButtonProps) {
   const { trackEvent, canTrack } = useAnalytics();
@@ -22,6 +22,16 @@ export default function SenderNewsletterButton({
       trackEvent('newsletter_button_click', { variant, formId });
     }
   };
+
+  if (!formId) {
+    return (
+      <div className={`text-center ${className}`}>
+        <p className="text-sm text-text-secondary">
+          Newsletter signup is not configured. Please set NEXT_PUBLIC_SENDER_FORM_ID.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className={`text-center ${className}`}>

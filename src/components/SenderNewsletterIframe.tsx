@@ -11,10 +11,20 @@ interface SenderNewsletterIframeProps {
 
 export default function SenderNewsletterIframe({ 
   className = "",
-  formId = "",
+  formId = process.env.NEXT_PUBLIC_SENDER_FORM_ID || '',
   height = 400
 }: SenderNewsletterIframeProps) {
   const [isLoading, setIsLoading] = useState(true);
+
+  if (!formId) {
+    return (
+      <div className={`text-center p-6 border border-border rounded-xl bg-bg-secondary ${className}`}>
+        <p className="text-sm text-text-secondary">
+          Newsletter form not configured. Please set NEXT_PUBLIC_SENDER_FORM_ID.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className={`sender-iframe-container ${className}`}>

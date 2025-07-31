@@ -1,94 +1,185 @@
+// src/components/SenderNewsletterEmbed.tsx
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import SenderNewsletterButton from './SenderNewsletterButton';
 
-interface SenderFormEmbedProps {
-  formId?: string;
+interface SenderNewsletterEmbedProps {
   className?: string;
+  formId?: string;
+  variant?: 'main' | 'blog';
+  fallbackToButton?: boolean;
 }
 
-export function SenderFormEmbed({ 
-  formId = process.env.NEXT_PUBLIC_SENDER_FORM_ID || '', 
-  className = '' 
-}: SenderFormEmbedProps) {
+export default function SenderNewsletterEmbed({ 
+  className = "",
+  formId = process.env.NEXT_PUBLIC_SENDER_FORM_ID || '',
+  variant = 'main',
+  fallbackToButton = true
+}: SenderNewsletterEmbedProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const scriptLoadedRef = useRef(false);
+  const [status, setStatus] = useState<'loading' | 'success' | 'fallback'>('loading');
+  const hasInitialized = useRef(false);
 
   useEffect(() => {
-    if (!formId || scriptLoadedRef.current) return;
-
-    // Create the form container
-    if (containerRef.current) {
-      containerRef.current.innerHTML = `<div data-sender-form-id="${formId}"></div>`;
+    console.log('📧 SenderNewsletterEmbed mounted', { formId, fallbackToButton });
+    
+    if (!formId) {
+      console.error('📧 No form ID provided - check NEXT_PUBLIC_SENDER_FORM_ID env var');
+      setStatus('fallback');
+      return;
     }
-
-    // Load Sender.net script if not already loaded
-    if (!window.Sender && !document.querySelector('script[src*="sender.net"]')) {
-      const script = document.createElement('script');
-      script.async = true;
-      script.innerHTML = `
-        (function (s, e, n, d, er) {
-          s['Sender'] = er;
-          s[er] = s[er] || function () {
-            (s[er].q = s[er].q || []).push(arguments)
-          }, s[er].l = 1 * new Date();
-          var a = e.createElement(n),
-              m = e.getElementsByTagName(n)[0];
-          a.async = 1;
-          a.src = d;
-          m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
-        sender('${formId}');
-      `;
+    
+    if (hasInitialized.current) {
+      console.log('Already initialized, skipping');
+      return;
+    }
+    
+    if (!containerRef.current) {
+      console.log('Container ref not ready');
+      return;
+    }
+    
+    hasInitialized.current = true;
+    const container = containerRef.current;
+    
+    // Add the form HTML
+    console.log('📧 Adding form HTML to container');
+    container.innerHTML = `<div style="text-align: left" class="sender-form-field" data-sender-form-id="${formId}"></div>`;
+    
+    let attempts = 0;
+    const maxAttempts = 20; // 10 seconds
+    
+    const checkAndRender = () => {
+      attempts++;
+      const sender = (window as any).sender;
       
-      document.head.appendChild(script);
-      scriptLoadedRef.current = true;
-    } else if (window.Sender) {
-      // If script already loaded, just initialize the form
-      window.Sender('form', formId);
-    }
+      console.log(`📧 Attempt ${attempts}/${maxAttempts}:`, {
+        senderExists: !!sender,
+        senderType: typeof sender,
+        formId
+      });
+      
+      if (!sender || typeof sender !== 'function') {
+        console.log('Sender not ready yet, will retry...');
+        return;
+      }
+      
+      try {
+        // Try all methods to trigger rendering
+        console.log('📧 Calling sender methods...');
+        
+        // Method 1: Basic call
+        sender();
+        
+        // Method 2: Form-specific
+        sender('form', formId);
+        
+        // Method 3: Render command
+        sender('render');
+        
+        // Method 4: Re-scan
+        sender('scan');
+        
+        console.log('📧 All sender methods called');
+        
+        // Check if form rendered after a delay
+        setTimeout(() => {
+          const formElements = container.querySelectorAll('input, textarea, button, iframe, form');
+          const formField = container.querySelector('.sender-form-field');
+          const hasChildren = formField && formField.children.length > 0;
+          
+          console.log('📧 Checking for form elements:', {
+            formElementsCount: formElements.length,
+            hasChildren,
+            innerHTML: formField?.innerHTML.substring(0, 100)
+          });
+          
+          if (formElements.length > 0 || hasChildren) {
+            console.log('✅ Form successfully loaded!');
+            setStatus('success');
+          }
+        }, 1000);
+        
+      } catch (error) {
+        console.error('📧 Error calling sender methods:', error);
+      }
+    };
+    
+    // Start checking immediately
+    console.log('📧 Starting form initialization...');
+    checkAndRender();
+    
+    // Set up interval for retries
+    const checkInterval = setInterval(() => {
+      if (status !== 'loading' || attempts >= maxAttempts) {
+        clearInterval(checkInterval);
+        
+        if (attempts >= maxAttempts && status === 'loading') {
+          console.log('❌ Max attempts reached, showing fallback');
+          setStatus('fallback');
+        }
+        return;
+      }
+      
+      checkAndRender();
+    }, 500);
+    
+    // Cleanup
+    return () => {
+      console.log('📧 Cleaning up interval');
+      clearInterval(checkInterval);
+    };
+  }, [formId, status]);
 
-  }, [formId]);
+  console.log('📧 Current status:', status);
 
-  if (!formId) {
+  // Show button fallback
+  if (status === 'fallback' && fallbackToButton) {
+    console.log('📧 Showing button fallback');
+    return <SenderNewsletterButton className={className} formId={formId} variant={variant} />;
+  }
+
+  // Show link fallback
+  if (status === 'fallback' && !fallbackToButton) {
     return (
-      <div className={`p-6 bg-bg-secondary rounded-lg border border-border ${className}`}>
-        <p className="text-text-muted text-center">
-          Newsletter signup temporarily unavailable.
-          <br />
-          <a href="mailto:team@manic.agency" className="text-accent-burgundy hover:underline">
-            Email us to subscribe manually
-          </a>
+      <div className={`${className} text-center p-6 border border-border rounded-xl bg-bg-secondary`}>
+        <p className="text-sm text-text-secondary mb-4">
+          Newsletter form couldn&apos;t load. This might be due to ad blockers.
         </p>
+        <a 
+          href={formId ? `https://stats.sender.net/forms/${formId}/view` : '#'}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent-burgundy hover:underline font-medium"
+        >
+          Click here to subscribe →
+        </a>
       </div>
     );
   }
 
+  // Show the form container (either loading or with form)
   return (
-    <div 
-      ref={containerRef}
-      className={`sender-form-wrapper ${className}`}
-      style={{
-        // Override Sender.net default styles to match your theme
-        '--sender-primary-color': '#b66880',
-        '--sender-secondary-color': '#7ea196',
-        '--sender-text-color': 'var(--text-primary)',
-        '--sender-background-color': 'var(--bg-primary)',
-        '--sender-border-color': 'var(--border)',
-      } as React.CSSProperties}
-    >
-      {/* Loading placeholder */}
-      <div className="animate-pulse">
-        <div className="h-12 bg-bg-tertiary rounded mb-3"></div>
-        <div className="h-10 bg-bg-tertiary rounded"></div>
+    <div className={className}>
+      <div 
+        ref={containerRef}
+        className="sender-form-container"
+        data-form-status={status}
+        style={{ 
+          minHeight: status === 'loading' ? '150px' : 'auto',
+          position: 'relative'
+        }}
+      >
+        {status === 'loading' && (
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="text-center">
+              <div className="w-6 h-6 border-2 border-accent-burgundy border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
+              <p className="text-xs text-text-secondary">Loading form...</p>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
-}
-
-// Global type augmentation for Sender
-declare global {
-  interface Window {
-    Sender: any;
-  }
 }

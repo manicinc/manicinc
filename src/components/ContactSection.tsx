@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import NewsletterForm from './NewsletterForm';
+import SenderNewsletterEmbed from './SenderNewsletterEmbed';
 
 interface ContactSectionProps {
   onNewsletterSignup?: () => void;
@@ -264,8 +264,9 @@ const ContactSection = ({ onNewsletterSignup }: ContactSectionProps = {}) => {
                   <p className="text-text-secondary text-center mb-8">
                     Receive curated intelligence on digital transformation, AI, Web3, and creative technology.
                   </p>
-                  <NewsletterForm 
-                    onSignupSuccess={onNewsletterSignup}
+                  <SenderNewsletterEmbed 
+                    className="w-full"
+                    fallbackToButton={true}
                   />
                 </div>
               </motion.div>

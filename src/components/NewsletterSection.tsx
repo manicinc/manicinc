@@ -5,6 +5,10 @@
 
 // Option 2: Simple button solution (guaranteed to work)
 import SenderNewsletterButton from './SenderNewsletterButton';
+
+import SenderNewsletterUnified from './SenderNewsletterUnified';
+
+
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
@@ -196,7 +200,11 @@ export default function NewsletterSection({
                   </div>
                   
                   {/* Using button solution since Sender.net embed is broken */}
-                  <SenderNewsletterButton className="relative z-10" variant={variant} />
+                  {/* <SenderNewsletterButton className="relative z-10" variant={variant} /> */}
+                <SenderNewsletterUnified 
+                  className="relative z-10" 
+                  variant={variant}
+                />
                 </div>
               </motion.div>
             </div>

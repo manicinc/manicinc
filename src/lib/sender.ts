@@ -125,8 +125,8 @@ export const debugSenderConfig = () => {
   }
   
   if (!SENDER_FORM_ID) {
-    console.info('💡 Add NEXT_PUBLIC_SENDER_FORM_ID= to GitHub Secrets');
-    console.info('📖 Your form: https://stats.sender.net/forms//view');
+    console.info('💡 Add NEXT_PUBLIC_SENDER_FORM_ID to GitHub Secrets');
+    console.info('📖 Configure your form ID in environment variables');
   }
   console.groupEnd();
 };
