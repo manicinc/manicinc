@@ -453,16 +453,112 @@ export default function SenderNewsletterForm({
         suppressHydrationWarning
         data-react-unmanaged="true"
       >
-        {/* Only show loading state initially, before we add the form HTML */}
-        {status === 'loading' && !formInitialized.current && (
-          <div className="flex items-center justify-center h-64" data-loading-overlay="true">
-            <div className="text-center">
-              <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-              <p className="text-gray-600">Loading newsletter form...</p>
+        {/* Enhanced Loading State with Theme-Aware Animation */}
+        {status === 'loading' && (
+          <div className="flex flex-col items-center justify-center h-full min-h-[400px] p-8" data-loading-overlay="true">
+            <div className="relative mb-6">
+              {/* Outer rotating ring */}
+              <div className="w-16 h-16 border-4 border-gray-200 dark:border-gray-700 rounded-full animate-spin">
+                <div className="w-full h-full border-4 border-transparent border-t-blue-500 dark:border-t-blue-400 rounded-full animate-spin" 
+                     style={{ animationDuration: '1s' }}></div>
+              </div>
+              
+              {/* Inner pulsing dot */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-4 h-4 bg-blue-500 dark:bg-blue-400 rounded-full animate-pulse"></div>
+              </div>
+              
+              {/* Newsletter icon overlay */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <svg 
+                  className="w-6 h-6 text-blue-500 dark:text-blue-400 animate-pulse" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                  style={{ animationDelay: '0.5s' }}
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" 
+                  />
+                </svg>
+              </div>
+            </div>
+            
+            {/* Loading text with typing animation */}
+            <div className="text-center space-y-2">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+                Loading Newsletter
+              </h3>
+              <div className="flex items-center justify-center space-x-1">
+                <span className="text-sm text-gray-600 dark:text-gray-400">Preparing your subscription form</span>
+                <div className="flex space-x-1">
+                  <div className="w-1 h-1 bg-blue-500 dark:bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
+                  <div className="w-1 h-1 bg-blue-500 dark:bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                  <div className="w-1 h-1 bg-blue-500 dark:bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
+                </div>
+              </div>
+              
+              {/* Progress indicator based on attempts */}
+              <div className="mt-4 w-48 bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 overflow-hidden">
+                <div 
+                  className="h-full bg-gradient-to-r from-blue-500 to-blue-600 dark:from-blue-400 dark:to-blue-500 rounded-full transition-all duration-500 ease-out"
+                  style={{ 
+                    width: `${Math.min((renderAttempts.current / maxAttempts) * 100, 90)}%`,
+                    animation: 'shimmer 2s infinite'
+                  }}
+                ></div>
+              </div>
+              <p className="text-xs text-gray-500 dark:text-gray-500 mt-2">
+                {renderAttempts.current > 5 ? 'Establishing secure connection...' : 'Initializing form...'}
+              </p>
+            </div>
+            
+            {/* Floating particles animation */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              {[...Array(6)].map((_, i) => (
+                <div
+                  key={i}
+                  className="absolute w-1 h-1 bg-blue-400/30 dark:bg-blue-300/20 rounded-full animate-float"
+                  style={{
+                    left: `${20 + i * 15}%`,
+                    animationDelay: `${i * 0.8}s`,
+                    animationDuration: `${3 + i * 0.5}s`
+                  }}
+                ></div>
+              ))}
             </div>
           </div>
         )}
       </div>
+
+      {/* Custom CSS for animations */}
+      <style jsx>{`
+        @keyframes shimmer {
+          0% { transform: translateX(-100%); }
+          50% { transform: translateX(100%); }
+          100% { transform: translateX(100%); }
+        }
+        
+        @keyframes float {
+          0%, 100% { 
+            transform: translateY(0px) rotate(0deg); 
+            opacity: 0;
+          }
+          10% { opacity: 1; }
+          50% { 
+            transform: translateY(-20px) rotate(180deg); 
+            opacity: 1;
+          }
+          90% { opacity: 1; }
+        }
+        
+        .animate-float {
+          animation: float 4s ease-in-out infinite;
+        }
+      `}</style>
 
       {/* Error State with Fallback */}
       <AnimatePresence>
