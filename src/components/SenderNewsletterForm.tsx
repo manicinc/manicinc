@@ -83,6 +83,9 @@ export default function SenderNewsletterForm({
   const renderAttempts = useRef(0);
   const maxAttempts = 20;
 
+  // Construct fallback URL from form ID if not provided via props
+  const effectiveFallbackUrl = fallbackUrl || (formId ? `https://stats.sender.net/forms/${formId}/view` : undefined);
+
   useEffect(() => {
     // Early return if no formId is provided
     if (!formId || formId.trim() === '') {
@@ -288,10 +291,30 @@ export default function SenderNewsletterForm({
       // Check if sender is available
       if (!window.sender || typeof window.sender !== 'function') {
         console.log('⏳ Waiting for sender...');
+        
+        // Check for potential blocking issues
+        if (renderAttempts.current > 5) {
+          const senderScripts = document.querySelectorAll('script[src*="sender.net"]');
+          console.log('🔍 Debugging sender availability:', {
+            senderScripts: senderScripts.length,
+            windowSender: typeof window.sender,
+            userAgent: navigator.userAgent.includes('Chrome') ? 'Chrome' : 'Other',
+            blockedRequests: performance.getEntriesByType('resource').filter(r => r.name.includes('sender')).length
+          });
+        }
+        
         return false;
       }
 
       try {
+        // Check if sender methods are actually callable
+        if (typeof window.sender !== 'function') {
+          console.error('🔴 window.sender is not a function:', typeof window.sender);
+          return false;
+        }
+        
+        console.log('🔧 Calling sender methods with formId:', formId);
+        
         // Call all sender methods like in your HTML file
         window.sender();
         window.sender('init');
@@ -303,28 +326,63 @@ export default function SenderNewsletterForm({
         
         console.log('✅ Called all sender methods');
         
+        // Additional debugging - check if Sender script is actually loaded
+        const senderScripts = document.querySelectorAll('script[src*="sender.net"]');
+        console.log('🔍 Sender scripts found:', senderScripts.length);
+        
+        // Check for any error indicators
+        if (window.sender.error) {
+          console.error('🔴 Sender reported error:', window.sender.error);
+        }
+        
         // Check if it worked after a delay
         setTimeout(() => {
           if (!mounted) return;
           
           const formField = isolatedDiv.querySelector('.sender-form-field');
+          
+          // More comprehensive content detection
           const hasContent = !!(
             formField?.querySelector('iframe') ||
             formField?.querySelector('form') ||
             formField?.querySelector('input') ||
-            (formField && formField.children.length > 0)
+            formField?.querySelector('.sender-form-box') ||
+            formField?.querySelector('.sender-subs-embed-form-dBBEwn') ||
+            formField?.querySelector('[class*="sender"]') ||
+            (formField && formField.children.length > 0) ||
+            (formField && formField.innerHTML.trim().length > 50) // Check for substantial content
           );
           
-          if (hasContent) {
+          // Also check if Sender.net added any classes or attributes
+          const hasSenderAttributes = !!(
+            formField?.querySelector('[data-sender-form-id]') ||
+            formField?.querySelector('[class*="sender-form"]') ||
+            document.querySelector('.sender-subs-embed-form-dBBEwn')
+          );
+          
+          console.log('🔍 Content detection:', {
+            hasContent,
+            hasSenderAttributes,
+            innerHTML: formField?.innerHTML?.substring(0, 100),
+            childrenCount: formField?.children?.length || 0
+          });
+          
+          if (hasContent || hasSenderAttributes) {
             console.log('✅ Form rendered successfully!');
             // Mark any new DOM nodes as unmanaged
-            markDOMAsUnmanaged(formField as Element);
+            if (formField) markDOMAsUnmanaged(formField as Element);
             setStatus('success');
           } else if (renderAttempts.current >= maxAttempts) {
             console.error('🔴 Max attempts reached, form failed to render');
+            console.error('🔍 Final state:', {
+              formFieldExists: !!formField,
+              formFieldHTML: formField?.innerHTML || 'No content',
+              senderGlobal: typeof window.sender,
+              documentReadyState: document.readyState
+            });
             setStatus('error');
           }
-        }, 1000);
+        }, 1500); // Increased delay for slower networks
         
         return true;
       } catch (error) {
@@ -336,14 +394,25 @@ export default function SenderNewsletterForm({
     // Start trying immediately
     tryRenderForm();
 
-    // Set up polling
+    // Set up polling with exponential backoff
+    let retryDelay = 500;
     pollInterval = setInterval(() => {
       if (!mounted || renderAttempts.current >= maxAttempts) {
         clearInterval(pollInterval);
         return;
       }
-      tryRenderForm();
-    }, 500);
+      
+      // Exponential backoff for later attempts
+      if (renderAttempts.current > 10) {
+        retryDelay = Math.min(retryDelay * 1.2, 3000);
+      }
+      
+      setTimeout(() => {
+        if (mounted && renderAttempts.current < maxAttempts) {
+          tryRenderForm();
+        }
+      }, retryDelay);
+    }, retryDelay);
 
     // Also listen for window events
     const handleLoad = () => tryRenderForm();
@@ -425,12 +494,12 @@ export default function SenderNewsletterForm({
             }`}>
               {!formId || formId.trim() === '' 
                 ? 'The NEXT_PUBLIC_SENDER_FORM_ID environment variable is not configured.'
-                : 'This might be due to ad blockers or network issues.'
+                : 'This might be due to ad blockers, content security policies, or network issues. The form works locally but may be blocked in production environments.'
               }
             </p>
-            {fallbackUrl ? (
+            {effectiveFallbackUrl ? (
               <a
-                href={fallbackUrl}
+                href={effectiveFallbackUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`inline-flex items-center gap-2 px-4 py-2 text-white rounded hover:opacity-90 transition-colors ${

@@ -94,6 +94,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             ${dancingScript.variable}
         `} suppressHydrationWarning>
       <head>
+        {/* Content Security Policy for GitHub Pages */}
+        <meta 
+          httpEquiv="Content-Security-Policy" 
+          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://vercel.live https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.sender.net; img-src 'self' data: https: https://cdn.sender.net https://app.sender.net; font-src 'self' https://fonts.gstatic.com https://cdn.sender.net; connect-src 'self' https://www.google-analytics.com https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://vercel.live; frame-src 'self' https://cdn.sender.net https://app.sender.net;" 
+        />
+        
         {/* Google Analytics */}
         {GA_ID && (
           <>
