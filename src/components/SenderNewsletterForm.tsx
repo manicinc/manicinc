@@ -399,6 +399,9 @@ export default function SenderNewsletterForm({
               documentReadyState: document.readyState
             });
             setStatus('error');
+          } else {
+            // Keep loading state for retries
+            console.log(`🔄 Still loading, attempt ${renderAttempts.current}/${maxAttempts}`);
           }
         }, 1500); // Increased delay for slower networks
         
@@ -445,12 +448,7 @@ export default function SenderNewsletterForm({
       window.removeEventListener('onSenderFormsLoaded', handleLoad);
       observer.disconnect();
       
-      // Clear any loading overlays to prevent React reconciliation conflicts
-      const loadingOverlay = formContainer.querySelector('[data-loading-overlay="true"]');
-      if (loadingOverlay) {
-        loadingOverlay.remove();
-      }
-      
+      // Only clear loading overlay when component unmounts, not during retries
       // DON'T clear the container - let the isolated DOM persist
     };
   }, [formId]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -471,7 +469,7 @@ export default function SenderNewsletterForm({
         suppressHydrationWarning
         data-react-unmanaged="true"
       >
-        {/* Enhanced Loading State with Theme-Aware Animation */}
+        {/* Enhanced Loading State with Theme-Aware Animation - Show during all loading states */}
         {status === 'loading' && (
           <div className="flex flex-col items-center justify-center h-full min-h-[400px] p-8" data-loading-overlay="true">
             <div className="relative mb-6">
@@ -511,7 +509,12 @@ export default function SenderNewsletterForm({
                 Loading Newsletter
               </h3>
               <div className="flex items-center justify-center space-x-1">
-                <span className="text-sm text-gray-600 dark:text-gray-400">Preparing your subscription form</span>
+                <span className="text-sm text-gray-600 dark:text-gray-400">
+                  {renderAttempts.current <= 1 ? 'Preparing your subscription form' : 
+                   renderAttempts.current <= 5 ? 'Initializing form...' :
+                   renderAttempts.current <= 10 ? 'Establishing connection...' :
+                   'Retrying connection...'}
+                </span>
                 <div className="flex space-x-1">
                   <div className="w-1 h-1 bg-blue-500 dark:bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
                   <div className="w-1 h-1 bg-blue-500 dark:bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
@@ -530,7 +533,8 @@ export default function SenderNewsletterForm({
                 ></div>
               </div>
               <p className="text-xs text-gray-500 dark:text-gray-500 mt-2">
-                {renderAttempts.current > 5 ? 'Establishing secure connection...' : 'Initializing form...'}
+                Attempt {renderAttempts.current} of {maxAttempts}
+                {renderAttempts.current > 10 && ' • Please wait...'}
               </p>
             </div>
             

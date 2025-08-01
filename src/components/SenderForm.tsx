@@ -101,7 +101,7 @@ export default function SenderForm({ formId, className = '' }: SenderFormProps) 
       <div className={`${className} text-center p-6 bg-gray-50 rounded-lg`}>
         <p className="mb-4">Subscribe to our newsletter</p>
         <a
-          href={`https://stats.sender.net/forms/${formId}/view`}
+          href={formId ? `https://stats.sender.net/forms/${formId}/view` : '#'}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-6 py-3 bg-accent-burgundy text-white rounded hover:bg-accent-burgundy/90"

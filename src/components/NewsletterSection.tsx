@@ -343,7 +343,7 @@ export default function NewsletterSection({
                       <SenderNewsletterForm 
                         formId={process.env.NEXT_PUBLIC_SENDER_FORM_ID || ''}
                         className="w-full h-full"
-                        fallbackUrl={process.env.NEXT_PUBLIC_SENDER_FORM_ID ? `https://app.sender.net/forms/${process.env.NEXT_PUBLIC_SENDER_FORM_ID}` : undefined}
+                        fallbackUrl={process.env.NEXT_PUBLIC_SENDER_FORM_ID ? `https://stats.sender.net/forms/${process.env.NEXT_PUBLIC_SENDER_FORM_ID}/view` : undefined}
                       />
                     </SenderFormErrorBoundary>
                   </div>

@@ -44,7 +44,7 @@ export default function SenderNewsletterButton({
       </p>
       
       <motion.a 
-        href={`https://stats.sender.net/forms/${formId}/view`}
+        href={formId ? `https://stats.sender.net/forms/${formId}/view` : '#'}
         target="_blank"
         rel="noopener noreferrer"
         onClick={handleClick}

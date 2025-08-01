@@ -36,7 +36,7 @@ export default function SenderNewsletterIframe({
       )}
       
       <iframe
-        src={`https://stats.sender.net/forms/${formId}/view`}
+        src={formId ? `https://stats.sender.net/forms/${formId}/view` : ''}
         width="100%"
         height={height}
         frameBorder="0"

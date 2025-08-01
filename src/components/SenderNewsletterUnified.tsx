@@ -140,7 +140,7 @@ export default function SenderNewsletterUnified({
           Join our newsletter for the latest updates.
         </p>
         <a
-          href={`https://stats.sender.net/forms/${formId}/view`}
+          href={formId ? `https://stats.sender.net/forms/${formId}/view` : '#'}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-6 py-3 bg-accent-burgundy text-white rounded-lg hover:bg-accent-burgundy/90 transition-colors"
