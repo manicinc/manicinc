@@ -94,11 +94,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             ${dancingScript.variable}
         `} suppressHydrationWarning>
       <head>
-        {/* Content Security Policy for GitHub Pages */}
+        {/* Content Security Policy for GitHub Pages + Cloudflare */}
         <meta 
           httpEquiv="Content-Security-Policy" 
-          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://vercel.live https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.sender.net; img-src 'self' data: https: https://cdn.sender.net https://app.sender.net; font-src 'self' https://fonts.gstatic.com https://cdn.sender.net; connect-src 'self' https://www.google-analytics.com https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://vercel.live; frame-src 'self' https://cdn.sender.net https://app.sender.net;" 
+          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://vercel.live https://*.vercel.app https://cdnjs.cloudflare.com https://ajax.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.sender.net https://cdnjs.cloudflare.com; img-src 'self' data: https: https://cdn.sender.net https://app.sender.net; font-src 'self' https://fonts.gstatic.com https://cdn.sender.net https://cdnjs.cloudflare.com; connect-src 'self' https://www.google-analytics.com https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://vercel.live https://cloudflare.com https://*.cloudflare.com; frame-src 'self' https://cdn.sender.net https://app.sender.net;" 
         />
+        
+        {/* Cloudflare optimizations */}
+        <meta name="cf-visitor" content='{"scheme":"https"}' />
+        <meta httpEquiv="X-Forwarded-Proto" content="https" />
         
         {/* Google Analytics */}
         {GA_ID && (

@@ -295,12 +295,30 @@ export default function SenderNewsletterForm({
         // Check for potential blocking issues
         if (renderAttempts.current > 5) {
           const senderScripts = document.querySelectorAll('script[src*="sender.net"]');
+          const isCloudflare = window.location.hostname !== 'localhost' && 
+                              (document.querySelector('meta[name="cf-visitor"]') || 
+                               window.navigator.userAgent.includes('CF-RAY') ||
+                               document.querySelector('script[src*="cloudflare"]'));
+          
           console.log('🔍 Debugging sender availability:', {
             senderScripts: senderScripts.length,
             windowSender: typeof window.sender,
             userAgent: navigator.userAgent.includes('Chrome') ? 'Chrome' : 'Other',
-            blockedRequests: performance.getEntriesByType('resource').filter(r => r.name.includes('sender')).length
+            blockedRequests: performance.getEntriesByType('resource').filter(r => r.name.includes('sender')).length,
+            isCloudflare: isCloudflare,
+            protocol: window.location.protocol,
+            hostname: window.location.hostname,
+            cloudflareHeaders: isCloudflare ? 'Detected' : 'Not detected'
           });
+          
+          // Cloudflare-specific checks
+          if (isCloudflare) {
+            console.log('☁️ Cloudflare detected - checking for proxy issues');
+            // Check if Sender.net requests are being blocked or modified by Cloudflare
+            const senderResources = performance.getEntriesByType('resource')
+              .filter(r => r.name.includes('sender.net'));
+            console.log('📊 Sender.net resources via Cloudflare:', senderResources.length);
+          }
         }
         
         return false;
@@ -590,7 +608,7 @@ export default function SenderNewsletterForm({
             }`}>
               {!formId || formId.trim() === '' 
                 ? 'The NEXT_PUBLIC_SENDER_FORM_ID environment variable is not configured.'
-                : 'This might be due to ad blockers, content security policies, or network issues. The form works locally but may be blocked in production environments.'
+                : 'This might be due to ad blockers, content security policies, Cloudflare proxy settings, or network issues. The form works locally but may be blocked in production environments.'
               }
             </p>
             {effectiveFallbackUrl ? (

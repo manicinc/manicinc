@@ -1,0 +1,26 @@
+# Cloudflare Headers Configuration
+/*
+  # CORS headers for Sender.net integration
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+  Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With
+  
+  # Security headers compatible with Sender.net
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  
+  # CSP for Cloudflare + Sender.net
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://cdnjs.cloudflare.com https://ajax.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.sender.net https://cdnjs.cloudflare.com; img-src 'self' data: https: https://cdn.sender.net https://app.sender.net; font-src 'self' https://fonts.gstatic.com https://cdn.sender.net; connect-src 'self' https://www.google-analytics.com https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://cloudflare.com https://*.cloudflare.com; frame-src 'self' https://cdn.sender.net https://app.sender.net;
+  
+  # Cache control for static assets
+  Cache-Control: public, max-age=31536000, immutable
+
+# Specific headers for Sender.net form endpoints
+/api/*
+  Access-Control-Allow-Origin: https://sender.net https://cdn.sender.net https://app.sender.net
+  Access-Control-Allow-Credentials: true
+
+# Newsletter form specific headers
+/newsletter*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net; style-src 'self' 'unsafe-inline' https://cdn.sender.net; connect-src 'self' https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net; frame-src 'self' https://cdn.sender.net https://app.sender.net;
