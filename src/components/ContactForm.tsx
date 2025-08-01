@@ -462,7 +462,7 @@ export default function ContactForm() {
             relative px-8 py-3 rounded-xl font-medium transition-all duration-300 overflow-hidden group
             ${state.status === 'loading' || !canUseFunctional
               ? 'bg-bg-tertiary text-text-muted cursor-not-allowed'
-              : 'bg-gradient-to-r from-accent-burgundy to-accent-sage text-white hover:shadow-xl shadow-lg'
+              : 'bg-gradient-to-r from-accent-burgundy to-accent-sage text-white dark:text-white text-bg-primary hover:shadow-xl shadow-lg'
             }
           `}
           style={{
@@ -476,7 +476,7 @@ export default function ContactForm() {
           }}
           whileTap={{ scale: state.status === 'loading' ? 1 : 0.95 }}
         >
-          <span className="relative z-10 flex items-center gap-2 text-white font-semibold">
+          <span className="relative z-10 flex items-center gap-2 text-white dark:text-white text-bg-primary font-semibold">
             {state.status === 'loading' ? (
               <>
                 <LoadingSpinner />

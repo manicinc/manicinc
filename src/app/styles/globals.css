@@ -54,6 +54,7 @@
    @import "./readingMode.css"; /* If needed */
    @import "./comments.css";
    @import './textures.css';
+   @import './newsletter-ornate.css';
    /* ==========================================================================
       5. Optional Global Settings
       ========================================================================== */
@@ -121,5 +122,159 @@
        border-radius: 0;
      }
    }
+   
+   
+/* ==========================================================================
+   Sender.net Form Styles
+   - Custom styling for Sender.net embedded forms
+   - Ensures consistent appearance with our design system
+   ========================================================================== */
+
+/* Sender.net Form Container */
+.sender-form-field,
+.sender-form-field * {
+  font-family: var(--font-display) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Sender.net Input Fields */
+.sender-form-field input[type="email"],
+.sender-form-field input[type="text"],
+.sender-form-field textarea {
+  background-color: var(--bg-primary) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 12px !important;
+  padding: 12px 16px !important;
+  font-size: 16px !important;
+  color: var(--text-primary) !important;
+  transition: all 0.2s ease !important;
+}
+
+.sender-form-field input[type="email"]:focus,
+.sender-form-field input[type="text"]:focus,
+.sender-form-field textarea:focus {
+  outline: none !important;
+  border-color: var(--accent-burgundy) !important;
+  box-shadow: 0 0 0 2px rgba(182, 104, 128, 0.2) !important;
+}
+
+.sender-form-field input::placeholder {
+  color: var(--text-muted) !important;
+  opacity: 0.8 !important;
+}
+
+/* Sender.net Submit Button */
+.sender-form-field button[type="submit"],
+.sender-form-field .sender-submit-btn {
+  background: linear-gradient(135deg, var(--accent-burgundy), var(--accent-sage)) !important;
+  color: var(--text-on-accent) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 12px 24px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  width: 100% !important;
+  margin-top: 12px !important;
+}
+
+.sender-form-field button[type="submit"]:hover,
+.sender-form-field .sender-submit-btn:hover {
+  opacity: 0.9 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(182, 104, 128, 0.3) !important;
+}
+
+.sender-form-field button[type="submit"]:active,
+.sender-form-field .sender-submit-btn:active {
+  transform: translateY(0) !important;
+}
+
+/* Sender.net Labels */
+.sender-form-field label {
+  color: var(--text-secondary) !important;
+  font-weight: 500 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+  font-size: 14px !important;
+}
+
+/* Sender.net Success/Error Messages */
+.sender-form-field .sender-success-message {
+  background-color: var(--accent-sage) !important;
+  color: white !important;
+  padding: 12px 16px !important;
+  border-radius: 8px !important;
+  margin-top: 12px !important;
+  text-align: center !important;
+}
+
+.sender-form-field .sender-error-message {
+  background-color: var(--accent-alert) !important;
+  color: white !important;
+  padding: 12px 16px !important;
+  border-radius: 8px !important;
+  margin-top: 12px !important;
+  text-align: center !important;
+}
+
+/* Sender.net Loading State */
+.sender-form-field .sender-loading {
+  opacity: 0.7 !important;
+  pointer-events: none !important;
+}
+
+.sender-form-field .sender-loading button {
+  cursor: not-allowed !important;
+}
+
+/* Remove default Sender.net styling that might conflict */
+.sender-form-field .sender-form-wrapper {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Ensure proper spacing */
+.sender-form-field > div {
+  margin-bottom: 16px !important;
+}
+
+.sender-form-field > div:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .sender-form-field input[type="email"],
+  .sender-form-field input[type="text"],
+  .sender-form-field textarea {
+    background-color: var(--bg-secondary) !important;
+    border-color: var(--border) !important;
+  }
+  
+  .sender-form-field input[type="email"]:focus,
+  .sender-form-field input[type="text"]:focus,
+  .sender-form-field textarea:focus {
+    border-color: var(--accent-burgundy) !important;
+    box-shadow: 0 0 0 2px rgba(182, 104, 128, 0.3) !important;
+  }
+}
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 768px) {
+  .sender-form-field input[type="email"],
+  .sender-form-field input[type="text"],
+  .sender-form-field textarea {
+    font-size: 16px !important; /* Prevent zoom on iOS */
+  }
+  
+  .sender-form-field button[type="submit"],
+  .sender-form-field .sender-submit-btn {
+    font-size: 16px !important; /* Prevent zoom on iOS */
+    padding: 14px 24px !important;
+  }
+}
    
    

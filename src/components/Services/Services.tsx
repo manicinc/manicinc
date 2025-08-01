@@ -155,8 +155,9 @@ const StylizedStopwatchInternal: React.FC<StylizedStopwatchProps> = ({ text }) =
   const numeralElements = numerals.map((numeral, index) => {
     const angleDeg = (index / 12) * 360 - 90;
     const angleRad = angleDeg * (Math.PI / 180);
-    const x = centerX + numeralRadius * Math.cos(angleRad);
-    const y = centerY + numeralRadius * Math.sin(angleRad);
+    // Fix hydration issues by rounding coordinates to avoid floating point precision differences
+    const x = Math.round((centerX + numeralRadius * Math.cos(angleRad)) * 100) / 100;
+    const y = Math.round((centerY + numeralRadius * Math.sin(angleRad)) * 100) / 100;
 
     return (
       <text
@@ -259,8 +260,11 @@ const StylizedStopwatchInternal: React.FC<StylizedStopwatchProps> = ({ text }) =
                  if (index % 5 === 0) return null;
                  const angleDeg = (index / 60) * 360 - 90; const angleRad = angleDeg * (Math.PI / 180);
                  const startRadius = faceRadius - 1; const endRadius = faceRadius - 2.5;
-                 const x1 = centerX + startRadius * Math.cos(angleRad); const y1 = centerY + startRadius * Math.sin(angleRad);
-                 const x2 = centerX + endRadius * Math.cos(angleRad); const y2 = centerY + endRadius * Math.sin(angleRad);
+                 // Fix hydration issues by rounding coordinates to avoid floating point precision differences
+                 const x1 = Math.round((centerX + startRadius * Math.cos(angleRad)) * 100) / 100; 
+                 const y1 = Math.round((centerY + startRadius * Math.sin(angleRad)) * 100) / 100;
+                 const x2 = Math.round((centerX + endRadius * Math.cos(angleRad)) * 100) / 100; 
+                 const y2 = Math.round((centerY + endRadius * Math.sin(angleRad)) * 100) / 100;
                  return <line key={`minute-${index}`} x1={x1} y1={y1} x2={x2} y2={y2} stroke="var(--stopwatch-tick-color)" strokeWidth="0.6" opacity="0.6" />;
              })}
 

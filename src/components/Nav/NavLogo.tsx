@@ -19,7 +19,7 @@ const NavLogo: React.FC<NavLogoProps> = ({ toggleMenu, isBlog }) => { // Use isB
 
     const MainTagline = () => (
         <>
-            <AnimatedAscii chars={['>', '_', '|', '█', '▒']} interval={200} /> Metaverses intersect here
+            <AnimatedAscii chars={['>', '_', '|', '█', '▒']} interval={400} /> Metaverses intersect here
         </>
     );
 
@@ -32,7 +32,7 @@ const NavLogo: React.FC<NavLogoProps> = ({ toggleMenu, isBlog }) => { // Use isB
 
     return (
         // Main container for logo and tagline area
-        <div className={`${!isBlog ? 'flex items-center space-x-2 md:space-x-3' : ''} flex-shrink min-w-0`}>
+        <div className={`${!isBlog ? 'flex items-center space-x-2 md:space-x-3' : ''} flex-shrink min-w-0 relative`}>
 
             {/* Conditional wrapper for Blog Logo + Tagline */}
             {isBlog ? (
@@ -71,8 +71,8 @@ const NavLogo: React.FC<NavLogoProps> = ({ toggleMenu, isBlog }) => { // Use isB
                     {/* Vertical Divider */}
                     <span className={`hidden md:inline-block self-center ${styles.dividerGradient}`}></span>
 
-                    {/* Main site tagline - Hidden until 1200px to prevent overlap */}
-                    <div className={`hidden xl:flex items-center min-w-0 ${styles.tagline} text-xs xl:text-sm`}>
+                    {/* Main site tagline - Position absolutely to overlap under services */}
+                    <div className={`hidden lg:flex items-center ${styles.taglineOverlap}`}>
                         <MainTagline />
                     </div>
                 </>

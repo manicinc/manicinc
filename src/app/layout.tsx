@@ -186,7 +186,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <Footer />
             <ScrollToTopHandler />
             <Analytics />
-            <SenderScript accountId={process.env.NEXT_PUBLIC_SENDER_ACCOUNT_ID} />
+            {process.env.NEXT_PUBLIC_SENDER_ACCOUNT_ID && (
+              <SenderScript accountId={process.env.NEXT_PUBLIC_SENDER_ACCOUNT_ID} />
+            )}
             <LayoutClient />
           </CookieProvider>
         </ThemeProvider>

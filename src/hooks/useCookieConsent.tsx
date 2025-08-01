@@ -144,10 +144,3 @@ export function useCookieConsent(): UseCookieConsentReturn {
     showBanner
   };
 }
-
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void;
-  }
-}

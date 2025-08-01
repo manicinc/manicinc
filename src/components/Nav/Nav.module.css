@@ -935,10 +935,53 @@
     /* .tagline { display: none; } */
 }
 
-/* NEW: Hide tagline around 800px where links get too crowded */
-@media (max-width: 1280px) {
-    .tagline {
-        display: none !important; /* Hide "metaverses intersect here" tagline below 1280px (xl breakpoint) */
+/* NEW: Position tagline to overlap underneath Services link for space efficiency */
+.taglineOverlap {
+    position: fixed !important;
+    top: 45px !important; /* Moved up 15px from 60px */
+    left: 415px !important; /* Move 80px more to the right to align with Services */
+    z-index: 9999 !important; /* Above everything else */
+    /* Remove background and backdrop-filter */
+    padding: 4px 12px 6px 12px !important; /* Keep padding for spacing */
+    /* Remove border-radius, border, and box-shadow */
+    font-family: var(--font-mono) !important;
+    font-size: 0.7rem !important;
+    letter-spacing: 0.06em !important;
+    opacity: 0.8 !important;
+    color: var(--text-secondary) !important;
+    /* Remove text-shadow for cleaner look */
+    line-height: 1.1 !important; /* Tighter line height for better alignment */
+    white-space: nowrap !important;
+    transition: opacity var(--transition-fast), color var(--transition-fast), transform var(--transition-fast) !important;
+}
+
+.taglineOverlap:hover {
+    opacity: 1 !important;
+    color: var(--text-primary) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Responsive adjustments for tagline overlap */
+@media (max-width: 1400px) {
+    .taglineOverlap {
+        left: 295px !important; /* Move 15px more right (was 280px) */
+        font-size: 0.65rem !important;
+        top: 43px !important; /* Moved up 15px */
+    }
+}
+
+@media (max-width: 1200px) {
+    .taglineOverlap {
+        left: 255px !important; /* Move 15px more right (was 240px) */
+        padding: 3px 8px 5px 8px !important;
+        font-size: 0.6rem !important;
+        top: 41px !important; /* Moved up 15px */
+    }
+}
+
+@media (max-width: 1023px) {
+    .taglineOverlap {
+        display: none !important; /* Hide on mobile/tablet to prevent overlap issues */
     }
 }
 

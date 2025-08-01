@@ -1,16 +1,21 @@
+// src/components/NewsletterSection.tsx
 'use client';
 
-// Option 1: Try embed (might not work due to Sender.net issues)
-// import SenderNewsletterEmbed from './SenderNewsletterEmbed';
-
-// Option 2: Simple button solution (guaranteed to work)
-import SenderNewsletterButton from './SenderNewsletterButton';
-
-import SenderNewsletterUnified from './SenderNewsletterUnified';
-
-
-import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { SenderFormErrorBoundary } from './SenderFormErrorBoundary';
+
+// Use dynamic import with no SSR to prevent hydration issues
+const SenderNewsletterForm = dynamic(() => import('./SenderNewsletterForm'), {
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center py-8">
+      <div className="w-6 h-6 border-2 border-accent-burgundy border-t-transparent rounded-full animate-spin"></div>
+      <span className="ml-3 text-sm text-text-secondary">Loading newsletter form...</span>
+    </div>
+  )
+});
 
 interface NewsletterSectionProps {
   variant?: 'main' | 'blog';
@@ -55,6 +60,7 @@ export default function NewsletterSection({
   onSignupSuccess
 }: NewsletterSectionProps) {
   const [randomizedTestimonials, setRandomizedTestimonials] = useState<Testimonial[]>([]);
+  const [hoveredTestimonial, setHoveredTestimonial] = useState<number | null>(null);
 
   useEffect(() => {
     // Randomize testimonials on mount
@@ -150,114 +156,199 @@ export default function NewsletterSection({
 
             {/* Content Grid */}
             <div className="grid lg:grid-cols-2 gap-12 items-start">
-              {/* Features List */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.5 }}
-              >
-                <h3 className="font-display text-xl font-semibold text-text-primary mb-6 flex items-center gap-3">
-                  <ProtocolIcon />
-                  Transmission Protocol
-                </h3>
-                
-                <ul className="space-y-4">
-                  {copy.features.map((feature, index) => (
-                    <motion.li 
-                      key={index}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.6 + index * 0.1 }}
-                      className="flex items-start gap-3"
-                    >
-                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent-sage/20 flex items-center justify-center mt-0.5">
-                        <motion.div
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ delay: 0.7 + index * 0.1, type: "spring" }}
-                          className="w-2 h-2 rounded-full bg-accent-sage"
-                        />
-                      </div>
-                      <span className="text-text-secondary leading-relaxed">
-                        {feature}
-                      </span>
-                    </motion.li>
-                  ))}
-                </ul>
-              </motion.div>
+              {/* Left Column - Features + Testimonials */}
+              <div className="space-y-12">
+                {/* Features List */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.5 }}
+                >
+                  <h3 className="font-display text-xl font-semibold text-text-primary mb-6 flex items-center gap-3">
+                    <ProtocolIcon />
+                    Transmission Protocol
+                  </h3>
+                  
+                  <ul className="space-y-4">
+                    {copy.features.map((feature, index) => (
+                      <motion.li 
+                        key={index}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.6 + index * 0.1 }}
+                        className="flex items-start gap-3"
+                      >
+                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent-sage/20 flex items-center justify-center mt-0.5">
+                          <motion.div
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ delay: 0.7 + index * 0.1, type: "spring" }}
+                            className="w-2 h-2 rounded-full bg-accent-sage"
+                          />
+                        </div>
+                        <span className="text-text-secondary leading-relaxed">
+                          {feature}
+                        </span>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </motion.div>
+
+                {/* Ornate Testimonials */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1 }}
+                  className="relative"
+                >
+                  {/* Decorative Header */}
+                  <div className="relative mb-8 text-center">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <ScrollDivider />
+                    </div>
+                    <h3 className="font-display text-xl font-semibold text-text-primary relative z-10 bg-bg-secondary px-4 inline-block">
+                      What Our Readers Say
+                    </h3>
+                  </div>
+
+                  <div className="space-y-4">
+                    {randomizedTestimonials.map((testimonial, index) => (
+                      <motion.div
+                        key={testimonial.author}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 1.2 + index * 0.1 }}
+                        onMouseEnter={() => setHoveredTestimonial(index)}
+                        onMouseLeave={() => setHoveredTestimonial(null)}
+                        className="relative group"
+                      >
+                        <div className={`
+                          relative p-6 rounded-2xl border transition-all duration-500
+                          ${hoveredTestimonial === index 
+                            ? 'bg-gradient-to-br from-accent-rose/10 via-accent-blue/10 to-accent-sage/10 border-accent-burgundy/40 shadow-xl transform -translate-y-1' 
+                            : 'bg-bg-primary/50 border-border hover:border-accent-burgundy/20'
+                          }
+                        `}>
+                          {/* Ornate Quote Marks */}
+                          <div className="absolute -top-3 -left-3 text-5xl font-serif opacity-20">
+                            <motion.span
+                              animate={{ 
+                                rotate: hoveredTestimonial === index ? -5 : 0,
+                                scale: hoveredTestimonial === index ? 1.2 : 1 
+                              }}
+                              transition={{ duration: 0.3 }}
+                              className="block text-accent-burgundy"
+                            >
+                              ❝
+                            </motion.span>
+                          </div>
+                          
+                          {/* Decorative Corner Flourishes */}
+                          <AnimatePresence>
+                            {hoveredTestimonial === index && (
+                              <>
+                                <motion.div
+                                  initial={{ opacity: 0, scale: 0 }}
+                                  animate={{ opacity: 1, scale: 1 }}
+                                  exit={{ opacity: 0, scale: 0 }}
+                                  className="absolute -top-2 -right-2"
+                                >
+                                  <CornerFlourish />
+                                </motion.div>
+                                <motion.div
+                                  initial={{ opacity: 0, scale: 0 }}
+                                  animate={{ opacity: 1, scale: 1 }}
+                                  exit={{ opacity: 0, scale: 0 }}
+                                  className="absolute -bottom-2 -left-2 rotate-180"
+                                >
+                                  <CornerFlourish />
+                                </motion.div>
+                              </>
+                            )}
+                          </AnimatePresence>
+
+                          <blockquote className="relative z-10">
+                            <p className="text-text-secondary italic text-lg mb-4 pl-8">
+                              {testimonial.quote}
+                            </p>
+                            <footer className="text-sm flex items-center justify-end gap-3">
+                              <div className="text-right">
+                                <cite className="font-semibold text-text-primary not-italic block">
+                                  {testimonial.author}
+                                </cite>
+                                {testimonial.role && (
+                                  <p className="text-xs text-text-muted mt-0.5">
+                                    {testimonial.role}
+                                  </p>
+                                )}
+                              </div>
+                              <motion.div
+                                animate={{ 
+                                  rotate: hoveredTestimonial === index ? 360 : 0 
+                                }}
+                                transition={{ duration: 0.6 }}
+                              >
+                                <AuthorFlourish />
+                              </motion.div>
+                            </footer>
+                          </blockquote>
+
+                          {/* Subtle pattern overlay on hover */}
+                          <AnimatePresence>
+                            {hoveredTestimonial === index && (
+                              <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 0.05 }}
+                                exit={{ opacity: 0 }}
+                                className="absolute inset-0 pointer-events-none"
+                              >
+                                <FioriPattern />
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  {/* Bottom Decorative Element */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1.6 }}
+                    className="mt-6 flex justify-center"
+                  >
+                    <DecorativeEnd />
+                  </motion.div>
+                </motion.div>
+              </div>
 
               {/* Newsletter Form */}
               <motion.div 
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.6 }}
-                className="lg:pl-8"
+                className="lg:pl-8 w-full"
               >
-                <div className="bg-bg-primary rounded-2xl p-8 border border-border shadow-lg relative overflow-hidden">
+                <div className="bg-bg-primary rounded-2xl border border-border shadow-lg relative overflow-hidden w-full mx-0 px-0">
                   {/* Form Background Pattern */}
                   <div className="absolute inset-0 opacity-[0.02]">
                     <CircuitPattern />
                   </div>
                   
-                  {/* Using button solution since Sender.net embed is broken */}
-                  {/* <SenderNewsletterButton className="relative z-10" variant={variant} /> */}
-                <SenderNewsletterUnified 
-                  className="relative z-10" 
-                  variant={variant}
-                />
+                  {/* Sender Newsletter Form - Script already loaded in layout.tsx */}
+                  <div className="relative z-10 w-full p-0 m-0">
+                    <SenderFormErrorBoundary>
+                      <SenderNewsletterForm 
+                        formId={process.env.NEXT_PUBLIC_SENDER_FORM_ID || ''}
+                        className="w-full"
+                        fallbackUrl={process.env.NEXT_PUBLIC_SENDER_FORM_ID ? `https://app.sender.net/forms/${process.env.NEXT_PUBLIC_SENDER_FORM_ID}` : undefined}
+                      />
+                    </SenderFormErrorBoundary>
+                  </div>
                 </div>
               </motion.div>
             </div>
-
-            {/* Testimonials Grid */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1 }}
-              className="mt-16 pt-12 border-t border-border"
-            >
-              <h3 className="text-center font-display text-2xl font-semibold text-text-primary mb-8">
-                What Our Readers Say
-              </h3>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {randomizedTestimonials.map((testimonial, index) => (
-                  <motion.div
-                    key={testimonial.author}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 1.2 + index * 0.1 }}
-                    className="relative group"
-                  >
-                    <div className="bg-bg-primary border border-border rounded-xl p-6 h-full transition-all duration-300 group-hover:border-accent-burgundy/30 group-hover:shadow-lg">
-                      {/* Quote Mark */}
-                      <div className="absolute -top-3 -left-2 text-6xl text-accent-burgundy/10 font-serif">
-                        &ldquo;
-                      </div>
-                      
-                      <blockquote className="relative z-10">
-                        <p className="text-text-secondary mb-4 italic">
-                          {testimonial.quote}
-                        </p>
-                        <footer className="text-sm">
-                          <cite className="font-semibold text-text-primary not-italic">
-                            {testimonial.author}
-                          </cite>
-                          {testimonial.role && (
-                            <p className="text-xs text-text-muted mt-1">
-                              {testimonial.role}
-                            </p>
-                          )}
-                        </footer>
-                      </blockquote>
-                      
-                      {/* Decorative Corner */}
-                      <div className="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-accent-sage/20 rounded-br-xl" />
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
 
             {/* Privacy & GDPR Notice */}
             <motion.div 
@@ -322,6 +413,19 @@ const CircuitPattern = () => (
   </svg>
 );
 
+const FioriPattern = () => (
+  <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <pattern id="fiori" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse">
+        <circle cx="12.5" cy="12.5" r="2" fill="var(--accent-rose)" opacity="0.3"/>
+        <path d="M12.5 10 Q15 12.5 12.5 15 Q10 12.5 12.5 10" fill="var(--accent-sage)" opacity="0.2"/>
+        <circle cx="12.5" cy="12.5" r="8" fill="none" stroke="var(--accent-blue)" strokeWidth="0.5" opacity="0.2"/>
+      </pattern>
+    </defs>
+    <rect width="100" height="100" fill="url(#fiori)" />
+  </svg>
+);
+
 const TransmissionWaveIcon = () => (
   <svg viewBox="0 0 100 100" className="w-full h-full">
     <g opacity="0.5">
@@ -351,5 +455,38 @@ const SecurityShieldIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-accent-secondary">
     <path d="M12 2L4 7V11C4 16 7 20 12 21C17 20 20 16 20 11V7L12 2Z" stroke="currentColor" strokeWidth="1.5"/>
     <path d="M9 12L11 14L15 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const ScrollDivider = () => (
+  <svg width="200" height="20" viewBox="0 0 200 20" fill="none" className="text-accent-burgundy/20">
+    <path d="M0 10 Q50 0 100 10 T200 10" stroke="currentColor" strokeWidth="1"/>
+    <circle cx="100" cy="10" r="3" fill="currentColor"/>
+    <path d="M90 10 Q100 5 110 10" stroke="currentColor" strokeWidth="1" fill="none"/>
+  </svg>
+);
+
+const CornerFlourish = () => (
+  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" className="text-accent-burgundy/30">
+    <path d="M0 0 Q15 0 15 15 T30 30" stroke="currentColor" strokeWidth="1" fill="none"/>
+    <circle cx="15" cy="15" r="2" fill="currentColor"/>
+    <path d="M5 5 L10 10 M20 20 L25 25" stroke="currentColor" strokeWidth="0.5"/>
+  </svg>
+);
+
+const AuthorFlourish = () => (
+  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" className="text-accent-secondary/40">
+    <circle cx="15" cy="15" r="14" stroke="currentColor" strokeWidth="1"/>
+    <path d="M15 5 Q20 15 15 25 Q10 15 15 5" fill="currentColor" opacity="0.3"/>
+    <circle cx="15" cy="15" r="3" fill="currentColor"/>
+  </svg>
+);
+
+const DecorativeEnd = () => (
+  <svg width="60" height="20" viewBox="0 0 60 20" fill="none" className="text-accent-burgundy/20">
+    <path d="M0 10 L20 10 M40 10 L60 10" stroke="currentColor" strokeWidth="1"/>
+    <circle cx="30" cy="10" r="5" stroke="currentColor" strokeWidth="1" fill="none"/>
+    <circle cx="30" cy="10" r="2" fill="currentColor"/>
+    <path d="M25 5 Q30 10 35 5 M25 15 Q30 10 35 15" stroke="currentColor" strokeWidth="0.5" fill="none"/>
   </svg>
 );

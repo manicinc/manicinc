@@ -10,32 +10,45 @@
   padding-right: max(1rem, calc((100vw - var(--blog-content-max-width, 900px)) / 2));
 }
 
-/* Testimonials specific adjustments for blog posts */
-.post-newsletter-signup .grid {
-  /* Adjust grid columns for better fit in blog context */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+/* Adjust the two-column layout for blog posts */
+.post-newsletter-signup .grid.lg\:grid-cols-2 {
+  gap: 2rem;
+}
+
+/* Testimonials container in left column */
+.post-newsletter-signup .space-y-4 {
+  gap: 0.75rem;
 }
 
 /* Reduce text sizes in testimonials for blog posts only */
 .post-newsletter-signup blockquote p {
-  font-size: 0.85rem !important;
+  font-size: 0.875rem !important;
   line-height: 1.5 !important;
   margin-bottom: 0.75rem !important;
 }
 
 .post-newsletter-signup cite {
-  font-size: 0.8rem !important;
+  font-size: 0.8125rem !important;
 }
 
 .post-newsletter-signup blockquote footer p {
-  font-size: 0.7rem !important;
-  margin-top: 0.5rem !important;
+  font-size: 0.75rem !important;
+  margin-top: 0.25rem !important;
 }
 
 /* Reduce padding in testimonial cards for blog posts */
-.post-newsletter-signup .grid > div > div {
+.post-newsletter-signup .relative.p-6 {
   padding: 1rem 1.25rem !important;
+}
+
+/* Adjust ornate decorations for blog context */
+.post-newsletter-signup .text-5xl {
+  font-size: 2.5rem !important;
+}
+
+.post-newsletter-signup svg[width="30"][height="30"] {
+  width: 24px;
+  height: 24px;
 }
 
 /* Mobile responsiveness for blog newsletter */
@@ -47,9 +60,19 @@
     padding-right: 1rem;
   }
   
-  .post-newsletter-signup .grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 0.75rem;
+  /* Stack columns earlier on tablets */
+  .post-newsletter-signup .grid.lg\:grid-cols-2 {
+    grid-template-columns: 1fr !important;
+    gap: 3rem;
+  }
+  
+  /* Adjust left column order - show form first on mobile */
+  .post-newsletter-signup .grid > :first-child {
+    order: 2;
+  }
+  
+  .post-newsletter-signup .grid > :last-child {
+    order: 1;
   }
 }
 
@@ -61,14 +84,9 @@
     padding-right: 0.75rem;
   }
   
-  .post-newsletter-signup .grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 0.5rem;
-  }
-  
   /* Further reduce text sizes on mobile */
   .post-newsletter-signup blockquote p {
-    font-size: 0.8rem !important;
+    font-size: 0.8125rem !important;
     line-height: 1.4 !important;
   }
   
@@ -77,25 +95,36 @@
   }
   
   .post-newsletter-signup blockquote footer p {
-    font-size: 0.65rem !important;
+    font-size: 0.6875rem !important;
   }
   
   /* Reduce padding further on mobile */
-  .post-newsletter-signup .grid > div > div {
-    padding: 0.75rem 1rem !important;
+  .post-newsletter-signup .relative.p-6 {
+    padding: 0.875rem 1rem !important;
+  }
+  
+  /* Smaller decorations on mobile */
+  .post-newsletter-signup .text-5xl {
+    font-size: 2rem !important;
+  }
+  
+  .post-newsletter-signup svg[width="30"][height="30"] {
+    width: 20px;
+    height: 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .post-newsletter-signup .grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
+  .post-newsletter-signup {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
   
   /* Ultra-small text for tiny screens */
   .post-newsletter-signup blockquote p {
     font-size: 0.75rem !important;
     line-height: 1.3 !important;
+    padding-left: 1.5rem !important; /* Reduce quote mark spacing */
   }
   
   .post-newsletter-signup cite {
@@ -103,11 +132,29 @@
   }
   
   .post-newsletter-signup blockquote footer p {
-    font-size: 0.6rem !important;
+    font-size: 0.625rem !important;
   }
   
   /* Minimal padding on tiny screens */
-  .post-newsletter-signup .grid > div > div {
-    padding: 0.5rem 0.75rem !important;
+  .post-newsletter-signup .relative.p-6 {
+    padding: 0.75rem !important;
+  }
+  
+  /* Hide ornate decorations on very small screens */
+  .post-newsletter-signup .absolute.-top-3.-left-3,
+  .post-newsletter-signup .absolute.-top-2.-right-2,
+  .post-newsletter-signup .absolute.-bottom-2.-left-2 {
+    display: none !important;
+  }
+  
+  /* Simplify layout */
+  .post-newsletter-signup .text-center.font-display {
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Reduce section padding */
+  .post-newsletter-signup > div {
+    padding: 1.5rem 1rem !important;
   }
 }

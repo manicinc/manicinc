@@ -1,273 +1,405 @@
+// src/components/SenderNewsletterForm.tsx
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
-import { useAnalytics } from './Analytics';
-import { useCookieConsent } from '@/hooks/useCookieConsent';
+import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface SenderNewsletterFormProps {
-  variant?: 'main' | 'blog';
+  formId: string;
   className?: string;
-  compact?: boolean;
-  inline?: boolean;
-  onSignupSuccess?: () => void;
+  fallbackUrl?: string;
+}
+
+// Custom hook to create a React-isolated DOM container
+function useIsolatedDOM() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    
+    // Store original DOM methods
+    const originalRemoveChild = container.removeChild.bind(container);
+    const originalAppendChild = container.appendChild.bind(container);
+    const originalInsertBefore = container.insertBefore.bind(container);
+    
+    // Override removeChild to safely handle unmanaged nodes
+    container.removeChild = function<T extends Node>(child: T): T {
+      try {
+        // Check if this node or any parent is marked as unmanaged
+        if (child.nodeType === Node.ELEMENT_NODE) {
+          let node: Element | null = child as unknown as Element;
+          while (node) {
+            if (node.getAttribute && node.getAttribute('data-react-unmanaged') === 'true') {
+              console.log('🛡️ Prevented React from removing unmanaged DOM node');
+              return child; // Return the child without removing it
+            }
+            node = node.parentElement;
+          }
+        }
+        
+        // If not unmanaged, proceed with normal removal
+        return originalRemoveChild(child) as T;
+      } catch (error) {
+        // If removal fails, log and return the child
+        console.log('🛡️ Caught removeChild error, likely due to Sender.net DOM manipulation:', error);
+        return child;
+      }
+    };
+    
+    // Override appendChild to mark new nodes as unmanaged if they're in an unmanaged container
+    container.appendChild = function<T extends Node>(newChild: T): T {
+      const result = originalAppendChild.call(this, newChild) as T;
+      if (newChild.nodeType === Node.ELEMENT_NODE) {
+        const element = newChild as unknown as Element;
+        if (element.setAttribute) {
+          element.setAttribute('data-react-unmanaged', 'true');
+        }
+      }
+      return result;
+    };
+    
+    // Cleanup patches on unmount
+    return () => {
+      if (container) {
+        container.removeChild = originalRemoveChild;
+        container.appendChild = originalAppendChild;
+        container.insertBefore = originalInsertBefore;
+      }
+    };
+  }, []);
+  
+  return containerRef;
 }
 
 export default function SenderNewsletterForm({ 
-  variant = 'main', 
+  formId,
   className = '',
-  compact = false,
-  inline = false,
-  onSignupSuccess
+  fallbackUrl
 }: SenderNewsletterFormProps) {
-  const { trackEvent, canTrack } = useAnalytics();
-  const { hasConsent, canUseMarketing } = useCookieConsent();
-  const [collapsed, setCollapsed] = useState(false);
-  const [showEmbed, setShowEmbed] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const scriptLoadedRef = useRef(false);
-  const formId = process.env.NEXT_PUBLIC_SENDER_FORM_ID || '';
+  const containerRef = useIsolatedDOM();
+  const [status, setStatus] = useState<'loading' | 'success' | 'error'>('loading');
+  const formInitialized = useRef(false);
+  const renderAttempts = useRef(0);
+  const maxAttempts = 20;
 
-  // Check if user collapsed form
   useEffect(() => {
-    const collapsedState = localStorage.getItem('newsletter-collapsed');
-    if (collapsedState === 'true') {
-      setCollapsed(true);
+    // Early return if no formId is provided
+    if (!formId || formId.trim() === '') {
+      console.error('🔴 No formId provided to SenderNewsletterForm');
+      setStatus('error');
+      return;
     }
-  }, []);
 
-  // Show embed only if user has marketing consent
-  useEffect(() => {
-    setShowEmbed(canUseMarketing);
-  }, [canUseMarketing]);
+    if (formInitialized.current || !containerRef.current) return;
+    formInitialized.current = true;
 
-  // Load Sender.net form embed
-  useEffect(() => {
-    if (!showEmbed || !formId || scriptLoadedRef.current || collapsed) return;
+    let mounted = true;
+    let pollInterval: NodeJS.Timeout;
+    const formContainer = containerRef.current;
 
-    const loadSenderForm = () => {
-      // Create the form container
-      if (containerRef.current) {
-        containerRef.current.innerHTML = `<div data-sender-form-id="${formId}"></div>`;
+    // CRITICAL: Prevent React from ever managing this DOM subtree
+    // Mark all child nodes as unmanaged by React
+    const markDOMAsUnmanaged = (element: Element) => {
+      // Add a special data attribute to prevent React reconciliation
+      element.setAttribute('data-react-unmanaged', 'true');
+      element.setAttribute('data-sender-managed', 'true');
+      // Recursively mark all children
+      Array.from(element.children).forEach(markDOMAsUnmanaged);
+    };
+
+    // Set up mutation observer to catch any dynamically added nodes
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            const element = node as Element;
+            markDOMAsUnmanaged(element);
+            console.log('🔧 Marked dynamically added node as unmanaged');
+          }
+        });
+      });
+    });
+
+    // Create a wrapper div that React will never touch
+    const senderWrapper = document.createElement('div');
+    senderWrapper.setAttribute('data-react-unmanaged', 'true');
+    senderWrapper.setAttribute('data-sender-wrapper', 'true');
+    senderWrapper.style.cssText = 'position: relative; width: 100%; min-height: 200px; padding: 0; margin: 0; box-sizing: border-box;';
+    
+    // Create the actual form container inside the wrapper
+    const isolatedDiv = document.createElement('div');
+    isolatedDiv.setAttribute('data-react-unmanaged', 'true');
+    isolatedDiv.setAttribute('data-sender-container', 'true');
+    isolatedDiv.innerHTML = `
+      <div style="text-align: left; width: 100%; padding: 0; margin: 0; box-sizing: border-box;" 
+           class="sender-form-field" 
+           data-sender-form-id="${formId}"
+           data-react-unmanaged="true">
+      </div>
+      <style>
+        .sender-form-field iframe,
+        .sender-form-field form,
+        .sender-form-field div,
+        .sender-form-field input,
+        .sender-form-field button {
+          width: 100% !important;
+          max-width: 100% !important;
+          margin: 0 !important;
+          padding: 12px !important;
+          box-sizing: border-box !important;
+        }
+        .sender-form-field {
+          width: 100% !important;
+          max-width: 100% !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          box-sizing: border-box !important;
+        }
+        /* Override Sender.net's fixed width */
+        .sender-form-box {
+          width: 100% !important;
+          max-width: 100% !important;
+          margin: 0 !important;
+          box-sizing: border-box !important;
+        }
+        .sender-subs-embed-form-dBBEwn .sender-form-box {
+          width: 100% !important;
+          max-width: 100% !important;
+          margin: 0 !important;
+          box-sizing: border-box !important;
+        }
+        /* Mobile-specific overrides */
+        @media (max-width: 768px) {
+          .sender-form-box {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 !important;
+            border-radius: 0 !important;
+          }
+          .sender-form-field,
+          .sender-form-field iframe,
+          .sender-form-field form,
+          .sender-form-field div {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 !important;
+            border-radius: 0 !important;
+          }
+          .sender-form-field input,
+          .sender-form-field button {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 !important;
+            padding: 12px !important;
+            border-radius: 5px !important;
+            box-sizing: border-box !important;
+          }
+        }
+      </style>
+    `;
+    
+    // Nest the form container inside the wrapper
+    senderWrapper.appendChild(isolatedDiv);
+    
+    // Clear container and add our wrapper (React only manages the top-level div)
+    formContainer.innerHTML = '';
+    formContainer.appendChild(senderWrapper);
+    
+    // Mark the entire tree as unmanaged
+    markDOMAsUnmanaged(senderWrapper);
+    markDOMAsUnmanaged(isolatedDiv);
+    
+    // Start observing for dynamic changes on the wrapper
+    observer.observe(senderWrapper, { 
+      childList: true, 
+      subtree: true,
+      attributes: false 
+    });
+
+    const tryRenderForm = () => {
+      if (!mounted) return false;
+      
+      renderAttempts.current++;
+      console.log(`🔄 Render attempt ${renderAttempts.current}/${maxAttempts}`);
+
+      // Check if sender is available
+      if (!window.sender || typeof window.sender !== 'function') {
+        console.log('⏳ Waiting for sender...');
+        return false;
       }
 
-      // Load Sender.net script if not already loaded
-      if (!window.Sender && !document.querySelector('script[src*="sender.net"]')) {
-        const script = document.createElement('script');
-        script.async = true;
-        script.innerHTML = `
-          (function (s, e, n, d, er) {
-            s['Sender'] = er;
-            s[er] = s[er] || function () {
-              (s[er].q = s[er].q || []).push(arguments)
-            }, s[er].l = 1 * new Date();
-            var a = e.createElement(n),
-                m = e.getElementsByTagName(n)[0];
-            a.async = 1;
-            a.src = d;
-            m.parentNode.insertBefore(a, m)
-          })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
-          sender('${formId}');
-        `;
+      try {
+        // Call all sender methods like in your HTML file
+        window.sender();
+        window.sender('init');
+        window.sender('render');
+        window.sender('scan');
+        window.sender('refresh');
+        window.sender('form', formId);
+        window.sender(formId);
         
-        document.head.appendChild(script);
-        scriptLoadedRef.current = true;
-
-        // Track analytics
-        if (canTrack) {
-          trackEvent('sender_form_loaded', { variant, formId });
-        }
-      } else if (window.Sender) {
-        // If script already loaded, just initialize the form
-        window.Sender('form', formId);
+        console.log('✅ Called all sender methods');
+        
+        // Check if it worked after a delay
+        setTimeout(() => {
+          if (!mounted) return;
+          
+          const formField = isolatedDiv.querySelector('.sender-form-field');
+          const hasContent = !!(
+            formField?.querySelector('iframe') ||
+            formField?.querySelector('form') ||
+            formField?.querySelector('input') ||
+            (formField && formField.children.length > 0)
+          );
+          
+          if (hasContent) {
+            console.log('✅ Form rendered successfully!');
+            // Mark any new DOM nodes as unmanaged
+            markDOMAsUnmanaged(formField as Element);
+            setStatus('success');
+          } else if (renderAttempts.current >= maxAttempts) {
+            console.error('🔴 Max attempts reached, form failed to render');
+            setStatus('error');
+          }
+        }, 1000);
+        
+        return true;
+      } catch (error) {
+        console.error('🔴 Error rendering form:', error);
+        return false;
       }
     };
 
-    // Small delay to ensure DOM is ready
-    const timer = setTimeout(loadSenderForm, 100);
-    return () => clearTimeout(timer);
-  }, [showEmbed, formId, collapsed, canTrack, trackEvent, variant]);
+    // Start trying immediately
+    tryRenderForm();
 
-  const handleToggleCollapse = () => {
-    const newCollapsed = !collapsed;
-    localStorage.setItem('newsletter-collapsed', newCollapsed.toString());
-    setCollapsed(newCollapsed);
-    
-    if (canTrack) {
-      trackEvent('newsletter_toggled', { variant, collapsed: newCollapsed });
-    }
-  };
+    // Set up polling
+    pollInterval = setInterval(() => {
+      if (!mounted || renderAttempts.current >= maxAttempts) {
+        clearInterval(pollInterval);
+        return;
+      }
+      tryRenderForm();
+    }, 500);
 
-  const copy = variant === 'blog' ? {
-    title: 'Subscribe to The Looking Glass Chronicles // Manic Agency',
-    subtitle: 'Strategic and unexplored intelligence on digital transformation and synthetic futures.',
-  } : {
-    title: 'Subscribe to Manic Agency // The Looking Glass Chronicles',
-    subtitle: 'Strategic and unexplored intelligence on digital transformation and synthetic futures.',
-  };
+    // Also listen for window events
+    const handleLoad = () => tryRenderForm();
+    window.addEventListener('load', handleLoad);
+    window.addEventListener('onSenderFormsLoaded', handleLoad);
+
+    // Cleanup - but preserve the isolated DOM
+    return () => {
+      mounted = false;
+      if (pollInterval) clearInterval(pollInterval);
+      window.removeEventListener('load', handleLoad);
+      window.removeEventListener('onSenderFormsLoaded', handleLoad);
+      observer.disconnect();
+      
+      // Clear any loading overlays to prevent React reconciliation conflicts
+      const loadingOverlay = formContainer.querySelector('[data-loading-overlay="true"]');
+      if (loadingOverlay) {
+        loadingOverlay.remove();
+      }
+      
+      // DON'T clear the container - let the isolated DOM persist
+    };
+  }, [formId]); // eslint-disable-line react-hooks/exhaustive-deps
+  // Note: containerRef is a stable ref and should not be included in dependencies
 
   return (
-    <div className={`newsletter-form-container ${className}`}>
-      <div className="flex items-center justify-between mb-4">
-        <h3 className={`font-display font-semibold ${
-          compact ? 'text-lg' : 'text-xl'
-        } text-text-primary`}>
-          {copy.title}
-        </h3>
-        <button
-          onClick={handleToggleCollapse}
-          className="text-text-secondary hover:text-text-primary transition-all duration-200 p-1 rounded-lg hover:bg-bg-tertiary"
-          aria-label={collapsed ? "Expand newsletter form" : "Collapse newsletter form"}
-        >
-          {collapsed ? (
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          ) : (
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-            </svg>
-          )}
-        </button>
+    <div className={`${className} w-full`} style={{ width: '100%', padding: 0, margin: 0 }}>
+      {/* Form Container - CRITICAL: Never re-render this div */}
+      <div 
+        ref={containerRef}
+        className="sender-form-container w-full"
+        style={{ 
+          minHeight: status === 'loading' ? '300px' : 'auto',
+          width: '100%',
+          padding: '0',
+          margin: '0'
+        }}
+        suppressHydrationWarning
+        data-react-unmanaged="true"
+      >
+        {/* Only show loading state initially, before we add the form HTML */}
+        {status === 'loading' && !formInitialized.current && (
+          <div className="flex items-center justify-center h-64" data-loading-overlay="true">
+            <div className="text-center">
+              <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+              <p className="text-gray-600">Loading newsletter form...</p>
+            </div>
+          </div>
+        )}
       </div>
 
-      {!compact && !collapsed && (
-        <p className="text-text-secondary mb-6 leading-relaxed">
-          {copy.subtitle}
-        </p>
-      )}
-
+      {/* Error State with Fallback */}
       <AnimatePresence>
-        {!collapsed && (
+        {status === 'error' && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="overflow-hidden"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className={`mt-4 p-6 border rounded-lg ${
+              !formId || formId.trim() === '' 
+                ? 'bg-yellow-50 border-yellow-200' 
+                : 'bg-red-50 border-red-200'
+            }`}
           >
-            {showEmbed && hasConsent ? (
-              // Ornate Neumorphic Container for Sender.net Form
-              <div className="relative">
-                {/* Neumorphic Container */}
-                <div className="relative bg-gradient-to-br from-bg-primary via-bg-secondary to-bg-primary rounded-2xl p-8 shadow-neumorphic-inset border border-border/50">
-                  {/* Decorative Corner Elements */}
-                  <div className="absolute top-0 left-0 w-20 h-20 opacity-10">
-                    <div className="w-full h-full rounded-br-full bg-gradient-to-br from-accent-burgundy to-accent-sage"></div>
-                  </div>
-                  <div className="absolute bottom-0 right-0 w-16 h-16 opacity-10">
-                    <div className="w-full h-full rounded-tl-full bg-gradient-to-tl from-accent-gold to-accent-highlight"></div>
-                  </div>
-
-                  {/* Inner Glow Effect */}
-                  <div className="absolute inset-2 rounded-xl bg-gradient-to-r from-accent-burgundy/5 via-transparent to-accent-sage/5 pointer-events-none"></div>
-
-                  {/* Ornate Border Pattern */}
-                  <div className="absolute inset-0 rounded-2xl overflow-hidden">
-                    <div className="absolute top-0 left-1/4 w-1/2 h-0.5 bg-gradient-to-r from-transparent via-accent-burgundy/30 to-transparent"></div>
-                    <div className="absolute bottom-0 left-1/4 w-1/2 h-0.5 bg-gradient-to-r from-transparent via-accent-sage/30 to-transparent"></div>
-                    <div className="absolute left-0 top-1/4 h-1/2 w-0.5 bg-gradient-to-b from-transparent via-accent-secondary/30 to-transparent"></div>
-                    <div className="absolute right-0 top-1/4 h-1/2 w-0.5 bg-gradient-to-b from-transparent via-accent-highlight/30 to-transparent"></div>
-                  </div>
-
-                  {/* Central Emblem */}
-                  <div className="absolute top-4 right-4 w-8 h-8 opacity-20">
-                    <TransmissionEmblem />
-                  </div>
-
-                  {/* Sender.net Form Container */}
-                  <div 
-                    ref={containerRef}
-                    className="sender-form-wrapper relative z-10"
-                    style={{
-                      // Custom CSS variables for Sender.net form styling
-                      '--sender-primary-color': '#b66880',
-                      '--sender-secondary-color': '#7ea196',
-                      '--sender-text-color': 'var(--text-primary)',
-                      '--sender-background-color': 'transparent',
-                      '--sender-border-color': 'var(--border)',
-                      '--sender-border-radius': '12px',
-                      '--sender-font-family': 'var(--font-display)',
-                    } as React.CSSProperties}
-                  >
-                    {/* Loading State */}
-                    <div className="space-y-4 animate-pulse">
-                      <div className="h-3 bg-bg-tertiary rounded w-3/4"></div>
-                      <div className="h-12 bg-bg-tertiary rounded"></div>
-                      <div className="h-10 bg-gradient-to-r from-accent-burgundy/20 to-accent-sage/20 rounded"></div>
-                    </div>
-                  </div>
-
-                  {/* Neumorphic Accent Lines */}
-                  <div className="absolute bottom-6 left-6 right-6 h-px bg-gradient-to-r from-transparent via-accent-burgundy/20 to-transparent shadow-neumorphic-pressed"></div>
-                </div>
-
-                {/* Privacy Notice */}
-                <motion.div 
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.5 }}
-                  className="mt-6 space-y-2"
-                >
-                  <p className="text-xs text-text-secondary leading-relaxed text-center">
-                    Your data sovereignty is absolute. Zero third-party sharing. 
-                    One-click unsubscribe. Full GDPR compliance.{' '}
-                    <a 
-                      href="/privacy" 
-                      className="text-accent-burgundy hover:text-accent-highlight transition-colors"
-                    >
-                      Privacy protocol
-                    </a>
-                  </p>
-                </motion.div>
-              </div>
+            <h3 className={`font-semibold mb-2 ${
+              !formId || formId.trim() === '' 
+                ? 'text-yellow-800' 
+                : 'text-red-800'
+            }`}>
+              {!formId || formId.trim() === '' 
+                ? 'Newsletter form configuration missing'
+                : 'Newsletter form couldn\'t load'
+              }
+            </h3>
+            <p className={`text-sm mb-4 ${
+              !formId || formId.trim() === '' 
+                ? 'text-yellow-600' 
+                : 'text-red-600'
+            }`}>
+              {!formId || formId.trim() === '' 
+                ? 'The NEXT_PUBLIC_SENDER_FORM_ID environment variable is not configured.'
+                : 'This might be due to ad blockers or network issues.'
+              }
+            </p>
+            {fallbackUrl ? (
+              <a
+                href={fallbackUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-flex items-center gap-2 px-4 py-2 text-white rounded hover:opacity-90 transition-colors ${
+                  !formId || formId.trim() === '' 
+                    ? 'bg-yellow-600 hover:bg-yellow-700' 
+                    : 'bg-red-600 hover:bg-red-700'
+                }`}
+              >
+                Subscribe via web form
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
             ) : (
-              // Consent Required State
-              <div className="bg-bg-secondary border-2 border-dashed border-border rounded-xl p-8 text-center">
-                <div className="w-12 h-12 mx-auto mb-4 opacity-30">
-                  <ConsentIcon />
-                </div>
-                <h4 className="font-display font-semibold text-text-primary mb-2">
-                  Marketing Consent Required
-                </h4>
-                <p className="text-text-secondary text-sm mb-4">
-                  Accept marketing cookies to establish secure transmission channel and subscribe to our intelligence briefings.
+              !formId || formId.trim() === '' ? (
+                <p className="text-sm text-yellow-700">
+                  Please contact the site administrator to set up the newsletter form.
                 </p>
-                <p className="text-xs text-accent-alert flex items-center justify-center gap-1">
-                  <span>⚡</span>
-                  <span>Enable cookies to access subscription portal</span>
-                </p>
-              </div>
+              ) : (
+                <button
+                  onClick={() => window.location.reload()}
+                  className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 transition-colors"
+                >
+                  Try Again
+                </button>
+              )
             )}
           </motion.div>
         )}
       </AnimatePresence>
     </div>
   );
-}
-
-// Icon Components
-const TransmissionEmblem = () => (
-  <svg viewBox="0 0 32 32" className="w-full h-full">
-    <circle cx="16" cy="16" r="12" fill="none" stroke="var(--accent-burgundy)" strokeWidth="0.5" opacity="0.6"/>
-    <circle cx="16" cy="16" r="8" fill="none" stroke="var(--accent-sage)" strokeWidth="0.5" opacity="0.8"/>
-    <circle cx="16" cy="16" r="4" fill="none" stroke="var(--accent-highlight)" strokeWidth="0.5"/>
-    <circle cx="16" cy="16" r="2" fill="var(--accent-gold)"/>
-    <path d="M12 12l8 8M20 12l-8 8" stroke="var(--accent-secondary)" strokeWidth="0.3" opacity="0.4"/>
-  </svg>
-);
-
-const ConsentIcon = () => (
-  <svg viewBox="0 0 48 48" className="w-full h-full">
-    <path d="M24 4L6 12v12c0 11.11 7.67 21.47 18 24 10.33-2.53 18-12.89 18-24V12L24 4z" 
-          fill="none" stroke="var(--text-secondary)" strokeWidth="1.5"/>
-    <path d="M18 24l6 6 12-12" stroke="var(--accent-sage)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
-);
-
-// Global type augmentation for Sender
-declare global {
-  interface Window {
-    Sender: any;
-  }
 }

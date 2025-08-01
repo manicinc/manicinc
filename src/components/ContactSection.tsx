@@ -3,8 +3,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import SenderNewsletterEmbed from './SenderNewsletterEmbed';
+import { motion } from 'framer-motion';
 
 interface ContactSectionProps {
   onNewsletterSignup?: () => void;
@@ -12,7 +11,6 @@ interface ContactSectionProps {
 
 const ContactSection = ({ onNewsletterSignup }: ContactSectionProps = {}) => {
   const [hoveredLocation, setHoveredLocation] = useState<string | null>(null);
-  const [activeSection, setActiveSection] = useState<'contact' | 'newsletter'>('contact');
 
   const locations = [
     {
@@ -67,47 +65,41 @@ const ContactSection = ({ onNewsletterSignup }: ContactSectionProps = {}) => {
 
           {/* Toggle Section */}
           <div className="flex justify-center mb-12">
-            <div className="inline-flex rounded-xl bg-bg-secondary p-1 backdrop-blur-sm border border-border">
+            <div className="inline-flex rounded-xl bg-bg-secondary/50 p-1 backdrop-blur-sm border border-accent-secondary/20 shadow-lg">
               <button
-                onClick={() => setActiveSection('contact')}
                 className={`
-                  px-6 py-3 rounded-lg font-medium transition-all duration-300
-                  ${activeSection === 'contact' 
-                    ? 'bg-accent-primary text-white shadow-lg' 
-                    : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary'
-                  }
+                  px-6 py-3 rounded-lg font-medium transition-all duration-300 relative overflow-hidden
+                  bg-gradient-to-r from-accent-primary to-accent-highlight text-white dark:text-white text-bg-primary shadow-lg transform scale-105
                 `}
               >
-                Direct Contact
+                <span className="relative z-10">Direct Contact</span>
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-accent-primary to-accent-highlight"
+                  initial={false}
+                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                />
               </button>
-              <button
-                onClick={() => setActiveSection('newsletter')}
+              <Link
+                href="/newsletter"
                 className={`
-                  px-6 py-3 rounded-lg font-medium transition-all duration-300
-                  ${activeSection === 'newsletter' 
-                    ? 'bg-accent-primary text-white shadow-lg' 
-                    : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary'
-                  }
+                  px-6 py-3 rounded-lg font-medium transition-all duration-300 relative overflow-hidden group
+                  text-text-primary hover:text-white hover:bg-gradient-to-r hover:from-accent-burgundy/30 hover:to-accent-sage/30 hover:scale-102 hover:shadow-md
+                  border border-transparent hover:border-accent-secondary/30
                 `}
               >
-                Subscribe
-              </button>
+                <span className="relative z-10 group-hover:drop-shadow-sm">Subscribe</span>
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-accent-burgundy/10 to-accent-sage/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  whileHover={{ scale: 1.02 }}
+                />
+              </Link>
             </div>
           </div>
 
           {/* Content Sections */}
-          <AnimatePresence mode="wait">
-            {activeSection === 'contact' ? (
-              <motion.div
-                key="contact"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                transition={{ duration: 0.3 }}
-                className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto"
-              >
-                {/* Contact CTA */}
-                <div>
+          <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+            {/* Contact CTA */}
+            <div>
                   <h3 className="font-display text-2xl font-semibold text-text-primary mb-6 flex items-center gap-3">
                     <TransmissionIcon />
                     Begin Transmission
@@ -125,7 +117,7 @@ const ContactSection = ({ onNewsletterSignup }: ContactSectionProps = {}) => {
                       className="group relative block"
                     >
                       <motion.div
-                        className="relative bg-gradient-to-r from-accent-burgundy to-accent-highlight text-white rounded-xl p-6 overflow-hidden"
+                        className="relative bg-gradient-to-r from-accent-burgundy to-accent-highlight text-white dark:text-white text-bg-primary rounded-xl p-6 overflow-hidden"
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                       >
@@ -247,31 +239,7 @@ const ContactSection = ({ onNewsletterSignup }: ContactSectionProps = {}) => {
                     <NetworkMap />
                   </div>
                 </div>
-              </motion.div>
-            ) : (
-              <motion.div
-                key="newsletter"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.3 }}
-                className="max-w-3xl mx-auto"
-              >
-                <div className="bg-bg-primary/50 backdrop-blur-sm rounded-2xl p-8 border border-border">
-                  <h3 className="font-display text-2xl font-semibold text-text-primary mb-2 text-center">
-                    Join the Transmission Network
-                  </h3>
-                  <p className="text-text-secondary text-center mb-8">
-                    Receive curated intelligence on digital transformation, AI, Web3, and creative technology.
-                  </p>
-                  <SenderNewsletterEmbed 
-                    className="w-full"
-                    fallbackToButton={true}
-                  />
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+              </div>
         </div>
       </div>
     </section>

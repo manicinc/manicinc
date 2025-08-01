@@ -12,13 +12,6 @@ interface ThemeContextProps {
 
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 
-// Extend Window interface safely
-declare global {
-    interface Window {
-        __theme?: 'dark' | 'light'; // Optional: if your inline script sets this
-        toggleTheme?: () => void;
-    }
-}
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const [theme, setThemeState] = useState<'dark' | 'light'>('light'); // Default to light for SSR safety

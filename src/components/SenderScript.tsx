@@ -8,69 +8,62 @@ interface SenderScriptProps {
 
 export function SenderScript({ accountId }: SenderScriptProps) {
   useEffect(() => {
-    // Only load if accountId is provided
-    if (!accountId) {
-      console.log('Sender.net: No account ID provided');
+    // Debug logging
+    console.log('🔍 SenderScript Debug:', {
+      accountId,
+      accountIdFromEnv: process.env.NEXT_PUBLIC_SENDER_ACCOUNT_ID,
+      windowSender: !!window.sender,
+      windowSenderCapital: !!window.Sender
+    });
+
+    // Validate accountId before proceeding
+    if (!accountId || accountId.trim() === '') {
+      console.warn('⚠️ Sender accountId is empty or undefined, skipping initialization');
       return;
     }
 
-    // Check if script is already loaded
-    if (typeof window !== 'undefined' && (window as any).sender) {
-      console.log('Sender.net: Script already loaded');
+    // Check if Sender is already initialized
+    if (window.Sender || window.sender) {
+      console.log('✅ Sender already initialized');
+      // Still try to initialize with account ID if not done yet
+      try {
+        if (window.sender && typeof window.sender === 'function') {
+          window.sender(accountId);
+          console.log('✅ Re-initialized with account ID:', accountId);
+        }
+      } catch (e) {
+        console.log('Could not re-initialize:', e);
+      }
       return;
     }
 
-    try {
-      // Create script element
-      const script = document.createElement('script');
-      script.async = true;
+    // IMPORTANT: Set up the queue function BEFORE loading the script
+    // This is what the Sender script expects to find
+    const script = document.createElement('script');
+    script.src = 'https://cdn.sender.net/accounts_resources/universal.js';
+    script.async = true;
+    
+    // Set up the sender function queue BEFORE the script loads
+    window.sender = window.sender || function() {
+      (window.sender.q = window.sender.q || []).push(arguments);
+    };
+    window.sender.l = Date.now();
+    
+    // Wait for the script to load completely, then initialize
+    script.onload = function() {
+      console.log('🚀 Sender universal script loaded, initializing with account ID:', accountId);
       
-      // Use Sender.net's initialization code
-      script.innerHTML = `
-        (function (s, e, n, d, er) {
-          s['Sender'] = er;
-          s[er] = s[er] || function () {
-            (s[er].q = s[er].q || []).push(arguments)
-          };
-          s[er].l = 1 * new Date().getTime();
-          var a = e.createElement(n),
-              m = e.getElementsByTagName(n)[0];
-          a.async = 1;
-          a.src = d;
-          a.onload = function() {
-            console.log('Sender.net: Script loaded successfully');
-            // Initialize with account ID
-            if (window.sender && typeof window.sender === 'function') {
-              try {
-                window.sender('${accountId}');
-                console.log('Sender.net: Initialized with account:', '${accountId}');
-              } catch (e) {
-                console.error('Sender.net: Initialization error:', e);
-              }
-            }
-          };
-          a.onerror = function(e) {
-            console.error('Sender.net: Failed to load script:', e);
-          };
-          m.parentNode.insertBefore(a, m);
-          
-          // Override XMLHttpRequest to catch 404 errors
-          var originalOpen = XMLHttpRequest.prototype.open;
-          XMLHttpRequest.prototype.open = function(method, url) {
-            if (url && url.includes('render.json')) {
-              console.warn('Sender.net: Blocking broken render.json request');
-              return;
-            }
-            return originalOpen.apply(this, arguments);
-          };
-        })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
-      `;
-      
-      document.head.appendChild(script);
-      
-    } catch (error) {
-      console.error('Sender.net: Script injection error:', error);
-    }
+      // Wait a bit more to ensure everything is ready
+      setTimeout(() => {
+        if (window.sender && typeof window.sender === 'function') {
+          window.sender(accountId);
+          console.log('✅ Sender initialized with account ID:', accountId);
+        }
+      }, 500);
+    };
+    
+    document.head.appendChild(script);
+    console.log('✅ Sender initialization script added');
   }, [accountId]);
 
   return null;

@@ -1,6 +1,6 @@
 'use client';
 
-import NewsletterForm from './NewsletterForm';
+import NewsletterForm from './NewsletterFormEmailJS';
 
 interface InlineNewsletterProps {
   /** Newsletter context */
