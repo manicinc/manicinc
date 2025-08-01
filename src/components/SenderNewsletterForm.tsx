@@ -125,7 +125,7 @@ export default function SenderNewsletterForm({
     const senderWrapper = document.createElement('div');
     senderWrapper.setAttribute('data-react-unmanaged', 'true');
     senderWrapper.setAttribute('data-sender-wrapper', 'true');
-    senderWrapper.style.cssText = 'position: relative; width: 100%; min-height: 200px; padding: 0; margin: 0; box-sizing: border-box;';
+    senderWrapper.style.cssText = 'position: relative; width: 100%; min-height: 500px; padding: 0; margin: 0; box-sizing: border-box;';
     
     // Create the actual form container inside the wrapper
     const isolatedDiv = document.createElement('div');
@@ -138,6 +138,26 @@ export default function SenderNewsletterForm({
            data-react-unmanaged="true">
       </div>
       <style>
+        /* Custom scrollbar styling */
+        .sender-form-field::-webkit-scrollbar,
+        .sender-form-box::-webkit-scrollbar {
+          width: 8px;
+        }
+        .sender-form-field::-webkit-scrollbar-track,
+        .sender-form-box::-webkit-scrollbar-track {
+          background: rgba(0, 0, 0, 0.1);
+          border-radius: 4px;
+        }
+        .sender-form-field::-webkit-scrollbar-thumb,
+        .sender-form-box::-webkit-scrollbar-thumb {
+          background: rgba(0, 0, 0, 0.3);
+          border-radius: 4px;
+        }
+        .sender-form-field::-webkit-scrollbar-thumb:hover,
+        .sender-form-box::-webkit-scrollbar-thumb:hover {
+          background: rgba(0, 0, 0, 0.5);
+        }
+        
         .sender-form-field iframe,
         .sender-form-field form,
         .sender-form-field div,
@@ -155,6 +175,9 @@ export default function SenderNewsletterForm({
           margin: 0 !important;
           padding: 0 !important;
           box-sizing: border-box !important;
+          overflow-y: auto !important;
+          min-height: 480px !important;
+          max-height: 800px !important;
         }
         /* Override Sender.net's fixed width */
         .sender-form-box {
@@ -162,16 +185,37 @@ export default function SenderNewsletterForm({
           max-width: 100% !important;
           margin: 0 !important;
           box-sizing: border-box !important;
+          overflow: hidden !important;
         }
         .sender-subs-embed-form-dBBEwn .sender-form-box {
           width: 100% !important;
           max-width: 100% !important;
           margin: 0 !important;
           box-sizing: border-box !important;
+          overflow: hidden !important;
+        }
+        /* Remove internal padding that causes gaps */
+        .sender-subs-embed-form-dBBEwn .box-padding {
+          padding-left: 12px !important;
+          padding-right: 12px !important;
+          padding-top: 20px !important;
+          padding-bottom: 20px !important;
+        }
+        /* Force full width on all nested elements */
+        .sender-subs-embed-form-dBBEwn,
+        .sender-subs-embed-form-dBBEwn > *,
+        .sender-form-flex,
+        .sender-form-main {
+          width: 100% !important;
+          max-width: 100% !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+          box-sizing: border-box !important;
         }
         /* Mobile-specific overrides */
         @media (max-width: 768px) {
-          .sender-form-box {
+          .sender-form-box,
+          .sender-subs-embed-form-dBBEwn .sender-form-box {
             width: 100% !important;
             max-width: 100% !important;
             margin: 0 !important;
@@ -193,6 +237,24 @@ export default function SenderNewsletterForm({
             margin: 0 !important;
             padding: 12px !important;
             border-radius: 5px !important;
+            box-sizing: border-box !important;
+          }
+          .sender-subs-embed-form-dBBEwn .box-padding {
+            padding-left: 8px !important;
+            padding-right: 8px !important;
+            padding-top: 15px !important;
+            padding-bottom: 15px !important;
+          }
+          /* Force full width on mobile for all elements */
+          .sender-subs-embed-form-dBBEwn,
+          .sender-subs-embed-form-dBBEwn > *,
+          .sender-form-flex,
+          .sender-form-main {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 !important;
+            padding-left: 8px !important;
+            padding-right: 8px !important;
             box-sizing: border-box !important;
           }
         }
@@ -314,7 +376,7 @@ export default function SenderNewsletterForm({
         ref={containerRef}
         className="sender-form-container w-full"
         style={{ 
-          minHeight: status === 'loading' ? '300px' : 'auto',
+          minHeight: status === 'loading' ? '500px' : '480px',
           width: '100%',
           padding: '0',
           margin: '0'

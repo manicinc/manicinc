@@ -211,7 +211,7 @@ export default function NewsletterSection({
                     </h3>
                   </div>
 
-                  <div className="space-y-4">
+                  <div className="space-y-3">
                     {randomizedTestimonials.map((testimonial, index) => (
                       <motion.div
                         key={testimonial.author}
@@ -223,7 +223,7 @@ export default function NewsletterSection({
                         className="relative group"
                       >
                         <div className={`
-                          relative p-6 rounded-2xl border transition-all duration-500
+                          relative p-4 rounded-xl border transition-all duration-500
                           ${hoveredTestimonial === index 
                             ? 'bg-gradient-to-br from-accent-rose/10 via-accent-blue/10 to-accent-sage/10 border-accent-burgundy/40 shadow-xl transform -translate-y-1' 
                             : 'bg-bg-primary/50 border-border hover:border-accent-burgundy/20'
@@ -268,10 +268,10 @@ export default function NewsletterSection({
                           </AnimatePresence>
 
                           <blockquote className="relative z-10">
-                            <p className="text-text-secondary italic text-lg mb-4 pl-8">
+                            <p className="text-text-secondary italic text-base mb-3 pl-6">
                               {testimonial.quote}
                             </p>
-                            <footer className="text-sm flex items-center justify-end gap-3">
+                            <footer className="text-xs flex items-center justify-end gap-2">
                               <div className="text-right">
                                 <cite className="font-semibold text-text-primary not-italic block">
                                   {testimonial.author}
@@ -287,6 +287,7 @@ export default function NewsletterSection({
                                   rotate: hoveredTestimonial === index ? 360 : 0 
                                 }}
                                 transition={{ duration: 0.6 }}
+                                className="scale-75"
                               >
                                 <AuthorFlourish />
                               </motion.div>
@@ -328,20 +329,20 @@ export default function NewsletterSection({
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.6 }}
-                className="lg:pl-8 w-full"
+                className="lg:pl-8 w-full -mr-8 lg:mr-0"
               >
-                <div className="bg-bg-primary rounded-2xl border border-border shadow-lg relative overflow-hidden w-full mx-0 px-0">
+                <div className="bg-bg-primary rounded-2xl border border-border shadow-lg relative overflow-hidden w-full h-full flex flex-col">
                   {/* Form Background Pattern */}
                   <div className="absolute inset-0 opacity-[0.02]">
                     <CircuitPattern />
                   </div>
                   
                   {/* Sender Newsletter Form - Script already loaded in layout.tsx */}
-                  <div className="relative z-10 w-full p-0 m-0">
+                  <div className="relative z-10 w-full h-full flex-1">
                     <SenderFormErrorBoundary>
                       <SenderNewsletterForm 
                         formId={process.env.NEXT_PUBLIC_SENDER_FORM_ID || ''}
-                        className="w-full"
+                        className="w-full h-full"
                         fallbackUrl={process.env.NEXT_PUBLIC_SENDER_FORM_ID ? `https://app.sender.net/forms/${process.env.NEXT_PUBLIC_SENDER_FORM_ID}` : undefined}
                       />
                     </SenderFormErrorBoundary>
