@@ -75,7 +75,7 @@ const NavLogo: React.FC<NavLogoProps> = ({ toggleMenu, isBlog }) => { // Use isB
 
             {/* Main site tagline - Position absolutely to not affect layout but appear under Services */}
             {!isBlog && (
-                <div className={`hidden lg:block ${styles.taglineOverlap}`}>
+                <div className={`hidden xl:block ${styles.taglineOverlap}`}>
                     <MainTagline />
                 </div>
             )}

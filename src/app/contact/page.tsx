@@ -295,7 +295,7 @@ const ContactPage = () => {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link 
                             href="#contact-form"
-                            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent-burgundy hover:bg-accent-highlight text-white font-medium rounded-full transition-all duration-300 hover:transform hover:scale-105 shadow-lg"
+                            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent-burgundy hover:bg-accent-highlight text-white dark:text-white font-medium rounded-full transition-all duration-300 hover:transform hover:scale-105 shadow-lg"
                         >
                             Begin the Conversation
                             <RightArrowIcon />
@@ -739,7 +739,7 @@ const WonderlandMap = () => (
         
         {/* Decorative Elements */}
         <text x="100" y="80" className="text-xs fill-text-muted italic" textAnchor="middle">
-            &apos;We&aquo;re all <s>mad</s> here&apos;
+            You&apos;re <s>mad</s> as a rabbit to come.
         </text>
     </svg>
 );

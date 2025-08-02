@@ -98,9 +98,9 @@ export const Nav = () => {
         <nav ref={navRef} className={`${styles.navContainer} ${isScrolled ? styles.navScrolled : ''}`}>
             {isBlog && <BlogVines />}
 
-            {/* Main container: Uses Tailwind. Adjusted breakpoints (lg) and wrapping */}
+            {/* Main container: Uses Tailwind. Adjusted breakpoints (xl) and wrapping */}
             <div className={`
-                container mx-auto flex items-center justify-between flex-wrap lg:flex-nowrap
+                container mx-auto flex items-center justify-between flex-wrap xl:flex-nowrap
                 px-3 sm:px-4 py-1.5 sm:py-2 /* Adjusted padding */
                 relative z-10 /* Ensure content is above potential background elements */
             `}>
@@ -116,8 +116,8 @@ export const Nav = () => {
                 </div>
 
 
-                {/* Desktop Links & Actions Area: Hidden below LG */}
-                <div className="order-3 lg:order-2 hidden lg:flex flex-grow-0 lg:ml-auto items-stretch">
+                {/* Desktop Links & Actions Area: Hidden below XL */}
+                <div className="order-3 xl:order-2 hidden xl:flex flex-grow-0 xl:ml-auto items-stretch">
                      <NavLinksDesktop
                          isBlog={isBlog}
                          isActivePath={isActivePath}
@@ -126,8 +126,8 @@ export const Nav = () => {
                      />
                 </div>
 
-                {/* Mobile Menu Button Area: Shows only below LG */}
-                <div className="order-2 lg:hidden flex items-center ml-auto pl-2">
+                {/* Mobile Menu Button Area: Shows only below XL */}
+                <div className="order-2 xl:hidden flex items-center ml-auto pl-2">
                     <button
                         aria-label="Toggle Menu"
                         aria-expanded={isMenuOpen}
