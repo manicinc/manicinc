@@ -70,12 +70,14 @@ const NavLogo: React.FC<NavLogoProps> = ({ toggleMenu, isBlog }) => { // Use isB
 
                     {/* Vertical Divider */}
                     <span className={`hidden md:inline-block self-center ${styles.dividerGradient}`}></span>
-
-                    {/* Main site tagline - Position absolutely to overlap under services */}
-                    <div className={`hidden lg:flex items-center ${styles.taglineOverlap}`}>
-                        <MainTagline />
-                    </div>
                 </>
+            )}
+
+            {/* Main site tagline - Position absolutely to not affect layout but appear under Services */}
+            {!isBlog && (
+                <div className={`hidden lg:block ${styles.taglineOverlap}`}>
+                    <MainTagline />
+                </div>
             )}
         </div>
     );

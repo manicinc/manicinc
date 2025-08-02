@@ -330,7 +330,7 @@ export default function NewsletterSection({
                             <blockquote className="relative z-10">
                               <div className="flex items-start gap-3">
                                 <p className="text-text-secondary italic text-base flex-1 leading-relaxed">
-                                  "{randomizedTestimonials[currentTestimonial]?.quote}"
+                                  &ldquo;{randomizedTestimonials[currentTestimonial]?.quote}&rdquo;
                                 </p>
                                 <div className="flex items-center gap-2 flex-shrink-0">
                                   <div className="text-right">

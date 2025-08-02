@@ -69,8 +69,8 @@ const ContactSection = ({ onNewsletterSignup }: ContactSectionProps = {}) => {
               <button
                 className={`
                   px-6 py-3 rounded-lg font-medium transition-all duration-300 relative overflow-hidden group
-                  bg-gradient-to-r from-accent-primary to-accent-highlight text-white shadow-lg transform scale-105
-                  hover:from-accent-primary/90 hover:to-accent-highlight/90 hover:scale-[1.08] hover:shadow-xl
+                  bg-gradient-to-r from-accent-primary to-accent-highlight text-text-primary shadow-lg transform scale-105
+                  hover:from-accent-primary/90 hover:to-accent-highlight/90 hover:scale-[1.08] hover:shadow-xl hover:text-white
                   active:scale-[1.03] active:shadow-md
                   focus:outline-none focus:ring-2 focus:ring-accent-primary/50 focus:ring-offset-2 focus:ring-offset-bg-primary
                 `}
