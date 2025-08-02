@@ -68,23 +68,28 @@ const ContactSection = ({ onNewsletterSignup }: ContactSectionProps = {}) => {
             <div className="inline-flex rounded-xl bg-bg-secondary/50 p-1 backdrop-blur-sm border border-accent-secondary/20 shadow-lg">
               <button
                 className={`
-                  px-6 py-3 rounded-lg font-medium transition-all duration-300 relative overflow-hidden
-                  bg-gradient-to-r from-accent-primary to-accent-highlight text-white dark:text-white text-bg-primary shadow-lg transform scale-105
+                  px-6 py-3 rounded-lg font-medium transition-all duration-300 relative overflow-hidden group
+                  bg-gradient-to-r from-accent-primary to-accent-highlight text-white shadow-lg transform scale-105
+                  hover:from-accent-primary/90 hover:to-accent-highlight/90 hover:scale-[1.08] hover:shadow-xl
+                  active:scale-[1.03] active:shadow-md
+                  focus:outline-none focus:ring-2 focus:ring-accent-primary/50 focus:ring-offset-2 focus:ring-offset-bg-primary
                 `}
               >
-                <span className="relative z-10">Direct Contact</span>
+                <span className="relative z-10 drop-shadow-sm">Direct Contact</span>
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-accent-primary to-accent-highlight"
-                  initial={false}
-                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  whileHover={{ scale: 1.02 }}
                 />
               </button>
               <Link
                 href="/newsletter"
                 className={`
                   px-6 py-3 rounded-lg font-medium transition-all duration-300 relative overflow-hidden group
-                  text-text-primary hover:text-white hover:bg-gradient-to-r hover:from-accent-burgundy/30 hover:to-accent-sage/30 hover:scale-102 hover:shadow-md
+                  text-text-primary hover:text-white
+                  hover:bg-gradient-to-r hover:from-accent-burgundy hover:to-accent-sage hover:scale-105 hover:shadow-lg
+                  active:scale-[1.02] active:shadow-md
                   border border-transparent hover:border-accent-secondary/30
+                  focus:outline-none focus:ring-2 focus:ring-accent-burgundy/50 focus:ring-offset-2 focus:ring-offset-bg-primary
                 `}
               >
                 <span className="relative z-10 group-hover:drop-shadow-sm">Subscribe</span>
@@ -117,22 +122,25 @@ const ContactSection = ({ onNewsletterSignup }: ContactSectionProps = {}) => {
                       className="group relative block"
                     >
                       <motion.div
-                        className="relative bg-gradient-to-r from-accent-burgundy to-accent-highlight text-white dark:text-white text-bg-primary rounded-xl p-6 overflow-hidden"
+                        className="relative bg-gradient-to-r from-accent-burgundy to-accent-highlight text-white rounded-xl p-6 overflow-hidden
+                                 hover:from-accent-burgundy/90 hover:to-accent-highlight/90 hover:shadow-xl
+                                 active:scale-[0.99] transition-all duration-300
+                                 focus-within:ring-2 focus-within:ring-accent-burgundy/50 focus-within:ring-offset-2 focus-within:ring-offset-bg-primary"
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                       >
-                        <div className="absolute inset-0 bg-gradient-to-r from-accent-highlight to-accent-burgundy opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         
                         <div className="relative z-10 flex items-center justify-between">
                           <div>
-                            <h4 className="font-display text-lg font-semibold mb-1">
+                            <h4 className="font-display text-lg font-semibold mb-1 drop-shadow-sm">
                               Start a Project
                             </h4>
-                            <p className="text-sm opacity-90">
+                            <p className="text-sm opacity-90 drop-shadow-sm">
                               Full collaboration protocol
                             </p>
                           </div>
-                          <div className="w-12 h-12">
+                          <div className="w-12 h-12 opacity-90 group-hover:opacity-100 transition-opacity duration-300 text-white">
                             <ProjectIcon />
                           </div>
                         </div>

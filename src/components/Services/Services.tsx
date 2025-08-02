@@ -494,7 +494,7 @@ const Services: React.FC = () => {
   return (
       <section
           ref={sectionRef}
-          className={`relative py-12 md:py-16 overflow-hidden ${styles.servicesSection}`}
+          className={`relative py-6 md:py-8 overflow-hidden ${styles.servicesSection}`}
           style={{ backgroundColor: 'var(--color-space-purple)' }} // Use CSS var
           id="services"
       >

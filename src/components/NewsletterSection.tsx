@@ -4,18 +4,20 @@
 import dynamic from 'next/dynamic';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { SenderFormErrorBoundary } from './SenderFormErrorBoundary';
 
-// Use dynamic import with no SSR to prevent hydration issues
-const SenderNewsletterForm = dynamic(() => import('./SenderNewsletterForm'), {
-  ssr: false,
-  loading: () => (
-    <div className="flex items-center justify-center py-8">
-      <div className="w-6 h-6 border-2 border-accent-burgundy border-t-transparent rounded-full animate-spin"></div>
-      <span className="ml-3 text-sm text-text-secondary">Loading newsletter form...</span>
-    </div>
-  )
-});
+// Import EmailOctopus component with no SSR
+const EmailOctopusForm = dynamic(
+  () => import('./EmailOctopusForm').then(mod => mod.default),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex items-center justify-center py-8">
+        <div className="w-6 h-6 border-2 border-accent-burgundy border-t-transparent rounded-full animate-spin"></div>
+        <span className="ml-3 text-sm text-text-secondary">Loading newsletter form...</span>
+      </div>
+    )
+  }
+);
 
 interface NewsletterSectionProps {
   variant?: 'main' | 'blog';
@@ -59,6 +61,7 @@ export default function NewsletterSection({
   background = 'default',
   onSignupSuccess
 }: NewsletterSectionProps) {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [randomizedTestimonials, setRandomizedTestimonials] = useState<Testimonial[]>([]);
   const [hoveredTestimonial, setHoveredTestimonial] = useState<number | null>(null);
 
@@ -67,6 +70,25 @@ export default function NewsletterSection({
     const shuffled = [...testimonials].sort(() => Math.random() - 0.5);
     setRandomizedTestimonials(shuffled);
   }, []);
+
+  // Auto-rotate testimonials every 5 seconds
+  useEffect(() => {
+    if (randomizedTestimonials.length === 0) return;
+    
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % randomizedTestimonials.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [randomizedTestimonials.length]);
+
+  const goToNext = () => {
+    setCurrentTestimonial((prev) => (prev + 1) % randomizedTestimonials.length);
+  };
+
+  const goToPrev = () => {
+    setCurrentTestimonial((prev) => (prev - 1 + randomizedTestimonials.length) % randomizedTestimonials.length);
+  };
 
   const backgroundClasses = {
     default: 'bg-bg-secondary border border-border',
@@ -211,105 +233,146 @@ export default function NewsletterSection({
                     </h3>
                   </div>
 
-                  <div className="space-y-3">
-                    {randomizedTestimonials.map((testimonial, index) => (
-                      <motion.div
-                        key={testimonial.author}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 1.2 + index * 0.1 }}
-                        onMouseEnter={() => setHoveredTestimonial(index)}
-                        onMouseLeave={() => setHoveredTestimonial(null)}
-                        className="relative group"
-                      >
-                        <div className={`
-                          relative p-4 rounded-xl border transition-all duration-500
-                          ${hoveredTestimonial === index 
-                            ? 'bg-gradient-to-br from-accent-rose/10 via-accent-blue/10 to-accent-sage/10 border-accent-burgundy/40 shadow-xl transform -translate-y-1' 
-                            : 'bg-bg-primary/50 border-border hover:border-accent-burgundy/20'
-                          }
-                        `}>
-                          {/* Ornate Quote Marks */}
-                          <div className="absolute -top-3 -left-3 text-5xl font-serif opacity-20">
-                            <motion.span
-                              animate={{ 
-                                rotate: hoveredTestimonial === index ? -5 : 0,
-                                scale: hoveredTestimonial === index ? 1.2 : 1 
-                              }}
-                              transition={{ duration: 0.3 }}
-                              className="block text-accent-burgundy"
-                            >
-                              ❝
-                            </motion.span>
-                          </div>
+                  <div className="space-y-4">
+                    {randomizedTestimonials.length > 0 && (
+                      <div className="relative">
+                        {/* Carousel Navigation */}
+                        <div className="flex items-center justify-between mb-4">
+                          <button
+                            onClick={goToPrev}
+                            className="p-2 rounded-full bg-bg-primary border border-border hover:border-accent-burgundy/40 transition-colors"
+                          >
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                              <path d="M15 18L9 12L15 6" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                          </button>
                           
-                          {/* Decorative Corner Flourishes */}
-                          <AnimatePresence>
-                            {hoveredTestimonial === index && (
-                              <>
-                                <motion.div
-                                  initial={{ opacity: 0, scale: 0 }}
-                                  animate={{ opacity: 1, scale: 1 }}
-                                  exit={{ opacity: 0, scale: 0 }}
-                                  className="absolute -top-2 -right-2"
-                                >
-                                  <CornerFlourish />
-                                </motion.div>
-                                <motion.div
-                                  initial={{ opacity: 0, scale: 0 }}
-                                  animate={{ opacity: 1, scale: 1 }}
-                                  exit={{ opacity: 0, scale: 0 }}
-                                  className="absolute -bottom-2 -left-2 rotate-180"
-                                >
-                                  <CornerFlourish />
-                                </motion.div>
-                              </>
-                            )}
-                          </AnimatePresence>
+                          <div className="flex gap-2">
+                            {randomizedTestimonials.map((_, index) => (
+                              <button
+                                key={index}
+                                onClick={() => setCurrentTestimonial(index)}
+                                className={`w-2 h-2 rounded-full transition-colors ${
+                                  index === currentTestimonial 
+                                    ? 'bg-accent-burgundy' 
+                                    : 'bg-border hover:bg-accent-burgundy/40'
+                                }`}
+                              />
+                            ))}
+                          </div>
 
-                          <blockquote className="relative z-10">
-                            <p className="text-text-secondary italic text-base mb-3 pl-6">
-                              {testimonial.quote}
-                            </p>
-                            <footer className="text-xs flex items-center justify-end gap-2">
-                              <div className="text-right">
-                                <cite className="font-semibold text-text-primary not-italic block">
-                                  {testimonial.author}
-                                </cite>
-                                {testimonial.role && (
-                                  <p className="text-xs text-text-muted mt-0.5">
-                                    {testimonial.role}
-                                  </p>
-                                )}
-                              </div>
-                              <motion.div
-                                animate={{ 
-                                  rotate: hoveredTestimonial === index ? 360 : 0 
-                                }}
-                                transition={{ duration: 0.6 }}
-                                className="scale-75"
-                              >
-                                <AuthorFlourish />
-                              </motion.div>
-                            </footer>
-                          </blockquote>
-
-                          {/* Subtle pattern overlay on hover */}
-                          <AnimatePresence>
-                            {hoveredTestimonial === index && (
-                              <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 0.05 }}
-                                exit={{ opacity: 0 }}
-                                className="absolute inset-0 pointer-events-none"
-                              >
-                                <FioriPattern />
-                              </motion.div>
-                            )}
-                          </AnimatePresence>
+                          <button
+                            onClick={goToNext}
+                            className="p-2 rounded-full bg-bg-primary border border-border hover:border-accent-burgundy/40 transition-colors"
+                          >
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                              <path d="M9 18L15 12L9 6" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                          </button>
                         </div>
-                      </motion.div>
-                    ))}
+
+                        {/* Current Testimonial */}
+                        <motion.div
+                          key={currentTestimonial}
+                          initial={{ opacity: 0, x: 20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: -20 }}
+                          transition={{ duration: 0.3 }}
+                          onMouseEnter={() => setHoveredTestimonial(0)}
+                          onMouseLeave={() => setHoveredTestimonial(null)}
+                          className="relative group"
+                        >
+                          <div className={`
+                            relative p-4 rounded-xl border transition-all duration-500
+                            ${hoveredTestimonial === 0 
+                              ? 'bg-gradient-to-br from-accent-rose/10 via-accent-blue/10 to-accent-sage/10 border-accent-burgundy/40 shadow-lg transform -translate-y-1' 
+                              : 'bg-bg-primary/50 border-border hover:border-accent-burgundy/20'
+                            }
+                          `}>
+                            {/* Ornate Quote Marks */}
+                            <div className="absolute -top-3 -left-3 text-5xl font-serif opacity-20">
+                              <motion.span
+                                animate={{ 
+                                  rotate: hoveredTestimonial === 0 ? -5 : 0,
+                                  scale: hoveredTestimonial === 0 ? 1.2 : 1 
+                                }}
+                                transition={{ duration: 0.3 }}
+                                className="block text-accent-burgundy"
+                              >
+                                ❝
+                              </motion.span>
+                            </div>
+                            
+                            {/* Decorative Corner Flourishes */}
+                            <AnimatePresence>
+                              {hoveredTestimonial === 0 && (
+                                <>
+                                  <motion.div
+                                    initial={{ opacity: 0, scale: 0 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0 }}
+                                    className="absolute -top-2 -right-2"
+                                  >
+                                    <CornerFlourish />
+                                  </motion.div>
+                                  <motion.div
+                                    initial={{ opacity: 0, scale: 0 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0 }}
+                                    className="absolute -bottom-2 -left-2 rotate-180"
+                                  >
+                                    <CornerFlourish />
+                                  </motion.div>
+                                </>
+                              )}
+                            </AnimatePresence>
+
+                            <blockquote className="relative z-10">
+                              <div className="flex items-start gap-3">
+                                <p className="text-text-secondary italic text-base flex-1 leading-relaxed">
+                                  "{randomizedTestimonials[currentTestimonial]?.quote}"
+                                </p>
+                                <div className="flex items-center gap-2 flex-shrink-0">
+                                  <div className="text-right">
+                                    <cite className="font-semibold text-text-primary not-italic text-sm block leading-tight">
+                                      {randomizedTestimonials[currentTestimonial]?.author}
+                                    </cite>
+                                    {randomizedTestimonials[currentTestimonial]?.role && (
+                                      <p className="text-xs text-text-muted">
+                                        {randomizedTestimonials[currentTestimonial]?.role}
+                                      </p>
+                                    )}
+                                  </div>
+                                  <motion.div
+                                    animate={{ 
+                                      rotate: hoveredTestimonial === 0 ? 360 : 0 
+                                    }}
+                                    transition={{ duration: 0.6 }}
+                                    className="w-6 h-6 flex-shrink-0"
+                                  >
+                                    <AuthorFlourish />
+                                  </motion.div>
+                                </div>
+                              </div>
+                            </blockquote>
+
+                            {/* Subtle pattern overlay on hover */}
+                            <AnimatePresence>
+                              {hoveredTestimonial === 0 && (
+                                <motion.div
+                                  initial={{ opacity: 0 }}
+                                  animate={{ opacity: 0.05 }}
+                                  exit={{ opacity: 0 }}
+                                  className="absolute inset-0 pointer-events-none"
+                                >
+                                  <FioriPattern />
+                                </motion.div>
+                              )}
+                            </AnimatePresence>
+                          </div>
+                        </motion.div>
+                      </div>
+                    )}
                   </div>
 
                   {/* Bottom Decorative Element */}
@@ -324,28 +387,33 @@ export default function NewsletterSection({
                 </motion.div>
               </div>
 
-              {/* Newsletter Form */}
+              {/* Newsletter Form - EmailOctopus */}
               <motion.div 
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.6 }}
-                className="lg:pl-8 w-full -mr-8 lg:mr-0"
+                className="lg:pl-8"
               >
-                <div className="bg-bg-primary rounded-2xl border border-border shadow-lg relative overflow-hidden w-full h-full flex flex-col">
+                <div className="bg-bg-primary rounded-2xl p-8 border border-border shadow-lg relative overflow-hidden">
                   {/* Form Background Pattern */}
                   <div className="absolute inset-0 opacity-[0.02]">
                     <CircuitPattern />
                   </div>
                   
-                  {/* Sender Newsletter Form - Script already loaded in layout.tsx */}
-                  <div className="relative z-10 w-full h-full flex-1">
-                    <SenderFormErrorBoundary>
-                      <SenderNewsletterForm 
-                        formId={process.env.NEXT_PUBLIC_SENDER_FORM_ID || ''}
-                        className="w-full h-full"
-                        fallbackUrl={process.env.NEXT_PUBLIC_SENDER_FORM_ID ? `https://stats.sender.net/forms/${process.env.NEXT_PUBLIC_SENDER_FORM_ID}/view` : undefined}
+                  {/* EmailOctopus Form */}
+                  <div className="relative z-10">
+                    {process.env.NEXT_PUBLIC_EMAILOCTOPUS_FORM_ID ? (
+                      <EmailOctopusForm 
+                        formId={process.env.NEXT_PUBLIC_EMAILOCTOPUS_FORM_ID}
+                        className="w-full"
+                        variant={variant}
+                        showTitle={false}
                       />
-                    </SenderFormErrorBoundary>
+                    ) : (
+                      <div className="text-center py-8">
+                        <p className="text-text-secondary">Newsletter form unavailable - NEXT_PUBLIC_EMAILOCTOPUS_FORM_ID not configured</p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </motion.div>
@@ -389,7 +457,7 @@ export default function NewsletterSection({
   );
 }
 
-// SVG Components
+// SVG Components (keeping all the existing ones)
 const GridPattern = () => (
   <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
     <defs>

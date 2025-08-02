@@ -1,11 +1,11 @@
-name: Deploy Custom Site to GitHub Pages # Renamed for clarity
+name: Deploy Custom Site to GitHub Pages
 
 on:
   push:
     branches: [ master ] # Or main
 
 jobs:
-  build-and-deploy: # Single job combining build and deploy
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -37,16 +37,23 @@ jobs:
         # This runs 'next build' and automatically exports to 'out'
         run: npm run build:static:lfs
         env:
+          # EmailOctopus Configuration
+          NEXT_PUBLIC_EMAILOCTOPUS_FORM_ID: ${{ secrets.NEXT_PUBLIC_EMAILOCTOPUS_FORM_ID }}
+          
+          # Analytics (if you have them)
           NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
           NEXT_PUBLIC_CLARITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_CLARITY_PROJECT_ID }}
+          
+          # Contact form (if using)
           NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY: ${{ secrets.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY }}
-          NEXT_PUBLIC_SENDER_ACCOUNT_ID: ${{ secrets.NEXT_PUBLIC_SENDER_ACCOUNT_ID }}
-          NEXT_PUBLIC_SENDER_FORM_ID: ${{ secrets.NEXT_PUBLIC_SENDER_FORM_ID }}
-          # Legacy EmailJS (keeping for fallback)
-          NEXT_PUBLIC_EMAILJS_SERVICE_ID: ${{ secrets.NEXT_PUBLIC_EMAILJS_SERVICE_ID }}
-          NEXT_PUBLIC_EMAILJS_NEWSLETTER_TEMPLATE_ID: ${{ secrets.NEXT_PUBLIC_EMAILJS_NEWSLETTER_TEMPLATE_ID }}
-          NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID: ${{ secrets.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID }}
-          NEXT_PUBLIC_EMAILJS_PUBLIC_KEY: ${{ secrets.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY }}
+          
+          # Legacy services (remove if not using)
+          # NEXT_PUBLIC_SENDER_ACCOUNT_ID: ${{ secrets.NEXT_PUBLIC_SENDER_ACCOUNT_ID }}
+          # NEXT_PUBLIC_SENDER_FORM_ID: ${{ secrets.NEXT_PUBLIC_SENDER_FORM_ID }}
+          # NEXT_PUBLIC_EMAILJS_SERVICE_ID: ${{ secrets.NEXT_PUBLIC_EMAILJS_SERVICE_ID }}
+          # NEXT_PUBLIC_EMAILJS_NEWSLETTER_TEMPLATE_ID: ${{ secrets.NEXT_PUBLIC_EMAILJS_NEWSLETTER_TEMPLATE_ID }}
+          # NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID: ${{ secrets.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID }}
+          # NEXT_PUBLIC_EMAILJS_PUBLIC_KEY: ${{ secrets.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY }}
 
       - name: Create .nojekyll file
         # Ensures GitHub Pages serves correctly

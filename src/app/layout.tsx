@@ -13,6 +13,9 @@ import Analytics from '@/components/Analytics';
 import ScrollToTopHandler from '@/components/ScrollBtns/ScrollToTopHandler';
 import TrailingSlashHandler from '@/components/TrailingSlashHandler';
 import { SenderScript } from '@/components/SenderScript';
+import DOMErrorBoundary from '@/components/DOMErrorBoundary';
+import GlobalDOMErrorHandler from '@/components/GlobalDOMErrorHandler';
+import ErrorFallback from '@/components/ErrorFallback';
 import type { Metadata, Viewport } from 'next';
 
 // Import Styles
@@ -94,15 +97,28 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             ${dancingScript.variable}
         `} suppressHydrationWarning>
       <head>
-        {/* Content Security Policy for GitHub Pages + Cloudflare */}
-        <meta 
-          httpEquiv="Content-Security-Policy" 
-          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://vercel.live https://*.vercel.app https://cdnjs.cloudflare.com https://ajax.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.sender.net https://cdnjs.cloudflare.com; img-src 'self' data: https: https://cdn.sender.net https://app.sender.net; font-src 'self' https://fonts.gstatic.com https://cdn.sender.net https://cdnjs.cloudflare.com; connect-src 'self' https://www.google-analytics.com https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://vercel.live https://cloudflare.com https://*.cloudflare.com; frame-src 'self' https://cdn.sender.net https://app.sender.net;" 
-        />
+        {/* Content Security Policy - Conditional for dev vs production */}
+        {process.env.NODE_ENV === 'development' ? (
+          // Development - Very permissive CSP (allows everything for debugging)
+          <meta 
+            httpEquiv="Content-Security-Policy" 
+            content="default-src * 'unsafe-eval' 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; style-src * 'unsafe-inline'; img-src * data: blob:; font-src * data:; connect-src *; frame-src *;" 
+          />
+        ) : (
+          // Production - Secure CSP for GitHub Pages + Cloudflare
+          <meta 
+            httpEquiv="Content-Security-Policy" 
+            content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://vercel.live https://*.vercel.app https://cdnjs.cloudflare.com https://ajax.cloudflare.com https://va.vercel-scripts.com https://*.vercel-scripts.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.sender.net https://cdnjs.cloudflare.com; img-src 'self' data: https: blob: https://cdn.sender.net https://app.sender.net; font-src 'self' https://fonts.gstatic.com https://cdn.sender.net https://cdnjs.cloudflare.com; connect-src 'self' https://www.google-analytics.com https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://vercel.live https://cloudflare.com https://*.cloudflare.com https://va.vercel-scripts.com https://*.vercel-scripts.com; frame-src 'self' https://cdn.sender.net https://app.sender.net;" 
+          />
+        )}
         
-        {/* Cloudflare optimizations */}
-        <meta name="cf-visitor" content='{"scheme":"https"}' />
-        <meta httpEquiv="X-Forwarded-Proto" content="https" />
+        {/* Cloudflare optimizations - only in production */}
+        {process.env.NODE_ENV !== 'development' && (
+          <>
+            <meta name="cf-visitor" content='{"scheme":"https"}' />
+            <meta httpEquiv="X-Forwarded-Proto" content="https" />
+          </>
+        )}
         
         {/* Google Analytics */}
         {GA_ID && (
@@ -187,21 +203,24 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       `}} />
       </head>
       <body>
-        <ThemeProvider>
-          <CookieProvider>
-            <TrailingSlashHandler />
-            <DynamicFavicon />
-            <Nav />
-            <main role="main">{children}</main>
-            <Footer />
-            <ScrollToTopHandler />
-            <Analytics />
-            {process.env.NEXT_PUBLIC_SENDER_ACCOUNT_ID && (
-              <SenderScript accountId={process.env.NEXT_PUBLIC_SENDER_ACCOUNT_ID} />
-            )}
-            <LayoutClient />
-          </CookieProvider>
-        </ThemeProvider>
+        <DOMErrorBoundary fallback={<ErrorFallback />}>
+          <ThemeProvider>
+            <CookieProvider>
+              <GlobalDOMErrorHandler />
+              <TrailingSlashHandler />
+              <DynamicFavicon />
+              <Nav />
+              <main role="main">{children}</main>
+              <Footer />
+              <ScrollToTopHandler />
+              <Analytics />
+              {process.env.NEXT_PUBLIC_SENDER_ACCOUNT_ID && (
+                <SenderScript accountId={process.env.NEXT_PUBLIC_SENDER_ACCOUNT_ID} />
+              )}
+              <LayoutClient />
+            </CookieProvider>
+          </ThemeProvider>
+        </DOMErrorBoundary>
       </body>
     </html>
   );

@@ -79,6 +79,7 @@ export default function SenderNewsletterForm({
 }: SenderNewsletterFormProps) {
   const containerRef = useIsolatedDOM();
   const [status, setStatus] = useState<'loading' | 'success' | 'error'>('loading');
+  const [serviceError, setServiceError] = useState<'config' | 'network' | 'unknown' | null>(null);
   const formInitialized = useRef(false);
   const renderAttempts = useRef(0);
   const maxAttempts = 20;
@@ -96,6 +97,36 @@ export default function SenderNewsletterForm({
 
     if (formInitialized.current || !containerRef.current) return;
     formInitialized.current = true;
+
+    // Set up service error monitoring
+    const monitorServiceErrors = () => {
+      const originalConsoleError = console.error;
+      const originalConsoleWarn = console.warn;
+      
+      // Monitor console output for specific Sender.net service issues
+      console.error = (...args) => {
+        const message = args.join(' ').toLowerCase();
+        if (message.includes('unexpected token') && message.includes('doctype')) {
+          setServiceError('config');
+        }
+        originalConsoleError.apply(console, args);
+      };
+      
+      console.warn = (...args) => {
+        const message = args.join(' ').toLowerCase();
+        if (message.includes('sender.net') && (message.includes('404') || message.includes('service'))) {
+          setServiceError('network');
+        }
+        originalConsoleWarn.apply(console, args);
+      };
+      
+      return () => {
+        console.error = originalConsoleError;
+        console.warn = originalConsoleWarn;
+      };
+    };
+
+    const cleanupServiceMonitoring = monitorServiceErrors();
 
     let mounted = true;
     let pollInterval: NodeJS.Timeout;
@@ -292,13 +323,21 @@ export default function SenderNewsletterForm({
       if (!window.sender || typeof window.sender !== 'function') {
         console.log('⏳ Waiting for sender...');
         
-        // Check for potential blocking issues
-        if (renderAttempts.current > 5) {
+        // Check for potential blocking issues and network errors
+        if (renderAttempts.current > 3) {
           const senderScripts = document.querySelectorAll('script[src*="sender.net"]');
           const isCloudflare = window.location.hostname !== 'localhost' && 
                               (document.querySelector('meta[name="cf-visitor"]') || 
                                window.navigator.userAgent.includes('CF-RAY') ||
                                document.querySelector('script[src*="cloudflare"]'));
+          
+          // Check for 404 errors specifically
+          const senderResources = performance.getEntriesByType('resource')
+            .filter(r => r.name.includes('sender.net'));
+          const has404Errors = senderResources.some(r => 
+            (r as PerformanceResourceTiming).transferSize === 0 && 
+            r.name.includes('.json')
+          );
           
           console.log('🔍 Debugging sender availability:', {
             senderScripts: senderScripts.length,
@@ -308,15 +347,21 @@ export default function SenderNewsletterForm({
             isCloudflare: isCloudflare,
             protocol: window.location.protocol,
             hostname: window.location.hostname,
-            cloudflareHeaders: isCloudflare ? 'Detected' : 'Not detected'
+            cloudflareHeaders: isCloudflare ? 'Detected' : 'Not detected',
+            senderResources: senderResources.length,
+            has404Errors: has404Errors
           });
+          
+          // If we detect 404 errors and multiple attempts, fail faster
+          if (has404Errors && renderAttempts.current > 8) {
+            console.error('🔴 Detected Sender.net 404 errors, failing early');
+            setStatus('error');
+            return false;
+          }
           
           // Cloudflare-specific checks
           if (isCloudflare) {
             console.log('☁️ Cloudflare detected - checking for proxy issues');
-            // Check if Sender.net requests are being blocked or modified by Cloudflare
-            const senderResources = performance.getEntriesByType('resource')
-              .filter(r => r.name.includes('sender.net'));
             console.log('📊 Sender.net resources via Cloudflare:', senderResources.length);
           }
         }
@@ -333,16 +378,31 @@ export default function SenderNewsletterForm({
         
         console.log('🔧 Calling sender methods with formId:', formId);
         
-        // Call all sender methods like in your HTML file
-        window.sender();
-        window.sender('init');
-        window.sender('render');
-        window.sender('scan');
-        window.sender('refresh');
-        window.sender('form', formId);
-        window.sender(formId);
-        
-        console.log('✅ Called all sender methods');
+        // Call sender methods with proper initialization sequence
+        try {
+          // First ensure sender is configured with account ID
+          const accountId = process.env.NEXT_PUBLIC_SENDER_ACCOUNT_ID;
+          if (accountId && window.sender) {
+            window.sender('config', accountId);
+          }
+          
+          // Then call the standard initialization methods
+          window.sender();
+          window.sender('init');
+          window.sender('render');
+          window.sender('scan');
+          window.sender('refresh');
+          
+          // Finally call with the form ID
+          if (formId) {
+            window.sender('form', formId);
+            window.sender(formId);
+          }
+          
+          console.log('✅ Called all sender methods with account ID:', accountId);
+        } catch (error) {
+          console.error('❌ Error calling sender methods:', error);
+        }
         
         // Additional debugging - check if Sender script is actually loaded
         const senderScripts = document.querySelectorAll('script[src*="sender.net"]');
@@ -398,6 +458,12 @@ export default function SenderNewsletterForm({
               senderGlobal: typeof window.sender,
               documentReadyState: document.readyState
             });
+            // Check for specific Sender.net service errors
+            const hasNetworkErrors = performance.getEntriesByType('resource')
+              .some(r => r.name.includes('sender.net') && (r as PerformanceResourceTiming).transferSize === 0);
+            if (hasNetworkErrors) {
+              console.error('🌐 Detected Sender.net service connectivity issues');
+            }
             setStatus('error');
           } else {
             // Keep loading state for retries
@@ -447,6 +513,7 @@ export default function SenderNewsletterForm({
       window.removeEventListener('load', handleLoad);
       window.removeEventListener('onSenderFormsLoaded', handleLoad);
       observer.disconnect();
+      cleanupServiceMonitoring();
       
       // Only clear loading overlay when component unmounts, not during retries
       // DON'T clear the container - let the isolated DOM persist
@@ -602,7 +669,11 @@ export default function SenderNewsletterForm({
             }`}>
               {!formId || formId.trim() === '' 
                 ? 'Newsletter form configuration missing'
-                : 'Newsletter form couldn\'t load'
+                : serviceError === 'config' 
+                  ? 'Newsletter service configuration error'
+                  : serviceError === 'network'
+                    ? 'Newsletter service network error'
+                    : 'Newsletter service temporarily unavailable'
               }
             </h3>
             <p className={`text-sm mb-4 ${
@@ -612,7 +683,11 @@ export default function SenderNewsletterForm({
             }`}>
               {!formId || formId.trim() === '' 
                 ? 'The NEXT_PUBLIC_SENDER_FORM_ID environment variable is not configured.'
-                : 'This might be due to ad blockers, content security policies, Cloudflare proxy settings, or network issues. The form works locally but may be blocked in production environments.'
+                : serviceError === 'config'
+                  ? 'The newsletter service returned an invalid configuration response. This usually indicates a service outage or account configuration issue.'
+                  : serviceError === 'network'
+                    ? 'The newsletter service could not be reached (404 errors). The service may be temporarily offline.'
+                    : 'The newsletter service is currently experiencing technical difficulties. Please contact the site administrator for newsletter access, or try the direct form link below.'
               }
             </p>
             {effectiveFallbackUrl ? (
@@ -626,7 +701,7 @@ export default function SenderNewsletterForm({
                     : 'bg-red-600 hover:bg-red-700'
                 }`}
               >
-                Subscribe via web form
+                Access newsletter form
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
                         d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -638,12 +713,17 @@ export default function SenderNewsletterForm({
                   Please contact the site administrator to set up the newsletter form.
                 </p>
               ) : (
-                <button
-                  onClick={() => window.location.reload()}
-                  className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 transition-colors"
-                >
-                  Try Again
-                </button>
+                <div className="space-y-3">
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 transition-colors"
+                  >
+                    Try Again
+                  </button>
+                  <p className="text-xs text-red-700">
+                    If the issue persists, please contact the site administrator about newsletter access.
+                  </p>
+                </div>
               )
             )}
           </motion.div>
