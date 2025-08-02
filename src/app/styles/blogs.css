@@ -1760,13 +1760,17 @@ html[data-theme="light"] .blog-post-container {
   }
   
   /* Mobile images */
-  .post-content img,
-  .markdown-image-wrapper {
+  .post-content img {
     margin: 1.5rem 0 !important;
   }
   
+  .markdown-image-wrapper {
+    margin: 1.5rem auto !important;
+  }
+  
   .markdown-image-wrapper.align-left,
-  .markdown-image-wrapper.align-right {
+  .markdown-image-wrapper.align-right,
+  .markdown-image-wrapper.align-center {
     float: none !important;
     max-width: 100% !important;
     margin: 1.5rem auto !important;
