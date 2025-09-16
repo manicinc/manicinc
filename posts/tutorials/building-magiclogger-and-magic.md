@@ -83,7 +83,7 @@ import pino from 'pino';
 const logger = pino();
 logger.info('Server started'); // {"level":30,"time":1234567890,"msg":"Server started"}
 
-// Want colors? Need pino-pretty (600KB extra!)
+// Want colors? Need pino-pretty (200KB extra!)
 const logger = pino({
   transport: {
     target: 'pino-pretty',
