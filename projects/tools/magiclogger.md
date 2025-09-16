@@ -1,21 +1,21 @@
 ---
-title: Magiclogger — Colorful Node / Browser Logger
-description: A powerful, zero-config logging library for Node.js and browsers with rich styling, multiple formats, and drop-in compatibility.
-date: 2025-04
+title: MagicLogger — Colorful JavaScript / TypeScript Logger
+description: A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry.
+date: 2025-04-20
 category: tools
-tags: [javascript, nodejs, logging, development, featured]
+tags: [javascript, typescript, nodejs, logging, developers, featured]
 link: https://manic.agency/magiclogger
 github: https://github.com/manicinc/magiclogger
 # image: /projects/tools/magiclogger.jpg
 featured: false
-draft: true
+draft: false
 ---
 
 ![MagicLogger]
 
 ## What's MagicLogger?
 
-A powerful, zero-config logging library that works beautifully in both Node.js and browsers. Get rich styling, colors, multiple output formats, and drop-in compatibility with popular logging libraries.
+A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry.
 
 > Simplify your logging with a single library that works everywhere.
 

@@ -206,7 +206,12 @@ export default function ZoomableImage({
             <button class="zoom-btn zoom-in-btn" aria-label="Zoom in">+</button>
           </div>
         </div>
-        <button class="image-zoom-close" aria-label="Close image">&times;</button>
+        <button class="image-zoom-close" aria-label="Close image">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
       `;
       
       document.body.appendChild(modal);
@@ -442,28 +447,56 @@ export default function ZoomableImage({
           position: absolute;
           top: 20px;
           right: 20px;
-          width: 44px;
-          height: 44px;
+          width: 48px;
+          height: 48px;
           border-radius: 50%;
-          background: rgba(var(--accent-alert-rgb), 0.3);
-          color: white;
+          background: rgba(var(--bg-tertiary-rgb), 0.8);
+          backdrop-filter: blur(10px);
+          color: var(--text-primary);
           display: flex;
           align-items: center;
           justify-content: center;
           cursor: pointer;
-          font-size: 28px;
-          border: none;
-          transition: background 0.3s ease, transform 0.2s ease;
+          border: 2px solid rgba(var(--accent-primary-rgb), 0.3);
+          transition: all 0.3s ease;
           z-index: 10;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .image-zoom-close svg {
+          width: 24px;
+          height: 24px;
+          transition: transform 0.3s ease;
         }
         
         .image-zoom-close:hover {
-          background: rgba(var(--accent-alert-rgb), 0.5);
+          background: rgba(var(--accent-primary-rgb), 0.9);
+          border-color: var(--accent-primary);
           transform: scale(1.1);
+          box-shadow: 0 6px 20px rgba(var(--accent-primary-rgb), 0.4);
+        }
+        
+        .image-zoom-close:hover svg {
+          color: white;
+          transform: rotate(90deg);
         }
         
         .image-zoom-close:active {
           transform: scale(0.95);
+        }
+        
+        /* Light mode adjustments for close button */
+        .light .image-zoom-close {
+          background: rgba(255, 255, 255, 0.95);
+          color: var(--color-light-ink);
+          border-color: rgba(var(--accent-secondary-rgb), 0.3);
+        }
+        
+        .light .image-zoom-close:hover {
+          background: var(--accent-secondary);
+          color: white;
+          border-color: var(--accent-secondary);
+          box-shadow: 0 6px 20px rgba(var(--accent-secondary-rgb), 0.4);
         }
         
         /* Improved Glitch effect */

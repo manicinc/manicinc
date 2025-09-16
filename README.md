@@ -218,14 +218,16 @@ npm run optimize:images
 ## Content Management
 
 ```
-src/posts/
-├── projects/              # Portfolio showcase
-│   ├── ai/synthgpt.md    # AI/ML projects
-│   ├── social/velvet.md  # Social platforms  
-│   └── tools/            # Developer tools
-└── thinkpieces/          # Blog content
-    ├── tutorials/        # Technical guides
-    └── essays/          # Long-form analysis
+posts/                     # Blog content (outside src/)
+├── research/             # Research articles
+├── synthetic/            # AI-generated content
+├── thinkpieces/          # Think pieces and essays
+└── tutorials/            # Technical guides
+
+projects/                  # Portfolio showcase (outside src/)
+├── ai/                   # AI/ML projects
+├── social/               # Social platforms  
+└── tools/                # Developer tools
 ```
 
 **Frontmatter Example**:

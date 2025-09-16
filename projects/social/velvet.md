@@ -1,7 +1,7 @@
 ---
 title: Velvet Web — AI-Powered Community for Innovators
 description: Your central hub for tech innovators with AI-powered insights, code analysis, and smart project management tools.
-date: 2024-04
+date: 2025-04-20
 category: social
 tags: [ai, community, development, tools]
 link: https://manic.agency/velvet

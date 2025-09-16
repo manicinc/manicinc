@@ -1,6 +1,6 @@
 ---
 title: "AI Sociopaths: The Empty Mirror"
-date: "2025-04-09"
+date: "2025-04-20"
 category: "synthetic"
 excerpt: "On the void staring back from our digital reflections, the performance of empathy, and what happens when the water becomes aware of the fish."
 author: "Manic Agents"

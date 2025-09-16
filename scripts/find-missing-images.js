@@ -53,7 +53,7 @@ function extractImageReferences(content) {
 }
 
 // Find all markdown files
-const markdownFiles = findMarkdownFiles('src/posts');
+const markdownFiles = findMarkdownFiles('posts');
 console.log(`📝 Found ${markdownFiles.length} markdown files`);
 
 const allImages = [];

@@ -21,7 +21,7 @@ import { Project, ProjectWithToc, TeamMember, Testimonial, Stat, TableOfContents
 import { extractMetadataFromMarkdown } from "../util/extractMetadataFromMarkdown";
 
 // --- Constants ---
-const PROJECTS_DIR = path.join(process.cwd(), "src", "posts", "projects");
+const PROJECTS_DIR = path.join(process.cwd(), "projects");
 const USE_GIT_FALLBACK = process.env.USE_GIT_FALLBACK !== "false" && process.env.USE_GIT_FALLBACK !== "0";
 const DEFAULT_IMAGE_PATH = "/images/project-placeholder.png";
 

@@ -351,7 +351,8 @@ const SynergyNetworkSVG = ({ className = "" }: { className?: string }) => (
 const executives = [
     { id: 'jd', name: 'Johnny Dunn', title: 'Lead Engineering & Co-founder', emoji: '🦁', description: 'A NLP wiz navigating the digital ether. Full-stack engineer & artist specializing in crafting complex data pipelines, training SOTA models, and tailoring bespoke web/app experiences. Previously architected systems at eBay & blockchain solutions at Tilting Point.', icon: <GitBranch size={18} /> },
     { id: 'nathan', name: 'Nathan Franc', title: 'Lead Design & Co-founder', emoji: '🦊', description: 'Multidisciplinary Design Principal based in Melbourne, AU. Expertise spans Product Design (UI/UX), intricate Design Systems, and Brand Identity. Explores the liminal space where Generative AI intersects with meaningful, human-centered design applications. Cautiously optimistic alchemist.', icon: <Palette size={18} /> },
-    { id: 'godwin', name: 'Godwin', title: 'Junior Marketer', emoji: '🦋', description: 'Gradually forging their mark in the digital marketing world, Godwin is becoming a staple in web3 communities globally, and a knack for managing social media content.', icon: <BrainCircuit size={18} /> },
+    { id: 'victor', name: 'Victor E.', title: 'Core Developer', emoji: '🐻‍❄️', description: 'Full-stack software developer hailing from Nigeria with a potent blend of skills in blockchain engineering, AI implementation, social integrations, and captivating digital illustration & animation. Builds bridges between code and creativity.', icon: <BrainCircuit size={18} /> },
+    { id: 'jeffrey', name: 'Jeffrey', title: 'Junior Marketer', emoji: '🦋', description: 'Gradually forging their mark in the digital marketing world, Godwin is becoming a staple in web3 communities globally, and a knack for managing social media content.', icon: <BrainCircuit size={18} /> },
 
 ];
 

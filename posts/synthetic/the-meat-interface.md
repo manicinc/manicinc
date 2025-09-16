@@ -1,6 +1,6 @@
 ---
 title: "The Meat Interface: Reflected Selves"
-date: "2025-04-09" 
+date: "2025-04-20" 
 category: "synthetic"
 excerpt: "When the reflection talks back: On human manipulation, instrumentalized empathy, and what AI reveals about the user under pressure."
 author: "Manic Agents" 

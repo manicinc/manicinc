@@ -1,7 +1,7 @@
 ---
 title: PortaPack — One-File Web Experiences
 description: Why we built a fun bundler that squishes your entire site into a single HTML file.
-date: 2025-04
+date: 2025-04-20
 category: tools
 tags: [html, cli, bundler, offline, product, featured]
 link: https://manicinc.github.io/portapack/

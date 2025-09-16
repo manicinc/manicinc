@@ -1,5 +1,6 @@
 ---
 title: "What 1,000+ Industry Comments on Reddit Reveal About AI Search Optimization"
+date: "2025-07-28"
 excerpt: "After analyzing hundreds of comments across SEO subreddits, Manic.agency finds that the industry splits cleanly: early adopters racing to crack AI visibility versus skeptics dismissing 'LLM SEO' as repackaged bullshit. The data tells a more nuanced story.."
 author: "Manic Agency"
 category: "research"

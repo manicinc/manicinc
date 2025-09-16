@@ -32,9 +32,15 @@
    padding-bottom: 0.8rem; margin-bottom: 1.5em; position: relative;
 }
 .blog-content .md-h2::after {
-   content: '❦'; font-family: serif; display: block; text-align: center;
-   color: rgba(var(--accent-highlight-rgb), 0.5); font-size: 1.5rem; line-height: 1;
-   margin-top: 0.5rem; position: absolute; bottom: -1.1rem; left: 50%; transform: translateX(-50%);
+   content: ''; 
+   display: block; 
+   position: absolute; 
+   bottom: -0.8rem; 
+   left: 50%; 
+   transform: translateX(-50%);
+   width: 30px;
+   height: 3px;
+   background: linear-gradient(90deg, transparent, rgba(var(--accent-highlight-rgb), 0.6), transparent);
 }
 .blog-content .md-h3 {
   font-size: clamp(1.7rem, 4.5vw, 2.3rem); font-weight: 600;
@@ -163,14 +169,32 @@
 /* --- Code Blocks --- */
 /* Wrapper and Header styling */
 .code-block-wrapper {
-  position: relative; margin: 2.5rem 0; border: 1px solid var(--bg-tertiary);
-  border-radius: var(--radius-lg); overflow: hidden;
-  box-shadow: var(--shadow-inset), 0 2px 5px rgba(var(--shadow-color), 0.1);
+  position: relative; 
+  margin: 2rem 0; 
+  border: 1px solid var(--bg-tertiary);
+  border-radius: var(--radius-lg); 
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  background: var(--bg-code, #f6f8fa);
+}
+
+/* Dark mode code block wrapper */
+.dark .code-block-wrapper {
+  background: #1e1e2e;
+  border-color: #313244;
 }
 .code-block-header {
-  display: flex; justify-content: space-between; align-items: center;
-  background-color: var(--bg-tertiary); padding: 0.6rem 1.2rem;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.03); 
+  padding: 0.5rem 1rem;
   border-bottom: 1px solid var(--bg-tertiary);
+}
+
+.dark .code-block-header {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom-color: #313244;
 }
 .code-language {
   font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);
@@ -190,13 +214,51 @@
 
 /* Container rendered by SyntaxHighlighter (PreTag="div") */
 .code-block-wrapper > div[class*="react-syntax-highlighter"] {
-  margin: 0 !important; padding: 1.2rem 1.5rem !important;
-  border-radius: 0 0 var(--radius-lg) var(--radius-lg) !important;
+  margin: 0 !important; 
+  padding: 1.2rem 1.5rem !important;
+  background: transparent !important;
   border: none !important;
-  font-family: var(--font-mono) !important; font-size: 0.95rem !important; line-height: 1.75 !important;
-  overflow-x: auto !important; white-space: pre !important;
+  font-family: var(--font-mono) !important; 
+  font-size: 0.9rem !important; 
+  line-height: 1.6 !important;
+  overflow-x: auto !important; 
+  white-space: pre !important;
+  word-wrap: normal !important;
+  word-break: normal !important;
   /* Themed scrollbar */
-  scrollbar-color: var(--accent-muted2) var(--bg-tertiary); scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent; 
+  scrollbar-width: thin;
+}
+
+/* Ensure all code blocks preserve formatting */
+.code-block-wrapper code,
+.code-block-wrapper pre {
+  white-space: pre !important;
+  word-wrap: normal !important;
+  word-break: normal !important;
+}
+
+/* Plain code blocks without syntax highlighting */
+.blog-content pre:not(.code-block-wrapper pre) {
+  font-family: var(--font-mono);
+  background: var(--bg-code, #f6f8fa);
+  color: var(--text-primary);
+  padding: 1.2rem;
+  border-radius: var(--radius-base);
+  margin: 1.5rem 0;
+  border: 1px solid var(--bg-tertiary);
+  overflow-x: auto;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  white-space: pre !important;
+  word-wrap: normal !important;
+  word-break: normal !important;
+}
+
+.dark .blog-content pre:not(.code-block-wrapper pre) {
+  background: #1e1e2e;
+  border-color: #313244;
+  color: #cdd6f4;
 }
 .code-block-wrapper > div[class*="react-syntax-highlighter"]::-webkit-scrollbar { height: 8px; width: 8px; background-color: var(--bg-tertiary); }
 .code-block-wrapper > div[class*="react-syntax-highlighter"]::-webkit-scrollbar-thumb { background-color: var(--accent-muted2); border-radius: 4px; border: 2px solid var(--bg-tertiary); }
@@ -204,20 +266,28 @@
 
 
 /* --- Inline Code --- */
-.blog-content .inline-code {
+.blog-content .inline-code,
+.blog-content code:not(pre code) {
   font-family: var(--font-mono);
-  color: var(--accent-primary);
-  background: rgba(var(--accent-primary-rgb), 0.1);
-  border: 1px solid rgba(var(--accent-primary-rgb), 0.2);
-  border-radius: var(--radius-base);
-  font-size: 0.88em;
-  padding: 0.15em 0.4em;
+  color: var(--text-primary);
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+  font-size: 0.85em;
+  padding: 0.2em 0.4em;
   margin: 0 0.1em;
   word-wrap: break-word;
   white-space: normal;
   /* Ensure no text decoration issues */
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+}
+
+.dark .blog-content .inline-code,
+.dark .blog-content code:not(pre code) {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f38ba8;
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Override any inherited link styles for inline code */
@@ -227,31 +297,55 @@
   background: rgba(var(--accent-primary-rgb), 0.15) !important;
 }
 
-/* Fix the problematic global CSS that's affecting code styling */
-.post-content code:not(pre > code),
-.blog-content code:not(pre > code),
-.markdown-content code:not(pre > code) {
+/* Fix spacing between code blocks and text */
+.blog-content p + pre,
+.blog-content p + .code-block-wrapper {
+  margin-top: 1.5rem;
+}
+
+.blog-content pre + pre,
+.blog-content .code-block-wrapper + .code-block-wrapper {
+  margin-top: 1rem;
+}
+
+/* Plain text blocks (like file structures) */
+.blog-content pre.plain,
+.blog-content pre:has(> code:not([class*="language-"])) {
+  font-family: var(--font-mono);
+  background: var(--bg-secondary, #f6f8fa);
+  color: var(--text-primary);
+  padding: 1.2rem;
+  margin: 1.5rem 0;
+  border-radius: var(--radius-base);
+  border: 1px solid var(--bg-tertiary);
+  line-height: 1.5;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  white-space: pre !important;
+  word-wrap: normal !important;
+  word-break: normal !important;
+}
+
+.dark .blog-content pre.plain,
+.dark .blog-content pre:has(> code:not([class*="language-"])) {
+  background: #1e1e2e;
+  border-color: #313244;
+  color: #cdd6f4;
+}
+
+/* Global fix for all pre and code blocks to preserve whitespace */
+.blog-content pre,
+.blog-content pre code,
+.blog-content .code-block-wrapper pre,
+.blog-content .code-block-wrapper code,
+.post-content pre,
+.post-content pre code,
+.post-content .code-block-wrapper pre,
+.post-content .code-block-wrapper code {
+  white-space: pre !important;
+  word-wrap: normal !important;
+  word-break: normal !important;
   font-family: var(--font-mono) !important;
-  color: var(--accent-primary) !important;
-  background: rgba(var(--accent-primary-rgb), 0.1) !important;
-  border: 1px solid rgba(var(--accent-primary-rgb), 0.2) !important;
-  border-radius: var(--radius-base) !important;
-  font-size: 0.88em !important;
-  padding: 0.15em 0.4em !important;
-  word-wrap: break-word !important;
-  /* Remove all problematic styling */
-  text-decoration: none !important;
-  text-shadow: none !important;
-  box-shadow: none !important;
-  outline: none !important;
-  text-underline-offset: unset !important;
-  border-bottom: none !important;
-  /* Force clean styling */
-  background-clip: padding-box !important;
-  box-decoration-break: clone !important;
-  -webkit-box-decoration-break: clone !important;
-  vertical-align: baseline !important;
-  white-space: pre-wrap !important;
 }
 
 /* Remove any inherited link/anchor styling from code */
@@ -349,9 +443,13 @@ html.dark .blog-content blockquote em {
 }
 /* Optional flourish for attribution */
 .blog-content .styled-quote .quote-attribution::before {
-  content: '❦'; font-family: serif; display: block; text-align: center;
-  color: var(--accent-muted1); font-size: 1.3rem; line-height: 0;
-  margin-bottom: 0.8rem;
+  content: '—'; 
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: var(--accent-muted1);
+  margin-right: 8px;
+  vertical-align: middle;
 }
 .blog-content .styled-quote .quote-attribution::after { /* Hide default dash */
   content: none;
@@ -475,6 +573,130 @@ html.dark .blog-content blockquote em {
 .blog-content td:has(∼) {
   text-align: center;
   font-weight: 500;
+}
+
+/* ======================================== */
+/* Syntax Highlighting - Muted Colors      */
+/* ======================================== */
+
+/* Override aggressive syntax highlighting with muted colors */
+.code-block-wrapper code[class*="language-"],
+.code-block-wrapper pre[class*="language-"],
+.code-block-wrapper .token {
+  text-shadow: none !important;
+}
+
+/* Light mode - muted syntax colors */
+.code-block-wrapper .token.comment,
+.code-block-wrapper .token.prolog,
+.code-block-wrapper .token.doctype,
+.code-block-wrapper .token.cdata {
+  color: #6a737d !important;
+}
+
+.code-block-wrapper .token.punctuation {
+  color: #24292e !important;
+}
+
+.code-block-wrapper .token.property,
+.code-block-wrapper .token.tag,
+.code-block-wrapper .token.boolean,
+.code-block-wrapper .token.number,
+.code-block-wrapper .token.constant,
+.code-block-wrapper .token.symbol {
+  color: #005cc5 !important;
+}
+
+.code-block-wrapper .token.selector,
+.code-block-wrapper .token.attr-name,
+.code-block-wrapper .token.string,
+.code-block-wrapper .token.char,
+.code-block-wrapper .token.builtin {
+  color: #032f62 !important;
+}
+
+.code-block-wrapper .token.operator,
+.code-block-wrapper .token.entity,
+.code-block-wrapper .token.url {
+  color: #24292e !important;
+  background: transparent !important;
+}
+
+.code-block-wrapper .token.atrule,
+.code-block-wrapper .token.attr-value,
+.code-block-wrapper .token.keyword {
+  color: #d73a49 !important;
+}
+
+.code-block-wrapper .token.function,
+.code-block-wrapper .token.class-name {
+  color: #6f42c1 !important;
+}
+
+.code-block-wrapper .token.regex,
+.code-block-wrapper .token.important,
+.code-block-wrapper .token.variable {
+  color: #e36209 !important;
+}
+
+/* Dark mode - muted syntax colors */
+.dark .code-block-wrapper .token.comment,
+.dark .code-block-wrapper .token.prolog,
+.dark .code-block-wrapper .token.doctype,
+.dark .code-block-wrapper .token.cdata {
+  color: #6c7086 !important;
+}
+
+.dark .code-block-wrapper .token.punctuation {
+  color: #bac2de !important;
+}
+
+.dark .code-block-wrapper .token.property,
+.dark .code-block-wrapper .token.tag,
+.dark .code-block-wrapper .token.boolean,
+.dark .code-block-wrapper .token.number,
+.dark .code-block-wrapper .token.constant,
+.dark .code-block-wrapper .token.symbol {
+  color: #89b4fa !important;
+}
+
+.dark .code-block-wrapper .token.selector,
+.dark .code-block-wrapper .token.attr-name,
+.dark .code-block-wrapper .token.string,
+.dark .code-block-wrapper .token.char,
+.dark .code-block-wrapper .token.builtin {
+  color: #a6e3a1 !important;
+}
+
+.dark .code-block-wrapper .token.operator,
+.dark .code-block-wrapper .token.entity,
+.dark .code-block-wrapper .token.url {
+  color: #cdd6f4 !important;
+  background: transparent !important;
+}
+
+.dark .code-block-wrapper .token.atrule,
+.dark .code-block-wrapper .token.attr-value,
+.dark .code-block-wrapper .token.keyword {
+  color: #cba6f7 !important;
+}
+
+.dark .code-block-wrapper .token.function,
+.dark .code-block-wrapper .token.class-name {
+  color: #f9e2af !important;
+}
+
+.dark .code-block-wrapper .token.regex,
+.dark .code-block-wrapper .token.important,
+.dark .code-block-wrapper .token.variable {
+  color: #fab387 !important;
+}
+
+/* Remove animations/transitions from code blocks */
+.code-block-wrapper *,
+.blog-content pre * {
+  transition: none !important;
+  animation: none !important;
 }
 
 /* Mobile responsiveness for tables */

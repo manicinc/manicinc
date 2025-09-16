@@ -1,6 +1,6 @@
 ---
 title: "⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform"
-date: "2025-04-10"
+date: "2025-04-20"
 excerpt: "Learn how to contribute your experimental ideas and digital explorations to our synthetic publishing platform."
 author: "Manic Agency"
 category: "documentation"
@@ -43,7 +43,7 @@ This site is built and operated by [https://manic.agency](https://manic.agency).
 
 1. **Fork the Repository**: Start by forking `manicinc/manicinc` on GitHub.
 2. **Create Content File**:
-   * Location: `src/posts/[category]/your-article-slug.md` (or `.mdx`)
+   * Location: `posts/[category]/your-article-slug.md` (or `.mdx`)
    * Choose an appropriate `[category]` (e.g., `experiments`, `research`, `tutorials`, `theory`).
 3. **Add Supporting Images**:
    * Location: `public/assets/blog/[your-article-slug]/` (Create this folder).

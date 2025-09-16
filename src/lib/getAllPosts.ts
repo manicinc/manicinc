@@ -7,7 +7,7 @@ import { execSync } from 'child_process'; // For Git commands
 import { BlogPost, AuthorInfo, TableOfContentsItem } from "@/types/blog"; // Use updated types
 import { extractMetadataFromMarkdown } from "@/util/extractMetadataFromMarkdown"; // Ensure path is correct
 
-const POSTS_DIR = path.join(process.cwd(), "src", "posts"); // Your posts directory
+const POSTS_DIR = path.join(process.cwd(), "posts"); // Your posts directory
 const USE_GIT_FALLBACK = process.env.USE_GIT_FALLBACK !== 'false'; // Control Git usage via env var
 const DEFAULT_AUTHOR_NAME = "Manic Agency"; // Default author name
 
