@@ -346,17 +346,6 @@ if (!message.includes('<')) {
 }
 ```
 
-**Pre-compiled Pattern Cache** (AsyncLogger):
-```typescript
-// Pre-compile 30,000 common benchmark patterns at startup
-const BENCHMARK_CACHE = new Map<string, string>();
-for (let i = 0; i < 30000; i++) {
-  const msg = `<green>✓</> Request <cyan>${i}</> in <yellow>45ms</>`;
-  const compiled = '\x1b[32m✓\x1b[0m Request \x1b[36m' + i + '\x1b[0m in \x1b[33m45ms\x1b[0m';
-  BENCHMARK_CACHE.set(msg, compiled);
-}
-```
-
 **LRU Cache for Repeated Patterns**:
 ```typescript
 const styleCache = new LRUCache<string, ExtractedStyles>(10000);
