@@ -1,0 +1,116 @@
+/* ============================================
+   BLOG BASE STYLES
+   Core styles and theme overrides for blog pages
+   ============================================ */
+
+/* Blog Body Theme */
+body.is-blog {
+  --font-body: var(--font-body-blog);
+  --font-display: var(--font-heading-blog);
+  --font-meta: var(--font-meta-blog);
+  --font-script: var(--font-script-blog);
+
+  font-family: var(--font-body);
+  font-size: var(--blog-font-size-base, 20px);
+  line-height: 1.9;
+  color: var(--text-primary);
+
+  /* Enhanced background with gradients */
+  background:
+    radial-gradient(ellipse at top left, rgba(var(--accent-secondary-rgb), 0.1) 0%, transparent 40%),
+    radial-gradient(ellipse at bottom right, rgba(var(--accent-primary-rgb), 0.08) 0%, transparent 50%),
+    linear-gradient(180deg, var(--bg-blog-paper) 0%, rgba(var(--bg-blog-paper-rgb), 0.98) 100%);
+  background-attachment: fixed;
+  background-color: var(--bg-blog-paper);
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode overrides */
+html.dark body.is-blog,
+body.is-blog.dark {
+  background-color: #252033;
+  color: #ffffff;
+  --bg-blog-paper: #302435;
+  --bg-blog-paper-rgb: 48, 36, 53;
+}
+
+/* Light mode overrides */
+html:not(.dark) body.is-blog,
+html.light body.is-blog {
+  background-color: #faf3e9;
+  color: #4a3f35;
+  --bg-blog-paper: #faf3e9;
+  --bg-blog-paper-rgb: 250, 243, 233;
+}
+
+/* Utility: Ornate Horizontal Rule */
+hr.ornate-rule {
+  border: none;
+  border-top: 1px solid rgba(var(--accent-highlight-rgb), 0.3);
+  border-bottom: 1px solid rgba(var(--accent-primary-rgb), 0.3);
+  height: 8px;
+  background-color: transparent;
+  text-align: center;
+  margin: 3.5rem auto;
+  width: 50%;
+  max-width: 250px;
+  position: relative;
+}
+
+hr.ornate-rule::before {
+  content: '◆';
+  font-family: serif;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--accent-muted1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background-color: var(--bg-blog-paper);
+  padding: 0 0.5em;
+}
+
+/* Loading States */
+.loading-fallback {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-script);
+  font-size: 2rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+/* Reading Progress Bar */
+.reading-progress-bar {
+  position: fixed;
+  top: var(--header-height, 60px);
+  left: 0;
+  height: 4px;
+  background: linear-gradient(to right, var(--accent-secondary), var(--accent-primary));
+  box-shadow: 0 1px 3px rgba(var(--accent-primary-rgb), 0.3);
+  z-index: 1200;
+  transition: width 0.2s linear;
+  border-radius: 0 2px 2px 0;
+  opacity: 0.85;
+  width: var(--reading-progress, 0%);
+  pointer-events: none;
+}
+
+/* Performance optimizations */
+.is-scrolling * {
+  transition: none !important;
+  animation: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

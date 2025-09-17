@@ -45,12 +45,25 @@ interface Props {
 
 const TOP_LINK_ID = "post-content-top";
 
-export default function BlogSidebarClient({ tableOfContents = [], postTitle }: Props) {
-    const [isDesktopSidebarOpen, setIsDesktopSidebarOpen] = useState(true);
+const BlogSidebarClient = React.memo(({ tableOfContents = [], postTitle }: Props) => {
+    // Lazy initial state for desktop sidebar
+    const [isDesktopSidebarOpen, setIsDesktopSidebarOpen] = useState(() => {
+        if (typeof window !== 'undefined') {
+            const saved = localStorage.getItem('blogSidebarOpen');
+            return saved !== null ? saved === 'true' : true;
+        }
+        return true;
+    });
     const [isMobileTocOpen, setIsMobileTocOpen] = useState(false);
     const [activeHeading, setActiveHeading] = useState<string>(TOP_LINK_ID);
     const [showBackToTop, setShowBackToTop] = useState(false);
-    const [showNumbering, setShowNumbering] = useState(true);
+    const [showNumbering, setShowNumbering] = useState(() => {
+        if (typeof window !== 'undefined') {
+            const saved = localStorage.getItem('blogTocNumbering');
+            return saved !== null ? saved === 'true' : true;
+        }
+        return true;
+    });
     const sidebarRef = useRef<HTMLElement>(null);
     const tocListRef = useRef<HTMLUListElement>(null);
     const mobileOverlayRef = useRef<HTMLDivElement>(null);
@@ -64,7 +77,31 @@ export default function BlogSidebarClient({ tableOfContents = [], postTitle }: P
         }
         return offset;
     }, []);
-    const handleScroll = useCallback(() => { /* ... keep as is ... */
+    // Throttle function for performance
+    const throttle = (func: Function, delay: number) => {
+        let lastCall = 0;
+        let timeoutId: NodeJS.Timeout | null = null;
+        return (...args: any[]) => {
+            const now = Date.now();
+            const remaining = delay - (now - lastCall);
+            if (remaining <= 0) {
+                if (timeoutId) {
+                    clearTimeout(timeoutId);
+                    timeoutId = null;
+                }
+                lastCall = now;
+                func(...args);
+            } else if (!timeoutId) {
+                timeoutId = setTimeout(() => {
+                    lastCall = Date.now();
+                    timeoutId = null;
+                    func(...args);
+                }, remaining);
+            }
+        };
+    };
+
+    const handleScrollRaw = useCallback(() => {
         setShowBackToTop(window.scrollY > 600);
         const contentArea = document.querySelector('.post-content');
         if (!contentArea) return;
@@ -84,13 +121,28 @@ export default function BlogSidebarClient({ tableOfContents = [], postTitle }: P
             }
         }
         setActiveHeading(bestCandidateId);
-      }, [getHeaderOffset]);
-    useEffect(() => { /* ... scroll listener effect ... */
-        handleScroll();
+    }, [getHeaderOffset]);
+
+    // Memoize throttled handler
+    const handleScroll = React.useMemo(
+        () => throttle(handleScrollRaw, 100),
+        [handleScrollRaw]
+    );
+    useEffect(() => {
+        // Initial check
+        handleScrollRaw();
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
-      }, [handleScroll]);
-    const toggleDesktopSidebar = useCallback(() => { /* ... keep as is ... */ setIsDesktopSidebarOpen(prev => !prev); }, []);
+    }, [handleScroll, handleScrollRaw]);
+    const toggleDesktopSidebar = useCallback(() => {
+        setIsDesktopSidebarOpen(prev => {
+            const newState = !prev;
+            if (typeof window !== 'undefined') {
+                localStorage.setItem('blogSidebarOpen', String(newState));
+            }
+            return newState;
+        });
+    }, []);
     const toggleMobileToc = useCallback(() => { /* ... keep as is ... */
         setIsMobileTocOpen(prev => {
             const nextState = !prev;
@@ -161,14 +213,29 @@ export default function BlogSidebarClient({ tableOfContents = [], postTitle }: P
             }
         }
       }, [activeHeading]);
-    const toggleNumbering = useCallback(() => setShowNumbering(prev => !prev), []);
+    const toggleNumbering = useCallback(() => {
+        setShowNumbering(prev => {
+            const newState = !prev;
+            if (typeof window !== 'undefined') {
+                localStorage.setItem('blogTocNumbering', String(newState));
+            }
+            return newState;
+        });
+    }, []);
 
 
-    const renderTocList = () => {
-        // Filter out level 1 headings (e.g., the main post title if it's h1)
-        const filteredToc = tableOfContents.filter(heading => heading.level !== 1);
-        // Find the minimum heading level *among the ones we are actually displaying*
-        const minLevel = filteredToc.length > 0 ? Math.min(...filteredToc.map(h => h.level)) : 2; // Default to 2 if empty
+    // Memoize filtered TOC to avoid recalculation
+    const filteredToc = React.useMemo(
+        () => tableOfContents.filter(heading => heading.level !== 1),
+        [tableOfContents]
+    );
+
+    const minLevel = React.useMemo(
+        () => filteredToc.length > 0 ? Math.min(...filteredToc.map(h => h.level)) : 2,
+        [filteredToc]
+    );
+
+    const renderTocList = React.useCallback(() => {
 
         return (
             // Add .numbered class dynamically based on showNumbering state
@@ -206,7 +273,7 @@ export default function BlogSidebarClient({ tableOfContents = [], postTitle }: P
                 })}
             </ul>
         );
-    };
+    }, [activeHeading, filteredToc, handleTocClick, minLevel, postTitle, showNumbering]);
 
     // --- JSX Structure (Mostly Unchanged) ---
     return (
@@ -274,7 +341,10 @@ export default function BlogSidebarClient({ tableOfContents = [], postTitle }: P
 
             <ScrollToTop type='blog' scrollToTop={scrollToTop} showBackToTop={showBackToTop}/>
             {/* --- Back to Top Button --- */}
-            
+
         </>
     );
-}
+});
+
+BlogSidebarClient.displayName = 'BlogSidebarClient';
+export default BlogSidebarClient;

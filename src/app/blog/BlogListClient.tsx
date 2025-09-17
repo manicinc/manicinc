@@ -44,7 +44,7 @@ const getUniqueItems = (posts: BlogPost[], key: 'tags' | 'category'): string[] =
 };
 
 
-export default function BlogListClient({ initialPosts }: BlogListClientProps) {
+const BlogListClient = React.memo(({ initialPosts }: BlogListClientProps) => {
     const router = useRouter();
     const pathname = usePathname();
     // Get searchParams hook, but DON'T use immediately for state
@@ -57,8 +57,15 @@ export default function BlogListClient({ initialPosts }: BlogListClientProps) {
     const [sortBy, setSortBy] = useState<'dateDesc' | 'dateAsc' | 'titleAsc' | 'titleDesc'>('dateDesc');
     const [isMounted, setIsMounted] = useState(false); // Track client-side mounting
 
-    // UI State
-    const [isFilterPanelOpen, setIsFilterPanelOpen] = useState(true);
+    // UI State - lazy initial state for filter panel
+    const [isFilterPanelOpen, setIsFilterPanelOpen] = useState(() => {
+        // Check localStorage for saved preference
+        if (typeof window !== 'undefined') {
+            const saved = localStorage.getItem('blogFilterPanelOpen');
+            return saved !== null ? saved === 'true' : true;
+        }
+        return true;
+    });
     const [showAllTags, setShowAllTags] = useState(false);
 
     // Effect runs only on the client, AFTER mount
@@ -117,29 +124,44 @@ export default function BlogListClient({ initialPosts }: BlogListClientProps) {
          router.replace(`${pathname}${queryString ? `?${queryString}` : ''}`, { scroll: false });
      };
 
-    const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(e.target.value);
-    const clearSearch = () => setSearchTerm('');
+    const handleSearchChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchTerm(e.target.value);
+    }, []);
+    const clearSearch = useCallback(() => setSearchTerm(''), []);
 
-    const handleCategoryClick = (category: string | null) => {
+    const handleCategoryClick = useCallback((category: string | null) => {
         const newCategory = selectedCategory === category ? null : category;
         setSelectedCategory(newCategory);
         // updateUrlParams({ category: newCategory, tags: selectedTags }); // Update URL
-    };
-    const handleTagClick = (tag: string) => {
-        const newTags = selectedTags.includes(tag) ? selectedTags.filter(t => t !== tag) : [...selectedTags, tag];
-        setSelectedTags(newTags);
+    }, [selectedCategory]);
+
+    const handleTagClick = useCallback((tag: string) => {
+        setSelectedTags(prev =>
+            prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]
+        );
         // updateUrlParams({ category: selectedCategory, tags: newTags }); // Update URL
-    };
-    const handleSortChange = (newSortBy: typeof sortBy) => setSortBy(newSortBy);
-    const resetFilters = () => {
+    }, []);
+
+    const handleSortChange = useCallback((newSortBy: typeof sortBy) => setSortBy(newSortBy), []);
+
+    const resetFilters = useCallback(() => {
         setSearchTerm('');
         setSelectedCategory(null);
         setSelectedTags([]);
         setSortBy('dateDesc');
         setShowAllTags(false);
        // updateUrlParams({ category: null, tags: [] }); // Update URL
-    };
-    const toggleFilterPanel = useCallback(() => setIsFilterPanelOpen(prev => !prev), []);
+    }, []);
+    const toggleFilterPanel = useCallback(() => {
+        setIsFilterPanelOpen(prev => {
+            const newState = !prev;
+            // Save preference to localStorage
+            if (typeof window !== 'undefined') {
+                localStorage.setItem('blogFilterPanelOpen', String(newState));
+            }
+            return newState;
+        });
+    }, []);
     const toggleShowAllTags = useCallback(() => setShowAllTags(prev => !prev), []);
 
     const displayedTags = showAllTags ? uniqueTags : uniqueTags.slice(0, INITIAL_TAG_LIMIT);
@@ -149,6 +171,120 @@ export default function BlogListClient({ initialPosts }: BlogListClientProps) {
          // Or your specific loading fallback for this section
          return <div className="loading-fallback">Initializing Filters...</div>;
      }
+
+    // Memoize tag and category buttons to prevent unnecessary re-renders
+    const CategoryButton = React.memo(({ category, isActive, onClick }: any) => (
+        <button
+            onClick={() => onClick(category)}
+            className={`blog-category-filter ${isActive ? 'active' : ''}`}
+        >
+            {category.replace(/-/g, ' ')}
+        </button>
+    ));
+    CategoryButton.displayName = 'CategoryButton';
+
+    const TagButton = React.memo(({ tag, isActive, onClick }: any) => (
+        <button
+            onClick={() => onClick(tag)}
+            className={`blog-tag-filter ${isActive ? 'active' : ''}`}
+        >
+            #{tag}
+        </button>
+    ));
+    TagButton.displayName = 'TagButton';
+
+    // Memoized Blog Card Component for better performance
+    const BlogCard = React.memo(({ post, onCategoryClick, onTagClick }: {
+        post: BlogPost;
+        onCategoryClick: (category: string | null) => void;
+        onTagClick: (tag: string) => void;
+    }) => (
+        <div className="blog-card">
+            <Link href={`/blog/${post.category || 'uncategorized'}/${post.slug}`} className="blog-card-image-link" aria-label={post.title}>
+                <div className="blog-card-image">
+                    {post.image ? (
+                        <Image
+                            src={post.image}
+                            alt={post.title || 'Blog post image'}
+                            width={400}
+                            height={250}
+                            loading="lazy"
+                            className="blog-card-img"
+                        />
+                    ) : (
+                        <div className="blog-card-placeholder">
+                            <AsciiArtPlaceholder animate={true} width="100%" height="100%"/>
+                        </div>
+                    )}
+                </div>
+            </Link>
+            <div className="blog-card-content">
+                {post.category && (
+                    <div className="blog-category">
+                        <button onClick={() => onCategoryClick(post.category || null)} className="category-name">
+                            {post.category.replace(/-/g, ' ')}
+                        </button>
+                    </div>
+                )}
+                <h2 className="blog-entry-title">
+                    <Link href={`/blog/${post.category || 'uncategorized'}/${post.slug}`} className="blog-link">
+                        {post.title || 'Untitled Post'}
+                    </Link>
+                </h2>
+                <div className="blog-meta">
+                    {post.author && (
+                        <span className="blog-author">
+                            <IconOrnateAuthor size={14}/>
+                            {post.author.githubUsername ? (
+                                <a href={`https://github.com/${post.author.githubUsername}`} target="_blank" rel="noopener noreferrer" className="author-link">
+                                    {post.author.name}
+                                </a>
+                            ) : (
+                                <span className="author-name">{post.author.name}</span>
+                            )}
+                        </span>
+                    )}
+                    {post.date && (
+                        <span className="blog-date">
+                            <IconOrnateCalendar size={14}/>
+                            <time dateTime={post.date ? new Date(post.date).toISOString() : undefined}>
+                                {new Date(post.date).toLocaleDateString('en-US', {
+                                    year: 'numeric',
+                                    month: 'short',
+                                    day: 'numeric',
+                                    timeZone: 'UTC'
+                                })}
+                            </time>
+                        </span>
+                    )}
+                    {post.readingTime && (
+                        <span className="blog-reading-time">
+                            <IconOrnateClock size={14}/> {post.readingTime} min read
+                        </span>
+                    )}
+                </div>
+                <p className="blog-excerpt">{post.excerpt || 'No excerpt available...'}</p>
+                {post.tags && post.tags.length > 0 && (
+                    <div className="blog-tags">
+                        {post.tags.slice(0, 3).map(tag => (
+                            <button key={tag} onClick={() => onTagClick(tag)} className="blog-tag">
+                                #{tag}
+                            </button>
+                        ))}
+                        {post.tags.length > 3 && (
+                            <span className="blog-tag-ellipsis">...</span>
+                        )}
+                    </div>
+                )}
+                <div className="readmore-container">
+                    <Link href={`/blog/${post.category || 'uncategorized'}/${post.slug}`} className="readmore-link">
+                        Read Entry <IconArrowRight size={12} className="arrow"/>
+                    </Link>
+                </div>
+            </div>
+        </div>
+    ));
+    BlogCard.displayName = 'BlogCard';
 
     // --- JSX RENDER ---
     return (
@@ -177,9 +313,9 @@ export default function BlogListClient({ initialPosts }: BlogListClientProps) {
                         </div>
                     </div>
                      {/* Categories */}
-                    {uniqueCategories.length > 0 && ( <div className="filter-group category-filter-group"> <label className="filter-label"><IconOrnateTag className="filter-icon" /> Chapters</label> <div className="filter-options">{uniqueCategories.map(category => (<button key={category} onClick={() => handleCategoryClick(category)} className={`blog-category-filter ${selectedCategory === category ? 'active' : ''}`}>{category.replace(/-/g, ' ')}</button>))}</div> </div> )}
+                    {uniqueCategories.length > 0 && ( <div className="filter-group category-filter-group"> <label className="filter-label"><IconOrnateTag className="filter-icon" /> Chapters</label> <div className="filter-options">{uniqueCategories.map(category => (<CategoryButton key={category} category={category} isActive={selectedCategory === category} onClick={handleCategoryClick} />))}</div> </div> )}
                      {/* Tags */}
-                     {uniqueTags.length > 0 && ( <div className="filter-group tag-filter-group"> <label className="filter-label"><IconOrnateTag className="filter-icon" /> Terms</label> <div className="filter-options">{displayedTags.map(tag => (<button key={tag} onClick={() => handleTagClick(tag)} className={`blog-tag-filter ${selectedTags.includes(tag) ? 'active' : ''}`}>#{tag}</button>))}</div> {uniqueTags.length > INITIAL_TAG_LIMIT && (<button onClick={toggleShowAllTags} className="show-more-tags-btn">{showAllTags ? 'Show Fewer...' : `Show All (${uniqueTags.length})...`}</button>)}</div> )}
+                     {uniqueTags.length > 0 && ( <div className="filter-group tag-filter-group"> <label className="filter-label"><IconOrnateTag className="filter-icon" /> Terms</label> <div className="filter-options">{displayedTags.map(tag => (<TagButton key={tag} tag={tag} isActive={selectedTags.includes(tag)} onClick={handleTagClick} />))}</div> {uniqueTags.length > INITIAL_TAG_LIMIT && (<button onClick={toggleShowAllTags} className="show-more-tags-btn">{showAllTags ? 'Show Fewer...' : `Show All (${uniqueTags.length})...`}</button>)}</div> )}
                 </div>
             </div>
 
@@ -200,38 +336,18 @@ export default function BlogListClient({ initialPosts }: BlogListClientProps) {
             {filteredAndSortedPosts.length > 0 ? (
                 <div className="blog-grid">
                     {filteredAndSortedPosts.map(post => (
-                        <div key={post.slug} className="blog-card">
-                             <Link href={`/blog/${post.category || 'uncategorized'}/${post.slug}`} className="blog-card-image-link" aria-label={post.title}><div className="blog-card-image">{post.image ? (<Image src={post.image} alt={post.title || 'Blog post image'} width={400} height={250} loading="lazy" className="blog-card-img" />) : (<div className="blog-card-placeholder"><AsciiArtPlaceholder animate={true} width="100%" height="100%"/></div>)}</div></Link>
-                             <div className="blog-card-content">
-                                {post.category && (<div className="blog-category"><button onClick={() => handleCategoryClick(post.category || null)} className="category-name">{post.category.replace(/-/g, ' ')}</button></div>)}
-                                <h2 className="blog-entry-title"><Link href={`/blog/${post.category || 'uncategorized'}/${post.slug}`} className="blog-link">{post.title || 'Untitled Post'}</Link></h2>
-                                <div className="blog-meta">
-                                     {/* Author */}
-                                     {post.author && (
-                                         <span className="blog-author">
-                                             <IconOrnateAuthor size={14}/> 
-                                             {post.author.githubUsername ? (
-                                                 <a href={`https://github.com/${post.author.githubUsername}`} target="_blank" rel="noopener noreferrer" className="author-link">
-                                                     {post.author.name}
-                                                 </a>
-                                             ) : (
-                                                 <span className="author-name">{post.author.name}</span>
-                                             )}
-                                         </span>
-                                     )}
-                                     {/* Published Date */}
-                                     {post.date && (<span className="blog-date"><IconOrnateCalendar size={14}/> <time dateTime={post.date ? new Date(post.date).toISOString() : undefined}>{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' })}</time></span>)}
-                                     {/* Reading Time */}
-                                     {post.readingTime && (<span className="blog-reading-time"><IconOrnateClock size={14}/> {post.readingTime} min read</span>)}
-                                 </div>
-                                <p className="blog-excerpt">{post.excerpt || 'No excerpt available...'}</p>
-                                {post.tags && post.tags.length > 0 && (<div className="blog-tags">{post.tags.slice(0, 3).map(tag => (<button key={tag} onClick={() => handleTagClick(tag)} className="blog-tag">#{tag}</button>))} {post.tags.length > 3 && (<span className="blog-tag-ellipsis">...</span>)}</div>)}
-                                <div className="readmore-container"><Link href={`/blog/${post.category || 'uncategorized'}/${post.slug}`} className="readmore-link">Read Entry <IconArrowRight size={12} className="arrow"/></Link></div>
-                             </div>
-                         </div>
+                        <BlogCard
+                            key={post.slug}
+                            post={post}
+                            onCategoryClick={handleCategoryClick}
+                            onTagClick={handleTagClick}
+                        />
                     ))}
                 </div>
             ) : ( <div className="blog-empty-state"><h2 className="empty-title">Nothing Found Down This Hole...</h2><p className="empty-description">Perhaps adjust your filters or clear them to see all available chronicles from the Looking Glass.</p><button onClick={resetFilters} className="reset-filters-btn">Reset Filters</button></div> )}
         </div>
     );
-}
+});
+
+BlogListClient.displayName = 'BlogListClient';
+export default BlogListClient;

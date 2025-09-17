@@ -37,7 +37,7 @@
          - Order can matter if there are overrides.
       ========================================================================== */
    /* @import "./base.css"; */ /* NOTE: Base styles are now merged into theme.css */
-   @import "./blogs.css"; /* Blog specific overrides and theme application */
+   @import "./blogs.css"; /* Modularized blog specific overrides and theme application */
    @import "./imageStyles.css"; /* Styles for images */
    @import "./embla.css"; /* Styles for Embla Carousel */
    @import "./ascii.css"; /* Styles related to ASCII art */

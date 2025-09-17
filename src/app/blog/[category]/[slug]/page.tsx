@@ -31,7 +31,7 @@ import {
 } from '@/components/Icons'; // Adjust path
 
 // Styles
-import "@/app/styles/blogs.css"; // Blog specific styles
+import "@/app/styles/blogs.css"; // Modularized blog specific styles
 
 // Props for the page component and metadata function
 type PageProps = {

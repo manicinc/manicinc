@@ -6,7 +6,7 @@ import BlogAnalytics from '@/components/BlogAnalytics'; // Analytics tracking
 import BlogNewsletterWrapper from '@/components/BlogNewsletterProvider'; // Newsletter with modal
 import BlogNewsletterSection from '@/components/BlogNewsletterSection'; // Newsletter signup
 import type { Metadata } from 'next';
-import "@/app/styles/blogs.css"; // Import blog styles
+import "@/app/styles/blogs.css"; // Import modularized blog styles
 
 // Static Metadata for the main blog index
 export const metadata: Metadata = {
