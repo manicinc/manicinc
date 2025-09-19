@@ -5,7 +5,7 @@ excerpt: "After analyzing hundreds of comments across SEO subreddits, Manic.agen
 author: "Manic Agency"
 category: "research"
 tags: ["ai", "ai-search", "reddit-analysis", "seo-strategy", "search-optimization", "featured"]
-image: "/assets/blog/research/reddit-consenus-on-llm-seo/hero-reddit-ai-search-analysis.png"
+image: "/assets/blog/research/reddit-consenus-on-llm-seo/hero-reddit-ai-search-analysis.webp"
 featured: true
 ---
 
