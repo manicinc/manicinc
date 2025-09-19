@@ -97,6 +97,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             ${dancingScript.variable}
         `} suppressHydrationWarning>
       <head>
+        {/* Preconnect to critical domains for faster loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <link rel="preconnect" href="https://www.googletagmanager.com" />
+        )}
         {/* Content Security Policy - Conditional for dev vs production */}
         {process.env.NODE_ENV === 'development' ? (
           // Development - Very permissive CSP (allows everything for debugging)
@@ -120,25 +126,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </>
         )}
         
-        {/* Google Analytics */}
-        {GA_ID && (
-          <>
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-            />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${GA_ID}');
-                `,
-              }}
-            />
-          </>
-        )}
+        {/* Google Analytics - Removed from here, handled by Analytics component with consent */}
 
         <script dangerouslySetInnerHTML={{ __html: `
         (function() {

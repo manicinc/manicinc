@@ -90,15 +90,16 @@ export function Analytics() {
       {/* Vercel Speed Insights - Performance monitoring */}
       <SpeedInsights />
 
-      {/* Google Analytics - Only if GA_ID is set */}
+      {/* Google Analytics - Load after page is interactive */}
       {GA_ID && (
         <>
           <Script
+            id="google-analytics-script"
             strategy="afterInteractive"
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           />
           <Script
-            id="google-analytics"
+            id="google-analytics-config"
             strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: `
@@ -109,6 +110,16 @@ export function Analytics() {
                   page_path: window.location.pathname,
                   anonymize_ip: true,
                   allow_ad_personalization_signals: false,
+                  send_page_view: false // We'll send it manually after full load
+                });
+
+                // Send page view after everything loads
+                window.addEventListener('load', function() {
+                  gtag('event', 'page_view', {
+                    page_title: document.title,
+                    page_location: window.location.href,
+                    page_path: window.location.pathname
+                  });
                 });
               `,
             }}

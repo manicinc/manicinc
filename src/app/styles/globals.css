@@ -23,7 +23,7 @@
    @font-face {
       font-family: "Mona Sans";
       font-weight: 200 900; /* Define the weight range for variable font */
-      font-display: block; /* Or 'swap'. 'block' prevents layout shift initially */
+      font-display: swap; /* Show fallback font immediately, swap when loaded */
       font-style: normal;
       font-stretch: 75% 125%; /* Define the stretch range if applicable */
       /* Adjust path if needed - assumes fonts folder relative to this CSS file's location */
