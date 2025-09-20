@@ -13,6 +13,7 @@ jobs:
         with:
           lfs: true
           fetch-depth: 0
+          submodules: recursive
           
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -20,9 +21,11 @@ jobs:
           node-version: '18'
           cache: 'npm'
 
-      - name: Install Git LFS
+      - name: Install and Pull Git LFS
         run: |
           git lfs install
+          git lfs fetch --all
+          git lfs checkout
           git lfs pull
 
       - name: Install Dependencies
@@ -30,8 +33,20 @@ jobs:
 
       - name: Verify LFS files
         run: |
-          git lfs ls-files
-          npm run lfs:status
+          echo "Checking Git LFS files..."
+          git lfs ls-files --debug
+
+          echo "\nChecking specific image file sizes..."
+          ls -lh public/assets/blog/tutorials/building-magiclogger/*.gif || true
+          ls -lh public/assets/blog/tutorials/building-magiclogger/*.png | head -5 || true
+
+          echo "\nRunning npm LFS status..."
+          npm run lfs:status || true
+
+          echo "\nChecking for LFS pointer files..."
+          find public -name "*.png" -size -1k -exec echo "Possible LFS pointer: {}" \; || true
+          find public -name "*.jpg" -size -1k -exec echo "Possible LFS pointer: {}" \; || true
+          find public -name "*.gif" -size -1k -exec echo "Possible LFS pointer: {}" \; || true
 
       - name: Build
         # This runs 'next build' and automatically exports to 'out'
@@ -54,6 +69,20 @@ jobs:
           # NEXT_PUBLIC_EMAILJS_NEWSLETTER_TEMPLATE_ID: ${{ secrets.NEXT_PUBLIC_EMAILJS_NEWSLETTER_TEMPLATE_ID }}
           # NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID: ${{ secrets.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID }}
           # NEXT_PUBLIC_EMAILJS_PUBLIC_KEY: ${{ secrets.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY }}
+
+      - name: Verify built images
+        run: |
+          echo "Checking images in out directory..."
+          ls -lh out/assets/blog/tutorials/building-magiclogger/*.gif 2>/dev/null | head -3 || echo "No GIF files found"
+          ls -lh out/assets/blog/tutorials/building-magiclogger/*.png 2>/dev/null | head -3 || echo "No PNG files found"
+
+          echo "\nChecking for potential LFS pointers in out directory..."
+          find out -name "*.png" -size -1k -exec echo "Small PNG (possible pointer): {}" \; 2>/dev/null || true
+          find out -name "*.jpg" -size -1k -exec echo "Small JPG (possible pointer): {}" \; 2>/dev/null || true
+          find out -name "*.gif" -size -1k -exec echo "Small GIF (possible pointer): {}" \; 2>/dev/null || true
+
+          echo "\nTotal image files in out/assets:"
+          find out/assets -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.gif" -o -name "*.webp" \) | wc -l
 
       - name: Create .nojekyll file
         # Ensures GitHub Pages serves correctly

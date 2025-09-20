@@ -32,8 +32,9 @@ import { visit } from 'unist-util-visit';                  // AST traversal util
 import { SKIP } from 'unist-util-visit';                 // Visit control constants
 
 // --- Syntax Highlighting ---
-// OPTIMIZED: Using lazy-loaded wrapper instead of direct import
-import { CodeHighlighter } from './CodeHighlighter'; // Lazy-loaded syntax highlighter
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'; // Code highlighting component
+import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism'; // Dark theme
+import { prism } from 'react-syntax-highlighter/dist/esm/styles/prism';       // Light theme
 
 // --- Theme Context & Custom Components ---
 import { useTheme } from '@/context/ThemeContext';        // Hook for dark/light mode detection
