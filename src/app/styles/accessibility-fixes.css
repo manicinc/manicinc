@@ -1,0 +1,152 @@
+/* Accessibility Fixes for Better Performance and WCAG Compliance */
+
+/* Fix contrast ratios for cookie banner and forms */
+.cookie-consent-banner {
+  --text-color: #1a1a1a;
+  --bg-color: #ffffff;
+  --border-color: #333333;
+}
+
+.cookie-btn-essential,
+.cookie-btn-accept {
+  background-color: #2c5aa0 !important;
+  color: #ffffff !important;
+  min-height: 44px;
+  min-width: 44px;
+  font-weight: 600;
+}
+
+.cookie-btn-essential:hover,
+.cookie-btn-accept:hover {
+  background-color: #1e3a5f !important;
+}
+
+.privacy-policy-link {
+  color: #1e3a5f !important;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Fix EmailOctopus form contrast */
+.emailoctopus-form input[type="submit"],
+.btn-primary {
+  background-color: #2c5aa0 !important;
+  color: #ffffff !important;
+  border: 2px solid #2c5aa0 !important;
+  font-weight: 600;
+  min-height: 44px;
+}
+
+.emailoctopus-form input[type="submit"]:hover,
+.btn-primary:hover {
+  background-color: #1e3a5f !important;
+  border-color: #1e3a5f !important;
+}
+
+/* Fix holographic card contrast */
+.holographic-card {
+  --text-color: #1a1a1a;
+  --bg-overlay: rgba(255, 255, 255, 0.95);
+}
+
+.dark .holographic-card {
+  --text-color: #ffffff;
+  --bg-overlay: rgba(0, 0, 0, 0.85);
+}
+
+/* Ensure all buttons have proper labels */
+button:not([aria-label]):not([aria-labelledby]):empty::before {
+  content: "Button";
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Fix touch target sizes for mobile */
+@media (max-width: 768px) {
+  button,
+  a,
+  input[type="submit"],
+  input[type="button"],
+  .clickable {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Improve focus indicators */
+*:focus-visible {
+  outline: 3px solid #2c5aa0;
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #2c5aa0;
+  outline-offset: 2px;
+}
+
+/* Ensure readable text contrast */
+.text-muted,
+.text-secondary {
+  color: #595959 !important;
+}
+
+.dark .text-muted,
+.dark .text-secondary {
+  color: #b3b3b3 !important;
+}
+
+/* Fix navigation contrast */
+.nav-link {
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.dark .nav-link {
+  color: #f5f5f5;
+}
+
+.nav-link:hover {
+  color: #2c5aa0;
+}
+
+.dark .nav-link:hover {
+  color: #7ba7e7;
+}
+
+/* Screen reader only text utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip to main content link */
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: #2c5aa0;
+  color: white;
+  text-decoration: none;
+}
+
+.skip-to-main:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+}

@@ -8,7 +8,9 @@ import styles from './Nav.module.css';
 import NavLinksDesktop from './NavLinksDesktop';
 import NavLinksMobile from './NavLinksMobile';
 import NavLogo from './NavLogo'; // Keep using NavLogo component
+// import BlogVinesOptimized from '../Blog/BlogVinesOptimized'; // Too minimal
 import BlogVines from '../Blog/BlogVines';
+// import BlogVines from '../Blog/BlogVines'; // Original heavy version
 // Icons handled by CSS
 
 export const Nav = () => {
