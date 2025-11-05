@@ -40,7 +40,7 @@ const NavLinksMobile: React.FC<NavLinksMobileProps> = ({
     return (
         <div
             id={id} // Use the id prop here
-            className={`${styles.mobileMenuWrapper} lg:hidden ${ // Changed breakpoint to lg
+            className={`${styles.mobileMenuWrapper} xl:hidden ${ // Changed breakpoint to xl
                 isMenuOpen ? styles.mobileMenuOpen : ''
             }`}
             // Apply inert attribute when closed for accessibility

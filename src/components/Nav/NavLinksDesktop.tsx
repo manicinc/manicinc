@@ -30,7 +30,7 @@ const NavLinksDesktop: React.FC<NavLinksDesktopProps> = ({ isBlog, isActivePath,
     return (
         <nav className={`
             flex items-stretch
-            gap-x-1 lg:gap-x-2
+            gap-x-1 xl:gap-x-2
             ${styles.navDesktop}
         `}>
             {/* --- Regular Links (Shown when NOT on a blog page) --- */}
@@ -99,7 +99,7 @@ const NavLinksDesktop: React.FC<NavLinksDesktopProps> = ({ isBlog, isActivePath,
             {/* Contact Button (Always shown) */}
             <Link href="/contact" legacyBehavior>
                  <a
-                     className={`${styles.contactBtnFinal} ${isBlog ? styles.blogContact : ''} ml-1 lg:ml-2`}
+                     className={`${styles.contactBtnFinal} ${isBlog ? styles.blogContact : ''} ml-1 xl:ml-2`}
                      data-nav-id="contact"
                      onClick={closeMenu}
                  >
@@ -111,7 +111,7 @@ const NavLinksDesktop: React.FC<NavLinksDesktopProps> = ({ isBlog, isActivePath,
             </Link>
 
             {/* Theme Toggle (Always shown) */}
-            <div className={`ml-1 lg:ml-2 flex items-center self-center ${styles.themeToggleNavWrapper}`}>
+            <div className={`ml-1 xl:ml-2 flex items-center self-center ${styles.themeToggleNavWrapper}`}>
                  {isBlog ? (
                      <OrnamentalThemeToggle size="md" />
                  ) : (
