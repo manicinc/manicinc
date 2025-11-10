@@ -31,7 +31,7 @@
   "scripts": {
     "dev": "next dev",
     "dev:lfs": "npm run lfs:check && next dev",
-    "prebuild": "npm run optimize:images:auto",
+    "prebuild": "npm run optimize:images:auto && node scripts/generateSitemap.js",
     "build": "next build && next-sitemap",
     "build:lfs": "npm run lfs:pull && npm run optimize:images && next build && next-sitemap",
     "build:static": "next build && next-sitemap",

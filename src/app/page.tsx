@@ -1,6 +1,7 @@
 // src/app/page.tsx
 import type { Metadata } from 'next';
 import { Suspense } from 'react'; // Keep Suspense import
+import Link from 'next/link';
 import { getAllPosts } from '@/lib/getAllPosts';
 import { getAllProjects } from '@/lib/getAllProjects';
 import { HeroFeedItem } from '@/types/common';
