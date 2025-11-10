@@ -465,6 +465,30 @@ const TeamsPage = () => {
                                     <div className={styles.cardBorderGlitch}></div>
                                 </motion.div>
                             ))}
+                             {/* Framers AI Connection Card */}
+                             <motion.div variants={fadeIn} className={`${styles.teamCard} ${styles.framersCard}`}>
+                                  <div className="flex flex-col items-center justify-center h-full text-center p-4">
+                                      <img 
+                                          src="/assets/projects/frame/frame-logo-green-transparent-4x.png" 
+                                          alt="Frame.dev" 
+                                          className="w-16 h-16 mb-4 opacity-80 hover:opacity-100 transition-opacity"
+                                      />
+                                      <p className="font-mono text-sm font-medium text-[color:var(--text-primary)] mb-2">
+                                          Powered by Framers AI
+                                      </p>
+                                      <p className="text-xs text-[color:var(--text-muted)] mb-4">
+                                          Building the future of AI-powered development tools
+                                      </p>
+                                      <a 
+                                          href="https://frame.dev" 
+                                          target="_blank" 
+                                          rel="noopener noreferrer"
+                                          className={styles.placeholderCTA}
+                                      >
+                                          Explore Frame.dev →
+                                      </a>
+                                  </div>
+                              </motion.div>
                              <motion.div variants={fadeIn} className={`${styles.teamCard} ${styles.placeholderCard}`}>
                                   <div className="flex flex-col items-center justify-center h-full text-center p-4">
                                       <div className={styles.placeholderIconWrapper}>

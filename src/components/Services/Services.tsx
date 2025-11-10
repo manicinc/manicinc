@@ -40,15 +40,16 @@ interface Service {
 const servicesData: Service[] = [
   {
     id: 1,
-    title: "Commitment to Open-Source and Sustainable Tech",
+    title: "Open-Source Innovation & AI Infrastructure",
     IconComponent: IconSimulation, // Use created component
     description:
-      "We maintain a multitude of tools and frameworks launched for the OSS community, and act as a digital publication for DX.",
+      "Through Frame.dev and Framers AI, we build emergent, adaptive AI systems. We denoise the web and create permanent AI agency through open-source tools.",
     features: [
-      "We believe open-source models for orgs will be the most driving tech movement",
-      "Transparency and accessibility become more important than ever with new paradigms",
-      "Manic.agency also acts as a development and design consultation service",
-      "We providing support for not only our products but in-house offerings"
+      "Frame.dev ecosystem: VCA, AgentOS, OpenStrand, and emerging OS platforms",
+      "Voice Chat Assistant for natural language coding",
+      "AgentOS orchestration runtime for intelligent AI applications",
+      "OpenStrand collaborative knowledge management",
+      "HomeOS, WebOS, SafeOS, MyOS, WorkOS (in development)"
     ],
 },
  {
