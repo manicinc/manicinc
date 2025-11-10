@@ -3,9 +3,10 @@ title: "Building MagicLogger and MAGIC: A Universal Logging Standard for Color"
 excerpt: "One developer's journey into building a feature-rich colorful logging library and why."
 author: "Johnny Dunn"
 category: "tutorials"
-tags: ["typescript", "open-source", "library", "logging", "featured"]
+date: 2025-10-15
+tags: ["typescript", "open-source", "library", "logging"]
 image: "/assets/blog/tutorials/building-magiclogger/magiclogger-primary-no-subtitle-transparent-4x.png"
-featured: true
+featured: false
 ---
 # Building MagicLogger and MAGIC: A Universal Logging Standard for Color
 

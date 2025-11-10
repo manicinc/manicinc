@@ -6,11 +6,16 @@ category: ai
 tags: [ai, oss, voice, coding-assistant, agentos, openstrand, orchestration, developer-tools]
 link: https://frame.dev
 github: https://github.com/framersai
-image: /assets/projects/frame/frame-logo-green-transparent-4x.png
+image: /assets/projects/framers/frame-logo-transparent.png
 images: [
-  /assets/projects/frame/frame-logo-green-transparent-4x.png,
-  /assets/projects/frame/agentos-primary-transparent-2x.png,
-  /assets/projects/frame/voice-chat-assistant-logo.png
+  /assets/projects/framers/frame-logo-no-subtitle.svg,
+  /assets/projects/framers/frame-logo-transparent.png,
+  /assets/projects/framers/frame-logo.png,
+  /assets/projects/framers/agentos-logo.png,
+  /assets/projects/framers/agentos-icon.svg,
+  /assets/projects/framers/openstrand-logo-dark-1024.png,
+  /assets/projects/framers/openstrand-logo-light-1024.png,
+  /assets/projects/framers/openstrand-logo.svg
 ]
 featured: true
 draft: false
