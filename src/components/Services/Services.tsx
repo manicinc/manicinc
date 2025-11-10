@@ -426,12 +426,13 @@ const Services: React.FC = () => {
   const [activeCardIndex, setActiveCardIndex] = useState<number>(0);
   const [isHoveringGrid, setIsHoveringGrid] = useState<boolean>(false);
   const gridLeaveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [hoveredCardIndex, setHoveredCardIndex] = useState<number | null>(null);
   const sectionRef = useRef(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const rotationWrapperRef = useRef<HTMLDivElement | null>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const mousePositionRef = useRef({ x: 0, y: 0 }); // Use ref instead of state
+  const rafRef = useRef<number | null>(null); // RAF throttle
   const isInView = useInView(sectionRef, { once: true, margin: "-10% 0px" });
 
   useEffect(() => { // Grid leave handler
@@ -445,9 +446,30 @@ const Services: React.FC = () => {
   }, [isHoveringGrid]);
 
   const handleGridMouseEnter = () => { setIsHoveringGrid(true); if (gridLeaveTimeoutRef.current) clearTimeout(gridLeaveTimeoutRef.current); };
-  const handleGridMouseLeave = () => { setIsHoveringGrid(false); setHoveredCardIndex(null); };
+  const handleGridMouseLeave = () => { 
+    setIsHoveringGrid(false); 
+    setHoveredCardIndex(null);
+    if (rafRef.current) cancelAnimationFrame(rafRef.current);
+  };
   const handleCardMouseEnter = (index: number) => { setActiveCardIndex(index); setHoveredCardIndex(index); };
-  const handleCardMouseMove = (e: React.MouseEvent<HTMLDivElement>, index: number) => { /* ... (keep existing mouse light logic) ... */ };
+  const handleCardMouseMove = (e: React.MouseEvent<HTMLDivElement>, index: number) => {
+    if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    
+    rafRef.current = requestAnimationFrame(() => {
+      const card = cardRefs.current[index];
+      if (!card) return;
+      
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      mousePositionRef.current = { x, y };
+      
+      // Update CSS variables directly on the card element
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  };
 
   const sentenceVariant = {
     hidden: { opacity: 1 }, // Parent doesn't need fade for children trigger
