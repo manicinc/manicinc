@@ -7,6 +7,7 @@ import { Metadata } from 'next';
 import { Project, TableOfContentsItem } from '@/types/project'; // Use updated type
 import ProjectDetailClient from '@/components/Project/ProjectDetailClient'; // Import the Client Component
 import BreadcrumbSchema from '@/components/SEO/BreadcrumbSchema'; // Breadcrumb structured data
+import SoftwareApplicationSchema from '@/components/SEO/SoftwareApplicationSchema'; // Software schema
 
 // Import your actual data fetching functions from lib
 import { getProjectBySlug, getAllProjectPaths, getRelatedProjects } from '@/lib/getAllProjects';
@@ -105,6 +106,9 @@ export default async function ProjectDetailPage({ params }: PageProps) {
         { name: project.category?.replace(/-/g, ' ') || 'Category', url: `/projects/${project.category}` },
         { name: project.title || 'Project', url: `/projects/${params.category}/${params.slug}` }
       ]} />
+      
+      {/* Software Application structured data for SEO */}
+      <SoftwareApplicationSchema project={project} />
       
       <ProjectDetailClient
         project={project} // Pass the full project object (which includes TOC)
