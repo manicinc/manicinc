@@ -5,6 +5,16 @@ module.exports = {
     content: [
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/lib/**/*.{js,ts,jsx,tsx}",
+    "./posts/**/*.{md,mdx}",
+    "./projects/**/*.{md,mdx}",
+  ],
+  safelist: [
+    // Dynamic classes that might be generated
+    'stagger-1', 'stagger-2', 'stagger-3', 'stagger-4', 'stagger-5', 'stagger-6',
+    'animate-fade-in', 'animate-fade-in-up',
+    // Blog theme classes
+    'blog-footer-heading', 'blog-footer-link', 'blog-footer-icon',
   ],
   theme: {
   	extend: {

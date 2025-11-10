@@ -21,6 +21,7 @@ import OrganizationSchema from '@/components/SEO/OrganizationSchema';
 import WebSiteSchema from '@/components/SEO/WebSiteSchema';
 import PrefetchLinks from '@/components/PrefetchLinks';
 import ServiceWorkerRegistration from '@/components/ServiceWorkerRegistration';
+import SkipToContent from '@/components/SkipToContent';
 
 // Import Styles
 import "./styles/globals.css";
@@ -204,8 +205,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <DynamicFavicon />
               <PrefetchLinks />
               <ServiceWorkerRegistration />
+              <SkipToContent />
               <Nav />
-              <main role="main">{children}</main>
+              <main role="main" id="main-content">{children}</main>
               <Footer />
               <ScrollToTopHandler />
               <Analytics />
