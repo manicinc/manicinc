@@ -19,6 +19,7 @@ import ErrorFallback from '@/components/ErrorFallback';
 import type { Metadata, Viewport } from 'next';
 import OrganizationSchema from '@/components/SEO/OrganizationSchema';
 import WebSiteSchema from '@/components/SEO/WebSiteSchema';
+import LocalBusinessSchema from '@/components/SEO/LocalBusinessSchema';
 import PrefetchLinks from '@/components/PrefetchLinks';
 import ServiceWorkerRegistration from '@/components/ServiceWorkerRegistration';
 import SkipToContent from '@/components/SkipToContent';
@@ -196,6 +197,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* Structured Data for SEO */}
         <OrganizationSchema />
         <WebSiteSchema />
+        <LocalBusinessSchema />
         
         <DOMErrorBoundary fallback={<ErrorFallback />}>
           <ThemeProvider>
