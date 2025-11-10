@@ -72,6 +72,7 @@ export const footerNavigationData: FooterSection[] = [
         { title: 'About Us', href: '/team' },
         { title: 'Mission', href: '/mission' },
         { title: 'Process', href: '/process' },
+        { title: 'FAQ', href: '/faq' },
         { title: 'Contact', href: '/contact' },
     ],
   },
