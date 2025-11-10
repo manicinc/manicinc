@@ -17,6 +17,8 @@ import DOMErrorBoundary from '@/components/DOMErrorBoundary';
 import GlobalDOMErrorHandler from '@/components/GlobalDOMErrorHandler';
 import ErrorFallback from '@/components/ErrorFallback';
 import type { Metadata, Viewport } from 'next';
+import OrganizationSchema from '@/components/SEO/OrganizationSchema';
+import WebSiteSchema from '@/components/SEO/WebSiteSchema';
 
 // Import Styles
 import "./styles/globals.css";
@@ -87,6 +89,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {process.env.NEXT_PUBLIC_GA_ID && (
           <link rel="preconnect" href="https://www.googletagmanager.com" />
         )}
+        
+        {/* Critical CSS for fast initial paint */}
+        <style dangerouslySetInnerHTML={{ __html: `
+          /* Critical CSS - Inline in <head> for fast initial paint */
+          :root{--bg-primary:#fbf6ef;--bg-primary-rgb:251,246,239;--text-primary:#4a3f35;--text-primary-rgb:74,63,53;--accent-primary:#d6a574;--accent-highlight:#7de8c9}html{background-color:#fbf6ef;color:#4a3f35}html.dark{background-color:#22182b!important;color:#f5f0e6!important}html:not([data-theme-loaded="true"]) body{opacity:0}body{margin:0;font-family:Inter,system-ui,sans-serif;line-height:1.6}main{min-height:100vh}nav{position:sticky;top:0;z-index:100;background:rgba(251,246,239,.95);backdrop-filter:blur(10px);height:60px}.dark nav{background:rgba(34,24,43,.95)}.hero-section{padding:4rem 1rem;max-width:1200px;margin:0 auto}h1{font-size:clamp(2rem,5vw,4rem);font-weight:700;line-height:1.1;margin:0 0 1rem}img{max-width:100%;height:auto;display:block}.skeleton{background:linear-gradient(90deg,#f0f0f0 25%,#e0e0e0 50%,#f0f0f0 75%);background-size:200% 100%;animation:loading 1.5s ease-in-out infinite}@keyframes loading{0%{background-position:200% 0}100%{background-position:-200% 0}}.dark .skeleton{background:linear-gradient(90deg,#2a2a2a 25%,#3a3a3a 50%,#2a2a2a 75%)}
+        ` }} />
+        
         {/* Content Security Policy - Conditional for dev vs production */}
         {process.env.NODE_ENV === 'development' ? (
           // Development - Very permissive CSP (allows everything for debugging)
@@ -175,6 +184,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       `}} />
       </head>
       <body>
+        {/* Structured Data for SEO */}
+        <OrganizationSchema />
+        <WebSiteSchema />
+        
         <DOMErrorBoundary fallback={<ErrorFallback />}>
           <ThemeProvider>
             <CookieProvider>

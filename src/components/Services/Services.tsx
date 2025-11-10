@@ -3,12 +3,19 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from 'next/link';
-import { motion, useInView } from "framer-motion";
-import { MoveRight, Clock } from 'lucide-react'; // Using Clock for stopwatch base
+import dynamic from 'next/dynamic';
+import { motion } from "framer-motion";
+import { useSharedInView } from "@/hooks/useSharedIntersectionObserver";
+import { MoveRight, Clock } from 'lucide-react';
 
 // Import styles and other components
 import styles from './Services.module.css'; // Ensure path is correct
-import ClientsSection from "../Clients/ClientsSection"; // Ensure path is correct
+
+// Dynamically import heavy components
+const ClientsSection = dynamic(() => import("../Clients/ClientsSection"), {
+  loading: () => <div style={{ minHeight: '200px' }} />,
+  ssr: true
+});
 
 
 import curve from "@/images/curve.png";
@@ -433,7 +440,7 @@ const Services: React.FC = () => {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const mousePositionRef = useRef({ x: 0, y: 0 }); // Use ref instead of state
   const rafRef = useRef<number | null>(null); // RAF throttle
-  const isInView = useInView(sectionRef, { once: true, margin: "-10% 0px" });
+  const isInView = useSharedInView(sectionRef, { once: true, rootMargin: "-10% 0px" });
 
   useEffect(() => { // Grid leave handler
       if (gridLeaveTimeoutRef.current) clearTimeout(gridLeaveTimeoutRef.current);
