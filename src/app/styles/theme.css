@@ -44,10 +44,10 @@ html:not([data-theme-loaded="true"]) * {
   --font-logo: "Mona Sans", sans-serif;
 
   /* --- Primary Blog Fonts --- */
-  --font-heading-blog: "Playfair Display", serif;
-  --font-body-blog: "Merriweather", serif;
-  --font-script-blog: "Dancing Script", cursive;
-  --font-meta-blog: "EB Garamond", serif;
+  --font-heading-blog: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body-blog: Georgia, "Times New Roman", serif;
+  --font-script-blog: cursive;
+  --font-meta-blog: Georgia, "Times New Roman", serif;
 
   /* --- Decorative --- */
   --font-decorative: 'Cinzel Decorative', 'Playfair Display', serif;

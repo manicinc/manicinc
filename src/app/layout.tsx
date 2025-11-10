@@ -1,6 +1,6 @@
 // src/app/layout.tsx (with Google Analytics)
 import { ReactNode } from "react";
-import { Inter, Lato, EB_Garamond, Playfair_Display, Merriweather, Dancing_Script } from 'next/font/google';
+import { Inter, Lato, Playfair_Display, IBM_Plex_Mono } from 'next/font/google';
 
 // Import Components & Providers
 import { Nav } from "@/components/Nav";
@@ -41,35 +41,21 @@ const lato = Lato({
   display: 'swap',
   fallback: ['system-ui', 'arial']
 });
-const ebGaramond = EB_Garamond({ 
-  subsets: ['latin'], 
-  weight: ['400', '700'], 
-  style: ['normal', 'italic'], 
-  variable: '--font-meta-blog', 
-  display: 'swap',
-  fallback: ['Times New Roman', 'serif']
-});
 const playfairDisplay = Playfair_Display({ 
   subsets: ['latin'], 
   weight: ['700'], 
   variable: '--font-heading-blog', 
   display: 'swap',
-  fallback: ['Times New Roman', 'serif']
+  fallback: ['Georgia', 'Times New Roman', 'serif'],
+  preload: true
 });
-const merriweather = Merriweather({ 
+const ibmPlexMono = IBM_Plex_Mono({ 
   subsets: ['latin'], 
-  weight: ['400'], 
-  style: ['normal', 'italic'], 
-  variable: '--font-body-blog', 
+  weight: ['400', '600'], 
+  variable: '--font-mono', 
   display: 'swap',
-  fallback: ['Times New Roman', 'serif']
-});
-const dancingScript = Dancing_Script({ 
-  subsets: ['latin'], 
-  weight: ['400'], 
-  variable: '--font-script-blog', 
-  display: 'swap',
-  fallback: ['cursive']
+  fallback: ['Consolas', 'Monaco', 'monospace'],
+  preload: true
 });
 
 export const viewport: Viewport = {
@@ -91,10 +77,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" className={`
             ${inter.variable}
             ${lato.variable}
-            ${ebGaramond.variable}
             ${playfairDisplay.variable}
-            ${merriweather.variable}
-            ${dancingScript.variable}
+            ${ibmPlexMono.variable}
         `} suppressHydrationWarning>
       <head>
         {/* Preconnect to critical domains for faster loading */}
