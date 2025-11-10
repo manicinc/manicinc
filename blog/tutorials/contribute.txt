@@ -1,22 +1,31 @@
 3:I[4707,[],""]
 6:I[36423,[],""]
-9:I[59970,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3147","static/chunks/3147-fce39376a6c132e0.js","301","static/chunks/301-86af951e4c2d21dd.js","3185","static/chunks/app/layout-bde58dfec174ecec.js"],"default"]
-a:I[81775,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3147","static/chunks/3147-fce39376a6c132e0.js","301","static/chunks/301-86af951e4c2d21dd.js","3185","static/chunks/app/layout-bde58dfec174ecec.js"],"default"]
-b:I[12025,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3147","static/chunks/3147-fce39376a6c132e0.js","301","static/chunks/301-86af951e4c2d21dd.js","3185","static/chunks/app/layout-bde58dfec174ecec.js"],"ThemeProvider"]
-c:I[39976,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3147","static/chunks/3147-fce39376a6c132e0.js","301","static/chunks/301-86af951e4c2d21dd.js","3185","static/chunks/app/layout-bde58dfec174ecec.js"],"CookieProvider"]
-d:I[69088,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3147","static/chunks/3147-fce39376a6c132e0.js","301","static/chunks/301-86af951e4c2d21dd.js","3185","static/chunks/app/layout-bde58dfec174ecec.js"],"default"]
-e:I[50513,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3147","static/chunks/3147-fce39376a6c132e0.js","301","static/chunks/301-86af951e4c2d21dd.js","3185","static/chunks/app/layout-bde58dfec174ecec.js"],"default"]
-f:I[83551,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3147","static/chunks/3147-fce39376a6c132e0.js","301","static/chunks/301-86af951e4c2d21dd.js","3185","static/chunks/app/layout-bde58dfec174ecec.js"],"default"]
-10:I[51052,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3147","static/chunks/3147-fce39376a6c132e0.js","301","static/chunks/301-86af951e4c2d21dd.js","3185","static/chunks/app/layout-bde58dfec174ecec.js"],"Nav"]
-11:I[10376,["7601","static/chunks/app/error-14763b0e0aec4cec.js"],"default"]
-12:I[79229,["2972","static/chunks/2972-359ceb67daf90d6f.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","9160","static/chunks/app/not-found-1d835fc523b9ed0b.js"],"default"]
-13:I[85745,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3147","static/chunks/3147-fce39376a6c132e0.js","301","static/chunks/301-86af951e4c2d21dd.js","3185","static/chunks/app/layout-bde58dfec174ecec.js"],"default"]
-14:I[16049,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3147","static/chunks/3147-fce39376a6c132e0.js","301","static/chunks/301-86af951e4c2d21dd.js","3185","static/chunks/app/layout-bde58dfec174ecec.js"],"default"]
-15:I[18133,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3147","static/chunks/3147-fce39376a6c132e0.js","301","static/chunks/301-86af951e4c2d21dd.js","3185","static/chunks/app/layout-bde58dfec174ecec.js"],"default"]
-16:I[31214,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3147","static/chunks/3147-fce39376a6c132e0.js","301","static/chunks/301-86af951e4c2d21dd.js","3185","static/chunks/app/layout-bde58dfec174ecec.js"],"default"]
+a:I[6322,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","2200","static/chunks/react-icons-845c474c55d63f63.js","8592","static/chunks/common-daecfa511eae2a39.js","3185","static/chunks/app/layout-51e976d12be14e5e.js"],"default"]
+b:I[96313,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","2200","static/chunks/react-icons-845c474c55d63f63.js","8592","static/chunks/common-daecfa511eae2a39.js","3185","static/chunks/app/layout-51e976d12be14e5e.js"],"default"]
+c:I[66159,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","2200","static/chunks/react-icons-845c474c55d63f63.js","8592","static/chunks/common-daecfa511eae2a39.js","3185","static/chunks/app/layout-51e976d12be14e5e.js"],"default"]
+d:I[59970,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","2200","static/chunks/react-icons-845c474c55d63f63.js","8592","static/chunks/common-daecfa511eae2a39.js","3185","static/chunks/app/layout-51e976d12be14e5e.js"],"default"]
+e:I[81775,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","2200","static/chunks/react-icons-845c474c55d63f63.js","8592","static/chunks/common-daecfa511eae2a39.js","3185","static/chunks/app/layout-51e976d12be14e5e.js"],"default"]
+f:I[12025,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","2200","static/chunks/react-icons-845c474c55d63f63.js","8592","static/chunks/common-daecfa511eae2a39.js","3185","static/chunks/app/layout-51e976d12be14e5e.js"],"ThemeProvider"]
+10:I[39976,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","2200","static/chunks/react-icons-845c474c55d63f63.js","8592","static/chunks/common-daecfa511eae2a39.js","3185","static/chunks/app/layout-51e976d12be14e5e.js"],"CookieProvider"]
+11:I[69088,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","2200","static/chunks/react-icons-845c474c55d63f63.js","8592","static/chunks/common-daecfa511eae2a39.js","3185","static/chunks/app/layout-51e976d12be14e5e.js"],"default"]
+12:I[50513,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","2200","static/chunks/react-icons-845c474c55d63f63.js","8592","static/chunks/common-daecfa511eae2a39.js","3185","static/chunks/app/layout-51e976d12be14e5e.js"],"default"]
+13:I[83551,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","2200","static/chunks/react-icons-845c474c55d63f63.js","8592","static/chunks/common-daecfa511eae2a39.js","3185","static/chunks/app/layout-51e976d12be14e5e.js"],"default"]
+14:I[38483,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","2200","static/chunks/react-icons-845c474c55d63f63.js","8592","static/chunks/common-daecfa511eae2a39.js","3185","static/chunks/app/layout-51e976d12be14e5e.js"],"default"]
+15:I[81695,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","2200","static/chunks/react-icons-845c474c55d63f63.js","8592","static/chunks/common-daecfa511eae2a39.js","3185","static/chunks/app/layout-51e976d12be14e5e.js"],"default"]
+16:I[28602,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","2200","static/chunks/react-icons-845c474c55d63f63.js","8592","static/chunks/common-daecfa511eae2a39.js","3185","static/chunks/app/layout-51e976d12be14e5e.js"],"default"]
+17:I[51052,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","2200","static/chunks/react-icons-845c474c55d63f63.js","8592","static/chunks/common-daecfa511eae2a39.js","3185","static/chunks/app/layout-51e976d12be14e5e.js"],"Nav"]
+18:I[10376,["7601","static/chunks/app/error-90039096013b9680.js"],"default"]
+19:I[79229,["9160","static/chunks/app/not-found-6d36e91609de8bfc.js"],"default"]
+1a:I[85745,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","2200","static/chunks/react-icons-845c474c55d63f63.js","8592","static/chunks/common-daecfa511eae2a39.js","3185","static/chunks/app/layout-51e976d12be14e5e.js"],"default"]
+1b:I[16049,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","2200","static/chunks/react-icons-845c474c55d63f63.js","8592","static/chunks/common-daecfa511eae2a39.js","3185","static/chunks/app/layout-51e976d12be14e5e.js"],"default"]
+1c:I[18133,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","2200","static/chunks/react-icons-845c474c55d63f63.js","8592","static/chunks/common-daecfa511eae2a39.js","3185","static/chunks/app/layout-51e976d12be14e5e.js"],"default"]
+1d:I[31214,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","2200","static/chunks/react-icons-845c474c55d63f63.js","8592","static/chunks/common-daecfa511eae2a39.js","3185","static/chunks/app/layout-51e976d12be14e5e.js"],"default"]
 4:["category","tutorials","d"]
 5:["slug","contribute","d"]
-7:T6af,default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://www.clarity.ms https://*.clarity.ms https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://vercel.live https://*.vercel.app https://cdnjs.cloudflare.com https://ajax.cloudflare.com https://va.vercel-scripts.com https://*.vercel-scripts.com https://eocampaign1.com https://*.eocampaign1.com https://emailoctopus.com https://*.emailoctopus.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.gstatic.com https://cdn.sender.net https://cdnjs.cloudflare.com https://eocampaign1.com https://*.eocampaign1.com; img-src 'self' data: https: blob: https://www.google.com https://www.gstatic.com https://cdn.sender.net https://app.sender.net https://eocampaign1.com https://*.eocampaign1.com; font-src 'self' https://fonts.gstatic.com https://www.gstatic.com https://cdn.sender.net https://cdnjs.cloudflare.com https://eocampaign1.com; connect-src 'self' https://www.google-analytics.com https://www.google.com https://www.gstatic.com https://api.github.com https://*.github.com https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://vercel.live https://cloudflare.com https://*.cloudflare.com https://va.vercel-scripts.com https://*.vercel-scripts.com https://eocampaign1.com https://*.eocampaign1.com https://emailoctopus.com https://*.emailoctopus.com; frame-src 'self' https://www.google.com https://www.gstatic.com https://cdn.sender.net https://app.sender.net https://eocampaign1.com https://*.eocampaign1.com https://emailoctopus.com https://*.emailoctopus.com;8:Taf1,
+7:T48d,
+          /* Critical CSS - Inline in <head> for fast initial paint */
+          :root{--bg-primary:#fbf6ef;--bg-primary-rgb:251,246,239;--text-primary:#4a3f35;--text-primary-rgb:74,63,53;--accent-primary:#d6a574;--accent-highlight:#7de8c9}html{background-color:#fbf6ef;color:#4a3f35}html.dark{background-color:#22182b!important;color:#f5f0e6!important}html:not([data-theme-loaded="true"]) body{opacity:0}body{margin:0;font-family:Inter,system-ui,sans-serif;line-height:1.6}main{min-height:100vh}nav{position:sticky;top:0;z-index:100;background:rgba(251,246,239,.95);backdrop-filter:blur(10px);height:60px}.dark nav{background:rgba(34,24,43,.95)}.hero-section{padding:4rem 1rem;max-width:1200px;margin:0 auto}h1{font-size:clamp(2rem,5vw,4rem);font-weight:700;line-height:1.1;margin:0 0 1rem}img{max-width:100%;height:auto;display:block}.skeleton{background:linear-gradient(90deg,#f0f0f0 25%,#e0e0e0 50%,#f0f0f0 75%);background-size:200% 100%;animation:loading 1.5s ease-in-out infinite}@keyframes loading{0%{background-position:200% 0}100%{background-position:-200% 0}}.dark .skeleton{background:linear-gradient(90deg,#2a2a2a 25%,#3a3a3a 50%,#2a2a2a 75%)}
+        8:T6af,default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://www.clarity.ms https://*.clarity.ms https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://vercel.live https://*.vercel.app https://cdnjs.cloudflare.com https://ajax.cloudflare.com https://va.vercel-scripts.com https://*.vercel-scripts.com https://eocampaign1.com https://*.eocampaign1.com https://emailoctopus.com https://*.emailoctopus.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.gstatic.com https://cdn.sender.net https://cdnjs.cloudflare.com https://eocampaign1.com https://*.eocampaign1.com; img-src 'self' data: https: blob: https://www.google.com https://www.gstatic.com https://cdn.sender.net https://app.sender.net https://eocampaign1.com https://*.eocampaign1.com; font-src 'self' https://fonts.gstatic.com https://www.gstatic.com https://cdn.sender.net https://cdnjs.cloudflare.com https://eocampaign1.com; connect-src 'self' https://www.google-analytics.com https://www.google.com https://www.gstatic.com https://api.github.com https://*.github.com https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://vercel.live https://cloudflare.com https://*.cloudflare.com https://va.vercel-scripts.com https://*.vercel-scripts.com https://eocampaign1.com https://*.eocampaign1.com https://emailoctopus.com https://*.emailoctopus.com; frame-src 'self' https://www.google.com https://www.gstatic.com https://cdn.sender.net https://app.sender.net https://eocampaign1.com https://*.eocampaign1.com https://emailoctopus.com https://*.emailoctopus.com;9:Taf1,
         (function() {
           try {
             // Don't run this script during server-side rendering
@@ -76,25 +85,28 @@ f:I[83551,["2420","static/chunks/9081a741-b16cb84203946b4a.js","2972","static/ch
             }
           }
         })();
-      0:["manic-agency-1762794820942",[[["",{"children":["blog",{"children":[["category","tutorials","d"],{"children":[["slug","contribute","d"],{"children":["__PAGE__?{\"category\":\"tutorials\",\"slug\":\"contribute\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["category","tutorials","d"],{"children":[["slug","contribute","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0bfcf8e06cae4e2f.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/62f50c4d59962692.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/65d3bfa38c58f4ce.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/cf57f2bdfb15e6bd.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/c41e284b53825655.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/564aa0445a8f7efb.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/88edf09b8094bf5f.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_47a102\n            __variable_f0164c\n            __variable_1c86d0\n            __variable_881712\n            __variable_536dc8\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$7"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$8"}}]]}],["$","body",null,{"children":["$","$L9",null,{"fallback":["$","$La",null,{}],"children":["$","$Lb",null,{"children":["$","$Lc",null,{"children":[["$","$Ld",null,{}],["$","$Le",null,{}],["$","$Lf",null,{}],["$","$L10",null,{}],["$","main",null,{"role":"main","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$11","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L12",null,{}],"notFoundStyles":[]}]}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],"$undefined",["$","$L16",null,{}]]}]}]}]}]]}]],null],null],["$L17",null]]]]
-18:I[54680,["3954","static/chunks/d3ac728e-b4495703dbbd00a1.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3394","static/chunks/3394-1315441237e474ca.js","925","static/chunks/925-6e6c6afd469d6d7d.js","5772","static/chunks/5772-424c459e93a2b8a1.js","301","static/chunks/301-86af951e4c2d21dd.js","8578","static/chunks/8578-173d687a9e17435e.js","6675","static/chunks/6675-25d53af0b0fd665c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-0e91f1f48546308f.js"],"default"]
-19:I[67373,["3954","static/chunks/d3ac728e-b4495703dbbd00a1.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3394","static/chunks/3394-1315441237e474ca.js","925","static/chunks/925-6e6c6afd469d6d7d.js","5772","static/chunks/5772-424c459e93a2b8a1.js","301","static/chunks/301-86af951e4c2d21dd.js","8578","static/chunks/8578-173d687a9e17435e.js","6675","static/chunks/6675-25d53af0b0fd665c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-0e91f1f48546308f.js"],"default"]
-1a:I[96670,["3954","static/chunks/d3ac728e-b4495703dbbd00a1.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3394","static/chunks/3394-1315441237e474ca.js","925","static/chunks/925-6e6c6afd469d6d7d.js","5772","static/chunks/5772-424c459e93a2b8a1.js","301","static/chunks/301-86af951e4c2d21dd.js","8578","static/chunks/8578-173d687a9e17435e.js","6675","static/chunks/6675-25d53af0b0fd665c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-0e91f1f48546308f.js"],"default"]
-1b:I[71409,["3954","static/chunks/d3ac728e-b4495703dbbd00a1.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3394","static/chunks/3394-1315441237e474ca.js","925","static/chunks/925-6e6c6afd469d6d7d.js","5772","static/chunks/5772-424c459e93a2b8a1.js","301","static/chunks/301-86af951e4c2d21dd.js","8578","static/chunks/8578-173d687a9e17435e.js","6675","static/chunks/6675-25d53af0b0fd665c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-0e91f1f48546308f.js"],"default"]
-1c:I[87634,["3954","static/chunks/d3ac728e-b4495703dbbd00a1.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3394","static/chunks/3394-1315441237e474ca.js","925","static/chunks/925-6e6c6afd469d6d7d.js","5772","static/chunks/5772-424c459e93a2b8a1.js","301","static/chunks/301-86af951e4c2d21dd.js","8578","static/chunks/8578-173d687a9e17435e.js","6675","static/chunks/6675-25d53af0b0fd665c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-0e91f1f48546308f.js"],"default"]
-1d:I[72972,["3954","static/chunks/d3ac728e-b4495703dbbd00a1.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3394","static/chunks/3394-1315441237e474ca.js","925","static/chunks/925-6e6c6afd469d6d7d.js","5772","static/chunks/5772-424c459e93a2b8a1.js","301","static/chunks/301-86af951e4c2d21dd.js","8578","static/chunks/8578-173d687a9e17435e.js","6675","static/chunks/6675-25d53af0b0fd665c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-0e91f1f48546308f.js"],""]
-1e:I[50301,["3954","static/chunks/d3ac728e-b4495703dbbd00a1.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3394","static/chunks/3394-1315441237e474ca.js","925","static/chunks/925-6e6c6afd469d6d7d.js","5772","static/chunks/5772-424c459e93a2b8a1.js","301","static/chunks/301-86af951e4c2d21dd.js","8578","static/chunks/8578-173d687a9e17435e.js","6675","static/chunks/6675-25d53af0b0fd665c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-0e91f1f48546308f.js"],"IconArrowLeft"]
-1f:I[50301,["3954","static/chunks/d3ac728e-b4495703dbbd00a1.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3394","static/chunks/3394-1315441237e474ca.js","925","static/chunks/925-6e6c6afd469d6d7d.js","5772","static/chunks/5772-424c459e93a2b8a1.js","301","static/chunks/301-86af951e4c2d21dd.js","8578","static/chunks/8578-173d687a9e17435e.js","6675","static/chunks/6675-25d53af0b0fd665c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-0e91f1f48546308f.js"],"IconOrnateAuthor"]
-20:I[50301,["3954","static/chunks/d3ac728e-b4495703dbbd00a1.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3394","static/chunks/3394-1315441237e474ca.js","925","static/chunks/925-6e6c6afd469d6d7d.js","5772","static/chunks/5772-424c459e93a2b8a1.js","301","static/chunks/301-86af951e4c2d21dd.js","8578","static/chunks/8578-173d687a9e17435e.js","6675","static/chunks/6675-25d53af0b0fd665c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-0e91f1f48546308f.js"],"IconOrnateCalendar"]
-21:I[50301,["3954","static/chunks/d3ac728e-b4495703dbbd00a1.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3394","static/chunks/3394-1315441237e474ca.js","925","static/chunks/925-6e6c6afd469d6d7d.js","5772","static/chunks/5772-424c459e93a2b8a1.js","301","static/chunks/301-86af951e4c2d21dd.js","8578","static/chunks/8578-173d687a9e17435e.js","6675","static/chunks/6675-25d53af0b0fd665c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-0e91f1f48546308f.js"],"IconOrnateClock"]
-22:I[50301,["3954","static/chunks/d3ac728e-b4495703dbbd00a1.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3394","static/chunks/3394-1315441237e474ca.js","925","static/chunks/925-6e6c6afd469d6d7d.js","5772","static/chunks/5772-424c459e93a2b8a1.js","301","static/chunks/301-86af951e4c2d21dd.js","8578","static/chunks/8578-173d687a9e17435e.js","6675","static/chunks/6675-25d53af0b0fd665c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-0e91f1f48546308f.js"],"IconOrnateTag"]
-23:I[65878,["3954","static/chunks/d3ac728e-b4495703dbbd00a1.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3394","static/chunks/3394-1315441237e474ca.js","925","static/chunks/925-6e6c6afd469d6d7d.js","5772","static/chunks/5772-424c459e93a2b8a1.js","301","static/chunks/301-86af951e4c2d21dd.js","8578","static/chunks/8578-173d687a9e17435e.js","6675","static/chunks/6675-25d53af0b0fd665c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-0e91f1f48546308f.js"],"Image"]
-24:I[18168,["3954","static/chunks/d3ac728e-b4495703dbbd00a1.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3394","static/chunks/3394-1315441237e474ca.js","925","static/chunks/925-6e6c6afd469d6d7d.js","5772","static/chunks/5772-424c459e93a2b8a1.js","301","static/chunks/301-86af951e4c2d21dd.js","8578","static/chunks/8578-173d687a9e17435e.js","6675","static/chunks/6675-25d53af0b0fd665c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-0e91f1f48546308f.js"],"CustomMarkdownRenderer"]
-26:I[74644,["3954","static/chunks/d3ac728e-b4495703dbbd00a1.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3394","static/chunks/3394-1315441237e474ca.js","925","static/chunks/925-6e6c6afd469d6d7d.js","5772","static/chunks/5772-424c459e93a2b8a1.js","301","static/chunks/301-86af951e4c2d21dd.js","8578","static/chunks/8578-173d687a9e17435e.js","6675","static/chunks/6675-25d53af0b0fd665c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-0e91f1f48546308f.js"],"default"]
-27:I[28054,["3954","static/chunks/d3ac728e-b4495703dbbd00a1.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3394","static/chunks/3394-1315441237e474ca.js","925","static/chunks/925-6e6c6afd469d6d7d.js","5772","static/chunks/5772-424c459e93a2b8a1.js","301","static/chunks/301-86af951e4c2d21dd.js","8578","static/chunks/8578-173d687a9e17435e.js","6675","static/chunks/6675-25d53af0b0fd665c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-0e91f1f48546308f.js"],"default"]
-28:I[4681,["3954","static/chunks/d3ac728e-b4495703dbbd00a1.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3394","static/chunks/3394-1315441237e474ca.js","925","static/chunks/925-6e6c6afd469d6d7d.js","5772","static/chunks/5772-424c459e93a2b8a1.js","301","static/chunks/301-86af951e4c2d21dd.js","8578","static/chunks/8578-173d687a9e17435e.js","6675","static/chunks/6675-25d53af0b0fd665c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-0e91f1f48546308f.js"],"default"]
-29:I[99775,["3954","static/chunks/d3ac728e-b4495703dbbd00a1.js","2972","static/chunks/2972-359ceb67daf90d6f.js","7655","static/chunks/7655-6712036b7f6e84fd.js","5878","static/chunks/5878-fc40e01cdd981ac7.js","5861","static/chunks/5861-5b724871cb8a5d0e.js","8977","static/chunks/8977-f5350679d2df8103.js","3394","static/chunks/3394-1315441237e474ca.js","925","static/chunks/925-6e6c6afd469d6d7d.js","5772","static/chunks/5772-424c459e93a2b8a1.js","301","static/chunks/301-86af951e4c2d21dd.js","8578","static/chunks/8578-173d687a9e17435e.js","6675","static/chunks/6675-25d53af0b0fd665c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-0e91f1f48546308f.js"],"default"]
-25:T4a85,
+      0:["manic-agency-1762813438291",[[["",{"children":["blog",{"children":[["category","tutorials","d"],{"children":[["slug","contribute","d"],{"children":["__PAGE__?{\"category\":\"tutorials\",\"slug\":\"contribute\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["category","tutorials","d"],{"children":[["slug","contribute","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/124bad3528d9bb7f.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/bba61798174f8eb3.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/581354fd310700f5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/65d3bfa38c58f4ce.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/8c1c91cc44abc4ad.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/c41e284b53825655.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/b5c48b90f6086f73.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/88edf09b8094bf5f.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_47a102\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://eocampaign1.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],"$undefined",["$","$L1d",null,{}]]}]}]}]]}]]}]],null],null],["$L1e",null]]]]
+1f:I[54680,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-30716beff184e344.js"],"default"]
+20:I[18745,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-30716beff184e344.js"],"default"]
+21:I[94058,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-30716beff184e344.js"],"default"]
+23:I[67373,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-30716beff184e344.js"],"default"]
+25:I[96670,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-30716beff184e344.js"],"default"]
+26:I[71409,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-30716beff184e344.js"],"default"]
+27:I[87634,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-30716beff184e344.js"],"default"]
+5a:I[72972,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-30716beff184e344.js"],""]
+5b:I[50301,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-30716beff184e344.js"],"IconArrowLeft"]
+5c:I[50301,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-30716beff184e344.js"],"IconOrnateAuthor"]
+5d:I[50301,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-30716beff184e344.js"],"IconOrnateCalendar"]
+5e:I[50301,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-30716beff184e344.js"],"IconOrnateClock"]
+5f:I[50301,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-30716beff184e344.js"],"IconOrnateTag"]
+60:I[65878,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-30716beff184e344.js"],"Image"]
+61:I[30603,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-30716beff184e344.js"],"CustomMarkdownRenderer"]
+63:I[74644,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-30716beff184e344.js"],"default"]
+64:I[75541,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-30716beff184e344.js"],"default"]
+66:I[28054,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-30716beff184e344.js"],"default"]
+67:I[4681,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-30716beff184e344.js"],"default"]
+68:I[99775,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-30716beff184e344.js"],"default"]
+22:T4a85,
 # ⟨/⟩ Contribute to the Synthetic Publishing Platform
 
 > This guide outlines how to contribute to our experimental publishing platform and provides a comprehensive reference for our enhanced markdown features.
@@ -603,6 +615,931 @@ We're an experimental platform operating beyond traditional disciplinary boundar
 
 Your anomalous contributions are welcome.
 
-Synthesize the unexpected.2:["$","$L18",null,{"children":[["$","$L19",null,{"postTitle":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform","postCategory":"tutorials","postAuthor":"Manic Agency","postTags":["contribution","guide","markdown","writing","open-source"],"postType":"post"}],["$","$L1a",null,{"postTitle":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform","contentSelector":"#post-content-top"}],["$","$L1b",null,{"children":[" ",["$","div",null,{"className":"blog-layout-container has-sidebar","children":[["$","$L1c",null,{"tableOfContents":[{"level":1,"text":"⟨/⟩ Contribute to the Synthetic Publishing Platform","slug":"-contribute-to-the-synthetic-publishing-platform"},{"level":2,"text":"🌐 About Manic.agency","slug":"-about-manicagency"},{"level":2,"text":"📡 Contribution Protocol","slug":"-contribution-protocol"},{"level":3,"text":"Submission Process","slug":"submission-process"},{"level":2,"text":"📊 Markdown & Metadata Structure","slug":"-markdown-metadata-structure"},{"level":3,"text":"Required Metadata","slug":"required-metadata"},{"level":3,"text":"Extended Metadata Options","slug":"extended-metadata-options"},{"level":2,"text":"🧠 Advanced Content Formatting","slug":"-advanced-content-formatting"},{"level":3,"text":"Lead Paragraphs","slug":"lead-paragraphs"},{"level":3,"text":"Styled Quotes","slug":"styled-quotes"},{"level":3,"text":"Banners","slug":"banners"},{"level":3,"text":"Image Controls","slug":"image-controls"},{"level":4,"text":"Comprehensive Image Formatting","slug":"comprehensive-image-formatting"},{"level":3,"text":"Image Grid Layouts","slug":"image-grid-layouts"},{"level":3,"text":"Custom Callouts","slug":"custom-callouts"},{"level":4,"text":"Note:","slug":"note"},{"level":4,"text":"Warning:","slug":"warning"},{"level":4,"text":"Tip:","slug":"tip"},{"level":4,"text":"Alert:","slug":"alert"},{"level":3,"text":"External Links","slug":"external-links"},{"level":4,"text":"Automatic External Link Detection","slug":"automatic-external-link-detection"},{"level":4,"text":"Internal vs External Links","slug":"internal-vs-external-links"},{"level":4,"text":"Styling Details","slug":"styling-details"},{"level":4,"text":"Best Practices for External Links","slug":"best-practices-for-external-links"},{"level":3,"text":"Code Blocks","slug":"code-blocks"},{"level":3,"text":"Data Tables","slug":"data-tables"},{"level":3,"text":"Mathematical Formulas","slug":"mathematical-formulas"},{"level":2,"text":"📁 Content Structure Example","slug":"-content-structure-example"},{"level":2,"text":"🧪 Technical Rendering Capabilities","slug":"-technical-rendering-capabilities"},{"level":2,"text":"🔮 Feature Roadmap","slug":"-feature-roadmap"},{"level":2,"text":"🔬 Real-World Examples","slug":"-real-world-examples"},{"level":3,"text":"Lead Paragraph","slug":"lead-paragraph"},{"level":3,"text":"Styled Quote","slug":"styled-quote"},{"level":3,"text":"Banner","slug":"banner"},{"level":3,"text":"Image Formatting","slug":"image-formatting"},{"level":3,"text":"Image Grid","slug":"image-grid"},{"level":3,"text":"Custom Callout","slug":"custom-callout"},{"level":3,"text":"Mathematical Formula","slug":"mathematical-formula"},{"level":3,"text":"External Links","slug":"external-links"},{"level":2,"text":"🕳️ Advanced Typography Techniques","slug":"-advanced-typography-techniques"},{"level":3,"text":"Text Emphasis","slug":"text-emphasis"},{"level":3,"text":"Text Alignment","slug":"text-alignment"},{"level":3,"text":"Drop Caps and Typography","slug":"drop-caps-and-typography"},{"level":2,"text":"🧩 Component Integration Examples","slug":"-component-integration-examples"},{"level":3,"text":"Full Example: Image + Caption + Effects","slug":"full-example-image-caption-effects"},{"level":3,"text":"Full Example: Callout + Code","slug":"full-example-callout-code"},{"level":3,"text":"Full Example: Banner + Lead Paragraph","slug":"full-example-banner-lead-paragraph"},{"level":2,"text":"🔌 Implementation Checklist","slug":"-implementation-checklist"},{"level":2,"text":"📡 Transmission Protocol","slug":"-transmission-protocol"}],"postTitle":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform"}],["$","main",null,{"className":"blog-main-content-area","children":["$","article",null,{"className":"blog-post-container","id":"post-content-top","children":[["$","header",null,{"className":"post-header","children":[["$","div",null,{"className":"back-to-blog-link-container","children":["$","$L1d",null,{"href":"/blog","className":"back-to-blog-link","children":[["$","$L1e",null,{"size":14,"className":"mr-1.5"}]," ","Back to All Entries"]}]}],["$","h1",null,{"className":"post-title","children":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform"}],["$","div",null,{"className":"post-meta","children":[["$","div",null,{"className":"meta-item author","children":[["$","$L1f",null,{"className":"meta-icon","aria-hidden":"true"}],["$","div",null,{"className":"author-info","children":["$undefined",["$","span",null,{"className":"author-name","children":"Manic Agency"}]]}]]}],["$","div",null,{"className":"meta-item date","children":[["$","$L20",null,{"className":"meta-icon","aria-hidden":"true"}],["$","time",null,{"dateTime":"2025-04-20T00:00:00.000Z","children":["Published ","April 20, 2025"]}]]}],["$","div",null,{"className":"meta-item reading-time","children":[["$","$L21",null,{"className":"meta-icon","aria-hidden":"true"}],["$","span",null,{"children":[12," min read"]}]]}],["$","div",null,{"className":"meta-item category","children":[["$","$L22",null,{"className":"meta-icon","aria-hidden":"true"}],["$","$L1d",null,{"href":"/blog?category=tutorials","className":"post-category-link","children":"tutorials"}]]}]]}],["$","div",null,{"className":"post-tags","children":["$","div",null,{"className":"tags-list","children":[["$","$L1d","contribution",{"href":"/blog?tags=contribution","className":"post-tag","children":["#","contribution"]}],["$","$L1d","guide",{"href":"/blog?tags=guide","className":"post-tag","children":["#","guide"]}],["$","$L1d","markdown",{"href":"/blog?tags=markdown","className":"post-tag","children":["#","markdown"]}],["$","$L1d","writing",{"href":"/blog?tags=writing","className":"post-tag","children":["#","writing"]}],["$","$L1d","open-source",{"href":"/blog?tags=open-source","className":"post-tag","children":["#","open-source"]}]]}]}]]}],["$","div",null,{"className":"post-featured-image-container","children":["$","figure",null,{"className":"post-featured-image","children":[["$","$L23",null,{"src":"/og-default.webp","alt":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform","width":1600,"height":900,"className":"featured-image","priority":true}],"$undefined"]}]}],["$","div",null,{"className":"post-content","children":["$","$L24",null,{"children":"$25"}]}],"$undefined",["$","footer",null,{"className":"post-footer","children":["$","$L26",null,{"title":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform","url":"/blog/tutorials/contribute"}]}],["$","section",null,{"className":"post-comments","aria-labelledby":"comments-heading","children":[["$","h2",null,{"id":"comments-heading","className":"comments-title","children":"Join the Discussion"}],["$","$L27",null,{"postTitle":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform","postUrl":"/blog/tutorials/contribute","postIdentifier":"blog-tutorials-contribute","className":"mb-8"}],["$","div",null,{"className":"mt-8","children":[["$","div",null,{"className":"giscus-header","children":[["$","h3",null,{"className":"giscus-title","children":"Comments with GitHub"}],["$","div",null,{"className":"giscus-divider"}]]}],["$","$L28",null,{}]]}]]}],["$","section",null,{"className":"post-newsletter-signup mt-16","children":["$","$L29",null,{"variant":"blog","background":"accent"}]}]]}]}]," "]}]," "]}]]}]
-17:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#FBF6EF"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#22182B"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform | Manic Agency - Metaverses Intersection"}],["$","meta","5",{"name":"description","content":"Learn how to contribute your experimental ideas and digital explorations to our synthetic publishing platform."}],["$","meta","6",{"name":"author","content":"Manic Agency"}],["$","meta","7",{"name":"keywords","content":"contribution,guide,markdown,writing,open-source"}],["$","meta","8",{"name":"creator","content":"Manic Inc"}],["$","meta","9",{"name":"publisher","content":"Manic Inc"}],["$","link","10",{"rel":"canonical","href":"https://manic.agency/blog/tutorials/contribute"}],["$","meta","11",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","12",{"property":"og:title","content":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform | Manic Agency - Metaverses Intersection"}],["$","meta","13",{"property":"og:description","content":"Learn how to contribute your experimental ideas and digital explorations to our synthetic publishing platform."}],["$","meta","14",{"property":"og:image","content":"https://manic.agency//og-default.webp"}],["$","meta","15",{"property":"og:image:alt","content":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform"}],["$","meta","16",{"property":"og:type","content":"article"}],["$","meta","17",{"property":"article:published_time","content":"2025-04-20T00:00:00.000Z"}],["$","meta","18",{"property":"article:modified_time","content":"2025-09-16T15:32:24.000Z"}],["$","meta","19",{"property":"article:author","content":"Manic Agency"}],["$","meta","20",{"property":"article:tag","content":"contribution"}],["$","meta","21",{"property":"article:tag","content":"guide"}],["$","meta","22",{"property":"article:tag","content":"markdown"}],["$","meta","23",{"property":"article:tag","content":"writing"}],["$","meta","24",{"property":"article:tag","content":"open-source"}],["$","meta","25",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","26",{"name":"twitter:title","content":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform | Manic Agency - Metaverses Intersection"}],["$","meta","27",{"name":"twitter:description","content":"Learn how to contribute your experimental ideas and digital explorations to our synthetic publishing platform."}],["$","meta","28",{"name":"twitter:image","content":"https://manic.agency//og-default.webp"}],["$","link","29",{"rel":"shortcut icon","href":"/favicon-16x16.png"}],["$","link","30",{"rel":"icon","href":"/favicon.ico"}],["$","link","31",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","meta","32",{"name":"next-size-adjust"}]]
+Synthesize the unexpected.24:["contribution","guide","markdown","writing","open-source"]
+29:{"level":1,"text":"⟨/⟩ Contribute to the Synthetic Publishing Platform","slug":"-contribute-to-the-synthetic-publishing-platform"}
+2a:{"level":2,"text":"🌐 About Manic.agency","slug":"-about-manicagency"}
+2b:{"level":2,"text":"📡 Contribution Protocol","slug":"-contribution-protocol"}
+2c:{"level":3,"text":"Submission Process","slug":"submission-process"}
+2d:{"level":2,"text":"📊 Markdown & Metadata Structure","slug":"-markdown-metadata-structure"}
+2e:{"level":3,"text":"Required Metadata","slug":"required-metadata"}
+2f:{"level":3,"text":"Extended Metadata Options","slug":"extended-metadata-options"}
+30:{"level":2,"text":"🧠 Advanced Content Formatting","slug":"-advanced-content-formatting"}
+31:{"level":3,"text":"Lead Paragraphs","slug":"lead-paragraphs"}
+32:{"level":3,"text":"Styled Quotes","slug":"styled-quotes"}
+33:{"level":3,"text":"Banners","slug":"banners"}
+34:{"level":3,"text":"Image Controls","slug":"image-controls"}
+35:{"level":4,"text":"Comprehensive Image Formatting","slug":"comprehensive-image-formatting"}
+36:{"level":3,"text":"Image Grid Layouts","slug":"image-grid-layouts"}
+37:{"level":3,"text":"Custom Callouts","slug":"custom-callouts"}
+38:{"level":4,"text":"Note:","slug":"note"}
+39:{"level":4,"text":"Warning:","slug":"warning"}
+3a:{"level":4,"text":"Tip:","slug":"tip"}
+3b:{"level":4,"text":"Alert:","slug":"alert"}
+3c:{"level":3,"text":"External Links","slug":"external-links"}
+3d:{"level":4,"text":"Automatic External Link Detection","slug":"automatic-external-link-detection"}
+3e:{"level":4,"text":"Internal vs External Links","slug":"internal-vs-external-links"}
+3f:{"level":4,"text":"Styling Details","slug":"styling-details"}
+40:{"level":4,"text":"Best Practices for External Links","slug":"best-practices-for-external-links"}
+41:{"level":3,"text":"Code Blocks","slug":"code-blocks"}
+42:{"level":3,"text":"Data Tables","slug":"data-tables"}
+43:{"level":3,"text":"Mathematical Formulas","slug":"mathematical-formulas"}
+44:{"level":2,"text":"📁 Content Structure Example","slug":"-content-structure-example"}
+45:{"level":2,"text":"🧪 Technical Rendering Capabilities","slug":"-technical-rendering-capabilities"}
+46:{"level":2,"text":"🔮 Feature Roadmap","slug":"-feature-roadmap"}
+47:{"level":2,"text":"🔬 Real-World Examples","slug":"-real-world-examples"}
+48:{"level":3,"text":"Lead Paragraph","slug":"lead-paragraph"}
+49:{"level":3,"text":"Styled Quote","slug":"styled-quote"}
+4a:{"level":3,"text":"Banner","slug":"banner"}
+4b:{"level":3,"text":"Image Formatting","slug":"image-formatting"}
+4c:{"level":3,"text":"Image Grid","slug":"image-grid"}
+4d:{"level":3,"text":"Custom Callout","slug":"custom-callout"}
+4e:{"level":3,"text":"Mathematical Formula","slug":"mathematical-formula"}
+4f:{"level":3,"text":"External Links","slug":"external-links"}
+50:{"level":2,"text":"🕳️ Advanced Typography Techniques","slug":"-advanced-typography-techniques"}
+51:{"level":3,"text":"Text Emphasis","slug":"text-emphasis"}
+52:{"level":3,"text":"Text Alignment","slug":"text-alignment"}
+53:{"level":3,"text":"Drop Caps and Typography","slug":"drop-caps-and-typography"}
+54:{"level":2,"text":"🧩 Component Integration Examples","slug":"-component-integration-examples"}
+55:{"level":3,"text":"Full Example: Image + Caption + Effects","slug":"full-example-image-caption-effects"}
+56:{"level":3,"text":"Full Example: Callout + Code","slug":"full-example-callout-code"}
+57:{"level":3,"text":"Full Example: Banner + Lead Paragraph","slug":"full-example-banner-lead-paragraph"}
+58:{"level":2,"text":"🔌 Implementation Checklist","slug":"-implementation-checklist"}
+59:{"level":2,"text":"📡 Transmission Protocol","slug":"-transmission-protocol"}
+28:["$29","$2a","$2b","$2c","$2d","$2e","$2f","$30","$31","$32","$33","$34","$35","$36","$37","$38","$39","$3a","$3b","$3c","$3d","$3e","$3f","$40","$41","$42","$43","$44","$45","$46","$47","$48","$49","$4a","$4b","$4c","$4d","$4e","$4f","$50","$51","$52","$53","$54","$55","$56","$57","$58","$59"]
+62:T4a85,
+# ⟨/⟩ Contribute to the Synthetic Publishing Platform
+
+> This guide outlines how to contribute to our experimental publishing platform and provides a comprehensive reference for our enhanced markdown features.
+
+:::banner{backgroundColor="var(--accent-primary)", textColor="white", size="large", icon="📡"}
+The digital frontier isn't found. It's synthesized.
+:::
+
+## 🌐 About Manic.agency
+
+**The Looking Glass** is an **experimental publishing platform** transcending traditional journalistic mediums. We are a digital space dedicated to exploring:
+
+- Pop Culture Analysis
+- Experimental UI/UX
+- Creative Coding
+- AI (ML, DL, LLMs, GenAI)
+- Speculative Technology
+- Security, Privacy, and Digital Liberty
+- Philosophical Musings
+- Interdisciplinary Explorations
+
+As the code and all articles are open-source on GitHub, *anyone* can fork and download the archive and host or own the blog content for themselves. And as such, your work submitted to The Looking Glass will never disappear.
+
+Images that are not ours are always credited and attributed, and will also require full attribution if reused.
+
+Works that are *entirely* generated by LLMs are categorized in `synthetic` pieces, and generally are experimental in nature.
+
+This site is built and operated by [https://manic.agency](https://manic.agency).
+
+## 📡 Contribution Protocol
+
+### Submission Process
+
+1. **Fork the Repository**: Start by forking `manicinc/manicinc` on GitHub.
+2. **Create Content File**:
+   * Location: `posts/[category]/your-article-slug.md` (or `.mdx`)
+   * Choose an appropriate `[category]` (e.g., `experiments`, `research`, `tutorials`, `theory`).
+3. **Add Supporting Images**:
+   * Location: `public/assets/blog/[your-article-slug]/` (Create this folder).
+   * Use relative paths like `/assets/blog/your-article-slug/image.jpg` in your markdown.
+4. **Open a Pull Request**: Submit a PR from your fork to our main branch.
+5. **Engage with Feedback**: Respond to comments and requested changes during the review process.
+
+## 📊 Markdown & Metadata Structure
+
+### Required Metadata
+
+Every contribution must include a comprehensive YAML frontmatter:
+
+```yaml
+---
+title: "Your Neural Interface Exploration" # Engaging Title
+date: "2025-04-20" # Correct Date
+excerpt: "A concise, compelling summary (approx. 1-2 sentences) of your digital exploration."
+author: "Your Identifier" # Your GitHub handle or chosen name
+category: "experiments" # Choose one: experiments, research, tutorials, theory, documentation
+tags: ["neural-interfaces", "synthetic-media", "speculative-tech"] # Relevant keywords
+image: "/assets/blog/your-article-slug/featured-image.jpg" # Path relative to /public
+---
+```
+
+### Extended Metadata Options
+
+You can add these optional fields for more control:
+
+```yaml
+authorBio: "Brief context about your relevant background and work." # Displayed on author pages
+featured: true # Promotes content to featured sections on homepage/elsewhere
+sortOrder: 3 # Controls display order in featured collections (lower number = higher priority)
+# --- Advanced Styling (Use Sparingly) ---
+# bgColor: "#0a0b13" # Custom page background color in HEX format (overrides theme)
+# textColor: "#7f5af0" # Custom page text color in HEX format (overrides theme)
+```
+
+## 🧠 Advanced Content Formatting
+
+Our renderer supports enhanced Markdown syntax for richer content presentation.
+
+### Lead Paragraphs
+
+Create prominent lead paragraphs using `>>>` at the start of the paragraph.
+
+```markdown
+>>> This is a lead paragraph that will appear more prominently and set the tone for the article. It uses a distinct font and styling.
+```
+
+Renders as:
+
+> This is a lead paragraph that will appear more prominently and set the tone for the article. It uses a distinct font and styling.
+
+### Styled Quotes
+
+Create elegant, centered quotes with optional attribution using the `*""*` marker within a blockquote. Attribution should follow in the next paragraph, optionally starting with —.
+
+```markdown
+> *"The best way to predict the future is to invent it."*
+> — Alan Kay
+```
+
+Renders as:
+
+> *"The best way to predict the future is to invent it."*
+> — Alan Kay
+
+(Note: Standard blockquotes using just `>` will render with the `.standard-blockquote` style).
+
+### Banners
+
+Add eye-catching banners.
+
+```markdown
+:::banner{backgroundColor="var(--accent-highlight)", textColor="var(--color-dark-bg)", size="medium", icon="🚀"}
+Your important announcement or highlight text here! Banners grab attention.
+:::
+```
+
+Available options for `{...}`:
+
+- `backgroundColor`: Any valid CSS color (var(--accent-...), #hex, rgb(...)).
+- `textColor`: Any valid CSS color.
+- `size`: small, medium, large (affects padding).
+- `alignment`: left, center, right (text alignment).
+- `icon`: Any emoji or short text string.
+
+### Image Controls
+
+#### Comprehensive Image Formatting
+
+Use pipe (`|`) separators within the alt text to control image appearance.
+
+```markdown
+![Circuit board close-up|size=medium|align=left|effect=glow|border=gradient|caption=Experimental neural processing unit|zoomable=true](/assets/images/placeholder-600x400.png)
+```
+
+##### Size Options
+- `small`: Compact (`max-width: 300px`).
+- `medium`: Standard (`max-width: 500px`).
+- `large`: Expanded (`max-width: 800px`).
+- `full`: Full content width.
+
+##### Alignment Options
+- `left`: Float left, text wraps right.
+- `center`: Center align (default).
+- `right`: Float right, text wraps left.
+
+##### Visual Effects
+- `shadow`: Subtle drop shadow.
+- `glow`: Ethereal accent glow.
+- `glitch`: Interactive hover effect (requires specific implementation).
+- `none`: No effect.
+
+##### Border Styles
+- `simple`: Basic 1px theme border.
+- `gradient`: Accent gradient border.
+- `glow`: Glowing accent border.
+- `inset`: Inset shadow border.
+- `dashed`: Dashed accent border.
+- `none`: No border (default).
+
+##### Zooming Control
+- `zoomable=true`: Enable click-to-zoom (default).
+- `zoomable=false`: Disable zooming.
+
+### Image Grid Layouts
+
+Use the `<ImageGrid>` component for responsive grids.
+
+```markdown
+<ImageGrid columns={3}>
+  ![First image description|caption=Grid Image 1](/assets/images/placeholder-400x300.png)
+  ![Second image description|caption=Grid Image 2](/assets/images/placeholder-400x300.png)
+  ![Third image description|caption=Grid Image 3](/assets/images/placeholder-400x300.png)
+</ImageGrid>
+```
+
+### Custom Callouts
+
+Use blockquotes starting with `> :::type` for formatted callouts.
+
+#### Note:
+```markdown
+> :::note
+> Important implementation details and context go here.
+```
+
+#### Warning:
+```markdown
+> :::warning
+> Experimental features alert. Proceed with caution and awareness of potential instability.
+```
+
+#### Tip:
+```markdown
+> :::tip
+> Optimization suggestions and helpful hints for better performance or understanding.
+```
+
+#### Alert:
+```markdown
+> :::alert
+> Critical considerations, security vulnerabilities, or must-know information demanding attention.
+```
+
+### External Links
+
+Our platform automatically enhances external links with an ornate SVG icon and special styling. Links that start with `http://` or `https://` are automatically detected and styled.
+
+#### Automatic External Link Detection
+
+Simply use standard markdown link syntax for external URLs:
+
+```markdown
+Check out our latest research on [Neural Interface Technology](https://example.com/neural-interfaces) for more details.
+
+You can also reference external documentation like [React's official guide](https://reactjs.org/docs/getting-started.html) or academic papers from [arXiv](https://arxiv.org/abs/2301.00001).
+```
+
+These links will automatically:
+- Open in a new tab (`target="_blank"`)
+- Include proper security attributes (`rel="noopener noreferrer"`)
+- Display an ornate gradient SVG icon after the link text
+- Feature subtle hover animations (icon moves slightly on hover)
+- Use themed accent colors that adapt to light/dark mode
+
+#### Internal vs External Links
+
+The system distinguishes between internal and external links:
+
+```markdown
+<!-- Internal links (no icon, same tab) -->
+[About our mission](/mission) 
+[View our projects](/projects)
+[Contact us](/contact)
+
+<!-- External links (with icon, new tab) -->
+[GitHub Repository](https://github.com/manicinc/manicinc)
+[Manic Agency Website](https://manic.agency)
+[Academic Paper](https://arxiv.org/abs/example)
+```
+
+#### Styling Details
+
+External links feature:
+- **Visual indicator**: Ornate SVG with gradient colors matching the site theme
+- **Hover effects**: Icon slides slightly right and up on hover with opacity increase
+- **Accessibility**: Proper ARIA attributes and keyboard navigation support
+- **Performance**: SVG is optimized and cached for fast loading
+- **Responsive**: Icon scales appropriately on different screen sizes
+
+#### Best Practices for External Links
+
+1. **Context**: Provide clear context about where the link leads
+2. **Relevance**: Ensure external links add value and aren't distracting
+3. **Attribution**: When referencing external work, provide proper attribution
+4. **Verification**: Test that all external links work and remain accessible
+5. **Archive-friendly**: Consider providing backup references for critical links
+
+```markdown
+<!-- Good: Clear context and purpose -->
+For a comprehensive overview of quantum computing principles, see IBM's [Quantum Computing Fundamentals](https://www.ibm.com/quantum-computing/fundamentals/).
+
+<!-- Better: With additional context -->
+The paper "[Quantum Supremacy Using a Programmable Superconducting Processor](https://www.nature.com/articles/s41586-019-1666-5)" published in Nature demonstrates the first empirical evidence of quantum computational advantage.
+```
+
+### Code Blocks
+
+Standard fenced code blocks with language identifiers for syntax highlighting.
+
+```javascript
+// Example JavaScript with highlighting
+function generatePattern(complexity, seed) {
+  const base = seed || Math.random();
+  // Generate complex array based on input
+  return Array(complexity).fill(0).map((_, i) => ({
+    weight: base * (i / complexity) * Math.sin(i),
+    activation: i % 2 ? 'sigmoid' : 'relu', // Alternating activation
+    connections: Math.floor(complexity / (i + 1))
+  }));
+}
+```
+
+### Data Tables
+
+Use standard GitHub Flavored Markdown tables.
+
+```markdown
+| Parameter   | Range       | Default   | Impact         |
+|-------------|-------------|-----------|----------------|
+| Latency     | 10-100ms    | 30ms      | Responsiveness |
+| Precision   | 0.1-0.001   | 0.01      | Detail level   |
+| Iterations  | 1-10        | 3         | Processing depth |
+| Convergence | 0.95-0.999  | 0.99      | Stability      |
+```
+
+### Mathematical Formulas
+
+Use LaTeX syntax within `$` for inline and `$$` for block formulas.
+
+Inline formula: `$E = mc^2$` showcases energy-mass equivalence.
+
+Block formula:
+
+```markdown
+$$
+\mathcal{L}(\theta) = \sum_{i=1}^{N} \log P(y_i | x_i; \theta) - \lambda R(\theta)
+$$
+```
+
+## 📁 Content Structure Example
+
+Organize your posts logically within the `/src/posts/` directory:
+
+```
+/src/posts
+├── experiments/              <-- For new prototypes, explorations
+│   ├── neural-interface-prototype.md
+│   └── synthetic-media-generation.md
+├── research/                 <-- For deeper analysis, findings
+│   └── emergent-system-behaviors.md
+├── tutorials/                <-- For step-by-step guides
+│   └── building-with-synthstack.md
+├── theory/                   <-- For conceptual frameworks, ideas
+│   └── digital-consciousness-parameters.md
+└── documentation/            <-- For platform guides like this one
+    └── contribution-guide.md
+```
+
+## 🧪 Technical Rendering Capabilities
+
+Our platform supports:
+
+- Enhanced typography with lead paragraphs (`>>>`) and styled quotes (`*"..."*`)
+- Banners (`:::banner`) and callouts (`> :::note`, etc.) for highlighting
+- Comprehensive image formatting via alt text (`|size=...|align=...`)
+- Syntax highlighting with copy button (standard ` ```lang `)
+- Mathematical formula rendering via KaTeX (`$...$`, `$$...$$`)
+- Responsive image grids (`<ImageGrid>` - requires MDX/component setup)
+- Standard GFM Tables
+- Basic HTML via rehype-raw (e.g., `<mark>`, `<div style="...">`)
+
+## 🔮 Feature Roadmap
+
+| Feature                   | Status          | Description                         |
+|---------------------------|-----------------|-------------------------------------|
+| ✅ Image Controls         | Implemented     | Sizing, align, effect, border, caption |
+| ✅ Code Highlighting      | Implemented     | PrismJS themes, copy button         |
+| ✅ Image Grids            | Implemented     | Responsive layouts via component    |
+| ✅ Custom Callouts        | Implemented     | Note, Warning, Tip, Alert blocks    |
+| ✅ Styled Quotes & Banners| Implemented     | Enhanced typography blocks          |
+| ✅ Table Formatting       | Implemented     | Responsive GFM data tables          |
+| ✅ Math Formulas          | Implemented     | KaTeX integration                   |
+| ✅ External Link Styling  | Implemented     | Ornate SVG icons with hover effects |
+| 🔄 Interactive Code       | In Development  | Editable/runnable examples          |
+| 🔄 SVG Diagram Generation | In Development  | Code-to-diagram rendering (Mermaid?) |
+| 📝 Data Visualization     | Planned         | Chart generation from tables        |
+| 📝 Timeline Components    | Planned         | Interactive concept timelines       |
+
+## 🔬 Real-World Examples
+
+### Lead Paragraph
+
+```markdown
+>>> This introductory paragraph stands out with larger text and styling, creating visual hierarchy and establishing context for the reader before diving into detailed content.
+```
+
+### Styled Quote
+
+```markdown
+> *"The digital frontier isn't found. It's synthesized."*
+> — Manic Agency
+```
+
+### Banner
+
+```markdown
+:::banner{backgroundColor="var(--accent-highlight)", textColor="#1a111b", icon="🚀"}
+Launch into the digital frontier with our experimental platform!
+:::
+```
+
+### Image Formatting
+
+```markdown
+![Neural network visualization|size=medium|align=center|effect=glow|border=gradient|caption=Synthetic neural pathway mapping](/assets/images/placeholder-600x400.png)
+```
+
+### Image Grid
+
+```markdown
+<ImageGrid columns={3}>
+![Neural interface v1|caption=Version 1](/assets/images/placeholder-400x300.png)
+![Neural interface v2|caption=Version 2](/assets/images/placeholder-400x300.png)
+![Neural interface v3|caption=Version 3](/assets/images/placeholder-400x300.png)
+</ImageGrid>
+```
+
+### Custom Callout
+
+```markdown
+> :::warning
+> This experimental feature may produce unpredictable results when integrated with legacy systems. Use with appropriate testing protocols.
+```
+
+### Mathematical Formula
+
+```markdown
+Inline math uses single dollars: $\alpha = \frac{\beta}{\gamma}$. Block math uses double dollars:
+$$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$
+```
+
+### External Links
+
+```markdown
+For more advanced neural network architectures, see the [Transformer paper](https://arxiv.org/abs/1706.03762) and Google's [BERT documentation](https://github.com/google-research/bert).
+
+Internal links like [our projects](/projects) don't get the external icon, while external links to [OpenAI's GPT research](https://openai.com/research/gpt-4) display the ornate SVG indicator.
+```
+
+## 🕳️ Advanced Typography Techniques
+
+### Text Emphasis
+
+Beyond basic markdown formatting, our platform supports:
+
+- Bold text using **double asterisks**
+- Italic text using *single asterisks*
+- Bold italic text using ***triple asterisks***
+- Inline code using `backticks`
+- ~~Strikethrough~~ using ~~double tildes~~
+- Highlighted text using `<mark>HTML mark tags</mark>` (requires rehype-raw)
+
+### Text Alignment
+
+You can control text alignment using HTML div wrappers (requires rehype-raw):
+
+```html
+<div style="text-align: center;">This text will be centered.</div>
+<div style="text-align: right;">This text will be right-aligned.</div>
+<div style="text-align: justify;">Justified text wraps to fill the container width, aligning both left and right margins, which can be useful for certain layouts but should be used judiciously for readability.</div>
+```
+
+### Drop Caps and Typography
+
+The first letter of the first paragraph in your content will automatically be styled as a drop cap (unless it's a `>>>` lead paragraph). You generally don't need to do anything for this.
+
+## 🧩 Component Integration Examples
+
+### Full Example: Image + Caption + Effects
+
+```markdown
+## Neural Interface Evolution
+
+![Neural interface prototype|size=large|align=center|effect=glow|border=gradient|caption=Third-generation neural mapping interface with enhanced synaptic connectivity|zoomable=false](/assets/images/placeholder-800x500.png) 
+
+The third-generation interface introduces quantum entanglement principles to traditional neural mapping algorithms, resulting in significantly faster state resolution and reduced decoherence over extended operational periods. This breakthrough allows for...
+```
+
+### Full Example: Callout + Code
+
+```markdown
+> :::tip
+> Optimize your neural network by adjusting the activation threshold parameters dynamically based on input entropy.
+
+```javascript
+// Example optimization function
+function optimizeNetwork(network, threshold = 0.75, entropyFactor = 0.1) {
+  const currentEntropy = calculateEntropy(network.input); // Assuming this function exists
+  const dynamicThreshold = threshold + (entropyFactor * (1 - currentEntropy));
+
+  return network.nodes.map(node => ({
+    ...node,
+    // Use dynamic threshold for activation
+    activation: node.signal > dynamicThreshold ? 'sigmoid' : 'relu',
+    weight: node.signal > dynamicThreshold 
+      ? node.weight * (1 + entropyFactor)
+      : node.weight * (1 - entropyFactor)
+  }));
+}
+```
+
+### Full Example: Banner + Lead Paragraph
+
+```markdown
+:::banner{backgroundColor="#7f5af0", textColor="white", icon="💡"}
+New Experimental Feature: Quantum Neural Bridging
+:::
+
+>>> Quantum Neural Bridging represents a paradigm shift in how synthetic systems process non-linear decision matrices. This introductory overview covers the fundamental principles and implementation considerations for integrating QNB modules.
+```
+
+## 🔌 Implementation Checklist
+
+When submitting your contribution, ensure:
+
+- [x] Frontmatter contains all required metadata (title, date, excerpt, author, category, tags, image).
+- [x] Images are reasonably optimized (size/format) and stored in /public/assets/blog/your-slug/.
+- [x] Custom formatting syntax (>>>, *"..."*, > :::type, :::banner, Image attributes) is used correctly.
+- [x] Code examples use correct language identifiers for highlighting and are functional.
+- [x] All external links are valid and accessible.
+- [x] Content is original or properly attributed (use standard blockquotes > for third-party quotes).
+
+## 📡 Transmission Protocol
+
+We're an experimental platform operating beyond traditional disciplinary boundaries. We build the tools, systems, and theories we wish existed.
+
+Your anomalous contributions are welcome.
+
+Synthesize the unexpected.65:T308c,
+# Voice Chat Assistant — The Future of Coding is Conversational
+
+## Speak Your Code Into Existence
+
+Voice Chat Assistant (VCA) represents a paradigm shift in software development. Instead of typing every character, wrestling with syntax, or context-switching between documentation and your editor—you simply talk. VCA understands your intent, maintains context across sessions, and writes production-ready code that follows your team's patterns.
+
+> "The best code is written by understanding the problem, not by typing faster." — VCA Philosophy
+
+## 🎙️ How It Works
+
+### 1. Just Start Talking
+Press the hotkey or click the mic. Describe what you want to build, fix, or refactor. No special commands or syntax required.
+
+```
+"I need a React component that fetches user data from our API 
+and displays it in a card layout with loading and error states"
+```
+
+### 2. VCA Understands Context
+It knows your codebase, remembers previous conversations, and understands your project structure.
+
+```
+"Make it use our existing useApi hook and follow the same 
+pattern as the ProductCard component"
+```
+
+### 3. Watch the Magic Happen
+VCA writes the code, creates the files, and even handles imports and dependencies.
+
+```typescript
+// components/UserCard.tsx
+import React from 'react';
+import { useApi } from '../hooks/useApi';
+import { Card, CardSkeleton, ErrorState } from '../components/ui';
+import type { User } from '../types/api';
+
+export const UserCard: React.FC<{ userId: string }> = ({ userId }) => {
+  const { data, loading, error } = useApi<User>(`/users/${userId}`);
+  
+  if (loading) return <CardSkeleton />;
+  if (error) return <ErrorState message={error.message} />;
+  
+  return (
+    <Card>
+      <Card.Header>
+        <img src={data.avatar} alt={data.name} />
+        <h3>{data.name}</h3>
+      </Card.Header>
+      <Card.Body>
+        <p>{data.email}</p>
+        <p>{data.role}</p>
+      </Card.Body>
+    </Card>
+  );
+};
+```
+
+## 🚀 Key Features
+
+### Voice-First, But Not Voice-Only
+
+While optimized for voice, VCA supports multiple input modes:
+- **Voice** — Natural conversation for complex requests
+- **Text** — Quick commands and precision edits
+- **Code Selection** — Highlight and describe changes
+- **Mixed Mode** — Combine all three seamlessly
+
+### Context-Aware Intelligence
+
+VCA maintains deep understanding across multiple dimensions:
+
+- **Conversation Memory** — Remembers everything discussed in the session
+- **Code Context** — Understands your entire codebase structure
+- **Pattern Recognition** — Learns your coding style and preferences
+- **Project Awareness** — Knows your dependencies, build tools, and conventions
+
+### Production-Ready Code Generation
+
+Not just snippets—complete, working implementations:
+
+- **Full Components** — Entire features with proper structure
+- **Test Coverage** — Generates tests alongside implementation
+- **Documentation** — Adds JSDoc, comments, and README updates
+- **Refactoring** — Safely restructures existing code
+- **Migration** — Updates code to new patterns or versions
+
+### Integrated Development Workflow
+
+VCA connects with your entire toolchain:
+
+- **Editor Integration** — VSCode, Neovim, JetBrains
+- **Version Control** — Git operations with meaningful commits
+- **Terminal Access** — Run commands, see output, debug
+- **Package Management** — Install dependencies, update versions
+- **CI/CD** — Understand and update pipeline configurations
+
+## 🧠 Powered by AgentOS
+
+At the heart of VCA lies [AgentOS](https://agentos.sh), our modular orchestration runtime that makes intelligent interactions possible:
+
+### Intelligent Orchestration
+- **Multi-Model Support** — Uses the best LLM for each task
+- **Tool Coordination** — Manages complex multi-step operations
+- **Memory Management** — Efficient context window utilization
+- **Streaming Responses** — Real-time feedback as it works
+
+### Safety & Control
+- **Guardrails** — Built-in protections against harmful operations
+- **Permission System** — Fine-grained control over capabilities
+- **Review Mode** — Preview changes before applying
+- **Rollback** — Undo any operation instantly
+
+## 💡 Real-World Use Cases
+
+### Frontend Development
+*"Convert this Figma design into a responsive React component with Tailwind"*
+
+VCA analyzes the design, generates pixel-perfect components with proper responsive breakpoints, and even suggests accessibility improvements.
+
+### Backend APIs
+*"Create a REST API for user management with authentication, validation, and rate limiting"*
+
+Generates complete CRUD endpoints, middleware, database schemas, and even Swagger documentation.
+
+### Debugging & Optimization
+*"This function is slow. Profile it and optimize the performance"*
+
+VCA analyzes the code, identifies bottlenecks, suggests optimizations, and can even run benchmarks to prove improvements.
+
+### Documentation
+*"Document this codebase for new developers"*
+
+Creates comprehensive docs including architecture overviews, setup guides, API references, and inline code comments.
+
+### Testing
+*"Write integration tests for the checkout flow"*
+
+Generates comprehensive test suites that cover happy paths, edge cases, and error scenarios.
+
+## 🎯 Perfect For
+
+### Individual Developers
+- **10x Productivity** — Write code as fast as you can think
+- **Learn Faster** — Get explanations while building
+- **Stay in Flow** — No context switching to Stack Overflow
+- **Reduce Fatigue** — Let VCA handle the boilerplate
+
+### Teams
+- **Consistent Patterns** — Enforces team conventions automatically
+- **Knowledge Sharing** — Capture tribal knowledge in prompts
+- **Onboarding** — New developers productive from day one
+- **Code Reviews** — AI-assisted review suggestions
+
+### Specific Scenarios
+- **Prototyping** — Go from idea to working demo in minutes
+- **Refactoring** — Safely restructure large codebases
+- **Migration** — Update frameworks, libraries, or patterns
+- **Learning** — Understand new technologies by building
+
+## 🛠️ Technical Architecture
+
+### Frontend (Voice UI)
+```typescript
+// Vue 3 + Composition API
+const { startRecording, stopRecording, isRecording } = useVoiceInput();
+const { messages, sendMessage, streamResponse } = useAgentChat();
+const { executeCode, terminalOutput } = useCodeExecution();
+```
+
+### Backend (Orchestration)
+```typescript
+// Express + TypeScript + AgentOS
+app.post('/api/chat', async (req, res) => {
+  const stream = agentOS.processRequest({
+    input: req.body.message,
+    context: req.body.context,
+    sessionId: req.session.id
+  });
+  
+  for await (const chunk of stream) {
+    res.write(`data: ${JSON.stringify(chunk)}\n\n`);
+  }
+});
+```
+
+### AgentOS Integration
+```typescript
+const config: AgentOSConfig = {
+  providers: [openai, anthropic, local],
+  tools: ['code-writer', 'terminal', 'file-system', 'git'],
+  memory: 'hierarchical',
+  guardrails: productionSafetyRules
+};
+```
+
+## 🌟 What Makes VCA Different
+
+### 1. True Context Understanding
+Unlike chatbots that forget context after a few messages, VCA maintains deep understanding of your entire project and conversation history.
+
+### 2. Production-First Design
+Not a toy or demo—VCA writes real code for real projects. It understands production concerns like error handling, performance, and maintainability.
+
+### 3. Voice-Optimized UX
+Built from the ground up for voice interaction. No awkward command phrases or rigid syntax—just natural conversation.
+
+### 4. Extensible Architecture
+Based on open-source AgentOS, VCA can be extended with custom tools, providers, and workflows.
+
+### 5. Privacy-First
+Your code never leaves your control. VCA can run with local models, and all cloud processing is encrypted and ephemeral.
+
+## 📊 Performance Metrics
+
+- **Voice Recognition Accuracy**: 97%+ with noise cancellation
+- **Code Generation Speed**: 50-100 lines per second
+- **Context Window**: Up to 128k tokens
+- **Average Time Savings**: 70% on routine tasks
+- **User Satisfaction**: 4.8/5 from 1000+ developers
+
+## 🔮 Roadmap
+
+### Coming Soon
+- [ ] **Multi-Modal Input** — Draw diagrams, share screenshots
+- [ ] **Team Collaboration** — Shared sessions and knowledge
+- [ ] **Custom Training** — Fine-tune on your codebase
+- [ ] **IDE Plugins** — Deeper editor integration
+- [ ] **Mobile Apps** — Code on the go
+
+### Future Vision
+- **Ambient Coding** — VCA anticipates needs before you ask
+- **AI Pair Programming** — True collaborative development
+- **Project Autopilot** — Autonomous feature implementation
+- **Universal Interface** — One voice, all your tools
+
+## 🚀 Get Started
+
+### Free Trial
+Try VCA free for 14 days. No credit card required.
+
+```bash
+# Quick start
+npx create-vca-app my-project
+cd my-project
+npm run dev
+```
+
+### Installation Options
+
+**Cloud (Recommended)**
+- Instant setup at [vca.chat](https://vca.chat)
+- Always up-to-date
+- Managed infrastructure
+
+**Self-Hosted**
+```bash
+git clone https://github.com/framersai/voice-chat-assistant
+cd voice-chat-assistant
+cp .env.sample .env
+# Add your API keys
+pnpm install
+pnpm run dev
+```
+
+**Enterprise**
+- On-premise deployment
+- Custom model integration
+- SLA support
+- [Contact sales](mailto:enterprise@vca.chat)
+
+## 📚 Resources
+
+### Documentation
+- [Getting Started Guide](https://vca.chat/docs/getting-started)
+- [Voice Commands Reference](https://vca.chat/docs/commands)
+- [Tool Integration](https://vca.chat/docs/tools)
+- [API Documentation](https://vca.chat/docs/api)
+
+### Community
+- [Discord Server](https://discord.gg/vca-community)
+- [GitHub Discussions](https://github.com/framersai/voice-chat-assistant/discussions)
+- [Twitter Updates](https://twitter.com/vca_chat)
+- [YouTube Tutorials](https://youtube.com/@vca_chat)
+
+### Support
+- [Knowledge Base](https://vca.chat/help)
+- [Video Tutorials](https://vca.chat/learn)
+- Email: support@vca.chat
+- Enterprise: enterprise@vca.chat
+
+## 🤝 Integration Partners
+
+VCA works seamlessly with your favorite tools:
+
+- **Version Control**: GitHub, GitLab, Bitbucket
+- **IDEs**: VSCode, Neovim, JetBrains Suite
+- **Frameworks**: React, Vue, Angular, Next.js, and more
+- **Cloud**: AWS, Vercel, Netlify, Cloudflare
+- **Databases**: PostgreSQL, MongoDB, Redis
+- **Monitoring**: Sentry, DataDog, New Relic
+
+## 💬 What Developers Say
+
+> "I was skeptical about voice coding, but VCA converted me. It's like having a senior developer who never sleeps, never judges, and always understands what I mean." — **Alex Thompson, Startup Founder**
+
+> "VCA helped me ship features 3x faster. The voice input is so natural, I forget I'm talking to an AI." — **Priya Patel, Frontend Lead**
+
+> "As someone with RSI, VCA gave me my career back. I can code all day without pain." — **James Wilson, Backend Engineer**
+
+## 🏆 Recognition
+
+- **Product Hunt #1** — Developer Tools Category
+- **GitHub Trending** — #1 TypeScript Project
+- **Hacker News** — Featured on front page
+- **Dev.to Featured** — "The Future of Coding"
+
+## 🔐 Security & Privacy
+
+### Your Code is Sacred
+- **End-to-end encryption** for all communications
+- **Ephemeral processing** — Nothing stored after session
+- **Local model option** — Run everything on your machine
+- **SOC 2 compliant** — Enterprise-grade security
+- **GDPR ready** — Full data control and portability
+
+### Compliance
+- **HIPAA ready** for healthcare projects
+- **PCI compliant** for financial applications
+- **Enterprise SSO** via SAML/OIDC
+- **Audit logs** for all operations
+
+## 🎯 Pricing
+
+### Starter (Free)
+- 100 voice requests/month
+- Basic code generation
+- Community support
+- Public projects only
+
+### Pro ($29/month)
+- Unlimited requests
+- Advanced features
+- Priority support
+- Private repositories
+- Team collaboration
+
+### Enterprise (Custom)
+- Self-hosted option
+- Custom models
+- SLA guarantee
+- Dedicated support
+- Training included
+
+## 🌍 Join the Revolution
+
+Voice Chat Assistant isn't just a tool—it's a movement toward more natural, efficient, and enjoyable software development. Join thousands of developers who are already coding at the speed of thought.
+
+### Ready to Transform Your Workflow?
+
+[**Start Free Trial**](https://vca.chat) • [**Watch Demo**](https://vca.chat/demo) • [**Read Docs**](https://vca.chat/docs)
+
+---
+
+*Built with ❤️ by [Frame.dev](https://frame.dev) • Powered by [AgentOS](https://agentos.sh) • Strategic Partner: [Manic Agency](https://manic.agency)*
+2:["$","$L1f",null,{"children":[["$","$L20",null,{"items":[{"name":"Home","url":"/"},{"name":"Blog","url":"/blog"},{"name":"tutorials","url":"/blog/tutorials"},{"name":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform","url":"/blog/tutorials/contribute"}]}],["$","$L21",null,{"post":{"slug":"contribute","title":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform","date":"2025-04-20","lastModified":"2025-09-16T08:32:24-07:00","draft":false,"category":"tutorials","tags":["contribution","guide","markdown","writing","open-source"],"excerpt":"Learn how to contribute your experimental ideas and digital explorations to our synthetic publishing platform.","image":"/og-default.webp","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":12,"content":"$22","author":{"name":"Manic Agency"},"contributors":"$undefined","tableOfContents":{"items":[{"level":1,"text":"⟨/⟩ Contribute to the Synthetic Publishing Platform","slug":"-contribute-to-the-synthetic-publishing-platform"},{"level":2,"text":"🌐 About Manic.agency","slug":"-about-manicagency"},{"level":2,"text":"📡 Contribution Protocol","slug":"-contribution-protocol"},{"level":3,"text":"Submission Process","slug":"submission-process"},{"level":2,"text":"📊 Markdown & Metadata Structure","slug":"-markdown-metadata-structure"},{"level":3,"text":"Required Metadata","slug":"required-metadata"},{"level":3,"text":"Extended Metadata Options","slug":"extended-metadata-options"},{"level":2,"text":"🧠 Advanced Content Formatting","slug":"-advanced-content-formatting"},{"level":3,"text":"Lead Paragraphs","slug":"lead-paragraphs"},{"level":3,"text":"Styled Quotes","slug":"styled-quotes"},{"level":3,"text":"Banners","slug":"banners"},{"level":3,"text":"Image Controls","slug":"image-controls"},{"level":4,"text":"Comprehensive Image Formatting","slug":"comprehensive-image-formatting"},{"level":3,"text":"Image Grid Layouts","slug":"image-grid-layouts"},{"level":3,"text":"Custom Callouts","slug":"custom-callouts"},{"level":4,"text":"Note:","slug":"note"},{"level":4,"text":"Warning:","slug":"warning"},{"level":4,"text":"Tip:","slug":"tip"},{"level":4,"text":"Alert:","slug":"alert"},{"level":3,"text":"External Links","slug":"external-links"},{"level":4,"text":"Automatic External Link Detection","slug":"automatic-external-link-detection"},{"level":4,"text":"Internal vs External Links","slug":"internal-vs-external-links"},{"level":4,"text":"Styling Details","slug":"styling-details"},{"level":4,"text":"Best Practices for External Links","slug":"best-practices-for-external-links"},{"level":3,"text":"Code Blocks","slug":"code-blocks"},{"level":3,"text":"Data Tables","slug":"data-tables"},{"level":3,"text":"Mathematical Formulas","slug":"mathematical-formulas"},{"level":2,"text":"📁 Content Structure Example","slug":"-content-structure-example"},{"level":2,"text":"🧪 Technical Rendering Capabilities","slug":"-technical-rendering-capabilities"},{"level":2,"text":"🔮 Feature Roadmap","slug":"-feature-roadmap"},{"level":2,"text":"🔬 Real-World Examples","slug":"-real-world-examples"},{"level":3,"text":"Lead Paragraph","slug":"lead-paragraph"},{"level":3,"text":"Styled Quote","slug":"styled-quote"},{"level":3,"text":"Banner","slug":"banner"},{"level":3,"text":"Image Formatting","slug":"image-formatting"},{"level":3,"text":"Image Grid","slug":"image-grid"},{"level":3,"text":"Custom Callout","slug":"custom-callout"},{"level":3,"text":"Mathematical Formula","slug":"mathematical-formula"},{"level":3,"text":"External Links","slug":"external-links"},{"level":2,"text":"🕳️ Advanced Typography Techniques","slug":"-advanced-typography-techniques"},{"level":3,"text":"Text Emphasis","slug":"text-emphasis"},{"level":3,"text":"Text Alignment","slug":"text-alignment"},{"level":3,"text":"Drop Caps and Typography","slug":"drop-caps-and-typography"},{"level":2,"text":"🧩 Component Integration Examples","slug":"-component-integration-examples"},{"level":3,"text":"Full Example: Image + Caption + Effects","slug":"full-example-image-caption-effects"},{"level":3,"text":"Full Example: Callout + Code","slug":"full-example-callout-code"},{"level":3,"text":"Full Example: Banner + Lead Paragraph","slug":"full-example-banner-lead-paragraph"},{"level":2,"text":"🔌 Implementation Checklist","slug":"-implementation-checklist"},{"level":2,"text":"📡 Transmission Protocol","slug":"-transmission-protocol"}]}},"url":"/blog/tutorials/contribute"}],["$","$L23",null,{"postTitle":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform","postCategory":"tutorials","postAuthor":"Manic Agency","postTags":"$24","postType":"post"}],["$","$L25",null,{"postTitle":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform","contentSelector":"#post-content-top"}],["$","$L26",null,{"children":[" ",["$","div",null,{"className":"blog-layout-container has-sidebar","children":[["$","$L27",null,{"tableOfContents":"$28","postTitle":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform"}],["$","main",null,{"className":"blog-main-content-area","children":["$","article",null,{"className":"blog-post-container","id":"post-content-top","children":[["$","header",null,{"className":"post-header","children":[["$","div",null,{"className":"back-to-blog-link-container","children":["$","$L5a",null,{"href":"/blog","className":"back-to-blog-link","children":[["$","$L5b",null,{"size":14,"className":"mr-1.5"}]," ","Back to All Entries"]}]}],["$","h1",null,{"className":"post-title","children":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform"}],["$","div",null,{"className":"post-meta","children":[["$","div",null,{"className":"meta-item author","children":[["$","$L5c",null,{"className":"meta-icon","aria-hidden":"true"}],["$","div",null,{"className":"author-info","children":["$undefined",["$","span",null,{"className":"author-name","children":"Manic Agency"}]]}]]}],["$","div",null,{"className":"meta-item date","children":[["$","$L5d",null,{"className":"meta-icon","aria-hidden":"true"}],["$","time",null,{"dateTime":"2025-04-20T00:00:00.000Z","children":["Published ","April 20, 2025"]}]]}],["$","div",null,{"className":"meta-item reading-time","children":[["$","$L5e",null,{"className":"meta-icon","aria-hidden":"true"}],["$","span",null,{"children":[12," min read"]}]]}],["$","div",null,{"className":"meta-item category","children":[["$","$L5f",null,{"className":"meta-icon","aria-hidden":"true"}],["$","$L5a",null,{"href":"/blog?category=tutorials","className":"post-category-link","children":"tutorials"}]]}]]}],["$","div",null,{"className":"post-tags","children":["$","div",null,{"className":"tags-list","children":[["$","$L5a","contribution",{"href":"/blog?tags=contribution","className":"post-tag","children":["#","contribution"]}],["$","$L5a","guide",{"href":"/blog?tags=guide","className":"post-tag","children":["#","guide"]}],["$","$L5a","markdown",{"href":"/blog?tags=markdown","className":"post-tag","children":["#","markdown"]}],["$","$L5a","writing",{"href":"/blog?tags=writing","className":"post-tag","children":["#","writing"]}],["$","$L5a","open-source",{"href":"/blog?tags=open-source","className":"post-tag","children":["#","open-source"]}]]}]}]]}],["$","div",null,{"className":"post-featured-image-container","children":["$","figure",null,{"className":"post-featured-image","children":[["$","$L60",null,{"src":"/og-default.webp","alt":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform","width":1600,"height":900,"className":"featured-image","priority":true}],"$undefined"]}]}],["$","div",null,{"className":"post-content","children":["$","$L61",null,{"children":"$62"}]}],"$undefined",["$","footer",null,{"className":"post-footer","children":["$","$L63",null,{"title":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform","url":"/blog/tutorials/contribute"}]}],["$","$L64",null,{"projects":[{"slug":"voice-chat-assistant","title":"Voice Chat Assistant — Talk to Code, Ship Faster","description":"Voice-first AI coding assistant that understands context, writes production code, and manages your entire development workflow through natural conversation. Powered by AgentOS.","date":"2025-11-10","category":"ai","content":"$65","longDescription":"$undefined","tags":["ai","voice","coding-assistant","agentos","developer-tools","productivity","llm","open-source"],"modifiedDate":"2025-11-10T09:22:56-08:00","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/voice-chat-assistant/logo.svg","images":["/assets/projects/voice-chat-assistant/logo.svg","/assets/projects/voice-chat-assistant/hearing.svg","/assets/projects/framers/agentos-logo.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://vca.chat","github":"https://github.com/framersai/voice-chat-assistant","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Response Time","value":"< 100ms"},{"label":"Languages Supported","value":"50+"},{"label":"Active Sessions/Day","value":"10k+"},{"label":"Powered By","value":"AgentOS"}],"team":[{"name":"Frame.dev / Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Design & Strategy","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[{"quote":"VCA changed how I think about coding. I describe what I want, and it just happens. It's like having a senior developer who never gets tired.","author":"Sarah Chen","role":"Full Stack Developer"},{"quote":"The context awareness is unreal. It remembers our entire conversation and understands my codebase better than I do sometimes.","author":"Marcus Rodriguez","role":"Tech Lead at Scale-up"}]}],"title":"// Related Projects //"}],["$","section",null,{"className":"post-comments","aria-labelledby":"comments-heading","children":[["$","h2",null,{"id":"comments-heading","className":"comments-title","children":"Join the Discussion"}],["$","$L66",null,{"postTitle":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform","postUrl":"/blog/tutorials/contribute","postIdentifier":"blog-tutorials-contribute","className":"mb-8"}],["$","div",null,{"className":"mt-8","children":[["$","div",null,{"className":"giscus-header","children":[["$","h3",null,{"className":"giscus-title","children":"Comments with GitHub"}],["$","div",null,{"className":"giscus-divider"}]]}],["$","$L67",null,{}]]}]]}],["$","section",null,{"className":"post-newsletter-signup mt-16","children":["$","$L68",null,{"variant":"blog","background":"accent"}]}]]}]}]," "]}]," "]}]]}]
+1e:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#FBF6EF"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#22182B"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform | Manic Agency - Metaverses Intersection"}],["$","meta","5",{"name":"description","content":"Learn how to contribute your experimental ideas and digital explorations to our synthetic publishing platform."}],["$","meta","6",{"name":"author","content":"Manic Agency"}],["$","meta","7",{"name":"keywords","content":"contribution,guide,markdown,writing,open-source"}],["$","meta","8",{"name":"creator","content":"Manic Inc"}],["$","meta","9",{"name":"publisher","content":"Manic Inc"}],["$","link","10",{"rel":"canonical","href":"https://manic.agency/blog/tutorials/contribute"}],["$","meta","11",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","12",{"property":"og:title","content":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform | Manic Agency - Metaverses Intersection"}],["$","meta","13",{"property":"og:description","content":"Learn how to contribute your experimental ideas and digital explorations to our synthetic publishing platform."}],["$","meta","14",{"property":"og:image","content":"https://manic.agency//og-default.webp"}],["$","meta","15",{"property":"og:image:alt","content":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform"}],["$","meta","16",{"property":"og:type","content":"article"}],["$","meta","17",{"property":"article:published_time","content":"2025-04-20T00:00:00.000Z"}],["$","meta","18",{"property":"article:modified_time","content":"2025-09-16T15:32:24.000Z"}],["$","meta","19",{"property":"article:author","content":"Manic Agency"}],["$","meta","20",{"property":"article:tag","content":"contribution"}],["$","meta","21",{"property":"article:tag","content":"guide"}],["$","meta","22",{"property":"article:tag","content":"markdown"}],["$","meta","23",{"property":"article:tag","content":"writing"}],["$","meta","24",{"property":"article:tag","content":"open-source"}],["$","meta","25",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","26",{"name":"twitter:title","content":"⟨/⟩ Contribute to the Looking Glass: Synthetic Publishing Platform | Manic Agency - Metaverses Intersection"}],["$","meta","27",{"name":"twitter:description","content":"Learn how to contribute your experimental ideas and digital explorations to our synthetic publishing platform."}],["$","meta","28",{"name":"twitter:image","content":"https://manic.agency//og-default.webp"}],["$","link","29",{"rel":"shortcut icon","href":"/favicon-16x16.png"}],["$","link","30",{"rel":"icon","href":"/favicon.ico"}],["$","link","31",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","meta","32",{"name":"next-size-adjust"}]]
 1:null
