@@ -11,7 +11,7 @@ featured: true
 
 **GitHub link: [https://github.com/manicinc/magiclogger](https://github.com/manicinc/magiclogger)**
 
-![MagicLogger Terminal demo|size=large|align=center|effect=glow|border=gradient|caption=MagicLogger Terminal demo](/assets/blog/tutorials/building-magiclogger/magiclogger-terminal-demo.gif)
+![MagicLogger Terminal demo|size=large|align=center|effect=glow|border=gradient|caption=MagicLogger Terminal demo](/assets/projects/magiclogger/magiclogger-terminal-demo.gif)
 
 MagicLogger is a library based on an experimental philosophy: **what if better-designed logs meant we needed fewer of them?**
 

@@ -1,7 +1,7 @@
 ---
 title: SEOStory — AI-Powered SEO Growth Engine
 description: How our AI-driven SEO workflow lifted “Manic Agency” from position #13 to #2 in under three months while keeping copy on-brand.
-date: 2025-11-04
+date: 2025-11-02
 category: tools
 tags: [seo, ai, marketing, automation, case-study]
 link: https://seostory.xyz

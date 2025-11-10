@@ -95,7 +95,7 @@ const ProjectGrid: React.FC<Props> = ({ projects = [], categories = [] }) => {
                 case 'stars': return (getStatValue(a, 'Stars') - getStatValue(b, 'Stars')) * dir;
                 case 'forks': return (getStatValue(a, 'Forks') - getStatValue(b, 'Forks')) * dir;
                 case 'title': return (a.title || '').toLowerCase().localeCompare((b.title || '').toLowerCase()) * dir;
-                case 'date': default: const dateA = a.date ? new Date(a.date).getTime() : 0; const dateB = b.date ? new Date(b.date).getTime() : 0; return (dateA - dateB) * dir * -1;
+                case 'date': default: const dateA = a.date ? new Date(a.date).getTime() : 0; const dateB = b.date ? new Date(b.date).getTime() : 0; return (dateA - dateB) * dir;
             }
         });
         return sorted;

@@ -6,12 +6,18 @@ category: tools
 tags: [javascript, typescript, nodejs, logging, developers, featured]
 link: https://manic.agency/magiclogger
 github: https://github.com/manicinc/magiclogger
-# image: /projects/tools/magiclogger.jpg
+image: /assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png
+images: [
+  /assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png,
+  /assets/projects/magiclogger/magiclogger-primary-white-4x.png,
+  /assets/projects/magiclogger/magiclogger-primary-no-subtitle-transparent-4x.png,
+  /assets/projects/magiclogger/magiclogger-terminal-demo.gif
+]
 featured: false
 draft: false
 ---
 
-![MagicLogger]
+![MagicLogger Terminal Demo](/assets/projects/magiclogger/magiclogger-terminal-demo.gif)
 
 ## What's MagicLogger?
 
