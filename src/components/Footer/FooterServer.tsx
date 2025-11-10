@@ -33,13 +33,29 @@ const FooterServer = ({ pathname = "/" }: FooterServerProps) => {
                                 <ul className="footer-links">
                                     {section.links.map((link, linkIndex) => (
                                         <li key={linkIndex} className="footer-link-item">
+                                            {(() => {
+                                                const isExternal = /^https?:\/\//i.test(link.href);
+                                                const commonProps = {
+                                                    className: `footer-link ${isBlog ? 'blog-footer-link' : ''}`
+                                                };
+                                                return isExternal ? (
+                                                    <a
+                                                        href={link.href}
+                                                        {...commonProps}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                    >
+                                                        {link.title}
+                                                    </a>
+                                                ) : (
                                             <Link
                                                 href={link.href}
-                                                className={`footer-link ${isBlog ? 'blog-footer-link' : ''}`}
-                                                {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                                                        className={commonProps.className}
                                             >
                                                 {link.title}
                                             </Link>
+                                                );
+                                            })()}
                                         </li>
                                     ))}
                                 </ul>

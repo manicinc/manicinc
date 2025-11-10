@@ -321,7 +321,7 @@ html.dark {
 ✅ **Accessibility**: WCAG compliance, semantic HTML  
 ✅ **Analytics**: Privacy-first tracking with consent management, GDPR-compliant
 
-### 2025-11 Optimization Summary (Performance + SEO)
+### Optimization Summary (Performance + SEO)
 
 The site recently received a comprehensive optimization pass focused on faster interaction, better crawlability, and richer search presentation.
 
