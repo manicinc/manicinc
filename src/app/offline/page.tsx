@@ -1,8 +1,7 @@
 // src/app/offline/page.tsx
-'use client';
-
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import OfflineActions from '@/components/Offline/OfflineActions';
 
 export const metadata: Metadata = {
   title: 'Offline - Manic Agency',
@@ -11,12 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function OfflinePage() {
-  const handleReload = () => {
-    if (typeof window !== 'undefined') {
-      window.location.reload();
-    }
-  };
-
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="max-w-md text-center">
@@ -46,14 +39,7 @@ export default function OfflinePage() {
         </p>
 
         <div className="space-y-4">
-          <button
-            type="button"
-            onClick={handleReload}
-            className="w-full px-6 py-3 bg-[var(--accent-primary)] text-[var(--bg-primary)] font-semibold rounded-lg hover:opacity-90 transition-opacity"
-          >
-            Try Again
-          </button>
-
+          <OfflineActions />
           <Link
             href="/"
             className="block w-full px-6 py-3 border-2 border-[var(--accent-primary)] text-[var(--accent-primary)] font-semibold rounded-lg hover:bg-[var(--accent-primary)] hover:text-[var(--bg-primary)] transition-all"
