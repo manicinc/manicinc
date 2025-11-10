@@ -7,6 +7,7 @@ V5 - Added Skeleton Loader Styles + Compression
 .projectGridWrapper {
     position: relative; z-index: 10; width: 100%; max-width: 100%;
     box-sizing: border-box; transition: filter 0.2s ease-in-out;
+    contain: layout style paint;
   }
   .projectGridWrapper.isFiltering::before { content: ''; position: absolute; inset: 0; background: linear-gradient(rgba(var(--accent-primary-rgb), 0.05), rgba(var(--accent-highlight-rgb), 0.05)); animation: glitch-flicker 0.25s steps(2, end) forwards; pointer-events: none; z-index: 100; }
   @keyframes glitch-flicker { 0% { opacity: 0.5; transform: translateX(2px); } 25% { opacity: 0.2; transform: translateY(-1px); } 50% { opacity: 0.6; transform: translateX(-2px); } 75% { opacity: 0.3; transform: translateY(1px) } 100% { opacity: 0; transform: none; } }
@@ -78,6 +79,8 @@ V5 - Added Skeleton Loader Styles + Compression
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
     gap: 1rem; /* Reduced */
+    content-visibility: auto;
+    contain-intrinsic-size: auto 500px;
     padding-top: 0.8rem; /* Reduced */
     width: 100%; max-width: 100%; box-sizing: border-box;
   }

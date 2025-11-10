@@ -9,6 +9,8 @@
   grid-template-columns: 1fr;
   gap: 3.5rem 3rem;
   margin-top: 1.5rem;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
 }
 
 @media (min-width: 700px) {
@@ -37,10 +39,11 @@
   transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
   position: relative;
   z-index: 1;
-  will-change: transform;
   background-image: linear-gradient(135deg,
                     rgba(var(--bg-secondary-rgb), 0.95) 0%,
                     rgba(var(--bg-tertiary-rgb), 0.9) 100%);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
 }
 
 .blog-card:hover {
