@@ -23,6 +23,7 @@ import ScrollTracking from '@/components/ScrollTracking'; // Scroll engagement t
 import EnhancedTracking from '@/components/EnhancedTracking'; // Enhanced analytics
 import BlogNewsletterWrapper from '@/components/BlogNewsletterProvider'; // Newsletter with modal
 import BlogNewsletterSection from '@/components/BlogNewsletterSection'; // Newsletter signup
+import BreadcrumbSchema from '@/components/SEO/BreadcrumbSchema'; // Breadcrumb structured data
 
 import { formatDate } from '@/util/formatDate';
 // Icons (Ensure these are correctly imported/defined in Icons.tsx)
@@ -144,6 +145,14 @@ export default async function BlogPostPage({ params }: PageProps) {
 
     return (
         <BlogNewsletterWrapper>
+            {/* Breadcrumb structured data for SEO */}
+            <BreadcrumbSchema items={[
+                { name: 'Home', url: '/' },
+                { name: 'Blog', url: '/blog' },
+                { name: post.category?.replace(/-/g, ' ') || 'Uncategorized', url: `/blog/${post.category}` },
+                { name: post.title || 'Post', url: postUrl }
+            ]} />
+            
             {/* Analytics tracking for blog posts */}
             <BlogAnalytics 
                 postTitle={post.title}

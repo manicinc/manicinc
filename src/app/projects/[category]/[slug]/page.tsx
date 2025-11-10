@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { Project, TableOfContentsItem } from '@/types/project'; // Use updated type
 import ProjectDetailClient from '@/components/Project/ProjectDetailClient'; // Import the Client Component
+import BreadcrumbSchema from '@/components/SEO/BreadcrumbSchema'; // Breadcrumb structured data
 
 // Import your actual data fetching functions from lib
 import { getProjectBySlug, getAllProjectPaths, getRelatedProjects } from '@/lib/getAllProjects';
@@ -96,10 +97,20 @@ export default async function ProjectDetailPage({ params }: PageProps) {
   // REMOVE all direct rendering JSX from here.
   // INSTEAD, render the Client Component and pass data as props.
   return (
-    <ProjectDetailClient
-      project={project} // Pass the full project object (which includes TOC)
-      relatedProjects={related}
-      // No need to pass toc separately if it's embedded in project by getProjectBySlug
-    />
+    <>
+      {/* Breadcrumb structured data for SEO */}
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Projects', url: '/projects' },
+        { name: project.category?.replace(/-/g, ' ') || 'Category', url: `/projects/${project.category}` },
+        { name: project.title || 'Project', url: `/projects/${params.category}/${params.slug}` }
+      ]} />
+      
+      <ProjectDetailClient
+        project={project} // Pass the full project object (which includes TOC)
+        relatedProjects={related}
+        // No need to pass toc separately if it's embedded in project by getProjectBySlug
+      />
+    </>
   );
 }
