@@ -13,7 +13,8 @@ import React, {
     CSSProperties,
     Children,
     useState,
-    useEffect
+    useEffect,
+    useRef
 } from 'react';
 
 // --- Markdown Processing Libraries ---
@@ -31,14 +32,9 @@ import type { Element, Text, Root, ElementContent } from 'hast'; // Types for Ab
 import { visit } from 'unist-util-visit';                  // AST traversal utility
 import { SKIP } from 'unist-util-visit';                 // Visit control constants
 
-// --- Syntax Highlighting ---
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'; // Code highlighting component
-import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism'; // Dark theme
-import { prism } from 'react-syntax-highlighter/dist/esm/styles/prism';       // Light theme
-
 // --- Theme Context & Custom Components ---
 import { useTheme } from '@/context/ThemeContext';        // Hook for dark/light mode detection
-import ZoomableImage from './ZoomableImage';             // Custom image component (assumed to exist)
+import ResponsiveImage from '@/components/ResponsiveImage';
 import { AsciiArtPlaceholder } from '@/lib/asciiPlaceholders'; // Fallback image
 
 // --- Icons (Using lucide-react as an example) ---
@@ -167,6 +163,48 @@ const CustomQuote: React.FC<CustomQuoteProps> = ({ children, attribution }) => {
             {attribution && (<footer className="quote-attribution">{attribution}</footer>)}
         </blockquote>
     );
+};
+
+// ==================================
+// === Syntax Highlighter Helpers ===
+// ==================================
+
+type PrismComponent = typeof import('react-syntax-highlighter')['Prism'] | null;
+type PrismStyle = Record<string, any> | null;
+
+const useLazySyntaxHighlighter = (shouldLoad: boolean, isDarkMode: boolean) => {
+    const [highlighter, setHighlighter] = useState<PrismComponent>(null);
+    const [style, setStyle] = useState<PrismStyle>(null);
+
+    useEffect(() => {
+        if (!shouldLoad || (highlighter && style)) return;
+
+        let cancelled = false;
+
+        const load = async () => {
+            try {
+                const [{ Prism }, themeModule] = await Promise.all([
+                    import('react-syntax-highlighter'),
+                    import('react-syntax-highlighter/dist/esm/styles/prism')
+                ]);
+
+                if (!cancelled) {
+                    setHighlighter(() => Prism);
+                    setStyle(isDarkMode ? themeModule.coldarkDark : themeModule.prism);
+                }
+            } catch (error) {
+                console.error('Failed to load syntax highlighter', error);
+            }
+        };
+
+        load();
+
+        return () => {
+            cancelled = true;
+        };
+    }, [shouldLoad, isDarkMode, highlighter, style]);
+
+    return { highlighter, style };
 };
 
 
@@ -459,119 +497,178 @@ export function CustomMarkdownRenderer({ children: rawMarkdown, className = "" }
         },
 
         // Override 'code' for Syntax Highlighting and Inline Code
-        code: ({ node, inline, className: codeClassName, children: codeChildren, ...props }: CodeProps) => {
-             const match = /language-(\w+)/.exec(codeClassName || '');
-             const isBlock = !inline && match;
+        code: ({ inline, className: codeClassName, children: codeChildren, node: _node, ...restProps }: CodeProps) => {
+            const match = /language-(\w+)/.exec(codeClassName || '');
+            const isBlock = !inline && !!match;
+            const codeString = String(codeChildren ?? '').replace(/\n$/, '');
 
-             if (isBlock) { // Code Block
-                 const language = match[1];
-                 const codeString = String(codeChildren ?? '').replace(/\n$/, '');
-                 const handleCopy = () => navigator.clipboard.writeText(codeString).catch(err => console.error('Failed to copy code:', err));
-                 return (
-                     <div className="code-block-wrapper">
-                         <div className="code-block-header">
-                             <span className="code-language">{language}</span>
-                             <button type="button" className="code-copy-button" onClick={handleCopy} aria-label="Copy code to clipboard" title="Copy code"><Copy size={14} /></button>
-                         </div>
-                         <SyntaxHighlighter
-                             style={isDarkMode ? coldarkDark : prism as any}
-                             language={language}
-                             PreTag="div"
-                             customStyle={{ 
-                                 borderRadius: '0 0 var(--radius-lg) var(--radius-lg)', 
-                                 marginTop: '0', 
-                                 marginBottom: '0', 
-                                 padding: '1.2rem 1.5rem', 
-                                 border: 'none',
-                                 background: 'transparent'
-                             }}
-                             codeTagProps={{ 
-                                 style: { 
-                                     fontFamily: 'var(--font-mono)', 
-                                     fontSize: '0.95rem', 
-                                     lineHeight: '1.75'
-                                 } 
-                             }}
-                             {...props}
-                         >
-                             {codeString}
-                         </SyntaxHighlighter>
-                     </div>
-                 );
-             } else { // Inline Code
-                 return (
-                     <code 
-                         className={`inline-code ${codeClassName || ''}`} 
-                         style={{ 
-                             backgroundColor: 'rgba(var(--accent-primary-rgb), 0.1)',
-                             color: 'var(--accent-primary)',
-                             fontFamily: 'var(--font-mono)',
-                             fontSize: '0.88em',
-                             padding: '0.15em 0.4em',
-                             margin: '0 0.1em',
-                             borderRadius: 'var(--radius-base)',
-                             border: '1px solid rgba(var(--accent-primary-rgb), 0.2)',
-                             wordWrap: 'break-word',
-                             whiteSpace: 'normal'
-                         }}
-                         {...props}
-                     >
-                         {codeChildren}
-                     </code>
-                 );
-             }
-         },
+            if (!isBlock) {
+                return (
+                    <code
+                        className={`inline-code ${codeClassName || ''}`}
+                        {...restProps}
+                    >
+                        {codeChildren}
+                    </code>
+                );
+            }
+
+            const language = match ? match[1] : 'text';
+            const wrapperRef = useRef<HTMLDivElement | null>(null);
+            const [isVisible, setIsVisible] = useState(false);
+
+            useEffect(() => {
+                const element = wrapperRef.current;
+                if (!element) return;
+
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                setIsVisible(true);
+                                observer.disconnect();
+                            }
+                        });
+                    },
+                    { rootMargin: '200px' }
+                );
+
+                observer.observe(element);
+                return () => observer.disconnect();
+            }, []);
+
+            const { highlighter, style } = useLazySyntaxHighlighter(isVisible, isDarkMode);
+            const handleCopy = () =>
+                navigator.clipboard.writeText(codeString).catch(err => console.error('Failed to copy code:', err));
+
+            return (
+                <div className="code-block-wrapper" ref={wrapperRef}>
+                    <div className="code-block-header">
+                        <span className="code-language">{language}</span>
+                        <button
+                            type="button"
+                            className="code-copy-button"
+                            onClick={handleCopy}
+                            aria-label="Copy code to clipboard"
+                        >
+                            <Copy size={14} />
+                        </button>
+                    </div>
+                    {highlighter && style ? (
+                        React.createElement(highlighter, {
+                            style,
+                            language,
+                            PreTag: 'div',
+                            customStyle: {
+                                borderRadius: '0 0 var(--radius-lg) var(--radius-lg)',
+                                marginTop: 0,
+                                marginBottom: 0,
+                                padding: '1.2rem 1.5rem',
+                                border: 'none',
+                                background: 'transparent'
+                            },
+                            codeTagProps: {
+                                style: {
+                                    fontFamily: 'var(--font-mono)',
+                                    fontSize: '0.95rem',
+                                    lineHeight: 1.7
+                                }
+                            },
+                            children: codeString
+                        })
+                    ) : (
+                        <pre className="code-block-placeholder">
+                            <code>{codeString}</code>
+                        </pre>
+                    )}
+                </div>
+            );
+        },
 
         // Override 'img' for Custom Image Handling (Zoom, Effects, Borders, Captions)
-        img: ({ node, src, alt, children, // Destructure children to prevent spreading
-                 ...props // Collect the *rest* of the props
-              }: ImgProps & {children?: ReactNode}) => { // Add children type hint here for destructuring clarity
-                  if (!src) return <AsciiArtPlaceholder className="mx-auto my-8" />;
-                  const altString = typeof alt === 'string' ? alt : '';
+        img: ({ src, alt }: ImgProps) => {
+            if (!src) return <AsciiArtPlaceholder className="mx-auto my-8" />;
 
-                  // --- Default Image Attributes ---
-                  let imageSize: 'small' | 'medium' | 'large' | 'full' = 'medium';
-                  let imageAlign: 'left' | 'center' | 'right' = 'center';
-                  let imageEffect: 'shadow' | 'border' | 'glow' | 'glitch' | 'none' = 'none';
-                  let imageBorder: 'simple' | 'gradient' | 'glow' | 'inset' | 'dashed' | 'none' = 'none';
-                  let imageCaption = '';
-                  let altText = altString;
-                  let isZoomable = true;
+            const altString = typeof alt === 'string' ? alt : '';
+            let altText = altString;
+            let imageCaption = '';
+            let imageSize: 'small' | 'medium' | 'large' | 'full' = 'medium';
+            let imageAlign: 'left' | 'center' | 'right' = 'center';
+            let effectClass = '';
+            let borderClass = '';
+            let customWidth: number | undefined;
+            let customHeight: number | undefined;
 
-                  // --- Parse Attributes from Alt Text ---
-                  if (altString.includes('|')) {
-                      const parts = altString.split('|');
-                      altText = parts[0].trim();
-                      parts.slice(1).forEach(part => {
-                          const [key, value] = part.includes('=') ? part.split('=', 2) : [part.trim(), 'true'];
-                          const trimmedKey = key.trim().toLowerCase();
-                          const trimmedValue = value.trim().replace(/^["']|["']$/g, '');
-                          switch (trimmedKey) { // Use switch for clarity
-                              case 'size': if (['small', 'medium', 'large', 'full'].includes(trimmedValue)) imageSize = trimmedValue as any; break;
-                              case 'align': if (['left', 'center', 'right'].includes(trimmedValue)) imageAlign = trimmedValue as any; break;
-                              case 'effect': if (['shadow', 'border', 'glow', 'glitch', 'none'].includes(trimmedValue)) imageEffect = trimmedValue as any; break;
-                              case 'border': if (['simple', 'gradient', 'glow', 'inset', 'dashed', 'none'].includes(trimmedValue)) imageBorder = trimmedValue as any; break;
-                              case 'caption': imageCaption = trimmedValue; break;
-                              case 'zoomable': isZoomable = trimmedValue !== 'false'; break;
-                          }
-                      });
-                  }
+            if (altString.includes('|')) {
+                const parts = altString.split('|');
+                altText = parts[0].trim();
 
-                  // Render using the ZoomableImage component
-                  return (
-                      <div className={`markdown-image-wrapper align-${imageAlign}`} style={{ textAlign: imageAlign }}>
-                          <ZoomableImage
-                              src={src}
-                              alt={altText}
-                              caption={imageCaption}
-                              size={imageSize}
-                              effect={imageEffect}
-                              border={imageBorder}
-                              zoomable={isZoomable}
-                          />
-                      </div>
-                  );
-              },
+                parts.slice(1).forEach(part => {
+                    const [key, raw] = part.includes('=') ? part.split('=', 2) : [part.trim(), 'true'];
+                    const trimmedKey = key.trim().toLowerCase();
+                    const trimmedValue = raw.trim().replace(/^["']|["']$/g, '');
+
+                    switch (trimmedKey) {
+                        case 'size':
+                            if (['small', 'medium', 'large', 'full'].includes(trimmedValue)) {
+                                imageSize = trimmedValue as typeof imageSize;
+                            }
+                            break;
+                        case 'align':
+                            if (['left', 'center', 'right'].includes(trimmedValue)) {
+                                imageAlign = trimmedValue as typeof imageAlign;
+                            }
+                            break;
+                        case 'effect':
+                            effectClass = `image-${trimmedValue}`;
+                            break;
+                        case 'border':
+                            borderClass = `border-${trimmedValue}`;
+                            break;
+                        case 'caption':
+                            imageCaption = trimmedValue;
+                            break;
+                        case 'width':
+                            customWidth = Number(trimmedValue) || undefined;
+                            break;
+                        case 'height':
+                            customHeight = Number(trimmedValue) || undefined;
+                            break;
+                    }
+                });
+            }
+
+            const sizeToSizes: Record<'small' | 'medium' | 'large' | 'full', string> = {
+                small: '(max-width: 768px) 90vw, 320px',
+                medium: '(max-width: 768px) 95vw, 640px',
+                large: '(max-width: 768px) 95vw, 960px',
+                full: '(max-width: 768px) 100vw, 1200px'
+            };
+
+            const widthMap: Record<'small' | 'medium' | 'large' | 'full', number> = {
+                small: 480,
+                medium: 720,
+                large: 1080,
+                full: 1280
+            };
+
+            const responsiveWidth = customWidth ?? widthMap[imageSize];
+            const responsiveHeight = customHeight ?? Math.round(responsiveWidth * 0.5625); // default 16:9
+
+            return (
+                <figure className={`markdown-image-wrapper align-${imageAlign}`}>
+                    <ResponsiveImage
+                        src={src}
+                        alt={altText}
+                        width={responsiveWidth}
+                        height={responsiveHeight}
+                        sizes={sizeToSizes[imageSize]}
+                        className={`content-image image-${imageSize} ${effectClass} ${borderClass}`.trim()}
+                    />
+                    {imageCaption && <figcaption>{imageCaption}</figcaption>}
+                </figure>
+            );
+        },
 
         // Override Table elements for styling
         table: ({ node, children, ...props }: TableProps) => (<div className="table-wrapper"><table {...props}>{children}</table></div>),

@@ -68,7 +68,7 @@ const BlogSidebarClient = React.memo(({ tableOfContents = [], postTitle }: Props
     const tocListRef = useRef<HTMLUListElement>(null);
     const mobileOverlayRef = useRef<HTMLDivElement>(null);
 
-    // --- Effects and Callbacks (Keep existing ones for scroll, toggles, etc.) ---
+    // --- Effects and Callbacks ---
     const getHeaderOffset = useCallback((): number => { /* ... keep as is ... */
         let offset = 80;
         if (typeof window !== 'undefined') {
@@ -77,63 +77,91 @@ const BlogSidebarClient = React.memo(({ tableOfContents = [], postTitle }: Props
         }
         return offset;
     }, []);
-    // Throttle function for performance
-    const throttle = (func: Function, delay: number) => {
-        let lastCall = 0;
-        let timeoutId: NodeJS.Timeout | null = null;
-        return (...args: any[]) => {
-            const now = Date.now();
-            const remaining = delay - (now - lastCall);
-            if (remaining <= 0) {
-                if (timeoutId) {
-                    clearTimeout(timeoutId);
-                    timeoutId = null;
-                }
-                lastCall = now;
-                func(...args);
-            } else if (!timeoutId) {
-                timeoutId = setTimeout(() => {
-                    lastCall = Date.now();
-                    timeoutId = null;
-                    func(...args);
-                }, remaining);
+    const headingIdsRef = useRef<string[]>([]);
+    useEffect(() => {
+        if (typeof window === 'undefined') return;
+        let ticking = false;
+        const onScroll = () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    setShowBackToTop(window.scrollY > 600);
+                    const pageBottom = document.documentElement.scrollHeight - window.innerHeight;
+                    if (
+                        window.scrollY >= pageBottom - 8 &&
+                        headingIdsRef.current.length > 0
+                    ) {
+                        const lastId = headingIdsRef.current[headingIdsRef.current.length - 1];
+                        setActiveHeading(prev => (prev === lastId ? prev : lastId));
+                    } else if (window.scrollY < 120) {
+                        setActiveHeading(prev => (prev === TOP_LINK_ID ? prev : TOP_LINK_ID));
+                    }
+                    ticking = false;
+                });
+                ticking = true;
             }
         };
-    };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
 
-    const handleScrollRaw = useCallback(() => {
-        setShowBackToTop(window.scrollY > 600);
-        const contentArea = document.querySelector('.post-content');
-        if (!contentArea) return;
-        const headings = Array.from(contentArea.querySelectorAll('h2[id], h3[id], h4[id]')) as HTMLElement[];
-        if (!headings || headings.length === 0) { setActiveHeading(TOP_LINK_ID); return; }
-        const offset = getHeaderOffset();
-        const scrollY = window.scrollY;
-        const pageBottom = document.documentElement.scrollHeight - window.innerHeight;
-        let bestCandidateId = TOP_LINK_ID;
-        if (scrollY < offset / 2) { bestCandidateId = TOP_LINK_ID; }
-        else if (scrollY >= pageBottom - 50) { bestCandidateId = headings[headings.length - 1].id; }
-        else {
-            for (let i = headings.length - 1; i >= 0; i--) {
-                const heading = headings[i];
-                const rect = heading.getBoundingClientRect();
-                if (rect.top <= offset + 20) { bestCandidateId = heading.id; break; }
-            }
-        }
-        setActiveHeading(bestCandidateId);
-    }, [getHeaderOffset]);
-
-    // Memoize throttled handler
-    const handleScroll = React.useMemo(
-        () => throttle(handleScrollRaw, 100),
-        [handleScrollRaw]
-    );
     useEffect(() => {
-        // Initial check
-        handleScrollRaw();
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [handleScroll, handleScrollRaw]);
+        const contentArea = document.querySelector('.blog-post-container');
+        if (!contentArea) return;
+        const headingElements = Array.from(
+            contentArea.querySelectorAll<HTMLElement>('h2[id], h3[id], h4[id]')
+        );
+        const topSentinel = document.getElementById(TOP_LINK_ID);
+
+        if (headingElements.length === 0) {
+            setActiveHeading(TOP_LINK_ID);
+            return;
+        }
+
+        headingIdsRef.current = headingElements.map(el => el.id);
+        const visibleMap = new Map<string, number>();
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    const target = entry.target as HTMLElement;
+                    const id = target.id;
+                    if (!id) return;
+
+                    if (entry.isIntersecting) {
+                        visibleMap.set(id, target.offsetTop);
+                    } else {
+                        visibleMap.delete(id);
+                    }
+                });
+
+                if (visibleMap.size > 0) {
+                    const nextId = Array.from(visibleMap.entries())
+                        .sort((a, b) => a[1] - b[1])[0][0];
+                    setActiveHeading(prev => (prev === nextId ? prev : nextId));
+                }
+            },
+            {
+                root: null,
+                rootMargin: '-45% 0px -45% 0px',
+                threshold: [0, 0.1, 0.5]
+            }
+        );
+
+        headingElements.forEach(element => observer.observe(element));
+        if (topSentinel) {
+            observer.observe(topSentinel);
+        }
+
+        return () => {
+            headingElements.forEach(element => observer.unobserve(element));
+            if (topSentinel) {
+                observer.unobserve(topSentinel);
+            }
+            observer.disconnect();
+        };
+    }, [tableOfContents]);
+
     const toggleDesktopSidebar = useCallback(() => {
         setIsDesktopSidebarOpen(prev => {
             const newState = !prev;

@@ -4,6 +4,18 @@
    ============================================ */
 
 /* Post Header */
+.blog-post-container {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 2200px;
+  contain: layout paint style;
+}
+
+.blog-post-container h2[id],
+.blog-post-container h3[id],
+.blog-post-container h4[id] {
+  scroll-margin-top: 120px;
+}
+
 .post-header {
   margin-bottom: 3rem;
   padding-bottom: 2rem;

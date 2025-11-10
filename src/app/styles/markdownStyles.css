@@ -169,132 +169,180 @@
 /* --- Code Blocks --- */
 /* Wrapper and Header styling */
 .code-block-wrapper {
-  position: relative; 
-  margin: 2rem 0; 
-  border: 1px solid var(--bg-tertiary);
-  border-radius: var(--radius-lg); 
+  position: relative;
+  margin: 2rem 0;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  background: var(--bg-code, #f6f8fa);
+  background: linear-gradient(
+    180deg,
+    rgba(var(--bg-tertiary-rgb), 0.45) 0%,
+    rgba(var(--bg-secondary-rgb), 0.35) 100%
+  );
+  border: 1px solid rgba(var(--accent-highlight-rgb), 0.2);
+  box-shadow: 0 8px 20px rgba(var(--shadow-color), 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Dark mode code block wrapper */
-.dark .code-block-wrapper {
-  background: #1e1e2e;
-  border-color: #313244;
+.code-block-wrapper:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(var(--shadow-color), 0.08);
 }
+
+.dark .code-block-wrapper {
+  background: rgba(34, 24, 43, 0.92);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 28px rgba(10, 9, 15, 0.45);
+}
+
 .code-block-header {
-  display: flex; 
-  justify-content: space-between; 
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.03); 
-  padding: 0.5rem 1rem;
-  border-bottom: 1px solid var(--bg-tertiary);
+  padding: 0.65rem 1rem;
+  background: rgba(var(--bg-secondary-rgb), 0.65);
+  border-bottom: 1px solid rgba(var(--accent-highlight-rgb), 0.25);
+  backdrop-filter: blur(6px);
 }
 
 .dark .code-block-header {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-bottom-color: #313244;
+  background: rgba(25, 20, 33, 0.85);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
 }
-.code-language {
-  font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);
-  text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;
-}
-.code-copy-button {
-  font-family: var(--font-meta-blog); font-size: 0.75rem; font-weight: 600;
-  background-color: var(--bg-secondary); color: var(--text-secondary);
-  border: 1px solid var(--bg-tertiary); padding: 0.3rem 0.8rem; border-radius: var(--radius-base);
-  cursor: pointer; transition: all var(--transition-fast); line-height: 1;
-}
-.code-copy-button:hover {
-  background-color: var(--accent-secondary); color: var(--text-on-accent);
-  border-color: var(--accent-secondary); transform: scale(1.05);
-}
-.code-copy-button:active { transform: scale(0.98); }
 
-/* Container rendered by SyntaxHighlighter (PreTag="div") */
+.code-language {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.code-copy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--accent-primary-rgb), 0.18);
+  border: none;
+  color: var(--accent-primary);
+  font-size: 0.75rem;
+  padding: 0.3rem 0.55rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+  gap: 0.3rem;
+}
+
+.code-copy-button svg {
+  width: 14px;
+  height: 14px;
+}
+
+.code-copy-button:hover,
+.code-copy-button:focus-visible {
+  background: rgba(var(--accent-highlight-rgb), 0.25);
+  color: var(--accent-highlight);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.code-copy-button:active {
+  transform: translateY(0);
+}
+
+.dark .code-copy-button {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f8d9ff;
+}
+
+.dark .code-copy-button:hover,
+.dark .code-copy-button:focus-visible {
+  background: rgba(125, 232, 201, 0.22);
+  color: #ffffff;
+}
+
 .code-block-wrapper > div[class*="react-syntax-highlighter"] {
-  margin: 0 !important; 
-  padding: 1.2rem 1.5rem !important;
+  margin: 0 !important;
+  padding: 1.35rem 1.5rem !important;
   background: transparent !important;
   border: none !important;
-  font-family: var(--font-mono) !important; 
-  font-size: 0.9rem !important; 
-  line-height: 1.6 !important;
-  overflow-x: auto !important; 
+  font-family: var(--font-mono) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.72 !important;
+  overflow-x: auto !important;
   white-space: pre !important;
-  word-wrap: normal !important;
-  word-break: normal !important;
-  /* Themed scrollbar */
-  scrollbar-color: rgba(0, 0, 0, 0.2) transparent; 
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
   scrollbar-width: thin;
 }
 
-/* Ensure all code blocks preserve formatting */
-.code-block-wrapper code,
-.code-block-wrapper pre {
-  white-space: pre !important;
-  word-wrap: normal !important;
-  word-break: normal !important;
+.code-block-wrapper > div[class*="react-syntax-highlighter"] code {
+  font-family: var(--font-mono) !important;
 }
 
-/* Plain code blocks without syntax highlighting */
+.code-block-placeholder {
+  margin: 0;
+  padding: 1.35rem 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.93rem;
+  line-height: 1.7;
+  background: rgba(var(--bg-secondary-rgb), 0.5);
+  color: var(--text-muted);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  overflow-x: auto;
+}
+
+.dark .code-block-placeholder {
+  background: rgba(15, 13, 22, 0.85);
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .blog-content pre:not(.code-block-wrapper pre) {
   font-family: var(--font-mono);
-  background: var(--bg-code, #f6f8fa);
+  background: rgba(var(--bg-secondary-rgb), 0.5);
   color: var(--text-primary);
   padding: 1.2rem;
   border-radius: var(--radius-base);
   margin: 1.5rem 0;
-  border: 1px solid var(--bg-tertiary);
+  border: 1px solid rgba(var(--accent-highlight-rgb), 0.18);
   overflow-x: auto;
   line-height: 1.6;
-  font-size: 0.9rem;
-  white-space: pre !important;
-  word-wrap: normal !important;
-  word-break: normal !important;
+  font-size: 0.92rem;
 }
 
 .dark .blog-content pre:not(.code-block-wrapper pre) {
-  background: #1e1e2e;
-  border-color: #313244;
+  background: rgba(20, 17, 28, 0.9);
   color: #cdd6f4;
+  border-color: rgba(255, 255, 255, 0.08);
 }
-.code-block-wrapper > div[class*="react-syntax-highlighter"]::-webkit-scrollbar { height: 8px; width: 8px; background-color: var(--bg-tertiary); }
-.code-block-wrapper > div[class*="react-syntax-highlighter"]::-webkit-scrollbar-thumb { background-color: var(--accent-muted2); border-radius: 4px; border: 2px solid var(--bg-tertiary); }
-.code-block-wrapper > div[class*="react-syntax-highlighter"]::-webkit-scrollbar-thumb:hover { background-color: var(--accent-secondary); }
 
-
-/* --- Inline Code --- */
 .blog-content .inline-code,
 .blog-content code:not(pre code) {
   font-family: var(--font-mono);
-  color: var(--text-primary);
-  background: rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 3px;
-  font-size: 0.85em;
-  padding: 0.2em 0.4em;
-  margin: 0 0.1em;
-  word-wrap: break-word;
+  background: rgba(var(--accent-secondary-rgb), 0.14);
+  color: var(--accent-secondary);
+  border-radius: var(--radius-sm);
+  padding: 0.12em 0.38em;
+  margin: 0 0.12em;
+  font-size: 0.9em;
+  letter-spacing: -0.005em;
+  text-decoration: none;
+  display: inline;
+  word-break: break-word;
   white-space: normal;
-  /* Ensure no text decoration issues */
+  border: none;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
 
 .dark .blog-content .inline-code,
 .dark .blog-content code:not(pre code) {
-  background: rgba(255, 255, 255, 0.08);
-  color: #f38ba8;
-  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
+  color: #f5c2e7;
 }
 
-/* Override any inherited link styles for inline code */
 .blog-content a .inline-code,
 .blog-content .md-link .inline-code {
-  color: var(--accent-primary) !important;
-  background: rgba(var(--accent-primary-rgb), 0.15) !important;
+  color: var(--accent-highlight) !important;
+  background: rgba(var(--accent-highlight-rgb), 0.18) !important;
 }
 
 /* Fix spacing between code blocks and text */

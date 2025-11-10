@@ -25,6 +25,7 @@ export interface BlogPost {
   contributors?: AuthorInfo[];
   tags?: string[];
   excerpt?: string;       // Used for description metadata & potentially list view
+  description?: string;   // Longer meta description (optional)
   image?: string;         // Featured image URL
   imageAlt?: string;
   imageCaption?: string;
@@ -37,10 +38,5 @@ export interface BlogPost {
   // Add any other base fields your getAllPosts returns
 }
 
-// Extended type potentially adding fields mainly for detailed view
-// Or just use one comprehensive BlogPost type if simpler
-export interface BlogPostExtended extends BlogPost {
-  // Add fields only needed for the detail page if desired
-  contributors?: AuthorInfo[]; // Optional list of contributors
-  // Any other detail-specific fields
-}
+// Remove extended interface, alias
+export type BlogPostExtended = BlogPost;
