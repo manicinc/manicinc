@@ -19,6 +19,8 @@ import ErrorFallback from '@/components/ErrorFallback';
 import type { Metadata, Viewport } from 'next';
 import OrganizationSchema from '@/components/SEO/OrganizationSchema';
 import WebSiteSchema from '@/components/SEO/WebSiteSchema';
+import PrefetchLinks from '@/components/PrefetchLinks';
+import ServiceWorkerRegistration from '@/components/ServiceWorkerRegistration';
 
 // Import Styles
 import "./styles/globals.css";
@@ -89,6 +91,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {process.env.NEXT_PUBLIC_GA_ID && (
           <link rel="preconnect" href="https://www.googletagmanager.com" />
         )}
+        
+        {/* DNS prefetch for external domains */}
+        <link rel="dns-prefetch" href="https://cdn.sender.net" />
+        <link rel="dns-prefetch" href="https://api.github.com" />
+        <link rel="dns-prefetch" href="https://www.clarity.ms" />
+        <link rel="dns-prefetch" href="https://eocampaign1.com" />
         
         {/* Critical CSS for fast initial paint */}
         <style dangerouslySetInnerHTML={{ __html: `
@@ -194,6 +202,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <GlobalDOMErrorHandler />
               <TrailingSlashHandler />
               <DynamicFavicon />
+              <PrefetchLinks />
+              <ServiceWorkerRegistration />
               <Nav />
               <main role="main">{children}</main>
               <Footer />

@@ -25,6 +25,7 @@ import EnhancedTracking from '@/components/EnhancedTracking'; // Enhanced analyt
 import BlogNewsletterWrapper from '@/components/BlogNewsletterProvider'; // Newsletter with modal
 import BlogNewsletterSection from '@/components/BlogNewsletterSection'; // Newsletter signup
 import BreadcrumbSchema from '@/components/SEO/BreadcrumbSchema'; // Breadcrumb structured data
+import ArticleSchema from '@/components/SEO/ArticleSchema'; // Article structured data
 import RelatedContent from '@/components/RelatedContent'; // Related content component
 
 import { formatDate } from '@/util/formatDate';
@@ -157,6 +158,9 @@ export default async function BlogPostPage({ params }: PageProps) {
                 { name: post.category?.replace(/-/g, ' ') || 'Uncategorized', url: `/blog/${post.category}` },
                 { name: post.title || 'Post', url: postUrl }
             ]} />
+            
+            {/* Article structured data for SEO */}
+            <ArticleSchema post={post} url={postUrl} />
             
             {/* Analytics tracking for blog posts */}
             <BlogAnalytics 
