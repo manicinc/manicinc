@@ -1,4 +1,6 @@
 // src/app/offline/page.tsx
+'use client';
+
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -9,6 +11,12 @@ export const metadata: Metadata = {
 };
 
 export default function OfflinePage() {
+  const handleReload = () => {
+    if (typeof window !== 'undefined') {
+      window.location.reload();
+    }
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="max-w-md text-center">
@@ -18,6 +26,7 @@ export default function OfflinePage() {
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
             <path
               strokeLinecap="round"
@@ -38,7 +47,8 @@ export default function OfflinePage() {
 
         <div className="space-y-4">
           <button
-            onClick={() => window.location.reload()}
+            type="button"
+            onClick={handleReload}
             className="w-full px-6 py-3 bg-[var(--accent-primary)] text-[var(--bg-primary)] font-semibold rounded-lg hover:opacity-90 transition-opacity"
           >
             Try Again
