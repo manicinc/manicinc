@@ -36,7 +36,9 @@ const STATIC_PAGES = [
   '/tags',
   '/team',
   '/velvet',
-  '/terms'
+  '/terms',
+  '/faq',
+  '/offline'
 ];
 
 // Get all markdown files recursively
