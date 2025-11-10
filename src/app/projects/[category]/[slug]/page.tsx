@@ -8,9 +8,11 @@ import { Project, TableOfContentsItem } from '@/types/project'; // Use updated t
 import ProjectDetailClient from '@/components/Project/ProjectDetailClient'; // Import the Client Component
 import BreadcrumbSchema from '@/components/SEO/BreadcrumbSchema'; // Breadcrumb structured data
 import SoftwareApplicationSchema from '@/components/SEO/SoftwareApplicationSchema'; // Software schema
+import RelatedContent from '@/components/RelatedContent'; // Related content component
 
 // Import your actual data fetching functions from lib
 import { getProjectBySlug, getAllProjectPaths, getRelatedProjects } from '@/lib/getAllProjects';
+import { getRelatedPostsForProject } from '@/lib/getRelatedContent';
 // NOTE: Assumes getProjectBySlug now correctly returns ProjectWithToc (includes TOC)
 // based on the getAllProjects.ts code you provided.
 
@@ -93,6 +95,9 @@ export default async function ProjectDetailPage({ params }: PageProps) {
   // Fetch related projects
   // Ensure getRelatedProjects correctly uses the fetched 'project' object
   const related = project ? await getRelatedProjects(project) : [];
+  
+  // Get related blog posts for internal linking
+  const relatedPosts = getRelatedPostsForProject(project, 3);
 
   // **CRITICAL FIX:**
   // REMOVE all direct rendering JSX from here.
@@ -115,6 +120,16 @@ export default async function ProjectDetailPage({ params }: PageProps) {
         relatedProjects={related}
         // No need to pass toc separately if it's embedded in project by getProjectBySlug
       />
+      
+      {/* Related Blog Posts for Internal Linking */}
+      {relatedPosts.length > 0 && (
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1rem' }}>
+          <RelatedContent 
+            posts={relatedPosts}
+            title="// Related Blog Posts //"
+          />
+        </div>
+      )}
     </>
   );
 }

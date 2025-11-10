@@ -8,6 +8,7 @@ import type { Metadata, ResolvingMetadata } from 'next';
 // Data fetching and types
 import { getAllPosts, getPostBySlug } from '@/lib/getAllPosts'; // Adjust path
 import { BlogPostExtended, TableOfContentsItem, AuthorInfo } from '@/types/blog'; // Adjust path
+import { getRelatedProjectsForPost } from '@/lib/getRelatedContent'; // Related content
 
 // Components
 import Footer from '@/components/Footer/Footer'; // If rendered here, otherwise remove
@@ -24,6 +25,7 @@ import EnhancedTracking from '@/components/EnhancedTracking'; // Enhanced analyt
 import BlogNewsletterWrapper from '@/components/BlogNewsletterProvider'; // Newsletter with modal
 import BlogNewsletterSection from '@/components/BlogNewsletterSection'; // Newsletter signup
 import BreadcrumbSchema from '@/components/SEO/BreadcrumbSchema'; // Breadcrumb structured data
+import RelatedContent from '@/components/RelatedContent'; // Related content component
 
 import { formatDate } from '@/util/formatDate';
 // Icons (Ensure these are correctly imported/defined in Icons.tsx)
@@ -142,6 +144,9 @@ export default async function BlogPostPage({ params }: PageProps) {
     // Generate post URL and identifier for comments
     const postUrl = `/blog/${category}/${slug}`;
     const postIdentifier = `blog-${category}-${slug}`;
+    
+    // Get related projects for internal linking
+    const relatedProjects = getRelatedProjectsForPost(post, 3);
 
     return (
         <BlogNewsletterWrapper>
@@ -308,6 +313,14 @@ export default async function BlogPostPage({ params }: PageProps) {
                             <footer className="post-footer">
                                 <ShareButtons title={post.title || ''} url={`/blog/${post.category || 'uncategorized'}/${post.slug}`} />
                             </footer>
+                            
+                            {/* Related Projects for Internal Linking */}
+                            {relatedProjects.length > 0 && (
+                                <RelatedContent 
+                                    projects={relatedProjects}
+                                    title="// Related Projects //"
+                                />
+                            )}
 
                             {/* Comments Sections */}
                             <section className="post-comments" aria-labelledby="comments-heading">
