@@ -321,6 +321,86 @@ html.dark {
 ✅ **Accessibility**: WCAG compliance, semantic HTML  
 ✅ **Analytics**: Privacy-first tracking with consent management, GDPR-compliant
 
+### 2025-11 Optimization Summary (Performance + SEO)
+
+The site recently received a comprehensive optimization pass focused on faster interaction, better crawlability, and richer search presentation.
+
+- Performance
+  - Inlined critical CSS for fast first paint
+  - Reduced-motion support and animation gating
+  - Shared IntersectionObserver to avoid many observers
+  - `content-visibility: auto` on long grids/lists
+  - Dynamic imports + webpack code splitting (Framer Motion, icon sets)
+  - Link prefetching on hover/visibility for instant nav
+  - Service Worker for offline support and faster repeat visits
+  - Font slimming (fewer webfonts, better fallbacks)
+  - Tailwind purge coverage extended (`src/lib`, `posts/`, `projects/`) with safe-list for dynamic classes
+  - Resource hints (dns-prefetch/preconnect) for external domains
+
+- SEO
+  - Robots updated to allow LLM crawlers (GPTBot, ChatGPT-User, Google-Extended)
+  - Dynamic sitemap generation (runs in build via prebuild)
+  - Canonical URLs across pages
+  - Internal cross-linking: related projects on posts and related posts on projects
+  - FAQ page added at `/faq` (+ JSON-LD FAQ schema)
+
+- Structured Data (JSON‑LD)
+  - Organization, WebSite (root)
+  - Breadcrumb (posts & projects)
+  - SoftwareApplication (project pages)
+  - Article (blog posts)
+  - LocalBusiness (root; optional for local signals)
+  - FAQ (FAQ page)
+  - HowTo (tutorial posts where relevant)
+  - Review (testimonials/endorsements where relevant)
+  - Event (announcements/webinars when needed)
+
+### Structured Data Components (Usage)
+
+Add these components where appropriate to emit JSON‑LD. They render only a `<script type="application/ld+json">` tag and do not affect layout.
+
+```tsx
+// Blog post page
+import ArticleSchema from '@/components/SEO/ArticleSchema';
+<ArticleSchema post={post} url={`/blog/${post.category}/${post.slug}`} />
+
+// Project page
+import SoftwareApplicationSchema from '@/components/SEO/SoftwareApplicationSchema';
+<SoftwareApplicationSchema project={project} />
+
+// FAQ page
+import FAQSchema from '@/components/SEO/FAQSchema';
+<FAQSchema faqs={[{ question: 'Q?', answer: 'A.' }]} />
+
+// Tutorials
+import HowToSchema from '@/components/SEO/HowToSchema';
+<HowToSchema name="How to Do X" description="..." steps={[{ name:'Step 1', text:'...' }]} />
+
+// Reviews / Testimonials
+import ReviewSchema from '@/components/SEO/ReviewSchema';
+<ReviewSchema
+  itemReviewed={{ type: 'Service', name: 'AI Development' }}
+  reviews={[{ author: 'Name', reviewRating: 5, reviewBody: 'Great!' }]}
+/>
+
+// Events / Launches
+import EventSchema from '@/components/SEO/EventSchema';
+<EventSchema name="Launch" description="..." startDate="2025-12-01T17:00:00Z" />
+```
+
+### Sitemap & Robots
+
+- Dynamic sitemap: `scripts/generateSitemap.js`
+  - Runs automatically via `prebuild`
+  - Manual run: `node scripts/generateSitemap.js`
+- Robots: `public/robots.txt` explicitly allows LLM crawlers and includes the sitemap.
+
+### Offline, Prefetching, and Navigation
+
+- Service worker: `public/sw.js` (registered automatically in production)
+- Offline fallback: `/offline`
+- Link prefetching: automatic on hover/visibility for internal links
+
 ### Analytics Configuration
 
 This project supports **Google Analytics** and **Microsoft Clarity** with full cookie consent integration.
