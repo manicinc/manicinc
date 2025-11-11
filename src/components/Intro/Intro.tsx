@@ -5,7 +5,7 @@ import { Limelight } from 'next/font/google';
 import Container from "../Container"; // Assuming this provides centering/max-width
 import FadeInLong from "../FadeIn"; // Assuming this handles fade-in
 
-const limelight = Limelight({ subsets: ['latin'], display: 'swap' });
+const limelight = Limelight({ subsets: ['latin'], weight: '400', display: 'swap' });
 
 const Intro = () => {
   return (

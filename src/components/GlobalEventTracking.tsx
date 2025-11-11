@@ -7,6 +7,7 @@ import { useAnalytics } from '@/components/Analytics';
 export default function GlobalEventTracking() {
   const pathname = usePathname();
   const { trackPageView, trackEvent, setUserTag, canTrack } = useAnalytics();
+  const videoQuartiles = new WeakMap<HTMLMediaElement, Set<string>>();
 
   useEffect(() => {
     if (!canTrack) return;
@@ -64,6 +65,14 @@ export default function GlobalEventTracking() {
         const classes = button.className || '';
         trackEvent('cta_click', { id, text, classes });
       }
+
+      // Code block copy button instrumentation
+      const copyBtn = target.closest('[data-copy], .copy-button, .code-copy') as HTMLElement | null;
+      if (copyBtn) {
+        const id = copyBtn.id || '';
+        const text = (copyBtn.textContent || '').trim().slice(0, 40);
+        trackEvent('code_copy_click', { id, text });
+      }
     };
 
     const handleCopy = () => {
@@ -81,16 +90,37 @@ export default function GlobalEventTracking() {
       trackEvent(eventName, { src, duration: Math.round(el.duration || 0) });
     };
 
+    const handleTimeUpdate = (e: Event) => {
+      const el = e.target as HTMLMediaElement | null;
+      if (!el || !el.duration || !isFinite(el.duration)) return;
+      const fired = videoQuartiles.get(el) || new Set<string>();
+      const p = (el.currentTime / el.duration) * 100;
+      const marks: [number, string][] = [[25, 'q1'], [50, 'q2'], [75, 'q3'], [99, 'q4']];
+      for (const [percent, key] of marks) {
+        if (p >= percent && !fired.has(key)) {
+          fired.add(key);
+          videoQuartiles.set(el, fired);
+          trackEvent('media_progress', {
+            quartile: key,
+            src: (el.currentSrc || el.src || '').toString(),
+            duration: Math.round(el.duration || 0)
+          });
+        }
+      }
+    };
+
     document.addEventListener('click', handleClick);
     document.addEventListener('copy', handleCopy);
     document.addEventListener('play', handleMedia, true);
     document.addEventListener('pause', handleMedia, true);
+    document.addEventListener('timeupdate', handleTimeUpdate, true);
 
     return () => {
       document.removeEventListener('click', handleClick);
       document.removeEventListener('copy', handleCopy);
       document.removeEventListener('play', handleMedia, true);
       document.removeEventListener('pause', handleMedia, true);
+      document.removeEventListener('timeupdate', handleTimeUpdate, true);
     };
   }, [canTrack, trackEvent]);
 

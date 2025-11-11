@@ -2,6 +2,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { useAnalytics } from '@/components/Analytics';
 
 interface EmailOctopusFormProps {
   formId: string;
@@ -20,6 +21,7 @@ export default function EmailOctopusForm({
   const containerRef = useRef<HTMLDivElement | null>(null);
   const loadedRef = useRef(false);
   const scriptRef = useRef<HTMLScriptElement | null>(null);
+  const { trackEvent } = useAnalytics();
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -47,6 +49,42 @@ export default function EmailOctopusForm({
 
       // Cleanup observers/listeners after load
       cleanup();
+
+      // Set up MutationObserver to detect success message injection
+      const observer = new MutationObserver((mutations) => {
+        for (const m of mutations) {
+          for (const node of Array.from(m.addedNodes)) {
+            if (!(node instanceof HTMLElement)) continue;
+            const success =
+              node.closest?.('.emailoctopus-success-message') ||
+              node.querySelector?.('.emailoctopus-success-message') ||
+              node.classList?.contains('emailoctopus-success-message');
+            if (success) {
+              trackEvent('newsletter_signup_success', { provider: 'emailoctopus', form_id: formId, variant });
+              observer.disconnect();
+              return;
+            }
+          }
+        }
+      });
+      observer.observe(container, { childList: true, subtree: true });
+
+      // Attempt to attach submit tracking when form appears
+      const attachSubmit = () => {
+        const formEl = container.querySelector('form');
+        if (formEl) {
+          formEl.addEventListener('submit', () => {
+            trackEvent('newsletter_submit', { provider: 'emailoctopus', form_id: formId, variant });
+          }, { once: true });
+          return true;
+        }
+        return false;
+      };
+
+      // Try immediately and again after small delay (script might render async)
+      if (!attachSubmit()) {
+        setTimeout(attachSubmit, 1500);
+      }
     };
 
     // IntersectionObserver: load when visible

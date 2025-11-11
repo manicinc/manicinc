@@ -16,6 +16,17 @@ export function Analytics() {
   useEffect(() => {
     // Initialize analytics if consent is given
     if (canUseAnalytics && typeof window !== 'undefined') {
+      // Update GA Consent Mode to granted
+      try {
+        if ((window as any).gtag) {
+          (window as any).gtag('consent', 'update', {
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            analytics_storage: 'granted'
+          });
+        }
+      } catch {}
       
       // Initialize Google Analytics if GA_ID is set
       if (GA_ID && !(window as any).gtag) {
@@ -33,11 +44,24 @@ export function Analytics() {
           };
           (window as any).gtag = gtag;
 
+          // Default consent: denied until we explicitly grant analytics (GDPR)
+          gtag('consent', 'default', {
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            analytics_storage: 'denied'
+          });
+
           gtag('js', new Date());
           gtag('config', GA_ID, {
             page_path: window.location.pathname,
             anonymize_ip: true, // GDPR compliance
             allow_ad_personalization_signals: false, // GDPR compliance
+          });
+
+          // Grant analytics once our consent gate allows
+          gtag('consent', 'update', {
+            analytics_storage: 'granted'
           });
         } catch (error) {
           console.error('❌ Failed to initialize Google Analytics:', error);
@@ -75,6 +99,22 @@ export function Analytics() {
         console.warn('Microsoft Clarity Project ID not configured. Add NEXT_PUBLIC_CLARITY_PROJECT_ID to GitHub Secrets.');
       }
     }
+
+    // Listen to cookie consent events to adjust GA consent dynamically
+    const onConsentGiven = () => {
+      try {
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('consent', 'update', {
+            analytics_storage: 'granted'
+          });
+        }
+      } catch {}
+    };
+
+    window.addEventListener('cookie-consent-given', onConsentGiven);
+    return () => {
+      window.removeEventListener('cookie-consent-given', onConsentGiven);
+    };
   }, [canUseAnalytics]);
 
   // Only render analytics components if consent is given
