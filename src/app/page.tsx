@@ -8,8 +8,18 @@ import { HeroFeedItem } from '@/types/common';
 import { BlogPost } from '@/types/blog';
 import { Project } from '@/types/project';
 import { HeroSection } from '@/components/HeroSection';
-import Services from "@/components/Services/Services";
-import Intro from "@/components/Intro/Intro";
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+
+const Services = dynamic(() => import('@/components/Services/Services'), {
+    ssr: false,
+    loading: () => null
+});
+
+const Intro = dynamic(() => import('@/components/Intro/Intro'), {
+    ssr: false,
+    loading: () => null
+});
 import ContactSection from '@/components/ContactSection';
 import NewsletterSection from '@/components/NewsletterSection';
 import HomePageSkeleton from '@/components/Skeletons/HomePageSkeleton'; // Keep Skeleton import
@@ -195,10 +205,14 @@ export default function HomePage() {
                 <div className="frame-cta__grid">
                     {/* Left: Logo & tagline */}
                     <div className="frame-cta__left">
-                        <img
+                        <Image
                             src="/assets/projects/framers/frame-logo-transparent.png"
                             alt="Frame.dev"
                             className="frame-cta__logo"
+                            width={240}
+                            height={96}
+                            priority={false}
+                            sizes="(max-width: 768px) 160px, 240px"
                         />
                         <h2 className="frame-cta__title">
                             We Are The Framers
