@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { CookieConsentBanner } from '@/components/CookieConsentBanner';
+import { useCookieConsent } from '@/hooks/useCookieConsent';
 
 interface CookiePreferences {
   essential: boolean;
@@ -18,6 +19,7 @@ const CookieProviderContext = createContext<CookieProviderContextType | undefine
 
 export function CookieProvider({ children }: { children: ReactNode }) {
   const [showConsentBanner, setShowConsentBanner] = useState(false);
+  const { updatePreferences } = useCookieConsent();
 
   useEffect(() => {
     // Check if user has already made a choice
@@ -48,7 +50,16 @@ export function CookieProvider({ children }: { children: ReactNode }) {
       {children}
       {showConsentBanner && (
         <CookieConsentBanner 
-          onConsentChange={() => setShowConsentBanner(false)}
+          onConsentChange={(prefs) => {
+            try {
+              updatePreferences(prefs);
+              // Fire event for listeners that want to know consent granted
+              if (prefs?.analytics) {
+                window.dispatchEvent(new CustomEvent('cookie-consent-given'));
+              }
+            } catch {}
+            setShowConsentBanner(false);
+          }}
         />
       )}
     </CookieProviderContext.Provider>

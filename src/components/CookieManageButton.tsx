@@ -7,7 +7,7 @@ interface CookieManageButtonProps {
 
 export default function CookieManageButton({ className, children }: CookieManageButtonProps) {
   const handleClick = () => {
-    window.dispatchEvent(new Event('show-cookie-consent'));
+    window.dispatchEvent(new Event('cookie-consent-show-banner'));
   };
 
   return (

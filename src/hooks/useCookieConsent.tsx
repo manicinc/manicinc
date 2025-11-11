@@ -71,6 +71,9 @@ export function useCookieConsent(): UseCookieConsentReturn {
           'analytics_storage': 'granted'
         });
       }
+      if (typeof window !== 'undefined' && (window as any).clarity) {
+        try { (window as any).clarity('consent', true); } catch {}
+      }
     } else {
       // Clear analytics cookies
       document.cookie = `manic_analytics=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
@@ -78,6 +81,9 @@ export function useCookieConsent(): UseCookieConsentReturn {
         window.gtag('consent', 'update', {
           'analytics_storage': 'denied'
         });
+      }
+      if (typeof window !== 'undefined' && (window as any).clarity) {
+        try { (window as any).clarity('consent', false); } catch {}
       }
     }
     
