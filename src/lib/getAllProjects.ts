@@ -22,7 +22,9 @@ import { extractMetadataFromMarkdown } from "../util/extractMetadataFromMarkdown
 
 // --- Constants ---
 const PROJECTS_DIR = path.join(process.cwd(), "projects");
-const USE_GIT_FALLBACK = process.env.USE_GIT_FALLBACK !== "false" && process.env.USE_GIT_FALLBACK !== "0";
+const IS_EXPORT = process.env.NEXT_EXPORT === 'true' || process.env.CI === 'true' || process.env.GITHUB_ACTIONS === 'true';
+const USE_GIT_FALLBACK = !IS_EXPORT && process.env.USE_GIT_FALLBACK !== "false" && process.env.USE_GIT_FALLBACK !== "0";
+const GIT_TIMEOUT_MS = Number(process.env.GIT_TIMEOUT_MS ?? '1500');
 const DEFAULT_IMAGE_PATH = "/images/project-placeholder.png";
 
 // === Helper Functions ===
@@ -42,12 +44,14 @@ function getGitLastCommitInfo(filePath: string, format: string): string | null {
             ? `"${normalizedPath.replace(/(["$`\\])/g, "\\$1")}"`
             : normalizedPath.replace(/(["$`\\])/g, "\\$1");
         const command = `git log -1 --follow --format=${format} -- ${escapedPath}`;
-        const output = execSync(command, { timeout: 5000, stdio: "pipe", encoding: "utf8" }).toString().trim();
+        const output = execSync(command, { timeout: GIT_TIMEOUT_MS, stdio: "pipe", encoding: "utf8" }).toString().trim();
         return output || null;
     } catch (error: any) {
-        if (!error.stderr?.toString().includes('fatal: no such path') && !error.stderr?.toString().includes('does not have any commits')) {
-             console.warn(`[Git Fallback WARN] Could not get Git info (${format}) for ${filePath}: ${error.message}`);
-         }
+        if (process.env.NODE_ENV === 'development') {
+            if (!error.stderr?.toString().includes('fatal: no such path') && !error.stderr?.toString().includes('does not have any commits')) {
+                console.warn(`[Git Fallback WARN] Could not get Git info (${format}) for ${filePath}: ${error.message}`);
+            }
+        }
         return null;
     }
 }

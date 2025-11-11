@@ -8,7 +8,9 @@ import { BlogPost, AuthorInfo, TableOfContentsItem } from "@/types/blog"; // Use
 import { extractMetadataFromMarkdown } from "@/util/extractMetadataFromMarkdown"; // Ensure path is correct
 
 const POSTS_DIR = path.join(process.cwd(), "posts"); // Your posts directory
-const USE_GIT_FALLBACK = process.env.USE_GIT_FALLBACK !== 'false'; // Control Git usage via env var
+const IS_EXPORT = process.env.NEXT_EXPORT === 'true' || process.env.CI === 'true' || process.env.GITHUB_ACTIONS === 'true';
+const USE_GIT_FALLBACK = !IS_EXPORT && process.env.USE_GIT_FALLBACK !== 'false'; // Disable in export/CI unless explicitly enabled
+const GIT_TIMEOUT_MS = Number(process.env.GIT_TIMEOUT_MS ?? '1500');
 const DEFAULT_AUTHOR_NAME = "Manic Agency"; // Default author name
 
 // --- Helper Functions ---
@@ -26,12 +28,14 @@ function getGitLastCommitInfo(filePath: string, format: string): string | null {
         // Escape path for shell command, handle spaces
         const escapedPath = formattedPath.includes(' ') ? `"${formattedPath.replace(/(["$`\\])/g, '\\$1')}"` : formattedPath.replace(/(["$`\\])/g, '\\$1');
         const command = `git log -1 --follow --format=${format} -- ${escapedPath}`;
-        const output = execSync(command, { timeout: 5000, stdio: 'pipe', encoding: 'utf8' }).toString().trim();
+        const output = execSync(command, { timeout: GIT_TIMEOUT_MS, stdio: 'pipe', encoding: 'utf8' }).toString().trim();
         return output || null;
     } catch (error: any) {
         // Log errors only if they aren't the expected "path not found" or "no commits" errors
-        if (!error.stderr?.toString().includes('fatal: no such path') && !error.stderr?.toString().includes('does not have any commits')) {
-            // console.warn(`[Git WARN] Git info (${format}) error for ${filePath}: ${error.message}`);
+        if (process.env.NODE_ENV === 'development') {
+            if (!error.stderr?.toString().includes('fatal: no such path') && !error.stderr?.toString().includes('does not have any commits')) {
+                // console.warn(`[Git WARN] Git info (${format}) error for ${filePath}: ${error.message}`);
+            }
         }
         return null;
     }

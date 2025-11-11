@@ -86,7 +86,8 @@ export function useBlogNewsletterModal() {
     const scrollTop = window.scrollY;
     const windowHeight = window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight;
-    const scrollPercentage = scrollTop / (documentHeight - windowHeight);
+    const denom = Math.max(1, documentHeight - windowHeight);
+    const scrollPercentage = scrollTop / denom;
 
     if (scrollPercentage >= SCROLL_THRESHOLD && !hasScrolledEnough) {
       setHasScrolledEnough(true);
