@@ -27,6 +27,18 @@
     z-index: 10002; /* Highest z-index to ensure navbar stays on top */
 }
 
+.navContainer > :global(.container) {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.navScrolled > :global(.container) {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
 .navScrolled {
     background-image:
       radial-gradient(120% 120% at 50% -10%, rgba(var(--bg-primary-rgb), 0.92), rgba(var(--bg-secondary-rgb), 0.96)),
@@ -185,6 +197,9 @@
     display: flex;
     align-items: stretch; /* Ensure links fill height */
     gap: 0.4rem; /* Slightly reduced gap */
+    background: transparent !important;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 @media (max-width: 1480px) {
