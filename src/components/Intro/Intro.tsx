@@ -1,8 +1,11 @@
 "use client";
 // src/components/Intro.tsx
 import React from 'react';
+import { Limelight } from 'next/font/google';
 import Container from "../Container"; // Assuming this provides centering/max-width
 import FadeInLong from "../FadeIn"; // Assuming this handles fade-in
+
+const limelight = Limelight({ subsets: ['latin'], display: 'swap' });
 
 const Intro = () => {
   return (
@@ -24,7 +27,7 @@ const Intro = () => {
           <div className="neon-text-wrapper w-full text-center">
               {/* Use a semantic tag like h2 or p */}
               {/* The 'neon-text' class will be styled by styled-jsx below */}
-              <h2 className="neon-text">
+              <h2 className={`neon-text ${limelight.className}`}>
                  We&apos;re all mad here
               </h2>
           </div>
@@ -33,21 +36,11 @@ const Intro = () => {
 
       {/* --- STYLES DEFINED IN-COMPONENT --- */}
       <style jsx>{`
-        /* Import the Google Font */
-        @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
-        /* Alternative: @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap'); */
-        /* Alternative: @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap'); */
-
         .neon-text-wrapper {
           perspective: 400px; /* Optional: For 3D effects */
         }
 
         .neon-text {
-          /* Apply the imported font */
-          font-family: 'Limelight', cursive; /* Swap font name if changed above */
-          /* font-family: 'Dancing Script', cursive; */
-          /* font-family: 'Abril Fatface', serif; */
-
           /* --- ADJUSTED Font Size (Smaller Max) --- */
           font-size: clamp(1.9rem, 7vw, 4.8rem); /* Min, Preferred, Max */
           font-weight: normal; /* Adjust based on font */
