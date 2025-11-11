@@ -3,7 +3,7 @@
 
 import dynamic from 'next/dynamic';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 // Import EmailOctopus component with no SSR
 const EmailOctopusForm = dynamic(
@@ -17,6 +17,12 @@ const EmailOctopusForm = dynamic(
       </div>
     )
   }
+);
+
+// Lazy Sender init; only when newsletter section is visible/used
+const SenderInit = dynamic(
+  () => import('./SenderScript').then(mod => mod.SenderScript),
+  { ssr: false, loading: () => null }
 );
 
 interface NewsletterSectionProps {
@@ -64,6 +70,8 @@ export default function NewsletterSection({
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [randomizedTestimonials, setRandomizedTestimonials] = useState<Testimonial[]>([]);
   const [hoveredTestimonial, setHoveredTestimonial] = useState<number | null>(null);
+  const [loadSender, setLoadSender] = useState(false);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     // Randomize testimonials on mount
@@ -120,8 +128,57 @@ export default function NewsletterSection({
     ]
   };
 
+  // Load Sender only when section is visible or on user interaction
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    if (!process.env.NEXT_PUBLIC_SENDER_ACCOUNT_ID) return;
+    if (loadSender) return;
+
+    let observer: IntersectionObserver | null = null;
+    const onVisible = (entries: IntersectionObserverEntry[]) => {
+      if (entries.some(e => e.isIntersecting)) {
+        setLoadSender(true);
+        cleanup();
+      }
+    };
+    const observe = () => {
+      if (sectionRef.current) {
+        observer = new IntersectionObserver(onVisible, { rootMargin: '200px 0px' });
+        observer.observe(sectionRef.current);
+      }
+    };
+
+    const onInteract = () => {
+      setLoadSender(true);
+      cleanup();
+    };
+
+    const addInteraction = () => {
+      window.addEventListener('scroll', onInteract, { passive: true, once: true });
+      window.addEventListener('click', onInteract, { once: true });
+      window.addEventListener('touchstart', onInteract, { passive: true, once: true });
+      const idle = (cb: () => void) =>
+        ('requestIdleCallback' in window ? (window as any).requestIdleCallback(cb, { timeout: 5000 }) : setTimeout(cb, 4000));
+      idle(() => setLoadSender(true));
+    };
+
+    const cleanup = () => {
+      if (observer && sectionRef.current) {
+        try { observer.unobserve(sectionRef.current); } catch {}
+      }
+      observer?.disconnect();
+      window.removeEventListener('scroll', onInteract as any);
+      window.removeEventListener('click', onInteract as any);
+      window.removeEventListener('touchstart', onInteract as any);
+    };
+
+    observe();
+    addInteraction();
+    return cleanup;
+  }, [loadSender]);
+
   return (
-    <section id="newsletter-section" className={`py-16 sm:py-24 relative overflow-hidden ${className}`}>
+    <section ref={sectionRef} id="newsletter-section" className={`py-16 sm:py-24 relative overflow-hidden ${className}`}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.015] pointer-events-none">
         <GridPattern />
@@ -413,6 +470,10 @@ export default function NewsletterSection({
                       <div className="text-center py-8">
                         <p className="text-text-secondary">Newsletter form unavailable - NEXT_PUBLIC_EMAILOCTOPUS_FORM_ID not configured</p>
                       </div>
+                    )}
+                    {/* Load Sender only when needed */}
+                    {process.env.NEXT_PUBLIC_SENDER_ACCOUNT_ID && loadSender && (
+                      <SenderInit accountId={process.env.NEXT_PUBLIC_SENDER_ACCOUNT_ID} />
                     )}
                   </div>
                 </div>

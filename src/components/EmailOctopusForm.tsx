@@ -1,7 +1,7 @@
 // src/components/EmailOctopusForm.tsx
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface EmailOctopusFormProps {
   formId: string;
@@ -17,34 +17,86 @@ export default function EmailOctopusForm({
   showTitle = true
 }: EmailOctopusFormProps) {
 
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const loadedRef = useRef(false);
+  const scriptRef = useRef<HTMLScriptElement | null>(null);
+
   useEffect(() => {
-    // Skip script injection during SSR or in test environments
     if (typeof window === 'undefined') return;
-    
-    // Get the container
-    const container = document.querySelector('.emailoctopus-script-container');
-    if (!container) return;
 
-    // Clear any existing content to prevent duplicates
-    container.innerHTML = '';
+    const loadFormScript = () => {
+      if (loadedRef.current) return;
+      loadedRef.current = true;
 
-    // Create and inject the EmailOctopus script
-    const script = document.createElement('script');
-    script.src = `https://eocampaign1.com/form/${formId}.js`;
-    script.async = true;
-    script.setAttribute('data-form', formId);
-    
-    // Add error handling for CI/CD environments
-    script.onerror = () => {
-      console.warn('EmailOctopus script failed to load - this is expected in build/test environments');
+      const container = containerRef.current;
+      if (!container) return;
+
+      // Clear any existing content to prevent duplicates
+      container.innerHTML = '';
+
+      // Create and inject the EmailOctopus script
+      const script = document.createElement('script');
+      script.src = `https://eocampaign1.com/form/${formId}.js`;
+      script.async = true;
+      script.setAttribute('data-form', formId);
+      script.onerror = () => {
+        console.warn('EmailOctopus script failed to load - this can be expected in build/test environments');
+      };
+      container.appendChild(script);
+      scriptRef.current = script;
+
+      // Cleanup observers/listeners after load
+      cleanup();
     };
 
-    // Append to container instead of body for better cleanup
-    container.appendChild(script);
+    // IntersectionObserver: load when visible
+    let observer: IntersectionObserver | null = null;
+    const observeVisibility = () => {
+      if (!containerRef.current || loadedRef.current) return;
+      observer = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            loadFormScript();
+            break;
+          }
+        }
+      }, { rootMargin: '200px 0px' });
+      observer.observe(containerRef.current);
+    };
 
-    // Cleanup function to prevent memory leaks
+    // Interaction fallback: first scroll/click/touch
+    const onInteract = () => loadFormScript();
+
+    const addInteractionListeners = () => {
+      if (loadedRef.current) return;
+      window.addEventListener('scroll', onInteract, { passive: true, once: true });
+      window.addEventListener('click', onInteract, { once: true });
+      window.addEventListener('touchstart', onInteract, { passive: true, once: true });
+      // Idle fallback in case neither visibility nor interaction happens soon
+      const idle = (cb: () => void) =>
+        ('requestIdleCallback' in window ? (window as any).requestIdleCallback(cb, { timeout: 4000 }) : setTimeout(cb, 3000));
+      idle(() => loadFormScript());
+    };
+
+    const cleanup = () => {
+      if (observer && containerRef.current) {
+        try { observer.unobserve(containerRef.current); } catch {}
+      }
+      observer?.disconnect();
+      window.removeEventListener('scroll', onInteract as any);
+      window.removeEventListener('click', onInteract as any);
+      window.removeEventListener('touchstart', onInteract as any);
+    };
+
+    observeVisibility();
+    addInteractionListeners();
+
     return () => {
-      if (container && script.parentNode === container) {
+      cleanup();
+      // Remove injected script node for safety (form markup remains)
+      const container = containerRef.current;
+      const script = scriptRef.current;
+      if (container && script && script.parentNode === container) {
         container.removeChild(script);
       }
     };
@@ -72,7 +124,7 @@ export default function EmailOctopusForm({
       )}
 
       {/* Container for the EmailOctopus script */}
-      <div className="emailoctopus-script-container" />
+      <div ref={containerRef} className="emailoctopus-script-container" />
 
       {/* Privacy notice */}
       <p className="mt-4 text-xs text-text-muted text-center">
