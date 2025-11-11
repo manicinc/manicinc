@@ -372,7 +372,7 @@
   text-decoration: none;
 }
 .rabbit-trail::after { /* Animated arrow */
-  content: '»»»';
+  content: '\00BB\00BB\00BB';
   position: absolute;
   right: 1rem; /* Initial position */
   top: 50%;
