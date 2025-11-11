@@ -1,9 +1,9 @@
 ---
-title: Frame.dev — AI Development Framework & Voice-First Coding Assistant
-description: Open-source AI orchestration runtime powering Voice Chat Assistant, AgentOS, and OpenStrand. Built by Framers AI for the next generation of AI-powered development tools.
+title: Frame.dev — AI Development Framework
+description: Open-source AI orchestration runtime powering AgentOS and OpenStrand. Built by Framers AI for the next generation of AI-powered development tools.
 date: 2025-11-09
 category: ai
-tags: [ai, oss, voice, coding-assistant, agentos, openstrand, orchestration, developer-tools]
+tags: [ai, oss, agentos, openstrand, orchestration, developer-tools]
 link: https://frame.dev
 github: https://github.com/framersai
 image: /assets/projects/framers/frame-logo-transparent.png
@@ -21,7 +21,7 @@ featured: true
 draft: false
 stats:
   - label: "Projects Powered"
-    value: "3"
+    value: "2"
   - label: "Runtime Package"
     value: "@framers/agentos"
   - label: "Architecture"
@@ -41,7 +41,7 @@ team:
 
 ## Building the Future of AI-Powered Development
 
-Frame.dev represents our vision for the future of software development: AI-native tools that understand context, anticipate needs, and accelerate creation. Through our suite of open-source projects—[Voice Chat Assistant](https://vca.chat), [AgentOS](https://agentos.sh), and [OpenStrand](https://openstrand.ai)—we're building the infrastructure for a new generation of AI-powered development experiences.
+Frame.dev represents our vision for the future of software development: AI-native tools that understand context, anticipate needs, and accelerate creation. Through our open-source projects—[AgentOS](https://agentos.sh) and [OpenStrand](https://openstrand.ai)—we're building the infrastructure for a new generation of AI-powered development experiences.
 
 > "The best interface is no interface. The best code is the code that writes itself." — Frame.dev Philosophy
 
@@ -49,22 +49,12 @@ Frame.dev represents our vision for the future of software development: AI-nativ
 
 Our projects work together to create a complete AI development platform:
 
-### 🎙️ [Voice Chat Assistant (vca.chat)](/projects/ai/voice-chat-assistant)
-**Voice-First Coding Made Real**
 
-Our flagship product transforms how developers interact with their code. Simply speak your intentions, and watch as VCA understands context, writes code, refactors systems, and manages your entire development workflow—all through natural conversation.
-
-- **Powered by AgentOS** for intelligent orchestration
-- **Multi-modal input** supporting voice, text, and code
-- **Context-aware** understanding of your entire codebase
-- **Tool integration** with VSCode, Git, terminal, and more
-
-[Learn more about Voice Chat Assistant →](/projects/ai/voice-chat-assistant)
 
 ### 🧠 [AgentOS (agentos.sh)](https://agentos.sh)
 **The Brain Behind Our AI Systems**
 
-AgentOS is our modular orchestration runtime that powers intelligent AI applications. It's the foundation that makes Voice Chat Assistant possible, handling:
+AgentOS is our modular orchestration runtime that powers intelligent AI applications, handling:
 
 - **Conversation Management** — Stateful, multi-turn interactions
 - **Memory & Retrieval** — RAG pipelines and context windows
@@ -107,7 +97,6 @@ All Frame.dev projects share a consistent, modern architecture:
 ```
 frame.dev/
 ├── apps/
-│   ├── voice-chat-assistant/    # Vue 3 + Vite frontend
 │   ├── agentos.sh/             # Next.js marketing site
 │   └── openstrand-app/         # React knowledge management UI
 ├── packages/
@@ -115,7 +104,6 @@ frame.dev/
 │   ├── @openstrand/sdk/        # Shared types & utilities
 │   └── @framers/tools/         # Common tool implementations
 └── backend/
-    ├── voice-api/              # Express + TypeScript API
     ├── openstrand-teams/       # Fastify collaboration backend
     └── shared/                 # Cross-cutting concerns
 ```
@@ -214,7 +202,6 @@ export class CustomAnalyzerTool implements ITool {
 ## Roadmap & Vision
 
 ### Q4 2025
-- [ ] Voice Chat Assistant 2.0 with multi-modal support
 - [ ] AgentOS plugin marketplace
 - [ ] OpenStrand team collaboration features
 - [ ] Frame IDE preview release
@@ -233,16 +220,12 @@ export class CustomAnalyzerTool implements ITool {
 # Install AgentOS
 npm install @framers/agentos
 
-# Clone Voice Chat Assistant
-git clone https://github.com/framersai/voice-chat-assistant
-
 # Try OpenStrand locally
 npx create-openstrand-app my-knowledge-base
 ```
 
 ### For Teams
 
-- **Voice Chat Assistant** — [Start free trial](https://vca.chat)
 - **AgentOS Enterprise** — [Contact sales](mailto:enterprise@frame.dev)
 - **OpenStrand Teams** — [Request early access](https://openstrand.ai/teams)
 
@@ -258,7 +241,6 @@ npx create-openstrand-app my-knowledge-base
 ### Resources
 
 - [AgentOS Documentation](https://agentos.sh/docs)
-- [Voice Chat Assistant Guides](https://vca.chat/guides)
 - [OpenStrand Tutorials](https://openstrand.ai/learn)
 - [API Reference](https://frame.dev/api)
 

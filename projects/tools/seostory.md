@@ -5,12 +5,12 @@ date: 2025-11-02
 category: tools
 tags: [seo, ai, marketing, automation, case-study]
 link: https://seostory.xyz
-image: /assets/projects/seostory/seostory-primary-dark-4x.png
+image: /assets/projects/seostory/seostory-primary-transparent-4x.png
 featured: true
 draft: false
 ---
 
-![SEOStory cover](/assets/projects/seostory/seostory-primary-dark-4x.png)
+![SEOStory cover](/assets/projects/seostory/seostory-primary-transparent-4x.png)
 
 # SEOStory — AI-Powered SEO Enhancement Toolkit
 
