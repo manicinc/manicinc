@@ -3,9 +3,10 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+// Use lazy-loaded motion for better performance
+import { motion } from '@/components/LazyMotion';
 
-interface ContactSectionProps {
+export interface ContactSectionProps {
   onNewsletterSignup?: () => void;
 }
 

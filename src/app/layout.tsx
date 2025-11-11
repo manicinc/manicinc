@@ -31,9 +31,8 @@ import "./styles/globals.css";
 // blog-newsletter.css deferred via DeferredStyles component
 
 // Preload critical above-fold images
-const CRITICAL_IMAGES = [
-  '/og-default.webp',
-];
+// Removed critical images preload - og-default.webp is not above-fold
+// Only preload actual above-fold hero images
 
 // Import SEO helper
 import { generateSEOMetadata } from '@/lib/getSEOMetadata';
@@ -103,10 +102,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="preconnect" href="https://eocampaign1.com" />
         <link rel="preconnect" href="https://images.weserv.nl" />
         
-        {/* Preload critical above-fold images */}
-        {CRITICAL_IMAGES.map((img) => (
-          <link key={img} rel="preload" as="image" href={img} fetchpriority="high" />
-        ))}
+        {/* Image preloading moved to individual pages for better performance */}
         
         {/* DNS prefetch for external domains */}
         <link rel="dns-prefetch" href="https://cdn.sender.net" />
@@ -117,7 +113,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* Critical CSS for fast initial paint */}
         <style dangerouslySetInnerHTML={{ __html: `
           /* Critical CSS - Inline in <head> for fast initial paint */
-          :root{--bg-primary:#fbf6ef;--bg-primary-rgb:251,246,239;--text-primary:#4a3f35;--text-primary-rgb:74,63,53;--accent-primary:#d6a574;--accent-highlight:#7de8c9;--header-height:72px}html{background-color:#fbf6ef;color:#4a3f35}html.dark{background-color:#22182b!important;color:#f5f0e6!important}html:not([data-theme-loaded="true"]) body{opacity:0}body{margin:0;font-family:Inter,system-ui,sans-serif;line-height:1.6}main{min-height:100vh}nav{position:sticky;top:0;z-index:100;background:rgba(251,246,239,.95);backdrop-filter:blur(10px);min-height:var(--header-height,72px)}.dark nav{background:rgba(34,24,43,.95)}.hero-section{padding:4rem 1rem;max-width:1200px;margin:0 auto}h1{font-size:clamp(2rem,5vw,4rem);font-weight:700;line-height:1.1;margin:0 0 1rem}img{max-width:100%;height:auto;display:block}.skeleton{background:linear-gradient(90deg,#f0f0f0 25%,#e0e0e0 50%,#f0f0f0 75%);background-size:200% 100%;animation:loading 1.5s ease-in-out infinite}@keyframes loading{0%{background-position:200% 0}100%{background-position:-200% 0}}.dark .skeleton{background:linear-gradient(90deg,#2a2a2a 25%,#3a3a3a 50%,#2a2a2a 75%)}
+          *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--bg-primary:#fbf6ef;--bg-primary-rgb:251,246,239;--text-primary:#4a3f35;--text-primary-rgb:74,63,53;--accent-primary:#d6a574;--accent-highlight:#7de8c9;--header-height:72px;--container-max:1200px;--content-max:900px;--font-body:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;--font-heading:var(--font-body);--transition-fast:150ms ease;--transition-base:250ms ease}html.dark{--bg-primary:#22182b;--bg-primary-rgb:34,24,43;--text-primary:#f5f0e6;--text-primary-rgb:245,240,230;--accent-primary:#e4b584;--accent-highlight:#7de8c9}html:not([data-theme-loaded="true"]) body{opacity:0}html{background-color:var(--bg-primary);color:var(--text-primary);font-family:var(--font-body);line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body{margin:0;min-height:100vh;transition:opacity 300ms ease}nav{position:sticky;top:0;z-index:100;background:rgba(var(--bg-primary-rgb),0.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);height:var(--header-height);border-bottom:1px solid rgba(var(--text-primary-rgb),0.1)}.container{max-width:var(--container-max);margin:0 auto;padding:0 1rem}.hero-section{padding:4rem 1rem;min-height:calc(100vh - var(--header-height));display:flex;align-items:center}h1{font-size:clamp(2rem,5vw,4rem);font-weight:700;line-height:1.1;margin-bottom:1rem}h2{font-size:clamp(1.5rem,4vw,2.5rem);font-weight:600;line-height:1.2;margin-bottom:0.75rem}p{margin-bottom:1rem;line-height:1.6}a{color:var(--accent-primary);text-decoration:none;transition:color var(--transition-fast)}a:hover{color:var(--accent-highlight)}.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;background:var(--accent-primary);color:var(--bg-primary);border:none;border-radius:0.5rem;font-weight:500;cursor:pointer;transition:all var(--transition-base)}.btn:hover{background:var(--accent-highlight);transform:translateY(-2px)}.skeleton{background:linear-gradient(90deg,rgba(var(--text-primary-rgb),0.1) 25%,rgba(var(--text-primary-rgb),0.2) 50%,rgba(var(--text-primary-rgb),0.1) 75%);background-size:200% 100%;animation:loading 1.5s ease-in-out infinite;border-radius:0.25rem}@keyframes loading{0%{background-position:200% 0}100%{background-position:-200% 0}}img{max-width:100%;height:auto;display:block}img[loading="lazy"]{background:rgba(var(--text-primary-rgb),0.1)}@media (max-width:768px){.hero-section{padding:2rem 1rem}h1{font-size:2rem}.hide-mobile{display:none}}@media (min-width:769px){.hide-desktop{display:none}}.will-change-transform{will-change:transform}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important}}
         ` }} />
         
         {/* Content Security Policy - Conditional for dev vs production */}

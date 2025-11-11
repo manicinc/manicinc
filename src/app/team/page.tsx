@@ -2,7 +2,8 @@
 
 import React from 'react';
 import type { Metadata } from 'next';
-import { motion } from 'framer-motion';
+// Use lazy-loaded motion for better performance
+import { motion } from '@/components/LazyMotion';
 import Link from 'next/link';
 import { MapPin, Briefcase, BookOpen, Mail, Users as TeamIcon, Sparkles, GitBranch, Palette, BrainCircuit } from 'lucide-react';
 

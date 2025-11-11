@@ -2,11 +2,13 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+// Use lazy-loaded motion for better performance
+import { motion, AnimatePresence } from '@/components/LazyMotion';
 import Link from 'next/link';
+// Import icons - TODO: Replace with individual imports when lucide-react supports it
 import {
     Rocket, BrainCircuit, Code2, Layers3, Search, Lightbulb, CheckCircle, Ship, Cpu, Bot, Terminal, Target, Palette, Speaker, DatabaseZap, Server, Cog, Timer, BookOpen, Archive,
-    BarChartHorizontalBig, LockKeyhole, ArrowRight, GitBranch, Database, Cloud, ShieldCheck, Recycle, FileText, Gift, Users as UsersIcon // Renamed Users import
+    BarChartHorizontalBig, LockKeyhole, ArrowRight, GitBranch, Database, Cloud, ShieldCheck, Recycle, FileText, Gift, Users as UsersIcon
 } from 'lucide-react';
 
 // Import CSS Module

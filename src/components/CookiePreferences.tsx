@@ -1,7 +1,8 @@
 'use client';
 
 import { useCookieConsent } from '@/hooks/useCookieConsent';
-import { motion } from 'framer-motion';
+// Use lazy-loaded motion for better performance
+import { motion } from '@/components/LazyMotion';
 
 export function CookiePreferences() {
   const { preferences, updatePreferences, showBanner } = useCookieConsent();

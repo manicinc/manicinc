@@ -1,7 +1,7 @@
 'use client';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useId, useRef, useState } from 'react';
-import { useReducedMotion } from 'framer-motion';
+import { useReducedMotion } from '@/components/LazyMotion';
 import Container from './Container';
 import Link from 'next/link';
 import Logo from './Logo';

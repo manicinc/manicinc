@@ -4,7 +4,8 @@
 'use client';
 
 import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+// Use lazy-loaded motion for better performance
+import { motion, AnimatePresence } from '@/components/LazyMotion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { formatDate } from '@/util/formatDate';

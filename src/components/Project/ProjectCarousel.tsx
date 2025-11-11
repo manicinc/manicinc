@@ -7,7 +7,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, Clock, EyeOff, Github, ExternalLink, Star, GitFork } from 'lucide-react';
 import { Project } from '@/types/project'; // Assuming this type definition exists
-import { motion, AnimatePresence } from 'framer-motion';
+// Use lazy-loaded motion for better performance
+import { motion, AnimatePresence } from '@/components/LazyMotion';
 import { AsciiArtPlaceholder } from '@/lib/asciiPlaceholders'; // Assuming this component exists
 interface Props {
   projects: Project[];

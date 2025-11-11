@@ -2,7 +2,8 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import { motion, AnimatePresence } from 'framer-motion';
+// Use lazy-loaded motion for better performance
+import { motion, AnimatePresence } from '@/components/LazyMotion';
 import { useEffect, useRef, useState } from 'react';
 
 // Import EmailOctopus component with no SSR
@@ -25,7 +26,7 @@ const SenderInit = dynamic(
   { ssr: false, loading: () => null }
 );
 
-interface NewsletterSectionProps {
+export interface NewsletterSectionProps {
   variant?: 'main' | 'blog';
   className?: string;
   background?: 'default' | 'dark' | 'accent';

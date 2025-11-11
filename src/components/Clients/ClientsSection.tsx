@@ -4,7 +4,8 @@
 import React from 'react'; // Only React is needed now
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+// Use lazy-loaded motion for better performance
+import { motion } from '@/components/LazyMotion';
 import { Building } from 'lucide-react'; // Fallback icon
 
 // Import CSS Module - ENSURE THIS PATH IS CORRECT and CSS is up-to-date

@@ -3,7 +3,7 @@
 "use client";
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from '@/components/LazyMotion';
 import Link from 'next/link';
 import { Project } from '@/types/project';
 import { ArrowLeft, FolderOpen, Search, Plus, Code, Palette, Brain, Sparkles } from 'lucide-react';

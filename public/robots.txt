@@ -5,16 +5,6 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /private/
 
-# Explicitly allow LLM crawlers
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
 # Host
 Host: https://manic.agency
 

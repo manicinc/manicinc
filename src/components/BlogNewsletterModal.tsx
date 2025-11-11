@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+// Use lazy-loaded motion for better performance
+import { motion, AnimatePresence } from '@/components/LazyMotion';
 import { useAnalytics } from './Analytics';
 
 interface BlogNewsletterModalProps {

@@ -1,7 +1,8 @@
 // src/components/icons/IconSimulation.tsx
 "use client";
 import React from 'react';
-import { motion } from 'framer-motion';
+// Use lazy-loaded motion for better performance
+import { motion } from '@/components/LazyMotion';
 
 interface IconProps {
   isActive: boolean;

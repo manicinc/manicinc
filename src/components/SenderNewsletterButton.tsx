@@ -1,7 +1,8 @@
 // src/components/SenderNewsletterButton.tsx
 'use client';
 
-import { motion } from 'framer-motion';
+// Use lazy-loaded motion for better performance
+import { motion } from '@/components/LazyMotion';
 import { useAnalytics } from './Analytics';
 
 interface SenderNewsletterButtonProps {

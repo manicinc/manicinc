@@ -3,7 +3,8 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+// Use lazy-loaded motion for better performance
+import { motion, AnimatePresence } from '@/components/LazyMotion';
 import ContactForm from "@/components/ContactForm";
 
 const ContactPage = () => {

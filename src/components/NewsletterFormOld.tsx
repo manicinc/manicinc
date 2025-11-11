@@ -4,7 +4,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { useAnalytics } from './Analytics';
 import { useCookieConsent } from '@/hooks/useCookieConsent';
-import { motion, AnimatePresence } from 'framer-motion';
+// Use lazy-loaded motion for better performance
+import { motion, AnimatePresence } from '@/components/LazyMotion';
 import { subscribeToNewsletter } from '@/lib/emailjs';
 
 interface NewsletterFormProps {

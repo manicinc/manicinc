@@ -2,7 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+// Use lazy-loaded motion for better performance
+import { motion } from '@/components/LazyMotion';
 import {
     ArrowRight, Cpu, GitBranch, Recycle, Gift, Archive, // Core Pillars
     Users as TeamIcon, Layers3 as ProjectsIcon, BookOpen as BlogIcon, // Nav Links

@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { X, Cookie, Shield, Eye, MessageCircle, BarChart3, Settings, ChevronDown, ChevronUp } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+// Use lazy-loaded motion for better performance
+import { motion, AnimatePresence } from '@/components/LazyMotion';
 
 interface CookiePreferences {
   essential: boolean;

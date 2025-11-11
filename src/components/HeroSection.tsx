@@ -10,7 +10,8 @@ import { ArrowRight, ArrowUpRight, Rabbit, ArrowUp, FileText, FolderGit2, Refres
 import GlitchAnimation from "./GlitchAnimation"; // Ensure path is correct
 import AsciiArtPlaceholder from "../lib/asciiPlaceholders"; // Ensure path is correct
 import { HeroFeedItem } from "@/types/common"; // Ensure path is correct
-import { motion } from 'framer-motion';
+// Use lazy-loaded motion for better performance
+import { motion } from '@/components/LazyMotion';
 import { useCookieConsent } from '@/hooks/useCookieConsent';
 
 // --- Dynamic Quote System ---

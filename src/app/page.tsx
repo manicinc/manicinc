@@ -10,6 +10,8 @@ import { Project } from '@/types/project';
 import { HeroSection } from '@/components/HeroSection';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import type { ContactSectionProps } from '@/components/ContactSection';
+import type { NewsletterSectionProps } from '@/components/NewsletterSection';
 
 const Services = dynamic(() => import('@/components/Services/Services'), {
     ssr: false,
@@ -20,10 +22,30 @@ const Intro = dynamic(() => import('@/components/Intro/Intro'), {
     ssr: false,
     loading: () => null
 });
-import ContactSection from '@/components/ContactSection';
-import NewsletterSection from '@/components/NewsletterSection';
-import HomePageSkeleton from '@/components/Skeletons/HomePageSkeleton'; // Keep Skeleton import
-import EnhancedTracking from '@/components/EnhancedTracking'; // Analytics tracking
+
+// Lazy load below-fold components for better performance
+const ContactSection = dynamic<ContactSectionProps>(
+    () => import('@/components/ContactSection').then((mod) => mod.default),
+    {
+        ssr: false,
+        loading: () => <div className="skeleton h-96" />,
+    }
+);
+
+const NewsletterSection = dynamic<NewsletterSectionProps>(
+    () => import('@/components/NewsletterSection').then((mod) => mod.default),
+    {
+        ssr: false,
+        loading: () => <div className="skeleton h-64" />,
+    }
+);
+
+const EnhancedTracking = dynamic(() => import('@/components/EnhancedTracking'), {
+    ssr: false,
+    loading: () => null
+});
+
+import HomePageSkeleton from '@/components/Skeletons/HomePageSkeleton';
 
 // SEO Metadata for Homepage
 export const metadata: Metadata = {
