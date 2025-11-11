@@ -253,7 +253,9 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                                                       src={item.image} 
                                                       alt="" 
                                                       className="card-image" 
-                                                      loading="lazy" 
+                                                      loading={index === 0 ? "eager" : "lazy"}
+                                                      priority={index === 0}
+                                                      fetchPriority={index === 0 ? "high" : "low"}
                                                       width={400}
                                                       height={300}
                                                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" 

@@ -24,10 +24,16 @@ import PrefetchLinks from '@/components/PrefetchLinks';
 import ServiceWorkerRegistration from '@/components/ServiceWorkerRegistration';
 import SkipToContent from '@/components/SkipToContent';
 import GlobalEventTracking from '@/components/GlobalEventTracking';
+import DeferredStyles from '@/components/DeferredStyles';
 
 // Import Styles
 import "./styles/globals.css";
-import "./styles/blog-newsletter.css";
+// blog-newsletter.css deferred via DeferredStyles component
+
+// Preload critical above-fold images
+const CRITICAL_IMAGES = [
+  '/og-default.webp',
+];
 
 // Import SEO helper
 import { generateSEOMetadata } from '@/lib/getSEOMetadata';
@@ -96,6 +102,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         )}
         <link rel="preconnect" href="https://eocampaign1.com" />
         <link rel="preconnect" href="https://images.weserv.nl" />
+        
+        {/* Preload critical above-fold images */}
+        {CRITICAL_IMAGES.map((img) => (
+          <link key={img} rel="preload" as="image" href={img} fetchpriority="high" />
+        ))}
         
         {/* DNS prefetch for external domains */}
         <link rel="dns-prefetch" href="https://cdn.sender.net" />
@@ -217,6 +228,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <ScrollToTopHandler />
               <Analytics />
               <GlobalEventTracking />
+              <DeferredStyles />
               <LayoutClient />
             </CookieProvider>
           </ThemeProvider>

@@ -1,0 +1,99 @@
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   GPU acceleration, content-visibility, will-change
+   ============================================ */
+
+/* Content-visibility for off-screen sections */
+.hero-section,
+.services-section,
+.intro-wrapper,
+.newsletter-section,
+.contact-section,
+.frame-cta {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+
+/* GPU layer promotion for animated elements */
+.card-image,
+.blog-card,
+.service-card,
+.holographic-card,
+.project-card {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Active/hover states with GPU acceleration */
+.card-image:hover,
+.blog-card:hover,
+.service-card:hover,
+.holographic-card:hover,
+.project-card:hover {
+  will-change: transform, opacity;
+}
+
+/* Promote navigation to GPU for smooth scroll */
+nav,
+.minimap-container,
+.toc-sidebar {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Optimize animated backgrounds */
+.glitch-animation-container,
+.stopwatch-wrapper,
+.neon-text {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Remove will-change after animation completes */
+.animation-complete {
+  will-change: auto;
+}
+
+/* Optimize images for paint */
+img,
+picture,
+video {
+  content-visibility: auto;
+}
+
+/* Contain layout shifts */
+.blog-grid,
+.project-grid,
+.services-grid {
+  contain: layout style paint;
+}
+
+/* Optimize scroll containers */
+.blog-filters,
+.filter-panel-content,
+.minimap-container {
+  contain: layout style;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+/* Force GPU compositing for smooth animations */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-on-scroll,
+  .fade-in-view,
+  [data-animate="true"] {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+  }
+}
+
+/* Clean up will-change after transitions */
+* {
+  transition-property: transform, opacity, color, background-color, border-color;
+}
+
+*:not(:hover):not(:focus):not(:active) {
+  will-change: auto;
+}
+
