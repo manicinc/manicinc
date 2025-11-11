@@ -3,119 +3,119 @@
   
   <url>
     <loc>https://manic.agency/</loc>
-    <lastmod>2025-11-11T20:01:16.627Z</lastmod>
+    <lastmod>2025-11-11T21:29:54.924Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1</priority>
   </url>
   
   <url>
     <loc>https://manic.agency/blog</loc>
-    <lastmod>2025-11-11T20:01:16.627Z</lastmod>
+    <lastmod>2025-11-11T21:29:54.924Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://manic.agency/projects</loc>
-    <lastmod>2025-11-11T20:01:16.627Z</lastmod>
+    <lastmod>2025-11-11T21:29:54.924Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://manic.agency/open-source</loc>
-    <lastmod>2025-11-11T20:01:16.627Z</lastmod>
+    <lastmod>2025-11-11T21:29:54.924Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://manic.agency/team</loc>
-    <lastmod>2025-11-11T20:01:16.627Z</lastmod>
+    <lastmod>2025-11-11T21:29:54.924Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://manic.agency/mission</loc>
-    <lastmod>2025-11-11T20:01:16.627Z</lastmod>
+    <lastmod>2025-11-11T21:29:54.924Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://manic.agency/process</loc>
-    <lastmod>2025-11-11T20:01:16.627Z</lastmod>
+    <lastmod>2025-11-11T21:29:54.924Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://manic.agency/contact</loc>
-    <lastmod>2025-11-11T20:01:16.627Z</lastmod>
+    <lastmod>2025-11-11T21:29:54.924Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://manic.agency/privacy</loc>
-    <lastmod>2025-11-11T20:01:16.627Z</lastmod>
+    <lastmod>2025-11-11T21:29:54.924Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
     <loc>https://manic.agency/sitemap</loc>
-    <lastmod>2025-11-11T20:01:16.627Z</lastmod>
+    <lastmod>2025-11-11T21:29:54.924Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://manic.agency/terms</loc>
-    <lastmod>2025-11-11T20:01:16.627Z</lastmod>
+    <lastmod>2025-11-11T21:29:54.924Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
     <loc>https://manic.agency/blog/tutorials</loc>
-    <lastmod>2025-11-11T20:01:16.627Z</lastmod>
+    <lastmod>2025-11-11T21:29:54.924Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://manic.agency/blog/research</loc>
-    <lastmod>2025-11-11T20:01:16.627Z</lastmod>
+    <lastmod>2025-11-11T21:29:54.924Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://manic.agency/blog/synthetic</loc>
-    <lastmod>2025-11-11T20:01:16.627Z</lastmod>
+    <lastmod>2025-11-11T21:29:54.924Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://manic.agency/blog/thinkpieces</loc>
-    <lastmod>2025-11-11T20:01:16.627Z</lastmod>
+    <lastmod>2025-11-11T21:29:54.924Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://manic.agency/projects/ai</loc>
-    <lastmod>2025-11-11T20:01:16.627Z</lastmod>
+    <lastmod>2025-11-11T21:29:54.924Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://manic.agency/projects/tools</loc>
-    <lastmod>2025-11-11T20:01:16.627Z</lastmod>
+    <lastmod>2025-11-11T21:29:54.924Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -171,7 +171,7 @@
   
   <url>
     <loc>https://manic.agency/projects/ai/voice-chat-assistant</loc>
-    <lastmod>2025-11-10T20:32:43-08:00</lastmod>
+    <lastmod>2025-11-11T13:24:18-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -185,7 +185,7 @@
   
   <url>
     <loc>https://manic.agency/projects/ai/frame</loc>
-    <lastmod>2025-11-10T20:32:43-08:00</lastmod>
+    <lastmod>2025-11-11T13:24:18-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
