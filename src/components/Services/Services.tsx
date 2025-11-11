@@ -583,9 +583,8 @@ const Services: React.FC = () => {
                   opacity-65              // Slightly adjusted opacity
                   dark:opacity-50         // Different opacity for dark mode?
                 "
-                // Consider adding width/height if not automatically inferred by Next.js
-                // width={100} // example
-                // height={30} // example
+                width={96}
+                height={24}
               />
             </motion.div>
               {/* Desktop Services Grid */}
@@ -686,24 +685,27 @@ const Services: React.FC = () => {
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.6 }}
                  >
-                     <Link href="/process" legacyBehavior>
-                         <motion.a
-                            className={styles.ornateLink} // Apply main link style
-                            whileTap={{ scale: 0.98 }} // Keep tap effect
-                            transition={{ duration: 0.15 }}
+                     <Link
+                        href="/process"
+                        className={styles.ornateLink}
+                        aria-label="Peek Behind the Curtain: Explore Our Process"
+                     >
+                         {/* Text Span with glitch/shimmer wrapper */}
+                         <motion.span
+                           className={styles.ctaTextWrapper}
+                           data-text="Peek Behind the Curtain: Explore Our Process"
+                           whileTap={{ scale: 0.98 }}
+                           transition={{ duration: 0.15 }}
                          >
-                             {/* Text Span with glitch/shimmer wrapper */}
-                             <span className={styles.ctaTextWrapper} data-text="Peek Behind the Curtain: Explore Our Process">
-                                 {/* Inner span for base color/animation */}
-                                 <span className={styles.ctaTextAnimated}>
-                                     Peek Behind the Curtain: Explore Our Process
-                                 </span>
+                             {/* Inner span for base color/animation */}
+                             <span className={styles.ctaTextAnimated}>
+                                 Peek Behind the Curtain: Explore Our Process
                              </span>
-                             {/* Arrow Span */}
-                             <span className={styles.ctaArrow}>
-                                 <MoveRight strokeWidth={2.5} />
-                             </span>
-                         </motion.a>
+                         </motion.span>
+                         {/* Arrow Span */}
+                         <span className={styles.ctaArrow}>
+                             <MoveRight strokeWidth={2.5} />
+                         </span>
                      </Link>
                  </motion.div>
             </div>
