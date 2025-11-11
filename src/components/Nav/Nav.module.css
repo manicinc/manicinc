@@ -26,6 +26,12 @@
     border-bottom: 1px solid rgba(var(--accent-secondary-rgb), 0.18);
     z-index: 10002; /* Highest z-index to ensure navbar stays on top */
 }
+@media (max-width: 768px) {
+  .navContainer { min-height: 60px; }
+}
+@media (max-width: 480px) {
+  .navContainer { min-height: 56px; }
+}
 
 .navContainer > :global(.container) {
     background: none !important;
@@ -125,6 +131,18 @@
     color: transparent;
     background-size: 250% auto;
     animation: animatedGradientCoolVibrant 6s ease-in-out infinite alternate;
+}
+@media (max-width: 768px) {
+    .logoText,
+    .ManicAgencyLogoComponentInternalTextClass {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .logoText,
+    .ManicAgencyLogoComponentInternalTextClass {
+        font-size: 1.65rem;
+    }
 }
 :global(.light) .logoText,
 :global(.light) .ManicAgencyLogoComponentInternalTextClass {
@@ -1238,6 +1256,7 @@
 @media (max-width: 768px) {
     .mobileNavLink {
         font-size: 1rem !important; /* Ensure other links stay readable */
+        padding: 0.7rem 1.1rem !important;
         white-space: nowrap !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;

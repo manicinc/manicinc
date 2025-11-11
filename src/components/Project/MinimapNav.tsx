@@ -380,12 +380,12 @@ const MinimapNav: React.FC<MinimapNavProps> = ({ toc }) => {
                  /* ===== MOBILE RESPONSIVE ===== */
          @media (max-width: 768px) {
              .minimap-container {
-                 right: 0.75rem;
-                 padding: 0.3rem 0.25rem;
-                 gap: 3px;
-                 max-height: calc(100vh - 12rem);
-                 transform: translateY(-50%) scale(0.7);
-                 transform-origin: right center;
+                right: 0.5rem;
+                padding: 0.25rem 0.2rem;
+                gap: 2px;
+                max-height: calc(100vh - 12rem);
+                transform: translateY(-50%) scale(0.55);
+                transform-origin: right center;
              }
              
              /* Much smaller mobile indicators */
@@ -413,6 +413,13 @@ const MinimapNav: React.FC<MinimapNavProps> = ({ toc }) => {
              }
              .minimap-indicator.inactive.shape-diamond:hover {
                  transform: rotate(45deg) scale(1.05);
+             }
+         }
+
+         /* Hide entirely on very small screens */
+         @media (max-width: 640px) {
+             .minimap-container {
+                 display: none;
              }
          }
 
