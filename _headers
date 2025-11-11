@@ -11,10 +11,30 @@
   Referrer-Policy: strict-origin-when-cross-origin
   
   # CSP for Cloudflare + Sender.net + EmailOctopus + Analytics + GitHub API
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://vercel.live https://*.vercel.app https://cdnjs.cloudflare.com https://ajax.cloudflare.com https://va.vercel-scripts.com https://*.vercel-scripts.com https://eocampaign1.com https://*.eocampaign1.com https://emailoctopus.com https://*.emailoctopus.com https://www.clarity.ms https://*.clarity.ms https://www.google.com https://*.google.com https://www.gstatic.com https://*.gstatic.com https://www.recaptcha.net https://*.recaptcha.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.sender.net https://cdnjs.cloudflare.com; img-src 'self' data: https: https://cdn.sender.net https://app.sender.net; font-src 'self' https://fonts.gstatic.com https://cdn.sender.net; connect-src 'self' https://www.google-analytics.com https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://cloudflare.com https://*.cloudflare.com https://va.vercel-scripts.com https://*.vercel-scripts.com https://eocampaign1.com https://*.eocampaign1.com https://emailoctopus.com https://*.emailoctopus.com https://www.clarity.ms https://*.clarity.ms https://api.github.com https://*.github.com https://github.com; frame-src 'self' https://cdn.sender.net https://app.sender.net https://www.google.com https://*.google.com https://www.recaptcha.net https://*.recaptcha.net;
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://vercel.live https://*.vercel.app https://cdnjs.cloudflare.com https://ajax.cloudflare.com https://va.vercel-scripts.com https://*.vercel-scripts.com https://eocampaign1.com https://*.eocampaign1.com https://emailoctopus.com https://*.emailoctopus.com https://www.clarity.ms https://*.clarity.ms https://www.google.com https://*.google.com https://www.gstatic.com https://*.gstatic.com https://www.recaptcha.net https://*.recaptcha.net https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.sender.net https://cdnjs.cloudflare.com; img-src 'self' data: https: https://cdn.sender.net https://app.sender.net; font-src 'self' https://fonts.gstatic.com https://cdn.sender.net; connect-src 'self' https://www.google-analytics.com https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://cloudflare.com https://*.cloudflare.com https://static.cloudflareinsights.com https://va.vercel-scripts.com https://*.vercel-scripts.com https://eocampaign1.com https://*.eocampaign1.com https://emailoctopus.com https://*.emailoctopus.com https://www.clarity.ms https://*.clarity.ms https://api.github.com https://*.github.com https://github.com; frame-src 'self' https://cdn.sender.net https://app.sender.net https://www.google.com https://*.google.com https://www.recaptcha.net https://*.recaptcha.net;
   
-  # Cache control for static assets
+  # Default cache control (HTML and dynamic resources short TTL)
+  Cache-Control: public, max-age=3600
+
+# Long-term immutable caching for Next.js static assets
+/_next/static/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Fonts and media
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+/media/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Versioned assets in /assets
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Stylesheets and JS (moderate TTL)
+/*.css
+  Cache-Control: public, max-age=604800
+/*.js
+  Cache-Control: public, max-age=604800
 
 # Specific headers for Sender.net form endpoints
 /api/*
