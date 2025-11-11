@@ -84,228 +84,9 @@ f:I[39976,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","stat
             }
           }
         })();
-      0:["manic-agency-1762834739442",[[["",{"children":["projects",{"children":[["category","ai","d"],{"children":["__PAGE__?{\"category\":\"ai\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["category","ai","d"],{"children":["__PAGE__",{},[["$L1","$L2",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/8b946c9a4c009965.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/124bad3528d9bb7f.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b2b42f441d3b4bb4.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/65723a1039114789.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/e1f938ba1cd7462f.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/e8e4d05115702bb5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/c41e284b53825655.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/b28fcab5825d84c5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/008a427afd1d1887.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_47a102\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://eocampaign1.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$6"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$7"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$8"}}]]}],["$","body",null,{"children":[["$","$L9",null,{}],["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{"fallback":["$","$Ld",null,{}],"children":["$","$Le",null,{"children":["$","$Lf",null,{"children":[["$","$L10",null,{}],["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$17","errorStyles":[],"errorScripts":[],"template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L18",null,{}],"notFoundStyles":[]}]}],["$","$L19",null,{}],["$","$L1a",null,{}],["$","$L1b",null,{}],"$undefined",["$","$L1c",null,{}]]}]}]}]]}]]}]],null],null],["$L1d",null]]]]
+      0:["manic-agency-1762835616678",[[["",{"children":["projects",{"children":[["category","ai","d"],{"children":["__PAGE__?{\"category\":\"ai\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["category","ai","d"],{"children":["__PAGE__",{},[["$L1","$L2",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/8b946c9a4c009965.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/124bad3528d9bb7f.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b2b42f441d3b4bb4.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/65723a1039114789.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/e1f938ba1cd7462f.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/e8e4d05115702bb5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/c41e284b53825655.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/b28fcab5825d84c5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/008a427afd1d1887.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_47a102\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://eocampaign1.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$6"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$7"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$8"}}]]}],["$","body",null,{"children":[["$","$L9",null,{}],["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{"fallback":["$","$Ld",null,{}],"children":["$","$Le",null,{"children":["$","$Lf",null,{"children":[["$","$L10",null,{}],["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$17","errorStyles":[],"errorScripts":[],"template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L18",null,{}],"notFoundStyles":[]}]}],["$","$L19",null,{}],["$","$L1a",null,{}],["$","$L1b",null,{}],"$undefined",["$","$L1c",null,{}]]}]}]}]]}]]}]],null],null],["$L1d",null]]]]
 1e:I[35289,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","644","static/chunks/app/projects/%5Bcategory%5D/page-b18767e036e90d35.js"],"default"]
-1f:T1c07,
-# Frame.dev — AI Development Framework
-
-## Building the Future of AI-Powered Development
-
-Frame.dev represents our vision for the future of software development: AI-native tools that understand context, anticipate needs, and accelerate creation. Through our open-source projects—[AgentOS](https://agentos.sh) and [OpenStrand](https://openstrand.ai)—we're building the infrastructure for a new generation of AI-powered development experiences.
-
-> "The best interface is no interface. The best code is the code that writes itself." — Frame.dev Philosophy
-
-## The Frame.dev Ecosystem
-
-Our projects work together to create a complete AI development platform:
-
-
-
-### 🧠 [AgentOS (agentos.sh)](https://agentos.sh)
-**The Brain Behind Our AI Systems**
-
-AgentOS is our modular orchestration runtime that powers intelligent AI applications, handling:
-
-- **Conversation Management** — Stateful, multi-turn interactions
-- **Memory & Retrieval** — RAG pipelines and context windows
-- **Tool Orchestration** — Permission-aware tool execution
-- **Streaming Architecture** — Real-time response handling
-- **Guardrails & Safety** — Built-in protective policies
-
-```typescript
-import { AgentOS } from '@framers/agentos';
-
-const agent = new AgentOS();
-await agent.initialize(config);
-
-for await (const chunk of agent.processRequest(input)) {
-  // Handle streaming responses
-}
-```
-
-[Explore AgentOS Documentation →](https://agentos.sh/docs)
-
-### 📚 [OpenStrand (openstrand.ai)](https://openstrand.ai)
-**Collaborative Knowledge Architecture**
-
-OpenStrand revolutionizes how teams organize and connect information. Built on the Zettelkasten method with modern collaborative features:
-
-- **Recursive Strands** — Infinitely nestable knowledge structures
-- **Collaborative Slip-Box** — Team-based knowledge management
-- **AI-Enhanced Discovery** — Automatic linking and insights
-- **Offline-First** — Works everywhere, syncs when connected
-- **Version Control** — Git-like branching for knowledge
-
-[Discover OpenStrand →](https://openstrand.ai)
-
-## Technical Architecture
-
-### Unified TypeScript Stack
-
-All Frame.dev projects share a consistent, modern architecture:
-
-```
-frame.dev/
-├── apps/
-│   ├── agentos.sh/             # Next.js marketing site
-│   └── openstrand-app/         # React knowledge management UI
-├── packages/
-│   ├── @framers/agentos/       # Core orchestration runtime
-│   ├── @openstrand/sdk/        # Shared types & utilities
-│   └── @framers/tools/         # Common tool implementations
-└── backend/
-    ├── openstrand-teams/       # Fastify collaboration backend
-    └── shared/                 # Cross-cutting concerns
-```
-
-### Key Technologies
-
-- **Language**: TypeScript throughout (strict mode)
-- **Frontend**: Vue 3, React 18, Next.js 14
-- **Backend**: Express, Fastify, Prisma
-- **AI/ML**: OpenAI, Anthropic, local models
-- **Database**: PostgreSQL, PGlite (embedded)
-- **Infrastructure**: Docker, Kubernetes-ready
-
-## Open Source Philosophy
-
-### Why We Build in the Open
-
-1. **Transparency** — Users should understand how their AI tools work
-2. **Collaboration** — The best ideas come from diverse perspectives
-3. **Innovation** — Open ecosystems move faster than closed ones
-4. **Trust** — Auditable code builds confidence in AI systems
-
-### Contribution Model
-
-We follow a "Core + Community" model:
-
-- **Core Team** maintains architectural vision and quality standards
-- **Community** contributes features, fixes, and integrations
-- **Partners** like [Manic Agency](https://manic.agency) provide strategic development
-
-## Integration Examples
-
-### Using AgentOS in Your Project
-
-```typescript
-import { AgentOS, AgentOSConfig } from '@framers/agentos';
-import { OpenAIProvider } from '@framers/agentos/providers';
-
-const config: AgentOSConfig = {
-  providers: [new OpenAIProvider(apiKey)],
-  tools: ['code-writer', 'terminal', 'file-system'],
-  memoryStrategy: 'hierarchical',
-  streamingEnabled: true
-};
-
-const agent = new AgentOS();
-await agent.initialize(config);
-
-// Process natural language requests
-const response = await agent.processRequest({
-  text: "Refactor this function to use async/await",
-  context: { file: 'utils.js', selection: [10, 25] }
-});
-```
-
-### Building Custom Tools
-
-```typescript
-import { ITool, ToolResult } from '@framers/agentos';
-
-export class CustomAnalyzerTool implements ITool {
-  name = 'custom-analyzer';
-  description = 'Analyzes code patterns and suggests improvements';
-  
-  async execute(params: any): Promise<ToolResult> {
-    // Your tool logic here
-    return {
-      success: true,
-      data: analysisResults,
-      artifacts: [{
-        filename: 'analysis.md',
-        mimeType: 'text/markdown',
-        data: reportContent
-      }]
-    };
-  }
-}
-```
-
-## Performance & Scale
-
-### Benchmarks
-
-- **Response Time**: < 100ms for tool invocations
-- **Streaming Latency**: < 50ms per chunk
-- **Memory Efficiency**: 50MB base, scales with context
-- **Concurrent Sessions**: 1000+ per instance
-
-### Production Ready
-
-- **Error Recovery**: Automatic retry with exponential backoff
-- **Rate Limiting**: Built-in protection against abuse
-- **Observability**: OpenTelemetry instrumentation
-- **Security**: OWASP-compliant, regular audits
-
-## Roadmap & Vision
-
-### Q4 2025
-- [ ] AgentOS plugin marketplace
-- [ ] OpenStrand team collaboration features
-- [ ] Frame IDE preview release
-
-### 2026 Vision
-- **Ambient Development** — Code that understands and evolves with you
-- **AI Pair Programming** — True collaborative AI that learns your style
-- **Knowledge-Driven Architecture** — Systems that document themselves
-- **Voice-First Everything** — Natural language as the primary interface
-
-## Get Started
-
-### For Developers
-
-```bash
-# Install AgentOS
-npm install @framers/agentos
-
-# Try OpenStrand locally
-npx create-openstrand-app my-knowledge-base
-```
-
-### For Teams
-
-- **AgentOS Enterprise** — [Contact sales](mailto:enterprise@frame.dev)
-- **OpenStrand Teams** — [Request early access](https://openstrand.ai/teams)
-
-## Community & Support
-
-### Join the Movement
-
-- **GitHub**: [github.com/framersai](https://github.com/framersai)
-- **Discord**: [frame.dev/discord](https://frame.dev/discord)
-- **Twitter**: [@framersai](https://twitter.com/framersai)
-- **Blog**: [Read our journey](/blog/thinkpieces/building-frame-dev)
-
-### Resources
-
-- [AgentOS Documentation](https://agentos.sh/docs)
-- [OpenStrand Tutorials](https://openstrand.ai/learn)
-- [API Reference](https://frame.dev/api)
-
-## Built by Framers AI × Manic Agency
-
-Frame.dev is developed by [Framers AI](https://github.com/framersai) in collaboration with [Manic Agency](https://manic.agency). Together, we're pushing the boundaries of what's possible when AI meets software development.
-
-### Why This Matters
-
-We believe the future of software development isn't about replacing developers—it's about amplifying their capabilities. Frame.dev provides the tools to think faster, build smarter, and create experiences that weren't possible before.
-
----
-
-*Ready to revolutionize how you build? [Get started with Frame.dev →](https://frame.dev)*
-20:T308c,
+1f:T308c,
 # Voice Chat Assistant — The Future of Coding is Conversational
 
 ## Speak Your Code Into Existence
@@ -670,6 +451,225 @@ Voice Chat Assistant isn't just a tool—it's a movement toward more natural, ef
 ---
 
 *Built with ❤️ by [Frame.dev](https://frame.dev) • Powered by [AgentOS](https://agentos.sh) • Strategic Partner: [Manic Agency](https://manic.agency)*
-2:["$","$L1e",null,{"category":"ai","projects":[{"slug":"frame","title":"Frame.dev — AI Development Framework","description":"Open-source AI orchestration runtime powering AgentOS and OpenStrand. Built by Framers AI for the next generation of AI-powered development tools.","date":"2025-11-09","category":"ai","content":"$1f","longDescription":"$undefined","tags":["ai","oss","agentos","openstrand","orchestration","developer-tools"],"modifiedDate":"2025-11-10T17:28:04-08:00","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/framers/frame-logo-transparent.png","images":["/assets/projects/framers/frame-logo-no-subtitle.svg","/assets/projects/framers/frame-logo-transparent.png","/assets/projects/framers/frame-logo.png","/assets/projects/framers/agentos-logo.png","/assets/projects/framers/agentos-icon.svg","/assets/projects/framers/openstrand-logo-dark-1024.png","/assets/projects/framers/openstrand-logo-light-1024.png","/assets/projects/framers/openstrand-logo.svg"],"bgColor":"$undefined","textColor":"$undefined","link":"https://frame.dev","github":"https://github.com/framersai","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Projects Powered","value":"2"},{"label":"Runtime Package","value":"@framers/agentos"},{"label":"Architecture","value":"TypeScript + Monorepo"},{"label":"License","value":"Apache-2.0"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"voice-chat-assistant","title":"Voice Chat Assistant — Talk to Code, Ship Faster","description":"Voice-first AI coding assistant that understands context, writes production code, and manages your entire development workflow through natural conversation. Powered by AgentOS.","date":"2025-11-10","category":"ai","content":"$20","longDescription":"$undefined","tags":["ai","voice","coding-assistant","agentos","developer-tools","productivity","llm","open-source"],"modifiedDate":"2025-11-10T16:58:18-08:00","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/voice-chat-assistant/hearing.svg","images":["/assets/projects/voice-chat-assistant/logo.svg","/assets/projects/voice-chat-assistant/hearing.svg","/assets/projects/framers/agentos-logo.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://vca.chat","github":"https://github.com/framersai/voice-chat-assistant","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Response Time","value":"< 100ms"},{"label":"Languages Supported","value":"50+"},{"label":"Active Sessions/Day","value":"10k+"},{"label":"Powered By","value":"AgentOS"}],"team":[{"name":"Frame.dev / Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Design & Strategy","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[{"quote":"VCA changed how I think about coding. I describe what I want, and it just happens. It's like having a senior developer who never gets tired.","author":"Sarah Chen","role":"Full Stack Developer"},{"quote":"The context awareness is unreal. It remembers our entire conversation and understands my codebase better than I do sometimes.","author":"Marcus Rodriguez","role":"Tech Lead at Scale-up"}]}]}]
+20:T1c07,
+# Frame.dev — AI Development Framework
+
+## Building the Future of AI-Powered Development
+
+Frame.dev represents our vision for the future of software development: AI-native tools that understand context, anticipate needs, and accelerate creation. Through our open-source projects—[AgentOS](https://agentos.sh) and [OpenStrand](https://openstrand.ai)—we're building the infrastructure for a new generation of AI-powered development experiences.
+
+> "The best interface is no interface. The best code is the code that writes itself." — Frame.dev Philosophy
+
+## The Frame.dev Ecosystem
+
+Our projects work together to create a complete AI development platform:
+
+
+
+### 🧠 [AgentOS (agentos.sh)](https://agentos.sh)
+**The Brain Behind Our AI Systems**
+
+AgentOS is our modular orchestration runtime that powers intelligent AI applications, handling:
+
+- **Conversation Management** — Stateful, multi-turn interactions
+- **Memory & Retrieval** — RAG pipelines and context windows
+- **Tool Orchestration** — Permission-aware tool execution
+- **Streaming Architecture** — Real-time response handling
+- **Guardrails & Safety** — Built-in protective policies
+
+```typescript
+import { AgentOS } from '@framers/agentos';
+
+const agent = new AgentOS();
+await agent.initialize(config);
+
+for await (const chunk of agent.processRequest(input)) {
+  // Handle streaming responses
+}
+```
+
+[Explore AgentOS Documentation →](https://agentos.sh/docs)
+
+### 📚 [OpenStrand (openstrand.ai)](https://openstrand.ai)
+**Collaborative Knowledge Architecture**
+
+OpenStrand revolutionizes how teams organize and connect information. Built on the Zettelkasten method with modern collaborative features:
+
+- **Recursive Strands** — Infinitely nestable knowledge structures
+- **Collaborative Slip-Box** — Team-based knowledge management
+- **AI-Enhanced Discovery** — Automatic linking and insights
+- **Offline-First** — Works everywhere, syncs when connected
+- **Version Control** — Git-like branching for knowledge
+
+[Discover OpenStrand →](https://openstrand.ai)
+
+## Technical Architecture
+
+### Unified TypeScript Stack
+
+All Frame.dev projects share a consistent, modern architecture:
+
+```
+frame.dev/
+├── apps/
+│   ├── agentos.sh/             # Next.js marketing site
+│   └── openstrand-app/         # React knowledge management UI
+├── packages/
+│   ├── @framers/agentos/       # Core orchestration runtime
+│   ├── @openstrand/sdk/        # Shared types & utilities
+│   └── @framers/tools/         # Common tool implementations
+└── backend/
+    ├── openstrand-teams/       # Fastify collaboration backend
+    └── shared/                 # Cross-cutting concerns
+```
+
+### Key Technologies
+
+- **Language**: TypeScript throughout (strict mode)
+- **Frontend**: Vue 3, React 18, Next.js 14
+- **Backend**: Express, Fastify, Prisma
+- **AI/ML**: OpenAI, Anthropic, local models
+- **Database**: PostgreSQL, PGlite (embedded)
+- **Infrastructure**: Docker, Kubernetes-ready
+
+## Open Source Philosophy
+
+### Why We Build in the Open
+
+1. **Transparency** — Users should understand how their AI tools work
+2. **Collaboration** — The best ideas come from diverse perspectives
+3. **Innovation** — Open ecosystems move faster than closed ones
+4. **Trust** — Auditable code builds confidence in AI systems
+
+### Contribution Model
+
+We follow a "Core + Community" model:
+
+- **Core Team** maintains architectural vision and quality standards
+- **Community** contributes features, fixes, and integrations
+- **Partners** like [Manic Agency](https://manic.agency) provide strategic development
+
+## Integration Examples
+
+### Using AgentOS in Your Project
+
+```typescript
+import { AgentOS, AgentOSConfig } from '@framers/agentos';
+import { OpenAIProvider } from '@framers/agentos/providers';
+
+const config: AgentOSConfig = {
+  providers: [new OpenAIProvider(apiKey)],
+  tools: ['code-writer', 'terminal', 'file-system'],
+  memoryStrategy: 'hierarchical',
+  streamingEnabled: true
+};
+
+const agent = new AgentOS();
+await agent.initialize(config);
+
+// Process natural language requests
+const response = await agent.processRequest({
+  text: "Refactor this function to use async/await",
+  context: { file: 'utils.js', selection: [10, 25] }
+});
+```
+
+### Building Custom Tools
+
+```typescript
+import { ITool, ToolResult } from '@framers/agentos';
+
+export class CustomAnalyzerTool implements ITool {
+  name = 'custom-analyzer';
+  description = 'Analyzes code patterns and suggests improvements';
+  
+  async execute(params: any): Promise<ToolResult> {
+    // Your tool logic here
+    return {
+      success: true,
+      data: analysisResults,
+      artifacts: [{
+        filename: 'analysis.md',
+        mimeType: 'text/markdown',
+        data: reportContent
+      }]
+    };
+  }
+}
+```
+
+## Performance & Scale
+
+### Benchmarks
+
+- **Response Time**: < 100ms for tool invocations
+- **Streaming Latency**: < 50ms per chunk
+- **Memory Efficiency**: 50MB base, scales with context
+- **Concurrent Sessions**: 1000+ per instance
+
+### Production Ready
+
+- **Error Recovery**: Automatic retry with exponential backoff
+- **Rate Limiting**: Built-in protection against abuse
+- **Observability**: OpenTelemetry instrumentation
+- **Security**: OWASP-compliant, regular audits
+
+## Roadmap & Vision
+
+### Q4 2025
+- [ ] AgentOS plugin marketplace
+- [ ] OpenStrand team collaboration features
+- [ ] Frame IDE preview release
+
+### 2026 Vision
+- **Ambient Development** — Code that understands and evolves with you
+- **AI Pair Programming** — True collaborative AI that learns your style
+- **Knowledge-Driven Architecture** — Systems that document themselves
+- **Voice-First Everything** — Natural language as the primary interface
+
+## Get Started
+
+### For Developers
+
+```bash
+# Install AgentOS
+npm install @framers/agentos
+
+# Try OpenStrand locally
+npx create-openstrand-app my-knowledge-base
+```
+
+### For Teams
+
+- **AgentOS Enterprise** — [Contact sales](mailto:enterprise@frame.dev)
+- **OpenStrand Teams** — [Request early access](https://openstrand.ai/teams)
+
+## Community & Support
+
+### Join the Movement
+
+- **GitHub**: [github.com/framersai](https://github.com/framersai)
+- **Discord**: [frame.dev/discord](https://frame.dev/discord)
+- **Twitter**: [@framersai](https://twitter.com/framersai)
+- **Blog**: [Read our journey](/blog/thinkpieces/building-frame-dev)
+
+### Resources
+
+- [AgentOS Documentation](https://agentos.sh/docs)
+- [OpenStrand Tutorials](https://openstrand.ai/learn)
+- [API Reference](https://frame.dev/api)
+
+## Built by Framers AI × Manic Agency
+
+Frame.dev is developed by [Framers AI](https://github.com/framersai) in collaboration with [Manic Agency](https://manic.agency). Together, we're pushing the boundaries of what's possible when AI meets software development.
+
+### Why This Matters
+
+We believe the future of software development isn't about replacing developers—it's about amplifying their capabilities. Frame.dev provides the tools to think faster, build smarter, and create experiences that weren't possible before.
+
+---
+
+*Ready to revolutionize how you build? [Get started with Frame.dev →](https://frame.dev)*
+2:["$","$L1e",null,{"category":"ai","projects":[{"slug":"voice-chat-assistant","title":"Voice Chat Assistant — Talk to Code, Ship Faster","description":"Voice-first AI coding assistant that understands context, writes production code, and manages your entire development workflow through natural conversation. Powered by AgentOS.","date":"2025-11-10","category":"ai","content":"$1f","longDescription":"$undefined","tags":["ai","voice","coding-assistant","agentos","developer-tools","productivity","llm","open-source"],"modifiedDate":"2025-11-10T20:32:43-08:00","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/voice-chat-assistant/hearing.svg","images":["/assets/projects/voice-chat-assistant/logo.svg","/assets/projects/framers/agentos-logo.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://vca.chat","github":"https://github.com/framersai/voice-chat-assistant","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Response Time","value":"< 100ms"},{"label":"Languages Supported","value":"50+"},{"label":"Active Sessions/Day","value":"10k+"},{"label":"Powered By","value":"AgentOS"}],"team":[{"name":"Frame.dev / Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Design & Strategy","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[{"quote":"VCA changed how I think about coding. I describe what I want, and it just happens. It's like having a senior developer who never gets tired.","author":"Sarah Chen","role":"Full Stack Developer"},{"quote":"The context awareness is unreal. It remembers our entire conversation and understands my codebase better than I do sometimes.","author":"Marcus Rodriguez","role":"Tech Lead at Scale-up"}]},{"slug":"frame","title":"Frame.dev — AI Development Framework","description":"Open-source AI orchestration runtime powering AgentOS and OpenStrand. Built by Framers AI for the next generation of AI-powered development tools.","date":"2025-11-09","category":"ai","content":"$20","longDescription":"$undefined","tags":["ai","oss","agentos","openstrand","orchestration","developer-tools"],"modifiedDate":"2025-11-10T20:32:43-08:00","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/framers/frame-logo-transparent.png","images":["/assets/projects/framers/frame-logo-no-subtitle.svg","/assets/projects/framers/agentos-logo.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://frame.dev","github":"https://github.com/framersai","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Projects Powered","value":"2"},{"label":"Runtime Package","value":"@framers/agentos"},{"label":"Architecture","value":"TypeScript + Monorepo"},{"label":"License","value":"Apache-2.0"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]}]}]
 1d:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#FBF6EF"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#22182B"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"Projects: ai | Manic Agency - Metaverses Intersection"}],["$","meta","5",{"name":"description","content":"View projects in the ai category."}],["$","link","6",{"rel":"author","href":"https://manic.agency"}],["$","meta","7",{"name":"author","content":"Manic Inc"}],["$","meta","8",{"name":"keywords","content":"Manic,Agency,Manic Agency,Manic.agency,Web Development,Design,AR,VR,AI,Web3,Digital Agency,Los Angeles,Lagos,Creative Technology,SynthStack,Manic Inc,Game Publishing,Manic Games,Text Games,Game Development,Publishing Platform"}],["$","meta","9",{"name":"creator","content":"Manic Inc"}],["$","meta","10",{"name":"publisher","content":"Manic Inc"}],["$","meta","11",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","12",{"property":"og:title","content":"Manic Agency - Metaverses Intersection"}],["$","meta","13",{"property":"og:description","content":"Manic Agency - Where Metaverses Intersect. Manic.agency specializes in Web3, AI, AR/VR, creative technology, and game publishing through Manic Games platform. Based internationally in LA and Lagos."}],["$","meta","14",{"property":"og:url","content":"https://manic.agency"}],["$","meta","15",{"property":"og:site_name","content":"Manic Agency"}],["$","meta","16",{"property":"og:locale","content":"en_US"}],["$","meta","17",{"property":"og:image","content":"https://manic.agency/og-default.webp"}],["$","meta","18",{"property":"og:image:width","content":"1200"}],["$","meta","19",{"property":"og:image:height","content":"630"}],["$","meta","20",{"property":"og:image:alt","content":"Manic Agency - Metaverses Intersection - Manic Agency"}],["$","meta","21",{"property":"og:type","content":"website"}],["$","meta","22",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","23",{"name":"twitter:site","content":"@manicagency"}],["$","meta","24",{"name":"twitter:creator","content":"@manicagency"}],["$","meta","25",{"name":"twitter:title","content":"Manic Agency - Metaverses Intersection"}],["$","meta","26",{"name":"twitter:description","content":"Manic Agency - Where Metaverses Intersect. Manic.agency specializes in Web3, AI, AR/VR, creative technology, and game publishing through Manic Games platform. Based internationally in LA and Lagos."}],["$","meta","27",{"name":"twitter:image","content":"https://manic.agency/og-default.webp"}],["$","link","28",{"rel":"shortcut icon","href":"/favicon-16x16.png"}],["$","link","29",{"rel":"icon","href":"/favicon.ico"}],["$","link","30",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","meta","31",{"name":"next-size-adjust"}]]
 1:null

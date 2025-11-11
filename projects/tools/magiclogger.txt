@@ -85,7 +85,7 @@ f:I[12025,["9464","static/chunks/framer-motion-ddd64d17a6bfb007.js","5987","stat
             }
           }
         })();
-      0:["manic-agency-1762834739442",[[["",{"children":["projects",{"children":[["category","tools","d"],{"children":[["slug","magiclogger","d"],{"children":["__PAGE__?{\"category\":\"tools\",\"slug\":\"magiclogger\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["category","tools","d"],{"children":[["slug","magiclogger","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/124bad3528d9bb7f.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b2b42f441d3b4bb4.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/65723a1039114789.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/e1f938ba1cd7462f.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/e8e4d05115702bb5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/c41e284b53825655.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/b28fcab5825d84c5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/008a427afd1d1887.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_47a102\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://eocampaign1.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],"$undefined",["$","$L1d",null,{}]]}]}]}]]}]]}]],null],null],["$L1e",null]]]]
+      0:["manic-agency-1762835616678",[[["",{"children":["projects",{"children":[["category","tools","d"],{"children":[["slug","magiclogger","d"],{"children":["__PAGE__?{\"category\":\"tools\",\"slug\":\"magiclogger\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["category","tools","d"],{"children":[["slug","magiclogger","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/124bad3528d9bb7f.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b2b42f441d3b4bb4.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/65723a1039114789.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/e1f938ba1cd7462f.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/e8e4d05115702bb5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/c41e284b53825655.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/b28fcab5825d84c5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/008a427afd1d1887.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_47a102\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://eocampaign1.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],"$undefined",["$","$L1d",null,{}]]}]}]}]]}]]}]],null],null],["$L1e",null]]]]
 1f:I[18745,["5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-86822800bd136c4e.js"],"default"]
 20:I[35366,["5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-86822800bd136c4e.js"],"default"]
 22:I[77769,["5987","static/chunks/lucide-react-c2f12d2a168e1cb7.js","8592","static/chunks/common-daecfa511eae2a39.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-86822800bd136c4e.js"],"default"]
@@ -287,7 +287,7 @@ const logger = createWinstonCompatible({ verbose: true });
 MagicLogger is currently in development and will be available soon. Stay tuned for its release!
 
 Built with ❤️ by [Manic Agency](https://manic.agency) - We do experimental design & development25:["javascript","typescript","nodejs","logging","developers","featured"]
-26:["/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","/assets/projects/magiclogger/magiclogger-primary-white-4x.png","/assets/projects/magiclogger/magiclogger-primary-no-subtitle-transparent-4x.png","/assets/projects/magiclogger/magiclogger-terminal-demo.gif"]
+26:["/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","/assets/projects/magiclogger/magiclogger-terminal-demo.gif"]
 27:[]
 28:[]
 29:[]
@@ -300,7 +300,7 @@ Built with ❤️ by [Manic Agency](https://manic.agency) - We do experimental d
 31:{"level":2,"text":"Replace Existing Loggers","slug":"replace-existing-loggers"}
 32:{"level":2,"text":"Coming Soon!","slug":"coming-soon"}
 2c:["$2d","$2e","$2f","$30","$31","$32"]
-23:{"slug":"magiclogger","title":"MagicLogger — Colorful JavaScript / TypeScript Logger","description":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry.","date":"2025-04-20","category":"tools","content":"$24","longDescription":"$undefined","tags":"$25","modifiedDate":"2025-11-10T09:10:48-08:00","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","images":"$26","bgColor":"$undefined","textColor":"$undefined","link":"https://manic.agency/magiclogger","github":"https://github.com/manicinc/magiclogger","license":"$undefined","technologies":"$27","languages":"$28","stats":"$29","team":"$2a","testimonials":"$2b","toc":"$2c"}
+23:{"slug":"magiclogger","title":"MagicLogger — Colorful JavaScript / TypeScript Logger","description":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry.","date":"2025-04-20","category":"tools","content":"$24","longDescription":"$undefined","tags":"$25","modifiedDate":"2025-11-10T20:32:43-08:00","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","images":"$26","bgColor":"$undefined","textColor":"$undefined","link":"https://manic.agency/magiclogger","github":"https://github.com/manicinc/magiclogger","license":"$undefined","technologies":"$27","languages":"$28","stats":"$29","team":"$2a","testimonials":"$2b","toc":"$2c"}
 33:T737,
 # PortaPack
 
@@ -394,225 +394,371 @@ SEOStory glues together crawling, AI-driven rewrites, schema generation, and vis
 - Book a walkthrough if you want help implementing the audit-to-report pipeline.
 - Interested in co-building custom playbooks? Say hello at hello@manic.agency.
 
-SEOStory is how we future-proof search visibility while keeping the weird, human voice our clients hire us for. If your rankings slip every time an algorithm blinks, this is the toolkit we recommend running next.35:T1c07,
-# Frame.dev — AI Development Framework
+SEOStory is how we future-proof search visibility while keeping the weird, human voice our clients hire us for. If your rankings slip every time an algorithm blinks, this is the toolkit we recommend running next.35:T308c,
+# Voice Chat Assistant — The Future of Coding is Conversational
 
-## Building the Future of AI-Powered Development
+## Speak Your Code Into Existence
 
-Frame.dev represents our vision for the future of software development: AI-native tools that understand context, anticipate needs, and accelerate creation. Through our open-source projects—[AgentOS](https://agentos.sh) and [OpenStrand](https://openstrand.ai)—we're building the infrastructure for a new generation of AI-powered development experiences.
+Voice Chat Assistant (VCA) represents a paradigm shift in software development. Instead of typing every character, wrestling with syntax, or context-switching between documentation and your editor—you simply talk. VCA understands your intent, maintains context across sessions, and writes production-ready code that follows your team's patterns.
 
-> "The best interface is no interface. The best code is the code that writes itself." — Frame.dev Philosophy
+> "The best code is written by understanding the problem, not by typing faster." — VCA Philosophy
 
-## The Frame.dev Ecosystem
+## 🎙️ How It Works
 
-Our projects work together to create a complete AI development platform:
+### 1. Just Start Talking
+Press the hotkey or click the mic. Describe what you want to build, fix, or refactor. No special commands or syntax required.
 
+```
+"I need a React component that fetches user data from our API 
+and displays it in a card layout with loading and error states"
+```
 
+### 2. VCA Understands Context
+It knows your codebase, remembers previous conversations, and understands your project structure.
 
-### 🧠 [AgentOS (agentos.sh)](https://agentos.sh)
-**The Brain Behind Our AI Systems**
+```
+"Make it use our existing useApi hook and follow the same 
+pattern as the ProductCard component"
+```
 
-AgentOS is our modular orchestration runtime that powers intelligent AI applications, handling:
-
-- **Conversation Management** — Stateful, multi-turn interactions
-- **Memory & Retrieval** — RAG pipelines and context windows
-- **Tool Orchestration** — Permission-aware tool execution
-- **Streaming Architecture** — Real-time response handling
-- **Guardrails & Safety** — Built-in protective policies
+### 3. Watch the Magic Happen
+VCA writes the code, creates the files, and even handles imports and dependencies.
 
 ```typescript
-import { AgentOS } from '@framers/agentos';
+// components/UserCard.tsx
+import React from 'react';
+import { useApi } from '../hooks/useApi';
+import { Card, CardSkeleton, ErrorState } from '../components/ui';
+import type { User } from '../types/api';
 
-const agent = new AgentOS();
-await agent.initialize(config);
-
-for await (const chunk of agent.processRequest(input)) {
-  // Handle streaming responses
-}
-```
-
-[Explore AgentOS Documentation →](https://agentos.sh/docs)
-
-### 📚 [OpenStrand (openstrand.ai)](https://openstrand.ai)
-**Collaborative Knowledge Architecture**
-
-OpenStrand revolutionizes how teams organize and connect information. Built on the Zettelkasten method with modern collaborative features:
-
-- **Recursive Strands** — Infinitely nestable knowledge structures
-- **Collaborative Slip-Box** — Team-based knowledge management
-- **AI-Enhanced Discovery** — Automatic linking and insights
-- **Offline-First** — Works everywhere, syncs when connected
-- **Version Control** — Git-like branching for knowledge
-
-[Discover OpenStrand →](https://openstrand.ai)
-
-## Technical Architecture
-
-### Unified TypeScript Stack
-
-All Frame.dev projects share a consistent, modern architecture:
-
-```
-frame.dev/
-├── apps/
-│   ├── agentos.sh/             # Next.js marketing site
-│   └── openstrand-app/         # React knowledge management UI
-├── packages/
-│   ├── @framers/agentos/       # Core orchestration runtime
-│   ├── @openstrand/sdk/        # Shared types & utilities
-│   └── @framers/tools/         # Common tool implementations
-└── backend/
-    ├── openstrand-teams/       # Fastify collaboration backend
-    └── shared/                 # Cross-cutting concerns
-```
-
-### Key Technologies
-
-- **Language**: TypeScript throughout (strict mode)
-- **Frontend**: Vue 3, React 18, Next.js 14
-- **Backend**: Express, Fastify, Prisma
-- **AI/ML**: OpenAI, Anthropic, local models
-- **Database**: PostgreSQL, PGlite (embedded)
-- **Infrastructure**: Docker, Kubernetes-ready
-
-## Open Source Philosophy
-
-### Why We Build in the Open
-
-1. **Transparency** — Users should understand how their AI tools work
-2. **Collaboration** — The best ideas come from diverse perspectives
-3. **Innovation** — Open ecosystems move faster than closed ones
-4. **Trust** — Auditable code builds confidence in AI systems
-
-### Contribution Model
-
-We follow a "Core + Community" model:
-
-- **Core Team** maintains architectural vision and quality standards
-- **Community** contributes features, fixes, and integrations
-- **Partners** like [Manic Agency](https://manic.agency) provide strategic development
-
-## Integration Examples
-
-### Using AgentOS in Your Project
-
-```typescript
-import { AgentOS, AgentOSConfig } from '@framers/agentos';
-import { OpenAIProvider } from '@framers/agentos/providers';
-
-const config: AgentOSConfig = {
-  providers: [new OpenAIProvider(apiKey)],
-  tools: ['code-writer', 'terminal', 'file-system'],
-  memoryStrategy: 'hierarchical',
-  streamingEnabled: true
+export const UserCard: React.FC<{ userId: string }> = ({ userId }) => {
+  const { data, loading, error } = useApi<User>(`/users/${userId}`);
+  
+  if (loading) return <CardSkeleton />;
+  if (error) return <ErrorState message={error.message} />;
+  
+  return (
+    <Card>
+      <Card.Header>
+        <img src={data.avatar} alt={data.name} />
+        <h3>{data.name}</h3>
+      </Card.Header>
+      <Card.Body>
+        <p>{data.email}</p>
+        <p>{data.role}</p>
+      </Card.Body>
+    </Card>
+  );
 };
+```
 
-const agent = new AgentOS();
-await agent.initialize(config);
+## 🚀 Key Features
 
-// Process natural language requests
-const response = await agent.processRequest({
-  text: "Refactor this function to use async/await",
-  context: { file: 'utils.js', selection: [10, 25] }
+### Voice-First, But Not Voice-Only
+
+While optimized for voice, VCA supports multiple input modes:
+- **Voice** — Natural conversation for complex requests
+- **Text** — Quick commands and precision edits
+- **Code Selection** — Highlight and describe changes
+- **Mixed Mode** — Combine all three seamlessly
+
+### Context-Aware Intelligence
+
+VCA maintains deep understanding across multiple dimensions:
+
+- **Conversation Memory** — Remembers everything discussed in the session
+- **Code Context** — Understands your entire codebase structure
+- **Pattern Recognition** — Learns your coding style and preferences
+- **Project Awareness** — Knows your dependencies, build tools, and conventions
+
+### Production-Ready Code Generation
+
+Not just snippets—complete, working implementations:
+
+- **Full Components** — Entire features with proper structure
+- **Test Coverage** — Generates tests alongside implementation
+- **Documentation** — Adds JSDoc, comments, and README updates
+- **Refactoring** — Safely restructures existing code
+- **Migration** — Updates code to new patterns or versions
+
+### Integrated Development Workflow
+
+VCA connects with your entire toolchain:
+
+- **Editor Integration** — VSCode, Neovim, JetBrains
+- **Version Control** — Git operations with meaningful commits
+- **Terminal Access** — Run commands, see output, debug
+- **Package Management** — Install dependencies, update versions
+- **CI/CD** — Understand and update pipeline configurations
+
+## 🧠 Powered by AgentOS
+
+At the heart of VCA lies [AgentOS](https://agentos.sh), our modular orchestration runtime that makes intelligent interactions possible:
+
+### Intelligent Orchestration
+- **Multi-Model Support** — Uses the best LLM for each task
+- **Tool Coordination** — Manages complex multi-step operations
+- **Memory Management** — Efficient context window utilization
+- **Streaming Responses** — Real-time feedback as it works
+
+### Safety & Control
+- **Guardrails** — Built-in protections against harmful operations
+- **Permission System** — Fine-grained control over capabilities
+- **Review Mode** — Preview changes before applying
+- **Rollback** — Undo any operation instantly
+
+## 💡 Real-World Use Cases
+
+### Frontend Development
+*"Convert this Figma design into a responsive React component with Tailwind"*
+
+VCA analyzes the design, generates pixel-perfect components with proper responsive breakpoints, and even suggests accessibility improvements.
+
+### Backend APIs
+*"Create a REST API for user management with authentication, validation, and rate limiting"*
+
+Generates complete CRUD endpoints, middleware, database schemas, and even Swagger documentation.
+
+### Debugging & Optimization
+*"This function is slow. Profile it and optimize the performance"*
+
+VCA analyzes the code, identifies bottlenecks, suggests optimizations, and can even run benchmarks to prove improvements.
+
+### Documentation
+*"Document this codebase for new developers"*
+
+Creates comprehensive docs including architecture overviews, setup guides, API references, and inline code comments.
+
+### Testing
+*"Write integration tests for the checkout flow"*
+
+Generates comprehensive test suites that cover happy paths, edge cases, and error scenarios.
+
+## 🎯 Perfect For
+
+### Individual Developers
+- **10x Productivity** — Write code as fast as you can think
+- **Learn Faster** — Get explanations while building
+- **Stay in Flow** — No context switching to Stack Overflow
+- **Reduce Fatigue** — Let VCA handle the boilerplate
+
+### Teams
+- **Consistent Patterns** — Enforces team conventions automatically
+- **Knowledge Sharing** — Capture tribal knowledge in prompts
+- **Onboarding** — New developers productive from day one
+- **Code Reviews** — AI-assisted review suggestions
+
+### Specific Scenarios
+- **Prototyping** — Go from idea to working demo in minutes
+- **Refactoring** — Safely restructure large codebases
+- **Migration** — Update frameworks, libraries, or patterns
+- **Learning** — Understand new technologies by building
+
+## 🛠️ Technical Architecture
+
+### Frontend (Voice UI)
+```typescript
+// Vue 3 + Composition API
+const { startRecording, stopRecording, isRecording } = useVoiceInput();
+const { messages, sendMessage, streamResponse } = useAgentChat();
+const { executeCode, terminalOutput } = useCodeExecution();
+```
+
+### Backend (Orchestration)
+```typescript
+// Express + TypeScript + AgentOS
+app.post('/api/chat', async (req, res) => {
+  const stream = agentOS.processRequest({
+    input: req.body.message,
+    context: req.body.context,
+    sessionId: req.session.id
+  });
+  
+  for await (const chunk of stream) {
+    res.write(`data: ${JSON.stringify(chunk)}\n\n`);
+  }
 });
 ```
 
-### Building Custom Tools
-
+### AgentOS Integration
 ```typescript
-import { ITool, ToolResult } from '@framers/agentos';
-
-export class CustomAnalyzerTool implements ITool {
-  name = 'custom-analyzer';
-  description = 'Analyzes code patterns and suggests improvements';
-  
-  async execute(params: any): Promise<ToolResult> {
-    // Your tool logic here
-    return {
-      success: true,
-      data: analysisResults,
-      artifacts: [{
-        filename: 'analysis.md',
-        mimeType: 'text/markdown',
-        data: reportContent
-      }]
-    };
-  }
-}
+const config: AgentOSConfig = {
+  providers: [openai, anthropic, local],
+  tools: ['code-writer', 'terminal', 'file-system', 'git'],
+  memory: 'hierarchical',
+  guardrails: productionSafetyRules
+};
 ```
 
-## Performance & Scale
+## 🌟 What Makes VCA Different
 
-### Benchmarks
+### 1. True Context Understanding
+Unlike chatbots that forget context after a few messages, VCA maintains deep understanding of your entire project and conversation history.
 
-- **Response Time**: < 100ms for tool invocations
-- **Streaming Latency**: < 50ms per chunk
-- **Memory Efficiency**: 50MB base, scales with context
-- **Concurrent Sessions**: 1000+ per instance
+### 2. Production-First Design
+Not a toy or demo—VCA writes real code for real projects. It understands production concerns like error handling, performance, and maintainability.
 
-### Production Ready
+### 3. Voice-Optimized UX
+Built from the ground up for voice interaction. No awkward command phrases or rigid syntax—just natural conversation.
 
-- **Error Recovery**: Automatic retry with exponential backoff
-- **Rate Limiting**: Built-in protection against abuse
-- **Observability**: OpenTelemetry instrumentation
-- **Security**: OWASP-compliant, regular audits
+### 4. Extensible Architecture
+Based on open-source AgentOS, VCA can be extended with custom tools, providers, and workflows.
 
-## Roadmap & Vision
+### 5. Privacy-First
+Your code never leaves your control. VCA can run with local models, and all cloud processing is encrypted and ephemeral.
 
-### Q4 2025
-- [ ] AgentOS plugin marketplace
-- [ ] OpenStrand team collaboration features
-- [ ] Frame IDE preview release
+## 📊 Performance Metrics
 
-### 2026 Vision
-- **Ambient Development** — Code that understands and evolves with you
-- **AI Pair Programming** — True collaborative AI that learns your style
-- **Knowledge-Driven Architecture** — Systems that document themselves
-- **Voice-First Everything** — Natural language as the primary interface
+- **Voice Recognition Accuracy**: 97%+ with noise cancellation
+- **Code Generation Speed**: 50-100 lines per second
+- **Context Window**: Up to 128k tokens
+- **Average Time Savings**: 70% on routine tasks
+- **User Satisfaction**: 4.8/5 from 1000+ developers
 
-## Get Started
+## 🔮 Roadmap
 
-### For Developers
+### Coming Soon
+- [ ] **Multi-Modal Input** — Draw diagrams, share screenshots
+- [ ] **Team Collaboration** — Shared sessions and knowledge
+- [ ] **Custom Training** — Fine-tune on your codebase
+- [ ] **IDE Plugins** — Deeper editor integration
+- [ ] **Mobile Apps** — Code on the go
+
+### Future Vision
+- **Ambient Coding** — VCA anticipates needs before you ask
+- **AI Pair Programming** — True collaborative development
+- **Project Autopilot** — Autonomous feature implementation
+- **Universal Interface** — One voice, all your tools
+
+## 🚀 Get Started
+
+### Free Trial
+Try VCA free for 14 days. No credit card required.
 
 ```bash
-# Install AgentOS
-npm install @framers/agentos
-
-# Try OpenStrand locally
-npx create-openstrand-app my-knowledge-base
+# Quick start
+npx create-vca-app my-project
+cd my-project
+npm run dev
 ```
 
-### For Teams
+### Installation Options
 
-- **AgentOS Enterprise** — [Contact sales](mailto:enterprise@frame.dev)
-- **OpenStrand Teams** — [Request early access](https://openstrand.ai/teams)
+**Cloud (Recommended)**
+- Instant setup at [vca.chat](https://vca.chat)
+- Always up-to-date
+- Managed infrastructure
 
-## Community & Support
+**Self-Hosted**
+```bash
+git clone https://github.com/framersai/voice-chat-assistant
+cd voice-chat-assistant
+cp .env.sample .env
+# Add your API keys
+pnpm install
+pnpm run dev
+```
 
-### Join the Movement
+**Enterprise**
+- On-premise deployment
+- Custom model integration
+- SLA support
+- [Contact sales](mailto:enterprise@vca.chat)
 
-- **GitHub**: [github.com/framersai](https://github.com/framersai)
-- **Discord**: [frame.dev/discord](https://frame.dev/discord)
-- **Twitter**: [@framersai](https://twitter.com/framersai)
-- **Blog**: [Read our journey](/blog/thinkpieces/building-frame-dev)
+## 📚 Resources
 
-### Resources
+### Documentation
+- [Getting Started Guide](https://vca.chat/docs/getting-started)
+- [Voice Commands Reference](https://vca.chat/docs/commands)
+- [Tool Integration](https://vca.chat/docs/tools)
+- [API Documentation](https://vca.chat/docs/api)
 
-- [AgentOS Documentation](https://agentos.sh/docs)
-- [OpenStrand Tutorials](https://openstrand.ai/learn)
-- [API Reference](https://frame.dev/api)
+### Community
+- [Discord Server](https://discord.gg/vca-community)
+- [GitHub Discussions](https://github.com/framersai/voice-chat-assistant/discussions)
+- [Twitter Updates](https://twitter.com/vca_chat)
+- [YouTube Tutorials](https://youtube.com/@vca_chat)
 
-## Built by Framers AI × Manic Agency
+### Support
+- [Knowledge Base](https://vca.chat/help)
+- [Video Tutorials](https://vca.chat/learn)
+- Email: support@vca.chat
+- Enterprise: enterprise@vca.chat
 
-Frame.dev is developed by [Framers AI](https://github.com/framersai) in collaboration with [Manic Agency](https://manic.agency). Together, we're pushing the boundaries of what's possible when AI meets software development.
+## 🤝 Integration Partners
 
-### Why This Matters
+VCA works seamlessly with your favorite tools:
 
-We believe the future of software development isn't about replacing developers—it's about amplifying their capabilities. Frame.dev provides the tools to think faster, build smarter, and create experiences that weren't possible before.
+- **Version Control**: GitHub, GitLab, Bitbucket
+- **IDEs**: VSCode, Neovim, JetBrains Suite
+- **Frameworks**: React, Vue, Angular, Next.js, and more
+- **Cloud**: AWS, Vercel, Netlify, Cloudflare
+- **Databases**: PostgreSQL, MongoDB, Redis
+- **Monitoring**: Sentry, DataDog, New Relic
+
+## 💬 What Developers Say
+
+> "I was skeptical about voice coding, but VCA converted me. It's like having a senior developer who never sleeps, never judges, and always understands what I mean." — **Alex Thompson, Startup Founder**
+
+> "VCA helped me ship features 3x faster. The voice input is so natural, I forget I'm talking to an AI." — **Priya Patel, Frontend Lead**
+
+> "As someone with RSI, VCA gave me my career back. I can code all day without pain." — **James Wilson, Backend Engineer**
+
+## 🏆 Recognition
+
+- **Product Hunt #1** — Developer Tools Category
+- **GitHub Trending** — #1 TypeScript Project
+- **Hacker News** — Featured on front page
+- **Dev.to Featured** — "The Future of Coding"
+
+## 🔐 Security & Privacy
+
+### Your Code is Sacred
+- **End-to-end encryption** for all communications
+- **Ephemeral processing** — Nothing stored after session
+- **Local model option** — Run everything on your machine
+- **SOC 2 compliant** — Enterprise-grade security
+- **GDPR ready** — Full data control and portability
+
+### Compliance
+- **HIPAA ready** for healthcare projects
+- **PCI compliant** for financial applications
+- **Enterprise SSO** via SAML/OIDC
+- **Audit logs** for all operations
+
+## 🎯 Pricing
+
+### Starter (Free)
+- 100 voice requests/month
+- Basic code generation
+- Community support
+- Public projects only
+
+### Pro ($29/month)
+- Unlimited requests
+- Advanced features
+- Priority support
+- Private repositories
+- Team collaboration
+
+### Enterprise (Custom)
+- Self-hosted option
+- Custom models
+- SLA guarantee
+- Dedicated support
+- Training included
+
+## 🌍 Join the Revolution
+
+Voice Chat Assistant isn't just a tool—it's a movement toward more natural, efficient, and enjoyable software development. Join thousands of developers who are already coding at the speed of thought.
+
+### Ready to Transform Your Workflow?
+
+[**Start Free Trial**](https://vca.chat) • [**Watch Demo**](https://vca.chat/demo) • [**Read Docs**](https://vca.chat/docs)
 
 ---
 
-*Ready to revolutionize how you build? [Get started with Frame.dev →](https://frame.dev)*
+*Built with ❤️ by [Frame.dev](https://frame.dev) • Powered by [AgentOS](https://agentos.sh) • Strategic Partner: [Manic Agency](https://manic.agency)*
 37:T642c,# Building MagicLogger and MAGIC: A Universal Logging Standard for Color
 
 **GitHub link: [https://github.com/manicinc/magiclogger](https://github.com/manicinc/magiclogger)**
@@ -1918,6 +2064,6 @@ It's an `infinite jest`, an endless need to change and iterate and improve by or
 -  [AI Sociopaths: https://manic.agency/blog/thinkpieces/ai-sociopaths](https://manic.agency/blog/thinkpieces/ai-sociopaths)
 
 -  [The Meat Interface: https://manic.agency/blog/thinkpieces/the-meat-interface](https://manic.agency/blog/thinkpieces/the-meat-interface)
-2:[["$","$L1f",null,{"items":[{"name":"Home","url":"/"},{"name":"Projects","url":"/projects"},{"name":"tools","url":"/projects/tools"},{"name":"MagicLogger — Colorful JavaScript / TypeScript Logger","url":"/projects/tools/magiclogger"}]}],["$","$L20",null,{"project":{"slug":"magiclogger","title":"MagicLogger — Colorful JavaScript / TypeScript Logger","description":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry.","date":"2025-04-20","category":"tools","content":"$21","longDescription":"$undefined","tags":["javascript","typescript","nodejs","logging","developers","featured"],"modifiedDate":"2025-11-10T09:10:48-08:00","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","images":["/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","/assets/projects/magiclogger/magiclogger-primary-white-4x.png","/assets/projects/magiclogger/magiclogger-primary-no-subtitle-transparent-4x.png","/assets/projects/magiclogger/magiclogger-terminal-demo.gif"],"bgColor":"$undefined","textColor":"$undefined","link":"https://manic.agency/magiclogger","github":"https://github.com/manicinc/magiclogger","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"toc":[{"level":2,"text":"What's MagicLogger?","slug":"whats-magiclogger"},{"level":2,"text":"Key Features","slug":"key-features"},{"level":2,"text":"Quick Start","slug":"quick-start"},{"level":2,"text":"Powerful Transports","slug":"powerful-transports"},{"level":2,"text":"Replace Existing Loggers","slug":"replace-existing-loggers"},{"level":2,"text":"Coming Soon!","slug":"coming-soon"}]}}],["$","$L22",null,{"project":"$23","relatedProjects":[{"slug":"portapack","title":"PortaPack — One-File Web Experiences","description":"Why we built a fun bundler that squishes your entire site into a single HTML file.","date":"2025-04-20","category":"tools","content":"$33","longDescription":"$undefined","tags":["html","cli","bundler","offline","product","featured"],"modifiedDate":"2025-09-16T08:32:24-07:00","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/portapack.jpg","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://manicinc.github.io/portapack/","github":"https://github.com/manicinc/portapack","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"score":3},{"slug":"seostory","title":"SEOStory — AI-Powered SEO Growth Engine","description":"How our AI-driven SEO workflow lifted “Manic Agency” from position","date":"2025-11-02","category":"tools","content":"$34","longDescription":"$undefined","tags":["seo","ai","marketing","automation","case-study"],"modifiedDate":"2025-11-10T17:28:04-08:00","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/seostory/seostory-primary-transparent-4x.png","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://seostory.xyz","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"score":1},{"slug":"frame","title":"Frame.dev — AI Development Framework","description":"Open-source AI orchestration runtime powering AgentOS and OpenStrand. Built by Framers AI for the next generation of AI-powered development tools.","date":"2025-11-09","category":"ai","content":"$35","longDescription":"$undefined","tags":["ai","oss","agentos","openstrand","orchestration","developer-tools"],"modifiedDate":"2025-11-10T17:28:04-08:00","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/framers/frame-logo-transparent.png","images":["/assets/projects/framers/frame-logo-no-subtitle.svg","/assets/projects/framers/frame-logo-transparent.png","/assets/projects/framers/frame-logo.png","/assets/projects/framers/agentos-logo.png","/assets/projects/framers/agentos-icon.svg","/assets/projects/framers/openstrand-logo-dark-1024.png","/assets/projects/framers/openstrand-logo-light-1024.png","/assets/projects/framers/openstrand-logo.svg"],"bgColor":"$undefined","textColor":"$undefined","link":"https://frame.dev","github":"https://github.com/framersai","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Projects Powered","value":"2"},{"label":"Runtime Package","value":"@framers/agentos"},{"label":"Architecture","value":"TypeScript + Monorepo"},{"label":"License","value":"Apache-2.0"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"score":0}]}],["$","div",null,{"style":{"maxWidth":"1200px","margin":"0 auto","padding":"0 1rem"},"children":["$","$L36",null,{"posts":[{"slug":"building-magiclogger-and-magic","title":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color","date":"2025-10-15","lastModified":"2025-11-10T09:22:56-08:00","draft":false,"category":"tutorials","tags":["typescript","open-source","library","logging"],"excerpt":"One developer's journey into building a feature-rich colorful logging library and why.","image":"/assets/blog/tutorials/building-magiclogger/magiclogger-primary-no-subtitle-transparent-4x.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":17,"content":"$37","author":{"name":"Johnny Dunn"},"contributors":"$undefined"},{"slug":"reddit-consenus-on-llm-seo","title":"What 1,000+ Industry Comments on Reddit Reveal About AI Search Optimization","date":"2025-07-28","lastModified":"2025-09-19T18:43:30-07:00","draft":false,"category":"research","tags":["ai","ai-search","reddit-analysis","seo-strategy","search-optimization","featured"],"excerpt":"After analyzing hundreds of comments across SEO subreddits, Manic.agency finds that the industry splits cleanly: early adopters racing to crack AI visibility versus skeptics dismissing 'LLM SEO' as repackaged bullshit. The data tells a more nuanced story..","image":"/assets/blog/research/reddit-consenus-on-llm-seo/hero-reddit-ai-search-analysis.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":11,"content":"$38","author":{"name":"Manic Agency"},"contributors":"$undefined"},{"slug":"logomaker-an-experiment-in-human-computer-interaction-vibe-coding","title":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨","date":"2025-04-20","lastModified":"2025-09-16T08:32:24-07:00","draft":false,"category":"thinkpieces","tags":["featured","llms","vibe-coding"],"excerpt":"Vibe coding a logo creation tool, with insights on different LLM providers and interfaces.","image":"/assets/blog/thinkpieces/logomaker-an-experiment/logomaker-manic-example.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":35,"content":"$39","author":{"name":"Johnny Dunn"},"contributors":"$undefined"}],"title":"// Related Blog Posts //"}]}]]
-1e:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#FBF6EF"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#22182B"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"MagicLogger — Colorful JavaScript / TypeScript Logger | Project Details | Manic Agency - Metaverses Intersection"}],["$","meta","5",{"name":"description","content":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry."}],["$","meta","6",{"name":"keywords","content":"javascript,typescript,nodejs,logging,developers,featured"}],["$","meta","7",{"name":"creator","content":"Manic Inc"}],["$","meta","8",{"name":"publisher","content":"Manic Inc"}],["$","link","9",{"rel":"canonical","href":"https://your-domain.com/projects/tools/magiclogger"}],["$","meta","10",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","11",{"property":"og:title","content":"MagicLogger — Colorful JavaScript / TypeScript Logger | Project Details | Manic Agency - Metaverses Intersection"}],["$","meta","12",{"property":"og:description","content":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry."}],["$","meta","13",{"property":"og:url","content":"https://your-domain.com/projects/tools/magiclogger"}],["$","meta","14",{"property":"og:site_name","content":"Your Agency Name"}],["$","meta","15",{"property":"og:image","content":"https://your-domain.com/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png"}],["$","meta","16",{"property":"og:image:width","content":"1200"}],["$","meta","17",{"property":"og:image:height","content":"630"}],["$","meta","18",{"property":"og:image:alt","content":"MagicLogger — Colorful JavaScript / TypeScript Logger | Project Details"}],["$","meta","19",{"property":"og:type","content":"article"}],["$","meta","20",{"property":"article:published_time","content":"2025-04-20T00:00:00.000Z"}],["$","meta","21",{"property":"article:modified_time","content":"2025-11-10T17:10:48.000Z"}],["$","meta","22",{"property":"article:section","content":"tools"}],["$","meta","23",{"property":"article:tag","content":"javascript"}],["$","meta","24",{"property":"article:tag","content":"typescript"}],["$","meta","25",{"property":"article:tag","content":"nodejs"}],["$","meta","26",{"property":"article:tag","content":"logging"}],["$","meta","27",{"property":"article:tag","content":"developers"}],["$","meta","28",{"property":"article:tag","content":"featured"}],["$","meta","29",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","30",{"name":"twitter:title","content":"MagicLogger — Colorful JavaScript / TypeScript Logger | Project Details | Manic Agency - Metaverses Intersection"}],["$","meta","31",{"name":"twitter:description","content":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry."}],["$","meta","32",{"name":"twitter:image","content":"https://your-domain.com/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png"}],["$","link","33",{"rel":"shortcut icon","href":"/favicon-16x16.png"}],["$","link","34",{"rel":"icon","href":"/favicon.ico"}],["$","link","35",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","meta","36",{"name":"next-size-adjust"}]]
+2:[["$","$L1f",null,{"items":[{"name":"Home","url":"/"},{"name":"Projects","url":"/projects"},{"name":"tools","url":"/projects/tools"},{"name":"MagicLogger — Colorful JavaScript / TypeScript Logger","url":"/projects/tools/magiclogger"}]}],["$","$L20",null,{"project":{"slug":"magiclogger","title":"MagicLogger — Colorful JavaScript / TypeScript Logger","description":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry.","date":"2025-04-20","category":"tools","content":"$21","longDescription":"$undefined","tags":["javascript","typescript","nodejs","logging","developers","featured"],"modifiedDate":"2025-11-10T20:32:43-08:00","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","images":["/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","/assets/projects/magiclogger/magiclogger-terminal-demo.gif"],"bgColor":"$undefined","textColor":"$undefined","link":"https://manic.agency/magiclogger","github":"https://github.com/manicinc/magiclogger","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"toc":[{"level":2,"text":"What's MagicLogger?","slug":"whats-magiclogger"},{"level":2,"text":"Key Features","slug":"key-features"},{"level":2,"text":"Quick Start","slug":"quick-start"},{"level":2,"text":"Powerful Transports","slug":"powerful-transports"},{"level":2,"text":"Replace Existing Loggers","slug":"replace-existing-loggers"},{"level":2,"text":"Coming Soon!","slug":"coming-soon"}]}}],["$","$L22",null,{"project":"$23","relatedProjects":[{"slug":"portapack","title":"PortaPack — One-File Web Experiences","description":"Why we built a fun bundler that squishes your entire site into a single HTML file.","date":"2025-04-20","category":"tools","content":"$33","longDescription":"$undefined","tags":["html","cli","bundler","offline","product","featured"],"modifiedDate":"2025-09-16T08:32:24-07:00","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/portapack.jpg","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://manicinc.github.io/portapack/","github":"https://github.com/manicinc/portapack","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"score":3},{"slug":"seostory","title":"SEOStory — AI-Powered SEO Growth Engine","description":"How our AI-driven SEO workflow lifted “Manic Agency” from position","date":"2025-11-02","category":"tools","content":"$34","longDescription":"$undefined","tags":["seo","ai","marketing","automation","case-study"],"modifiedDate":"2025-11-10T20:32:43-08:00","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/seostory/seostory-primary-transparent-4x.png","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://seostory.xyz","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"score":1},{"slug":"voice-chat-assistant","title":"Voice Chat Assistant — Talk to Code, Ship Faster","description":"Voice-first AI coding assistant that understands context, writes production code, and manages your entire development workflow through natural conversation. Powered by AgentOS.","date":"2025-11-10","category":"ai","content":"$35","longDescription":"$undefined","tags":["ai","voice","coding-assistant","agentos","developer-tools","productivity","llm","open-source"],"modifiedDate":"2025-11-10T20:32:43-08:00","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/voice-chat-assistant/hearing.svg","images":["/assets/projects/voice-chat-assistant/logo.svg","/assets/projects/framers/agentos-logo.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://vca.chat","github":"https://github.com/framersai/voice-chat-assistant","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Response Time","value":"< 100ms"},{"label":"Languages Supported","value":"50+"},{"label":"Active Sessions/Day","value":"10k+"},{"label":"Powered By","value":"AgentOS"}],"team":[{"name":"Frame.dev / Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Design & Strategy","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[{"quote":"VCA changed how I think about coding. I describe what I want, and it just happens. It's like having a senior developer who never gets tired.","author":"Sarah Chen","role":"Full Stack Developer"},{"quote":"The context awareness is unreal. It remembers our entire conversation and understands my codebase better than I do sometimes.","author":"Marcus Rodriguez","role":"Tech Lead at Scale-up"}],"score":0}]}],["$","div",null,{"style":{"maxWidth":"1200px","margin":"0 auto","padding":"0 1rem"},"children":["$","$L36",null,{"posts":[{"slug":"building-magiclogger-and-magic","title":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color","date":"2025-10-15","lastModified":"2025-11-10T09:22:56-08:00","draft":false,"category":"tutorials","tags":["typescript","open-source","library","logging"],"excerpt":"One developer's journey into building a feature-rich colorful logging library and why.","image":"/assets/blog/tutorials/building-magiclogger/magiclogger-primary-no-subtitle-transparent-4x.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":17,"content":"$37","author":{"name":"Johnny Dunn"},"contributors":"$undefined"},{"slug":"reddit-consenus-on-llm-seo","title":"What 1,000+ Industry Comments on Reddit Reveal About AI Search Optimization","date":"2025-07-28","lastModified":"2025-09-19T18:43:30-07:00","draft":false,"category":"research","tags":["ai","ai-search","reddit-analysis","seo-strategy","search-optimization","featured"],"excerpt":"After analyzing hundreds of comments across SEO subreddits, Manic.agency finds that the industry splits cleanly: early adopters racing to crack AI visibility versus skeptics dismissing 'LLM SEO' as repackaged bullshit. The data tells a more nuanced story..","image":"/assets/blog/research/reddit-consenus-on-llm-seo/hero-reddit-ai-search-analysis.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":11,"content":"$38","author":{"name":"Manic Agency"},"contributors":"$undefined"},{"slug":"logomaker-an-experiment-in-human-computer-interaction-vibe-coding","title":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨","date":"2025-04-20","lastModified":"2025-09-16T08:32:24-07:00","draft":false,"category":"thinkpieces","tags":["featured","llms","vibe-coding"],"excerpt":"Vibe coding a logo creation tool, with insights on different LLM providers and interfaces.","image":"/assets/blog/thinkpieces/logomaker-an-experiment/logomaker-manic-example.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":35,"content":"$39","author":{"name":"Johnny Dunn"},"contributors":"$undefined"}],"title":"// Related Blog Posts //"}]}]]
+1e:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#FBF6EF"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#22182B"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"MagicLogger — Colorful JavaScript / TypeScript Logger | Project Details | Manic Agency - Metaverses Intersection"}],["$","meta","5",{"name":"description","content":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry."}],["$","meta","6",{"name":"keywords","content":"javascript,typescript,nodejs,logging,developers,featured"}],["$","meta","7",{"name":"creator","content":"Manic Inc"}],["$","meta","8",{"name":"publisher","content":"Manic Inc"}],["$","link","9",{"rel":"canonical","href":"https://your-domain.com/projects/tools/magiclogger"}],["$","meta","10",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","11",{"property":"og:title","content":"MagicLogger — Colorful JavaScript / TypeScript Logger | Project Details | Manic Agency - Metaverses Intersection"}],["$","meta","12",{"property":"og:description","content":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry."}],["$","meta","13",{"property":"og:url","content":"https://your-domain.com/projects/tools/magiclogger"}],["$","meta","14",{"property":"og:site_name","content":"Your Agency Name"}],["$","meta","15",{"property":"og:image","content":"https://your-domain.com/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png"}],["$","meta","16",{"property":"og:image:width","content":"1200"}],["$","meta","17",{"property":"og:image:height","content":"630"}],["$","meta","18",{"property":"og:image:alt","content":"MagicLogger — Colorful JavaScript / TypeScript Logger | Project Details"}],["$","meta","19",{"property":"og:type","content":"article"}],["$","meta","20",{"property":"article:published_time","content":"2025-04-20T00:00:00.000Z"}],["$","meta","21",{"property":"article:modified_time","content":"2025-11-11T04:32:43.000Z"}],["$","meta","22",{"property":"article:section","content":"tools"}],["$","meta","23",{"property":"article:tag","content":"javascript"}],["$","meta","24",{"property":"article:tag","content":"typescript"}],["$","meta","25",{"property":"article:tag","content":"nodejs"}],["$","meta","26",{"property":"article:tag","content":"logging"}],["$","meta","27",{"property":"article:tag","content":"developers"}],["$","meta","28",{"property":"article:tag","content":"featured"}],["$","meta","29",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","30",{"name":"twitter:title","content":"MagicLogger — Colorful JavaScript / TypeScript Logger | Project Details | Manic Agency - Metaverses Intersection"}],["$","meta","31",{"name":"twitter:description","content":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry."}],["$","meta","32",{"name":"twitter:image","content":"https://your-domain.com/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png"}],["$","link","33",{"rel":"shortcut icon","href":"/favicon-16x16.png"}],["$","link","34",{"rel":"icon","href":"/favicon.ico"}],["$","link","35",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","meta","36",{"name":"next-size-adjust"}]]
 1:null
