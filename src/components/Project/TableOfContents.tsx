@@ -3,7 +3,7 @@
 
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { TableOfContentsItem } from '@/types/project'; // Ensure path is correct
 
 interface TableOfContentsProps {
@@ -14,6 +14,30 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ toc }) => {
   const [activeSlug, setActiveSlug] = useState<string | null>(null);
   const observer = useRef<IntersectionObserver | null>(null);
   const tocContainerRef = useRef<HTMLElement>(null);
+  const manualScrollTimeoutRef = useRef<number | null>(null);
+  const manualScrollTargetRef = useRef<HTMLElement | null>(null);
+  const manualScrollHandlerRef = useRef<((this: Window, ev: Event) => void) | null>(null);
+  const isManualScrollRef = useRef(false);
+
+  const clearManualScroll = useCallback(() => {
+    isManualScrollRef.current = false;
+    manualScrollTargetRef.current = null;
+    if (manualScrollHandlerRef.current) {
+      window.removeEventListener('scroll', manualScrollHandlerRef.current);
+      manualScrollHandlerRef.current = null;
+    }
+    if (manualScrollTimeoutRef.current !== null) {
+      window.clearTimeout(manualScrollTimeoutRef.current);
+      manualScrollTimeoutRef.current = null;
+    }
+  }, []);
+
+  const computeScrollMarginTop = useCallback((element: HTMLElement) => {
+    const computed = window.getComputedStyle(element).scrollMarginTop;
+    if (!computed) return 0;
+    const parsed = parseFloat(computed);
+    return Number.isFinite(parsed) ? parsed : 0;
+  }, []);
 
   // Intersection Observer Logic
   useEffect(() => {
@@ -24,7 +48,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ toc }) => {
             if (entry.isIntersecting) { bestVisibleEntry = entry; break; }
             if (!bestVisibleEntry || entry.boundingClientRect.top < bestVisibleEntry.boundingClientRect.top) { bestVisibleEntry = entry; }
         }
-        if (bestVisibleEntry) setActiveSlug(bestVisibleEntry.target.id);
+        if (bestVisibleEntry && !isManualScrollRef.current) setActiveSlug(bestVisibleEntry.target.id);
     };
     observer.current = new IntersectionObserver(observerCallback, { rootMargin: '-100px 0px -50% 0px', threshold: 0 });
     const { current: currentObserver } = observer;
@@ -53,15 +77,39 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ toc }) => {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, slug: string) => {
     e.preventDefault();
     const element = document.getElementById(slug);
-    if (element) {
-      const offset = 100;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - offset;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-      window.history.replaceState(null, '', `#${slug}`);
-      setActiveSlug(slug);
-    }
+    if (!element) return;
+
+    clearManualScroll();
+    isManualScrollRef.current = true;
+    manualScrollTargetRef.current = element;
+
+    const monitorScroll = () => {
+      const targetEl = manualScrollTargetRef.current;
+      if (!targetEl) return;
+      const marginTop = computeScrollMarginTop(targetEl);
+      const distance = Math.abs(targetEl.getBoundingClientRect().top - marginTop);
+      const reachedBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 1;
+      if (distance <= 2 || reachedBottom) {
+        clearManualScroll();
+      }
+    };
+
+    manualScrollHandlerRef.current = monitorScroll;
+    window.addEventListener('scroll', monitorScroll, { passive: true });
+
+    manualScrollTimeoutRef.current = window.setTimeout(clearManualScroll, 2000);
+
+    setActiveSlug(slug);
+    window.history.replaceState(null, '', `#${slug}`);
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    requestAnimationFrame(() => monitorScroll());
   };
+
+  useEffect(() => {
+    return () => {
+      clearManualScroll();
+    };
+  }, [clearManualScroll]);
 
   if (!toc || toc.length === 0) return null;
 

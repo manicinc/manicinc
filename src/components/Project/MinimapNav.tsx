@@ -3,7 +3,7 @@
 
 'use client';
 
-import React, { useEffect, useRef, useMemo, useState } from 'react';
+import React, { useEffect, useRef, useMemo, useState, useCallback } from 'react';
 import { TableOfContentsItem } from '@/types/project'; // Ensure path is correct
 
 interface MinimapNavProps {
@@ -15,9 +15,29 @@ const MinimapNav: React.FC<MinimapNavProps> = ({ toc }) => {
   const observer = useRef<IntersectionObserver | null>(null);
   const minimapContainerRef = useRef<HTMLDivElement>(null);
   const manualScrollTimeoutRef = useRef<number | null>(null);
-  const manualScrollTargetRef = useRef<number | null>(null);
+  const manualScrollTargetRef = useRef<HTMLElement | null>(null);
   const manualScrollHandlerRef = useRef<((this: Window, ev: Event) => void) | null>(null);
   const isManualScrollRef = useRef(false);
+
+  const clearManualScroll = useCallback(() => {
+    isManualScrollRef.current = false;
+    manualScrollTargetRef.current = null;
+    if (manualScrollHandlerRef.current) {
+      window.removeEventListener('scroll', manualScrollHandlerRef.current);
+      manualScrollHandlerRef.current = null;
+    }
+    if (manualScrollTimeoutRef.current !== null) {
+      window.clearTimeout(manualScrollTimeoutRef.current);
+      manualScrollTimeoutRef.current = null;
+    }
+  }, []);
+
+  const computeScrollMarginTop = useCallback((element: HTMLElement) => {
+    const computed = window.getComputedStyle(element).scrollMarginTop;
+    if (!computed) return 0;
+    const parsed = parseFloat(computed);
+    return Number.isFinite(parsed) ? parsed : 0;
+  }, []);
 
   const filteredToc = useMemo(() => {
     if (!Array.isArray(toc)) return [];
@@ -73,44 +93,31 @@ const MinimapNav: React.FC<MinimapNavProps> = ({ toc }) => {
   const handleScrollTo = (slug: string) => {
     const el = document.getElementById(slug);
     if (!el) return;
-    const computedHeader = getComputedStyle(document.documentElement).getPropertyValue('--header-height');
-    const parsedHeader = parseInt(computedHeader.replace('px', '').trim(), 10);
-    const offset = Number.isFinite(parsedHeader) ? parsedHeader + 20 : 96;
-    const top = el.getBoundingClientRect().top + window.scrollY - offset;
+
+    clearManualScroll();
     isManualScrollRef.current = true;
-    manualScrollTargetRef.current = top;
-    if (manualScrollHandlerRef.current) {
-      window.removeEventListener('scroll', manualScrollHandlerRef.current);
-      manualScrollHandlerRef.current = null;
-    }
-    if (manualScrollTimeoutRef.current) {
-      window.clearTimeout(manualScrollTimeoutRef.current);
-    }
-    const clearManualScroll = () => {
-      isManualScrollRef.current = false;
-      manualScrollTargetRef.current = null;
-      if (manualScrollHandlerRef.current) {
-        window.removeEventListener('scroll', manualScrollHandlerRef.current);
-        manualScrollHandlerRef.current = null;
-      }
-      if (manualScrollTimeoutRef.current) {
-        window.clearTimeout(manualScrollTimeoutRef.current);
-        manualScrollTimeoutRef.current = null;
-      }
-    };
-    manualScrollHandlerRef.current = () => {
-      if (manualScrollTargetRef.current === null) return;
-      const distance = Math.abs(window.scrollY - manualScrollTargetRef.current);
+    manualScrollTargetRef.current = el;
+
+    const monitorScroll = () => {
+      const targetEl = manualScrollTargetRef.current;
+      if (!targetEl) return;
+      const marginTop = computeScrollMarginTop(targetEl);
+      const distance = Math.abs(targetEl.getBoundingClientRect().top - marginTop);
       const reachedBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 1;
       if (distance <= 2 || reachedBottom) {
         clearManualScroll();
       }
     };
-    window.addEventListener('scroll', manualScrollHandlerRef.current, { passive: true });
-    window.scrollTo({ top, behavior: 'smooth' });
-    window.history.replaceState(null, '', `#${slug}`);
+
+    manualScrollHandlerRef.current = monitorScroll;
+    window.addEventListener('scroll', monitorScroll, { passive: true });
+
+    manualScrollTimeoutRef.current = window.setTimeout(clearManualScroll, 2000);
+
     setActiveSlug(slug);
-    manualScrollTimeoutRef.current = window.setTimeout(clearManualScroll, 1600);
+    window.history.replaceState(null, '', `#${slug}`);
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    requestAnimationFrame(() => monitorScroll());
   };
 
   // --- Auto-scroll Minimap Indicator ---
@@ -130,15 +137,9 @@ const MinimapNav: React.FC<MinimapNavProps> = ({ toc }) => {
 
   useEffect(() => {
     return () => {
-      if (manualScrollTimeoutRef.current) {
-        window.clearTimeout(manualScrollTimeoutRef.current);
-      }
-      if (manualScrollHandlerRef.current) {
-        window.removeEventListener('scroll', manualScrollHandlerRef.current);
-        manualScrollHandlerRef.current = null;
-      }
+      clearManualScroll();
     };
-  }, []);
+  }, [clearManualScroll]);
 
   if (!filteredToc || filteredToc.length < 3) return null; // Only show if enough sections
 
