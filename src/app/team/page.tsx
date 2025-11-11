@@ -351,7 +351,6 @@ const SynergyNetworkSVG = ({ className = "" }: { className?: string }) => (
 const executives = [
     { id: 'jd', name: 'Johnny Dunn', title: 'Lead Engineering & Co-founder', emoji: '🦁', description: 'A NLP wiz navigating the digital ether. Full-stack engineer & artist specializing in crafting complex data pipelines, training SOTA models, and tailoring bespoke web/app experiences. Previously architected systems at eBay & blockchain solutions at Tilting Point.', icon: <GitBranch size={18} /> },
     { id: 'nathan', name: 'Nathan Franc', title: 'Lead Design & Co-founder', emoji: '🦊', description: 'Multidisciplinary Design Principal based in Melbourne, AU. Expertise spans Product Design (UI/UX), intricate Design Systems, and Brand Identity. Explores the liminal space where Generative AI intersects with meaningful, human-centered design applications. Cautiously optimistic alchemist.', icon: <Palette size={18} /> },
-    { id: 'victor', name: 'Victor E.', title: 'Core Developer', emoji: '🐻‍❄️', description: 'Full-stack software developer hailing from Nigeria with a potent blend of skills in blockchain engineering, AI implementation, social integrations, and captivating digital illustration & animation. Builds bridges between code and creativity.', icon: <BrainCircuit size={18} /> },
     { id: 'jeffrey', name: 'Jeffrey', title: 'Junior Marketer', emoji: '🦋', description: 'Gradually forging their mark in the digital marketing world, Godwin is becoming a staple in web3 communities globally, and a knack for managing social media content.', icon: <BrainCircuit size={18} /> },
 
 ];
@@ -465,30 +464,6 @@ const TeamsPage = () => {
                                     <div className={styles.cardBorderGlitch}></div>
                                 </motion.div>
                             ))}
-                             {/* Framers AI Connection Card */}
-                             <motion.div variants={fadeIn} className={`${styles.teamCard} ${styles.framersCard}`}>
-                                  <div className="flex flex-col items-center justify-center h-full text-center p-4">
-                                      <img 
-                                          src="/assets/projects/frame/frame-logo-green-transparent-4x.png" 
-                                          alt="Frame.dev" 
-                                          className="w-16 h-16 mb-4 opacity-80 hover:opacity-100 transition-opacity"
-                                      />
-                                      <p className="font-mono text-sm font-medium text-[color:var(--text-primary)] mb-2">
-                                          Powered by Framers AI
-                                      </p>
-                                      <p className="text-xs text-[color:var(--text-muted)] mb-4">
-                                          Building the future of AI-powered development tools
-                                      </p>
-                                      <a 
-                                          href="https://frame.dev" 
-                                          target="_blank" 
-                                          rel="noopener noreferrer"
-                                          className={styles.placeholderCTA}
-                                      >
-                                          Explore Frame.dev →
-                                      </a>
-                                  </div>
-                              </motion.div>
                              <motion.div variants={fadeIn} className={`${styles.teamCard} ${styles.placeholderCard}`}>
                                   <div className="flex flex-col items-center justify-center h-full text-center p-4">
                                       <div className={styles.placeholderIconWrapper}>
