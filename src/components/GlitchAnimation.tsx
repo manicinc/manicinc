@@ -223,6 +223,15 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
     const lastRegenerateTimeRef = useRef<number>(0);
     const containerRef = useRef<HTMLDivElement>(null);
     const [isVisible, setIsVisible] = useState(true);
+    const [docVisible, setDocVisible] = useState(true);
+
+    // Document visibility pause
+    useEffect(() => {
+        const handleVis = () => setDocVisible(!document.hidden);
+        handleVis();
+        document.addEventListener('visibilitychange', handleVis);
+        return () => document.removeEventListener('visibilitychange', handleVis);
+    }, []);
 
     // Visibility-based pause using IntersectionObserver
     useEffect(() => {
@@ -247,6 +256,41 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
             setCurrentConfig(LOW_PERFORMANCE_CONFIG);
         }
     }, [performanceMode]);
+
+    // Density scaling based on container size and devicePixelRatio
+    useEffect(() => {
+        const el = containerRef.current;
+        if (!el) return;
+        const baselineArea = 800 * 600; // reference area
+        const clamp = (v: number, min: number, max: number) => Math.max(min, Math.min(max, v));
+
+        const scaleConfig = (cfg: AnimationConfig, scale: number): AnimationConfig => {
+            const scaleInt = (val: number) => Math.max(1, Math.floor(val * scale));
+            const scaleRange = ([min, max]: [number, number]): [number, number] => [scaleInt(min), scaleInt(max)];
+            return {
+                ...cfg,
+                pathCountRange: scaleRange(cfg.pathCountRange),
+                noiseCountRange: scaleRange(cfg.noiseCountRange),
+                textCountRange: scaleRange(cfg.textCountRange),
+                objectCountRange: scaleRange(cfg.objectCountRange),
+            } as AnimationConfig;
+        };
+
+        const ro = new ResizeObserver((entries) => {
+            for (const entry of entries) {
+                const cr = entry.contentRect;
+                const area = cr.width * cr.height;
+                const areaScale = clamp(Math.sqrt(area / baselineArea), 0.5, 1);
+                const dpr = typeof window !== 'undefined' ? (window.devicePixelRatio || 1) : 1;
+                const dprScale = clamp(1 / Math.max(1, dpr), 0.5, 1);
+                const scale = clamp(Math.min(areaScale, dprScale), 0.5, 1);
+                const base = baseConfigRef.current;
+                setCurrentConfig(scaleConfig(base, scale));
+            }
+        });
+        ro.observe(el);
+        return () => ro.disconnect();
+    }, []);
 
     // Theme detection and monitoring
     useEffect(() => {
@@ -807,7 +851,7 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
     return (
         <div 
             ref={containerRef}
-            className={`glitch-animation-container ${!isVisible ? 'paused' : ''} ${className}`} 
+            className={`glitch-animation-container ${(!isVisible || !docVisible) ? 'paused' : ''} ${className}`} 
             style={{ 
                 width, 
                 height, 
