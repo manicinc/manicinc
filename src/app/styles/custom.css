@@ -380,7 +380,8 @@
   opacity: 0; /* Start hidden */
   transition: right 0.4s ease-out, opacity 0.3s ease;
   color: var(--accent-highlight);
-  pointer-events: none; /* Don't interfere with clicks */
+  /* Do not interfere with clicks */
+  pointer-events: none;
   font-weight: bold;
 }
 .rabbit-trail:hover {
