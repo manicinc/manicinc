@@ -19,11 +19,10 @@ const Footer = () => {
 
     return (
         <footer className={`
+            site-footer
+            ${isBlog ? 'site-footer--blog' : 'site-footer--default'}
             relative overflow-hidden border-t
             py-14 px-6 md:px-16 lg:py-20
-            ${isBlog
-                ? 'bg-[color:var(--bg-blog-secondary)] border-[color:var(--accent-secondary)] border-opacity-30'
-                : 'bg-[color:var(--bg-secondary)] border-[color:var(--bg-tertiary)]'}
             text-[color:var(--text-secondary)]
         `}>
             {/* Background texture */}
@@ -64,11 +63,10 @@ const Footer = () => {
                 </div> {/* End Grid */}
 
                 {/* Footer Bottom */}
-                <div className={`
+                <div className={` 
+                    site-footer-bottom
+                    ${isBlog ? 'site-footer-bottom--blog' : 'site-footer-bottom--default'}
                     border-t mt-10 pt-8 text-center
-                    ${isBlog
-                        ? 'border-[color:var(--accent-secondary)] border-opacity-30'
-                        : 'border-[color:var(--bg-tertiary)]'}
                 `}>
                     {/* RENDER FOOTER BRANDING COMPONENT */}
                     <FooterBranding />
@@ -87,6 +85,70 @@ const Footer = () => {
 
             {/* KEEP GLOBAL STYLES */}
             <style jsx global>{`
+                .site-footer {
+                    position: relative;
+                    background:
+                        radial-gradient(140% 180% at 50% -20%, rgba(var(--bg-primary-rgb), 0.98), rgba(var(--bg-secondary-rgb), 0.9)),
+                        linear-gradient(180deg, rgba(var(--bg-primary-rgb), 0.97) 0%, rgba(var(--bg-secondary-rgb), 0.92) 65%, rgba(var(--bg-tertiary-rgb), 0.88) 100%);
+                    background-color: rgba(var(--bg-primary-rgb), 0.97);
+                    background-blend-mode: soft-light;
+                    border-top: 1px solid rgba(var(--bg-tertiary-rgb), 0.18);
+                    box-shadow:
+                        inset 0 1px 0 rgba(255, 255, 255, 0.55),
+                        0 -18px 32px rgba(var(--shadow-color-rgb), 0.08);
+                    backdrop-filter: blur(18px) saturate(120%);
+                    -webkit-backdrop-filter: blur(18px) saturate(120%);
+                    transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+                }
+                .site-footer--blog {
+                    background:
+                        radial-gradient(150% 200% at 50% -30%, rgba(var(--bg-blog-paper-rgb), 0.96), rgba(var(--bg-blog-paper-rgb), 0.88)),
+                        linear-gradient(182deg, rgba(var(--bg-blog-paper-rgb), 0.94) 0%, rgba(var(--bg-blog-paper-rgb), 0.86) 70%, rgba(var(--bg-blog-paper-rgb), 0.82) 100%);
+                    border-top-color: rgba(var(--accent-secondary-rgb), 0.24);
+                    box-shadow:
+                        inset 0 1px 0 rgba(255, 255, 255, 0.45),
+                        0 -16px 28px rgba(var(--accent-secondary-rgb), 0.08);
+                }
+                .dark .site-footer {
+                    background:
+                        radial-gradient(160% 220% at 50% -40%, rgba(var(--bg-primary-rgb), 0.16), rgba(var(--bg-secondary-rgb), 0.22)),
+                        linear-gradient(185deg, rgba(var(--bg-tertiary-rgb), 0.32) 0%, rgba(var(--bg-tertiary-rgb), 0.18) 70%, rgba(var(--bg-tertiary-rgb), 0.12) 100%);
+                    border-top-color: rgba(var(--accent-secondary-rgb), 0.26);
+                    box-shadow:
+                        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+                        0 -16px 30px rgba(0, 0, 0, 0.35);
+                }
+                .dark .site-footer--blog {
+                    background:
+                        radial-gradient(160% 220% at 50% -50%, rgba(var(--bg-blog-paper-rgb), 0.22), rgba(var(--bg-blog-paper-rgb), 0.14)),
+                        linear-gradient(188deg, rgba(var(--bg-blog-paper-rgb), 0.18) 0%, rgba(var(--bg-blog-paper-rgb), 0.1) 100%);
+                    border-top-color: rgba(var(--accent-secondary-rgb), 0.36);
+                    box-shadow:
+                        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+                        0 -18px 32px rgba(0, 0, 0, 0.42);
+                }
+                .site-footer::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background:
+                        radial-gradient(120% 140% at 20% 0%, rgba(var(--accent-highlight-rgb), 0.08), transparent 65%),
+                        radial-gradient(140% 200% at 80% -20%, rgba(var(--accent-secondary-rgb), 0.06), transparent 70%);
+                    pointer-events: none;
+                    opacity: 0.9;
+                }
+                .dark .site-footer::before {
+                    opacity: 0.45;
+                }
+                .site-footer-bottom {
+                    border-color: rgba(var(--bg-tertiary-rgb), 0.2);
+                }
+                .site-footer-bottom--blog {
+                    border-color: rgba(var(--accent-secondary-rgb), 0.28);
+                }
+                .site-footer-bottom--default {
+                    border-color: rgba(var(--bg-tertiary-rgb), 0.18);
+                }
                 .footer-heading {
                     font-family: var(--font-meta-blog);
                     font-size: 0.8rem;

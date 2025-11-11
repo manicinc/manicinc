@@ -15,6 +15,8 @@ const MinimapNav: React.FC<MinimapNavProps> = ({ toc }) => {
   const observer = useRef<IntersectionObserver | null>(null);
   const minimapContainerRef = useRef<HTMLDivElement>(null);
   const manualScrollTimeoutRef = useRef<number | null>(null);
+  const manualScrollTargetRef = useRef<number | null>(null);
+  const manualScrollHandlerRef = useRef<((this: Window, ev: Event) => void) | null>(null);
   const isManualScrollRef = useRef(false);
 
   const filteredToc = useMemo(() => {
@@ -76,15 +78,39 @@ const MinimapNav: React.FC<MinimapNavProps> = ({ toc }) => {
     const offset = Number.isFinite(parsedHeader) ? parsedHeader + 20 : 96;
     const top = el.getBoundingClientRect().top + window.scrollY - offset;
     isManualScrollRef.current = true;
+    manualScrollTargetRef.current = top;
+    if (manualScrollHandlerRef.current) {
+      window.removeEventListener('scroll', manualScrollHandlerRef.current);
+      manualScrollHandlerRef.current = null;
+    }
     if (manualScrollTimeoutRef.current) {
       window.clearTimeout(manualScrollTimeoutRef.current);
     }
+    const clearManualScroll = () => {
+      isManualScrollRef.current = false;
+      manualScrollTargetRef.current = null;
+      if (manualScrollHandlerRef.current) {
+        window.removeEventListener('scroll', manualScrollHandlerRef.current);
+        manualScrollHandlerRef.current = null;
+      }
+      if (manualScrollTimeoutRef.current) {
+        window.clearTimeout(manualScrollTimeoutRef.current);
+        manualScrollTimeoutRef.current = null;
+      }
+    };
+    manualScrollHandlerRef.current = () => {
+      if (manualScrollTargetRef.current === null) return;
+      const distance = Math.abs(window.scrollY - manualScrollTargetRef.current);
+      const reachedBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 1;
+      if (distance <= 2 || reachedBottom) {
+        clearManualScroll();
+      }
+    };
+    window.addEventListener('scroll', manualScrollHandlerRef.current, { passive: true });
     window.scrollTo({ top, behavior: 'smooth' });
     window.history.replaceState(null, '', `#${slug}`);
     setActiveSlug(slug);
-    manualScrollTimeoutRef.current = window.setTimeout(() => {
-      isManualScrollRef.current = false;
-    }, 700);
+    manualScrollTimeoutRef.current = window.setTimeout(clearManualScroll, 1600);
   };
 
   // --- Auto-scroll Minimap Indicator ---
@@ -106,6 +132,10 @@ const MinimapNav: React.FC<MinimapNavProps> = ({ toc }) => {
     return () => {
       if (manualScrollTimeoutRef.current) {
         window.clearTimeout(manualScrollTimeoutRef.current);
+      }
+      if (manualScrollHandlerRef.current) {
+        window.removeEventListener('scroll', manualScrollHandlerRef.current);
+        manualScrollHandlerRef.current = null;
       }
     };
   }, []);
