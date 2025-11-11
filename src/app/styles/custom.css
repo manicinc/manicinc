@@ -144,7 +144,7 @@
   position: absolute;
   inset: 0;
   opacity: 0.05;
-  background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   pointer-events: none;
 }
 
@@ -271,7 +271,7 @@
   box-shadow: 0 2px 5px rgba(var(--shadow-color), 0.5);
 }
 .btn-synthetic::before { /* Hover gradient effect */
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%; /* Start hidden */
@@ -334,7 +334,7 @@
   letter-spacing: 0.02em;
 }
 .rabbit-hole-btn::before { /* Fill effect */
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(45deg, var(--accent-primary), var(--accent-highlight));
@@ -828,7 +828,7 @@
   position: relative; /* Needed for absolute positioning of pseudo-element */
 }
 .hover-underline::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px; /* Position below text */
   left: 0;
@@ -850,7 +850,7 @@
   text-decoration: none; /* Remove default underline */
 }
 .animated-underline::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 2px;
