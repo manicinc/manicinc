@@ -6,7 +6,7 @@ category: ai
 tags: [ai, voice, coding-assistant, agentos, developer-tools, productivity, llm, open-source]
 link: https://vca.chat
 github: https://github.com/framersai/voice-chat-assistant
-image: /assets/projects/voice-chat-assistant/logo.svg
+image: /assets/projects/voice-chat-assistant/hearing.svg
 images: [
   /assets/projects/voice-chat-assistant/logo.svg,
   /assets/projects/voice-chat-assistant/hearing.svg,

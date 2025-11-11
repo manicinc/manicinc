@@ -1,3 +1,192 @@
+/* =============================== */
+/* Frame.dev CTA (Homepage)        */
+/* =============================== */
+.frame-cta {
+  position: relative;
+  padding: 4rem 0;
+  border-top: 1px solid rgba(var(--accent-primary-rgb), 0.2);
+  border-bottom: 1px solid rgba(var(--accent-primary-rgb), 0.2);
+  background: radial-gradient(1200px 600px at 20% 0%,
+    rgba(var(--accent-highlight-rgb), 0.08) 0%,
+    transparent 60%),
+  radial-gradient(900px 500px at 90% 100%,
+    rgba(var(--accent-secondary-rgb), 0.06) 0%,
+    transparent 65%),
+  linear-gradient(180deg, var(--bg-secondary), var(--bg-tertiary));
+}
+
+.light .frame-cta {
+  background: radial-gradient(1200px 600px at 20% 0%,
+    rgba(var(--accent-highlight-rgb), 0.12) 0%,
+    transparent 60%),
+  radial-gradient(900px 500px at 90% 100%,
+    rgba(var(--accent-secondary-rgb), 0.08) 0%,
+    transparent 65%),
+  linear-gradient(180deg, var(--bg-secondary), var(--bg-primary));
+}
+
+.frame-cta__bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.frame-cta__logo {
+  width: clamp(96px, 12vw, 160px);
+  margin: 0 auto 1rem auto;
+  opacity: 0.95;
+  filter: drop-shadow(0 6px 24px rgba(var(--accent-highlight-rgb), 0.18));
+  transition: opacity 0.3s ease;
+}
+.frame-cta__logo:hover { opacity: 1; }
+
+.frame-cta__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  margin: 0.25rem 0 0.5rem 0;
+  background: linear-gradient(90deg, var(--accent-highlight), var(--accent-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 22px rgba(var(--accent-highlight-rgb), 0.2);
+}
+.light .frame-cta__title {
+  text-shadow: 0 0 16px rgba(var(--accent-secondary-rgb), 0.24);
+}
+
+.frame-cta__subtitle {
+  color: var(--text-secondary);
+  max-width: 48ch;
+  margin: 0 auto 1.5rem auto;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.7;
+}
+.frame-cta__subtitle strong {
+  color: var(--accent-highlight);
+}
+
+.frame-cta__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  padding: 0.95rem 1.4rem;
+  border-radius: 12px;
+  color: var(--color-ink);
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.2), rgba(255,255,255,0.08)) padding-box,
+    linear-gradient(90deg, var(--accent-highlight), var(--accent-secondary)) border-box;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 24px rgba(var(--accent-highlight-rgb), 0.18);
+  transition: transform 0.2s var(--transition-bounce), box-shadow 0.2s ease, filter 0.2s ease;
+}
+.frame-cta__button:hover {
+  transform: translateY(-2px);
+  filter: saturate(1.1);
+  box-shadow: 0 14px 30px rgba(var(--accent-secondary-rgb), 0.24);
+}
+.frame-cta__button:active {
+  transform: translateY(0px);
+}
+.light .frame-cta__button { color: var(--color-light-ink); }
+
+/* Decorative Orbs & Overlays */
+.orb {
+  position: absolute;
+  filter: blur(40px);
+  opacity: 0.18;
+  mix-blend-mode: screen;
+}
+.orb-1 { width: 420px; height: 420px; left: -60px; top: -80px; background: var(--accent-highlight); animation: floatY 12s ease-in-out infinite; }
+.orb-2 { width: 520px; height: 520px; right: -100px; bottom: -120px; background: var(--accent-secondary); animation: floatY 14s ease-in-out infinite reverse; }
+.orb-3 { width: 320px; height: 320px; left: 40%; top: 20%; background: color-mix(in srgb, var(--accent-primary) 60%, var(--accent-highlight)); opacity: 0.12; animation: floatY 18s ease-in-out infinite; }
+
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(var(--accent-highlight-rgb), 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(var(--accent-secondary-rgb), 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 60%, transparent 90%);
+  pointer-events: none;
+}
+
+.noise-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\");
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orb { animation: none; }
+  .frame-cta__button { transition: none; }
+}
+
+/* =============================== */
+/* Brand Back-to-Top (site-wide)   */
+/* =============================== */
+.futuristic-back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px) scale(0.96);
+  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s var(--transition-bounce);
+  background:
+    radial-gradient(circle at 30% 30%, rgba(var(--accent-highlight-rgb), 0.14), transparent 60%),
+    linear-gradient(180deg, var(--bg-tertiary), var(--bg-secondary));
+  box-shadow:
+    0 10px 24px rgba(var(--accent-highlight-rgb), 0.2),
+    inset 0 0 0 1px rgba(var(--accent-highlight-rgb), 0.25);
+}
+.futuristic-back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+.futuristic-back-to-top .button-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background:
+    linear-gradient(90deg, var(--accent-highlight), var(--accent-secondary));
+  opacity: 0.15;
+  transition: opacity 0.3s ease;
+}
+.futuristic-back-to-top:hover .button-bg { opacity: 0.25; }
+.futuristic-back-to-top .icon {
+  position: relative;
+  z-index: 2;
+  width: 26px;
+  height: 26px;
+  color: var(--accent-highlight);
+  display: block;
+  margin: auto;
+}
+.light .futuristic-back-to-top {
+  background:
+    radial-gradient(circle at 30% 30%, rgba(var(--accent-secondary-rgb), 0.12), transparent 60%),
+    linear-gradient(180deg, var(--bg-secondary), var(--bg-primary));
+  box-shadow:
+    0 10px 22px rgba(var(--accent-secondary-rgb), 0.18),
+    inset 0 0 0 1px rgba(var(--accent-secondary-rgb), 0.25);
+}
 /* src/app/styles/custom.css */
 
 /* ==========================================================================

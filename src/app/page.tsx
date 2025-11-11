@@ -182,34 +182,39 @@ export default function HomePage() {
 
             </Suspense> {/* Close Suspense tag */}
             
-            {/* Frame.dev CTA Section */}
-            <section className="py-16 md:py-20 bg-gradient-to-br from-[var(--bg-secondary)] to-[var(--bg-tertiary)] relative overflow-hidden border-y border-[var(--accent-primary)] border-opacity-20">
-                <div className="absolute inset-0 opacity-5">
-                    <div className="absolute top-0 left-0 w-96 h-96 bg-[var(--accent-highlight)] rounded-full blur-3xl"></div>
-                    <div className="absolute bottom-0 right-0 w-96 h-96 bg-[var(--accent-secondary)] rounded-full blur-3xl"></div>
+        {/* Frame.dev CTA Section (enhanced) */}
+        <section className="frame-cta relative overflow-hidden">
+            <div className="frame-cta__bg" aria-hidden="true">
+                <div className="orb orb-1"></div>
+                <div className="orb orb-2"></div>
+                <div className="orb orb-3"></div>
+                <div className="grid-overlay"></div>
+                <div className="noise-overlay"></div>
+            </div>
+            <div className="container mx-auto px-4 relative z-10">
+                <div className="max-w-4xl mx-auto text-center">
+                    <img
+                        src="/assets/projects/framers/frame-logo-transparent.png"
+                        alt="Frame.dev"
+                        className="frame-cta__logo"
+                    />
+                    <h2 className="frame-cta__title">
+                        We Are The Framers
+                    </h2>
+                    <p className="frame-cta__subtitle">
+                        Denoising the web and making AI agency
+                        <strong> emergent</strong>, <strong> adaptive</strong>, and <strong> permanent</strong>
+                        through open-source innovation.
+                    </p>
+                    <Link
+                        href="https://frame.dev"
+                        className="frame-cta__button"
+                    >
+                        Explore Frame.dev →
+                    </Link>
                 </div>
-                <div className="container mx-auto px-4 text-center relative z-10">
-                    <div className="max-w-4xl mx-auto">
-                        <img 
-                            src="/assets/projects/framers/frame-logo-transparent.png" 
-                            alt="Frame.dev" 
-                            className="w-32 md:w-40 mx-auto mb-6 opacity-90 hover:opacity-100 transition-opacity drop-shadow-lg"
-                        />
-                        <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#7de8c9] to-[#7ea196] bg-clip-text text-transparent">
-                            We Are The Framers
-                        </h2>
-                        <p className="text-lg md:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto mb-8 leading-relaxed">
-                            Denoising the web and making AI agency <strong className="text-[var(--accent-highlight)]">emergent</strong>, <strong className="text-[var(--accent-highlight)]">adaptive</strong>, and <strong className="text-[var(--accent-highlight)]">permanent</strong> through open-source innovation.
-                        </p>
-                        <Link 
-                            href="https://frame.dev"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-[#7de8c9] text-[#22182b] font-bold rounded-lg hover:scale-105 transition-all shadow-lg hover:shadow-xl"
-                        >
-                            Explore Frame.dev →
-                        </Link>
-                    </div>
-                </div>
-            </section>
+            </div>
+        </section>
             
             {/* Newsletter signup for main site */}
             <NewsletterSection 
