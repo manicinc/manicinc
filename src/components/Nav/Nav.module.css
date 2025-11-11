@@ -232,8 +232,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 48px;
-    padding: 0 1.1rem;
+    height: 100%;
+    min-height: unset;
+    padding: 0 0.9rem;
     font-family: var(--font-display);
     font-size: 0.9rem;
     font-weight: 600;
@@ -242,9 +243,9 @@
     text-decoration: none !important;
     border: none !important;
     border-bottom: none !important;
-    border-radius: var(--radius-base);
-    background-color: transparent; /* Ensure transparent background */
-    /* overflow: hidden; */
+    border-radius: 0;
+    background: none !important;
+    box-shadow: none !important;
     cursor: pointer;
     transition: color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
     will-change: color, transform, box-shadow;
@@ -254,17 +255,29 @@
 .navLink:hover {
     color: var(--text-primary);
     transform: translateY(-1px); /* Subtle lift */
-    /* box-shadow: inset 0 1px 1px rgba(var(--text-primary-rgb), 0.04), 0 2px 8px rgba(var(--shadow-color-rgb), 0.1); */ /* Optional */
+    background: none !important;
+    box-shadow: none !important;
 }
 :global(.light) .navLink:hover {
     color: var(--text-primary);
-    /* box-shadow: inset 0 1px 1px rgba(var(--text-primary-rgb), 0.06), 0 2px 8px rgba(var(--shadow-color-rgb), 0.08); */ /* Optional */
+    background: none !important;
+    box-shadow: none !important;
 }
 
 
 .navLink:active {
     transform: translateY(0px) scale(0.98);
-    /* box-shadow: inset 0px 1px 2px rgba(var(--shadow-color-rgb), 0.15); */ /* Optional */
+    box-shadow: none !important;
+}
+
+.navLink:focus-visible {
+    outline: none;
+    color: var(--accent-highlight);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.35em;
+    background: none !important;
+    box-shadow: none !important;
 }
 
 .linkText {
@@ -404,12 +417,12 @@
 /* === Active Link Styles === */
 .navActive {
     /* Optional: Add subtle background or inset shadow */
-    /* background-color: rgba(var(--text-primary-rgb), 0.03); */
-     box-shadow: inset 0px 1px 2px rgba(var(--shadow-color-rgb), 0.1);
+    background: none !important;
+    box-shadow: none !important;
 }
 :global(.light) .navActive {
-    /* background-color: rgba(var(--text-primary-rgb), 0.05); */
-     box-shadow: inset 0px 1px 2px rgba(var(--shadow-color-rgb), 0.08);
+    background: none !important;
+    box-shadow: none !important;
 }
 
 
@@ -919,7 +932,6 @@
     .navLink {
         padding: 0 0.8rem; /* Reduce padding */
         font-size: 0.85rem; /* Slightly smaller font */
-        min-height: 44px; /* Reduce height */
     }
     .contactBtnFinal {
         padding: 0.5rem 1rem; /* Reduce padding */
@@ -1008,7 +1020,6 @@
      .navLink {
         padding: 0 1rem;
         font-size: 0.88rem;
-        min-height: 46px;
     }
     .navDesktop {
         gap: 0.3rem;
