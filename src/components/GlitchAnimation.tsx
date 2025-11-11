@@ -221,6 +221,32 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
     const reducedMotionRef = useRef<boolean>(false);
     const animationFrameRef = useRef<number>();
     const lastRegenerateTimeRef = useRef<number>(0);
+    const containerRef = useRef<HTMLDivElement>(null);
+    const [isVisible, setIsVisible] = useState(true);
+
+    // Visibility-based pause using IntersectionObserver
+    useEffect(() => {
+        const el = containerRef.current;
+        if (!el) return;
+        const io = new IntersectionObserver((entries) => {
+            const e = entries[0];
+            setIsVisible(!!e?.isIntersecting);
+        }, { rootMargin: '100px' });
+        io.observe(el);
+        return () => io.disconnect();
+    }, []);
+
+    // Auto performance scaling for low-memory/slow connection/small viewports
+    useEffect(() => {
+        if (performanceMode === 'high') return; // honor explicit high
+        const mem = (navigator as any).deviceMemory || 4;
+        const conn: string = (navigator as any).connection?.effectiveType || '4g';
+        const smallViewport = typeof window !== 'undefined' && window.innerWidth < 768;
+        if (reducedMotionRef.current || mem <= 4 || conn !== '4g' || smallViewport) {
+            baseConfigRef.current = LOW_PERFORMANCE_CONFIG;
+            setCurrentConfig(LOW_PERFORMANCE_CONFIG);
+        }
+    }, [performanceMode]);
 
     // Theme detection and monitoring
     useEffect(() => {
@@ -780,7 +806,8 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
     // --- Render ---
     return (
         <div 
-            className={`glitch-animation-container ${className}`} 
+            ref={containerRef}
+            className={`glitch-animation-container ${!isVisible ? 'paused' : ''} ${className}`} 
             style={{ 
                 width, 
                 height, 
@@ -984,8 +1011,20 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
                     --element-stroke-accent: var(--accent-color);
                     --element-stroke-accent2: var(--accent2-color);
                     
+                    /* Performance: isolate the container */
+                    contain: layout paint style;
+                    content-visibility: auto;
+                    contain-intrinsic-size: 500px 500px;
+                    will-change: transform;
+                    backface-visibility: hidden;
+                    
                     /* Add transition for smooth theme changes */
                     transition: background-color 0.3s ease;
+                }
+
+                /* Pause all animations when offscreen */
+                .glitch-animation-container.paused * {
+                    animation-play-state: paused !important;
                 }
 
                 /* Element Classes */
