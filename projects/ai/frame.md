@@ -9,15 +9,9 @@ github: https://github.com/framersai
 image: /assets/projects/framers/frame-logo-transparent.png
 images: [
   /assets/projects/framers/frame-logo-no-subtitle.svg,
-  /assets/projects/framers/frame-logo-transparent.png,
-  /assets/projects/framers/frame-logo.png,
-  /assets/projects/framers/agentos-logo.png,
-  /assets/projects/framers/agentos-icon.svg,
-  /assets/projects/framers/openstrand-logo-dark-1024.png,
-  /assets/projects/framers/openstrand-logo-light-1024.png,
-  /assets/projects/framers/openstrand-logo.svg
+  /assets/projects/framers/agentos-logo.png
 ]
-featured: true
+featured: false
 draft: false
 stats:
   - label: "Projects Powered"

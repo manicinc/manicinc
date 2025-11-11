@@ -6,7 +6,7 @@ category: tools
 tags: [seo, ai, marketing, automation, case-study]
 link: https://seostory.xyz
 image: /assets/projects/seostory/seostory-primary-transparent-4x.png
-featured: true
+featured: false
 draft: false
 ---
 

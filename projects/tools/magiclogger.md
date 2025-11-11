@@ -9,8 +9,6 @@ github: https://github.com/manicinc/magiclogger
 image: /assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png
 images: [
   /assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png,
-  /assets/projects/magiclogger/magiclogger-primary-white-4x.png,
-  /assets/projects/magiclogger/magiclogger-primary-no-subtitle-transparent-4x.png,
   /assets/projects/magiclogger/magiclogger-terminal-demo.gif
 ]
 featured: false
