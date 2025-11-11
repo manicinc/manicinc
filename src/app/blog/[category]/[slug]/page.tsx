@@ -170,6 +170,12 @@ export default async function BlogPostPage({ params }: PageProps) {
                 postTags={post.tags}
                 postType="post"
             />
+            {/* Element-level tracking (avoids duplicate scroll/time) */}
+            <EnhancedTracking 
+                enableElementTracking 
+                pageType="blog" 
+                contentCategory={post.category}
+            />
             
             {/* Scroll engagement tracking */}
             <ScrollTracking 

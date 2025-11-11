@@ -23,6 +23,7 @@ import LocalBusinessSchema from '@/components/SEO/LocalBusinessSchema';
 import PrefetchLinks from '@/components/PrefetchLinks';
 import ServiceWorkerRegistration from '@/components/ServiceWorkerRegistration';
 import SkipToContent from '@/components/SkipToContent';
+import GlobalEventTracking from '@/components/GlobalEventTracking';
 
 // Import Styles
 import "./styles/globals.css";
@@ -215,6 +216,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <Footer />
               <ScrollToTopHandler />
               <Analytics />
+              <GlobalEventTracking />
               <LayoutClient />
             </CookieProvider>
           </ThemeProvider>

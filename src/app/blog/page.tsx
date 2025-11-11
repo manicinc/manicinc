@@ -3,6 +3,7 @@ import React, { Suspense } from 'react';
 import BlogListClient from './BlogListClient'; // Import Client Component
 import { getAllPosts } from '@/lib/getAllPosts'; // Adjust path if needed
 import BlogAnalytics from '@/components/BlogAnalytics'; // Analytics tracking
+import EnhancedTracking from '@/components/EnhancedTracking'; // Element tracking
 import BlogNewsletterWrapper from '@/components/BlogNewsletterProvider'; // Newsletter with modal
 import BlogNewsletterSection from '@/components/BlogNewsletterSection'; // Newsletter signup
 import type { Metadata } from 'next';
@@ -70,6 +71,7 @@ export default function BlogIndexPage() {
             <div className="blog-scope">
                 {/* Analytics tracking for blog listing */}
                 <BlogAnalytics postType="list" />
+                <EnhancedTracking enableElementTracking pageType="blog" />
                 
                 <main className="blog-main-content-area">
                     <div className="blog-list-main-container">
