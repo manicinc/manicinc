@@ -277,7 +277,11 @@ const BlogListClient = React.memo(({ initialPosts }: BlogListClientProps) => {
                     </div>
                 )}
                 <div className="readmore-container">
-                    <Link href={`/blog/${post.category || 'uncategorized'}/${post.slug}`} className="readmore-link">
+                    <Link
+                      href={`/blog/${post.category || 'uncategorized'}/${post.slug}`}
+                      className="readmore-link"
+                      aria-label={`Read entry: ${post.title || 'Untitled Post'}`}
+                    >
                         Read Entry <IconArrowRight size={12} className="arrow"/>
                     </Link>
                 </div>
