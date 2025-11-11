@@ -115,7 +115,6 @@ const MinimapNav: React.FC<MinimapNavProps> = ({ toc }) => {
     manualScrollTimeoutRef.current = window.setTimeout(clearManualScroll, 3500);
 
     setActiveSlug(slug);
-    window.history.replaceState(null, '', `#${slug}`);
 
     // Compute sticky header offset similar to observer rootMargin
     const computedHeader = getComputedStyle(document.documentElement).getPropertyValue('--header-height');

@@ -3,9 +3,9 @@ title: Voice Chat Assistant — Talk to Code, Ship Faster
 description: Voice-first AI coding assistant that understands context, writes production code, and manages your entire development workflow through natural conversation. Powered by AgentOS.
 date: 2025-11-10
 category: ai
-tags: [ai, voice, coding-assistant, agentos, developer-tools, productivity, llm, open-source]
+tags: [ai, voice, coding-assistant, agentos, developer-tools, productivity, llm]
 link: https://vca.chat
-github: https://github.com/framersai/voice-chat-assistant
+github:
 image: /assets/projects/voice-chat-assistant/hearing.svg
 images: [
   /assets/projects/voice-chat-assistant/logo.svg,

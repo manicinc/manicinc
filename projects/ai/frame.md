@@ -230,7 +230,7 @@ npx create-openstrand-app my-knowledge-base
 - **GitHub**: [github.com/framersai](https://github.com/framersai)
 - **Discord**: [frame.dev/discord](https://frame.dev/discord)
 - **Twitter**: [@framersai](https://twitter.com/framersai)
-- **Blog**: [Read our journey](/blog/thinkpieces/building-frame-dev)
+- **Blog**: Explore our updates in the thinkpieces section
 
 ### Resources
 
