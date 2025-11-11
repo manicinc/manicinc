@@ -192,26 +192,32 @@ export default function HomePage() {
                 <div className="noise-overlay"></div>
             </div>
             <div className="container mx-auto px-4 relative z-10">
-                <div className="max-w-4xl mx-auto text-center">
-                    <img
-                        src="/assets/projects/framers/frame-logo-transparent.png"
-                        alt="Frame.dev"
-                        className="frame-cta__logo"
-                    />
-                    <h2 className="frame-cta__title">
-                        We Are The Framers
-                    </h2>
-                    <p className="frame-cta__subtitle">
-                        Denoising the web and making AI agency
-                        <strong> emergent</strong>, <strong> adaptive</strong>, and <strong> permanent</strong>
-                        through open-source innovation.
-                    </p>
-                    <Link
-                        href="https://frame.dev"
-                        className="frame-cta__button"
-                    >
-                        Explore Frame.dev →
-                    </Link>
+                <div className="frame-cta__grid">
+                    {/* Left: Logo & tagline */}
+                    <div className="frame-cta__left">
+                        <img
+                            src="/assets/projects/framers/frame-logo-transparent.png"
+                            alt="Frame.dev"
+                            className="frame-cta__logo"
+                        />
+                        <h2 className="frame-cta__title">
+                            We Are The Framers
+                        </h2>
+                    </div>
+                    {/* Right: Copy & CTA */}
+                    <div className="frame-cta__right">
+                        <p className="frame-cta__subtitle">
+                            Denoising the web and making AI agency
+                            <strong> emergent</strong>, <strong> adaptive</strong>, and <strong> permanent</strong>
+                            through open-source innovation.
+                        </p>
+                        <Link
+                            href="https://frame.dev"
+                            className="frame-cta__button"
+                        >
+                            Explore Frame.dev →
+                        </Link>
+                    </div>
                 </div>
             </div>
         </section>
