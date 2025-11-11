@@ -3,7 +3,7 @@
 
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useMemo, useState } from 'react';
 import { TableOfContentsItem } from '@/types/project'; // Ensure path is correct
 
 interface MinimapNavProps {
@@ -14,6 +14,34 @@ const MinimapNav: React.FC<MinimapNavProps> = ({ toc }) => {
   const [activeSlug, setActiveSlug] = useState<string | null>(null);
   const observer = useRef<IntersectionObserver | null>(null);
   const minimapContainerRef = useRef<HTMLDivElement>(null);
+  const manualScrollTimeoutRef = useRef<number | null>(null);
+  const isManualScrollRef = useRef(false);
+
+  const filteredToc = useMemo(() => {
+    if (!Array.isArray(toc)) return [];
+
+    const normalized = toc
+      .filter((item) => item && item.slug && item.text)
+      .map((item) => ({
+        ...item,
+        level: typeof item.level === 'number' ? item.level : 1,
+      })) as TableOfContentsItem[];
+
+    const prioritized = normalized.filter((item) => item.level <= 2);
+    const source = prioritized.length >= 3 ? prioritized : normalized;
+
+    const unique: TableOfContentsItem[] = [];
+    const seenSlugs = new Set<string>();
+
+    for (const item of source) {
+      if (seenSlugs.has(item.slug)) continue;
+      unique.push(item);
+      seenSlugs.add(item.slug);
+      if (unique.length >= 14) break; // Prevent overly dense minimap
+    }
+
+    return unique;
+  }, [toc]);
 
    // --- Intersection Observer Logic ---
     useEffect(() => {
@@ -24,27 +52,39 @@ const MinimapNav: React.FC<MinimapNavProps> = ({ toc }) => {
                  if (entry.isIntersecting) { bestVisibleEntry = entry; break; }
                  if (!bestVisibleEntry || entry.boundingClientRect.top < bestVisibleEntry.boundingClientRect.top) { bestVisibleEntry = entry; }
              }
-             if (bestVisibleEntry) setActiveSlug(bestVisibleEntry.target.id);
+             if (bestVisibleEntry && !isManualScrollRef.current) setActiveSlug(bestVisibleEntry.target.id);
         };
-        observer.current = new IntersectionObserver(observerCallback, { rootMargin: '-100px 0px -50% 0px', threshold: 0 });
+        const computedHeader = getComputedStyle(document.documentElement).getPropertyValue('--header-height');
+        const parsedHeader = parseInt(computedHeader.replace('px', '').trim(), 10);
+        const headerOffset = Number.isFinite(parsedHeader) ? parsedHeader + 24 : 110;
+        observer.current = new IntersectionObserver(observerCallback, { rootMargin: `-${headerOffset}px 0px -45% 0px`, threshold: 0.1 });
         const { current: currentObserver } = observer;
         const observedElements: Element[] = [];
-        toc.forEach((item) => {
+        filteredToc.forEach((item) => {
              const element = document.getElementById(item.slug);
              if (element) { currentObserver?.observe(element); observedElements.push(element); }
         });
         return () => { observedElements.forEach(el => currentObserver?.unobserve(el)); currentObserver?.disconnect(); };
-    }, [toc]);
+    }, [filteredToc]);
 
   // --- Scroll To Section ---
   const handleScrollTo = (slug: string) => {
     const el = document.getElementById(slug);
     if (!el) return;
-    const offset = 100;
+    const computedHeader = getComputedStyle(document.documentElement).getPropertyValue('--header-height');
+    const parsedHeader = parseInt(computedHeader.replace('px', '').trim(), 10);
+    const offset = Number.isFinite(parsedHeader) ? parsedHeader + 20 : 96;
     const top = el.getBoundingClientRect().top + window.scrollY - offset;
+    isManualScrollRef.current = true;
+    if (manualScrollTimeoutRef.current) {
+      window.clearTimeout(manualScrollTimeoutRef.current);
+    }
     window.scrollTo({ top, behavior: 'smooth' });
     window.history.replaceState(null, '', `#${slug}`);
     setActiveSlug(slug);
+    manualScrollTimeoutRef.current = window.setTimeout(() => {
+      isManualScrollRef.current = false;
+    }, 700);
   };
 
   // --- Auto-scroll Minimap Indicator ---
@@ -55,12 +95,26 @@ const MinimapNav: React.FC<MinimapNavProps> = ({ toc }) => {
     }
   }, [activeSlug]);
 
+  useEffect(() => {
+    if (!activeSlug && filteredToc.length > 0) {
+      setActiveSlug(filteredToc[0].slug);
+    }
+  }, [filteredToc, activeSlug]);
 
-  if (!toc || toc.length < 3) return null; // Only show if enough sections
+
+  useEffect(() => {
+    return () => {
+      if (manualScrollTimeoutRef.current) {
+        window.clearTimeout(manualScrollTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  if (!filteredToc || filteredToc.length < 3) return null; // Only show if enough sections
 
   return (
     <div ref={minimapContainerRef} className="minimap-container">
-      {toc.map((item) => {
+      {filteredToc.map((item) => {
         // Different shapes and sizes based on heading level
         const getIndicatorClass = () => {
           const baseClass = 'minimap-indicator';

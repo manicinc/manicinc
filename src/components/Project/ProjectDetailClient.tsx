@@ -4,7 +4,7 @@
 'use client';
 
 // --- React and Next.js Imports ---
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -192,6 +192,7 @@ export default function ProjectDetailClient({ project, relatedProjects = [], toc
     const [isLoadingGithub, setIsLoadingGithub] = useState<boolean>(false); // Tracks if GitHub data is currently loading
     const [isGithubInsightsOpen, setIsGithubInsightsOpen] = useState<boolean>(true); // Controls visibility of the GitHub insights section
     const [showScrollTop, setShowScrollTop] = useState(false); // Controls visibility of the scroll-to-top button
+    const [activeImageIndex, setActiveImageIndex] = useState(0); // Selected image for gallery display
 
     // --- Determine Table of Contents ---
     // Prioritize TOC data passed within the main `project` object
@@ -329,9 +330,33 @@ export default function ProjectDetailClient({ project, relatedProjects = [], toc
     const displayStatus = status === 'ongoing' || status === 'concept' ? status : null; // Only show 'ongoing' or 'concept'
     const projectYear = date ? new Date(date).getFullYear() : null;
     const displayDescription = longDescription || description || "No detailed description available."; // Prefer long description
-    const primaryImageUrl = (images && images.length > 0) ? images[0] : image; // Get primary image (first from array or single image)
-    const galleryImages = images && images.length > 1 ? images.slice(1) : (image && images?.[0] !== image ? [image] : []); // Get remaining images for gallery
-    const hasVisuals = !!primaryImageUrl || (galleryImages && galleryImages.length > 0); // Check if there are any images to display
+    const imageSources = useMemo(() => {
+        const orderedSources: string[] = [];
+        const seen = new Set<string>();
+
+        const pushUnique = (src?: string | null) => {
+            if (!src) return;
+            if (seen.has(src)) return;
+            seen.add(src);
+            orderedSources.push(src);
+        };
+
+        pushUnique(image);
+        if (Array.isArray(images)) {
+            images.forEach(pushUnique);
+        } else if (typeof images === 'string') {
+            pushUnique(images);
+        }
+
+        return orderedSources;
+    }, [image, images]);
+
+    useEffect(() => {
+        setActiveImageIndex(0);
+    }, [project?.slug, imageSources.length]);
+
+    const activeImageSrc = imageSources[activeImageIndex] || null;
+    const hasVisuals = imageSources.length > 0; // Check if there are any images to display
 
     // --- Prepare GitHub Stats (Combine fetched data with project frontmatter fallbacks) ---
     const stars = githubMeta?.stargazers_count ?? getStatValue(project, 'Stars');
@@ -403,18 +428,40 @@ export default function ProjectDetailClient({ project, relatedProjects = [], toc
                     {hasVisuals ? (
                          <section className="project-visuals mb-10 md:mb-12 themed-box !p-0 bg-gradient-to-br from-bg-secondary via-bg-tertiary to-bg-secondary">
                             {/* Primary Image */}
-                             {primaryImageUrl && (
+                             {activeImageSrc && (
                                  <div className="main-image-wrapper">
-                                     <Image src={primaryImageUrl} alt={`${title} primary visual`} width={1280} height={720} className="visual-image" priority />
+                                     <Image
+                                        key={activeImageSrc}
+                                        src={activeImageSrc}
+                                        alt={`${title} visual`}
+                                        width={1280}
+                                        height={720}
+                                        className="visual-image"
+                                        priority={activeImageIndex === 0}
+                                     />
                                  </div>
                              )}
                              {/* Sub-Gallery */}
-                             {galleryImages && galleryImages.length > 0 && (
-                                 <div className="sub-gallery">
-                                     {galleryImages.map((imgSrc, idx) => (
-                                         <div key={idx} className="sub-gallery-item">
-                                              <Image src={imgSrc} alt={`${title} visual ${idx + 2}`} width={400} height={250} className="sub-gallery-image" loading="lazy"/>
-                                         </div>
+                             {imageSources.length > 1 && (
+                                 <div className="sub-gallery" role="list">
+                                     {imageSources.map((imgSrc, idx) => (
+                                         <button
+                                            key={`${imgSrc}-${idx}`}
+                                            type="button"
+                                            role="listitem"
+                                            className={`sub-gallery-item ${idx === activeImageIndex ? 'active' : ''}`}
+                                            onClick={() => setActiveImageIndex(idx)}
+                                            aria-current={idx === activeImageIndex}
+                                         >
+                                              <Image
+                                                 src={imgSrc}
+                                                 alt={`${title} thumbnail ${idx + 1}`}
+                                                 width={400}
+                                                 height={250}
+                                                 className="sub-gallery-image"
+                                                 loading={idx === activeImageIndex ? 'eager' : 'lazy'}
+                                              />
+                                         </button>
                                      ))}
                                  </div>
                              )}
@@ -666,8 +713,11 @@ export default function ProjectDetailClient({ project, relatedProjects = [], toc
                 .themed-box.project-visuals:not(:has(.sub-gallery)) .main-image-wrapper { border-radius: inherit; /* Apply to all corners if no sub-gallery */ }
                 .visual-image { display: block; width: 100%; height: 100%; object-fit: cover; }
                 .sub-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.8rem; padding: 0.8rem; border-top: 1px solid rgba(var(--accent-highlight-rgb, 184, 142, 98), 0.1); /* Added fallback RGB */ }
-                .sub-gallery-item { border-radius: var(--radius-base); overflow: hidden; border: 1px solid var(--bg-tertiary); transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: var(--shadow-low); cursor: pointer; }
+                .sub-gallery-item { border-radius: var(--radius-base); overflow: hidden; border: 1px solid var(--bg-tertiary); transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; box-shadow: var(--shadow-low); cursor: pointer; padding: 0; background: transparent; display: block; position: relative; }
                 .sub-gallery-item:hover { transform: scale(1.04); z-index: 2; box-shadow: var(--shadow-medium); }
+                .sub-gallery-item:focus-visible { outline: 2px solid var(--accent-highlight); outline-offset: 2px; }
+                .sub-gallery-item.active { border-color: var(--accent-highlight); box-shadow: var(--shadow-medium); transform: scale(1.02); }
+                .sub-gallery-item.active:hover { transform: scale(1.02); }
                 .sub-gallery-image { display: block; width: 100%; height: 100%; object-fit: cover; }
                 .placeholder-visuals { border: 2px dashed rgba(var(--accent-secondary-rgb, 126, 161, 150), 0.4); /* Added fallback RGB */ border-radius: var(--radius-xl); padding: 2rem; background: rgba(var(--bg-secondary-rgb, 245, 237, 225), 0.6); /* Added fallback RGB */ display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 300px; gap: 1rem; }
                 .placeholder-icon { color: var(--accent-secondary); opacity: 0.3; }
