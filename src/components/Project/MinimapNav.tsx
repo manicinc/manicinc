@@ -112,11 +112,19 @@ const MinimapNav: React.FC<MinimapNavProps> = ({ toc }) => {
     manualScrollHandlerRef.current = monitorScroll;
     window.addEventListener('scroll', monitorScroll, { passive: true });
 
-    manualScrollTimeoutRef.current = window.setTimeout(clearManualScroll, 2000);
+    manualScrollTimeoutRef.current = window.setTimeout(clearManualScroll, 3500);
 
     setActiveSlug(slug);
     window.history.replaceState(null, '', `#${slug}`);
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // Compute sticky header offset similar to observer rootMargin
+    const computedHeader = getComputedStyle(document.documentElement).getPropertyValue('--header-height');
+    const parsedHeader = parseInt(computedHeader.replace('px', '').trim(), 10);
+    const headerOffset = Number.isFinite(parsedHeader) ? parsedHeader + 24 : 110;
+
+    // Scroll accounting for header offset to avoid overshoot/bounce
+    const targetTop = window.scrollY + el.getBoundingClientRect().top - headerOffset;
+    window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
     requestAnimationFrame(() => monitorScroll());
   };
 
