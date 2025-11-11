@@ -169,7 +169,7 @@
   justify-content: space-between;
   padding: 0.8rem 1rem;
   border-bottom: 1px solid rgba(var(--accent-muted1-rgb), 0.3);
-  background-color: rgba(var(--bg-primary-rgb), 0.5);
+  background-color: transparent; /* Make header area transparent to blend with section */
   flex-shrink: 0;
 }
 

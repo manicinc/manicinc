@@ -9,7 +9,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 60px; /* Adjusted min-height */
+    min-height: 72px; /* Increased to fit links comfortably */
     transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, min-height 0.4s ease;
     /* Subtle Gradient + CSS Noise Texture */
      background-color: var(--bg-nav-dark-end, rgba(var(--bg-secondary-rgb), 0.95));

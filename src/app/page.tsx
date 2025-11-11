@@ -191,7 +191,7 @@ export default function HomePage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <div className="max-w-4xl mx-auto">
                         <img 
-                            src="/assets/projects/frame/frame-logo-green-transparent-4x.png" 
+                            src="/assets/projects/framers/frame-logo-transparent.png" 
                             alt="Frame.dev" 
                             className="w-32 md:w-40 mx-auto mb-6 opacity-90 hover:opacity-100 transition-opacity drop-shadow-lg"
                         />

@@ -147,7 +147,7 @@ html:not([data-theme-loaded="true"]) * {
   --accent-cool-light: #61dafb;
 
   /* --- Functional Variables --- */
-  --header-height: 60px;
+  --header-height: 72px;
   --sidebar-width: 300px;
   --sidebar-width-collapsed: 65px;
   --reading-mode-max-width: 700px;
