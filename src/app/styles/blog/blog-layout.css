@@ -242,6 +242,29 @@
   border-left-color: var(--accent-primary);
 }
 
+/* Ensure the top 'post title' entry stays seamless/transparent */
+.toc-link.top-link,
+.toc-item.top-link .toc-link {
+  background-color: transparent !important;
+  border-left-color: transparent !important;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.toc-link.top-link:hover,
+.toc-item.top-link .toc-link:hover {
+  background-color: rgba(var(--accent-highlight-rgb), 0.08);
+  color: var(--accent-highlight);
+}
+
+/* Even when active, keep the top link background transparent to avoid white blocks */
+.toc-link.top-link.active,
+.toc-item.top-link.active .toc-link {
+  background-color: transparent !important;
+  border-left-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
 /* TOC Numbering */
 .toc-list.numbered > .toc-item.level-1:not(.top-link) {
   counter-increment: toc-level-1;
