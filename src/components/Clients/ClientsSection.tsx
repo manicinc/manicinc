@@ -109,7 +109,7 @@ export default function ClientsSection() {
                                 {client.link ? (
                                     // --- Render as LINK ---
                                     // Use legacyBehavior + passHref with explicit <a> for robust styling/props
-                                    <Link href={client.link} passHref legacyBehavior>
+                                    <Link href={client.link} passHref legacyBehavior prefetch={false}>
                                         <a
                                             className={styles.clientCard} // Apply card styles to anchor
                                             target="_blank"

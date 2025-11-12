@@ -239,7 +239,7 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                 {/* Terminal & Contact */}
                 <div className={`terminal-contact-row compact-row ${animationClass('delay-300')}`}>
                     <div className="terminal-container"> <div className="terminal-header"><div className="terminal-buttons"><div className="terminal-button red"></div><div className="terminal-button yellow"></div><div className="terminal-button green"></div></div><div className="terminal-label">{/* ACTIVE_FEED */} <span className="ellipsis-anim"></span></div></div> <div ref={terminalRef} className="terminal-text-area"><span className="terminal-prompt">{'>'}</span><span className={`terminal-text ${isDecryptingTerminal ? 'decrypting' : ''}`} data-text={terminalText}>{terminalText}</span><span className={`terminal-cursor ${showCursor ? 'visible' : ''}`}>_</span></div> <div className="terminal-scanline"></div> </div>
-                    <Link href="/contact" className={`contact-btn ${animationClass('delay-350')} `}><span className="contact-btn-content">Establish Connection<ArrowUpRight className="contact-btn-icon" /></span><span className="contact-btn-glow"></span></Link>
+                    <Link prefetch={false} href="/contact" className={`contact-btn ${animationClass('delay-350')} `}><span className="contact-btn-content">Establish Connection<ArrowUpRight className="contact-btn-icon" /></span><span className="contact-btn-glow"></span></Link>
                 </div>
                 {/* Featured Items */}
                  {displayItems.length > 0 && (
@@ -253,7 +253,7 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                                           <div className="card-header"> {item.type === 'blog' ? <FileText size={14} className="icon" /> : <FolderGit2 size={14} className="icon" />} <span className="card-type-label">{item.type === 'blog' ? 'Log Entry' : 'Project File'}</span> {item.category && <div className="card-category-badge">{item.category.replace(/-/g, ' ')}</div>} </div>
                                           <div className="card-image-container"> 
                                             <div className="image-link-wrapper"> 
-                                              <Link href={url} aria-label={item.title} onClick={(e) => handleDecodeClick(e, url, isDraft)} className={`card-image-link ${isDraft ? 'draft-disabled' : ''}`} aria-disabled={isDraft} tabIndex={isDraft ? -1 : 0}> 
+                                              <Link prefetch={false} href={url} aria-label={item.title} onClick={(e) => handleDecodeClick(e, url, isDraft)} className={`card-image-link ${isDraft ? 'draft-disabled' : ''}`} aria-disabled={isDraft} tabIndex={isDraft ? -1 : 0}> 
                                                 {item.image ? (
                                                   <div className="card-image-wrapper">
                                                     <Image 
@@ -263,6 +263,7 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                                                       loading={index === 0 ? "eager" : "lazy"}
                                                       priority={index === 0}
                                                       fetchPriority={index === 0 ? "high" : "low"}
+                                                      decoding="async"
                                                       width={400}
                                                       height={300}
                                                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" 
@@ -278,9 +279,9 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                                             </div> 
                                           </div>
                                           <div className="card-content-area">
-                                               <h3 className={`card-title`}> {isDraft ? <span className="draft-title">{item.title}</span> : <Link href={url} className="animated-underline relative" onClick={(e) => handleDecodeClick(e, url, isDraft)}>{item.title}</Link>} </h3>
+                                               <h3 className={`card-title`}> {isDraft ? <span className="draft-title">{item.title}</span> : <Link prefetch={false} href={url} className="animated-underline relative" onClick={(e) => handleDecodeClick(e, url, isDraft)}>{item.title}</Link>} </h3>
                                                <p className={`card-excerpt ${isDraft ? 'draft-excerpt' : ''}`}>{item.excerpt || (isDraft ? "// Metadata Redacted..." : "// No Description Available...")}</p>
-                                               {!isDraft && ( <div className="card-link-wrapper"> <Link href={url} onClick={(e) => handleDecodeClick(e, url, isDraft)} className="decrypt-link group/link"> {decryptingLink === url ? ( <span className="decrypting-text"><svg className="decrypt-spinner"></svg>Decrypting...</span> ) : ( <> &gt; {item.type === 'blog' ? 'Read Entry' : 'View Project'} <ArrowRight size={12} className="card-arrow"/> </> )} </Link> </div> )}
+                                               {!isDraft && ( <div className="card-link-wrapper"> <Link prefetch={false} href={url} onClick={(e) => handleDecodeClick(e, url, isDraft)} className="decrypt-link group/link"> {decryptingLink === url ? ( <span className="decrypting-text"><svg className="decrypt-spinner"></svg>Decrypting...</span> ) : ( <> &gt; {item.type === 'blog' ? 'Read Entry' : 'View Project'} <ArrowRight size={12} className="card-arrow"/> </> )} </Link> </div> )}
                                            </div>
                                      </div>
                                  </div>
@@ -291,7 +292,7 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                  {/* Empty State */}
                  {(!displayItems || displayItems.length === 0) && mounted && ( <div className={`empty-state compact-area ${animationClass('delay-500')}`}><p>{/* NO FEATURED TRANSMISSIONS */}</p><p>[ Awaiting Signal Acquisition ]</p></div> )}
                 {/* Enter Archives Button */}
-                 <div className={`text-center mt-8 md:mt-10 ${animationClass('delay-700')}`}> <Link href="/blog" className="rabbit-trail group"> <span className="rabbit-trail-text">Enter the Archives</span> <div className="rabbit-hole-animation"> <Rabbit size={18} className="rabbit-icon"/> <div className="rabbit-hole-wrapper"><div className="rabbit-hole-spiral"></div><div className="rabbit-hole-spiral spiral-2"></div><div className="rabbit-hole-spiral spiral-3"></div><div className="rabbit-hole-center"></div></div> </div> </Link> </div>
+                 <div className={`text-center mt-8 md:mt-10 ${animationClass('delay-700')}`}> <Link prefetch={false} href="/blog" className="rabbit-trail group"> <span className="rabbit-trail-text">Enter the Archives</span> <div className="rabbit-hole-animation"> <Rabbit size={18} className="rabbit-icon"/> <div className="rabbit-hole-wrapper"><div className="rabbit-hole-spiral"></div><div className="rabbit-hole-spiral spiral-2"></div><div className="rabbit-hole-spiral spiral-3"></div><div className="rabbit-hole-center"></div></div> </div> </Link> </div>
             </div> {/* End Container */}
            
 
