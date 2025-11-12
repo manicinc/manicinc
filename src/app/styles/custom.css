@@ -397,6 +397,102 @@
 }
 
 
+/* --- Site-wide CTA Standardization --- */
+/* Primary CTA utility class */
+.btn-cta {
+  display: inline-grid;
+  place-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
+  will-change: transform;
+}
+/* Dark mode CTA (use vibrant brand gradient) */
+html.dark .btn-cta,
+html[class*="dark"] .btn-cta {
+  background: linear-gradient(135deg, var(--accent-burgundy), var(--accent-sage));
+  color: var(--text-on-accent);
+  box-shadow: 0 10px 24px rgba(var(--accent-burgundy-rgb, 182,104,128), 0.25);
+  border-color: rgba(var(--accent-burgundy-rgb, 182,104,128), 0.4);
+}
+/* Light mode CTA (use dark ink for stronger contrast) */
+html:not(.dark) .btn-cta {
+  background: linear-gradient(180deg, #121212, #1b1b1b);
+  color: #ffffff;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+  border-color: #121212;
+}
+.btn-cta:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.28);
+}
+.btn-cta:active { transform: translateY(0) scale(0.99); }
+
+/* Outline CTA variant */
+.btn-cta--outline {
+  background: transparent;
+  color: var(--accent-burgundy);
+  border-color: var(--accent-burgundy);
+  box-shadow: none;
+}
+html:not(.dark) .btn-cta--outline:hover {
+  background: #121212;
+  color: #ffffff;
+  border-color: #121212;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.22);
+}
+html.dark .btn-cta--outline:hover,
+html[class*="dark"] .btn-cta--outline:hover {
+  background: linear-gradient(135deg, var(--accent-burgundy), var(--accent-sage));
+  color: var(--text-on-accent);
+  border-color: transparent;
+  box-shadow: 0 12px 28px rgba(var(--accent-burgundy-rgb, 182,104,128), 0.28);
+}
+
+/* Heuristic override for common Tailwind CTA shapes (rounded-full + large padding) */
+/* Makes them dark in light mode for brand-consistent contrast */
+html:not(.dark) a[class*="rounded-full"][class*="px-8"][class*="py-4"],
+html:not(.dark) button[class*="rounded-full"][class*="px-8"][class*="py-4"],
+html:not(.dark) a[class*="rounded-full"][class*="px-6"][class*="py-3"],
+html:not(.dark) button[class*="rounded-full"][class*="px-6"][class*="py-3"] {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  border-color: #121212 !important;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25) !important;
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease !important;
+}
+html:not(.dark) a[class*="rounded-full"][class*="px-8"][class*="py-4"]:hover,
+html:not(.dark) button[class*="rounded-full"][class*="px-8"][class*="py-4"]:hover,
+html:not(.dark) a[class*="rounded-full"][class*="px-6"][class*="py-3"]:hover,
+html:not(.dark) button[class*="rounded-full"][class*="px-6"][class*="py-3"]:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.28) !important;
+}
+
+/* Specific tailwind color overrides to enforce dark CTAs in light mode */
+html:not(.dark) .bg-accent-burgundy {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  border-color: #121212 !important;
+}
+html:not(.dark) .bg-accent-burgundy:hover {
+  background-color: #1b1b1b !important;
+}
+/* Outline CTAs switching to dark on hover (e.g., border-accent-sage) */
+html:not(.dark) a[class*="border-"][class*="rounded-full"]:hover,
+html:not(.dark) button[class*="border-"][class*="rounded-full"]:hover {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  border-color: #121212 !important;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.22) !important;
+}
+
 /* ========================================
    Card Styles
    ======================================== */
