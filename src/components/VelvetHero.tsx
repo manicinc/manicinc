@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import velvetLogo from "../images/velvet-web-logo.png"
 import styles from './VelvetHero.module.css'
-import bgImage from "@/images/velvet-bg.jpg";
 import { motion } from "framer-motion";
 
 export default function VelvetHero() {

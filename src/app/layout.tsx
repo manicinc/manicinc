@@ -101,6 +101,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         )}
         <link rel="preconnect" href="https://eocampaign1.com" />
         <link rel="preconnect" href="https://images.weserv.nl" />
+        <link rel="preconnect" href="https://static.cloudflareinsights.com" />
         
         {/* Image preloading moved to individual pages for better performance */}
         
@@ -108,7 +109,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="dns-prefetch" href="https://cdn.sender.net" />
         <link rel="dns-prefetch" href="https://api.github.com" />
         <link rel="dns-prefetch" href="https://www.clarity.ms" />
-        <link rel="dns-prefetch" href="https://eocampaign1.com" />
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+        <link rel="dns-prefetch" href="https://res.cloudinary.com" />
         
         {/* Critical CSS for fast initial paint */}
         <style dangerouslySetInnerHTML={{ __html: `

@@ -24,7 +24,7 @@ const Footer = () => {
             relative overflow-hidden border-t
             py-14 px-6 md:px-16 lg:py-20
             text-[color:var(--text-secondary)]
-        `}>
+        `} style={{ contentVisibility: 'auto', containIntrinsicSize: '0 800px' }}>
             {/* Background texture */}
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Top section Grid - REVISED LAYOUT */}

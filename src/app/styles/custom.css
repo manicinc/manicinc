@@ -991,6 +991,51 @@ html:not(.dark) button[class*="border-"][class*="rounded-full"]:hover {
   border-radius: var(--radius-lg);
 }
 
+/* ========================================
+   Mobile Performance Optimizations
+   Reduce heavy filters and shadows on mobile
+   ======================================== */
+@media (max-width: 768px) {
+  /* Reduce blur intensity for better mobile performance */
+  .orb,
+  .orb-1,
+  .orb-2,
+  .orb-3 {
+    filter: blur(20px) !important;
+  }
+  
+  /* Simplify backdrop filters on mobile */
+  .card-glass,
+  .glass-effect {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  
+  .holographic-card {
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+  
+  /* Reduce box-shadow complexity on mobile */
+  .contact-btn {
+    box-shadow: 2px 2px 0 var(--accent-vibrant), 4px 4px 0 var(--accent-secondary) !important;
+  }
+  
+  .contact-btn:hover {
+    box-shadow: 1px 1px 0 var(--accent-vibrant), 2px 2px 0 var(--accent-secondary) !important;
+  }
+  
+  /* Disable expensive animations on mobile if reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .orb,
+    .orb-1,
+    .orb-2,
+    .orb-3 {
+      animation: none !important;
+    }
+  }
+}
+
 
 /* ========================================
    Animations & Keyframes

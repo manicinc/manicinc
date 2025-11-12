@@ -82,6 +82,13 @@
   transition: background 0.3s ease;
 }
 
+/* Reduce blur on mobile for better performance */
+@media (max-width: 768px) {
+  .bgGlow1 {
+    filter: blur(40px);
+  }
+}
+
 .bgGlow2 {
   position: absolute;
   bottom: -20%;
@@ -97,6 +104,13 @@
   filter: blur(80px);
   animation: float 25s ease-in-out infinite reverse;
   transition: background 0.3s ease;
+}
+
+/* Reduce blur on mobile for better performance */
+@media (max-width: 768px) {
+  .bgGlow2 {
+    filter: blur(30px);
+  }
 }
 
 @keyframes float {
