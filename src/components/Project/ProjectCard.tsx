@@ -37,6 +37,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     // Link wrapper handles navigation and hover states for non-drafts
     <Link
       href={linkUrl}
+      prefetch={false}
       className={`project-card-link group ${isDraft ? 'is-draft-link' : ''}`}
       title={isDraft ? `${title} (Coming Soon)` : `View project: ${title}`}
       aria-disabled={isDraft}

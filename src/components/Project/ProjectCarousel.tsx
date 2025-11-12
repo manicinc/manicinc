@@ -167,7 +167,7 @@ const ProjectCarousel: React.FC<Props> = ({ projects = [] }) => {
                   {/* Render image or placeholder regardless of draft status */}
                   {imageSrc ? (
                     <div className={`media-box ${isImageLoading ? 'loading' : ''}`}>
-                      <Image src={imageSrc} alt={`${activeProject.title} preview`} fill sizes="(max-width: 768px) 90vw, (max-width: 1200px) 40vw, 380px" style={{ objectFit: 'cover' }} className="media-img" onLoad={handleImageLoad} onError={handleImageError} priority={activeIndex === 0}/>
+                      <Image src={imageSrc} alt={`${activeProject.title} preview`} fill sizes="(max-width: 768px) 90vw, (max-width: 1200px) 40vw, 380px" style={{ objectFit: 'cover' }} className="media-img" onLoad={handleImageLoad} onError={handleImageError} priority={activeIndex === 0} loading={activeIndex === 0 ? 'eager' : 'lazy'} decoding="async"/>
                       {isImageLoading && <div className="media-loader"></div>}
                     </div>
                   ) : (
@@ -264,6 +264,7 @@ const ProjectCarousel: React.FC<Props> = ({ projects = [] }) => {
                     {/* Details Link - Original logic, disabled only if draft */}
                     <Link
                       href={isDraft ? '#' : linkUrl}
+                      prefetch={false}
                       className={`btn-glow slide-button ${isDraft ? 'disabled' : ''}`}
                       aria-disabled={isDraft}
                       onClick={e => { if (isDraft) e.preventDefault(); }}
