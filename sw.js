@@ -48,6 +48,20 @@ self.addEventListener('fetch', (event) => {
   // Skip non-GET requests
   if (request.method !== 'GET') return;
 
+  // Navigations: network-first to avoid stale HTML
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          const clone = response.clone();
+          caches.open(RUNTIME_CACHE).then((cache) => cache.put(request, clone));
+          return response;
+        })
+        .catch(() => caches.match(request) || caches.match('/offline'))
+    );
+    return;
+  }
+
   // Network-first for API calls
   if (url.pathname.startsWith('/api/')) {
     event.respondWith(
