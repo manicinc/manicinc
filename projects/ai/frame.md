@@ -31,13 +31,127 @@ team:
     link: "https://manic.agency"
 ---
 
-# Frame.dev — AI Development Framework
+<div class="frame-hero">
+  <img
+    src="/assets/projects/framers/frame-logo-no-subtitle.svg"
+    alt="Frame.dev logo"
+    class="frame-hero__logo"
+    decoding="async"
+    loading="eager"
+  />
+  <h1 class="frame-hero__title" aria-label="we are the framers">we are the framers</h1>
+  <p class="frame-hero__subtitle">
+    denoising the web and making ai agency emergent, adaptive, and permanent.
+  </p>
+  <a class="frame-hero__cta" href="https://frame.dev" target="_blank" rel="noopener">
+    explore frame.dev →
+  </a>
+</div>
 
-## Building the Future of AI-Powered Development
-
-Frame.dev represents our vision for the future of software development: AI-native tools that understand context, anticipate needs, and accelerate creation. Through our open-source projects—[AgentOS](https://agentos.sh) and [OpenStrand](https://openstrand.ai)—we're building the infrastructure for a new generation of AI-powered development experiences.
-
-> "The best interface is no interface. The best code is the code that writes itself." — Frame.dev Philosophy
+<style>
+  .frame-hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2.75rem 1rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .frame-hero__logo {
+    width: clamp(180px, 42vw, 380px);
+    height: auto;
+    opacity: 0.95;
+  }
+  @media (prefers-color-scheme: dark) {
+    .frame-hero__logo {
+      filter: brightness(0) invert(1) drop-shadow(0 0 24px rgba(255,255,255,0.15));
+      opacity: 1;
+    }
+  }
+  .frame-hero__title {
+    text-transform: lowercase;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0.35rem 0 0.25rem;
+    background: linear-gradient(120deg, var(--accent-vibrant, #8a5cff) 0%, var(--accent-cool, #00d4ff) 50%, var(--accent-primary, #19ffa6) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .frame-hero__subtitle {
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    color: var(--text-secondary, rgba(255,255,255,0.78));
+    margin: 0.25rem 0 0.9rem;
+    max-width: 56ch;
+  }
+  @media (prefers-color-scheme: light) {
+    .frame-hero__subtitle { color: #2a2a2a; }
+  }
+  .frame-hero__cta {
+    --h: 52px;
+    display: inline-grid;
+    place-items: center;
+    height: var(--h);
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--text-primary, #fff);
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(120% 120% at 0% 0%, rgba(138,92,255,0.18), rgba(0,212,255,0.08)),
+      linear-gradient(90deg, rgba(138,92,255,0.35), rgba(0,212,255,0.35));
+    border: 1px solid rgba(138,92,255,0.35);
+    backdrop-filter: blur(6px);
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    will-change: transform;
+  }
+  .frame-hero__cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(120deg, rgba(138,92,255,0.9), rgba(0,212,255,0.9), rgba(25,255,166,0.9));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: .6;
+    transition: opacity .25s ease;
+    z-index: -1;
+  }
+  .frame-hero__cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(138,92,255,0.7);
+    background:
+      radial-gradient(120% 120% at 100% 0%, rgba(25,255,166,0.2), rgba(0,212,255,0.12)),
+      linear-gradient(90deg, rgba(138,92,255,0.5), rgba(0,212,255,0.5));
+    box-shadow: 0 10px 32px rgba(0,212,255,0.25), 0 2px 8px rgba(25,255,166,0.2);
+  }
+  .frame-hero__cta:active { transform: translateY(0) scale(0.99); }
+  @media (prefers-color-scheme: light) {
+    .frame-hero__cta {
+      color: #0f0f0f;
+      border-color: rgba(138,92,255,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .frame-hero__cta:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+  }
+</style>
 
 ## The Frame.dev Ecosystem
 
