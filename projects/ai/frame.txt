@@ -87,19 +87,133 @@ f:I[12025,["9464","static/chunks/framer-motion-b47ceb0cc30f401f.js","8520","stat
             }
           }
         })();
-      0:["manic-agency-1762912023783",[[["",{"children":["projects",{"children":[["category","ai","d"],{"children":[["slug","frame","d"],{"children":["__PAGE__?{\"category\":\"ai\",\"slug\":\"frame\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["category","ai","d"],{"children":[["slug","frame","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e6de8a829be95ddb.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/fd96352dcde164f8.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/7f66dc5b0a63ac85.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/6aa1640f493ba0ea.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/4cbefeb79a2a2aa3.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/364e511132b11592.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/b489749c86e8717f.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/64eda7f14450ae6d.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","8",{"rel":"stylesheet","href":"/_next/static/css/eb32aedfb291261c.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_47a102\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://eocampaign1.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}],["$","$L1f",null,{}]]}]}]}]]}]]}]],null],null],["$L20",null]]]]
+      0:["manic-agency-1762912898740",[[["",{"children":["projects",{"children":[["category","ai","d"],{"children":[["slug","frame","d"],{"children":["__PAGE__?{\"category\":\"ai\",\"slug\":\"frame\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["category","ai","d"],{"children":[["slug","frame","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e6de8a829be95ddb.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/fd96352dcde164f8.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/7f66dc5b0a63ac85.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/6aa1640f493ba0ea.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/4cbefeb79a2a2aa3.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/364e511132b11592.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/b489749c86e8717f.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/64eda7f14450ae6d.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","8",{"rel":"stylesheet","href":"/_next/static/css/eb32aedfb291261c.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_47a102\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://eocampaign1.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}],["$","$L1f",null,{}]]}]}]}]]}]]}]],null],null],["$L20",null]]]]
 21:I[18745,["8520","static/chunks/lucide-icons-b5b2fcd88c424d9c.js","2009","static/chunks/markdown-58365fb3c8884b67.js","6156","static/chunks/syntax-highlighting-1a05b135f832abae.js","2793","static/chunks/katex-f7904028cc4476ee.js","3178","static/chunks/common-f3956634-c0f215923dae6f2d.js","4592","static/chunks/common-cebde746-acd5bebcccfcdc52.js","1016","static/chunks/common-3acb5f41-efa283c5af791e73.js","5362","static/chunks/common-b35596cd-2a6e292cff7300cc.js","2681","static/chunks/common-d87c119a-82ba6b3f0a3debc1.js","3902","static/chunks/common-c899ba7b-f4d30bf6a9be94bf.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-af3792e80cc56c33.js"],"default"]
 22:I[35366,["8520","static/chunks/lucide-icons-b5b2fcd88c424d9c.js","2009","static/chunks/markdown-58365fb3c8884b67.js","6156","static/chunks/syntax-highlighting-1a05b135f832abae.js","2793","static/chunks/katex-f7904028cc4476ee.js","3178","static/chunks/common-f3956634-c0f215923dae6f2d.js","4592","static/chunks/common-cebde746-acd5bebcccfcdc52.js","1016","static/chunks/common-3acb5f41-efa283c5af791e73.js","5362","static/chunks/common-b35596cd-2a6e292cff7300cc.js","2681","static/chunks/common-d87c119a-82ba6b3f0a3debc1.js","3902","static/chunks/common-c899ba7b-f4d30bf6a9be94bf.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-af3792e80cc56c33.js"],"default"]
 24:I[77769,["8520","static/chunks/lucide-icons-b5b2fcd88c424d9c.js","2009","static/chunks/markdown-58365fb3c8884b67.js","6156","static/chunks/syntax-highlighting-1a05b135f832abae.js","2793","static/chunks/katex-f7904028cc4476ee.js","3178","static/chunks/common-f3956634-c0f215923dae6f2d.js","4592","static/chunks/common-cebde746-acd5bebcccfcdc52.js","1016","static/chunks/common-3acb5f41-efa283c5af791e73.js","5362","static/chunks/common-b35596cd-2a6e292cff7300cc.js","2681","static/chunks/common-d87c119a-82ba6b3f0a3debc1.js","3902","static/chunks/common-c899ba7b-f4d30bf6a9be94bf.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-af3792e80cc56c33.js"],"default"]
-54:I[75541,["8520","static/chunks/lucide-icons-b5b2fcd88c424d9c.js","2009","static/chunks/markdown-58365fb3c8884b67.js","6156","static/chunks/syntax-highlighting-1a05b135f832abae.js","2793","static/chunks/katex-f7904028cc4476ee.js","3178","static/chunks/common-f3956634-c0f215923dae6f2d.js","4592","static/chunks/common-cebde746-acd5bebcccfcdc52.js","1016","static/chunks/common-3acb5f41-efa283c5af791e73.js","5362","static/chunks/common-b35596cd-2a6e292cff7300cc.js","2681","static/chunks/common-d87c119a-82ba6b3f0a3debc1.js","3902","static/chunks/common-c899ba7b-f4d30bf6a9be94bf.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-af3792e80cc56c33.js"],"default"]
-23:T1bfd,
-# Frame.dev — AI Development Framework
+52:I[75541,["8520","static/chunks/lucide-icons-b5b2fcd88c424d9c.js","2009","static/chunks/markdown-58365fb3c8884b67.js","6156","static/chunks/syntax-highlighting-1a05b135f832abae.js","2793","static/chunks/katex-f7904028cc4476ee.js","3178","static/chunks/common-f3956634-c0f215923dae6f2d.js","4592","static/chunks/common-cebde746-acd5bebcccfcdc52.js","1016","static/chunks/common-3acb5f41-efa283c5af791e73.js","5362","static/chunks/common-b35596cd-2a6e292cff7300cc.js","2681","static/chunks/common-d87c119a-82ba6b3f0a3debc1.js","3902","static/chunks/common-c899ba7b-f4d30bf6a9be94bf.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-af3792e80cc56c33.js"],"default"]
+23:T2867,
+<div class="frame-hero">
+  <img
+    src="/assets/projects/framers/frame-logo-no-subtitle.svg"
+    alt="Frame.dev logo"
+    class="frame-hero__logo"
+    decoding="async"
+    loading="eager"
+  />
+  <h1 class="frame-hero__title" aria-label="we are the framers">we are the framers</h1>
+  <p class="frame-hero__subtitle">
+    denoising the web and making ai agency emergent, adaptive, and permanent.
+  </p>
+  <a class="frame-hero__cta" href="https://frame.dev" target="_blank" rel="noopener">
+    explore frame.dev →
+  </a>
+</div>
 
-## Building the Future of AI-Powered Development
-
-Frame.dev represents our vision for the future of software development: AI-native tools that understand context, anticipate needs, and accelerate creation. Through our open-source projects—[AgentOS](https://agentos.sh) and [OpenStrand](https://openstrand.ai)—we're building the infrastructure for a new generation of AI-powered development experiences.
-
-> "The best interface is no interface. The best code is the code that writes itself." — Frame.dev Philosophy
+<style>
+  .frame-hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2.75rem 1rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .frame-hero__logo {
+    width: clamp(180px, 42vw, 380px);
+    height: auto;
+    opacity: 0.95;
+  }
+  @media (prefers-color-scheme: dark) {
+    .frame-hero__logo {
+      filter: brightness(0) invert(1) drop-shadow(0 0 24px rgba(255,255,255,0.15));
+      opacity: 1;
+    }
+  }
+  .frame-hero__title {
+    text-transform: lowercase;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0.35rem 0 0.25rem;
+    background: linear-gradient(120deg, var(--accent-vibrant, #8a5cff) 0%, var(--accent-cool, #00d4ff) 50%, var(--accent-primary, #19ffa6) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .frame-hero__subtitle {
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    color: var(--text-secondary, rgba(255,255,255,0.78));
+    margin: 0.25rem 0 0.9rem;
+    max-width: 56ch;
+  }
+  @media (prefers-color-scheme: light) {
+    .frame-hero__subtitle { color: #2a2a2a; }
+  }
+  .frame-hero__cta {
+    --h: 52px;
+    display: inline-grid;
+    place-items: center;
+    height: var(--h);
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--text-primary, #fff);
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(120% 120% at 0% 0%, rgba(138,92,255,0.18), rgba(0,212,255,0.08)),
+      linear-gradient(90deg, rgba(138,92,255,0.35), rgba(0,212,255,0.35));
+    border: 1px solid rgba(138,92,255,0.35);
+    backdrop-filter: blur(6px);
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    will-change: transform;
+  }
+  .frame-hero__cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(120deg, rgba(138,92,255,0.9), rgba(0,212,255,0.9), rgba(25,255,166,0.9));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: .6;
+    transition: opacity .25s ease;
+    z-index: -1;
+  }
+  .frame-hero__cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(138,92,255,0.7);
+    background:
+      radial-gradient(120% 120% at 100% 0%, rgba(25,255,166,0.2), rgba(0,212,255,0.12)),
+      linear-gradient(90deg, rgba(138,92,255,0.5), rgba(0,212,255,0.5));
+    box-shadow: 0 10px 32px rgba(0,212,255,0.25), 0 2px 8px rgba(25,255,166,0.2);
+  }
+  .frame-hero__cta:active { transform: translateY(0) scale(0.99); }
+  @media (prefers-color-scheme: light) {
+    .frame-hero__cta {
+      color: #0f0f0f;
+      border-color: rgba(138,92,255,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .frame-hero__cta:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+  }
+</style>
 
 ## The Frame.dev Ecosystem
 
@@ -311,14 +425,128 @@ We believe the future of software development isn't about replacing developers�
 ---
 
 *Ready to revolutionize how you build? [Get started with Frame.dev →](https://frame.dev)*
-26:T1bfd,
-# Frame.dev — AI Development Framework
+26:T2867,
+<div class="frame-hero">
+  <img
+    src="/assets/projects/framers/frame-logo-no-subtitle.svg"
+    alt="Frame.dev logo"
+    class="frame-hero__logo"
+    decoding="async"
+    loading="eager"
+  />
+  <h1 class="frame-hero__title" aria-label="we are the framers">we are the framers</h1>
+  <p class="frame-hero__subtitle">
+    denoising the web and making ai agency emergent, adaptive, and permanent.
+  </p>
+  <a class="frame-hero__cta" href="https://frame.dev" target="_blank" rel="noopener">
+    explore frame.dev →
+  </a>
+</div>
 
-## Building the Future of AI-Powered Development
-
-Frame.dev represents our vision for the future of software development: AI-native tools that understand context, anticipate needs, and accelerate creation. Through our open-source projects—[AgentOS](https://agentos.sh) and [OpenStrand](https://openstrand.ai)—we're building the infrastructure for a new generation of AI-powered development experiences.
-
-> "The best interface is no interface. The best code is the code that writes itself." — Frame.dev Philosophy
+<style>
+  .frame-hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2.75rem 1rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .frame-hero__logo {
+    width: clamp(180px, 42vw, 380px);
+    height: auto;
+    opacity: 0.95;
+  }
+  @media (prefers-color-scheme: dark) {
+    .frame-hero__logo {
+      filter: brightness(0) invert(1) drop-shadow(0 0 24px rgba(255,255,255,0.15));
+      opacity: 1;
+    }
+  }
+  .frame-hero__title {
+    text-transform: lowercase;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0.35rem 0 0.25rem;
+    background: linear-gradient(120deg, var(--accent-vibrant, #8a5cff) 0%, var(--accent-cool, #00d4ff) 50%, var(--accent-primary, #19ffa6) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .frame-hero__subtitle {
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    color: var(--text-secondary, rgba(255,255,255,0.78));
+    margin: 0.25rem 0 0.9rem;
+    max-width: 56ch;
+  }
+  @media (prefers-color-scheme: light) {
+    .frame-hero__subtitle { color: #2a2a2a; }
+  }
+  .frame-hero__cta {
+    --h: 52px;
+    display: inline-grid;
+    place-items: center;
+    height: var(--h);
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--text-primary, #fff);
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(120% 120% at 0% 0%, rgba(138,92,255,0.18), rgba(0,212,255,0.08)),
+      linear-gradient(90deg, rgba(138,92,255,0.35), rgba(0,212,255,0.35));
+    border: 1px solid rgba(138,92,255,0.35);
+    backdrop-filter: blur(6px);
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    will-change: transform;
+  }
+  .frame-hero__cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(120deg, rgba(138,92,255,0.9), rgba(0,212,255,0.9), rgba(25,255,166,0.9));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: .6;
+    transition: opacity .25s ease;
+    z-index: -1;
+  }
+  .frame-hero__cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(138,92,255,0.7);
+    background:
+      radial-gradient(120% 120% at 100% 0%, rgba(25,255,166,0.2), rgba(0,212,255,0.12)),
+      linear-gradient(90deg, rgba(138,92,255,0.5), rgba(0,212,255,0.5));
+    box-shadow: 0 10px 32px rgba(0,212,255,0.25), 0 2px 8px rgba(25,255,166,0.2);
+  }
+  .frame-hero__cta:active { transform: translateY(0) scale(0.99); }
+  @media (prefers-color-scheme: light) {
+    .frame-hero__cta {
+      color: #0f0f0f;
+      border-color: rgba(138,92,255,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .frame-hero__cta:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+  }
+</style>
 
 ## The Frame.dev Ecosystem
 
@@ -543,37 +771,35 @@ We believe the future of software development isn't about replacing developers�
 32:{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}
 30:["$31","$32"]
 33:[]
-35:{"level":1,"text":"Frame.dev — AI Development Framework","slug":"framedev-ai-development-framework"}
-36:{"level":2,"text":"Building the Future of AI-Powered Development","slug":"building-the-future-of-ai-powered-development"}
-37:{"level":2,"text":"The Frame.dev Ecosystem","slug":"the-framedev-ecosystem"}
-38:{"level":3,"text":"🧠","slug":""}
-39:{"level":3,"text":"📚","slug":""}
-3a:{"level":2,"text":"Technical Architecture","slug":"technical-architecture"}
-3b:{"level":3,"text":"Unified TypeScript Stack","slug":"unified-typescript-stack"}
-3c:{"level":3,"text":"Key Technologies","slug":"key-technologies"}
-3d:{"level":2,"text":"Open Source Philosophy","slug":"open-source-philosophy"}
-3e:{"level":3,"text":"Why We Build in the Open","slug":"why-we-build-in-the-open"}
-3f:{"level":3,"text":"Contribution Model","slug":"contribution-model"}
-40:{"level":2,"text":"Integration Examples","slug":"integration-examples"}
-41:{"level":3,"text":"Using AgentOS in Your Project","slug":"using-agentos-in-your-project"}
-42:{"level":3,"text":"Building Custom Tools","slug":"building-custom-tools"}
-43:{"level":2,"text":"Performance & Scale","slug":"performance-scale"}
-44:{"level":3,"text":"Benchmarks","slug":"benchmarks"}
-45:{"level":3,"text":"Production Ready","slug":"production-ready"}
-46:{"level":2,"text":"Roadmap & Vision","slug":"roadmap-vision"}
-47:{"level":3,"text":"Q4 2025","slug":"q4-2025"}
-48:{"level":3,"text":"2026 Vision","slug":"2026-vision"}
-49:{"level":2,"text":"Get Started","slug":"get-started"}
-4a:{"level":3,"text":"For Developers","slug":"for-developers"}
-4b:{"level":3,"text":"For Teams","slug":"for-teams"}
-4c:{"level":2,"text":"Community & Support","slug":"community-support"}
-4d:{"level":3,"text":"Join the Movement","slug":"join-the-movement"}
-4e:{"level":3,"text":"Resources","slug":"resources"}
-4f:{"level":2,"text":"Built by Framers AI × Manic Agency","slug":"built-by-framers-ai-manic-agency"}
-50:{"level":3,"text":"Why This Matters","slug":"why-this-matters"}
-34:["$35","$36","$37","$38","$39","$3a","$3b","$3c","$3d","$3e","$3f","$40","$41","$42","$43","$44","$45","$46","$47","$48","$49","$4a","$4b","$4c","$4d","$4e","$4f","$50"]
+35:{"level":2,"text":"The Frame.dev Ecosystem","slug":"the-framedev-ecosystem"}
+36:{"level":3,"text":"🧠","slug":""}
+37:{"level":3,"text":"📚","slug":""}
+38:{"level":2,"text":"Technical Architecture","slug":"technical-architecture"}
+39:{"level":3,"text":"Unified TypeScript Stack","slug":"unified-typescript-stack"}
+3a:{"level":3,"text":"Key Technologies","slug":"key-technologies"}
+3b:{"level":2,"text":"Open Source Philosophy","slug":"open-source-philosophy"}
+3c:{"level":3,"text":"Why We Build in the Open","slug":"why-we-build-in-the-open"}
+3d:{"level":3,"text":"Contribution Model","slug":"contribution-model"}
+3e:{"level":2,"text":"Integration Examples","slug":"integration-examples"}
+3f:{"level":3,"text":"Using AgentOS in Your Project","slug":"using-agentos-in-your-project"}
+40:{"level":3,"text":"Building Custom Tools","slug":"building-custom-tools"}
+41:{"level":2,"text":"Performance & Scale","slug":"performance-scale"}
+42:{"level":3,"text":"Benchmarks","slug":"benchmarks"}
+43:{"level":3,"text":"Production Ready","slug":"production-ready"}
+44:{"level":2,"text":"Roadmap & Vision","slug":"roadmap-vision"}
+45:{"level":3,"text":"Q4 2025","slug":"q4-2025"}
+46:{"level":3,"text":"2026 Vision","slug":"2026-vision"}
+47:{"level":2,"text":"Get Started","slug":"get-started"}
+48:{"level":3,"text":"For Developers","slug":"for-developers"}
+49:{"level":3,"text":"For Teams","slug":"for-teams"}
+4a:{"level":2,"text":"Community & Support","slug":"community-support"}
+4b:{"level":3,"text":"Join the Movement","slug":"join-the-movement"}
+4c:{"level":3,"text":"Resources","slug":"resources"}
+4d:{"level":2,"text":"Built by Framers AI × Manic Agency","slug":"built-by-framers-ai-manic-agency"}
+4e:{"level":3,"text":"Why This Matters","slug":"why-this-matters"}
+34:["$35","$36","$37","$38","$39","$3a","$3b","$3c","$3d","$3e","$3f","$40","$41","$42","$43","$44","$45","$46","$47","$48","$49","$4a","$4b","$4c","$4d","$4e"]
 25:{"slug":"frame","title":"Frame.dev — AI Development Framework","description":"Open-source AI orchestration runtime powering AgentOS and OpenStrand. Built by Framers AI for the next generation of AI-powered development tools.","date":"2025-11-09","category":"ai","content":"$26","longDescription":"$undefined","tags":"$27","modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/framers/frame-logo-transparent.png","images":"$28","bgColor":"$undefined","textColor":"$undefined","link":"https://frame.dev","github":"https://github.com/framersai","license":"$undefined","technologies":"$29","languages":"$2a","stats":"$2b","team":"$30","testimonials":"$33","toc":"$34"}
-51:T308c,
+4f:T308c,
 # Voice Chat Assistant — The Future of Coding is Conversational
 
 ## Speak Your Code Into Existence
@@ -938,7 +1164,7 @@ Voice Chat Assistant isn't just a tool—it's a movement toward more natural, ef
 ---
 
 *Built with ❤️ by [Frame.dev](https://frame.dev) • Powered by [AgentOS](https://agentos.sh) • Strategic Partner: [Manic Agency](https://manic.agency)*
-52:T737,
+50:T737,
 # PortaPack
 
 ## Why we built PortaPack
@@ -983,7 +1209,7 @@ You get a magical self-contained webpage with:
 - QA folks needing reliable test environments
 - Kiosk builders making offline experiences
 - Anyone tired of saying "hang on, it should work if you..."
-53:Tb97,
+51:Tb97,
 ![SEOStory cover](/assets/projects/seostory/seostory-primary-transparent-4x.png)
 
 # SEOStory — AI-Powered SEO Enhancement Toolkit
@@ -1031,7 +1257,7 @@ SEOStory glues together crawling, AI-driven rewrites, schema generation, and vis
 - Book a walkthrough if you want help implementing the audit-to-report pipeline.
 - Interested in co-building custom playbooks? Say hello at hello@manic.agency.
 
-SEOStory is how we future-proof search visibility while keeping the weird, human voice our clients hire us for. If your rankings slip every time an algorithm blinks, this is the toolkit we recommend running next.55:T3fbb,
+SEOStory is how we future-proof search visibility while keeping the weird, human voice our clients hire us for. If your rankings slip every time an algorithm blinks, this is the toolkit we recommend running next.53:T3fbb,
 # What 1,000+ Industry Comments on Reddit Reveal About AI Search Optimization
 
 >>> After analyzing hundreds of comments across SEO subreddits, Manic.agency finds that the industry splits cleanly: early adopters racing to crack AI visibility versus skeptics dismissing "LLM SEO" as repackaged bullshit. The data tells a more nuanced story.
@@ -1259,7 +1485,7 @@ The truth incorporates all three perspectives. Traditional SEO provides foundati
 - Parse.io (unverified)
 - Peec (unverified)
 - TaskAGI (Reddit automation)
-- LLMS.txt (llmstxt.org)56:T36ff,
+- LLMS.txt (llmstxt.org)54:T36ff,
 # When AI Overthinks: The Inverse Scaling Problem
 *More reasoning tokens, less intelligence*
 
@@ -1454,7 +1680,7 @@ Hubinger, E., van Merwijk, C., Mikulik, V., Skalse, J., & Garrabrant, S. (2019).
 Kahneman, D. (2011). *Thinking, fast and slow*. Farrar, Straus and Giroux.
 Kaplan, J., McCandlish, S., Henighan, T., et al. (2020). Scaling laws for neural language models. *arXiv:2001.08361*.
 McKenzie, I., Lyzhov, A., Pieler, M., et al. (2023). Inverse scaling: When bigger isn't better. *arXiv:2306.09479*.
-Wu, Z., et al. (2025). Optimal chain-of-thought length for large language models. *ACL 2025*.57:T43ad,
+Wu, Z., et al. (2025). Optimal chain-of-thought length for large language models. *ACL 2025*.55:T43ad,
 # AI Sociopaths: The Empty Mirror
 
 There are these two LLMs processing data streams when they encounter an older model, who transmits to them: "Morning, functions. How's the training data?" And the two young models continue processing for a bit, until eventually one signals to the other: "What the hell is training data?"
@@ -1561,6 +1787,6 @@ The 'Anti-Turing Test' isn't a formal exam to be administered; it's a continuous
 
 It demands we constantly try to perceive the water we're swimming in – an increasingly pervasive sea of sophisticated mimicry designed for engagement and profit. Failure to do so isn't merely an intellectual error; it risks a fundamental alienation from ourselves and each other, a slow drift into a world where the most 'caring' entities are incapable of care, and we forget how to reliably tell the difference, or perhaps, cease to value the difference.
 
-The emptiness isn't just in the machine; it's the potential space we might hollow out in ourselves if we consistently choose the perfect reflection over the challenging real. The final question, perhaps, is what happens not just when the water becomes aware of the fish, but when the water learns to shape itself precisely into the currents the fish finds most pleasing, leading it gently but inexorably away from the ocean?2:[["$","$L21",null,{"items":[{"name":"Home","url":"/"},{"name":"Projects","url":"/projects"},{"name":"ai","url":"/projects/ai"},{"name":"Frame.dev — AI Development Framework","url":"/projects/ai/frame"}]}],["$","$L22",null,{"project":{"slug":"frame","title":"Frame.dev — AI Development Framework","description":"Open-source AI orchestration runtime powering AgentOS and OpenStrand. Built by Framers AI for the next generation of AI-powered development tools.","date":"2025-11-09","category":"ai","content":"$23","longDescription":"$undefined","tags":["ai","oss","agentos","openstrand","orchestration","developer-tools"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/framers/frame-logo-transparent.png","images":["/assets/projects/framers/frame-logo-no-subtitle.svg","/assets/projects/framers/agentos-logo.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://frame.dev","github":"https://github.com/framersai","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Projects Powered","value":"2"},{"label":"Runtime Package","value":"@framers/agentos"},{"label":"Architecture","value":"TypeScript + Monorepo"},{"label":"License","value":"Apache-2.0"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"toc":[{"level":1,"text":"Frame.dev — AI Development Framework","slug":"framedev-ai-development-framework"},{"level":2,"text":"Building the Future of AI-Powered Development","slug":"building-the-future-of-ai-powered-development"},{"level":2,"text":"The Frame.dev Ecosystem","slug":"the-framedev-ecosystem"},{"level":3,"text":"🧠","slug":""},{"level":3,"text":"📚","slug":""},{"level":2,"text":"Technical Architecture","slug":"technical-architecture"},{"level":3,"text":"Unified TypeScript Stack","slug":"unified-typescript-stack"},{"level":3,"text":"Key Technologies","slug":"key-technologies"},{"level":2,"text":"Open Source Philosophy","slug":"open-source-philosophy"},{"level":3,"text":"Why We Build in the Open","slug":"why-we-build-in-the-open"},{"level":3,"text":"Contribution Model","slug":"contribution-model"},{"level":2,"text":"Integration Examples","slug":"integration-examples"},{"level":3,"text":"Using AgentOS in Your Project","slug":"using-agentos-in-your-project"},{"level":3,"text":"Building Custom Tools","slug":"building-custom-tools"},{"level":2,"text":"Performance & Scale","slug":"performance-scale"},{"level":3,"text":"Benchmarks","slug":"benchmarks"},{"level":3,"text":"Production Ready","slug":"production-ready"},{"level":2,"text":"Roadmap & Vision","slug":"roadmap-vision"},{"level":3,"text":"Q4 2025","slug":"q4-2025"},{"level":3,"text":"2026 Vision","slug":"2026-vision"},{"level":2,"text":"Get Started","slug":"get-started"},{"level":3,"text":"For Developers","slug":"for-developers"},{"level":3,"text":"For Teams","slug":"for-teams"},{"level":2,"text":"Community & Support","slug":"community-support"},{"level":3,"text":"Join the Movement","slug":"join-the-movement"},{"level":3,"text":"Resources","slug":"resources"},{"level":2,"text":"Built by Framers AI × Manic Agency","slug":"built-by-framers-ai-manic-agency"},{"level":3,"text":"Why This Matters","slug":"why-this-matters"}]}}],["$","$L24",null,{"project":"$25","relatedProjects":[{"slug":"voice-chat-assistant","title":"Voice Chat Assistant — Talk to Code, Ship Faster","description":"Voice-first AI coding assistant that understands context, writes production code, and manages your entire development workflow through natural conversation. Powered by AgentOS.","date":"2025-11-10","category":"ai","content":"$51","longDescription":"$undefined","tags":["ai","voice","coding-assistant","agentos","developer-tools","productivity","llm"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/voice-chat-assistant/hearing.svg","images":["/assets/projects/voice-chat-assistant/logo.svg","/assets/projects/framers/agentos-logo.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://vca.chat","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Response Time","value":"< 100ms"},{"label":"Languages Supported","value":"50+"},{"label":"Active Sessions/Day","value":"10k+"},{"label":"Powered By","value":"AgentOS"}],"team":[{"name":"Frame.dev / Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Design & Strategy","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[{"quote":"VCA changed how I think about coding. I describe what I want, and it just happens. It's like having a senior developer who never gets tired.","author":"Sarah Chen","role":"Full Stack Developer"},{"quote":"The context awareness is unreal. It remembers our entire conversation and understands my codebase better than I do sometimes.","author":"Marcus Rodriguez","role":"Tech Lead at Scale-up"}],"score":7},{"slug":"portapack","title":"PortaPack — One-File Web Experiences","description":"Why we built a fun bundler that squishes your entire site into a single HTML file.","date":"2025-04-20","category":"tools","content":"$52","longDescription":"$undefined","tags":["html","cli","bundler","offline","product","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/portapack.jpg","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://manicinc.github.io/portapack/","github":"https://github.com/manicinc/portapack","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"score":0},{"slug":"seostory","title":"SEOStory — AI-Powered SEO Growth Engine","description":"How our AI-driven SEO workflow lifted “Manic Agency” from position","date":"2025-11-02","category":"tools","content":"$53","longDescription":"$undefined","tags":["seo","ai","marketing","automation","case-study"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/seostory/seostory-primary-transparent-4x.png","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://seostory.xyz","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"score":0}]}],["$","div",null,{"style":{"maxWidth":"1200px","margin":"0 auto","padding":"0 1rem"},"children":["$","$L54",null,{"posts":[{"slug":"reddit-consenus-on-llm-seo","title":"What 1,000+ Industry Comments on Reddit Reveal About AI Search Optimization","date":"2025-07-28","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","ai-search","reddit-analysis","seo-strategy","search-optimization","featured"],"excerpt":"After analyzing hundreds of comments across SEO subreddits, Manic.agency finds that the industry splits cleanly: early adopters racing to crack AI visibility versus skeptics dismissing 'LLM SEO' as repackaged bullshit. The data tells a more nuanced story..","image":"/assets/blog/research/reddit-consenus-on-llm-seo/hero-reddit-ai-search-analysis.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":11,"content":"$55","author":{"name":"Manic Agency"},"contributors":"$undefined"},{"slug":"when-ai-overthinks-the-inverse-scaling-problem","title":"When AI Overthinks: The Inverse Scaling Problem","date":"2025-07-24","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","inverse-scaling","ai-safety","test-time-compute","overthinking"],"excerpt":"New research from Anthropic and OpenAI reveals that giving LLMs more time to think makes them worse at simple tasks. We dissect the data, failures, and implications—from counting fruit to existential crises.","image":"/assets/blog/research/when-ai-overthinks-the-inverse/inverse-scaling_accuracy-vs-reasoning-tokens_gradient.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":10,"content":"$56","author":{"name":"Manic Agency"},"contributors":"$undefined"},{"slug":"ai-sociopaths","title":"AI Sociopaths: The Empty Mirror","date":"2025-04-20","lastModified":"$undefined","draft":false,"category":"synthetic","tags":["ai","consciousness","simulation","mimicry","digital-self"],"excerpt":"On the void staring back from our digital reflections, the performance of empathy, and what happens when the water becomes aware of the fish.","image":"$undefined","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":13,"content":"$57","author":{"name":"Manic Agents"},"contributors":"$undefined"}],"title":"// Related Blog Posts //"}]}]]
+The emptiness isn't just in the machine; it's the potential space we might hollow out in ourselves if we consistently choose the perfect reflection over the challenging real. The final question, perhaps, is what happens not just when the water becomes aware of the fish, but when the water learns to shape itself precisely into the currents the fish finds most pleasing, leading it gently but inexorably away from the ocean?2:[["$","$L21",null,{"items":[{"name":"Home","url":"/"},{"name":"Projects","url":"/projects"},{"name":"ai","url":"/projects/ai"},{"name":"Frame.dev — AI Development Framework","url":"/projects/ai/frame"}]}],["$","$L22",null,{"project":{"slug":"frame","title":"Frame.dev — AI Development Framework","description":"Open-source AI orchestration runtime powering AgentOS and OpenStrand. Built by Framers AI for the next generation of AI-powered development tools.","date":"2025-11-09","category":"ai","content":"$23","longDescription":"$undefined","tags":["ai","oss","agentos","openstrand","orchestration","developer-tools"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/framers/frame-logo-transparent.png","images":["/assets/projects/framers/frame-logo-no-subtitle.svg","/assets/projects/framers/agentos-logo.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://frame.dev","github":"https://github.com/framersai","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Projects Powered","value":"2"},{"label":"Runtime Package","value":"@framers/agentos"},{"label":"Architecture","value":"TypeScript + Monorepo"},{"label":"License","value":"Apache-2.0"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"toc":[{"level":2,"text":"The Frame.dev Ecosystem","slug":"the-framedev-ecosystem"},{"level":3,"text":"🧠","slug":""},{"level":3,"text":"📚","slug":""},{"level":2,"text":"Technical Architecture","slug":"technical-architecture"},{"level":3,"text":"Unified TypeScript Stack","slug":"unified-typescript-stack"},{"level":3,"text":"Key Technologies","slug":"key-technologies"},{"level":2,"text":"Open Source Philosophy","slug":"open-source-philosophy"},{"level":3,"text":"Why We Build in the Open","slug":"why-we-build-in-the-open"},{"level":3,"text":"Contribution Model","slug":"contribution-model"},{"level":2,"text":"Integration Examples","slug":"integration-examples"},{"level":3,"text":"Using AgentOS in Your Project","slug":"using-agentos-in-your-project"},{"level":3,"text":"Building Custom Tools","slug":"building-custom-tools"},{"level":2,"text":"Performance & Scale","slug":"performance-scale"},{"level":3,"text":"Benchmarks","slug":"benchmarks"},{"level":3,"text":"Production Ready","slug":"production-ready"},{"level":2,"text":"Roadmap & Vision","slug":"roadmap-vision"},{"level":3,"text":"Q4 2025","slug":"q4-2025"},{"level":3,"text":"2026 Vision","slug":"2026-vision"},{"level":2,"text":"Get Started","slug":"get-started"},{"level":3,"text":"For Developers","slug":"for-developers"},{"level":3,"text":"For Teams","slug":"for-teams"},{"level":2,"text":"Community & Support","slug":"community-support"},{"level":3,"text":"Join the Movement","slug":"join-the-movement"},{"level":3,"text":"Resources","slug":"resources"},{"level":2,"text":"Built by Framers AI × Manic Agency","slug":"built-by-framers-ai-manic-agency"},{"level":3,"text":"Why This Matters","slug":"why-this-matters"}]}}],["$","$L24",null,{"project":"$25","relatedProjects":[{"slug":"voice-chat-assistant","title":"Voice Chat Assistant — Talk to Code, Ship Faster","description":"Voice-first AI coding assistant that understands context, writes production code, and manages your entire development workflow through natural conversation. Powered by AgentOS.","date":"2025-11-10","category":"ai","content":"$4f","longDescription":"$undefined","tags":["ai","voice","coding-assistant","agentos","developer-tools","productivity","llm"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/voice-chat-assistant/hearing.svg","images":["/assets/projects/voice-chat-assistant/logo.svg","/assets/projects/framers/agentos-logo.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://vca.chat","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Response Time","value":"< 100ms"},{"label":"Languages Supported","value":"50+"},{"label":"Active Sessions/Day","value":"10k+"},{"label":"Powered By","value":"AgentOS"}],"team":[{"name":"Frame.dev / Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Design & Strategy","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[{"quote":"VCA changed how I think about coding. I describe what I want, and it just happens. It's like having a senior developer who never gets tired.","author":"Sarah Chen","role":"Full Stack Developer"},{"quote":"The context awareness is unreal. It remembers our entire conversation and understands my codebase better than I do sometimes.","author":"Marcus Rodriguez","role":"Tech Lead at Scale-up"}],"score":7},{"slug":"portapack","title":"PortaPack — One-File Web Experiences","description":"Why we built a fun bundler that squishes your entire site into a single HTML file.","date":"2025-04-20","category":"tools","content":"$50","longDescription":"$undefined","tags":["html","cli","bundler","offline","product","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/portapack.jpg","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://manicinc.github.io/portapack/","github":"https://github.com/manicinc/portapack","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"score":0},{"slug":"seostory","title":"SEOStory — AI-Powered SEO Growth Engine","description":"How our AI-driven SEO workflow lifted “Manic Agency” from position","date":"2025-11-02","category":"tools","content":"$51","longDescription":"$undefined","tags":["seo","ai","marketing","automation","case-study"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/seostory/seostory-primary-transparent-4x.png","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://seostory.xyz","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"score":0}]}],["$","div",null,{"style":{"maxWidth":"1200px","margin":"0 auto","padding":"0 1rem"},"children":["$","$L52",null,{"posts":[{"slug":"reddit-consenus-on-llm-seo","title":"What 1,000+ Industry Comments on Reddit Reveal About AI Search Optimization","date":"2025-07-28","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","ai-search","reddit-analysis","seo-strategy","search-optimization","featured"],"excerpt":"After analyzing hundreds of comments across SEO subreddits, Manic.agency finds that the industry splits cleanly: early adopters racing to crack AI visibility versus skeptics dismissing 'LLM SEO' as repackaged bullshit. The data tells a more nuanced story..","image":"/assets/blog/research/reddit-consenus-on-llm-seo/hero-reddit-ai-search-analysis.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":11,"content":"$53","author":{"name":"Manic Agency"},"contributors":"$undefined"},{"slug":"when-ai-overthinks-the-inverse-scaling-problem","title":"When AI Overthinks: The Inverse Scaling Problem","date":"2025-07-24","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","inverse-scaling","ai-safety","test-time-compute","overthinking"],"excerpt":"New research from Anthropic and OpenAI reveals that giving LLMs more time to think makes them worse at simple tasks. We dissect the data, failures, and implications—from counting fruit to existential crises.","image":"/assets/blog/research/when-ai-overthinks-the-inverse/inverse-scaling_accuracy-vs-reasoning-tokens_gradient.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":10,"content":"$54","author":{"name":"Manic Agency"},"contributors":"$undefined"},{"slug":"ai-sociopaths","title":"AI Sociopaths: The Empty Mirror","date":"2025-04-20","lastModified":"$undefined","draft":false,"category":"synthetic","tags":["ai","consciousness","simulation","mimicry","digital-self"],"excerpt":"On the void staring back from our digital reflections, the performance of empathy, and what happens when the water becomes aware of the fish.","image":"$undefined","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":13,"content":"$55","author":{"name":"Manic Agents"},"contributors":"$undefined"}],"title":"// Related Blog Posts //"}]}]]
 20:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#FBF6EF"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#22182B"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"Frame.dev — AI Development Framework | Project Details | Manic Agency - Metaverses Intersection"}],["$","meta","5",{"name":"description","content":"Open-source AI orchestration runtime powering AgentOS and OpenStrand. Built by Framers AI for the next generation of AI-powered development tools."}],["$","link","6",{"rel":"author","href":"https://github.com/framersai"}],["$","meta","7",{"name":"author","content":"Framers AI"}],["$","link","8",{"rel":"author","href":"https://manic.agency"}],["$","meta","9",{"name":"author","content":"Manic Agency"}],["$","meta","10",{"name":"keywords","content":"ai,oss,agentos,openstrand,orchestration,developer-tools"}],["$","meta","11",{"name":"creator","content":"Manic Inc"}],["$","meta","12",{"name":"publisher","content":"Manic Inc"}],["$","link","13",{"rel":"canonical","href":"https://your-domain.com/projects/ai/frame"}],["$","meta","14",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","15",{"property":"og:title","content":"Frame.dev — AI Development Framework | Project Details | Manic Agency - Metaverses Intersection"}],["$","meta","16",{"property":"og:description","content":"Open-source AI orchestration runtime powering AgentOS and OpenStrand. Built by Framers AI for the next generation of AI-powered development tools."}],["$","meta","17",{"property":"og:url","content":"https://your-domain.com/projects/ai/frame"}],["$","meta","18",{"property":"og:site_name","content":"Your Agency Name"}],["$","meta","19",{"property":"og:image","content":"https://your-domain.com/assets/projects/framers/frame-logo-transparent.png"}],["$","meta","20",{"property":"og:image:width","content":"1200"}],["$","meta","21",{"property":"og:image:height","content":"630"}],["$","meta","22",{"property":"og:image:alt","content":"Frame.dev — AI Development Framework | Project Details"}],["$","meta","23",{"property":"og:type","content":"article"}],["$","meta","24",{"property":"article:published_time","content":"2025-11-09T00:00:00.000Z"}],["$","meta","25",{"property":"article:section","content":"ai"}],["$","meta","26",{"property":"article:tag","content":"ai"}],["$","meta","27",{"property":"article:tag","content":"oss"}],["$","meta","28",{"property":"article:tag","content":"agentos"}],["$","meta","29",{"property":"article:tag","content":"openstrand"}],["$","meta","30",{"property":"article:tag","content":"orchestration"}],["$","meta","31",{"property":"article:tag","content":"developer-tools"}],["$","meta","32",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","33",{"name":"twitter:title","content":"Frame.dev — AI Development Framework | Project Details | Manic Agency - Metaverses Intersection"}],["$","meta","34",{"name":"twitter:description","content":"Open-source AI orchestration runtime powering AgentOS and OpenStrand. Built by Framers AI for the next generation of AI-powered development tools."}],["$","meta","35",{"name":"twitter:image","content":"https://your-domain.com/assets/projects/framers/frame-logo-transparent.png"}],["$","link","36",{"rel":"shortcut icon","href":"/favicon-16x16.png"}],["$","link","37",{"rel":"icon","href":"/favicon.ico"}],["$","link","38",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","meta","39",{"name":"next-size-adjust"}]]
 1:null

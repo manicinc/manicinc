@@ -87,7 +87,7 @@ f:I[12025,["9464","static/chunks/framer-motion-b47ceb0cc30f401f.js","8520","stat
             }
           }
         })();
-      0:["manic-agency-1762912023783",[[["",{"children":["blog",{"children":[["category","research","d"],{"children":[["slug","reddit-consenus-on-llm-seo","d"],{"children":["__PAGE__?{\"category\":\"research\",\"slug\":\"reddit-consenus-on-llm-seo\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["category","research","d"],{"children":[["slug","reddit-consenus-on-llm-seo","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e6de8a829be95ddb.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/fd96352dcde164f8.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/7f66dc5b0a63ac85.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/6aa1640f493ba0ea.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/4cbefeb79a2a2aa3.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/364e511132b11592.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/b489749c86e8717f.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/64eda7f14450ae6d.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","8",{"rel":"stylesheet","href":"/_next/static/css/eb32aedfb291261c.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_47a102\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://eocampaign1.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}],["$","$L1f",null,{}]]}]}]}]]}]]}]],null],null],["$L20",null]]]]
+      0:["manic-agency-1762912898740",[[["",{"children":["blog",{"children":[["category","research","d"],{"children":[["slug","reddit-consenus-on-llm-seo","d"],{"children":["__PAGE__?{\"category\":\"research\",\"slug\":\"reddit-consenus-on-llm-seo\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["category","research","d"],{"children":[["slug","reddit-consenus-on-llm-seo","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e6de8a829be95ddb.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/fd96352dcde164f8.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/7f66dc5b0a63ac85.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/6aa1640f493ba0ea.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/4cbefeb79a2a2aa3.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/364e511132b11592.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/b489749c86e8717f.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/64eda7f14450ae6d.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","8",{"rel":"stylesheet","href":"/_next/static/css/eb32aedfb291261c.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_47a102\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://eocampaign1.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}],["$","$L1f",null,{}]]}]}]}]]}]]}]],null],null],["$L20",null]]]]
 21:I[54680,["9464","static/chunks/framer-motion-b47ceb0cc30f401f.js","8520","static/chunks/lucide-icons-b5b2fcd88c424d9c.js","2009","static/chunks/markdown-58365fb3c8884b67.js","2793","static/chunks/katex-f7904028cc4476ee.js","3790","static/chunks/forms-58e9d833fc9c037f.js","3178","static/chunks/common-f3956634-c0f215923dae6f2d.js","4592","static/chunks/common-cebde746-acd5bebcccfcdc52.js","1016","static/chunks/common-3acb5f41-efa283c5af791e73.js","5362","static/chunks/common-b35596cd-2a6e292cff7300cc.js","2681","static/chunks/common-d87c119a-82ba6b3f0a3debc1.js","3902","static/chunks/common-c899ba7b-f4d30bf6a9be94bf.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-13a2924aa733bcca.js"],"default"]
 22:I[18745,["9464","static/chunks/framer-motion-b47ceb0cc30f401f.js","8520","static/chunks/lucide-icons-b5b2fcd88c424d9c.js","2009","static/chunks/markdown-58365fb3c8884b67.js","2793","static/chunks/katex-f7904028cc4476ee.js","3790","static/chunks/forms-58e9d833fc9c037f.js","3178","static/chunks/common-f3956634-c0f215923dae6f2d.js","4592","static/chunks/common-cebde746-acd5bebcccfcdc52.js","1016","static/chunks/common-3acb5f41-efa283c5af791e73.js","5362","static/chunks/common-b35596cd-2a6e292cff7300cc.js","2681","static/chunks/common-d87c119a-82ba6b3f0a3debc1.js","3902","static/chunks/common-c899ba7b-f4d30bf6a9be94bf.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-13a2924aa733bcca.js"],"default"]
 23:I[94058,["9464","static/chunks/framer-motion-b47ceb0cc30f401f.js","8520","static/chunks/lucide-icons-b5b2fcd88c424d9c.js","2009","static/chunks/markdown-58365fb3c8884b67.js","2793","static/chunks/katex-f7904028cc4476ee.js","3790","static/chunks/forms-58e9d833fc9c037f.js","3178","static/chunks/common-f3956634-c0f215923dae6f2d.js","4592","static/chunks/common-cebde746-acd5bebcccfcdc52.js","1016","static/chunks/common-3acb5f41-efa283c5af791e73.js","5362","static/chunks/common-b35596cd-2a6e292cff7300cc.js","2681","static/chunks/common-d87c119a-82ba6b3f0a3debc1.js","3902","static/chunks/common-c899ba7b-f4d30bf6a9be94bf.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-13a2924aa733bcca.js"],"default"]
@@ -954,14 +954,128 @@ Voice Chat Assistant isn't just a tool—it's a movement toward more natural, ef
 ---
 
 *Built with ❤️ by [Frame.dev](https://frame.dev) • Powered by [AgentOS](https://agentos.sh) • Strategic Partner: [Manic Agency](https://manic.agency)*
-4e:T1bfd,
-# Frame.dev — AI Development Framework
+4e:T2867,
+<div class="frame-hero">
+  <img
+    src="/assets/projects/framers/frame-logo-no-subtitle.svg"
+    alt="Frame.dev logo"
+    class="frame-hero__logo"
+    decoding="async"
+    loading="eager"
+  />
+  <h1 class="frame-hero__title" aria-label="we are the framers">we are the framers</h1>
+  <p class="frame-hero__subtitle">
+    denoising the web and making ai agency emergent, adaptive, and permanent.
+  </p>
+  <a class="frame-hero__cta" href="https://frame.dev" target="_blank" rel="noopener">
+    explore frame.dev →
+  </a>
+</div>
 
-## Building the Future of AI-Powered Development
-
-Frame.dev represents our vision for the future of software development: AI-native tools that understand context, anticipate needs, and accelerate creation. Through our open-source projects—[AgentOS](https://agentos.sh) and [OpenStrand](https://openstrand.ai)—we're building the infrastructure for a new generation of AI-powered development experiences.
-
-> "The best interface is no interface. The best code is the code that writes itself." — Frame.dev Philosophy
+<style>
+  .frame-hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2.75rem 1rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .frame-hero__logo {
+    width: clamp(180px, 42vw, 380px);
+    height: auto;
+    opacity: 0.95;
+  }
+  @media (prefers-color-scheme: dark) {
+    .frame-hero__logo {
+      filter: brightness(0) invert(1) drop-shadow(0 0 24px rgba(255,255,255,0.15));
+      opacity: 1;
+    }
+  }
+  .frame-hero__title {
+    text-transform: lowercase;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0.35rem 0 0.25rem;
+    background: linear-gradient(120deg, var(--accent-vibrant, #8a5cff) 0%, var(--accent-cool, #00d4ff) 50%, var(--accent-primary, #19ffa6) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .frame-hero__subtitle {
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    color: var(--text-secondary, rgba(255,255,255,0.78));
+    margin: 0.25rem 0 0.9rem;
+    max-width: 56ch;
+  }
+  @media (prefers-color-scheme: light) {
+    .frame-hero__subtitle { color: #2a2a2a; }
+  }
+  .frame-hero__cta {
+    --h: 52px;
+    display: inline-grid;
+    place-items: center;
+    height: var(--h);
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--text-primary, #fff);
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(120% 120% at 0% 0%, rgba(138,92,255,0.18), rgba(0,212,255,0.08)),
+      linear-gradient(90deg, rgba(138,92,255,0.35), rgba(0,212,255,0.35));
+    border: 1px solid rgba(138,92,255,0.35);
+    backdrop-filter: blur(6px);
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    will-change: transform;
+  }
+  .frame-hero__cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(120deg, rgba(138,92,255,0.9), rgba(0,212,255,0.9), rgba(25,255,166,0.9));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: .6;
+    transition: opacity .25s ease;
+    z-index: -1;
+  }
+  .frame-hero__cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(138,92,255,0.7);
+    background:
+      radial-gradient(120% 120% at 100% 0%, rgba(25,255,166,0.2), rgba(0,212,255,0.12)),
+      linear-gradient(90deg, rgba(138,92,255,0.5), rgba(0,212,255,0.5));
+    box-shadow: 0 10px 32px rgba(0,212,255,0.25), 0 2px 8px rgba(25,255,166,0.2);
+  }
+  .frame-hero__cta:active { transform: translateY(0) scale(0.99); }
+  @media (prefers-color-scheme: light) {
+    .frame-hero__cta {
+      color: #0f0f0f;
+      border-color: rgba(138,92,255,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .frame-hero__cta:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+  }
+</style>
 
 ## The Frame.dev Ecosystem
 
