@@ -15,17 +15,10 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ toc }) => {
   const observer = useRef<IntersectionObserver | null>(null);
   const tocContainerRef = useRef<HTMLElement>(null);
   const manualScrollTimeoutRef = useRef<number | null>(null);
-  const manualScrollTargetRef = useRef<HTMLElement | null>(null);
-  const manualScrollHandlerRef = useRef<((this: Window, ev: Event) => void) | null>(null);
   const isManualScrollRef = useRef(false);
 
   const clearManualScroll = useCallback(() => {
     isManualScrollRef.current = false;
-    manualScrollTargetRef.current = null;
-    if (manualScrollHandlerRef.current) {
-      window.removeEventListener('scroll', manualScrollHandlerRef.current);
-      manualScrollHandlerRef.current = null;
-    }
     if (manualScrollTimeoutRef.current !== null) {
       window.clearTimeout(manualScrollTimeoutRef.current);
       manualScrollTimeoutRef.current = null;
@@ -50,7 +43,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ toc }) => {
         }
         if (bestVisibleEntry && !isManualScrollRef.current) setActiveSlug(bestVisibleEntry.target.id);
     };
-    observer.current = new IntersectionObserver(observerCallback, { rootMargin: '-100px 0px -50% 0px', threshold: 0 });
+    observer.current = new IntersectionObserver(observerCallback, { rootMargin: '-120px 0px -55% 0px', threshold: 0 });
     const { current: currentObserver } = observer;
     const observedElements: Element[] = [];
     toc.forEach((item) => {
@@ -81,28 +74,21 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ toc }) => {
 
     clearManualScroll();
     isManualScrollRef.current = true;
-    manualScrollTargetRef.current = element;
 
-    const monitorScroll = () => {
-      const targetEl = manualScrollTargetRef.current;
-      if (!targetEl) return;
-      const marginTop = computeScrollMarginTop(targetEl);
-      const distance = Math.abs(targetEl.getBoundingClientRect().top - marginTop);
-      const reachedBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 1;
-      if (distance <= 2 || reachedBottom) {
-        clearManualScroll();
-      }
-    };
+    // Compute offset with scroll-margin-top or header height fallback
+    const marginTop = computeScrollMarginTop(element);
+    const headerHeightVar = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 60;
+    const offset = Math.max(marginTop, headerHeightVar + 8);
 
-    manualScrollHandlerRef.current = monitorScroll;
-    window.addEventListener('scroll', monitorScroll, { passive: true });
-
-    manualScrollTimeoutRef.current = window.setTimeout(clearManualScroll, 2000);
+    // Scroll to exact position accounting for sticky header
+    const y = element.getBoundingClientRect().top + window.pageYOffset - offset;
 
     setActiveSlug(slug);
     window.history.replaceState(null, '', `#${slug}`);
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    requestAnimationFrame(() => monitorScroll());
+    window.scrollTo({ top: y, behavior: 'smooth' });
+
+    // Clear manual guard after animation
+    manualScrollTimeoutRef.current = window.setTimeout(clearManualScroll, 700);
   };
 
   useEffect(() => {
