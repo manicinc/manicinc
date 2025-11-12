@@ -38,8 +38,8 @@ html:not([data-theme-loaded="true"]) * {
 
 :root {
   /* --- Font Variables --- */
-  --font-display: "Lato", sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
+  --font-display: var(--font-body);
   --font-mono: "IBM Plex Mono", monospace;
   --font-logo: "Mona Sans", sans-serif;
 

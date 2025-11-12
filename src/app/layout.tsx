@@ -1,6 +1,6 @@
 // src/app/layout.tsx (with Google Analytics)
 import { ReactNode } from "react";
-import { Inter, Lato, Playfair_Display, IBM_Plex_Mono } from 'next/font/google';
+import { Inter, Playfair_Display, IBM_Plex_Mono } from 'next/font/google';
 
 // Import Components & Providers
 import { Nav } from "@/components/Nav";
@@ -46,13 +46,6 @@ const inter = Inter({
   display: 'swap',
   fallback: ['system-ui', 'arial'] 
 });
-const lato = Lato({ 
-  subsets: ['latin'], 
-  weight: ['400', '700'], 
-  variable: '--font-display-orig', 
-  display: 'swap',
-  fallback: ['system-ui', 'arial']
-});
 const playfairDisplay = Playfair_Display({ 
   subsets: ['latin'], 
   weight: ['700'], 
@@ -88,7 +81,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`
             ${inter.variable}
-            ${lato.variable}
             ${playfairDisplay.variable}
             ${ibmPlexMono.variable}
         `} suppressHydrationWarning>
