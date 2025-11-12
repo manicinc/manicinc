@@ -93,7 +93,7 @@ export default function BlogCategoryPage({ params }: { params: Params }) {
             // Use the exact same card structure and classes as in BlogListClient
             <article key={post.slug} className="blog-card group">
               <div className="blog-card-image">
-                <Link href={`/blog/${post.category}/${post.slug}`} aria-label={`Read more about ${post.title}`}>
+                <Link prefetch={false} href={`/blog/${post.category}/${post.slug}`} aria-label={`Read more about ${post.title}`}>
                   {post.image ? (
                     <Image 
                       src={post.image} 

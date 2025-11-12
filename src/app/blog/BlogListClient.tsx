@@ -200,7 +200,7 @@ const BlogListClient = React.memo(({ initialPosts }: BlogListClientProps) => {
         onTagClick: (tag: string) => void;
     }) => (
         <div className="blog-card">
-            <Link href={`/blog/${post.category || 'uncategorized'}/${post.slug}`} className="blog-card-image-link" aria-label={post.title}>
+            <Link prefetch={false} href={`/blog/${post.category || 'uncategorized'}/${post.slug}`} className="blog-card-image-link" aria-label={post.title}>
                 <div className="blog-card-image">
                     {post.image ? (
                         <Image

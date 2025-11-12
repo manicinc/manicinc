@@ -224,7 +224,8 @@ export default function HomePage() {
                         className="frame-banner__logo"
                         width={280}
                         height={112}
-                        priority={false}
+                        priority
+                        fetchPriority="high"
                         sizes="(max-width: 768px) 200px, 280px"
                     />
                 </div>
