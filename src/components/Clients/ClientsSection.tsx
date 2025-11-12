@@ -87,6 +87,8 @@ export default function ClientsSection() {
                                                 src={logoSrc} alt={`${client.name} logo`}
                                                 className={styles.clientLogo}
                                                 width={100} height={40} unoptimized
+                                                loading="lazy" decoding="async"
+                                                sizes="100px"
                                             />
                                         ) : null} {/* Render nothing if !hasLogo */}
                                     </div>

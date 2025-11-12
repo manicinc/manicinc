@@ -54,6 +54,9 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           alt={title}
           width={600}
           height={330}
+          loading="lazy"
+          decoding="async"
+          sizes="(max-width: 768px) 90vw, 600px"
         />
       </div>
       <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 justify-center">
