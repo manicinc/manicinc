@@ -156,7 +156,7 @@ const Footer = () => {
                     letter-spacing: 0.05em;
                     text-transform: uppercase;
                     color: var(--accent-highlight);
-                    margin-bottom: 1rem;
+                    margin-bottom: 0.9rem;
                 }
                 .blog-footer-heading {
                     color: var(--accent-secondary);
@@ -172,6 +172,12 @@ const Footer = () => {
                     font-family: var(--font-body);
                     font-size: 0.875rem;
                     opacity: 0.9;
+                }
+                /* Ensure extra breathing room between heading and links on tight columns */
+                .footer-heading + .footer-list { margin-top: 0.4rem; }
+                @media (max-width: 640px) {
+                    .footer-heading { margin-bottom: 1rem; }
+                    .footer-heading + .footer-list { margin-top: 0.6rem; }
                 }
                 .blog-footer-list {
                     font-family: var(--font-body-blog);

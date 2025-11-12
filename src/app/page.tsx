@@ -228,7 +228,7 @@ export default function HomePage() {
                     {/* Left: Logo & tagline */}
                     <div className="frame-cta__left">
                         <Image
-                            src="/assets/projects/framers/frame-logo-transparent.png"
+                            src="/assets/projects/framers/frame-logo-no-subtitle.svg"
                             alt="Frame.dev"
                             className="frame-cta__logo"
                             width={240}

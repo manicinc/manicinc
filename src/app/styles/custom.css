@@ -40,6 +40,12 @@
   transition: opacity 0.3s ease;
 }
 .frame-cta__logo:hover { opacity: 1; }
+@media (prefers-color-scheme: dark) {
+  .frame-cta__logo {
+    filter: brightness(0) invert(1) drop-shadow(0 0 24px rgba(255,255,255,0.15));
+    opacity: 1;
+  }
+}
 
 .frame-cta__title {
   font-family: var(--font-display);
