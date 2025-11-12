@@ -102,6 +102,7 @@ export default function BlogCategoryPage({ params }: { params: Params }) {
                       height={160}
                       className="blog-card-img"
                       loading="lazy"
+                      decoding="async"
                     />
                   ) : (
                     <div className="blog-card-ascii-placeholder">

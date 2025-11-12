@@ -43,7 +43,7 @@ const nextConfig = {
   // Performance optimizations
   compress: true,
   poweredByHeader: false,
-  productionBrowserSourceMaps: true,
+  productionBrowserSourceMaps: false, // Disable to reduce bandwidth
   
   // Webpack optimizations for code splitting
   webpack: (config, { isServer, webpack }) => {

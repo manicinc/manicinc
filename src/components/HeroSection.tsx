@@ -7,12 +7,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ArrowRight, ArrowUpRight, Rabbit, ArrowUp, FileText, FolderGit2, RefreshCw } from 'lucide-react'; // Corrected Icons
-import GlitchAnimation from "./GlitchAnimation"; // Ensure path is correct
+import dynamic from 'next/dynamic';
 import AsciiArtPlaceholder from "../lib/asciiPlaceholders"; // Ensure path is correct
 import { HeroFeedItem } from "@/types/common"; // Ensure path is correct
 // Use lazy-loaded motion for better performance
 import { motion } from '@/components/LazyMotion';
 import { useCookieConsent } from '@/hooks/useCookieConsent';
+
+// Lazy load GlitchAnimation for better initial performance
+const GlitchAnimation = dynamic(() => import('./GlitchAnimation'), {
+    ssr: false,
+    loading: () => <div className="hero-bg-effects-placeholder" />
+});
 
 // --- Dynamic Quote System ---
 const LOCAL_STORAGE_KEY = 'manicAgencyHeroVisitData';
@@ -285,7 +291,7 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                  {/* Empty State */}
                  {(!displayItems || displayItems.length === 0) && mounted && ( <div className={`empty-state compact-area ${animationClass('delay-500')}`}><p>{/* NO FEATURED TRANSMISSIONS */}</p><p>[ Awaiting Signal Acquisition ]</p></div> )}
                 {/* Enter Archives Button */}
-                 <div className={`text-center mt-8 md:mt-10 ${animationClass('delay-700')}`}> <Link href="/blog" className="rabbit-trail group"> <span className="relative z-10">Enter the Archives</span> <div className="rabbit-hole-animation"> <Rabbit size={16} className="rabbit-icon"/> <div className="rabbit-hole"><svg viewBox="0 0 100 100" className="hole-svg"><circle cx="50" cy="50" r="45" fill="var(--bg-primary)" stroke="currentColor" strokeWidth="3" className="hole-circle-bg"/><circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="4" className="hole-circle-border"/><path d="M 50,50 m -40,0 a 40,40 0 1,0 80,0 a 40,40 0 1,0 -80,0" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 4" className="hole-spiral"/></svg></div> </div> </Link> </div>
+                 <div className={`text-center mt-8 md:mt-10 ${animationClass('delay-700')}`}> <Link href="/blog" className="rabbit-trail group"> <span className="rabbit-trail-text">Enter the Archives</span> <div className="rabbit-hole-animation"> <Rabbit size={18} className="rabbit-icon"/> <div className="rabbit-hole-wrapper"><div className="rabbit-hole-spiral"></div><div className="rabbit-hole-spiral spiral-2"></div><div className="rabbit-hole-spiral spiral-3"></div><div className="rabbit-hole-center"></div></div> </div> </Link> </div>
             </div> {/* End Container */}
            
 
@@ -738,6 +744,99 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                      background: var(--bg-tertiary);
                      border-color: var(--accent-secondary);
                      color: var(--accent-secondary);
+                 }
+                 
+                 /* --- Rabbit Hole Animation (Enhanced CSS-only) --- */
+                 .rabbit-hole-animation {
+                     display: inline-flex;
+                     align-items: center;
+                     gap: 0.6rem;
+                     margin-left: 0.5rem;
+                     position: relative;
+                 }
+                 
+                 .rabbit-icon {
+                     color: var(--accent-secondary);
+                     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                     will-change: transform;
+                 }
+                 
+                 .rabbit-trail:hover .rabbit-icon {
+                     transform: translateY(8px) rotate(10deg);
+                     color: var(--accent-highlight);
+                 }
+                 
+                 .rabbit-hole-wrapper {
+                     position: relative;
+                     width: 36px;
+                     height: 36px;
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;
+                 }
+                 
+                 .rabbit-hole-spiral {
+                     position: absolute;
+                     border: 2px solid var(--accent-secondary);
+                     border-radius: 50%;
+                     opacity: 0.3;
+                     animation: spiralSpin 10s linear infinite;
+                     will-change: transform, opacity;
+                 }
+                 
+                 .rabbit-hole-spiral {
+                     width: 30px;
+                     height: 30px;
+                     border-style: dashed;
+                 }
+                 
+                 .spiral-2 {
+                     width: 22px;
+                     height: 22px;
+                     opacity: 0.4;
+                     animation-duration: 8s;
+                     animation-direction: reverse;
+                     border-color: var(--accent-highlight);
+                 }
+                 
+                 .spiral-3 {
+                     width: 14px;
+                     height: 14px;
+                     opacity: 0.5;
+                     animation-duration: 6s;
+                     border-color: var(--accent-primary);
+                 }
+                 
+                 .rabbit-hole-center {
+                     width: 6px;
+                     height: 6px;
+                     background: var(--accent-secondary);
+                     border-radius: 50%;
+                     position: relative;
+                     z-index: 2;
+                     box-shadow: 0 0 8px rgba(var(--accent-secondary-rgb), 0.6);
+                     animation: pulse 2s ease-in-out infinite;
+                 }
+                 
+                 .rabbit-trail:hover .rabbit-hole-spiral {
+                     opacity: 0.7;
+                     border-color: var(--accent-highlight);
+                     animation-duration: 3s;
+                 }
+                 
+                 .rabbit-trail:hover .rabbit-hole-center {
+                     background: var(--accent-highlight);
+                     box-shadow: 0 0 12px rgba(var(--accent-highlight-rgb), 0.8);
+                 }
+                 
+                 @keyframes spiralSpin {
+                     from { transform: rotate(0deg) scale(1); }
+                     to { transform: rotate(360deg) scale(0.95); }
+                 }
+                 
+                 @keyframes pulse {
+                     0%, 100% { transform: scale(1); opacity: 1; }
+                     50% { transform: scale(1.2); opacity: 0.8; }
                  }
 
                  /* --- Animation & Utility --- */
