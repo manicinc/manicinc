@@ -214,47 +214,35 @@ export default function HomePage() {
 
             </Suspense> {/* Close Suspense tag */}
             
-        {/* Frame.dev CTA Section (enhanced) */}
-        <section className="frame-cta relative overflow-hidden">
-            <div className="frame-cta__bg" aria-hidden="true">
-                <div className="orb orb-1"></div>
-                <div className="orb orb-2"></div>
-                <div className="orb orb-3"></div>
-                <div className="grid-overlay"></div>
-                <div className="noise-overlay"></div>
-            </div>
-            <div className="container mx-auto px-4 relative z-10">
-                <div className="frame-cta__grid">
-                    {/* Left: Logo & tagline */}
-                    <div className="frame-cta__left">
-                        <Image
-                            src="/assets/projects/framers/frame-logo-no-subtitle.svg"
-                            alt="Frame.dev"
-                            className="frame-cta__logo"
-                            width={240}
-                            height={96}
-                            priority={false}
-                            sizes="(max-width: 768px) 160px, 240px"
-                        />
-                        <h2 className="frame-cta__title">
-                            We Are The Framers
-                        </h2>
-                    </div>
-                    {/* Right: Copy & CTA */}
-                    <div className="frame-cta__right">
-                        <p className="frame-cta__subtitle">
-                            Denoising the web and making AI agency
-                            <strong> emergent</strong>, <strong> adaptive</strong>, and <strong> permanent</strong>
-                            through open-source innovation.
-                        </p>
-                        <Link
-                            href="https://frame.dev"
-                            className="frame-cta__button"
-                        >
-                            Explore Frame.dev →
-                        </Link>
-                    </div>
+        {/* Frame.dev CTA Banner */}
+        <section className="frame-banner">
+            <div className="frame-banner__container">
+                <div className="frame-banner__logo-wrapper">
+                    <Image
+                        src="/assets/projects/framers/frame-logo-no-subtitle.svg"
+                        alt="Frame.dev"
+                        className="frame-banner__logo"
+                        width={280}
+                        height={112}
+                        priority={false}
+                        sizes="(max-width: 768px) 200px, 280px"
+                    />
                 </div>
+                
+                <h2 className="frame-banner__title">
+                    we are the framers
+                </h2>
+                
+                <p className="frame-banner__subtitle">
+                    Denoising the web and making AI agency <strong>emergent</strong>, <strong>adaptive</strong>, and <strong>permanent</strong>.
+                </p>
+                
+                <Link href="https://frame.dev" className="frame-banner__cta">
+                    <span className="frame-banner__cta-text">explore frame.dev</span>
+                    <svg className="frame-banner__cta-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </Link>
             </div>
         </section>
             
