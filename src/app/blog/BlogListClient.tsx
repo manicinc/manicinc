@@ -210,6 +210,7 @@ const BlogListClient = React.memo(({ initialPosts }: BlogListClientProps) => {
                             height={250}
                             loading="lazy"
                             decoding="async"
+                            sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
                             className="blog-card-img"
                         />
                     ) : (

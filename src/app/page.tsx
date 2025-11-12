@@ -46,6 +46,7 @@ const EnhancedTracking = dynamic(() => import('@/components/EnhancedTracking'), 
 });
 
 import HomePageSkeleton from '@/components/Skeletons/HomePageSkeleton';
+import InView from '@/components/InView';
 
 // SEO Metadata for Homepage
 export const metadata: Metadata = {
@@ -207,10 +208,13 @@ export default function HomePage() {
                 {/* @ts-expect-error Server Component */}
                 <HeroSectionWithData />
 
-                {/* These components render after HeroSectionWithData resolves,
-                    or instantly if moved outside Suspense boundary */}
-                <Services />
-                <Intro />
+                {/* Gate heavy sections to mount only when in-view */}
+                <InView rootMargin="200px">
+                    <Services />
+                </InView>
+                <InView rootMargin="200px">
+                    <Intro />
+                </InView>
 
             </Suspense> {/* Close Suspense tag */}
             

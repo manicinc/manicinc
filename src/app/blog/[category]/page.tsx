@@ -103,6 +103,7 @@ export default function BlogCategoryPage({ params }: { params: Params }) {
                       className="blog-card-img"
                       loading="lazy"
                       decoding="async"
+                      sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
                     />
                   ) : (
                     <div className="blog-card-ascii-placeholder">
