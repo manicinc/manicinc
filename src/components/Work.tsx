@@ -41,7 +41,7 @@ const Work = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center grow-0 flex flex-col items-center mb-10">
           <span>Our Work</span>
-        <Image src={curve} alt="curve" className='w-44 grow-0'/>
+        <Image src={curve} alt="curve" className='w-44 grow-0' loading="lazy" decoding="async"/>
           </h2>
         <p className="text-lg text-center text-gray-700 mb-8">
           Manic Agency houses a number of tech and media oriented platforms striking an impact on the world.

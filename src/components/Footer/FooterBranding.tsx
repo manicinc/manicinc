@@ -23,6 +23,8 @@ const FooterBranding = () => {
         alt="Manic Agency Logo"
         width={80}
         height={80}
+        loading="lazy"
+        decoding="async"
         className="mx-auto transition-transform duration-300 ease-out group-hover:scale-105"
        />
     </Link>

@@ -27,6 +27,8 @@ export default function Cta() {
               width={768}
               height={432}
               alt="Stripes"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div className="px-4 py-12 md:px-12 md:py-20">
