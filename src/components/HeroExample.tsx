@@ -27,6 +27,7 @@ export function Hero() {
                   width={32}
                   height={32}
                   alt="Avatar 01"
+                  loading="lazy" decoding="async" sizes="32px"
                 />
                 <Image
                   className="box-content rounded-full border-2 border-gray-50"
@@ -34,6 +35,7 @@ export function Hero() {
                   width={32}
                   height={32}
                   alt="Avatar 01"
+                  loading="lazy" decoding="async" sizes="32px"
                 />
                 <Image
                   className="box-content rounded-full border-2 border-gray-50"
@@ -41,6 +43,7 @@ export function Hero() {
                   width={32}
                   height={32}
                   alt="Avatar 02"
+                  loading="lazy" decoding="async" sizes="32px"
                 />
                 <Image
                   className="box-content rounded-full border-2 border-gray-50"
@@ -48,6 +51,7 @@ export function Hero() {
                   width={32}
                   height={32}
                   alt="Avatar 03"
+                  loading="lazy" decoding="async" sizes="32px"
                 />
                 <Image
                   className="box-content rounded-full border-2 border-gray-50"
@@ -55,6 +59,7 @@ export function Hero() {
                   width={32}
                   height={32}
                   alt="Avatar 04"
+                  loading="lazy" decoding="async" sizes="32px"
                 />
                 <Image
                   className="box-content rounded-full border-2 border-gray-50"
@@ -62,6 +67,7 @@ export function Hero() {
                   width={32}
                   height={32}
                   alt="Avatar 05"
+                  loading="lazy" decoding="async" sizes="32px"
                 />
               </div>
             </div>

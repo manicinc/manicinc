@@ -15,7 +15,8 @@ export default function PageIllustration() {
           src={Stripes}
           width={768}
           alt="Stripes"
-          priority
+          loading="lazy"
+          decoding="async"
         />
       </div>
       {/* Circles */}
