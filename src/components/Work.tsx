@@ -1,8 +1,14 @@
 'use client';
 import { EmblaOptionsType } from 'embla-carousel';
-import EmblaCarousel from './EmblaCarousel';
+import dynamic from 'next/dynamic';
+import InView from '@/components/InView';
 import curve from "@/images/curve.png"
 import Image from "next/image"
+
+const EmblaCarousel = dynamic(() => import('./EmblaCarousel'), {
+  ssr: false,
+  loading: () => null,
+});
 
 interface Project {
   id: number;
@@ -48,7 +54,9 @@ const Work = () => {
         </p>
 
 
-        <EmblaCarousel slides={projects}/>
+        <InView rootMargin="200px">
+          <EmblaCarousel slides={projects}/>
+        </InView>
         </div>
     </section>
   );
