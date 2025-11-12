@@ -103,8 +103,8 @@ export const Nav = () => {
             {/* Main container: Uses Tailwind. Adjusted breakpoints (lg) and wrapping */}
             <div className={`
                 container mx-auto flex items-center justify-between flex-wrap xl:flex-nowrap
-                px-3 sm:px-4 py-1.5 sm:py-2 /* Adjusted padding */
-                relative z-10 /* Ensure content is above potential background elements */
+                px-3 sm:px-4 py-0 xl:py-1.5 /* Remove vertical padding on mobile for full-height button */
+                relative z-10 h-full /* Ensure content is above potential background elements */
             `}>
 
                 {/* Logo Area: Wrapped in Link, independent of mobile button */}
@@ -129,7 +129,7 @@ export const Nav = () => {
                 </div>
 
                 {/* Mobile Menu Button Area: Shows only below LG */}
-                <div className="order-2 xl:hidden flex items-center ml-auto pl-2">
+                <div className="order-2 xl:hidden flex items-stretch ml-auto h-full">
                     <button
                         aria-label="Toggle Menu"
                         aria-expanded={isMenuOpen}

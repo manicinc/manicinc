@@ -26,11 +26,11 @@ const ManicAgencyLogo = () => {
             // Apply SVG specific class + responsive height/width from Tailwind
             // Keep classes that style the SVG itself.
             // Removed 'group' and wrapper classes that belonged to the Link.
-            className={`${navStyles.manicLogoSvg} w-auto h-8 sm:h-9 md:h-10 lg:h-11 xl:h-12 transition-all duration-300 ease-out`}
+            className={`${navStyles.manicLogoSvg} w-auto h-10 sm:h-11 md:h-12 lg:h-12 xl:h-12 transition-all duration-300 ease-out`}
             aria-hidden="true" // The link in NavLogo provides the accessible name
             xmlns="http://www.w3.org/2000/svg"
             style={{
-                fontSize: 'clamp(24px, 4vw, 40px)', // Responsive font size
+                fontSize: 'clamp(28px, 5vw, 40px)', // Increased minimum size for mobile
             }}
         >
             <defs>
