@@ -5,8 +5,7 @@ import { useReducedMotion } from '@/components/LazyMotion';
 import Container from './Container';
 import Link from 'next/link';
 import Logo from './Logo';
-import { HiMenuAlt4 } from 'react-icons/hi';
-import { IoMdClose } from 'react-icons/io';
+import { Menu, X } from 'lucide-react';
 import Button from './Button';
 import clsx from 'clsx';
 import Offices from './Offices';
@@ -160,7 +159,7 @@ const RootLayoutInner: React.FC<RootLayoutInnerProps> = ({ children }) => {
           {/* Header */}
           <Header
             panelId={panelId}
-            icon={HiMenuAlt4}
+            icon={Menu}
             toggleRef={openRef}
             expanded={expanded}
             onToggle={() => {
@@ -193,7 +192,7 @@ const RootLayoutInner: React.FC<RootLayoutInnerProps> = ({ children }) => {
               <Header
                 invert
                 panelId={panelId}
-                icon={IoMdClose}
+                icon={X}
                 toggleRef={closeRef}
                 expanded={expanded}
                 onToggle={() => {

@@ -1,45 +1,28 @@
 import Link from "next/link";
 import clsx from "clsx";
-import {
-  BsFacebook,
-  BsTwitter,
-  BsGithub,
-  // BsYoutube,
-  BsInstagram,
-  BsLinkedin,
-} from "react-icons/bs";
+import { Github, Linkedin, Twitter, type LucideIcon } from "lucide-react";
 
 interface SocialMediaProfile {
   title: string;
   href: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: LucideIcon;
 }
 
 export const SocialMediaProfiles: SocialMediaProfile[] = [
-  /* {
-    title: "Instagram",
-    href: "#",
-    icon: BsInstagram,
-  }, */
   {
     title: "GitHub",
     href: "https://github.com/manicinc",
-    icon: BsGithub,
+    icon: Github,
   },
-  /* {
-    title: "Facebook",
-    href: "#",
-    icon: BsFacebook,
-  }, */
   {
     title: "LinkedIn",
     href: "https://www.linkedin.com/company/manic-agency-llc/",
-    icon: BsLinkedin,
+    icon: Linkedin,
   },
   {
     title: "Twitter",
     href: "https://x.com/manicagency",
-    icon: BsTwitter,
+    icon: Twitter,
   },
 ];
 

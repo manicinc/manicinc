@@ -9,9 +9,9 @@ const TWITTER_HANDLE = '@manicagency';
 // SEO configuration for different sections
 const seoConfig = {
   default: {
-    title: 'Manic Agency - Metaverses Intersection',
-    description: 'Manic Agency - Where Metaverses Intersect. Manic.agency specializes in Web3, AI, AR/VR, creative technology, and game publishing through Manic Games platform. Based internationally in LA and Lagos.',
-    keywords: ['Manic', 'Agency', 'Manic Agency', 'Manic.agency', 'Web Development', 'Design', 'AR', 'VR', 'AI', 'Web3', 'Digital Agency', 'Los Angeles', 'Lagos', 'Creative Technology', 'SynthStack', 'Manic Inc', 'Game Publishing', 'Manic Games', 'Text Games', 'Game Development', 'Publishing Platform'],
+    title: 'Manic Agency - AI Agency Los Angeles',
+    description: 'Manic Agency is a Los Angeles-based AI agency specializing in AI automation, Web3 development, AR/VR experiences, and metaverse solutions. We build intelligent systems that transform businesses.',
+    keywords: ['AI agency Los Angeles', 'AI automation agency', 'Web3 development', 'AR VR development', 'metaverse development', 'AI consulting', 'machine learning agency', 'generative AI', 'Los Angeles tech agency', 'blockchain development', 'creative technology', 'digital transformation', 'AI implementation', 'business automation', 'immersive experiences'],
     ogImage: '/og-default.webp',
     themeColor: {
       light: '#fbf6ef', // Light Parchment - Primary light background
@@ -19,9 +19,9 @@ const seoConfig = {
     }
   },
   blog: {
-    title: 'Chronicles from the Looking-Glass',
-    description: 'Dispatches, discoveries, and coded Visions from the Synthetic Publishing Platform powered by Manic Agency.',
-    keywords: ['Blog', 'AI', 'Tech', 'Web Development', 'Thinkpieces', 'Looking Glass', 'Innovation'],
+    title: 'Chronicles from the Looking-Glass | AI & Tech Insights',
+    description: 'Expert insights on AI development, automation, Web3, and emerging technology from Manic Agency. Practical guides and thought leadership for tech innovators.',
+    keywords: ['AI blog', 'AI development insights', 'Web3 tutorials', 'machine learning guides', 'automation articles', 'tech innovation blog', 'AI agency insights', 'developer tutorials', 'emerging technology'],
     ogImage: '/og-blog.png',
     themeColor: {
       light: '#f5ede1', // Light Paper - Secondary light background for blog
@@ -29,9 +29,9 @@ const seoConfig = {
     }
   },
   projects: {
-    title: 'Our Works',
-    description: 'Browse a collection of experimental projects from Manic Agency, exploring AI, creative coding, and more.',
-    keywords: ['Projects', 'Portfolio', 'Experiments', 'Creative Coding', 'Innovative Tech', 'Case Studies'],
+    title: 'Our Works | AI & Web3 Projects',
+    description: 'Explore our portfolio of AI implementations, Web3 applications, AR/VR experiences, and automation solutions. Case studies from a leading Los Angeles AI agency.',
+    keywords: ['AI projects', 'Web3 portfolio', 'AR VR case studies', 'AI implementation examples', 'automation projects', 'machine learning applications', 'metaverse projects', 'AI agency portfolio'],
     ogImage: '/og-projects.png',
     themeColor: {
       light: '#ede4d6', // Light Cream - Tertiary light background for projects

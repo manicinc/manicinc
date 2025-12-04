@@ -50,19 +50,24 @@ import InView from '@/components/InView';
 
 // SEO Metadata for Homepage
 export const metadata: Metadata = {
-    title: 'Manic Agency - Metaverses intersect here',
-    description: 'Manic Agency - Where Metaverses Intersect. Digital agency specializing in Web3, AI, AR/VR, creative technology, and game publishing through Manic Games platform.',
+    title: 'Manic Agency - AI Agency Los Angeles | Web3 AR/VR Development',
+    description: 'Manic Agency is a Los Angeles-based AI agency specializing in AI automation, Web3 development, AR/VR experiences, and metaverse solutions. We build intelligent systems that transform businesses.',
     keywords: [
-        'creative development agency',
-        'Los Angeles web development', 
-        'AR VR development',
-        'blockchain solutions',
-        'AI implementation',
-        'experimental design',
-        'digital innovation',
-        'custom software development',
-        'creative technology',
-        'digital transformation'
+        'AI agency Los Angeles',
+        'AI automation agency',
+        'Los Angeles AI development',
+        'Web3 development agency',
+        'AR VR development company',
+        'metaverse development',
+        'AI implementation services',
+        'business automation AI',
+        'blockchain development LA',
+        'creative technology agency',
+        'AI consulting Los Angeles',
+        'machine learning agency',
+        'generative AI development',
+        'immersive experience design',
+        'digital transformation AI'
     ],
     authors: [{ name: 'Manic Agency', url: 'https://manic.agency' }],
     creator: 'Manic Agency',
@@ -75,14 +80,14 @@ export const metadata: Metadata = {
         locale: 'en_US',
         url: '/',
         siteName: 'Manic Agency',
-        title: 'Manic Agency - Metaverses intersect here',
-        description: 'Manic Agency - Where Metaverses Intersect. Digital agency specializing in Web3, AI, AR/VR, creative technology, and game publishing through Manic Games platform.',
+        title: 'Manic Agency - AI Agency Los Angeles | Web3 AR/VR Development',
+        description: 'Los Angeles-based AI agency specializing in AI automation, Web3 development, AR/VR experiences, and metaverse solutions. Transform your business with intelligent systems.',
         images: [
             {
                 url: '/og-default.webp',
                 width: 1200,
                 height: 630,
-                alt: 'Manic Agency - Experimental Creative Development'
+                alt: 'Manic Agency - AI Agency Los Angeles - Web3 AR/VR Development'
             }
         ]
     },
@@ -90,11 +95,11 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         site: '@manicagency',
         creator: '@manicagency',
-        title: 'Manic Agency - Metaverses intersect here',
-        description: 'Manic Agency - Where Metaverses Intersect. Digital agency specializing in Web3, AI, AR/VR, creative technology, and game publishing through Manic Games platform.',
+        title: 'Manic Agency - AI Agency Los Angeles | Web3 AR/VR Development',
+        description: 'Los Angeles-based AI agency specializing in AI automation, Web3 development, AR/VR experiences, and metaverse solutions.',
         images: [{
             url: '/og-default.webp',
-            alt: 'Manic Agency - Experimental Creative Development'
+            alt: 'Manic Agency - AI Agency Los Angeles'
         }]
     },
     robots: {

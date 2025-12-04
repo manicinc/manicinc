@@ -3,7 +3,7 @@
 
 import React from "react";
 import { usePathname } from "next/navigation";
-import { FaGithub, FaInstagram, FaLinkedin, FaTwitter, FaDiscord } from "react-icons/fa";
+import { Github, Instagram, Linkedin, Twitter, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import OrnamentalThemeToggle from "../Theme/OrnamentalThemeToggle";
 import ThemeToggle from "../Theme/ThemeToggle";
@@ -43,11 +43,11 @@ const Footer = () => {
                         <h3 className={`footer-heading ${isBlog ? 'blog-footer-heading' : ''}`}>Connect</h3>
                         {/* Social Icons */}
                         <div className="flex flex-wrap gap-x-5 gap-y-3 text-xl text-[color:var(--text-secondary)] mb-8">
-                            <a href="https://discord.gg/DzNgXdYm" aria-label="Discord" className={`footer-icon-link no-underline ${isBlog ? 'blog-footer-icon' : ''}`} target="_blank" rel="noopener noreferrer"><FaDiscord /></a>
-                            <a href="https://github.com/manicinc" aria-label="GitHub" className={`footer-icon-link no-underline ${isBlog ? 'blog-footer-icon' : ''}`} target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-                            <a href="https://www.linkedin.com/company/manic-agency-llc/" aria-label="LinkedIn" className={`footer-icon-link no-underline ${isBlog ? 'blog-footer-icon' : ''}`} target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-                            <a href="https://x.com/manicagency" aria-label="Twitter" className={`footer-icon-link no-underline ${isBlog ? 'blog-footer-icon' : ''}`} target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-                            <a href="https://instagram.com/manic.agency" aria-label="Instagram" className={`footer-icon-link no-underline ${isBlog ? 'blog-footer-icon' : ''}`} target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+                            <a href="https://discord.gg/DzNgXdYm" aria-label="Discord" className={`footer-icon-link no-underline ${isBlog ? 'blog-footer-icon' : ''}`} target="_blank" rel="noopener noreferrer"><MessageCircle size={20} /></a>
+                            <a href="https://github.com/manicinc" aria-label="GitHub" className={`footer-icon-link no-underline ${isBlog ? 'blog-footer-icon' : ''}`} target="_blank" rel="noopener noreferrer"><Github size={20} /></a>
+                            <a href="https://www.linkedin.com/company/manic-agency-llc/" aria-label="LinkedIn" className={`footer-icon-link no-underline ${isBlog ? 'blog-footer-icon' : ''}`} target="_blank" rel="noopener noreferrer"><Linkedin size={20} /></a>
+                            <a href="https://x.com/manicagency" aria-label="Twitter" className={`footer-icon-link no-underline ${isBlog ? 'blog-footer-icon' : ''}`} target="_blank" rel="noopener noreferrer"><Twitter size={20} /></a>
+                            <a href="https://instagram.com/manic.agency" aria-label="Instagram" className={`footer-icon-link no-underline ${isBlog ? 'blog-footer-icon' : ''}`} target="_blank" rel="noopener noreferrer"><Instagram size={20} /></a>
                         </div>
 
                         {/* Theme Toggle */}

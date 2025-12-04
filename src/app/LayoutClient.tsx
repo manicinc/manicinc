@@ -4,6 +4,7 @@
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { useTheme } from '@/context/ThemeContext';
+import { useScrollOptimization } from '@/hooks/useScrollOptimization';
 
 // Type definition for window augmentation
 declare global {
@@ -18,6 +19,9 @@ export default function LayoutClient() {
   const { setTheme } = useTheme();
   const [isBlogArticlePage, setIsBlogArticlePage] = useState(false);
   const [isBlogSection, setIsBlogSection] = useState(false);
+  
+  // Enable scroll-based performance optimizations
+  useScrollOptimization();
 
   // Determine page type based on pathname
   useEffect(() => {

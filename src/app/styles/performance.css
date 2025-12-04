@@ -14,6 +14,98 @@
   contain-intrinsic-size: auto 800px;
 }
 
+/* ============================================
+   MOBILE ANIMATION OPTIMIZATIONS
+   Reduce animations on mobile for better performance
+   ============================================ */
+
+/* Reduce complex animations on mobile devices */
+@media (max-width: 768px) {
+  /* Simplify backdrop blur - very expensive on mobile */
+  .holographic-card,
+  .card-glass,
+  .glass-effect,
+  nav,
+  .terminal-container {
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
+  }
+  
+  /* Disable parallax and fixed backgrounds */
+  *[style*="background-attachment: fixed"] {
+    background-attachment: scroll !important;
+  }
+  
+  /* Reduce shadow complexity */
+  .holographic-card,
+  .card-base,
+  .blog-card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  /* Disable transform animations on cards during scroll */
+  .is-scrolling .holographic-card,
+  .is-scrolling .blog-card,
+  .is-scrolling .featured-item-wrapper {
+    transform: none !important;
+    transition: none !important;
+  }
+  
+  /* Reduce glitch animation intensity on mobile */
+  .quote-glitch-active::before,
+  .quote-glitch-active::after,
+  .main-heading-glitch::before,
+  .main-heading-glitch::after {
+    display: none !important;
+  }
+  
+  /* Simplify terminal animations */
+  .terminal-scanline {
+    display: none !important;
+  }
+  
+  /* Reduce neon effects */
+  .neon-text,
+  .logoNeon b {
+    text-shadow: none !important;
+    animation: none !important;
+  }
+}
+
+/* Further optimizations for very slow devices */
+@media (max-width: 480px) {
+  /* Disable all backdrop filters on small devices */
+  * {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  
+  /* Use solid backgrounds instead */
+  nav,
+  .holographic-card,
+  .terminal-container {
+    background-color: var(--bg-secondary) !important;
+  }
+}
+
+/* Respect user preferences for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .terminal-cursor,
+  .ellipsis-anim::after,
+  .rabbit-hole-spiral {
+    animation: none !important;
+  }
+}
+
 /* GPU layer promotion for animated elements */
 .card-image,
 .blog-card,

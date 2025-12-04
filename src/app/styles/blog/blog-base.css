@@ -15,15 +15,20 @@ body.is-blog {
   line-height: 1.9;
   color: var(--text-primary);
 
-  /* Enhanced background with gradients */
-  background:
-    radial-gradient(ellipse at top left, rgba(var(--accent-secondary-rgb), 0.1) 0%, transparent 40%),
-    radial-gradient(ellipse at bottom right, rgba(var(--accent-primary-rgb), 0.08) 0%, transparent 50%),
-    linear-gradient(180deg, var(--bg-blog-paper) 0%, rgba(var(--bg-blog-paper-rgb), 0.98) 100%);
-  background-attachment: fixed;
+  /* Simplified background - removed fixed attachment for mobile performance */
   background-color: var(--bg-blog-paper);
-
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Enhanced background only on desktop where it performs well */
+@media (min-width: 1024px) and (hover: hover) {
+  body.is-blog {
+    background:
+      radial-gradient(ellipse at top left, rgba(var(--accent-secondary-rgb), 0.08) 0%, transparent 40%),
+      radial-gradient(ellipse at bottom right, rgba(var(--accent-primary-rgb), 0.06) 0%, transparent 50%),
+      var(--bg-blog-paper);
+    /* Note: background-attachment: fixed removed - causes severe jank on all devices */
+  }
 }
 
 /* Dark mode overrides */

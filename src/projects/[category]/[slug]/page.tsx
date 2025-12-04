@@ -19,9 +19,8 @@ import ProjectCard from '@/components/Project/ProjectCard'; // Adjust path (Ensu
 // --- Utility Imports ---
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-// Import icons (keep relevant ones)
-import { FaGithub, FaExternalLinkAlt, FaCalendarAlt, FaTag, FaTags, FaUsers, FaCheckCircle, FaSpinner, FaLightbulb, FaArrowLeft } from 'react-icons/fa';
-import { LuClock } from "react-icons/lu";
+// Import icons from lucide-react (consolidated icon library)
+import { Github, ExternalLink, Calendar, Tag, Tags, Users, CheckCircle, Loader2, Lightbulb, ArrowLeft, Clock } from 'lucide-react';
 
 // --- Page Props Interface ---
 interface ProjectDetailPageProps {
@@ -135,9 +134,9 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
     const renderStatus = () => {
         const baseClass = "flex items-center text-xs font-semibold font-meta-blog py-1 px-2.5 rounded-pill border"; // Use meta font
         switch (status) {
-            case 'completed': return <span className={`${baseClass} bg-[rgba(var(--accent-secondary-rgb),0.1)] text-[color:var(--accent-secondary)] border-[color:var(--accent-secondary)]`}><FaCheckCircle className="mr-1.5" /> Completed</span>;
-            case 'ongoing': return <span className={`${baseClass} bg-[rgba(var(--accent-alert-rgb),0.1)] text-[color:var(--accent-alert)] border-[color:var(--accent-alert)]`}><FaSpinner className="mr-1.5 animate-spin" /> Ongoing</span>;
-            case 'concept': return <span className={`${baseClass} bg-[rgba(var(--accent-primary-rgb),0.1)] text-[color:var(--accent-primary)] border-[color:var(--accent-primary)]`}><FaLightbulb className="mr-1.5" /> Concept</span>;
+            case 'completed': return <span className={`${baseClass} bg-[rgba(var(--accent-secondary-rgb),0.1)] text-[color:var(--accent-secondary)] border-[color:var(--accent-secondary)]`}><CheckCircle className="mr-1.5" size={14} /> Completed</span>;
+            case 'ongoing': return <span className={`${baseClass} bg-[rgba(var(--accent-alert-rgb),0.1)] text-[color:var(--accent-alert)] border-[color:var(--accent-alert)]`}><Loader2 className="mr-1.5 animate-spin" size={14} /> Ongoing</span>;
+            case 'concept': return <span className={`${baseClass} bg-[rgba(var(--accent-primary-rgb),0.1)] text-[color:var(--accent-primary)] border-[color:var(--accent-primary)]`}><Lightbulb className="mr-1.5" size={14} /> Concept</span>;
             default: return null;
         }
     };
@@ -176,7 +175,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                             {/* Breadcrumbs */}
                             <div className="mb-4 text-sm font-meta-blog">
                                 <Link href="/projects" className="text-[color:var(--text-secondary)] hover:text-[color:var(--accent-primary)] transition-colors inline-flex items-center group">
-                                    <FaArrowLeft className="mr-1.5 transition-transform duration-200 ease-in-out group-hover:-translate-x-1"/> Projects Archive
+                                    <ArrowLeft className="mr-1.5 transition-transform duration-200 ease-in-out group-hover:-translate-x-1" size={14} /> Projects Archive
                                 </Link>
                                 <span className="mx-2 text-[color:var(--text-muted)]">/</span>
                                 <span className="capitalize text-[color:var(--text-muted)]">{category.replace(/-/g, ' ')}</span>
@@ -191,8 +190,8 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                             </p>
                             {/* Date/Modified */}
                             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-[color:var(--text-muted)] font-meta-blog">
-                                <span className='flex items-center whitespace-nowrap'><FaCalendarAlt className="mr-1.5 text-[color:var(--accent-primary)] opacity-70"/> Published: {displayDate}</span>
-                                {displayModifiedDate && (<span className='flex items-center whitespace-nowrap'><LuClock className="mr-1.5"/> Updated: {displayModifiedDate}</span>)}
+                                <span className='flex items-center whitespace-nowrap'><Calendar className="mr-1.5 text-[color:var(--accent-primary)] opacity-70" size={14} /> Published: {displayDate}</span>
+                                {displayModifiedDate && (<span className='flex items-center whitespace-nowrap'><Clock className="mr-1.5" size={14} /> Updated: {displayModifiedDate}</span>)}
                             </div>
                         </header>
 
@@ -275,7 +274,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 
                                             {technologies.length > 0 && (
                                                 <div className="sidebar-detail-item">
-                                                    <h4 className="sidebar-detail-label"><FaTag className="mr-2"/>Stack</h4>
+                                                    <h4 className="sidebar-detail-label"><Tag className="mr-2" size={12} />Stack</h4>
                                                     <div className="flex flex-wrap gap-1.5">
                                                         {technologies.map(tech => (<span key={tech} className="sidebar-tag tech-tag">{tech}</span>))}
                                                     </div>
@@ -284,7 +283,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 
                                             {tags.length > 0 && (
                                                 <div className="sidebar-detail-item">
-                                                    <h4 className="sidebar-detail-label"><FaTags className="mr-2"/>Tags</h4>
+                                                    <h4 className="sidebar-detail-label"><Tags className="mr-2" size={12} />Tags</h4>
                                                     <div className="flex flex-wrap gap-1.5">
                                                         {tags.map(tag => (<span key={tag} className="sidebar-tag">{tag}</span>))}
                                                     </div>
@@ -300,7 +299,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 
                                             {team.length > 0 && (
                                                 <div className="sidebar-detail-item">
-                                                    <h4 className="sidebar-detail-label"><FaUsers className="mr-2"/>Team</h4>
+                                                    <h4 className="sidebar-detail-label"><Users className="mr-2" size={12} />Team</h4>
                                                     <ul className="space-y-1.5 text-sm">{team.map(member => (<li key={member.name}><span className='font-semibold'>{member.name}</span> <span className='text-[color:var(--text-muted)]'>({member.role})</span>{member.link && (<a href={member.link} target="_blank" rel="noopener noreferrer" className="sidebar-external-link">[↗]</a>)}</li>))}</ul>
                                                 </div>
                                             )}
@@ -309,8 +308,8 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                                             {(link || github) && (
                                                 <div className="mt-5 pt-4 border-t border-dashed border-[color:var(--bg-tertiary)] space-y-3">
                                                     <h4 className="sidebar-detail-label">Links</h4>
-                                                    {link && (<a href={link} target="_blank" rel="noopener noreferrer" className="sidebar-link-button live-link"><FaExternalLinkAlt className="mr-2" /> View Live Project</a>)}
-                                                    {github && (<a href={github} target="_blank" rel="noopener noreferrer" className="sidebar-link-button github-link"><FaGithub className="mr-2" /> View Source Code</a>)}
+                                                    {link && (<a href={link} target="_blank" rel="noopener noreferrer" className="sidebar-link-button live-link"><ExternalLink className="mr-2" size={14} /> View Live Project</a>)}
+                                                    {github && (<a href={github} target="_blank" rel="noopener noreferrer" className="sidebar-link-button github-link"><Github className="mr-2" size={14} /> View Source Code</a>)}
                                                 </div>
                                              )}
                                         </div>
