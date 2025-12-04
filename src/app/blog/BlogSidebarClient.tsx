@@ -263,45 +263,67 @@ const BlogSidebarClient = React.memo(({ tableOfContents = [], postTitle }: Props
         [filteredToc]
     );
 
-    const renderTocList = React.useCallback(() => {
+    // Stable reference for TOC structure - only changes when content changes
+    const tocStructure = React.useMemo(() => 
+        filteredToc.map((heading) => ({
+            slug: heading.slug || generateSlug(heading.text),
+            text: heading.text,
+            level: heading.level,
+            relativeLevel: heading.level - minLevel + 1
+        })).filter(item => item.slug),
+    [filteredToc, minLevel]);
 
+    // Use effect to update active classes via DOM instead of re-rendering
+    useEffect(() => {
+        if (!tocListRef.current) return;
+        
+        // Remove all active classes
+        const activeItems = tocListRef.current.querySelectorAll('.active');
+        activeItems.forEach(item => item.classList.remove('active'));
+        
+        // Add active class to current heading
+        const activeLink = tocListRef.current.querySelector(`a[href="#${activeHeading}"]`);
+        if (activeLink) {
+            activeLink.classList.add('active');
+            activeLink.closest('.toc-item')?.classList.add('active');
+        }
+    }, [activeHeading]);
+
+    // Render TOC list only when structure changes (not on active heading change)
+    const renderTocList = React.useCallback(() => {
         return (
-            // Add .numbered class dynamically based on showNumbering state
             <ul className={`toc-list ${showNumbering ? 'numbered' : ''}`} ref={tocListRef}>
                 {/* Static "Top" Link */}
-                <li key="top" className={`toc-item level-1 top-link ${activeHeading === TOP_LINK_ID ? 'active' : ''}`}>
-                    <a href={`#${TOP_LINK_ID}`} className={`toc-link top-link ${activeHeading === TOP_LINK_ID ? 'active' : ''}`} onClick={(e) => handleTocClick(e, TOP_LINK_ID)} aria-current={activeHeading === TOP_LINK_ID ? 'location' : undefined}>
+                <li key="top" className="toc-item level-1 top-link">
+                    <a 
+                        href={`#${TOP_LINK_ID}`} 
+                        className="toc-link top-link"
+                        onClick={(e) => handleTocClick(e, TOP_LINK_ID)}
+                    >
                         <Home size={16} className="toc-link-icon" aria-hidden="true"/>
                         <span>{postTitle || 'Introduction'}</span>
                     </a>
                 </li>
 
                 {/* Dynamic Heading Links */}
-                {filteredToc.map((heading) => {
-                    const slug = heading.slug || generateSlug(heading.text);
-                    if (!slug) return null;
-                    const isActive = activeHeading === slug;
-                    // *** FIX: Calculate the RELATIVE level for CSS class assignment ***
-                    const relativeLevel = heading.level - minLevel + 1;
-
-                    return (
-                        <li
-                            key={slug}
-                            // *** FIX: Use relativeLevel for the class name ***
-                            className={`toc-item level-${relativeLevel} ${isActive ? 'active' : ''}`}
-                            // Indentation still uses the difference from the minimum displayed level
-                            style={{ '--level-indent': `${(heading.level - minLevel) * 18}px` } as React.CSSProperties}
+                {tocStructure.map((item) => (
+                    <li
+                        key={item.slug}
+                        className={`toc-item level-${item.relativeLevel}`}
+                        style={{ '--level-indent': `${(item.level - minLevel) * 18}px` } as React.CSSProperties}
+                    >
+                        <a 
+                            href={`#${item.slug}`} 
+                            className="toc-link"
+                            onClick={(e) => handleTocClick(e, item.slug)}
                         >
-                            <a href={`#${slug}`} className={`toc-link ${isActive ? 'active' : ''}`} onClick={(e) => handleTocClick(e, slug)} aria-current={isActive ? 'location' : undefined}>
-                                {/* Numbering is now purely handled by CSS ::before pseudo-element based on the level-* class */}
-                                <span>{heading.text}</span>
-                            </a>
-                        </li>
-                    );
-                })}
+                            <span>{item.text}</span>
+                        </a>
+                    </li>
+                ))}
             </ul>
         );
-    }, [activeHeading, filteredToc, handleTocClick, minLevel, postTitle, showNumbering]);
+    }, [tocStructure, handleTocClick, postTitle, showNumbering, minLevel]);
 
     // --- JSX Structure (Mostly Unchanged) ---
     return (

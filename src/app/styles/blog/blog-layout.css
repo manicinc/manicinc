@@ -106,7 +106,7 @@
 .sidebar-header {
   padding: 0.5rem;
   border-bottom: 1px solid rgba(var(--accent-primary-rgb), 0.3);
-  background: rgba(var(--bg-tertiary-rgb), 0.98);
+  background: rgba(var(--bg-secondary-rgb), 0.98);
   flex-shrink: 0;
   display: flex;
   align-items: center;
