@@ -2,10 +2,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-// Import specific icons if desired, or use emojis/text
-// import { FaTwitter, FaFacebook, FaLinkedin, FaReddit, FaHackerNews, FaWhatsapp, FaTelegramPlane, FaPinterest, FaEnvelope } from 'react-icons/fa';
-// import { FiCopy } from 'react-icons/fi';
-import { IconOrnateShare } from '@/components/Icons'; // Use your ornate share icon
+import { IconOrnateShare } from '@/components/Icons';
 
 
 type ShareButtonsProps = {
