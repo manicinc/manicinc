@@ -68,7 +68,6 @@ export const treeShakingConfig = {
 
   // Unused exports to remove
   unusedExports: {
-    'react-icons': ['fa', 'gi', 'go', 'hi', 'im', 'io', 'md', 'ri', 'si', 'ti', 'vsc', 'wi'],
     'framer-motion': ['AnimateSharedLayout', 'MotionConfig'],
     'react-markdown': ['uriTransformer', 'transformLinkUri'],
   },

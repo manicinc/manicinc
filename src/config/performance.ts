@@ -29,7 +29,6 @@ export const performanceConfig = {
     // Packages to optimize imports
     optimizePackageImports: [
       '@radix-ui/react-slot',
-      'react-icons',
       'lucide-react',
       'framer-motion',
       'react-markdown',
