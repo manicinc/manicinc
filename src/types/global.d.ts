@@ -10,10 +10,12 @@ declare global {
     };
     senderFormsLoaded?: boolean;
     gtag?: (...args: any[]) => void;
+    dataLayer?: any[];
+    clarity?: (...args: any[]) => void;
     toggleTheme?: () => void;
     __NEXT_THEME_INITIAL?: 'dark' | 'light';
-    __theme?: 'dark' | 'light'; // Optional: if your inline script sets this
-    }
+    __theme?: 'dark' | 'light';
+  }
 }
 
 export {};
