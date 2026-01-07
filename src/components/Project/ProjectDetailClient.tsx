@@ -431,7 +431,6 @@ export default function ProjectDetailClient({ project, relatedProjects = [], toc
                              {activeImageSrc && (
                                  <div className="main-image-wrapper">
                                      <Image
-                                        key={activeImageSrc}
                                         src={activeImageSrc}
                                         alt={`${title} visual`}
                                         width={1280}

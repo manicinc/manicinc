@@ -10,16 +10,17 @@ export default function ServiceWorkerRegistration() {
       'serviceWorker' in navigator &&
       process.env.NODE_ENV === 'production'
     ) {
-      // Register service worker
+      // Register service worker with cache-busting query param
+      // This ensures browsers fetch the latest sw.js on each page load
       navigator.serviceWorker
-        .register('/sw.js')
+        .register(`/sw.js?v=${Date.now()}`)
         .then((registration) => {
           console.log('✅ Service Worker registered:', registration.scope);
 
-          // Check for updates periodically
+          // Check for updates more frequently (every 5 minutes)
           setInterval(() => {
             registration.update();
-          }, 60 * 60 * 1000); // Check every hour
+          }, 5 * 60 * 1000); // Check every 5 minutes
         })
         .catch((error) => {
           console.error('❌ Service Worker registration failed:', error);
