@@ -147,11 +147,13 @@ const BlogVinesBalanced: React.FC = () => {
   const [activityState, setActivityState] = useState<ActivityStateType>('idle');
   const [scrollProgress, setScrollProgress] = useState(0);
   const [viewBoxWidth, setViewBoxWidth] = useState(1920); // Default for SSR consistency
+  const [mounted, setMounted] = useState(false); // Track mount state for hydration
   const containerRef = useRef<HTMLDivElement>(null);
   const generatedRef = useRef(false);
 
   // Update viewBox width on client mount
   useEffect(() => {
+    setMounted(true);
     setViewBoxWidth(window.innerWidth);
   }, []);
 
@@ -348,6 +350,11 @@ const BlogVinesBalanced: React.FC = () => {
       default: return 'url(#vineGradientIdle)';
     }
   };
+
+  // Don't render until mounted to avoid hydration mismatch with viewBox
+  if (!mounted) {
+    return <div className={styles.vinesContainer} style={{ minHeight: '180px' }} />;
+  }
 
   return (
     <div

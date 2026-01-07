@@ -1,22 +1,63 @@
 // src/components/Nav/AnimatedBackground.tsx
 import React, { useMemo } from 'react';
 
+// Simple seeded pseudo-random for deterministic values (avoids hydration mismatch)
+const seededRandom = (seed: number) => {
+    const x = Math.sin(seed * 9999) * 10000;
+    return x - Math.floor(x);
+};
+
 // Re-using the component logic from BlogNavControls V5
 const BackgroundArtSVG = React.memo(() => {
+    // Use static deterministic values to avoid hydration mismatch
     const config = useMemo(() => ({
-        lines: 18, circles: 7, turbulenceSeed: Math.random() * 100,
-        turbulenceFreq: (0.001 + Math.random() * 0.004).toFixed(4),
-        warpScale: (1.5 + Math.random() * 3).toFixed(1),
+        lines: 18,
+        circles: 7,
+        turbulenceSeed: 42,
+        turbulenceFreq: '0.003',
+        warpScale: '2.5',
     }), []);
 
     const elements = useMemo(() => {
         const items: JSX.Element[] = [];
         for (let i = 0; i < config.lines; i++) {
-            const dashArray = `${(Math.random() * 15 + 5).toFixed(0)} ${(Math.random() * 10 + 5).toFixed(0)}`;
-            items.push( <line key={`l-${i}`} x1={`${Math.random() * 110 - 5}%`} y1={`${Math.random() * 110 - 5}%`} x2={`${Math.random() * 110 - 5}%`} y2={`${Math.random() * 110 - 5}%`} strokeWidth={(Math.random() * 0.5 + 0.1).toFixed(2)} strokeDasharray={dashArray} className="bg-svg-line" style={{ ['--anim-duration' as any]: `${(Math.random() * 15 + 12).toFixed(1)}s`, ['--anim-delay' as any]: `-${(Math.random() * 10).toFixed(1)}s`, ['--stroke-dasharray' as any]: dashArray, } as React.CSSProperties}/> );
+            // Use seeded random for deterministic but varied positions
+            const seed = i * 7 + 1;
+            const dashArray = `${Math.floor(seededRandom(seed) * 15 + 5)} ${Math.floor(seededRandom(seed + 1) * 10 + 5)}`;
+            items.push(
+                <line
+                    key={`l-${i}`}
+                    x1={`${(seededRandom(seed + 2) * 110 - 5).toFixed(1)}%`}
+                    y1={`${(seededRandom(seed + 3) * 110 - 5).toFixed(1)}%`}
+                    x2={`${(seededRandom(seed + 4) * 110 - 5).toFixed(1)}%`}
+                    y2={`${(seededRandom(seed + 5) * 110 - 5).toFixed(1)}%`}
+                    strokeWidth={(seededRandom(seed + 6) * 0.5 + 0.1).toFixed(2)}
+                    strokeDasharray={dashArray}
+                    className="bg-svg-line"
+                    style={{
+                        ['--anim-duration' as any]: `${(seededRandom(seed + 7) * 15 + 12).toFixed(1)}s`,
+                        ['--anim-delay' as any]: `-${(seededRandom(seed + 8) * 10).toFixed(1)}s`,
+                        ['--stroke-dasharray' as any]: dashArray,
+                    } as React.CSSProperties}
+                />
+            );
         }
         for (let i = 0; i < config.circles; i++) {
-             items.push( <circle key={`c-${i}`} cx={`${Math.random() * 100}%`} cy={`${Math.random() * 100}%`} r={`${(Math.random() * 1.5 + 0.5).toFixed(1)}%`} strokeWidth={(Math.random() * 0.4 + 0.1).toFixed(2)} className="bg-svg-circle" style={{ ['--anim-duration' as any]: `${(Math.random() * 12 + 8).toFixed(1)}s`, ['--anim-delay' as any]: `-${(Math.random() * 8).toFixed(1)}s`, } as React.CSSProperties}/> );
+            const seed = i * 11 + 100;
+            items.push(
+                <circle
+                    key={`c-${i}`}
+                    cx={`${(seededRandom(seed) * 100).toFixed(1)}%`}
+                    cy={`${(seededRandom(seed + 1) * 100).toFixed(1)}%`}
+                    r={`${(seededRandom(seed + 2) * 1.5 + 0.5).toFixed(1)}%`}
+                    strokeWidth={(seededRandom(seed + 3) * 0.4 + 0.1).toFixed(2)}
+                    className="bg-svg-circle"
+                    style={{
+                        ['--anim-duration' as any]: `${(seededRandom(seed + 4) * 12 + 8).toFixed(1)}s`,
+                        ['--anim-delay' as any]: `-${(seededRandom(seed + 5) * 8).toFixed(1)}s`,
+                    } as React.CSSProperties}
+                />
+            );
         }
         return items;
     }, [config]);
