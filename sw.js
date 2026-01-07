@@ -1,8 +1,10 @@
 // public/sw.js
 // Service Worker for offline support and faster repeat visits
 
-const CACHE_NAME = 'manic-agency-v1';
-const RUNTIME_CACHE = 'manic-runtime';
+// INCREMENT THIS VERSION ON EACH DEPLOYMENT to invalidate old caches
+const SW_VERSION = 'v2';
+const CACHE_NAME = `manic-agency-${SW_VERSION}`;
+const RUNTIME_CACHE = `manic-runtime-${SW_VERSION}`;
 
 // Assets to cache on install
 const PRECACHE_ASSETS = [
@@ -24,16 +26,27 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Activate event - clean up old caches
+// Activate event - clean up old caches (including old versions)
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames
-          .filter((name) => name !== CACHE_NAME && name !== RUNTIME_CACHE)
-          .map((name) => caches.delete(name))
+          .filter((name) => {
+            // Delete any cache that isn't our current version
+            const isOurCache = name.startsWith('manic-agency-') || name.startsWith('manic-runtime-');
+            const isCurrentVersion = name === CACHE_NAME || name === RUNTIME_CACHE;
+            return isOurCache && !isCurrentVersion;
+          })
+          .map((name) => {
+            console.log('[SW] Deleting old cache:', name);
+            return caches.delete(name);
+          })
       );
-    }).then(() => self.clients.claim())
+    }).then(() => {
+      console.log('[SW] New version activated:', SW_VERSION);
+      return self.clients.claim();
+    })
   );
 });
 
