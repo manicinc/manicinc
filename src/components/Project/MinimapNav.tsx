@@ -79,7 +79,7 @@ const MinimapNav: React.FC<MinimapNavProps> = ({ toc }) => {
         const computedHeader = getComputedStyle(document.documentElement).getPropertyValue('--header-height');
         const parsedHeader = parseInt(computedHeader.replace('px', '').trim(), 10);
         const headerOffset = Number.isFinite(parsedHeader) ? parsedHeader + 24 : 110;
-        observer.current = new IntersectionObserver(observerCallback, { rootMargin: `-${headerOffset}px 0px -45% 0px`, threshold: 0.1 });
+        observer.current = new IntersectionObserver(observerCallback, { rootMargin: `-${headerOffset}px 0px -70% 0px`, threshold: 0.1 });
         const { current: currentObserver } = observer;
         const observedElements: Element[] = [];
         filteredToc.forEach((item) => {
@@ -112,7 +112,7 @@ const MinimapNav: React.FC<MinimapNavProps> = ({ toc }) => {
     manualScrollHandlerRef.current = monitorScroll;
     window.addEventListener('scroll', monitorScroll, { passive: true });
 
-    manualScrollTimeoutRef.current = window.setTimeout(clearManualScroll, 3500);
+    manualScrollTimeoutRef.current = window.setTimeout(clearManualScroll, 1000);
 
     setActiveSlug(slug);
 
@@ -145,6 +145,21 @@ const MinimapNav: React.FC<MinimapNavProps> = ({ toc }) => {
   useEffect(() => {
     return () => {
       clearManualScroll();
+    };
+  }, [clearManualScroll]);
+
+  // Detect user-initiated scrolling (wheel/touch) and cancel programmatic scroll
+  useEffect(() => {
+    const handleUserScroll = () => {
+      if (manualScrollTargetRef.current) {
+        clearManualScroll(); // Cancel programmatic scroll immediately when user scrolls
+      }
+    };
+    window.addEventListener('wheel', handleUserScroll, { passive: true });
+    window.addEventListener('touchmove', handleUserScroll, { passive: true });
+    return () => {
+      window.removeEventListener('wheel', handleUserScroll);
+      window.removeEventListener('touchmove', handleUserScroll);
     };
   }, [clearManualScroll]);
 
