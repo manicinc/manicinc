@@ -26,11 +26,8 @@ export default function ServiceWorkerRegistration() {
           console.error('❌ Service Worker registration failed:', error);
         });
 
-      // Listen for updates
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        console.log('🔄 Service Worker updated - reloading page');
-        window.location.reload();
-      });
+      // Note: Removed controllerchange reload listener - it caused a refresh loop
+      // when combined with clients.claim() in sw.js
     }
   }, []);
 
