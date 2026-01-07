@@ -89,7 +89,7 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
     const [decryptingLink, setDecryptingLink] = useState<string | null>(null);
     const [showBackToTop, setShowBackToTop] = useState<boolean>(false);
     const [terminalText, setTerminalText] = useState<string>(abbreviateText("link_init..."));
-    const [showCursor, setShowCursor] = useState<boolean>(true);
+    // Note: Cursor blinking is now CSS-only to prevent re-renders
     const [isDecryptingTerminal, setIsDecryptingTerminal] = useState<boolean>(false);
     const terminalRef = useRef<HTMLDivElement>(null);
     const cycleIntervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -197,7 +197,40 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
 
     // --- Terminal Logic ---
     const startTitleCycle = useCallback(() => { if (cycleIntervalRef.current) clearInterval(cycleIntervalRef.current); if (decryptIntervalRef.current) clearInterval(decryptIntervalRef.current); if (!featuredItems?.length) { setTerminalText(abbreviateText("feed_offline::no_items")); setIsDecryptingTerminal(false); return; } const files = featuredItems.map(item => { const typePrefix = item.type === 'blog' ? 'LOG' : 'PRJ'; const safeSlug = item.slug?.toLowerCase().replace(/[^a-z0-9_-]/g, '_') || 'unknown'; return `${typePrefix}_${safeSlug}.dat`; }); let currentIndex = 0; const cycleToNextFile = () => { if (decryptIntervalRef.current) clearInterval(decryptIntervalRef.current); setIsDecryptingTerminal(true); const targetFilename = abbreviateText(files[currentIndex]); let currentIteration = 0; const maxIterations = 8; const decryptionSpeed = 60; decryptIntervalRef.current = setInterval(() => { if (currentIteration >= maxIterations) { clearInterval(decryptIntervalRef.current!); setTerminalText(targetFilename); setIsDecryptingTerminal(false); currentIndex = (currentIndex + 1) % files.length; } else { setTerminalText( targetFilename.split('').map((char, index) => { const revealThreshold = (currentIteration / maxIterations); const randomFactor = Math.random(); if (['_', '.', '…'].includes(char) || randomFactor < revealThreshold) { return char; } else { return "!<>-_#%*?/$".charAt(Math.floor(Math.random() * 10)); } }).join('') ); currentIteration++; } }, decryptionSpeed); }; cycleToNextFile(); cycleIntervalRef.current = setInterval(cycleToNextFile, 4000); }, [featuredItems]);
-    useEffect(() => { if (!mounted) return; const cleanup = () => { if (cycleIntervalRef.current) clearInterval(cycleIntervalRef.current); if (decryptIntervalRef.current) clearInterval(decryptIntervalRef.current); }; const cursorInterval = setInterval(() => setShowCursor(prev => !prev), 530); if (!featuredItems?.length) { setTerminalText(abbreviateText("no_signals_detected")); setIsDecryptingTerminal(false); setShowCursor(true); return () => { cleanup(); clearInterval(cursorInterval); }; } let t1: NodeJS.Timeout, t2: NodeJS.Timeout, t3: NodeJS.Timeout; setTerminalText(abbreviateText("link_init...")); setShowCursor(true); setIsDecryptingTerminal(false); t1 = setTimeout(() => { setIsDecryptingTerminal(true); setTerminalText(abbreviateText("scanning_signals...")); t2 = setTimeout(() => { setTerminalText(abbreviateText("receiving_data...")); t3 = setTimeout(() => { setIsDecryptingTerminal(false); startTitleCycle(); }, 700); }, 900); }, 1200); return () => { cleanup(); clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); clearInterval(cursorInterval); }; }, [mounted, featuredItems, startTitleCycle]);
+    useEffect(() => {
+        if (!mounted) return;
+        const cleanup = () => {
+            if (cycleIntervalRef.current) clearInterval(cycleIntervalRef.current);
+            if (decryptIntervalRef.current) clearInterval(decryptIntervalRef.current);
+        };
+        // Removed: cursor interval that caused re-renders every 530ms
+        // Cursor now blinks via CSS animation only
+        if (!featuredItems?.length) {
+            setTerminalText(abbreviateText("no_signals_detected"));
+            setIsDecryptingTerminal(false);
+            return cleanup;
+        }
+        let t1: NodeJS.Timeout, t2: NodeJS.Timeout, t3: NodeJS.Timeout;
+        setTerminalText(abbreviateText("link_init..."));
+        setIsDecryptingTerminal(false);
+        t1 = setTimeout(() => {
+            setIsDecryptingTerminal(true);
+            setTerminalText(abbreviateText("scanning_signals..."));
+            t2 = setTimeout(() => {
+                setTerminalText(abbreviateText("receiving_data..."));
+                t3 = setTimeout(() => {
+                    setIsDecryptingTerminal(false);
+                    startTitleCycle();
+                }, 700);
+            }, 900);
+        }, 1200);
+        return () => {
+            cleanup();
+            clearTimeout(t1);
+            clearTimeout(t2);
+            clearTimeout(t3);
+        };
+    }, [mounted, featuredItems, startTitleCycle]);
 
     // --- Other Logic ---
     const handleDecodeClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, urlPath: string | null, isDraft: boolean) => { if (isDraft || !urlPath) { e.preventDefault(); return; } e.preventDefault(); if (decryptingLink === urlPath) return; setDecryptingLink(urlPath); setTimeout(() => { router.push(urlPath); setTimeout(() => setDecryptingLink(null), 150); }, 400); }, [decryptingLink, router]);
@@ -238,7 +271,7 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                 </div>
                 {/* Terminal & Contact */}
                 <div className={`terminal-contact-row compact-row ${animationClass('delay-300')}`}>
-                    <div className="terminal-container"> <div className="terminal-header"><div className="terminal-buttons"><div className="terminal-button red"></div><div className="terminal-button yellow"></div><div className="terminal-button green"></div></div><div className="terminal-label">{/* ACTIVE_FEED */} <span className="ellipsis-anim"></span></div></div> <div ref={terminalRef} className="terminal-text-area"><span className="terminal-prompt">{'>'}</span><span className={`terminal-text ${isDecryptingTerminal ? 'decrypting' : ''}`} data-text={terminalText}>{terminalText}</span><span className={`terminal-cursor ${showCursor ? 'visible' : ''}`}>_</span></div> <div className="terminal-scanline"></div> </div>
+                    <div className="terminal-container"> <div className="terminal-header"><div className="terminal-buttons"><div className="terminal-button red"></div><div className="terminal-button yellow"></div><div className="terminal-button green"></div></div><div className="terminal-label">{/* ACTIVE_FEED */} <span className="ellipsis-anim"></span></div></div> <div ref={terminalRef} className="terminal-text-area"><span className="terminal-prompt">{'>'}</span><span className={`terminal-text ${isDecryptingTerminal ? 'decrypting' : ''}`} data-text={terminalText}>{terminalText}</span><span className="terminal-cursor">_</span></div> <div className="terminal-scanline"></div> </div>
                     <Link prefetch={false} href="/contact" className={`contact-btn ${animationClass('delay-350')} `}><span className="contact-btn-content">Establish Connection<ArrowUpRight className="contact-btn-icon" /></span><span className="contact-btn-glow"></span></Link>
                 </div>
                 {/* Featured Items */}
@@ -407,8 +440,8 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                   .terminal-prompt { color: var(--accent-terminal-prompt, var(--accent-secondary)); margin-right: 0.3rem; flex-shrink: 0; }
                   .terminal-text { flex-grow: 1; flex-shrink: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: left; position: relative; vertical-align: baseline; }
                   .terminal-text.decrypting { animation: terminal-decrypt 0.08s steps(1) infinite; }
-                  .terminal-cursor { margin-left: 0.1rem; font-weight: bold; color: var(--accent-terminal-cursor, var(--accent-highlight)); vertical-align: baseline; flex-shrink: 0; animation: cursor-blink 1.06s infinite steps(2); opacity: 0; }
-                  .terminal-cursor.visible { opacity: 1; }
+                  .terminal-cursor { margin-left: 0.1rem; font-weight: bold; color: var(--accent-terminal-cursor, var(--accent-highlight)); vertical-align: baseline; flex-shrink: 0; animation: cursor-blink 1.06s infinite steps(2); }
+                  /* CSS-only cursor blink - no JS state updates needed */
                   .terminal-scanline { position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; background: linear-gradient(to bottom, transparent 50%, rgba(var(--accent-terminal-glow, var(--accent-secondary-rgb)), 0.06) 51%, transparent 52%); background-size: 100% 2.5px; opacity: 0.4; animation: scan-anim 7s linear infinite; z-index: -1; }
                   @keyframes scan-anim { from { background-position: 0 0; } to { background-position: 0 70px; } }
                   @keyframes cursor-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }

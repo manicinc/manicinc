@@ -280,9 +280,16 @@ html[class*="dark"] {
   color-scheme: dark;
 }
 
-/* Apply background transitions */
-html, body {
+/* Apply background transitions - ONLY after theme is loaded to prevent flash on initial render */
+html[data-theme-loaded="true"],
+html[data-theme-loaded="true"] body {
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* No transitions during initial load - prevents flash */
+html:not([data-theme-loaded]),
+html:not([data-theme-loaded]) body {
+  transition: none !important;
 }
 
 /* Ensure theme transitions apply to all elements */
