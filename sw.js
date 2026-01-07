@@ -2,7 +2,7 @@
 // Service Worker for offline support and faster repeat visits
 
 // INCREMENT THIS VERSION ON EACH DEPLOYMENT to invalidate old caches
-const SW_VERSION = 'v2';
+const SW_VERSION = 'v3';
 const CACHE_NAME = `manic-agency-${SW_VERSION}`;
 const RUNTIME_CACHE = `manic-runtime-${SW_VERSION}`;
 
@@ -26,17 +26,16 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Activate event - clean up old caches (including old versions)
+// Activate event - clean up ALL old caches aggressively
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames
           .filter((name) => {
-            // Delete any cache that isn't our current version
-            const isOurCache = name.startsWith('manic-agency-') || name.startsWith('manic-runtime-');
-            const isCurrentVersion = name === CACHE_NAME || name === RUNTIME_CACHE;
-            return isOurCache && !isCurrentVersion;
+            // Delete ANY cache that isn't our current version
+            // This includes old versions with different naming patterns
+            return name !== CACHE_NAME && name !== RUNTIME_CACHE;
           })
           .map((name) => {
             console.log('[SW] Deleting old cache:', name);
