@@ -58,101 +58,6 @@ const abbreviateText = (text: string, maxLength: number = maxTerminalChars): str
 // --- Props ---
 interface HeroSectionProps { featuredItems: HeroFeedItem[]; }
 
-// --- Memoized Featured Item Card (prevents re-render from terminal state changes) ---
-interface FeaturedItemCardProps {
-    item: HeroFeedItem;
-    index: number;
-    isDecrypting: boolean;
-    onDecodeClick: (e: React.MouseEvent<HTMLAnchorElement>, urlPath: string | null, isDraft: boolean) => void;
-}
-
-const FeaturedItemCard = React.memo(function FeaturedItemCard({ item, index, isDecrypting, onDecodeClick }: FeaturedItemCardProps) {
-    const isDraft = item.draft === true;
-    const url = isDraft ? '#' : item.urlPath;
-
-    return (
-        <div className={`featured-item-wrapper item-${index + 1}`}>
-            <div className={`holographic-card group ${item.type === 'blog' ? 'card-is-blog' : 'card-is-project'} ${isDraft ? 'is-draft' : ''}`}>
-                <div className="card-header">
-                    {item.type === 'blog' ? <FileText size={14} className="icon" /> : <FolderGit2 size={14} className="icon" />}
-                    <span className="card-type-label">{item.type === 'blog' ? 'Log Entry' : 'Project File'}</span>
-                    {item.category && <div className="card-category-badge">{item.category.replace(/-/g, ' ')}</div>}
-                </div>
-                <div className="card-image-container">
-                    <div className="image-link-wrapper">
-                        <Link prefetch={false} href={url} aria-label={item.title} onClick={(e) => onDecodeClick(e, url, isDraft)} className={`card-image-link ${isDraft ? 'draft-disabled' : ''}`} aria-disabled={isDraft} tabIndex={isDraft ? -1 : 0}>
-                            {item.image ? (
-                                <div className="card-image-wrapper">
-                                    <Image
-                                        src={item.image}
-                                        alt=""
-                                        className="card-image"
-                                        loading={index === 0 ? "eager" : "lazy"}
-                                        priority={index === 0}
-                                        fetchPriority={index === 0 ? "high" : "low"}
-                                        decoding="async"
-                                        width={400}
-                                        height={300}
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                    />
-                                    <div className="card-image-gradient-overlay"></div>
-                                </div>
-                            ) : (
-                                <AsciiArtPlaceholder className="card-ascii-placeholder" animate={true} height="140px" width="100%" />
-                            )}
-                            <div className="card-image-overlay"></div>
-                        </Link>
-                        {isDraft && <div className="draft-overlay"><span className="draft-overlay-text"></span><span className="draft-overlay-subtext">[ COMING SOON ]</span></div>}
-                    </div>
-                </div>
-                <div className="card-content-area">
-                    <h3 className="card-title">
-                        {isDraft ? <span className="draft-title">{item.title}</span> : <Link prefetch={false} href={url} className="animated-underline relative" onClick={(e) => onDecodeClick(e, url, isDraft)}>{item.title}</Link>}
-                    </h3>
-                    <p className={`card-excerpt ${isDraft ? 'draft-excerpt' : ''}`}>{item.excerpt || (isDraft ? "// Metadata Redacted..." : "// No Description Available...")}</p>
-                    {!isDraft && (
-                        <div className="card-link-wrapper">
-                            <Link prefetch={false} href={url} onClick={(e) => onDecodeClick(e, url, isDraft)} className="decrypt-link group/link" aria-label={item.type === 'blog' ? `Read blog post: ${item.title}` : `View project: ${item.title}`}>
-                                {isDecrypting ? (
-                                    <span className="decrypting-text"><svg className="decrypt-spinner" aria-hidden="true"></svg>Decrypting...</span>
-                                ) : (
-                                    <>&gt; {item.type === 'blog' ? 'Read Entry' : 'View Project'} <ArrowRight size={12} className="card-arrow" aria-hidden="true"/></>
-                                )}
-                            </Link>
-                        </div>
-                    )}
-                </div>
-            </div>
-        </div>
-    );
-});
-
-// --- Memoized Featured Items Grid (isolates cards from parent state changes) ---
-interface FeaturedItemsGridProps {
-    items: HeroFeedItem[];
-    decryptingLink: string | null;
-    onDecodeClick: (e: React.MouseEvent<HTMLAnchorElement>, urlPath: string | null, isDraft: boolean) => void;
-    animationClass: string;
-}
-
-const FeaturedItemsGrid = React.memo(function FeaturedItemsGrid({ items, decryptingLink, onDecodeClick, animationClass }: FeaturedItemsGridProps) {
-    if (items.length === 0) return null;
-
-    return (
-        <div className={`featured-items-area compact-area ${animationClass}`}>
-            {items.map((item, index) => (
-                <FeaturedItemCard
-                    key={item.id || index}
-                    item={item}
-                    index={index}
-                    isDecrypting={decryptingLink === (item.draft ? '#' : item.urlPath)}
-                    onDecodeClick={onDecodeClick}
-                />
-            ))}
-        </div>
-    );
-});
-
 // --- Component ---
 export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
     const router = useRouter();
@@ -336,13 +241,54 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                     <div className="terminal-container"> <div className="terminal-header"><div className="terminal-buttons"><div className="terminal-button red"></div><div className="terminal-button yellow"></div><div className="terminal-button green"></div></div><div className="terminal-label">{/* ACTIVE_FEED */} <span className="ellipsis-anim"></span></div></div> <div ref={terminalRef} className="terminal-text-area"><span className="terminal-prompt">{'>'}</span><span className={`terminal-text ${isDecryptingTerminal ? 'decrypting' : ''}`} data-text={terminalText}>{terminalText}</span><span className={`terminal-cursor ${showCursor ? 'visible' : ''}`}>_</span></div> <div className="terminal-scanline"></div> </div>
                     <Link prefetch={false} href="/contact" className={`contact-btn ${animationClass('delay-350')} `}><span className="contact-btn-content">Establish Connection<ArrowUpRight className="contact-btn-icon" /></span><span className="contact-btn-glow"></span></Link>
                 </div>
-                {/* Featured Items - Memoized to prevent re-renders from terminal state */}
-                <FeaturedItemsGrid
-                    items={displayItems}
-                    decryptingLink={decryptingLink}
-                    onDecodeClick={handleDecodeClick}
-                    animationClass={animationClass('delay-500')}
-                />
+                {/* Featured Items */}
+                 {displayItems.length > 0 && (
+                     <div className={`featured-items-area compact-area ${animationClass('delay-500')}`}>
+                         {displayItems.map((item, index) => {
+                             const isDraft = item.draft === true;
+                             const url = isDraft ? '#' : item.urlPath;
+                             return (
+                                 <div key={item.id || index} className={`featured-item-wrapper item-${index + 1}`}>
+                                     <div className={`holographic-card group ${item.type === 'blog' ? 'card-is-blog' : 'card-is-project'} ${isDraft ? 'is-draft' : ''}`}>
+                                          <div className="card-header"> {item.type === 'blog' ? <FileText size={14} className="icon" /> : <FolderGit2 size={14} className="icon" />} <span className="card-type-label">{item.type === 'blog' ? 'Log Entry' : 'Project File'}</span> {item.category && <div className="card-category-badge">{item.category.replace(/-/g, ' ')}</div>} </div>
+                                          <div className="card-image-container"> 
+                                            <div className="image-link-wrapper"> 
+                                              <Link prefetch={false} href={url} aria-label={item.title} onClick={(e) => handleDecodeClick(e, url, isDraft)} className={`card-image-link ${isDraft ? 'draft-disabled' : ''}`} aria-disabled={isDraft} tabIndex={isDraft ? -1 : 0}> 
+                                                {item.image ? (
+                                                  <div className="card-image-wrapper">
+                                                    <Image 
+                                                      src={item.image} 
+                                                      alt="" 
+                                                      className="card-image" 
+                                                      loading={index === 0 ? "eager" : "lazy"}
+                                                      priority={index === 0}
+                                                      fetchPriority={index === 0 ? "high" : "low"}
+                                                      decoding="async"
+                                                      width={400}
+                                                      height={300}
+                                                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" 
+                                                    />
+                                                    <div className="card-image-gradient-overlay"></div>
+                                                  </div>
+                                                ) : (
+                                                  <AsciiArtPlaceholder className="card-ascii-placeholder" animate={true} height="140px" width="100%" />
+                                                )} 
+                                                <div className="card-image-overlay"></div> 
+                                              </Link> 
+                                              {isDraft && <div className="draft-overlay"><span className="draft-overlay-text">{/* ACCESS_PENDING */}</span><span className="draft-overlay-subtext">[ COMING SOON ]</span></div>} 
+                                            </div> 
+                                          </div>
+                                          <div className="card-content-area">
+                                               <h3 className={`card-title`}> {isDraft ? <span className="draft-title">{item.title}</span> : <Link prefetch={false} href={url} className="animated-underline relative" onClick={(e) => handleDecodeClick(e, url, isDraft)}>{item.title}</Link>} </h3>
+                                               <p className={`card-excerpt ${isDraft ? 'draft-excerpt' : ''}`}>{item.excerpt || (isDraft ? "// Metadata Redacted..." : "// No Description Available...")}</p>
+                                               {!isDraft && ( <div className="card-link-wrapper"> <Link prefetch={false} href={url} onClick={(e) => handleDecodeClick(e, url, isDraft)} className="decrypt-link group/link" aria-label={item.type === 'blog' ? `Read blog post: ${item.title}` : `View project: ${item.title}`}> {decryptingLink === url ? ( <span className="decrypting-text"><svg className="decrypt-spinner" aria-hidden="true"></svg>Decrypting...</span> ) : ( <> &gt; {item.type === 'blog' ? 'Read Entry' : 'View Project'} <ArrowRight size={12} className="card-arrow" aria-hidden="true"/> </> )} </Link> </div> )}
+                                           </div>
+                                     </div>
+                                 </div>
+                             );
+                         })}
+                     </div>
+                 )}
                  {/* Empty State */}
                  {(!displayItems || displayItems.length === 0) && mounted && ( <div className={`empty-state compact-area ${animationClass('delay-500')}`}><p>{/* NO FEATURED TRANSMISSIONS */}</p><p>[ Awaiting Signal Acquisition ]</p></div> )}
                 {/* Enter Archives Button */}
@@ -677,8 +623,8 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                  .image-link-wrapper { position: relative; display: block; width: 100%; height: 100%; }
                  .card-image-link { position: relative; display: block; width: 100%; height: 100%; border-radius: inherit; overflow: hidden; }
                  .card-image-link.draft-disabled { cursor: default; }
-                 .card-image-wrapper { position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: inherit; background: var(--bg-secondary); contain: layout paint; isolation: isolate; }
-                 .card-image { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.4s ease; filter: saturate(0.9); border-radius: inherit; will-change: transform; }
+                 .card-image-wrapper { position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: inherit; background: var(--bg-secondary); }
+                 .card-image { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.4s ease, filter 0.4s ease; filter: saturate(0.9); border-radius: inherit; }
                  .card-image-gradient-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(var(--accent-primary-rgb), 0.15) 0%, transparent 30%, rgba(var(--accent-highlight-rgb), 0.08) 70%, transparent 100%), linear-gradient(to top, rgba(var(--bg-primary-rgb), 0.4) 0%, transparent 50%); pointer-events: none; border-radius: inherit; z-index: 1; }
                  .group:hover .holographic-card:not(.is-draft) .card-image { transform: scale(1.05); filter: saturate(1.1); }
                  .group:hover .holographic-card:not(.is-draft) .card-image-gradient-overlay { background: linear-gradient(135deg, rgba(var(--accent-primary-rgb), 0.2) 0%, transparent 25%, rgba(var(--accent-highlight-rgb), 0.12) 75%, transparent 100%), linear-gradient(to top, rgba(var(--bg-primary-rgb), 0.3) 0%, transparent 60%); }
