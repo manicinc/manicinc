@@ -105,11 +105,14 @@ hr.ornate-rule::before {
   pointer-events: none;
 }
 
-/* Performance optimizations */
-.is-scrolling * {
+/* Performance optimizations - selective, excludes images to prevent flashing */
+.is-scrolling .blog-card,
+.is-scrolling .blog-tag,
+.is-scrolling .blog-category-filter,
+.is-scrolling .sort-button {
   transition: none !important;
-  animation: none !important;
 }
+/* Note: Removed aggressive .is-scrolling * rule that caused image flashing */
 
 @media (prefers-reduced-motion: reduce) {
   * {

@@ -235,26 +235,53 @@ const BlogVinesBalanced: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Enhanced scroll handling with density changes
+  // Enhanced scroll handling with density changes - optimized to reduce re-renders
   useEffect(() => {
     let lastScrollY = 0;
+    let lastProgress = 0;
+    let lastActivityState: ActivityStateType = 'idle';
+    let activityTimeout: NodeJS.Timeout | null = null;
 
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = maxScroll > 0 ? Math.min(1, scrollY / (maxScroll * 0.5)) : 0; // Reach full at 50% scroll
-      setScrollProgress(progress);
+      const progress = maxScroll > 0 ? Math.min(1, scrollY / (maxScroll * 0.5)) : 0;
 
-      // Detect scrolling direction for activity state
-      const scrollDelta = Math.abs(scrollY - lastScrollY);
-      if (scrollDelta > 5) {
-        setActivityState('scrolling');
-        setTimeout(() => setActivityState('active'), 300);
-      } else if (scrollY > 100) {
-        setActivityState('active');
-      } else {
-        setActivityState('idle');
+      // Only update progress if changed significantly (reduces re-renders)
+      if (Math.abs(progress - lastProgress) > 0.02) {
+        lastProgress = progress;
+        setScrollProgress(progress);
       }
+
+      // Detect scrolling direction for activity state - debounced
+      const scrollDelta = Math.abs(scrollY - lastScrollY);
+      let newActivityState: ActivityStateType = lastActivityState;
+
+      if (scrollDelta > 5) {
+        newActivityState = 'scrolling';
+        // Clear previous timeout and set new one
+        if (activityTimeout) clearTimeout(activityTimeout);
+        activityTimeout = setTimeout(() => {
+          if (lastActivityState !== 'active') {
+            lastActivityState = 'active';
+            setActivityState('active');
+          }
+        }, 300);
+      } else if (scrollY > 100) {
+        newActivityState = 'active';
+      } else {
+        newActivityState = 'idle';
+      }
+
+      // Only update activity state if actually changed
+      if (newActivityState !== lastActivityState && newActivityState !== 'scrolling') {
+        lastActivityState = newActivityState;
+        setActivityState(newActivityState);
+      } else if (newActivityState === 'scrolling' && lastActivityState !== 'scrolling') {
+        lastActivityState = 'scrolling';
+        setActivityState('scrolling');
+      }
+
       lastScrollY = scrollY;
     };
 
@@ -272,7 +299,10 @@ const BlogVinesBalanced: React.FC = () => {
 
     window.addEventListener('scroll', throttledScroll, { passive: true });
     handleScroll(); // Initial call
-    return () => window.removeEventListener('scroll', throttledScroll);
+    return () => {
+      window.removeEventListener('scroll', throttledScroll);
+      if (activityTimeout) clearTimeout(activityTimeout);
+    };
   }, []);
 
   // Dynamic gradients based on scroll

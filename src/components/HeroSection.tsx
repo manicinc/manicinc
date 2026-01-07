@@ -202,7 +202,7 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
     // --- Other Logic ---
     const handleDecodeClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, urlPath: string | null, isDraft: boolean) => { if (isDraft || !urlPath) { e.preventDefault(); return; } e.preventDefault(); if (decryptingLink === urlPath) return; setDecryptingLink(urlPath); setTimeout(() => { router.push(urlPath); setTimeout(() => setDecryptingLink(null), 150); }, 400); }, [decryptingLink, router]);
     const scrollToTop = useCallback(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, []);
-    useEffect(() => { const h = () => setShowBackToTop(window.scrollY > 150); window.addEventListener('scroll', h); return () => window.removeEventListener('scroll', h); }, []);
+    useEffect(() => { let lastValue = window.scrollY > 150; setShowBackToTop(lastValue); const h = () => { const newValue = window.scrollY > 150; if (newValue !== lastValue) { lastValue = newValue; setShowBackToTop(newValue); } }; window.addEventListener('scroll', h, { passive: true }); return () => window.removeEventListener('scroll', h); }, []);
     const animationClass = (delay = 'delay-0') => mounted ? `fade-in-up ${delay}` : 'opacity-0';
     const fadeIn = { hidden: { opacity: 0, y: 15 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } };
 

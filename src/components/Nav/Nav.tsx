@@ -24,14 +24,19 @@ export const Nav = () => {
 
     // --- Scroll Detection for Nav Styling ---
     useEffect(() => {
+        const threshold = navRef.current ? navRef.current.offsetHeight / 2 : 30;
+        let lastIsScrolled = window.scrollY > threshold;
+        setIsScrolled(lastIsScrolled);
+
         const handleScroll = () => {
-            const scrollY = window.scrollY;
-            const threshold = navRef.current ? navRef.current.offsetHeight / 2 : 30;
-            setIsScrolled(scrollY > threshold);
+            const newIsScrolled = window.scrollY > threshold;
+            if (newIsScrolled !== lastIsScrolled) {
+                lastIsScrolled = newIsScrolled;
+                setIsScrolled(newIsScrolled);
+            }
         };
 
         window.addEventListener('scroll', handleScroll, { passive: true });
-        handleScroll(); // Initial check
 
         return () => window.removeEventListener('scroll', handleScroll);
     }, []); // Run only once on mount
