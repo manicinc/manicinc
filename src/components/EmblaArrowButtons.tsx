@@ -56,11 +56,12 @@ import React, {
   
   export const PrevButton: React.FC<PropType> = (props) => {
     const { children, ...restProps } = props
-  
+
     return (
       <button
         className="embla__button embla__button--prev !border !rounded-full !border-[#8641ff]"
         type="button"
+        aria-label="Previous slide"
         {...restProps}
       >
         <svg className="embla__button__svg" viewBox="0 0 532 532">
@@ -76,11 +77,12 @@ import React, {
   
   export const NextButton: React.FC<PropType> = (props) => {
     const { children, ...restProps } = props
-  
+
     return (
       <button
         className="embla__button embla__button--next !border !rounded-full !border-[#8641ff]"
         type="button"
+        aria-label="Next slide"
         {...restProps}
       >
         <svg className="embla__button__svg" viewBox="0 0 532 532">

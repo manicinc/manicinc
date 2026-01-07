@@ -146,8 +146,14 @@ const BlogVinesBalanced: React.FC = () => {
   const [flowers, setFlowers] = useState<FlowerData[]>([]);
   const [activityState, setActivityState] = useState<ActivityStateType>('idle');
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [viewBoxWidth, setViewBoxWidth] = useState(1920); // Default for SSR consistency
   const containerRef = useRef<HTMLDivElement>(null);
   const generatedRef = useRef(false);
+
+  // Update viewBox width on client mount
+  useEffect(() => {
+    setViewBoxWidth(window.innerWidth);
+  }, []);
 
   // Generate paths with scroll influence
   useEffect(() => {
@@ -329,7 +335,7 @@ const BlogVinesBalanced: React.FC = () => {
         height="100%"
         preserveAspectRatio="xMidYMin slice"
         className={styles.vinesSvg}
-        viewBox={`0 0 ${typeof window !== 'undefined' ? window.innerWidth : 1920} 180`}
+        viewBox={`0 0 ${viewBoxWidth} 180`}
       >
         {gradients}
 

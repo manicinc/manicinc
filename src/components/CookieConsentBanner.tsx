@@ -204,6 +204,7 @@ export function CookieConsentBanner({ onConsentChange }: CookieConsentBannerProp
                               checked={preferences[category.key]}
                               onChange={(e) => handlePreferenceChange(category.key, e.target.checked)}
                               disabled={category.required}
+                              aria-label={`${category.required ? 'Required: ' : ''}Enable ${category.title} cookies`}
                             />
                             <span className="toggle-slider"></span>
                           </label>

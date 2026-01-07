@@ -5,7 +5,7 @@
 'use client';
 
 // --- Core React/Next Imports ---
-import React, { ReactNode, useMemo, isValidElement, ComponentPropsWithoutRef, CSSProperties, Children } from 'react';
+import React, { ReactNode, useMemo, isValidElement, ComponentPropsWithoutRef, CSSProperties, Children, useState, useEffect } from 'react';
 
 // --- Markdown Processing Libraries ---
 import ReactMarkdown from 'react-markdown';
@@ -22,10 +22,45 @@ import type { PluggableList } from 'unified';
 import type { Element, Text, Comment, ElementContent, Root } from 'hast';
 import { visit } from 'unist-util-visit';
 
-// --- Syntax Highlighting (Modern Themes) ---
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
+// --- Syntax Highlighting Types (lazy loaded) ---
+type PrismComponent = React.ComponentType<any> | null;
+type PrismStyle = Record<string, React.CSSProperties> | null;
+
+// Lazy loading hook for syntax highlighter (reduces initial bundle by ~244 KiB)
+const useLazySyntaxHighlighter = (shouldLoad: boolean, isDarkMode: boolean) => {
+    const [highlighter, setHighlighter] = useState<PrismComponent>(null);
+    const [style, setStyle] = useState<PrismStyle>(null);
+
+    useEffect(() => {
+        if (!shouldLoad || (highlighter && style)) return;
+
+        let cancelled = false;
+
+        const load = async () => {
+            try {
+                const [{ Prism }, themeModule] = await Promise.all([
+                    import('react-syntax-highlighter'),
+                    import('react-syntax-highlighter/dist/esm/styles/prism')
+                ]);
+
+                if (!cancelled) {
+                    setHighlighter(() => Prism);
+                    setStyle(isDarkMode ? themeModule.vscDarkPlus : themeModule.oneLight);
+                }
+            } catch (error) {
+                console.error('Failed to load syntax highlighter', error);
+            }
+        };
+
+        load();
+
+        return () => {
+            cancelled = true;
+        };
+    }, [shouldLoad, isDarkMode, highlighter, style]);
+
+    return { highlighter, style };
+};
 
 // --- Theme Context & Custom Components ---
 import { useTheme } from '@/context/ThemeContext';
@@ -113,6 +148,12 @@ const ImageGrid: React.FC<ImageGridProps> = ({ children, columns = 2 }) => {
 export function ProjectMarkdownRenderer({ children: rawMarkdown, className = "" }: ProjectMarkdownRendererProps) {
     const { isDarkMode } = useTheme();
 
+    // Check if markdown has code blocks to trigger lazy loading
+    const hasCodeBlocks = useMemo(() => /```\w+/.test(rawMarkdown), [rawMarkdown]);
+
+    // Lazy load syntax highlighter only when needed
+    const { highlighter: SyntaxHighlighter, style: syntaxStyle } = useLazySyntaxHighlighter(hasCodeBlocks, isDarkMode);
+
     // --- Optional: HAST Preprocessing for Project-Specific Syntax ---
     const rehypeProcessProjectSyntax: PluggableList[number] = () => {
         return (tree: Root) => {
@@ -179,16 +220,27 @@ export function ProjectMarkdownRenderer({ children: rawMarkdown, className = "" 
         },
 
         code: ({ node, inline, className: codeClassName, children: codeChildren, ...props }: CodeProps) => {
-            // (Keep the existing modern code block implementation from previous response)
             const match = /language-(\w+)/.exec(codeClassName || '');
             const isBlock = !inline && match;
             if (isBlock) {
                 const language = match[1];
                 const codeString = String(codeChildren ?? '').replace(/\n$/, '');
                 const handleCopy = () => navigator.clipboard.writeText(codeString);
+
+                // Show loading skeleton while syntax highlighter loads
+                if (!SyntaxHighlighter || !syntaxStyle) {
+                    return (
+                        <div className="project-code-block-wrapper">
+                            <pre className="project-code-loading" style={{ padding: '1.2rem 1.5rem', borderRadius: 'var(--radius-lg)', backgroundColor: 'var(--bg-secondary)', fontFamily: 'var(--font-mono)', fontSize: '0.9rem' }}>
+                                <code>{codeString}</code>
+                            </pre>
+                        </div>
+                    );
+                }
+
                 return (
                     <div className="project-code-block-wrapper">
-                        <SyntaxHighlighter style={(isDarkMode ? vscDarkPlus : oneLight) as any} language={language} PreTag="div" showLineNumbers customStyle={{ margin: '0', padding: '1.2rem 1.5rem', borderRadius: 'var(--radius-lg)', backgroundColor: 'transparent', }} codeTagProps={{ style: { fontFamily: 'var(--font-mono)', fontSize: '0.9rem', lineHeight: '1.6', } }} {...props} >
+                        <SyntaxHighlighter style={syntaxStyle as any} language={language} PreTag="div" showLineNumbers customStyle={{ margin: '0', padding: '1.2rem 1.5rem', borderRadius: 'var(--radius-lg)', backgroundColor: 'transparent', }} codeTagProps={{ style: { fontFamily: 'var(--font-mono)', fontSize: '0.9rem', lineHeight: '1.6', } }} {...props} >
                             {codeString}
                         </SyntaxHighlighter>
                         <button type="button" className="project-copy-button" onClick={handleCopy} aria-label="Copy code" title="Copy"> <Copy size={14} /> </button>
@@ -272,7 +324,7 @@ export function ProjectMarkdownRenderer({ children: rawMarkdown, className = "" 
            return <mark className="project-mark" {...props}>{children}</mark>
         }
 
-    }), [isDarkMode]);
+    }), [isDarkMode, SyntaxHighlighter, syntaxStyle]);
 
     // --- Plugin Configuration ---
     const remarkPlugins: PluggableList = [remarkGfm, remarkMath, remarkUnwrapImages];

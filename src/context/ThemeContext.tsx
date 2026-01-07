@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useState, useContext, useEffect, ReactNode, useCallback } from 'react';
+import React, { createContext, useState, useContext, useEffect, ReactNode, useCallback, useRef } from 'react';
 
 interface ThemeContextProps {
     isDarkMode: boolean;
@@ -17,6 +17,14 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const [theme, setThemeState] = useState<'dark' | 'light'>('light'); // Default to light for SSR safety
     const [mounted, setMounted] = useState<boolean>(false);
     const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
+
+    // Refs to avoid stale closure in MutationObserver
+    const themeRef = useRef(theme);
+    const isTransitioningRef = useRef(isTransitioning);
+
+    // Keep refs in sync with state
+    useEffect(() => { themeRef.current = theme; }, [theme]);
+    useEffect(() => { isTransitioningRef.current = isTransitioning; }, [isTransitioning]);
 
     // ---- Initialization Effect ----
     useEffect(() => {
@@ -64,11 +72,10 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
         // ---- Observer for external changes (e.g., browser dev tools, extensions) ----
         const observer = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
-                if (mutation.attributeName === 'class' && !isTransitioning) {
+                if (mutation.attributeName === 'class' && !isTransitioningRef.current) {
                     const newIsDark = document.documentElement.classList.contains('dark');
                     const currentTheme = newIsDark ? 'dark' : 'light';
-                    if (currentTheme !== theme) {
-                         console.log('DOM class changed externally, updating context state to:', currentTheme);
+                    if (currentTheme !== themeRef.current) {
                          setThemeState(currentTheme);
                     }
                 }

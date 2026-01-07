@@ -20,7 +20,7 @@ const OrnateDividerSVG = ({ className = "" }: { className?: string }) => (
     <svg width="150" height="15" viewBox="0 0 150 15" className={`w-32 md:w-40 h-auto mx-auto my-8 md:my-12 ${className}`}>
         <defs>
             <filter id="wobblyLine" x="-10%" y="-100%" width="120%" height="300%">
-                <feTurbulence type="fractalNoise" baseFrequency="0.02 0.8" numOctaves="2" result="turbulence" seed={Math.random() * 10}/> {/* Random seed */}
+                <feTurbulence type="fractalNoise" baseFrequency="0.02 0.8" numOctaves="2" result="turbulence" seed={5}/> {/* Static seed for consistent SSR/client rendering */}
                 <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
             </filter>
              <linearGradient id="dividerGradient" x1="0%" y1="0%" x2="100%" y2="0%">

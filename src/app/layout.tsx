@@ -24,11 +24,9 @@ import PrefetchLinks from '@/components/PrefetchLinks';
 import ServiceWorkerRegistration from '@/components/ServiceWorkerRegistration';
 import SkipToContent from '@/components/SkipToContent';
 import GlobalEventTracking from '@/components/GlobalEventTracking';
-import DeferredStyles from '@/components/DeferredStyles';
 
 // Import Styles
 import "./styles/globals.css";
-// blog-newsletter.css deferred via DeferredStyles component
 
 // Preload critical above-fold images
 // Removed critical images preload - og-default.webp is not above-fold
@@ -218,7 +216,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <ScrollToTopHandler />
               <Analytics />
               <GlobalEventTracking />
-              <DeferredStyles />
               <LayoutClient />
             </CookieProvider>
           </ThemeProvider>

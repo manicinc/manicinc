@@ -298,9 +298,10 @@ export default function NewsletterSection({
                         <div className="flex items-center justify-between mb-4">
                           <button
                             onClick={goToPrev}
+                            aria-label="Previous testimonial"
                             className="p-2 rounded-full bg-bg-primary border border-border hover:border-accent-burgundy/40 transition-colors"
                           >
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                               <path d="M15 18L9 12L15 6" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>
                           </button>
@@ -310,20 +311,25 @@ export default function NewsletterSection({
                               <button
                                 key={index}
                                 onClick={() => setCurrentTestimonial(index)}
-                                className={`w-2 h-2 rounded-full transition-colors ${
-                                  index === currentTestimonial 
-                                    ? 'bg-accent-burgundy' 
+                                aria-label={`Go to testimonial ${index + 1}`}
+                                aria-current={index === currentTestimonial ? 'true' : undefined}
+                                className={`min-w-[24px] min-h-[24px] w-6 h-6 rounded-full transition-colors flex items-center justify-center ${
+                                  index === currentTestimonial
+                                    ? 'bg-accent-burgundy'
                                     : 'bg-border hover:bg-accent-burgundy/40'
                                 }`}
-                              />
+                              >
+                                <span className={`w-2 h-2 rounded-full ${index === currentTestimonial ? 'bg-white' : 'bg-transparent'}`} />
+                              </button>
                             ))}
                           </div>
 
                           <button
                             onClick={goToNext}
+                            aria-label="Next testimonial"
                             className="p-2 rounded-full bg-bg-primary border border-border hover:border-accent-burgundy/40 transition-colors"
                           >
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                               <path d="M9 18L15 12L9 6" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>
                           </button>
