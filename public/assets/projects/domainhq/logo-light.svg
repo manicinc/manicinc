@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" fill="none">
+  <defs>
+    <linearGradient id="mainGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="glowGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.1"/>
+    </linearGradient>
+    <filter id="glowLight" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Icon -->
+  <g transform="translate(2, 2)">
+    <!-- Background circle - light theme -->
+    <circle cx="30" cy="30" r="28" fill="#faf9f7" stroke="url(#glowGradLight)" stroke-width="1.5"/>
+
+    <!-- Stylized D -->
+    <path d="M18 14 L18 46 L31 46 C40 46 46 39 46 30 C46 21 40 14 31 14 L18 14 Z M23 19 L30 19 C36.5 19 41 23.5 41 30 C41 36.5 36.5 41 30 41 L23 41 L23 19 Z"
+          fill="url(#mainGradLight)" filter="url(#glowLight)"/>
+
+    <!-- Network nodes -->
+    <circle cx="18" cy="14" r="2.5" fill="#0d9488"/>
+    <circle cx="18" cy="46" r="2.5" fill="#7c3aed"/>
+    <circle cx="46" cy="30" r="2.5" fill="#8b5cf6"/>
+
+    <!-- Connection lines -->
+    <line x1="18" y1="14" x2="46" y2="30" stroke="#0d9488" stroke-width="0.8" stroke-opacity="0.3"/>
+    <line x1="18" y1="46" x2="46" y2="30" stroke="#7c3aed" stroke-width="0.8" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- Wordmark: DomainHQ -->
+  <g transform="translate(72, 20)">
+    <!-- Domain - dark text for light theme -->
+    <text x="0" y="24" font-family="'IBM Plex Mono', 'SF Mono', monospace" font-size="26" font-weight="600" fill="#1a1a1a" letter-spacing="-0.5">Domain</text>
+    <!-- HQ with gradient -->
+    <text x="116" y="24" font-family="'IBM Plex Mono', 'SF Mono', monospace" font-size="26" font-weight="700" fill="url(#mainGradLight)" letter-spacing="-0.5">HQ</text>
+  </g>
+
+  <!-- Tagline -->
+  <text x="72" y="52" font-family="'Inter', -apple-system, sans-serif" font-size="9" fill="#64748b" letter-spacing="2" text-transform="uppercase">DOMAIN SALES INTELLIGENCE</text>
+</svg>

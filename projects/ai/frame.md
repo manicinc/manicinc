@@ -15,7 +15,7 @@ featured: false
 draft: false
 stats:
   - label: "Projects Powered"
-    value: "2"
+    value: "3"
   - label: "Runtime Package"
     value: "@framers/agentos"
   - label: "Architecture"
@@ -195,6 +195,19 @@ OpenStrand revolutionizes how teams organize and connect information. Built on t
 - **Version Control** — Git-like branching for knowledge
 
 [Discover OpenStrand →](https://openstrand.ai)
+
+### 🪨 [Quarry.space (quarry.space)](https://quarry.space)
+**AI-Native Personal Knowledge Management**
+
+[Quarry](/projects/ai/quarry) is the consumer PKM built on Frame.dev infrastructure. It brings enterprise-grade AI capabilities to individual knowledge workers:
+
+- **Zettelkasten Architecture** — Atomic notes with bi-directional links
+- **Semantic Search** — WebGPU-accelerated embeddings for instant retrieval
+- **FSRS Flashcards** — Spaced repetition that actually works
+- **Knowledge Graphs** — Visualize connections you never knew existed
+- **Multi-Platform** — Web, Desktop (Electron), Mobile (Capacitor)
+
+[Explore Quarry.space →](https://quarry.space)
 
 ## Technical Architecture
 
