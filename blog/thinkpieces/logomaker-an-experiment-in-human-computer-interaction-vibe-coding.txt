@@ -87,7 +87,7 @@ f:I[12025,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","stat
             }
           }
         })();
-      0:["manic-agency-1764870417384",[[["",{"children":["blog",{"children":[["category","thinkpieces","d"],{"children":[["slug","logomaker-an-experiment-in-human-computer-interaction-vibe-coding","d"],{"children":["__PAGE__?{\"category\":\"thinkpieces\",\"slug\":\"logomaker-an-experiment-in-human-computer-interaction-vibe-coding\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["category","thinkpieces","d"],{"children":[["slug","logomaker-an-experiment-in-human-computer-interaction-vibe-coding","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7589854758514563.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/14e80cb0111b469b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/2b234a29d7f80810.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/4a49f8c87e29773c.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/fbcf5add168be5ca.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/dcd6170947ff7d98.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/5627118491ebaa77.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/8d146102ec06a500.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"preconnect","href":"https://static.cloudflareinsights.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.jsdelivr.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://res.cloudinary.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}],["$","$L1f",null,{}]]}]}]}]]}]]}]],null],null],["$L20",null]]]]
+      0:["manic-agency-1767744242878",[[["",{"children":["blog",{"children":[["category","thinkpieces","d"],{"children":[["slug","logomaker-an-experiment-in-human-computer-interaction-vibe-coding","d"],{"children":["__PAGE__?{\"category\":\"thinkpieces\",\"slug\":\"logomaker-an-experiment-in-human-computer-interaction-vibe-coding\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["category","thinkpieces","d"],{"children":[["slug","logomaker-an-experiment-in-human-computer-interaction-vibe-coding","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7589854758514563.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/14e80cb0111b469b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/2b234a29d7f80810.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/4a49f8c87e29773c.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/fbcf5add168be5ca.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/dcd6170947ff7d98.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/5627118491ebaa77.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/8d146102ec06a500.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"preconnect","href":"https://static.cloudflareinsights.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.jsdelivr.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://res.cloudinary.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}],["$","$L1f",null,{}]]}]}]}]]}]]}]],null],null],["$L20",null]]]]
 21:I[54680,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
 22:I[18745,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
 23:I[94058,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
@@ -106,9 +106,9 @@ f:I[12025,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","stat
 3b:I[30603,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"CustomMarkdownRenderer"]
 3d:I[74644,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
 3e:I[75541,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
-41:I[28054,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
-42:I[4681,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
-43:I[99775,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
+42:I[28054,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
+43:I[4681,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
+44:I[99775,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
 24:Td35b,
 **GitHub link: [https://github.com/manicinc/logomaker](https://github.com/manicinc/logomaker)**
 
@@ -1275,7 +1275,586 @@ It's an `infinite jest`, an endless need to change and iterate and improve by or
 -  [AI Sociopaths: https://manic.agency/blog/thinkpieces/ai-sociopaths](https://manic.agency/blog/thinkpieces/ai-sociopaths)
 
 -  [The Meat Interface: https://manic.agency/blog/thinkpieces/the-meat-interface](https://manic.agency/blog/thinkpieces/the-meat-interface)
-3f:T737,
+3f:T2d44,
+<div class="domainhq-hero">
+  <img
+    src="/assets/projects/domainhq/logo-full.svg"
+    alt="DomainHQ.ai logo - AI-powered domain sales intelligence platform"
+    class="domainhq-hero__logo"
+    decoding="async"
+    loading="eager"
+  />
+  <h1 class="domainhq-hero__title" aria-label="stop guessing start knowing">stop guessing. start knowing.</h1>
+  <p class="domainhq-hero__subtitle">
+    domain sales intelligence powered by AI. valuations, comparables, and deal scoring—all in one platform.
+  </p>
+  <a class="domainhq-hero__cta" href="https://domainhq.ai" target="_blank" rel="noopener">
+    explore domainhq.ai →
+  </a>
+</div>
+
+<style>
+  .domainhq-hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2.75rem 1rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .domainhq-hero__logo {
+    width: clamp(180px, 42vw, 380px);
+    height: auto;
+    opacity: 0.95;
+  }
+  @media (prefers-color-scheme: dark) {
+    .domainhq-hero__logo {
+      filter: brightness(1.1) drop-shadow(0 0 24px rgba(99,102,241,0.25));
+      opacity: 1;
+    }
+  }
+  .domainhq-hero__title {
+    text-transform: lowercase;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0.35rem 0 0.25rem;
+    background: linear-gradient(120deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .domainhq-hero__subtitle {
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    color: var(--text-secondary, rgba(255,255,255,0.78));
+    margin: 0.25rem 0 0.9rem;
+    max-width: 56ch;
+  }
+  @media (prefers-color-scheme: light) {
+    .domainhq-hero__subtitle { color: #2a2a2a; }
+  }
+  .domainhq-hero__cta {
+    --h: 52px;
+    display: inline-grid;
+    place-items: center;
+    height: var(--h);
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--text-primary, #fff);
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(120% 120% at 0% 0%, rgba(99,102,241,0.18), rgba(139,92,246,0.08)),
+      linear-gradient(90deg, rgba(99,102,241,0.35), rgba(168,85,247,0.35));
+    border: 1px solid rgba(99,102,241,0.35);
+    backdrop-filter: blur(6px);
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    will-change: transform;
+  }
+  .domainhq-hero__cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(120deg, rgba(99,102,241,0.9), rgba(139,92,246,0.9), rgba(168,85,247,0.9));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: .6;
+    transition: opacity .25s ease;
+    z-index: -1;
+  }
+  .domainhq-hero__cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(99,102,241,0.7);
+    background:
+      radial-gradient(120% 120% at 100% 0%, rgba(168,85,247,0.2), rgba(139,92,246,0.12)),
+      linear-gradient(90deg, rgba(99,102,241,0.5), rgba(168,85,247,0.5));
+    box-shadow: 0 10px 32px rgba(99,102,241,0.25), 0 2px 8px rgba(168,85,247,0.2);
+  }
+  .domainhq-hero__cta:active { transform: translateY(0) scale(0.99); }
+  @media (prefers-color-scheme: light) {
+    .domainhq-hero__cta {
+      color: #0f0f0f;
+      border-color: rgba(99,102,241,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .domainhq-hero__cta:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+  }
+</style>
+
+## What is DomainHQ?
+
+DomainHQ is an **AI-powered domain sales intelligence platform** that transforms how investors, brokers, and businesses approach domain acquisitions. Instead of guessing based on gut instinct, you get data-driven valuations backed by **100,000+ historical sales** and real-time market intelligence.
+
+The domain aftermarket is a **$4+ billion industry** where pricing remains remarkably opaque. Traditional appraisal tools rely on outdated algorithms and ignore crucial context like brand sentiment, SEO value, and comparable sales patterns. DomainHQ changes that.
+
+![DomainHQ AI domain valuation dashboard showing real-time deal scoring, historical sales data, and AI-powered appraisals - Domain Intelligence Platform|size=large|align=center|caption=DomainHQ Dashboard](/assets/projects/domainhq/og-image.png)
+
+## The Problem We Solve
+
+Domain investing without data is gambling. Here's what most investors face:
+
+- **Fragmented Data** — Sales scattered across 15+ marketplaces with no unified view
+- **Inaccurate Appraisals** — GoDaddy inflates values; Estibot uses decade-old algorithms
+- **No Comparables** — Finding similar domain sales requires hours of manual research
+- **Missed Deals** — By the time you spot a good auction, it's already over
+- **Gut-Based Pricing** — Sellers ask arbitrary prices; buyers have no negotiation data
+
+DomainHQ solves all of this with AI.
+
+## Core Features
+
+### 💰 AI Valuations with Comparables
+
+Our valuation engine doesn't just spit out a number—it shows its work.
+
+- **Multi-Factor Analysis** — 50+ signals including TLD, length, keywords, brandability
+- **Historical Comparables** — See what similar domains actually sold for
+- **Confidence Scoring** — Know when data is sparse vs. robust
+- **Low/Mid/High Ranges** — Understand the negotiation envelope
+
+**94%+ accuracy** against realized sales in our validation dataset.
+
+### 📊 Multi-Source Data Aggregation
+
+We scrape so you don't have to. Real-time data from:
+
+| Platform | Data Type |
+|----------|-----------|
+| GoDaddy Auctions | Live auctions, expired domains |
+| NameJet | Premium auction inventory |
+| Sedo | European marketplace data |
+| Dynadot | Direct sales, marketplace |
+| Afternic | BIN listings, premium inventory |
+| NameBio | Historical sales database |
+| + 10 more | Specialized TLD registries |
+
+All normalized, deduplicated, and searchable in one interface.
+
+### 🎯 Deal Scoring Algorithm
+
+Every domain gets a **0-100 Deal Score** based on:
+
+- **Value Gap** — How far below AI valuation is the asking price?
+- **Comparable Volume** — Do we have strong evidence for the valuation?
+- **Market Momentum** — Is this TLD/niche trending up or down?
+- **Liquidity Risk** — How long do similar domains take to sell?
+
+High scores surface automatically. Stop scrolling through garbage.
+
+### 📡 Live Auction Tracking
+
+Never miss another deal.
+
+- **Real-Time Bid Monitoring** — See bids as they happen
+- **Ending Soon Alerts** — Push notifications for expiring auctions
+- **Snipe Detection** — Know when last-second bidders are active
+- **Historical Bid Patterns** — Learn when to bid and when to wait
+
+### 🧠 AI Domain Brainstorming
+
+Need domains? Let AI help.
+
+- **Style Preferences** — Brandable, keyword-rich, short, descriptive
+- **Industry Targeting** — Generate for specific verticals
+- **Availability Checking** — Instant WHOIS lookups
+- **Trademark Screening** — Avoid legal landmines
+
+### 📈 Historical Sales Database
+
+**100,000+ verified sales** with full metadata:
+
+- Domain name and TLD
+- Sale price (normalized to USD)
+- Venue and date
+- Buyer/seller info (when available)
+- Domain age at time of sale
+
+Filter, sort, export. Build your own analysis.
+
+## Pricing Tiers
+
+| Feature | Free | Pro ($12/mo) | Elite ($29/mo) |
+|---------|------|--------------|----------------|
+| Historical Sales | 5 pages | 25 pages | Unlimited |
+| AI Brainstorms | 1/day | 3/day | 7/day |
+| AI Valuations | 2/day | 8/day | 25/day |
+| CSV Export | — | ✓ | ✓ |
+| API Access | — | — | ✓ |
+| Live Auction Alerts | — | ✓ | ✓ |
+
+## Use Cases
+
+### For Domain Investors
+
+- **Portfolio Valuation** — Know what your holdings are actually worth
+- **Acquisition Research** — Find underpriced domains before others
+- **Exit Strategy** — Price domains to sell, not to sit
+
+### For Domain Brokers
+
+- **Client Proposals** — Back up recommendations with data
+- **Market Reports** — Generate branded analysis for prospects
+- **Deal Negotiation** — Arm yourself with comparable sales
+
+### For Startups & Businesses
+
+- **Brand Domain Acquisition** — Know what's fair before negotiating
+- **Trademark Clearance** — Avoid buying legally risky domains
+- **Alternative Discovery** — Find available variations when premium is too expensive
+
+## Technical Architecture
+
+```
+domainhq/
+├── api/                        # Express 5.x REST API
+│   ├── routes/                 # 25 endpoint handlers
+│   ├── middleware/             # Auth, rate limiting
+│   └── swagger/                # OpenAPI documentation
+├── lib/
+│   ├── domain-evaluator.ts     # AI valuation engine (41KB)
+│   ├── domain-brainstormer.ts  # Generation with Claude
+│   ├── deal-scorer.ts          # Deal scoring algorithm
+│   └── metrics/                # Specialized scoring modules
+├── scraper/
+│   ├── sources/                # Per-marketplace scrapers
+│   ├── auctions/               # Live auction monitors
+│   └── scheduler/              # Multi-source orchestration
+├── apps/
+│   └── domainhq-ui/            # React 19 + Vite frontend
+└── data/
+    └── namebio.db              # SQLite historical database
+```
+
+**Key Technologies:**
+- **Backend**: Node.js, Express 5, TypeScript 5.9
+- **Database**: SQLite (sales), PostgreSQL (users)
+- **AI**: Anthropic Claude API, custom embeddings
+- **Frontend**: React 19, Vite, TailwindCSS 4
+- **Scraping**: Playwright, Selenium, anti-detection
+- **Payments**: Stripe
+
+## The AI Advantage
+
+Traditional domain appraisals fail because they ignore context. Our AI model considers:
+
+1. **Semantic Meaning** — "cloudbank.ai" isn't just 9 letters; it's two powerful keywords
+2. **Category Detection** — Automatically classify domains into 50+ industry verticals
+3. **TLD Intelligence** — .ai premiums differ from .io premiums
+4. **Market Timing** — What's hot in 2026 isn't what was hot in 2020
+5. **Brandability Scoring** — Pronounceable, memorable, defensible
+
+This isn't simple string matching. It's genuine natural language understanding applied to the domain aftermarket.
+
+## Why We Built DomainHQ
+
+Domain investing was our accidental side hustle. We kept buying domains on gut instinct, overpaying for some, missing obvious deals on others. The existing tools felt stuck in 2015.
+
+So we built what we wished existed:
+
+- A single place to see all marketplace data
+- Valuations that actually correlate with realized sales
+- Alerts that surface deals before they expire
+- AI that generates brandable options when we're stuck
+
+We've been using DomainHQ internally for 18 months. Now it's ready for everyone.
+
+*For a deep dive into the domain valuation landscape and why existing tools fail, read our [full industry analysis](/posts/research/domain-evaluation-landscape-2025).*
+
+## Get Started
+
+1. **Free Account** — [Sign up at domainhq.ai](https://domainhq.ai) (no credit card required)
+2. **Explore Sales** — Browse 100K+ historical transactions
+3. **Run Valuations** — Get AI appraisals for any domain
+4. **Set Alerts** — Never miss an auction in your niche
+
+---
+
+*Ready to stop guessing? [Start with DomainHQ →](https://domainhq.ai)*
+40:T26fe,
+<div class="quarry-hero">
+  <img
+    src="/assets/projects/quarry/quarry-logo-color.svg"
+    alt="Quarry.space logo - AI-native personal knowledge management system"
+    class="quarry-hero__logo"
+    decoding="async"
+    loading="eager"
+  />
+  <h1 class="quarry-hero__title" aria-label="denoising the web">denoising the web</h1>
+  <p class="quarry-hero__subtitle">
+    the os for your life. capture everything, connect anything, recall instantly.
+  </p>
+  <a class="quarry-hero__cta" href="https://quarry.space" target="_blank" rel="noopener">
+    explore quarry.space →
+  </a>
+</div>
+
+<style>
+  .quarry-hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2.75rem 1rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .quarry-hero__logo {
+    width: clamp(160px, 38vw, 320px);
+    height: auto;
+    opacity: 0.95;
+  }
+  @media (prefers-color-scheme: dark) {
+    .quarry-hero__logo {
+      filter: brightness(1.1) drop-shadow(0 0 24px rgba(25,255,166,0.25));
+      opacity: 1;
+    }
+  }
+  .quarry-hero__title {
+    text-transform: lowercase;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0.35rem 0 0.25rem;
+    background: linear-gradient(120deg, #19ffa6 0%, #00d4ff 50%, #8a5cff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .quarry-hero__subtitle {
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    color: var(--text-secondary, rgba(255,255,255,0.78));
+    margin: 0.25rem 0 0.9rem;
+    max-width: 56ch;
+  }
+  @media (prefers-color-scheme: light) {
+    .quarry-hero__subtitle { color: #2a2a2a; }
+  }
+  .quarry-hero__cta {
+    --h: 52px;
+    display: inline-grid;
+    place-items: center;
+    height: var(--h);
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--text-primary, #fff);
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(120% 120% at 0% 0%, rgba(25,255,166,0.18), rgba(0,212,255,0.08)),
+      linear-gradient(90deg, rgba(25,255,166,0.35), rgba(0,212,255,0.35));
+    border: 1px solid rgba(25,255,166,0.35);
+    backdrop-filter: blur(6px);
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    will-change: transform;
+  }
+  .quarry-hero__cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(120deg, rgba(25,255,166,0.9), rgba(0,212,255,0.9), rgba(138,92,255,0.9));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: .6;
+    transition: opacity .25s ease;
+    z-index: -1;
+  }
+  .quarry-hero__cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(25,255,166,0.7);
+    background:
+      radial-gradient(120% 120% at 100% 0%, rgba(138,92,255,0.2), rgba(0,212,255,0.12)),
+      linear-gradient(90deg, rgba(25,255,166,0.5), rgba(0,212,255,0.5));
+    box-shadow: 0 10px 32px rgba(25,255,166,0.25), 0 2px 8px rgba(0,212,255,0.2);
+  }
+  .quarry-hero__cta:active { transform: translateY(0) scale(0.99); }
+  @media (prefers-color-scheme: light) {
+    .quarry-hero__cta {
+      color: #0f0f0f;
+      border-color: rgba(25,255,166,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .quarry-hero__cta:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+  }
+</style>
+
+## What is Quarry?
+
+Quarry is an **AI-native personal knowledge management system** (PKM) built on the [Frame.dev](/projects/ai/frame) ecosystem. Unlike traditional note-taking apps that bolt on AI as an afterthought, Quarry was designed from the ground up for the age of large language models.
+
+It combines the time-tested **Zettelkasten methodology** with cutting-edge **semantic search**, **FSRS spaced repetition**, and **knowledge graph visualization**—all running locally with on-device AI inference for complete privacy.
+
+![Quarry.space application interface showing the knowledge management dashboard with semantic search and note connections - AI-native PKM for the modern age|size=large|align=center|caption=The Quarry Knowledge Interface](/assets/projects/quarry/quarry-app-screenshot.png)
+
+## Why Quarry Exists
+
+The web is noise. Every day we consume thousands of pieces of information, but retention is abysmal. Traditional note-taking creates digital graveyards—folders full of markdown files that never get revisited.
+
+Quarry solves this with three core principles:
+
+1. **Capture Friction = Zero** — Voice input, browser extensions, mobile apps. Getting knowledge in should never interrupt flow.
+2. **Connection is Automatic** — Semantic embeddings find relationships you'd never spot manually.
+3. **Recall is Active** — FSRS flashcards surface knowledge before you forget it.
+
+## Core Features
+
+### 🧠 Zettelkasten Architecture
+
+Quarry implements the Zettelkasten method pioneered by Niklas Luhmann—atomic notes (Supernotes) connected through meaningful links rather than hierarchical folders.
+
+- **Supernotes** — Atomic knowledge units with structured metadata
+- **Bi-directional Links** — Every connection works both ways
+- **Recursive Strands** — Long-form content that composes from atomic units
+- **Supertags** — Cross-cutting organization beyond traditional folders
+
+### 🔍 Semantic Search (WebGPU Accelerated)
+
+Forget keyword matching. Quarry uses **on-device embeddings** via ONNX Runtime with WebGPU acceleration for instant semantic search.
+
+- **Hybrid BM25 + Semantic** — Best of lexical and neural approaches
+- **MiniLM Embeddings** — 384-dimensional vectors for precise similarity
+- **Zero Cloud Dependency** — All inference happens on your device
+- **< 50ms Query Time** — WebGPU makes local AI genuinely fast
+
+### 📚 FSRS Flashcards & Spaced Repetition
+
+The **Free Spaced Repetition Scheduler** (FSRS) is the most advanced open-source algorithm for memory retention. Quarry integrates it natively.
+
+- **Automatic Card Generation** — AI extracts key concepts from your notes
+- **Adaptive Intervals** — Reviews scheduled for optimal retention
+- **Difficulty Ratings** — System learns what's hard for *you*
+- **Progress Tracking** — XP, streaks, and mastery visualization
+
+### 🕸️ Knowledge Graph Visualization
+
+See the structure of your knowledge in real-time. Connections you never knew existed become obvious.
+
+- **Force-Directed Layout** — Automatic clustering of related concepts
+- **Temporal Evolution** — Watch your knowledge grow over time
+- **Path Finding** — Discover unexpected routes between ideas
+- **Export to Obsidian/Roam** — Interoperability with existing tools
+
+### 📱 Multi-Platform (Web + Desktop + Mobile)
+
+Quarry goes everywhere you do.
+
+- **Web App** — Full-featured PWA at [quarry.space](https://quarry.space)
+- **Electron Desktop** — Native macOS, Windows, Linux apps
+- **Capacitor Mobile** — iOS and Android with offline sync
+- **Offline-First** — Works without internet, syncs when connected
+
+## Part of the Frame.dev Ecosystem
+
+Quarry is powered by [Frame.dev](/projects/ai/frame)—the open-source AI orchestration runtime developed by [Framers AI](https://github.com/framersai) in strategic partnership with [Manic Agency](https://manic.agency).
+
+The same infrastructure that powers:
+
+- **[AgentOS](https://agentos.sh)** — Modular AI agent runtime
+- **[OpenStrand](https://openstrand.ai)** — Collaborative knowledge architecture
+- **[Voice Chat Assistant](/projects/ai/voice-chat-assistant)** — Voice-first AI coding
+
+## Technical Architecture
+
+```
+quarry/
+├── apps/
+│   ├── web/                    # Next.js 14 PWA
+│   ├── desktop/                # Electron wrapper
+│   └── mobile/                 # Capacitor iOS/Android
+├── packages/
+│   ├── @quarry/core/           # Business logic
+│   ├── @quarry/editor/         # TipTap-based editor
+│   ├── @quarry/search/         # ONNX semantic search
+│   └── @quarry/flashcards/     # FSRS implementation
+└── lib/
+    ├── embeddings/             # MiniLM + ONNX Runtime
+    ├── graph/                  # Force-directed visualization
+    └── sync/                   # Offline-first sync engine
+```
+
+**Key Technologies:**
+- **Frontend**: Next.js 14, React 18, TailwindCSS, Framer Motion
+- **Editor**: TipTap with 15+ custom extensions
+- **AI/ML**: ONNX Runtime (WebGPU), Transformers.js, MiniLM
+- **Storage**: IndexedDB, SQL.js (WASM), optional Supabase sync
+- **Mobile**: Capacitor for iOS/Android, Electron for desktop
+
+## Getting Started
+
+### Web (Instant)
+
+Visit [quarry.space](https://quarry.space) — no installation required.
+
+### Desktop
+
+```bash
+# macOS
+brew install --cask quarry
+
+# Linux
+snap install quarry
+
+# Windows
+winget install framersai.quarry
+```
+
+### Self-Hosted
+
+```bash
+# Clone and run locally
+git clone https://github.com/framersai/quarry.git
+cd quarry
+pnpm install
+pnpm dev
+```
+
+## Open Source Philosophy
+
+Quarry is **Apache-2.0 licensed**. Your knowledge should never be locked into proprietary formats or dependent on a company's survival.
+
+- **Community Edition**: Full-featured, self-hostable, forever free
+- **Premium Edition**: Optional cloud sync, advanced collaboration, managed infrastructure
+
+## Built by Framers AI × Manic Agency
+
+Quarry is developed by [Framers AI](https://github.com/framersai) in strategic partnership with [Manic Agency](https://manic.agency). Together, we're building the infrastructure for the AI-native future of knowledge work.
+
+---
+
+*Ready to denoise your knowledge? [Get started with Quarry →](https://quarry.space)*
+41:T737,
 # PortaPack
 
 ## Why we built PortaPack
@@ -1320,104 +1899,6 @@ You get a magical self-contained webpage with:
 - QA folks needing reliable test environments
 - Kiosk builders making offline experiences
 - Anyone tired of saying "hang on, it should work if you..."
-40:Tb7a,
-![MagicLogger Terminal Demo](/assets/projects/magiclogger/magiclogger-terminal-demo.gif)
-
-## What's MagicLogger?
-
-A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry.
-
-> Simplify your logging with a single library that works everywhere.
-
-## Key Features
-
-- **🎨 Rich Styling** — Colors, bold, italic, underline in terminal and browser console
-- **📊 Visual Elements** — Progress bars and tables directly in your console
-- **📝 Multiple Transports** — Console, file, browser storage, and remote HTTP endpoints
-- **🔌 Drop-in Compatibility** — Replace console, Winston, Bunyan, and Pino seamlessly
-- **🧠 Structured Logging** — Support for both text and JSON formats
-- **⚡ Zero Config & Zero Dependencies** — Works out of the box with sensible defaults
-- **🌐 Environment Aware** — Automatically adapts to Node.js or browser
-- **🧵 Multiple Module Formats** — ESM, CommonJS, and TypeScript declarations
-
-## Quick Start
-
-```javascript
-import { Logger } from 'magiclogger';
-
-// Create a new logger with default settings
-const logger = new Logger();
-
-// Log with different levels
-logger.info('Application starting up...');
-logger.warn('Connection pool nearing capacity');
-logger.error('Database connection failed');
-logger.debug('User authentication details');
-logger.success('Email sent successfully');
-
-// Add visual elements
-logger.header('SYSTEM STATUS');
-logger.progressBar(75);  // 75% progress bar
-
-// Structured logging
-logger.info('User logged in', { userId: 123, ip: '192.168.1.1' });
-```
-
-## Powerful Transports
-
-MagicLogger sends your logs wherever you need them:
-
-```javascript
-const logger = new Logger({
-  // Log to console with colors
-  console: { 
-    enabled: true, 
-    useColors: true 
-  },
-  
-  // Save logs to files (Node.js)
-  file: { 
-    enabled: true, 
-    directory: './logs' 
-  },
-  
-  // Store logs in browser localStorage
-  browserStorage: { 
-    enabled: true, 
-    maxEntries: 1000 
-  },
-  
-  // Send critical logs to your server
-  remote: {
-    enabled: true,
-    endpoint: 'https://logs.example.com/api/logs',
-    levels: ['error', 'warn']
-  }
-});
-```
-
-## Replace Existing Loggers
-
-Enhance your existing logging code without refactoring:
-
-```javascript
-// Enhance the standard console
-import { enhanceConsole } from 'magiclogger';
-enhanceConsole();
-
-// Now standard console has new powers
-console.header('APPLICATION STATUS');
-console.success('All systems operational');
-
-// Create Winston/Bunyan/Pino compatible loggers
-import { createWinstonCompatible } from 'magiclogger';
-const logger = createWinstonCompatible({ verbose: true });
-```
-
-## Coming Soon!
-
-MagicLogger is currently in development and will be available soon. Stay tuned for its release!
-
-Built with ❤️ by [Manic Agency](https://manic.agency) - We do experimental design & development2:["$","$L21",null,{"children":[["$","$L22",null,{"items":[{"name":"Home","url":"/"},{"name":"Blog","url":"/blog"},{"name":"thinkpieces","url":"/blog/thinkpieces"},{"name":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨","url":"/blog/thinkpieces/logomaker-an-experiment-in-human-computer-interaction-vibe-coding"}]}],["$","$L23",null,{"post":{"slug":"logomaker-an-experiment-in-human-computer-interaction-vibe-coding","title":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨","date":"2025-04-20","lastModified":"$undefined","draft":false,"category":"thinkpieces","tags":["featured","llms","vibe-coding"],"excerpt":"Vibe coding a logo creation tool, with insights on different LLM providers and interfaces.","image":"/assets/blog/thinkpieces/logomaker-an-experiment/logomaker-manic-example.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":35,"content":"$24","author":{"name":"Manic Agency"},"contributors":"$undefined","tableOfContents":{"items":[{"level":2,"text":"Intro","slug":"intro"},{"level":2,"text":"LLM sees, LLM does","slug":"llm-sees-llm-does"},{"level":2,"text":"Show me some code!","slug":"show-me-some-code"},{"level":2,"text":"How to vibe with vibe coding vibes?","slug":"how-to-vibe-with-vibe-coding-vibes"},{"level":2,"text":"Iterative iterations","slug":"iterative-iterations"},{"level":2,"text":"The real world, the real problems","slug":"the-real-world-the-real-problems"},{"level":2,"text":"Logos sent to my future self","slug":"logos-sent-to-my-future-self"},{"level":2,"text":"TLDR","slug":"tldr"}]}},"url":"/blog/thinkpieces/logomaker-an-experiment-in-human-computer-interaction-vibe-coding"}],["$","$L25",null,{"postTitle":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨","postCategory":"thinkpieces","postAuthor":"Manic Agency","postTags":"$26","postType":"post"}],["$","$L27",null,{"enableElementTracking":true,"pageType":"blog","contentCategory":"thinkpieces"}],["$","$L28",null,{"postTitle":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨","contentSelector":"#post-content-top"}],["$","$L29",null,{"children":[" ",["$","div",null,{"className":"blog-layout-container has-sidebar","children":[["$","$L2a",null,{"tableOfContents":"$2b","postTitle":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨"}],["$","main",null,{"className":"blog-main-content-area","children":["$","article",null,{"className":"blog-post-container","id":"post-content-top","children":[["$","header",null,{"className":"post-header","children":[["$","div",null,{"className":"back-to-blog-link-container","children":["$","$L34",null,{"href":"/blog","className":"back-to-blog-link","children":[["$","$L35",null,{"size":14,"className":"mr-1.5"}]," ","Back to All Entries"]}]}],["$","h1",null,{"className":"post-title","children":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨"}],["$","div",null,{"className":"post-meta","children":[["$","div",null,{"className":"meta-item author","children":[["$","$L36",null,{"className":"meta-icon","aria-hidden":"true"}],["$","div",null,{"className":"author-info","children":["$undefined",["$","span",null,{"className":"author-name","children":"Manic Agency"}]]}]]}],["$","div",null,{"className":"meta-item date","children":[["$","$L37",null,{"className":"meta-icon","aria-hidden":"true"}],["$","time",null,{"dateTime":"2025-04-20T00:00:00.000Z","children":["Published ","April 20, 2025"]}]]}],["$","div",null,{"className":"meta-item reading-time","children":[["$","$L38",null,{"className":"meta-icon","aria-hidden":"true"}],["$","span",null,{"children":[35," min read"]}]]}],["$","div",null,{"className":"meta-item category","children":[["$","$L39",null,{"className":"meta-icon","aria-hidden":"true"}],["$","$L34",null,{"href":"/blog?category=thinkpieces","className":"post-category-link","children":"thinkpieces"}]]}]]}],["$","div",null,{"className":"post-tags","children":["$","div",null,{"className":"tags-list","children":[["$","$L34","featured",{"href":"/blog?tags=featured","className":"post-tag","children":["#","featured"]}],["$","$L34","llms",{"href":"/blog?tags=llms","className":"post-tag","children":["#","llms"]}],["$","$L34","vibe-coding",{"href":"/blog?tags=vibe-coding","className":"post-tag","children":["#","vibe-coding"]}]]}]}]]}],["$","div",null,{"className":"post-featured-image-container","children":["$","figure",null,{"className":"post-featured-image","children":[["$","$L3a",null,{"src":"/assets/blog/thinkpieces/logomaker-an-experiment/logomaker-manic-example.png","alt":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨","width":1600,"height":900,"className":"featured-image","priority":true}],"$undefined"]}]}],["$","div",null,{"className":"post-content","children":["$","$L3b",null,{"children":"$3c"}]}],"$undefined",["$","footer",null,{"className":"post-footer","children":["$","$L3d",null,{"title":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨","url":"/blog/thinkpieces/logomaker-an-experiment-in-human-computer-interaction-vibe-coding"}]}],["$","$L3e",null,{"projects":[{"slug":"portapack","title":"PortaPack — One-File Web Experiences","description":"Why we built a fun bundler that squishes your entire site into a single HTML file.","date":"2025-04-20","category":"tools","content":"$3f","longDescription":"$undefined","tags":["html","cli","bundler","offline","product","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/portapack.jpg","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://manicinc.github.io/portapack/","github":"https://github.com/manicinc/portapack","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[]},{"slug":"magiclogger","title":"MagicLogger — Colorful JavaScript / TypeScript Logger","description":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry.","date":"2025-04-20","category":"tools","content":"$40","longDescription":"$undefined","tags":["javascript","typescript","nodejs","logging","developers","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","images":["/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","/assets/projects/magiclogger/magiclogger-terminal-demo.gif"],"bgColor":"$undefined","textColor":"$undefined","link":"https://manic.agency/magiclogger","github":"https://github.com/manicinc/magiclogger","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[]}],"title":"// Related Projects //"}],["$","section",null,{"className":"post-comments","aria-labelledby":"comments-heading","children":[["$","h2",null,{"id":"comments-heading","className":"comments-title","children":"Join the Discussion"}],["$","$L41",null,{"postTitle":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨","postUrl":"/blog/thinkpieces/logomaker-an-experiment-in-human-computer-interaction-vibe-coding","postIdentifier":"blog-thinkpieces-logomaker-an-experiment-in-human-computer-interaction-vibe-coding","className":"mb-8"}],["$","div",null,{"className":"mt-8","children":[["$","div",null,{"className":"giscus-header","children":[["$","h3",null,{"className":"giscus-title","children":"Comments with GitHub"}],["$","div",null,{"className":"giscus-divider"}]]}],["$","$L42",null,{}]]}]]}],["$","section",null,{"className":"post-newsletter-signup mt-16","children":["$","$L43",null,{"variant":"blog","background":"accent"}]}]]}]}]," "]}]," "]}]]}]
+2:["$","$L21",null,{"children":[["$","$L22",null,{"items":[{"name":"Home","url":"/"},{"name":"Blog","url":"/blog"},{"name":"thinkpieces","url":"/blog/thinkpieces"},{"name":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨","url":"/blog/thinkpieces/logomaker-an-experiment-in-human-computer-interaction-vibe-coding"}]}],["$","$L23",null,{"post":{"slug":"logomaker-an-experiment-in-human-computer-interaction-vibe-coding","title":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨","date":"2025-04-20","lastModified":"$undefined","draft":false,"category":"thinkpieces","tags":["featured","llms","vibe-coding"],"excerpt":"Vibe coding a logo creation tool, with insights on different LLM providers and interfaces.","image":"/assets/blog/thinkpieces/logomaker-an-experiment/logomaker-manic-example.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":35,"content":"$24","author":{"name":"Manic Agency"},"contributors":"$undefined","tableOfContents":{"items":[{"level":2,"text":"Intro","slug":"intro"},{"level":2,"text":"LLM sees, LLM does","slug":"llm-sees-llm-does"},{"level":2,"text":"Show me some code!","slug":"show-me-some-code"},{"level":2,"text":"How to vibe with vibe coding vibes?","slug":"how-to-vibe-with-vibe-coding-vibes"},{"level":2,"text":"Iterative iterations","slug":"iterative-iterations"},{"level":2,"text":"The real world, the real problems","slug":"the-real-world-the-real-problems"},{"level":2,"text":"Logos sent to my future self","slug":"logos-sent-to-my-future-self"},{"level":2,"text":"TLDR","slug":"tldr"}]}},"url":"/blog/thinkpieces/logomaker-an-experiment-in-human-computer-interaction-vibe-coding"}],["$","$L25",null,{"postTitle":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨","postCategory":"thinkpieces","postAuthor":"Manic Agency","postTags":"$26","postType":"post"}],["$","$L27",null,{"enableElementTracking":true,"pageType":"blog","contentCategory":"thinkpieces"}],["$","$L28",null,{"postTitle":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨","contentSelector":"#post-content-top"}],["$","$L29",null,{"children":[" ",["$","div",null,{"className":"blog-layout-container has-sidebar","children":[["$","$L2a",null,{"tableOfContents":"$2b","postTitle":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨"}],["$","main",null,{"className":"blog-main-content-area","children":["$","article",null,{"className":"blog-post-container","id":"post-content-top","children":[["$","header",null,{"className":"post-header","children":[["$","div",null,{"className":"back-to-blog-link-container","children":["$","$L34",null,{"href":"/blog","className":"back-to-blog-link","children":[["$","$L35",null,{"size":14,"className":"mr-1.5"}]," ","Back to All Entries"]}]}],["$","h1",null,{"className":"post-title","children":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨"}],["$","div",null,{"className":"post-meta","children":[["$","div",null,{"className":"meta-item author","children":[["$","$L36",null,{"className":"meta-icon","aria-hidden":"true"}],["$","div",null,{"className":"author-info","children":["$undefined",["$","span",null,{"className":"author-name","children":"Manic Agency"}]]}]]}],["$","div",null,{"className":"meta-item date","children":[["$","$L37",null,{"className":"meta-icon","aria-hidden":"true"}],["$","time",null,{"dateTime":"2025-04-20T00:00:00.000Z","children":["Published ","April 20, 2025"]}]]}],["$","div",null,{"className":"meta-item reading-time","children":[["$","$L38",null,{"className":"meta-icon","aria-hidden":"true"}],["$","span",null,{"children":[35," min read"]}]]}],["$","div",null,{"className":"meta-item category","children":[["$","$L39",null,{"className":"meta-icon","aria-hidden":"true"}],["$","$L34",null,{"href":"/blog?category=thinkpieces","className":"post-category-link","children":"thinkpieces"}]]}]]}],["$","div",null,{"className":"post-tags","children":["$","div",null,{"className":"tags-list","children":[["$","$L34","featured",{"href":"/blog?tags=featured","className":"post-tag","children":["#","featured"]}],["$","$L34","llms",{"href":"/blog?tags=llms","className":"post-tag","children":["#","llms"]}],["$","$L34","vibe-coding",{"href":"/blog?tags=vibe-coding","className":"post-tag","children":["#","vibe-coding"]}]]}]}]]}],["$","div",null,{"className":"post-featured-image-container","children":["$","figure",null,{"className":"post-featured-image","children":[["$","$L3a",null,{"src":"/assets/blog/thinkpieces/logomaker-an-experiment/logomaker-manic-example.png","alt":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨","width":1600,"height":900,"className":"featured-image","priority":true}],"$undefined"]}]}],["$","div",null,{"className":"post-content","children":["$","$L3b",null,{"children":"$3c"}]}],"$undefined",["$","footer",null,{"className":"post-footer","children":["$","$L3d",null,{"title":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨","url":"/blog/thinkpieces/logomaker-an-experiment-in-human-computer-interaction-vibe-coding"}]}],["$","$L3e",null,{"projects":[{"slug":"domainhq","title":"DomainHQ.ai — AI-Powered Domain Sales Intelligence","description":"Make data-driven domain investment decisions with AI valuations, 100K+ historical sales, multi-source scraping, and real-time deal scoring. The definitive platform for domain investors.","date":"2026-01-06","category":"ai","content":"$3f","longDescription":"$undefined","tags":["ai","domain-names","domain-investing","domain-valuation","sales-intelligence","deal-scoring","auction-tracking","domain-appraisal","saas","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/domainhq/logo-full.png","images":["/assets/projects/domainhq/logo-full.png","/assets/projects/domainhq/og-image.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://domainhq.ai","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Historical Sales","value":"100,000+"},{"label":"Data Sources","value":"15+ Platforms"},{"label":"AI Accuracy","value":"94%+"},{"label":"Daily Auctions","value":"5,000+"}],"team":[{"name":"Manic Agency","role":"Design & Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"quarry","title":"Quarry.space — AI-Native Personal Knowledge Management","description":"Transform how you capture, connect, and recall knowledge. Zettelkasten-powered PKM with semantic search, FSRS flashcards, and knowledge graphs built for the AI era.","date":"2026-01-06","category":"ai","content":"$40","longDescription":"$undefined","tags":["ai","pkms","knowledge-management","zettelkasten","semantic-search","flashcards","fsrs","knowledge-graph","note-taking","second-brain","framers-ai","frame-dev","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/quarry/quarry-logo-color@4x.png","images":["/assets/projects/quarry/quarry-logo-color@4x.png","/assets/projects/quarry/quarry-app-screenshot.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://quarry.space","github":"https://github.com/framersai","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Powered By","value":"Frame.dev"},{"label":"Learning Algorithm","value":"FSRS Spaced Repetition"},{"label":"Platforms","value":"Web + Desktop + Mobile"},{"label":"Search","value":"Semantic AI (ONNX)"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"portapack","title":"PortaPack — One-File Web Experiences","description":"Why we built a fun bundler that squishes your entire site into a single HTML file.","date":"2025-04-20","category":"tools","content":"$41","longDescription":"$undefined","tags":["html","cli","bundler","offline","product","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/portapack.jpg","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://manicinc.github.io/portapack/","github":"https://github.com/manicinc/portapack","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[]}],"title":"// Related Projects //"}],["$","section",null,{"className":"post-comments","aria-labelledby":"comments-heading","children":[["$","h2",null,{"id":"comments-heading","className":"comments-title","children":"Join the Discussion"}],["$","$L42",null,{"postTitle":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨","postUrl":"/blog/thinkpieces/logomaker-an-experiment-in-human-computer-interaction-vibe-coding","postIdentifier":"blog-thinkpieces-logomaker-an-experiment-in-human-computer-interaction-vibe-coding","className":"mb-8"}],["$","div",null,{"className":"mt-8","children":[["$","div",null,{"className":"giscus-header","children":[["$","h3",null,{"className":"giscus-title","children":"Comments with GitHub"}],["$","div",null,{"className":"giscus-divider"}]]}],["$","$L43",null,{}]]}]]}],["$","section",null,{"className":"post-newsletter-signup mt-16","children":["$","$L44",null,{"variant":"blog","background":"accent"}]}]]}]}]," "]}]," "]}]]}]
 20:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#FBF6EF"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#22182B"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨ | Manic Agency - AI Agency Los Angeles"}],["$","meta","5",{"name":"description","content":"Vibe coding a logo creation tool, with insights on different LLM providers and interfaces."}],["$","meta","6",{"name":"author","content":"Manic Agency"}],["$","meta","7",{"name":"keywords","content":"featured,llms,vibe-coding"}],["$","meta","8",{"name":"creator","content":"Manic Inc"}],["$","meta","9",{"name":"publisher","content":"Manic Inc"}],["$","link","10",{"rel":"canonical","href":"https://manic.agency/blog/thinkpieces/logomaker-an-experiment-in-human-computer-interaction-vibe-coding"}],["$","meta","11",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","12",{"property":"og:title","content":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨ | Manic Agency - AI Agency Los Angeles"}],["$","meta","13",{"property":"og:description","content":"Vibe coding a logo creation tool, with insights on different LLM providers and interfaces."}],["$","meta","14",{"property":"og:image","content":"https://manic.agency//assets/blog/thinkpieces/logomaker-an-experiment/logomaker-manic-example.png"}],["$","meta","15",{"property":"og:image:alt","content":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨"}],["$","meta","16",{"property":"og:type","content":"article"}],["$","meta","17",{"property":"article:published_time","content":"2025-04-20T00:00:00.000Z"}],["$","meta","18",{"property":"article:author","content":"Manic Agency"}],["$","meta","19",{"property":"article:tag","content":"featured"}],["$","meta","20",{"property":"article:tag","content":"llms"}],["$","meta","21",{"property":"article:tag","content":"vibe-coding"}],["$","meta","22",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","23",{"name":"twitter:title","content":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨ | Manic Agency - AI Agency Los Angeles"}],["$","meta","24",{"name":"twitter:description","content":"Vibe coding a logo creation tool, with insights on different LLM providers and interfaces."}],["$","meta","25",{"name":"twitter:image","content":"https://manic.agency//assets/blog/thinkpieces/logomaker-an-experiment/logomaker-manic-example.png"}],["$","link","26",{"rel":"shortcut icon","href":"/favicon-16x16.png"}],["$","link","27",{"rel":"icon","href":"/favicon.ico"}],["$","link","28",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","meta","29",{"name":"next-size-adjust"}]]
 1:null

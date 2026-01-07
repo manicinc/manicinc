@@ -87,7 +87,7 @@ f:I[12025,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","stat
             }
           }
         })();
-      0:["manic-agency-1764870417384",[[["",{"children":["projects",{"children":[["category","tools","d"],{"children":[["slug","magiclogger","d"],{"children":["__PAGE__?{\"category\":\"tools\",\"slug\":\"magiclogger\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["category","tools","d"],{"children":[["slug","magiclogger","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7589854758514563.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/14e80cb0111b469b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/2b234a29d7f80810.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/4a49f8c87e29773c.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/fbcf5add168be5ca.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/dcd6170947ff7d98.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/5627118491ebaa77.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/8d146102ec06a500.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"preconnect","href":"https://static.cloudflareinsights.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.jsdelivr.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://res.cloudinary.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}],["$","$L1f",null,{}]]}]}]}]]}]]}]],null],null],["$L20",null]]]]
+      0:["manic-agency-1767744242878",[[["",{"children":["projects",{"children":[["category","tools","d"],{"children":[["slug","magiclogger","d"],{"children":["__PAGE__?{\"category\":\"tools\",\"slug\":\"magiclogger\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["category","tools","d"],{"children":[["slug","magiclogger","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7589854758514563.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/14e80cb0111b469b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/2b234a29d7f80810.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/4a49f8c87e29773c.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/fbcf5add168be5ca.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/dcd6170947ff7d98.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/5627118491ebaa77.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/8d146102ec06a500.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"preconnect","href":"https://static.cloudflareinsights.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.jsdelivr.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://res.cloudinary.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}],["$","$L1f",null,{}]]}]}]}]]}]]}]],null],null],["$L20",null]]]]
 21:I[18745,["8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","6156","static/chunks/syntax-highlighting-35bcae432492ba28.js","2793","static/chunks/katex-3086009fe82370df.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-80f9de9e67859ce9.js"],"default"]
 22:I[35366,["8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","6156","static/chunks/syntax-highlighting-35bcae432492ba28.js","2793","static/chunks/katex-3086009fe82370df.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-80f9de9e67859ce9.js"],"default"]
 24:I[77769,["8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","6156","static/chunks/syntax-highlighting-35bcae432492ba28.js","2793","static/chunks/katex-3086009fe82370df.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-80f9de9e67859ce9.js"],"default"]
@@ -396,371 +396,318 @@ SEOStory glues together crawling, AI-driven rewrites, schema generation, and vis
 - Book a walkthrough if you want help implementing the audit-to-report pipeline.
 - Interested in co-building custom playbooks? Say hello at hello@manic.agency.
 
-SEOStory is how we future-proof search visibility while keeping the weird, human voice our clients hire us for. If your rankings slip every time an algorithm blinks, this is the toolkit we recommend running next.37:T308c,
-# Voice Chat Assistant — The Future of Coding is Conversational
+SEOStory is how we future-proof search visibility while keeping the weird, human voice our clients hire us for. If your rankings slip every time an algorithm blinks, this is the toolkit we recommend running next.37:T2d44,
+<div class="domainhq-hero">
+  <img
+    src="/assets/projects/domainhq/logo-full.svg"
+    alt="DomainHQ.ai logo - AI-powered domain sales intelligence platform"
+    class="domainhq-hero__logo"
+    decoding="async"
+    loading="eager"
+  />
+  <h1 class="domainhq-hero__title" aria-label="stop guessing start knowing">stop guessing. start knowing.</h1>
+  <p class="domainhq-hero__subtitle">
+    domain sales intelligence powered by AI. valuations, comparables, and deal scoring—all in one platform.
+  </p>
+  <a class="domainhq-hero__cta" href="https://domainhq.ai" target="_blank" rel="noopener">
+    explore domainhq.ai →
+  </a>
+</div>
 
-## Speak Your Code Into Existence
-
-Voice Chat Assistant (VCA) represents a paradigm shift in software development. Instead of typing every character, wrestling with syntax, or context-switching between documentation and your editor—you simply talk. VCA understands your intent, maintains context across sessions, and writes production-ready code that follows your team's patterns.
-
-> "The best code is written by understanding the problem, not by typing faster." — VCA Philosophy
-
-## 🎙️ How It Works
-
-### 1. Just Start Talking
-Press the hotkey or click the mic. Describe what you want to build, fix, or refactor. No special commands or syntax required.
-
-```
-"I need a React component that fetches user data from our API 
-and displays it in a card layout with loading and error states"
-```
-
-### 2. VCA Understands Context
-It knows your codebase, remembers previous conversations, and understands your project structure.
-
-```
-"Make it use our existing useApi hook and follow the same 
-pattern as the ProductCard component"
-```
-
-### 3. Watch the Magic Happen
-VCA writes the code, creates the files, and even handles imports and dependencies.
-
-```typescript
-// components/UserCard.tsx
-import React from 'react';
-import { useApi } from '../hooks/useApi';
-import { Card, CardSkeleton, ErrorState } from '../components/ui';
-import type { User } from '../types/api';
-
-export const UserCard: React.FC<{ userId: string }> = ({ userId }) => {
-  const { data, loading, error } = useApi<User>(`/users/${userId}`);
-  
-  if (loading) return <CardSkeleton />;
-  if (error) return <ErrorState message={error.message} />;
-  
-  return (
-    <Card>
-      <Card.Header>
-        <img src={data.avatar} alt={data.name} />
-        <h3>{data.name}</h3>
-      </Card.Header>
-      <Card.Body>
-        <p>{data.email}</p>
-        <p>{data.role}</p>
-      </Card.Body>
-    </Card>
-  );
-};
-```
-
-## 🚀 Key Features
-
-### Voice-First, But Not Voice-Only
-
-While optimized for voice, VCA supports multiple input modes:
-- **Voice** — Natural conversation for complex requests
-- **Text** — Quick commands and precision edits
-- **Code Selection** — Highlight and describe changes
-- **Mixed Mode** — Combine all three seamlessly
-
-### Context-Aware Intelligence
-
-VCA maintains deep understanding across multiple dimensions:
-
-- **Conversation Memory** — Remembers everything discussed in the session
-- **Code Context** — Understands your entire codebase structure
-- **Pattern Recognition** — Learns your coding style and preferences
-- **Project Awareness** — Knows your dependencies, build tools, and conventions
-
-### Production-Ready Code Generation
-
-Not just snippets—complete, working implementations:
-
-- **Full Components** — Entire features with proper structure
-- **Test Coverage** — Generates tests alongside implementation
-- **Documentation** — Adds JSDoc, comments, and README updates
-- **Refactoring** — Safely restructures existing code
-- **Migration** — Updates code to new patterns or versions
-
-### Integrated Development Workflow
-
-VCA connects with your entire toolchain:
-
-- **Editor Integration** — VSCode, Neovim, JetBrains
-- **Version Control** — Git operations with meaningful commits
-- **Terminal Access** — Run commands, see output, debug
-- **Package Management** — Install dependencies, update versions
-- **CI/CD** — Understand and update pipeline configurations
-
-## 🧠 Powered by AgentOS
-
-At the heart of VCA lies [AgentOS](https://agentos.sh), our modular orchestration runtime that makes intelligent interactions possible:
-
-### Intelligent Orchestration
-- **Multi-Model Support** — Uses the best LLM for each task
-- **Tool Coordination** — Manages complex multi-step operations
-- **Memory Management** — Efficient context window utilization
-- **Streaming Responses** — Real-time feedback as it works
-
-### Safety & Control
-- **Guardrails** — Built-in protections against harmful operations
-- **Permission System** — Fine-grained control over capabilities
-- **Review Mode** — Preview changes before applying
-- **Rollback** — Undo any operation instantly
-
-## 💡 Real-World Use Cases
-
-### Frontend Development
-*"Convert this Figma design into a responsive React component with Tailwind"*
-
-VCA analyzes the design, generates pixel-perfect components with proper responsive breakpoints, and even suggests accessibility improvements.
-
-### Backend APIs
-*"Create a REST API for user management with authentication, validation, and rate limiting"*
-
-Generates complete CRUD endpoints, middleware, database schemas, and even Swagger documentation.
-
-### Debugging & Optimization
-*"This function is slow. Profile it and optimize the performance"*
-
-VCA analyzes the code, identifies bottlenecks, suggests optimizations, and can even run benchmarks to prove improvements.
-
-### Documentation
-*"Document this codebase for new developers"*
-
-Creates comprehensive docs including architecture overviews, setup guides, API references, and inline code comments.
-
-### Testing
-*"Write integration tests for the checkout flow"*
-
-Generates comprehensive test suites that cover happy paths, edge cases, and error scenarios.
-
-## 🎯 Perfect For
-
-### Individual Developers
-- **10x Productivity** — Write code as fast as you can think
-- **Learn Faster** — Get explanations while building
-- **Stay in Flow** — No context switching to Stack Overflow
-- **Reduce Fatigue** — Let VCA handle the boilerplate
-
-### Teams
-- **Consistent Patterns** — Enforces team conventions automatically
-- **Knowledge Sharing** — Capture tribal knowledge in prompts
-- **Onboarding** — New developers productive from day one
-- **Code Reviews** — AI-assisted review suggestions
-
-### Specific Scenarios
-- **Prototyping** — Go from idea to working demo in minutes
-- **Refactoring** — Safely restructure large codebases
-- **Migration** — Update frameworks, libraries, or patterns
-- **Learning** — Understand new technologies by building
-
-## 🛠️ Technical Architecture
-
-### Frontend (Voice UI)
-```typescript
-// Vue 3 + Composition API
-const { startRecording, stopRecording, isRecording } = useVoiceInput();
-const { messages, sendMessage, streamResponse } = useAgentChat();
-const { executeCode, terminalOutput } = useCodeExecution();
-```
-
-### Backend (Orchestration)
-```typescript
-// Express + TypeScript + AgentOS
-app.post('/api/chat', async (req, res) => {
-  const stream = agentOS.processRequest({
-    input: req.body.message,
-    context: req.body.context,
-    sessionId: req.session.id
-  });
-  
-  for await (const chunk of stream) {
-    res.write(`data: ${JSON.stringify(chunk)}\n\n`);
+<style>
+  .domainhq-hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2.75rem 1rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
   }
-});
+  .domainhq-hero__logo {
+    width: clamp(180px, 42vw, 380px);
+    height: auto;
+    opacity: 0.95;
+  }
+  @media (prefers-color-scheme: dark) {
+    .domainhq-hero__logo {
+      filter: brightness(1.1) drop-shadow(0 0 24px rgba(99,102,241,0.25));
+      opacity: 1;
+    }
+  }
+  .domainhq-hero__title {
+    text-transform: lowercase;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0.35rem 0 0.25rem;
+    background: linear-gradient(120deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .domainhq-hero__subtitle {
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    color: var(--text-secondary, rgba(255,255,255,0.78));
+    margin: 0.25rem 0 0.9rem;
+    max-width: 56ch;
+  }
+  @media (prefers-color-scheme: light) {
+    .domainhq-hero__subtitle { color: #2a2a2a; }
+  }
+  .domainhq-hero__cta {
+    --h: 52px;
+    display: inline-grid;
+    place-items: center;
+    height: var(--h);
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--text-primary, #fff);
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(120% 120% at 0% 0%, rgba(99,102,241,0.18), rgba(139,92,246,0.08)),
+      linear-gradient(90deg, rgba(99,102,241,0.35), rgba(168,85,247,0.35));
+    border: 1px solid rgba(99,102,241,0.35);
+    backdrop-filter: blur(6px);
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    will-change: transform;
+  }
+  .domainhq-hero__cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(120deg, rgba(99,102,241,0.9), rgba(139,92,246,0.9), rgba(168,85,247,0.9));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: .6;
+    transition: opacity .25s ease;
+    z-index: -1;
+  }
+  .domainhq-hero__cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(99,102,241,0.7);
+    background:
+      radial-gradient(120% 120% at 100% 0%, rgba(168,85,247,0.2), rgba(139,92,246,0.12)),
+      linear-gradient(90deg, rgba(99,102,241,0.5), rgba(168,85,247,0.5));
+    box-shadow: 0 10px 32px rgba(99,102,241,0.25), 0 2px 8px rgba(168,85,247,0.2);
+  }
+  .domainhq-hero__cta:active { transform: translateY(0) scale(0.99); }
+  @media (prefers-color-scheme: light) {
+    .domainhq-hero__cta {
+      color: #0f0f0f;
+      border-color: rgba(99,102,241,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .domainhq-hero__cta:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+  }
+</style>
+
+## What is DomainHQ?
+
+DomainHQ is an **AI-powered domain sales intelligence platform** that transforms how investors, brokers, and businesses approach domain acquisitions. Instead of guessing based on gut instinct, you get data-driven valuations backed by **100,000+ historical sales** and real-time market intelligence.
+
+The domain aftermarket is a **$4+ billion industry** where pricing remains remarkably opaque. Traditional appraisal tools rely on outdated algorithms and ignore crucial context like brand sentiment, SEO value, and comparable sales patterns. DomainHQ changes that.
+
+![DomainHQ AI domain valuation dashboard showing real-time deal scoring, historical sales data, and AI-powered appraisals - Domain Intelligence Platform|size=large|align=center|caption=DomainHQ Dashboard](/assets/projects/domainhq/og-image.png)
+
+## The Problem We Solve
+
+Domain investing without data is gambling. Here's what most investors face:
+
+- **Fragmented Data** — Sales scattered across 15+ marketplaces with no unified view
+- **Inaccurate Appraisals** — GoDaddy inflates values; Estibot uses decade-old algorithms
+- **No Comparables** — Finding similar domain sales requires hours of manual research
+- **Missed Deals** — By the time you spot a good auction, it's already over
+- **Gut-Based Pricing** — Sellers ask arbitrary prices; buyers have no negotiation data
+
+DomainHQ solves all of this with AI.
+
+## Core Features
+
+### 💰 AI Valuations with Comparables
+
+Our valuation engine doesn't just spit out a number—it shows its work.
+
+- **Multi-Factor Analysis** — 50+ signals including TLD, length, keywords, brandability
+- **Historical Comparables** — See what similar domains actually sold for
+- **Confidence Scoring** — Know when data is sparse vs. robust
+- **Low/Mid/High Ranges** — Understand the negotiation envelope
+
+**94%+ accuracy** against realized sales in our validation dataset.
+
+### 📊 Multi-Source Data Aggregation
+
+We scrape so you don't have to. Real-time data from:
+
+| Platform | Data Type |
+|----------|-----------|
+| GoDaddy Auctions | Live auctions, expired domains |
+| NameJet | Premium auction inventory |
+| Sedo | European marketplace data |
+| Dynadot | Direct sales, marketplace |
+| Afternic | BIN listings, premium inventory |
+| NameBio | Historical sales database |
+| + 10 more | Specialized TLD registries |
+
+All normalized, deduplicated, and searchable in one interface.
+
+### 🎯 Deal Scoring Algorithm
+
+Every domain gets a **0-100 Deal Score** based on:
+
+- **Value Gap** — How far below AI valuation is the asking price?
+- **Comparable Volume** — Do we have strong evidence for the valuation?
+- **Market Momentum** — Is this TLD/niche trending up or down?
+- **Liquidity Risk** — How long do similar domains take to sell?
+
+High scores surface automatically. Stop scrolling through garbage.
+
+### 📡 Live Auction Tracking
+
+Never miss another deal.
+
+- **Real-Time Bid Monitoring** — See bids as they happen
+- **Ending Soon Alerts** — Push notifications for expiring auctions
+- **Snipe Detection** — Know when last-second bidders are active
+- **Historical Bid Patterns** — Learn when to bid and when to wait
+
+### 🧠 AI Domain Brainstorming
+
+Need domains? Let AI help.
+
+- **Style Preferences** — Brandable, keyword-rich, short, descriptive
+- **Industry Targeting** — Generate for specific verticals
+- **Availability Checking** — Instant WHOIS lookups
+- **Trademark Screening** — Avoid legal landmines
+
+### 📈 Historical Sales Database
+
+**100,000+ verified sales** with full metadata:
+
+- Domain name and TLD
+- Sale price (normalized to USD)
+- Venue and date
+- Buyer/seller info (when available)
+- Domain age at time of sale
+
+Filter, sort, export. Build your own analysis.
+
+## Pricing Tiers
+
+| Feature | Free | Pro ($12/mo) | Elite ($29/mo) |
+|---------|------|--------------|----------------|
+| Historical Sales | 5 pages | 25 pages | Unlimited |
+| AI Brainstorms | 1/day | 3/day | 7/day |
+| AI Valuations | 2/day | 8/day | 25/day |
+| CSV Export | — | ✓ | ✓ |
+| API Access | — | — | ✓ |
+| Live Auction Alerts | — | ✓ | ✓ |
+
+## Use Cases
+
+### For Domain Investors
+
+- **Portfolio Valuation** — Know what your holdings are actually worth
+- **Acquisition Research** — Find underpriced domains before others
+- **Exit Strategy** — Price domains to sell, not to sit
+
+### For Domain Brokers
+
+- **Client Proposals** — Back up recommendations with data
+- **Market Reports** — Generate branded analysis for prospects
+- **Deal Negotiation** — Arm yourself with comparable sales
+
+### For Startups & Businesses
+
+- **Brand Domain Acquisition** — Know what's fair before negotiating
+- **Trademark Clearance** — Avoid buying legally risky domains
+- **Alternative Discovery** — Find available variations when premium is too expensive
+
+## Technical Architecture
+
+```
+domainhq/
+├── api/                        # Express 5.x REST API
+│   ├── routes/                 # 25 endpoint handlers
+│   ├── middleware/             # Auth, rate limiting
+│   └── swagger/                # OpenAPI documentation
+├── lib/
+│   ├── domain-evaluator.ts     # AI valuation engine (41KB)
+│   ├── domain-brainstormer.ts  # Generation with Claude
+│   ├── deal-scorer.ts          # Deal scoring algorithm
+│   └── metrics/                # Specialized scoring modules
+├── scraper/
+│   ├── sources/                # Per-marketplace scrapers
+│   ├── auctions/               # Live auction monitors
+│   └── scheduler/              # Multi-source orchestration
+├── apps/
+│   └── domainhq-ui/            # React 19 + Vite frontend
+└── data/
+    └── namebio.db              # SQLite historical database
 ```
 
-### AgentOS Integration
-```typescript
-const config: AgentOSConfig = {
-  providers: [openai, anthropic, local],
-  tools: ['code-writer', 'terminal', 'file-system', 'git'],
-  memory: 'hierarchical',
-  guardrails: productionSafetyRules
-};
-```
+**Key Technologies:**
+- **Backend**: Node.js, Express 5, TypeScript 5.9
+- **Database**: SQLite (sales), PostgreSQL (users)
+- **AI**: Anthropic Claude API, custom embeddings
+- **Frontend**: React 19, Vite, TailwindCSS 4
+- **Scraping**: Playwright, Selenium, anti-detection
+- **Payments**: Stripe
 
-## 🌟 What Makes VCA Different
+## The AI Advantage
 
-### 1. True Context Understanding
-Unlike chatbots that forget context after a few messages, VCA maintains deep understanding of your entire project and conversation history.
+Traditional domain appraisals fail because they ignore context. Our AI model considers:
 
-### 2. Production-First Design
-Not a toy or demo—VCA writes real code for real projects. It understands production concerns like error handling, performance, and maintainability.
+1. **Semantic Meaning** — "cloudbank.ai" isn't just 9 letters; it's two powerful keywords
+2. **Category Detection** — Automatically classify domains into 50+ industry verticals
+3. **TLD Intelligence** — .ai premiums differ from .io premiums
+4. **Market Timing** — What's hot in 2026 isn't what was hot in 2020
+5. **Brandability Scoring** — Pronounceable, memorable, defensible
 
-### 3. Voice-Optimized UX
-Built from the ground up for voice interaction. No awkward command phrases or rigid syntax—just natural conversation.
+This isn't simple string matching. It's genuine natural language understanding applied to the domain aftermarket.
 
-### 4. Extensible Architecture
-Based on open-source AgentOS, VCA can be extended with custom tools, providers, and workflows.
+## Why We Built DomainHQ
 
-### 5. Privacy-First
-Your code never leaves your control. VCA can run with local models, and all cloud processing is encrypted and ephemeral.
+Domain investing was our accidental side hustle. We kept buying domains on gut instinct, overpaying for some, missing obvious deals on others. The existing tools felt stuck in 2015.
 
-## 📊 Performance Metrics
+So we built what we wished existed:
 
-- **Voice Recognition Accuracy**: 97%+ with noise cancellation
-- **Code Generation Speed**: 50-100 lines per second
-- **Context Window**: Up to 128k tokens
-- **Average Time Savings**: 70% on routine tasks
-- **User Satisfaction**: 4.8/5 from 1000+ developers
+- A single place to see all marketplace data
+- Valuations that actually correlate with realized sales
+- Alerts that surface deals before they expire
+- AI that generates brandable options when we're stuck
 
-## 🔮 Roadmap
+We've been using DomainHQ internally for 18 months. Now it's ready for everyone.
 
-### Coming Soon
-- [ ] **Multi-Modal Input** — Draw diagrams, share screenshots
-- [ ] **Team Collaboration** — Shared sessions and knowledge
-- [ ] **Custom Training** — Fine-tune on your codebase
-- [ ] **IDE Plugins** — Deeper editor integration
-- [ ] **Mobile Apps** — Code on the go
+*For a deep dive into the domain valuation landscape and why existing tools fail, read our [full industry analysis](/posts/research/domain-evaluation-landscape-2025).*
 
-### Future Vision
-- **Ambient Coding** — VCA anticipates needs before you ask
-- **AI Pair Programming** — True collaborative development
-- **Project Autopilot** — Autonomous feature implementation
-- **Universal Interface** — One voice, all your tools
+## Get Started
 
-## 🚀 Get Started
-
-### Free Trial
-Try VCA free for 14 days. No credit card required.
-
-```bash
-# Quick start
-npx create-vca-app my-project
-cd my-project
-npm run dev
-```
-
-### Installation Options
-
-**Cloud (Recommended)**
-- Instant setup at [vca.chat](https://vca.chat)
-- Always up-to-date
-- Managed infrastructure
-
-**Self-Hosted**
-```bash
-git clone https://github.com/framersai/voice-chat-assistant
-cd voice-chat-assistant
-cp .env.sample .env
-# Add your API keys
-pnpm install
-pnpm run dev
-```
-
-**Enterprise**
-- On-premise deployment
-- Custom model integration
-- SLA support
-- [Contact sales](mailto:enterprise@vca.chat)
-
-## 📚 Resources
-
-### Documentation
-- [Getting Started Guide](https://vca.chat/docs/getting-started)
-- [Voice Commands Reference](https://vca.chat/docs/commands)
-- [Tool Integration](https://vca.chat/docs/tools)
-- [API Documentation](https://vca.chat/docs/api)
-
-### Community
-- [Discord Server](https://discord.gg/vca-community)
-- [GitHub Discussions](https://github.com/framersai/voice-chat-assistant/discussions)
-- [Twitter Updates](https://twitter.com/vca_chat)
-- [YouTube Tutorials](https://youtube.com/@vca_chat)
-
-### Support
-- [Knowledge Base](https://vca.chat/help)
-- [Video Tutorials](https://vca.chat/learn)
-- Email: support@vca.chat
-- Enterprise: enterprise@vca.chat
-
-## 🤝 Integration Partners
-
-VCA works seamlessly with your favorite tools:
-
-- **Version Control**: GitHub, GitLab, Bitbucket
-- **IDEs**: VSCode, Neovim, JetBrains Suite
-- **Frameworks**: React, Vue, Angular, Next.js, and more
-- **Cloud**: AWS, Vercel, Netlify, Cloudflare
-- **Databases**: PostgreSQL, MongoDB, Redis
-- **Monitoring**: Sentry, DataDog, New Relic
-
-## 💬 What Developers Say
-
-> "I was skeptical about voice coding, but VCA converted me. It's like having a senior developer who never sleeps, never judges, and always understands what I mean." — **Alex Thompson, Startup Founder**
-
-> "VCA helped me ship features 3x faster. The voice input is so natural, I forget I'm talking to an AI." — **Priya Patel, Frontend Lead**
-
-> "As someone with RSI, VCA gave me my career back. I can code all day without pain." — **James Wilson, Backend Engineer**
-
-## 🏆 Recognition
-
-- **Product Hunt #1** — Developer Tools Category
-- **GitHub Trending** — #1 TypeScript Project
-- **Hacker News** — Featured on front page
-- **Dev.to Featured** — "The Future of Coding"
-
-## 🔐 Security & Privacy
-
-### Your Code is Sacred
-- **End-to-end encryption** for all communications
-- **Ephemeral processing** — Nothing stored after session
-- **Local model option** — Run everything on your machine
-- **SOC 2 compliant** — Enterprise-grade security
-- **GDPR ready** — Full data control and portability
-
-### Compliance
-- **HIPAA ready** for healthcare projects
-- **PCI compliant** for financial applications
-- **Enterprise SSO** via SAML/OIDC
-- **Audit logs** for all operations
-
-## 🎯 Pricing
-
-### Starter (Free)
-- 100 voice requests/month
-- Basic code generation
-- Community support
-- Public projects only
-
-### Pro ($29/month)
-- Unlimited requests
-- Advanced features
-- Priority support
-- Private repositories
-- Team collaboration
-
-### Enterprise (Custom)
-- Self-hosted option
-- Custom models
-- SLA guarantee
-- Dedicated support
-- Training included
-
-## 🌍 Join the Revolution
-
-Voice Chat Assistant isn't just a tool—it's a movement toward more natural, efficient, and enjoyable software development. Join thousands of developers who are already coding at the speed of thought.
-
-### Ready to Transform Your Workflow?
-
-[**Start Free Trial**](https://vca.chat) • [**Watch Demo**](https://vca.chat/demo) • [**Read Docs**](https://vca.chat/docs)
+1. **Free Account** — [Sign up at domainhq.ai](https://domainhq.ai) (no credit card required)
+2. **Explore Sales** — Browse 100K+ historical transactions
+3. **Run Valuations** — Get AI appraisals for any domain
+4. **Set Alerts** — Never miss an auction in your niche
 
 ---
 
-*Built with ❤️ by [Frame.dev](https://frame.dev) • Powered by [AgentOS](https://agentos.sh) • Strategic Partner: [Manic Agency](https://manic.agency)*
+*Ready to stop guessing? [Start with DomainHQ →](https://domainhq.ai)*
 39:T642c,# Building MagicLogger and MAGIC: A Universal Logging Standard for Color
 
 **GitHub link: [https://github.com/manicinc/magiclogger](https://github.com/manicinc/magiclogger)**
@@ -2066,6 +2013,6 @@ It's an `infinite jest`, an endless need to change and iterate and improve by or
 -  [AI Sociopaths: https://manic.agency/blog/thinkpieces/ai-sociopaths](https://manic.agency/blog/thinkpieces/ai-sociopaths)
 
 -  [The Meat Interface: https://manic.agency/blog/thinkpieces/the-meat-interface](https://manic.agency/blog/thinkpieces/the-meat-interface)
-2:[["$","$L21",null,{"items":[{"name":"Home","url":"/"},{"name":"Projects","url":"/projects"},{"name":"tools","url":"/projects/tools"},{"name":"MagicLogger — Colorful JavaScript / TypeScript Logger","url":"/projects/tools/magiclogger"}]}],["$","$L22",null,{"project":{"slug":"magiclogger","title":"MagicLogger — Colorful JavaScript / TypeScript Logger","description":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry.","date":"2025-04-20","category":"tools","content":"$23","longDescription":"$undefined","tags":["javascript","typescript","nodejs","logging","developers","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","images":["/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","/assets/projects/magiclogger/magiclogger-terminal-demo.gif"],"bgColor":"$undefined","textColor":"$undefined","link":"https://manic.agency/magiclogger","github":"https://github.com/manicinc/magiclogger","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"toc":[{"level":2,"text":"What's MagicLogger?","slug":"whats-magiclogger"},{"level":2,"text":"Key Features","slug":"key-features"},{"level":2,"text":"Quick Start","slug":"quick-start"},{"level":2,"text":"Powerful Transports","slug":"powerful-transports"},{"level":2,"text":"Replace Existing Loggers","slug":"replace-existing-loggers"},{"level":2,"text":"Coming Soon!","slug":"coming-soon"}]}}],["$","$L24",null,{"project":"$25","relatedProjects":[{"slug":"portapack","title":"PortaPack — One-File Web Experiences","description":"Why we built a fun bundler that squishes your entire site into a single HTML file.","date":"2025-04-20","category":"tools","content":"$35","longDescription":"$undefined","tags":["html","cli","bundler","offline","product","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/portapack.jpg","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://manicinc.github.io/portapack/","github":"https://github.com/manicinc/portapack","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"score":3},{"slug":"seostory","title":"SEOStory — AI-Powered SEO Growth Engine","description":"How our AI-driven SEO workflow lifted “Manic Agency” from position","date":"2025-11-02","category":"tools","content":"$36","longDescription":"$undefined","tags":["seo","ai","marketing","automation","case-study"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/seostory/seostory-primary-transparent-4x.png","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://seostory.xyz","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"score":1},{"slug":"voice-chat-assistant","title":"Voice Chat Assistant — Talk to Code, Ship Faster","description":"Voice-first AI coding assistant that understands context, writes production code, and manages your entire development workflow through natural conversation. Powered by AgentOS.","date":"2025-11-10","category":"ai","content":"$37","longDescription":"$undefined","tags":["ai","voice","coding-assistant","agentos","developer-tools","productivity","llm"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/voice-chat-assistant/hearing.svg","images":["/assets/projects/voice-chat-assistant/logo.svg","/assets/projects/framers/agentos-logo.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://vca.chat","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Response Time","value":"< 100ms"},{"label":"Languages Supported","value":"50+"},{"label":"Active Sessions/Day","value":"10k+"},{"label":"Powered By","value":"AgentOS"}],"team":[{"name":"Frame.dev / Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Design & Strategy","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[{"quote":"VCA changed how I think about coding. I describe what I want, and it just happens. It's like having a senior developer who never gets tired.","author":"Sarah Chen","role":"Full Stack Developer"},{"quote":"The context awareness is unreal. It remembers our entire conversation and understands my codebase better than I do sometimes.","author":"Marcus Rodriguez","role":"Tech Lead at Scale-up"}],"score":0}]}],["$","div",null,{"style":{"maxWidth":"1200px","margin":"0 auto","padding":"0 1rem"},"children":["$","$L38",null,{"posts":[{"slug":"building-magiclogger-and-magic","title":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color","date":"2025-10-15","lastModified":"$undefined","draft":false,"category":"tutorials","tags":["typescript","open-source","library","logging"],"excerpt":"One developer's journey into building a feature-rich colorful logging library and why.","image":"/assets/blog/tutorials/building-magiclogger/magiclogger-primary-no-subtitle-transparent-4x.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":17,"content":"$39","author":{"name":"Johnny Dunn"},"contributors":"$undefined"},{"slug":"reddit-consenus-on-llm-seo","title":"What 1,000+ Industry Comments on Reddit Reveal About AI Search Optimization","date":"2025-07-28","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","ai-search","reddit-analysis","seo-strategy","search-optimization","featured"],"excerpt":"After analyzing hundreds of comments across SEO subreddits, Manic.agency finds that the industry splits cleanly: early adopters racing to crack AI visibility versus skeptics dismissing 'LLM SEO' as repackaged bullshit. The data tells a more nuanced story..","image":"/assets/blog/research/reddit-consenus-on-llm-seo/hero-reddit-ai-search-analysis.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":11,"content":"$3a","author":{"name":"Manic Agency"},"contributors":"$undefined"},{"slug":"logomaker-an-experiment-in-human-computer-interaction-vibe-coding","title":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨","date":"2025-04-20","lastModified":"$undefined","draft":false,"category":"thinkpieces","tags":["featured","llms","vibe-coding"],"excerpt":"Vibe coding a logo creation tool, with insights on different LLM providers and interfaces.","image":"/assets/blog/thinkpieces/logomaker-an-experiment/logomaker-manic-example.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":35,"content":"$3b","author":{"name":"Manic Agency"},"contributors":"$undefined"}],"title":"// Related Blog Posts //"}]}]]
+2:[["$","$L21",null,{"items":[{"name":"Home","url":"/"},{"name":"Projects","url":"/projects"},{"name":"tools","url":"/projects/tools"},{"name":"MagicLogger — Colorful JavaScript / TypeScript Logger","url":"/projects/tools/magiclogger"}]}],["$","$L22",null,{"project":{"slug":"magiclogger","title":"MagicLogger — Colorful JavaScript / TypeScript Logger","description":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry.","date":"2025-04-20","category":"tools","content":"$23","longDescription":"$undefined","tags":["javascript","typescript","nodejs","logging","developers","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","images":["/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","/assets/projects/magiclogger/magiclogger-terminal-demo.gif"],"bgColor":"$undefined","textColor":"$undefined","link":"https://manic.agency/magiclogger","github":"https://github.com/manicinc/magiclogger","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"toc":[{"level":2,"text":"What's MagicLogger?","slug":"whats-magiclogger"},{"level":2,"text":"Key Features","slug":"key-features"},{"level":2,"text":"Quick Start","slug":"quick-start"},{"level":2,"text":"Powerful Transports","slug":"powerful-transports"},{"level":2,"text":"Replace Existing Loggers","slug":"replace-existing-loggers"},{"level":2,"text":"Coming Soon!","slug":"coming-soon"}]}}],["$","$L24",null,{"project":"$25","relatedProjects":[{"slug":"portapack","title":"PortaPack — One-File Web Experiences","description":"Why we built a fun bundler that squishes your entire site into a single HTML file.","date":"2025-04-20","category":"tools","content":"$35","longDescription":"$undefined","tags":["html","cli","bundler","offline","product","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/portapack.jpg","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://manicinc.github.io/portapack/","github":"https://github.com/manicinc/portapack","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"score":3},{"slug":"seostory","title":"SEOStory — AI-Powered SEO Growth Engine","description":"How our AI-driven SEO workflow lifted “Manic Agency” from position","date":"2025-11-02","category":"tools","content":"$36","longDescription":"$undefined","tags":["seo","ai","marketing","automation","case-study"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/seostory/seostory-primary-transparent-4x.png","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://seostory.xyz","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"score":1},{"slug":"domainhq","title":"DomainHQ.ai — AI-Powered Domain Sales Intelligence","description":"Make data-driven domain investment decisions with AI valuations, 100K+ historical sales, multi-source scraping, and real-time deal scoring. The definitive platform for domain investors.","date":"2026-01-06","category":"ai","content":"$37","longDescription":"$undefined","tags":["ai","domain-names","domain-investing","domain-valuation","sales-intelligence","deal-scoring","auction-tracking","domain-appraisal","saas","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/domainhq/logo-full.png","images":["/assets/projects/domainhq/logo-full.png","/assets/projects/domainhq/og-image.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://domainhq.ai","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Historical Sales","value":"100,000+"},{"label":"Data Sources","value":"15+ Platforms"},{"label":"AI Accuracy","value":"94%+"},{"label":"Daily Auctions","value":"5,000+"}],"team":[{"name":"Manic Agency","role":"Design & Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"score":0}]}],["$","div",null,{"style":{"maxWidth":"1200px","margin":"0 auto","padding":"0 1rem"},"children":["$","$L38",null,{"posts":[{"slug":"building-magiclogger-and-magic","title":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color","date":"2025-10-15","lastModified":"$undefined","draft":false,"category":"tutorials","tags":["typescript","open-source","library","logging"],"excerpt":"One developer's journey into building a feature-rich colorful logging library and why.","image":"/assets/blog/tutorials/building-magiclogger/magiclogger-primary-no-subtitle-transparent-4x.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":17,"content":"$39","author":{"name":"Johnny Dunn"},"contributors":"$undefined"},{"slug":"reddit-consenus-on-llm-seo","title":"What 1,000+ Industry Comments on Reddit Reveal About AI Search Optimization","date":"2025-07-28","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","ai-search","reddit-analysis","seo-strategy","search-optimization","featured"],"excerpt":"After analyzing hundreds of comments across SEO subreddits, Manic.agency finds that the industry splits cleanly: early adopters racing to crack AI visibility versus skeptics dismissing 'LLM SEO' as repackaged bullshit. The data tells a more nuanced story..","image":"/assets/blog/research/reddit-consenus-on-llm-seo/hero-reddit-ai-search-analysis.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":11,"content":"$3a","author":{"name":"Manic Agency"},"contributors":"$undefined"},{"slug":"logomaker-an-experiment-in-human-computer-interaction-vibe-coding","title":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨","date":"2025-04-20","lastModified":"$undefined","draft":false,"category":"thinkpieces","tags":["featured","llms","vibe-coding"],"excerpt":"Vibe coding a logo creation tool, with insights on different LLM providers and interfaces.","image":"/assets/blog/thinkpieces/logomaker-an-experiment/logomaker-manic-example.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":35,"content":"$3b","author":{"name":"Manic Agency"},"contributors":"$undefined"}],"title":"// Related Blog Posts //"}]}]]
 20:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#FBF6EF"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#22182B"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"MagicLogger — Colorful JavaScript / TypeScript Logger | Project Details | Manic Agency - AI Agency Los Angeles"}],["$","meta","5",{"name":"description","content":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry."}],["$","meta","6",{"name":"keywords","content":"javascript,typescript,nodejs,logging,developers,featured"}],["$","meta","7",{"name":"creator","content":"Manic Inc"}],["$","meta","8",{"name":"publisher","content":"Manic Inc"}],["$","link","9",{"rel":"canonical","href":"https://your-domain.com/projects/tools/magiclogger"}],["$","meta","10",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","11",{"property":"og:title","content":"MagicLogger — Colorful JavaScript / TypeScript Logger | Project Details | Manic Agency - AI Agency Los Angeles"}],["$","meta","12",{"property":"og:description","content":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry."}],["$","meta","13",{"property":"og:url","content":"https://your-domain.com/projects/tools/magiclogger"}],["$","meta","14",{"property":"og:site_name","content":"Your Agency Name"}],["$","meta","15",{"property":"og:image","content":"https://your-domain.com/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png"}],["$","meta","16",{"property":"og:image:width","content":"1200"}],["$","meta","17",{"property":"og:image:height","content":"630"}],["$","meta","18",{"property":"og:image:alt","content":"MagicLogger — Colorful JavaScript / TypeScript Logger | Project Details"}],["$","meta","19",{"property":"og:type","content":"article"}],["$","meta","20",{"property":"article:published_time","content":"2025-04-20T00:00:00.000Z"}],["$","meta","21",{"property":"article:section","content":"tools"}],["$","meta","22",{"property":"article:tag","content":"javascript"}],["$","meta","23",{"property":"article:tag","content":"typescript"}],["$","meta","24",{"property":"article:tag","content":"nodejs"}],["$","meta","25",{"property":"article:tag","content":"logging"}],["$","meta","26",{"property":"article:tag","content":"developers"}],["$","meta","27",{"property":"article:tag","content":"featured"}],["$","meta","28",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","29",{"name":"twitter:title","content":"MagicLogger — Colorful JavaScript / TypeScript Logger | Project Details | Manic Agency - AI Agency Los Angeles"}],["$","meta","30",{"name":"twitter:description","content":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry."}],["$","meta","31",{"name":"twitter:image","content":"https://your-domain.com/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png"}],["$","link","32",{"rel":"shortcut icon","href":"/favicon-16x16.png"}],["$","link","33",{"rel":"icon","href":"/favicon.ico"}],["$","link","34",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","meta","35",{"name":"next-size-adjust"}]]
 1:null

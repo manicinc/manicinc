@@ -1,0 +1,1621 @@
+3:I[4707,[],""]
+6:I[36423,[],""]
+a:I[6322,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","3185","static/chunks/app/layout-09d54dcbb62c45f7.js"],"default"]
+b:I[96313,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","3185","static/chunks/app/layout-09d54dcbb62c45f7.js"],"default"]
+c:I[66159,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","3185","static/chunks/app/layout-09d54dcbb62c45f7.js"],"default"]
+d:I[59970,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","3185","static/chunks/app/layout-09d54dcbb62c45f7.js"],"default"]
+e:I[81775,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","3185","static/chunks/app/layout-09d54dcbb62c45f7.js"],"default"]
+f:I[12025,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","3185","static/chunks/app/layout-09d54dcbb62c45f7.js"],"ThemeProvider"]
+10:I[39976,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","3185","static/chunks/app/layout-09d54dcbb62c45f7.js"],"CookieProvider"]
+11:I[69088,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","3185","static/chunks/app/layout-09d54dcbb62c45f7.js"],"default"]
+12:I[50513,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","3185","static/chunks/app/layout-09d54dcbb62c45f7.js"],"default"]
+13:I[83551,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","3185","static/chunks/app/layout-09d54dcbb62c45f7.js"],"default"]
+14:I[38483,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","3185","static/chunks/app/layout-09d54dcbb62c45f7.js"],"default"]
+15:I[81695,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","3185","static/chunks/app/layout-09d54dcbb62c45f7.js"],"default"]
+16:I[28602,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","3185","static/chunks/app/layout-09d54dcbb62c45f7.js"],"default"]
+17:I[51052,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","3185","static/chunks/app/layout-09d54dcbb62c45f7.js"],"Nav"]
+18:I[10376,["7601","static/chunks/app/error-980f98eab7299665.js"],"default"]
+19:I[79229,["9160","static/chunks/app/not-found-e731a727afb82058.js"],"default"]
+1a:I[85745,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","3185","static/chunks/app/layout-09d54dcbb62c45f7.js"],"default"]
+1b:I[16049,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","3185","static/chunks/app/layout-09d54dcbb62c45f7.js"],"default"]
+1c:I[18133,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","3185","static/chunks/app/layout-09d54dcbb62c45f7.js"],"default"]
+1d:I[36623,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","3185","static/chunks/app/layout-09d54dcbb62c45f7.js"],"default"]
+1e:I[70375,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","3185","static/chunks/app/layout-09d54dcbb62c45f7.js"],"default"]
+1f:I[69709,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","3185","static/chunks/app/layout-09d54dcbb62c45f7.js"],"default"]
+4:["category","research","d"]
+5:["slug","domain-evaluation-landscape-2025","d"]
+7:Tb3b,
+          /* Critical CSS - Inline in <head> for fast initial paint */
+          *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--bg-primary:#fbf6ef;--bg-primary-rgb:251,246,239;--text-primary:#4a3f35;--text-primary-rgb:74,63,53;--accent-primary:#d6a574;--accent-highlight:#7de8c9;--header-height:72px;--container-max:1200px;--content-max:900px;--font-body:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;--font-heading:var(--font-body);--transition-fast:150ms ease;--transition-base:250ms ease}html.dark{--bg-primary:#22182b;--bg-primary-rgb:34,24,43;--text-primary:#f5f0e6;--text-primary-rgb:245,240,230;--accent-primary:#e4b584;--accent-highlight:#7de8c9}html:not([data-theme-loaded="true"]) body{opacity:0}html{background-color:var(--bg-primary);color:var(--text-primary);font-family:var(--font-body);line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body{margin:0;min-height:100vh;transition:opacity 300ms ease}nav{position:sticky;top:0;z-index:100;background:rgba(var(--bg-primary-rgb),0.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);height:var(--header-height);border-bottom:1px solid rgba(var(--text-primary-rgb),0.1)}.container{max-width:var(--container-max);margin:0 auto;padding:0 1rem}.hero-section{padding:4rem 1rem;min-height:calc(100vh - var(--header-height));display:flex;align-items:center}h1{font-size:clamp(2rem,5vw,4rem);font-weight:700;line-height:1.1;margin-bottom:1rem}h2{font-size:clamp(1.5rem,4vw,2.5rem);font-weight:600;line-height:1.2;margin-bottom:0.75rem}p{margin-bottom:1rem;line-height:1.6}a{color:var(--accent-primary);text-decoration:none;transition:color var(--transition-fast)}a:hover{color:var(--accent-highlight)}.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;background:var(--accent-primary);color:var(--bg-primary);border:none;border-radius:0.5rem;font-weight:500;cursor:pointer;transition:all var(--transition-base)}.btn:hover{background:var(--accent-highlight);transform:translateY(-2px)}.skeleton{background:linear-gradient(90deg,rgba(var(--text-primary-rgb),0.1) 25%,rgba(var(--text-primary-rgb),0.2) 50%,rgba(var(--text-primary-rgb),0.1) 75%);background-size:200% 100%;animation:loading 1.5s ease-in-out infinite;border-radius:0.25rem}@keyframes loading{0%{background-position:200% 0}100%{background-position:-200% 0}}img{max-width:100%;height:auto;display:block}img[loading="lazy"]{background:rgba(var(--text-primary-rgb),0.1)}@media (max-width:768px){.hero-section{padding:2rem 1rem}h1{font-size:2rem}.hide-mobile{display:none}}@media (min-width:769px){.hide-desktop{display:none}}.will-change-transform{will-change:transform}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important}}
+        8:T6fb,default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://www.clarity.ms https://*.clarity.ms https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://vercel.live https://*.vercel.app https://cdnjs.cloudflare.com https://ajax.cloudflare.com https://va.vercel-scripts.com https://*.vercel-scripts.com https://eocampaign1.com https://*.eocampaign1.com https://emailoctopus.com https://*.emailoctopus.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.gstatic.com https://cdn.sender.net https://cdnjs.cloudflare.com https://eocampaign1.com https://*.eocampaign1.com; img-src 'self' data: https: blob: https://www.google.com https://www.gstatic.com https://cdn.sender.net https://app.sender.net https://eocampaign1.com https://*.eocampaign1.com; font-src 'self' https://fonts.gstatic.com https://www.gstatic.com https://cdn.sender.net https://cdnjs.cloudflare.com https://eocampaign1.com; connect-src 'self' https://www.google-analytics.com https://www.google.com https://www.gstatic.com https://api.github.com https://*.github.com https://cdn.sender.net https://app.sender.net https://api.sender.net *.sender.net https://vercel.live https://cloudflare.com https://*.cloudflare.com https://va.vercel-scripts.com https://*.vercel-scripts.com https://eocampaign1.com https://*.eocampaign1.com https://emailoctopus.com https://*.emailoctopus.com https://static.cloudflareinsights.com; frame-src 'self' https://www.google.com https://www.gstatic.com https://cdn.sender.net https://app.sender.net https://eocampaign1.com https://*.eocampaign1.com https://emailoctopus.com https://*.emailoctopus.com;9:Taf1,
+        (function() {
+          try {
+            // Don't run this script during server-side rendering
+            if (typeof window === 'undefined' || typeof document === 'undefined') return;
+            
+            // 1. Check localStorage - the source of truth for user preference
+            let storedTheme = localStorage.getItem('theme');
+            
+            // 2. If no stored theme, check system preference
+            if (!storedTheme) {
+              const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+              storedTheme = systemPrefersDark ? 'dark' : 'light';
+              // Save this to localStorage for next time
+              localStorage.setItem('theme', storedTheme);
+            }
+            
+            // Wait for DOM to be ready
+            const applyTheme = () => {
+              // Safety check that DOM is ready
+              if (!document || !document.documentElement) return;
+              
+              // 3. Ensure clean state
+              document.documentElement.classList.remove('dark', 'light');
+              
+              // 4. Apply theme class and colorScheme
+              document.documentElement.classList.add(storedTheme);
+              document.documentElement.style.colorScheme = storedTheme;
+              
+              // 5. Apply immediate colors to prevent flash - only to html element
+              if (storedTheme === 'dark') {
+                document.documentElement.style.setProperty('background-color', '#22182b', 'important');
+                document.documentElement.style.setProperty('color', '#f5f0e6', 'important');
+              } else {
+                document.documentElement.style.setProperty('background-color', '#fbf6ef', 'important');
+                document.documentElement.style.setProperty('color', '#4a3f35', 'important');
+              }
+              
+              // 6. Store for React
+              window.__NEXT_THEME_INITIAL = storedTheme;
+            };
+            
+            // Apply theme immediately
+            applyTheme();
+            
+            // Also apply after DOM is fully loaded (for safety)
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', applyTheme);
+            }
+            
+          } catch (e) {
+            console.error('Theme initialization error:', e);
+            // Fallback to light - only set on html element
+            if (document && document.documentElement) {
+              document.documentElement.classList.add('light');
+              document.documentElement.style.setProperty('background-color', '#fbf6ef', 'important');
+              document.documentElement.style.setProperty('color', '#4a3f35', 'important');
+            }
+          }
+        })();
+      0:["manic-agency-1767744242878",[[["",{"children":["blog",{"children":[["category","research","d"],{"children":[["slug","domain-evaluation-landscape-2025","d"],{"children":["__PAGE__?{\"category\":\"research\",\"slug\":\"domain-evaluation-landscape-2025\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["category","research","d"],{"children":[["slug","domain-evaluation-landscape-2025","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7589854758514563.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/14e80cb0111b469b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/2b234a29d7f80810.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/4a49f8c87e29773c.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/fbcf5add168be5ca.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/dcd6170947ff7d98.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/5627118491ebaa77.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/8d146102ec06a500.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"preconnect","href":"https://static.cloudflareinsights.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.jsdelivr.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://res.cloudinary.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}],["$","$L1f",null,{}]]}]}]}]]}]]}]],null],null],["$L20",null]]]]
+21:I[54680,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
+22:I[18745,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
+23:I[94058,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
+25:I[67373,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
+27:I[12554,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
+28:I[96670,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
+29:I[71409,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
+2a:I[87634,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
+4b:I[72972,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],""]
+4c:I[50301,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"IconArrowLeft"]
+4d:I[50301,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"IconOrnateAuthor"]
+4e:I[50301,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"IconOrnateCalendar"]
+4f:I[50301,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"IconOrnateClock"]
+50:I[50301,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"IconOrnateTag"]
+51:I[65878,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"Image"]
+52:I[30603,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"CustomMarkdownRenderer"]
+54:I[74644,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
+55:I[75541,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
+59:I[28054,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
+5a:I[4681,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
+5b:I[99775,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-95fe32f822f1b290.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-604f07b27d1c136a.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-d35dbbb44783e68f.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-fec3e39de46e2c59.js"],"default"]
+24:T34a0,
+# The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ
+
+>>> The domain aftermarket is a billion-dollar industry where pricing remains remarkably opaque. Traditional appraisal tools miss the mark more often than they hit it. We set out to change that.
+
+:::banner{backgroundColor="var(--accent-primary)", textColor="white", size="large", icon="💰"}
+The aftermarket domain market reached **$680 million in 2025** and is projected to hit **$1.17 billion by 2033**—a 6.1% CAGR. Yet most investors still rely on gut instinct for valuations.
+:::
+
+## The State of Domain Valuation in 2025
+
+The domain industry has never been larger. With **368.4 million active registrations** as of early 2025, the market continues to expand. Premium sales regularly hit seven figures—voice.com for $30 million, chat.com purchased by OpenAI for $15.5 million, icon.com for $12 million in 2025.
+
+But here's the uncomfortable truth: **the tools we use to value these assets are fundamentally broken**.
+
+### The Fragmentation Problem
+
+Domain sales happen across 15+ distinct marketplaces:
+
+| Marketplace | Specialization | Data Access |
+|-------------|----------------|-------------|
+| GoDaddy Auctions | Expired domains, general inventory | Limited API |
+| Sedo | European market, broker network | Partial sales data |
+| NameJet | Premium auctions, backorders | Auction-only |
+| Afternic | BIN listings, premium names | Closed ecosystem |
+| NameBio | Historical sales database | Most comprehensive |
+| Dynadot | Direct sales, marketplace | Minimal reporting |
+| Dan.com | Modern landing pages, installments | Growing dataset |
+| Atom/NamesCon | Bulk auctions, industry events | Sporadic access |
+
+No single platform aggregates all this data. Investors manually check each marketplace, maintain spreadsheets, and still miss deals daily. The average Sedo sale price hovers around $2,345, but finding comparable sales for your specific domain requires hours of research.
+
+### Why Traditional Appraisals Fail
+
+The dominant appraisal tools—GoDaddy's GoValue, Estibot, and NameWorth—share fundamental limitations that make them unreliable for serious investors.
+
+:::warning
+Studies suggest automated appraisal tools achieve only **75-85% accuracy** compared to actual market prices. For high-value domains, the error rates are even worse.
+:::
+
+**GoDaddy GoValue** tends to:
+- Overvalue low-quality domains (giving false hope to sellers)
+- Undervalue premium inventory (missing true market potential)
+- Bias predictions systematically high or low
+- Ignore recent market trends and viral moments
+
+**Estibot** struggles because:
+- Algorithms haven't kept pace with market evolution
+- Over-reliance on historical patterns that no longer apply
+- Unable to assess brandability or semantic meaning
+- Community repeatedly reports misaligned valuations
+
+**The Core Issue**: These tools can't factor in context. They don't know when a domain suddenly becomes valuable due to a news event, viral trend, or industry shift. They can't recognize strategic fit between a domain and potential buyers. They treat "cloudbank.ai" as nine characters, not as two powerful keywords in a premium TLD.
+
+### The Comparable Sales Problem
+
+Professional real estate appraisals rely on comparable sales—what did similar properties sell for recently? Domain valuation desperately needs this, but finding comps is manual and inconsistent.
+
+Want to know what 6-letter .ai domains sold for in the last 12 months? You'll need to:
+
+1. Search NameBio (incomplete recent data)
+2. Cross-reference Sedo's public sales (European bias)
+3. Check DNJournal reports (only notable sales)
+4. Scan NamePros forum threads (anecdotal)
+5. Query GoDaddy auction history (limited access)
+
+This process takes hours per domain. Professional brokers have assistants do this manually. Individual investors skip it entirely and guess.
+
+## The AI Opportunity
+
+The limitations above aren't technical impossibilities—they're solvable problems. AI changes the equation in four fundamental ways.
+
+### 1. Pattern Recognition at Scale
+
+Human appraisers can't hold 100,000+ historical sales in working memory. They develop heuristics that work until they don't. AI can:
+
+- Identify pricing patterns across TLDs, lengths, and categories
+- Detect market momentum in real-time
+- Find genuine comparables using semantic similarity, not just string matching
+- Update continuously as new sales data arrives
+
+### 2. Semantic Understanding
+
+Traditional tools see "cryptobank.com" as a 14-character string. An AI model sees:
+- Two high-value keywords: "crypto" + "bank"
+- Financial services category signal
+- Compound word structure (brandable)
+- Historical premium in finance + crypto intersection
+
+This semantic layer dramatically improves valuation accuracy for premium names.
+
+### 3. Multi-Factor Integration
+
+AI can synthesize signals that tools previously handled in isolation:
+
+- **SEO Metrics**: Search volume, keyword difficulty, CPC data
+- **Traffic Estimation**: Direct navigation, branded search, organic
+- **Brand Sentiment**: Social mentions, news coverage, trademark clearance
+- **Market Timing**: TLD trends, industry momentum, auction seasonality
+
+### 4. Confidence Quantification
+
+Perhaps most importantly, AI can express uncertainty. A domain with 50 close comparables gets a tight valuation range. A domain with no meaningful comps gets a wide range and a low confidence score. This transparency—knowing when you don't know—is absent from traditional tools.
+
+## The DomainHQ Origin Story
+
+We didn't set out to build a domain platform. It happened by accident.
+
+### The Problem We Kept Hitting
+
+Like many tech teams, we accumulated domains. Some strategic ("we might build this"), some speculative ("AI is going to be big"), some just impulse purchases at 2 AM during expired auctions.
+
+Our spreadsheet grew. Our frustration with existing tools grew faster.
+
+**The breaking point**: We were considering acquiring a 5-letter .io for a new project. GoDaddy said $1,200. Estibot said $8,400. A broker quoted $25,000. The actual sale (which we passed on) closed at $4,200 three months later.
+
+A **7x spread** between tool estimates, none of which matched reality.
+
+### Building the Solution
+
+We're engineers. When tools don't work, we build better ones. The initial scope was simple:
+
+1. **Aggregate data sources** — Stop switching between 10 tabs
+2. **Find real comparables** — Semantic matching, not string matching
+3. **Track live auctions** — Stop missing deals because we weren't refreshing
+
+What started as an internal tool expanded as we realized the problems were universal. Every domain investor we talked to faced the same frustrations.
+
+### The Technical Journey
+
+Building DomainHQ required solving several non-obvious problems:
+
+**Data Acquisition**: Marketplaces don't want their data scraped. We built anti-detection infrastructure, proxy rotation, and browser automation to reliably collect pricing data without getting blocked.
+
+**Historical Normalization**: Sales from 2015 aren't directly comparable to 2025 sales. We implemented market adjustment factors that account for TLD maturity, inflation, and industry evolution.
+
+**AI Valuation Model**: Training required curating our own dataset of verified sales with full metadata. We extracted 50+ features per domain—pattern type, keyword analysis, TLD multipliers, category estimation, length scoring, and more.
+
+**Real-Time Infrastructure**: Live auction tracking demands low-latency systems. We process thousands of auction updates daily, scoring deals in real-time and pushing alerts to users.
+
+### Early Wins and Lessons
+
+Within three months of internal use:
+
+- Identified underpriced auctions that returned 3-4x on resale
+- Avoided overpaying for domains with poor comparable support
+- Built confidence in "fair price" negotiations with sellers
+
+The validation that mattered wasn't our own usage—it was showing the tool to broker friends who immediately asked for access.
+
+## Technical Deep Dive: How DomainHQ Evaluates Domains
+
+For those curious about the methodology, here's how our valuation engine works.
+
+### The Data Pipeline
+
+```
+15+ Marketplaces → Scrapers → Normalization → Deduplication → SQLite
+                                                                  ↓
+User Query → Feature Extraction → AI Model → Comparable Lookup → Valuation
+```
+
+We maintain a normalized database of **100,000+ historical sales** with:
+- Domain name and TLD
+- Sale price (converted to USD)
+- Sale venue and date
+- Domain age at sale time
+- Buyer/seller info (when available)
+
+### Feature Extraction (50+ Signals)
+
+Every domain gets analyzed across multiple dimensions:
+
+**Structural Features**:
+- Length (characters, syllables, words)
+- Hyphen presence and count
+- Number presence and position
+- TLD (with 30+ specific multipliers)
+
+**Semantic Features**:
+- Pattern type (dictionary word, brandable, acronym, keyword-combo, etc.)
+- Detected keywords and their commercial value
+- Category estimation (technology, finance, health, gaming, etc.)
+- Brandability scoring
+
+**Market Features**:
+- TLD-specific statistics and trends
+- Venue performance analysis
+- 30-day market momentum
+- Comparable sales density
+
+### The Valuation Model
+
+Our model outputs:
+- **Low/Mid/High estimates** with confidence intervals
+- **Methodology notes** explaining the logic
+- **Top 10 comparable sales** with similarity scores
+- **Category-specific insights** (e.g., ".ai domains in fintech sell at 1.4x average")
+
+### Dictionary of Premium Keywords
+
+We maintain a curated list of 300+ keywords that carry premium value:
+- Technology: AI, app, auto, cloud, code, crypto, data, dev, game, meta, tech
+- Finance: bank, capital, coin, credit, invest, pay, trade, wallet
+- Consumer: book, food, health, home, shop, travel
+- Brandable: best, pro, hub, lab, plus, go, my
+
+These keywords are weighted in valuations when detected.
+
+## The Future of Domain Investing (2025-2026)
+
+The domain industry is at an inflection point. Several trends will reshape how investors operate.
+
+### New gTLD Application Window (2026)
+
+ICANN is reopening the new gTLD application window, allowing organizations to create custom domain extensions. This represents both opportunity (new premium inventory) and risk (market fragmentation).
+
+### AI-Generated Domain Suggestions
+
+We're seeing early versions of this—tools that brainstorm brandable domains based on industry and style preferences. The next generation will integrate availability checking, trademark screening, and market pricing in real-time.
+
+### Portfolio Optimization
+
+Large domain portfolios are inefficiently managed. AI can identify which domains to renew vs. drop, suggest optimal pricing, and forecast liquidity timelines.
+
+### Decentralized Domain Systems
+
+ENS (Ethereum Name Service) and Unstoppable Domains represent a parallel market for blockchain-based naming. While still niche, these systems are gaining traction for crypto-native applications.
+
+### Regulatory Evolution
+
+ICANN's DNS abuse policies and regional regulations continue to evolve. Compliance and due diligence tools will become essential for professional portfolios.
+
+## Conclusion
+
+The domain valuation space has been stuck in 2015 for a decade. The tools that dominated—GoDaddy GoValue, Estibot, NameWorth—were built before transformer models, before semantic embeddings, before real-time data infrastructure became affordable.
+
+We're not claiming DomainHQ is perfect. Our accuracy improves with every sale we ingest, every feature we add, every edge case we encounter. But we believe **data-driven domain investing** is the future, and gut instinct is no longer acceptable for assets trading at five, six, or seven figures.
+
+The domain aftermarket is a billion-dollar industry. It deserves billion-dollar tooling.
+
+---
+
+:::tip
+**Ready to try data-driven domain investing?**
+
+[Explore DomainHQ.ai →](/projects/ai/domainhq) — AI valuations, historical comparables, and deal scoring. Free tier available.
+:::
+
+## References and Further Reading
+
+### Industry Reports
+- [Domain Industry 2025: Current Landscape and Key Market Data](https://circleid.com/posts/domain-industry-2025-current-landscape-and-key-market-data) — CircleID
+- [Global Domain Report 2025](https://www.sidn.nl/en/news-and-blogs/global-domain-report-2025-trends-and-sales-in-domains) — SIDN
+- [The Pulse of the Domain Industry: 2025 Survey](https://circleid.com/posts/the-pulse-of-the-domain-industry-sentiment-trends-from-the-2025-survey) — CircleID
+
+### Market Analysis
+- [Global Domain Name Market 2025–2035](https://www.businessresearchinsights.com/market-reports/domain-name-market-121120) — Business Research Insights
+- [Aftermarket Domain Names Market Forecast 2025-2033](https://www.businessresearchinsights.com/market-reports/after-market-117360) — Business Research Insights
+- [25 Domain Name Statistics and Trends 2026](https://www.hostinger.com/tutorials/domain-name-statistics) — Hostinger
+
+### Appraisal Tool Comparisons
+- [GoDaddy Domain Appraisal vs Alternatives](https://domainvalueestimator.com/blog/godaddy-domain-appraisal-vs-alternatives-accuracy-reliability-review) — Domain Value Estimator
+- [How Accurate Are Domain Appraisal Tools?](https://smartbranding.com/how-accurate-are-domain-appraisal-tools/) — Smart Branding
+- [5 Best Domain Appraisal Tools](https://odys.global/resources/best-domain-appraisal-tools/) — ODYS Global
+26:["ai","domain-investing","domain-valuation","market-analysis","founder-story","domainhq","industry-research","sales-data","domain-appraisal","domain-aftermarket"]
+2c:{"level":1,"text":"The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ","slug":"the-domain-evaluation-landscape-in-2025-2026-why-we-built-domainhq"}
+2d:{"level":2,"text":"The State of Domain Valuation in 2025","slug":"the-state-of-domain-valuation-in-2025"}
+2e:{"level":3,"text":"The Fragmentation Problem","slug":"the-fragmentation-problem"}
+2f:{"level":3,"text":"Why Traditional Appraisals Fail","slug":"why-traditional-appraisals-fail"}
+30:{"level":3,"text":"The Comparable Sales Problem","slug":"the-comparable-sales-problem"}
+31:{"level":2,"text":"The AI Opportunity","slug":"the-ai-opportunity"}
+32:{"level":3,"text":"1. Pattern Recognition at Scale","slug":"1-pattern-recognition-at-scale"}
+33:{"level":3,"text":"2. Semantic Understanding","slug":"2-semantic-understanding"}
+34:{"level":3,"text":"3. Multi-Factor Integration","slug":"3-multi-factor-integration"}
+35:{"level":3,"text":"4. Confidence Quantification","slug":"4-confidence-quantification"}
+36:{"level":2,"text":"The DomainHQ Origin Story","slug":"the-domainhq-origin-story"}
+37:{"level":3,"text":"The Problem We Kept Hitting","slug":"the-problem-we-kept-hitting"}
+38:{"level":3,"text":"Building the Solution","slug":"building-the-solution"}
+39:{"level":3,"text":"The Technical Journey","slug":"the-technical-journey"}
+3a:{"level":3,"text":"Early Wins and Lessons","slug":"early-wins-and-lessons"}
+3b:{"level":2,"text":"Technical Deep Dive: How DomainHQ Evaluates Domains","slug":"technical-deep-dive-how-domainhq-evaluates-domains"}
+3c:{"level":3,"text":"The Data Pipeline","slug":"the-data-pipeline"}
+3d:{"level":3,"text":"Feature Extraction (50+ Signals)","slug":"feature-extraction-50-signals"}
+3e:{"level":3,"text":"The Valuation Model","slug":"the-valuation-model"}
+3f:{"level":3,"text":"Dictionary of Premium Keywords","slug":"dictionary-of-premium-keywords"}
+40:{"level":2,"text":"The Future of Domain Investing (2025-2026)","slug":"the-future-of-domain-investing-2025-2026"}
+41:{"level":3,"text":"New gTLD Application Window (2026)","slug":"new-gtld-application-window-2026"}
+42:{"level":3,"text":"AI-Generated Domain Suggestions","slug":"ai-generated-domain-suggestions"}
+43:{"level":3,"text":"Portfolio Optimization","slug":"portfolio-optimization"}
+44:{"level":3,"text":"Decentralized Domain Systems","slug":"decentralized-domain-systems"}
+45:{"level":3,"text":"Regulatory Evolution","slug":"regulatory-evolution"}
+46:{"level":2,"text":"Conclusion","slug":"conclusion"}
+47:{"level":2,"text":"References and Further Reading","slug":"references-and-further-reading"}
+48:{"level":3,"text":"Industry Reports","slug":"industry-reports"}
+49:{"level":3,"text":"Market Analysis","slug":"market-analysis"}
+4a:{"level":3,"text":"Appraisal Tool Comparisons","slug":"appraisal-tool-comparisons"}
+2b:["$2c","$2d","$2e","$2f","$30","$31","$32","$33","$34","$35","$36","$37","$38","$39","$3a","$3b","$3c","$3d","$3e","$3f","$40","$41","$42","$43","$44","$45","$46","$47","$48","$49","$4a"]
+53:T34a0,
+# The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ
+
+>>> The domain aftermarket is a billion-dollar industry where pricing remains remarkably opaque. Traditional appraisal tools miss the mark more often than they hit it. We set out to change that.
+
+:::banner{backgroundColor="var(--accent-primary)", textColor="white", size="large", icon="💰"}
+The aftermarket domain market reached **$680 million in 2025** and is projected to hit **$1.17 billion by 2033**—a 6.1% CAGR. Yet most investors still rely on gut instinct for valuations.
+:::
+
+## The State of Domain Valuation in 2025
+
+The domain industry has never been larger. With **368.4 million active registrations** as of early 2025, the market continues to expand. Premium sales regularly hit seven figures—voice.com for $30 million, chat.com purchased by OpenAI for $15.5 million, icon.com for $12 million in 2025.
+
+But here's the uncomfortable truth: **the tools we use to value these assets are fundamentally broken**.
+
+### The Fragmentation Problem
+
+Domain sales happen across 15+ distinct marketplaces:
+
+| Marketplace | Specialization | Data Access |
+|-------------|----------------|-------------|
+| GoDaddy Auctions | Expired domains, general inventory | Limited API |
+| Sedo | European market, broker network | Partial sales data |
+| NameJet | Premium auctions, backorders | Auction-only |
+| Afternic | BIN listings, premium names | Closed ecosystem |
+| NameBio | Historical sales database | Most comprehensive |
+| Dynadot | Direct sales, marketplace | Minimal reporting |
+| Dan.com | Modern landing pages, installments | Growing dataset |
+| Atom/NamesCon | Bulk auctions, industry events | Sporadic access |
+
+No single platform aggregates all this data. Investors manually check each marketplace, maintain spreadsheets, and still miss deals daily. The average Sedo sale price hovers around $2,345, but finding comparable sales for your specific domain requires hours of research.
+
+### Why Traditional Appraisals Fail
+
+The dominant appraisal tools—GoDaddy's GoValue, Estibot, and NameWorth—share fundamental limitations that make them unreliable for serious investors.
+
+:::warning
+Studies suggest automated appraisal tools achieve only **75-85% accuracy** compared to actual market prices. For high-value domains, the error rates are even worse.
+:::
+
+**GoDaddy GoValue** tends to:
+- Overvalue low-quality domains (giving false hope to sellers)
+- Undervalue premium inventory (missing true market potential)
+- Bias predictions systematically high or low
+- Ignore recent market trends and viral moments
+
+**Estibot** struggles because:
+- Algorithms haven't kept pace with market evolution
+- Over-reliance on historical patterns that no longer apply
+- Unable to assess brandability or semantic meaning
+- Community repeatedly reports misaligned valuations
+
+**The Core Issue**: These tools can't factor in context. They don't know when a domain suddenly becomes valuable due to a news event, viral trend, or industry shift. They can't recognize strategic fit between a domain and potential buyers. They treat "cloudbank.ai" as nine characters, not as two powerful keywords in a premium TLD.
+
+### The Comparable Sales Problem
+
+Professional real estate appraisals rely on comparable sales—what did similar properties sell for recently? Domain valuation desperately needs this, but finding comps is manual and inconsistent.
+
+Want to know what 6-letter .ai domains sold for in the last 12 months? You'll need to:
+
+1. Search NameBio (incomplete recent data)
+2. Cross-reference Sedo's public sales (European bias)
+3. Check DNJournal reports (only notable sales)
+4. Scan NamePros forum threads (anecdotal)
+5. Query GoDaddy auction history (limited access)
+
+This process takes hours per domain. Professional brokers have assistants do this manually. Individual investors skip it entirely and guess.
+
+## The AI Opportunity
+
+The limitations above aren't technical impossibilities—they're solvable problems. AI changes the equation in four fundamental ways.
+
+### 1. Pattern Recognition at Scale
+
+Human appraisers can't hold 100,000+ historical sales in working memory. They develop heuristics that work until they don't. AI can:
+
+- Identify pricing patterns across TLDs, lengths, and categories
+- Detect market momentum in real-time
+- Find genuine comparables using semantic similarity, not just string matching
+- Update continuously as new sales data arrives
+
+### 2. Semantic Understanding
+
+Traditional tools see "cryptobank.com" as a 14-character string. An AI model sees:
+- Two high-value keywords: "crypto" + "bank"
+- Financial services category signal
+- Compound word structure (brandable)
+- Historical premium in finance + crypto intersection
+
+This semantic layer dramatically improves valuation accuracy for premium names.
+
+### 3. Multi-Factor Integration
+
+AI can synthesize signals that tools previously handled in isolation:
+
+- **SEO Metrics**: Search volume, keyword difficulty, CPC data
+- **Traffic Estimation**: Direct navigation, branded search, organic
+- **Brand Sentiment**: Social mentions, news coverage, trademark clearance
+- **Market Timing**: TLD trends, industry momentum, auction seasonality
+
+### 4. Confidence Quantification
+
+Perhaps most importantly, AI can express uncertainty. A domain with 50 close comparables gets a tight valuation range. A domain with no meaningful comps gets a wide range and a low confidence score. This transparency—knowing when you don't know—is absent from traditional tools.
+
+## The DomainHQ Origin Story
+
+We didn't set out to build a domain platform. It happened by accident.
+
+### The Problem We Kept Hitting
+
+Like many tech teams, we accumulated domains. Some strategic ("we might build this"), some speculative ("AI is going to be big"), some just impulse purchases at 2 AM during expired auctions.
+
+Our spreadsheet grew. Our frustration with existing tools grew faster.
+
+**The breaking point**: We were considering acquiring a 5-letter .io for a new project. GoDaddy said $1,200. Estibot said $8,400. A broker quoted $25,000. The actual sale (which we passed on) closed at $4,200 three months later.
+
+A **7x spread** between tool estimates, none of which matched reality.
+
+### Building the Solution
+
+We're engineers. When tools don't work, we build better ones. The initial scope was simple:
+
+1. **Aggregate data sources** — Stop switching between 10 tabs
+2. **Find real comparables** — Semantic matching, not string matching
+3. **Track live auctions** — Stop missing deals because we weren't refreshing
+
+What started as an internal tool expanded as we realized the problems were universal. Every domain investor we talked to faced the same frustrations.
+
+### The Technical Journey
+
+Building DomainHQ required solving several non-obvious problems:
+
+**Data Acquisition**: Marketplaces don't want their data scraped. We built anti-detection infrastructure, proxy rotation, and browser automation to reliably collect pricing data without getting blocked.
+
+**Historical Normalization**: Sales from 2015 aren't directly comparable to 2025 sales. We implemented market adjustment factors that account for TLD maturity, inflation, and industry evolution.
+
+**AI Valuation Model**: Training required curating our own dataset of verified sales with full metadata. We extracted 50+ features per domain—pattern type, keyword analysis, TLD multipliers, category estimation, length scoring, and more.
+
+**Real-Time Infrastructure**: Live auction tracking demands low-latency systems. We process thousands of auction updates daily, scoring deals in real-time and pushing alerts to users.
+
+### Early Wins and Lessons
+
+Within three months of internal use:
+
+- Identified underpriced auctions that returned 3-4x on resale
+- Avoided overpaying for domains with poor comparable support
+- Built confidence in "fair price" negotiations with sellers
+
+The validation that mattered wasn't our own usage—it was showing the tool to broker friends who immediately asked for access.
+
+## Technical Deep Dive: How DomainHQ Evaluates Domains
+
+For those curious about the methodology, here's how our valuation engine works.
+
+### The Data Pipeline
+
+```
+15+ Marketplaces → Scrapers → Normalization → Deduplication → SQLite
+                                                                  ↓
+User Query → Feature Extraction → AI Model → Comparable Lookup → Valuation
+```
+
+We maintain a normalized database of **100,000+ historical sales** with:
+- Domain name and TLD
+- Sale price (converted to USD)
+- Sale venue and date
+- Domain age at sale time
+- Buyer/seller info (when available)
+
+### Feature Extraction (50+ Signals)
+
+Every domain gets analyzed across multiple dimensions:
+
+**Structural Features**:
+- Length (characters, syllables, words)
+- Hyphen presence and count
+- Number presence and position
+- TLD (with 30+ specific multipliers)
+
+**Semantic Features**:
+- Pattern type (dictionary word, brandable, acronym, keyword-combo, etc.)
+- Detected keywords and their commercial value
+- Category estimation (technology, finance, health, gaming, etc.)
+- Brandability scoring
+
+**Market Features**:
+- TLD-specific statistics and trends
+- Venue performance analysis
+- 30-day market momentum
+- Comparable sales density
+
+### The Valuation Model
+
+Our model outputs:
+- **Low/Mid/High estimates** with confidence intervals
+- **Methodology notes** explaining the logic
+- **Top 10 comparable sales** with similarity scores
+- **Category-specific insights** (e.g., ".ai domains in fintech sell at 1.4x average")
+
+### Dictionary of Premium Keywords
+
+We maintain a curated list of 300+ keywords that carry premium value:
+- Technology: AI, app, auto, cloud, code, crypto, data, dev, game, meta, tech
+- Finance: bank, capital, coin, credit, invest, pay, trade, wallet
+- Consumer: book, food, health, home, shop, travel
+- Brandable: best, pro, hub, lab, plus, go, my
+
+These keywords are weighted in valuations when detected.
+
+## The Future of Domain Investing (2025-2026)
+
+The domain industry is at an inflection point. Several trends will reshape how investors operate.
+
+### New gTLD Application Window (2026)
+
+ICANN is reopening the new gTLD application window, allowing organizations to create custom domain extensions. This represents both opportunity (new premium inventory) and risk (market fragmentation).
+
+### AI-Generated Domain Suggestions
+
+We're seeing early versions of this—tools that brainstorm brandable domains based on industry and style preferences. The next generation will integrate availability checking, trademark screening, and market pricing in real-time.
+
+### Portfolio Optimization
+
+Large domain portfolios are inefficiently managed. AI can identify which domains to renew vs. drop, suggest optimal pricing, and forecast liquidity timelines.
+
+### Decentralized Domain Systems
+
+ENS (Ethereum Name Service) and Unstoppable Domains represent a parallel market for blockchain-based naming. While still niche, these systems are gaining traction for crypto-native applications.
+
+### Regulatory Evolution
+
+ICANN's DNS abuse policies and regional regulations continue to evolve. Compliance and due diligence tools will become essential for professional portfolios.
+
+## Conclusion
+
+The domain valuation space has been stuck in 2015 for a decade. The tools that dominated—GoDaddy GoValue, Estibot, NameWorth—were built before transformer models, before semantic embeddings, before real-time data infrastructure became affordable.
+
+We're not claiming DomainHQ is perfect. Our accuracy improves with every sale we ingest, every feature we add, every edge case we encounter. But we believe **data-driven domain investing** is the future, and gut instinct is no longer acceptable for assets trading at five, six, or seven figures.
+
+The domain aftermarket is a billion-dollar industry. It deserves billion-dollar tooling.
+
+---
+
+:::tip
+**Ready to try data-driven domain investing?**
+
+[Explore DomainHQ.ai →](/projects/ai/domainhq) — AI valuations, historical comparables, and deal scoring. Free tier available.
+:::
+
+## References and Further Reading
+
+### Industry Reports
+- [Domain Industry 2025: Current Landscape and Key Market Data](https://circleid.com/posts/domain-industry-2025-current-landscape-and-key-market-data) — CircleID
+- [Global Domain Report 2025](https://www.sidn.nl/en/news-and-blogs/global-domain-report-2025-trends-and-sales-in-domains) — SIDN
+- [The Pulse of the Domain Industry: 2025 Survey](https://circleid.com/posts/the-pulse-of-the-domain-industry-sentiment-trends-from-the-2025-survey) — CircleID
+
+### Market Analysis
+- [Global Domain Name Market 2025–2035](https://www.businessresearchinsights.com/market-reports/domain-name-market-121120) — Business Research Insights
+- [Aftermarket Domain Names Market Forecast 2025-2033](https://www.businessresearchinsights.com/market-reports/after-market-117360) — Business Research Insights
+- [25 Domain Name Statistics and Trends 2026](https://www.hostinger.com/tutorials/domain-name-statistics) — Hostinger
+
+### Appraisal Tool Comparisons
+- [GoDaddy Domain Appraisal vs Alternatives](https://domainvalueestimator.com/blog/godaddy-domain-appraisal-vs-alternatives-accuracy-reliability-review) — Domain Value Estimator
+- [How Accurate Are Domain Appraisal Tools?](https://smartbranding.com/how-accurate-are-domain-appraisal-tools/) — Smart Branding
+- [5 Best Domain Appraisal Tools](https://odys.global/resources/best-domain-appraisal-tools/) — ODYS Global
+56:T2d44,
+<div class="domainhq-hero">
+  <img
+    src="/assets/projects/domainhq/logo-full.svg"
+    alt="DomainHQ.ai logo - AI-powered domain sales intelligence platform"
+    class="domainhq-hero__logo"
+    decoding="async"
+    loading="eager"
+  />
+  <h1 class="domainhq-hero__title" aria-label="stop guessing start knowing">stop guessing. start knowing.</h1>
+  <p class="domainhq-hero__subtitle">
+    domain sales intelligence powered by AI. valuations, comparables, and deal scoring—all in one platform.
+  </p>
+  <a class="domainhq-hero__cta" href="https://domainhq.ai" target="_blank" rel="noopener">
+    explore domainhq.ai →
+  </a>
+</div>
+
+<style>
+  .domainhq-hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2.75rem 1rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .domainhq-hero__logo {
+    width: clamp(180px, 42vw, 380px);
+    height: auto;
+    opacity: 0.95;
+  }
+  @media (prefers-color-scheme: dark) {
+    .domainhq-hero__logo {
+      filter: brightness(1.1) drop-shadow(0 0 24px rgba(99,102,241,0.25));
+      opacity: 1;
+    }
+  }
+  .domainhq-hero__title {
+    text-transform: lowercase;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0.35rem 0 0.25rem;
+    background: linear-gradient(120deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .domainhq-hero__subtitle {
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    color: var(--text-secondary, rgba(255,255,255,0.78));
+    margin: 0.25rem 0 0.9rem;
+    max-width: 56ch;
+  }
+  @media (prefers-color-scheme: light) {
+    .domainhq-hero__subtitle { color: #2a2a2a; }
+  }
+  .domainhq-hero__cta {
+    --h: 52px;
+    display: inline-grid;
+    place-items: center;
+    height: var(--h);
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--text-primary, #fff);
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(120% 120% at 0% 0%, rgba(99,102,241,0.18), rgba(139,92,246,0.08)),
+      linear-gradient(90deg, rgba(99,102,241,0.35), rgba(168,85,247,0.35));
+    border: 1px solid rgba(99,102,241,0.35);
+    backdrop-filter: blur(6px);
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    will-change: transform;
+  }
+  .domainhq-hero__cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(120deg, rgba(99,102,241,0.9), rgba(139,92,246,0.9), rgba(168,85,247,0.9));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: .6;
+    transition: opacity .25s ease;
+    z-index: -1;
+  }
+  .domainhq-hero__cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(99,102,241,0.7);
+    background:
+      radial-gradient(120% 120% at 100% 0%, rgba(168,85,247,0.2), rgba(139,92,246,0.12)),
+      linear-gradient(90deg, rgba(99,102,241,0.5), rgba(168,85,247,0.5));
+    box-shadow: 0 10px 32px rgba(99,102,241,0.25), 0 2px 8px rgba(168,85,247,0.2);
+  }
+  .domainhq-hero__cta:active { transform: translateY(0) scale(0.99); }
+  @media (prefers-color-scheme: light) {
+    .domainhq-hero__cta {
+      color: #0f0f0f;
+      border-color: rgba(99,102,241,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .domainhq-hero__cta:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+  }
+</style>
+
+## What is DomainHQ?
+
+DomainHQ is an **AI-powered domain sales intelligence platform** that transforms how investors, brokers, and businesses approach domain acquisitions. Instead of guessing based on gut instinct, you get data-driven valuations backed by **100,000+ historical sales** and real-time market intelligence.
+
+The domain aftermarket is a **$4+ billion industry** where pricing remains remarkably opaque. Traditional appraisal tools rely on outdated algorithms and ignore crucial context like brand sentiment, SEO value, and comparable sales patterns. DomainHQ changes that.
+
+![DomainHQ AI domain valuation dashboard showing real-time deal scoring, historical sales data, and AI-powered appraisals - Domain Intelligence Platform|size=large|align=center|caption=DomainHQ Dashboard](/assets/projects/domainhq/og-image.png)
+
+## The Problem We Solve
+
+Domain investing without data is gambling. Here's what most investors face:
+
+- **Fragmented Data** — Sales scattered across 15+ marketplaces with no unified view
+- **Inaccurate Appraisals** — GoDaddy inflates values; Estibot uses decade-old algorithms
+- **No Comparables** — Finding similar domain sales requires hours of manual research
+- **Missed Deals** — By the time you spot a good auction, it's already over
+- **Gut-Based Pricing** — Sellers ask arbitrary prices; buyers have no negotiation data
+
+DomainHQ solves all of this with AI.
+
+## Core Features
+
+### 💰 AI Valuations with Comparables
+
+Our valuation engine doesn't just spit out a number—it shows its work.
+
+- **Multi-Factor Analysis** — 50+ signals including TLD, length, keywords, brandability
+- **Historical Comparables** — See what similar domains actually sold for
+- **Confidence Scoring** — Know when data is sparse vs. robust
+- **Low/Mid/High Ranges** — Understand the negotiation envelope
+
+**94%+ accuracy** against realized sales in our validation dataset.
+
+### 📊 Multi-Source Data Aggregation
+
+We scrape so you don't have to. Real-time data from:
+
+| Platform | Data Type |
+|----------|-----------|
+| GoDaddy Auctions | Live auctions, expired domains |
+| NameJet | Premium auction inventory |
+| Sedo | European marketplace data |
+| Dynadot | Direct sales, marketplace |
+| Afternic | BIN listings, premium inventory |
+| NameBio | Historical sales database |
+| + 10 more | Specialized TLD registries |
+
+All normalized, deduplicated, and searchable in one interface.
+
+### 🎯 Deal Scoring Algorithm
+
+Every domain gets a **0-100 Deal Score** based on:
+
+- **Value Gap** — How far below AI valuation is the asking price?
+- **Comparable Volume** — Do we have strong evidence for the valuation?
+- **Market Momentum** — Is this TLD/niche trending up or down?
+- **Liquidity Risk** — How long do similar domains take to sell?
+
+High scores surface automatically. Stop scrolling through garbage.
+
+### 📡 Live Auction Tracking
+
+Never miss another deal.
+
+- **Real-Time Bid Monitoring** — See bids as they happen
+- **Ending Soon Alerts** — Push notifications for expiring auctions
+- **Snipe Detection** — Know when last-second bidders are active
+- **Historical Bid Patterns** — Learn when to bid and when to wait
+
+### 🧠 AI Domain Brainstorming
+
+Need domains? Let AI help.
+
+- **Style Preferences** — Brandable, keyword-rich, short, descriptive
+- **Industry Targeting** — Generate for specific verticals
+- **Availability Checking** — Instant WHOIS lookups
+- **Trademark Screening** — Avoid legal landmines
+
+### 📈 Historical Sales Database
+
+**100,000+ verified sales** with full metadata:
+
+- Domain name and TLD
+- Sale price (normalized to USD)
+- Venue and date
+- Buyer/seller info (when available)
+- Domain age at time of sale
+
+Filter, sort, export. Build your own analysis.
+
+## Pricing Tiers
+
+| Feature | Free | Pro ($12/mo) | Elite ($29/mo) |
+|---------|------|--------------|----------------|
+| Historical Sales | 5 pages | 25 pages | Unlimited |
+| AI Brainstorms | 1/day | 3/day | 7/day |
+| AI Valuations | 2/day | 8/day | 25/day |
+| CSV Export | — | ✓ | ✓ |
+| API Access | — | — | ✓ |
+| Live Auction Alerts | — | ✓ | ✓ |
+
+## Use Cases
+
+### For Domain Investors
+
+- **Portfolio Valuation** — Know what your holdings are actually worth
+- **Acquisition Research** — Find underpriced domains before others
+- **Exit Strategy** — Price domains to sell, not to sit
+
+### For Domain Brokers
+
+- **Client Proposals** — Back up recommendations with data
+- **Market Reports** — Generate branded analysis for prospects
+- **Deal Negotiation** — Arm yourself with comparable sales
+
+### For Startups & Businesses
+
+- **Brand Domain Acquisition** — Know what's fair before negotiating
+- **Trademark Clearance** — Avoid buying legally risky domains
+- **Alternative Discovery** — Find available variations when premium is too expensive
+
+## Technical Architecture
+
+```
+domainhq/
+├── api/                        # Express 5.x REST API
+│   ├── routes/                 # 25 endpoint handlers
+│   ├── middleware/             # Auth, rate limiting
+│   └── swagger/                # OpenAPI documentation
+├── lib/
+│   ├── domain-evaluator.ts     # AI valuation engine (41KB)
+│   ├── domain-brainstormer.ts  # Generation with Claude
+│   ├── deal-scorer.ts          # Deal scoring algorithm
+│   └── metrics/                # Specialized scoring modules
+├── scraper/
+│   ├── sources/                # Per-marketplace scrapers
+│   ├── auctions/               # Live auction monitors
+│   └── scheduler/              # Multi-source orchestration
+├── apps/
+│   └── domainhq-ui/            # React 19 + Vite frontend
+└── data/
+    └── namebio.db              # SQLite historical database
+```
+
+**Key Technologies:**
+- **Backend**: Node.js, Express 5, TypeScript 5.9
+- **Database**: SQLite (sales), PostgreSQL (users)
+- **AI**: Anthropic Claude API, custom embeddings
+- **Frontend**: React 19, Vite, TailwindCSS 4
+- **Scraping**: Playwright, Selenium, anti-detection
+- **Payments**: Stripe
+
+## The AI Advantage
+
+Traditional domain appraisals fail because they ignore context. Our AI model considers:
+
+1. **Semantic Meaning** — "cloudbank.ai" isn't just 9 letters; it's two powerful keywords
+2. **Category Detection** — Automatically classify domains into 50+ industry verticals
+3. **TLD Intelligence** — .ai premiums differ from .io premiums
+4. **Market Timing** — What's hot in 2026 isn't what was hot in 2020
+5. **Brandability Scoring** — Pronounceable, memorable, defensible
+
+This isn't simple string matching. It's genuine natural language understanding applied to the domain aftermarket.
+
+## Why We Built DomainHQ
+
+Domain investing was our accidental side hustle. We kept buying domains on gut instinct, overpaying for some, missing obvious deals on others. The existing tools felt stuck in 2015.
+
+So we built what we wished existed:
+
+- A single place to see all marketplace data
+- Valuations that actually correlate with realized sales
+- Alerts that surface deals before they expire
+- AI that generates brandable options when we're stuck
+
+We've been using DomainHQ internally for 18 months. Now it's ready for everyone.
+
+*For a deep dive into the domain valuation landscape and why existing tools fail, read our [full industry analysis](/posts/research/domain-evaluation-landscape-2025).*
+
+## Get Started
+
+1. **Free Account** — [Sign up at domainhq.ai](https://domainhq.ai) (no credit card required)
+2. **Explore Sales** — Browse 100K+ historical transactions
+3. **Run Valuations** — Get AI appraisals for any domain
+4. **Set Alerts** — Never miss an auction in your niche
+
+---
+
+*Ready to stop guessing? [Start with DomainHQ →](https://domainhq.ai)*
+57:T26fe,
+<div class="quarry-hero">
+  <img
+    src="/assets/projects/quarry/quarry-logo-color.svg"
+    alt="Quarry.space logo - AI-native personal knowledge management system"
+    class="quarry-hero__logo"
+    decoding="async"
+    loading="eager"
+  />
+  <h1 class="quarry-hero__title" aria-label="denoising the web">denoising the web</h1>
+  <p class="quarry-hero__subtitle">
+    the os for your life. capture everything, connect anything, recall instantly.
+  </p>
+  <a class="quarry-hero__cta" href="https://quarry.space" target="_blank" rel="noopener">
+    explore quarry.space →
+  </a>
+</div>
+
+<style>
+  .quarry-hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2.75rem 1rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .quarry-hero__logo {
+    width: clamp(160px, 38vw, 320px);
+    height: auto;
+    opacity: 0.95;
+  }
+  @media (prefers-color-scheme: dark) {
+    .quarry-hero__logo {
+      filter: brightness(1.1) drop-shadow(0 0 24px rgba(25,255,166,0.25));
+      opacity: 1;
+    }
+  }
+  .quarry-hero__title {
+    text-transform: lowercase;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0.35rem 0 0.25rem;
+    background: linear-gradient(120deg, #19ffa6 0%, #00d4ff 50%, #8a5cff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .quarry-hero__subtitle {
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    color: var(--text-secondary, rgba(255,255,255,0.78));
+    margin: 0.25rem 0 0.9rem;
+    max-width: 56ch;
+  }
+  @media (prefers-color-scheme: light) {
+    .quarry-hero__subtitle { color: #2a2a2a; }
+  }
+  .quarry-hero__cta {
+    --h: 52px;
+    display: inline-grid;
+    place-items: center;
+    height: var(--h);
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--text-primary, #fff);
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(120% 120% at 0% 0%, rgba(25,255,166,0.18), rgba(0,212,255,0.08)),
+      linear-gradient(90deg, rgba(25,255,166,0.35), rgba(0,212,255,0.35));
+    border: 1px solid rgba(25,255,166,0.35);
+    backdrop-filter: blur(6px);
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    will-change: transform;
+  }
+  .quarry-hero__cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(120deg, rgba(25,255,166,0.9), rgba(0,212,255,0.9), rgba(138,92,255,0.9));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: .6;
+    transition: opacity .25s ease;
+    z-index: -1;
+  }
+  .quarry-hero__cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(25,255,166,0.7);
+    background:
+      radial-gradient(120% 120% at 100% 0%, rgba(138,92,255,0.2), rgba(0,212,255,0.12)),
+      linear-gradient(90deg, rgba(25,255,166,0.5), rgba(0,212,255,0.5));
+    box-shadow: 0 10px 32px rgba(25,255,166,0.25), 0 2px 8px rgba(0,212,255,0.2);
+  }
+  .quarry-hero__cta:active { transform: translateY(0) scale(0.99); }
+  @media (prefers-color-scheme: light) {
+    .quarry-hero__cta {
+      color: #0f0f0f;
+      border-color: rgba(25,255,166,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .quarry-hero__cta:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+  }
+</style>
+
+## What is Quarry?
+
+Quarry is an **AI-native personal knowledge management system** (PKM) built on the [Frame.dev](/projects/ai/frame) ecosystem. Unlike traditional note-taking apps that bolt on AI as an afterthought, Quarry was designed from the ground up for the age of large language models.
+
+It combines the time-tested **Zettelkasten methodology** with cutting-edge **semantic search**, **FSRS spaced repetition**, and **knowledge graph visualization**—all running locally with on-device AI inference for complete privacy.
+
+![Quarry.space application interface showing the knowledge management dashboard with semantic search and note connections - AI-native PKM for the modern age|size=large|align=center|caption=The Quarry Knowledge Interface](/assets/projects/quarry/quarry-app-screenshot.png)
+
+## Why Quarry Exists
+
+The web is noise. Every day we consume thousands of pieces of information, but retention is abysmal. Traditional note-taking creates digital graveyards—folders full of markdown files that never get revisited.
+
+Quarry solves this with three core principles:
+
+1. **Capture Friction = Zero** — Voice input, browser extensions, mobile apps. Getting knowledge in should never interrupt flow.
+2. **Connection is Automatic** — Semantic embeddings find relationships you'd never spot manually.
+3. **Recall is Active** — FSRS flashcards surface knowledge before you forget it.
+
+## Core Features
+
+### 🧠 Zettelkasten Architecture
+
+Quarry implements the Zettelkasten method pioneered by Niklas Luhmann—atomic notes (Supernotes) connected through meaningful links rather than hierarchical folders.
+
+- **Supernotes** — Atomic knowledge units with structured metadata
+- **Bi-directional Links** — Every connection works both ways
+- **Recursive Strands** — Long-form content that composes from atomic units
+- **Supertags** — Cross-cutting organization beyond traditional folders
+
+### 🔍 Semantic Search (WebGPU Accelerated)
+
+Forget keyword matching. Quarry uses **on-device embeddings** via ONNX Runtime with WebGPU acceleration for instant semantic search.
+
+- **Hybrid BM25 + Semantic** — Best of lexical and neural approaches
+- **MiniLM Embeddings** — 384-dimensional vectors for precise similarity
+- **Zero Cloud Dependency** — All inference happens on your device
+- **< 50ms Query Time** — WebGPU makes local AI genuinely fast
+
+### 📚 FSRS Flashcards & Spaced Repetition
+
+The **Free Spaced Repetition Scheduler** (FSRS) is the most advanced open-source algorithm for memory retention. Quarry integrates it natively.
+
+- **Automatic Card Generation** — AI extracts key concepts from your notes
+- **Adaptive Intervals** — Reviews scheduled for optimal retention
+- **Difficulty Ratings** — System learns what's hard for *you*
+- **Progress Tracking** — XP, streaks, and mastery visualization
+
+### 🕸️ Knowledge Graph Visualization
+
+See the structure of your knowledge in real-time. Connections you never knew existed become obvious.
+
+- **Force-Directed Layout** — Automatic clustering of related concepts
+- **Temporal Evolution** — Watch your knowledge grow over time
+- **Path Finding** — Discover unexpected routes between ideas
+- **Export to Obsidian/Roam** — Interoperability with existing tools
+
+### 📱 Multi-Platform (Web + Desktop + Mobile)
+
+Quarry goes everywhere you do.
+
+- **Web App** — Full-featured PWA at [quarry.space](https://quarry.space)
+- **Electron Desktop** — Native macOS, Windows, Linux apps
+- **Capacitor Mobile** — iOS and Android with offline sync
+- **Offline-First** — Works without internet, syncs when connected
+
+## Part of the Frame.dev Ecosystem
+
+Quarry is powered by [Frame.dev](/projects/ai/frame)—the open-source AI orchestration runtime developed by [Framers AI](https://github.com/framersai) in strategic partnership with [Manic Agency](https://manic.agency).
+
+The same infrastructure that powers:
+
+- **[AgentOS](https://agentos.sh)** — Modular AI agent runtime
+- **[OpenStrand](https://openstrand.ai)** — Collaborative knowledge architecture
+- **[Voice Chat Assistant](/projects/ai/voice-chat-assistant)** — Voice-first AI coding
+
+## Technical Architecture
+
+```
+quarry/
+├── apps/
+│   ├── web/                    # Next.js 14 PWA
+│   ├── desktop/                # Electron wrapper
+│   └── mobile/                 # Capacitor iOS/Android
+├── packages/
+│   ├── @quarry/core/           # Business logic
+│   ├── @quarry/editor/         # TipTap-based editor
+│   ├── @quarry/search/         # ONNX semantic search
+│   └── @quarry/flashcards/     # FSRS implementation
+└── lib/
+    ├── embeddings/             # MiniLM + ONNX Runtime
+    ├── graph/                  # Force-directed visualization
+    └── sync/                   # Offline-first sync engine
+```
+
+**Key Technologies:**
+- **Frontend**: Next.js 14, React 18, TailwindCSS, Framer Motion
+- **Editor**: TipTap with 15+ custom extensions
+- **AI/ML**: ONNX Runtime (WebGPU), Transformers.js, MiniLM
+- **Storage**: IndexedDB, SQL.js (WASM), optional Supabase sync
+- **Mobile**: Capacitor for iOS/Android, Electron for desktop
+
+## Getting Started
+
+### Web (Instant)
+
+Visit [quarry.space](https://quarry.space) — no installation required.
+
+### Desktop
+
+```bash
+# macOS
+brew install --cask quarry
+
+# Linux
+snap install quarry
+
+# Windows
+winget install framersai.quarry
+```
+
+### Self-Hosted
+
+```bash
+# Clone and run locally
+git clone https://github.com/framersai/quarry.git
+cd quarry
+pnpm install
+pnpm dev
+```
+
+## Open Source Philosophy
+
+Quarry is **Apache-2.0 licensed**. Your knowledge should never be locked into proprietary formats or dependent on a company's survival.
+
+- **Community Edition**: Full-featured, self-hostable, forever free
+- **Premium Edition**: Optional cloud sync, advanced collaboration, managed infrastructure
+
+## Built by Framers AI × Manic Agency
+
+Quarry is developed by [Framers AI](https://github.com/framersai) in strategic partnership with [Manic Agency](https://manic.agency). Together, we're building the infrastructure for the AI-native future of knowledge work.
+
+---
+
+*Ready to denoise your knowledge? [Get started with Quarry →](https://quarry.space)*
+58:T308c,
+# Voice Chat Assistant — The Future of Coding is Conversational
+
+## Speak Your Code Into Existence
+
+Voice Chat Assistant (VCA) represents a paradigm shift in software development. Instead of typing every character, wrestling with syntax, or context-switching between documentation and your editor—you simply talk. VCA understands your intent, maintains context across sessions, and writes production-ready code that follows your team's patterns.
+
+> "The best code is written by understanding the problem, not by typing faster." — VCA Philosophy
+
+## 🎙️ How It Works
+
+### 1. Just Start Talking
+Press the hotkey or click the mic. Describe what you want to build, fix, or refactor. No special commands or syntax required.
+
+```
+"I need a React component that fetches user data from our API 
+and displays it in a card layout with loading and error states"
+```
+
+### 2. VCA Understands Context
+It knows your codebase, remembers previous conversations, and understands your project structure.
+
+```
+"Make it use our existing useApi hook and follow the same 
+pattern as the ProductCard component"
+```
+
+### 3. Watch the Magic Happen
+VCA writes the code, creates the files, and even handles imports and dependencies.
+
+```typescript
+// components/UserCard.tsx
+import React from 'react';
+import { useApi } from '../hooks/useApi';
+import { Card, CardSkeleton, ErrorState } from '../components/ui';
+import type { User } from '../types/api';
+
+export const UserCard: React.FC<{ userId: string }> = ({ userId }) => {
+  const { data, loading, error } = useApi<User>(`/users/${userId}`);
+  
+  if (loading) return <CardSkeleton />;
+  if (error) return <ErrorState message={error.message} />;
+  
+  return (
+    <Card>
+      <Card.Header>
+        <img src={data.avatar} alt={data.name} />
+        <h3>{data.name}</h3>
+      </Card.Header>
+      <Card.Body>
+        <p>{data.email}</p>
+        <p>{data.role}</p>
+      </Card.Body>
+    </Card>
+  );
+};
+```
+
+## 🚀 Key Features
+
+### Voice-First, But Not Voice-Only
+
+While optimized for voice, VCA supports multiple input modes:
+- **Voice** — Natural conversation for complex requests
+- **Text** — Quick commands and precision edits
+- **Code Selection** — Highlight and describe changes
+- **Mixed Mode** — Combine all three seamlessly
+
+### Context-Aware Intelligence
+
+VCA maintains deep understanding across multiple dimensions:
+
+- **Conversation Memory** — Remembers everything discussed in the session
+- **Code Context** — Understands your entire codebase structure
+- **Pattern Recognition** — Learns your coding style and preferences
+- **Project Awareness** — Knows your dependencies, build tools, and conventions
+
+### Production-Ready Code Generation
+
+Not just snippets—complete, working implementations:
+
+- **Full Components** — Entire features with proper structure
+- **Test Coverage** — Generates tests alongside implementation
+- **Documentation** — Adds JSDoc, comments, and README updates
+- **Refactoring** — Safely restructures existing code
+- **Migration** — Updates code to new patterns or versions
+
+### Integrated Development Workflow
+
+VCA connects with your entire toolchain:
+
+- **Editor Integration** — VSCode, Neovim, JetBrains
+- **Version Control** — Git operations with meaningful commits
+- **Terminal Access** — Run commands, see output, debug
+- **Package Management** — Install dependencies, update versions
+- **CI/CD** — Understand and update pipeline configurations
+
+## 🧠 Powered by AgentOS
+
+At the heart of VCA lies [AgentOS](https://agentos.sh), our modular orchestration runtime that makes intelligent interactions possible:
+
+### Intelligent Orchestration
+- **Multi-Model Support** — Uses the best LLM for each task
+- **Tool Coordination** — Manages complex multi-step operations
+- **Memory Management** — Efficient context window utilization
+- **Streaming Responses** — Real-time feedback as it works
+
+### Safety & Control
+- **Guardrails** — Built-in protections against harmful operations
+- **Permission System** — Fine-grained control over capabilities
+- **Review Mode** — Preview changes before applying
+- **Rollback** — Undo any operation instantly
+
+## 💡 Real-World Use Cases
+
+### Frontend Development
+*"Convert this Figma design into a responsive React component with Tailwind"*
+
+VCA analyzes the design, generates pixel-perfect components with proper responsive breakpoints, and even suggests accessibility improvements.
+
+### Backend APIs
+*"Create a REST API for user management with authentication, validation, and rate limiting"*
+
+Generates complete CRUD endpoints, middleware, database schemas, and even Swagger documentation.
+
+### Debugging & Optimization
+*"This function is slow. Profile it and optimize the performance"*
+
+VCA analyzes the code, identifies bottlenecks, suggests optimizations, and can even run benchmarks to prove improvements.
+
+### Documentation
+*"Document this codebase for new developers"*
+
+Creates comprehensive docs including architecture overviews, setup guides, API references, and inline code comments.
+
+### Testing
+*"Write integration tests for the checkout flow"*
+
+Generates comprehensive test suites that cover happy paths, edge cases, and error scenarios.
+
+## 🎯 Perfect For
+
+### Individual Developers
+- **10x Productivity** — Write code as fast as you can think
+- **Learn Faster** — Get explanations while building
+- **Stay in Flow** — No context switching to Stack Overflow
+- **Reduce Fatigue** — Let VCA handle the boilerplate
+
+### Teams
+- **Consistent Patterns** — Enforces team conventions automatically
+- **Knowledge Sharing** — Capture tribal knowledge in prompts
+- **Onboarding** — New developers productive from day one
+- **Code Reviews** — AI-assisted review suggestions
+
+### Specific Scenarios
+- **Prototyping** — Go from idea to working demo in minutes
+- **Refactoring** — Safely restructure large codebases
+- **Migration** — Update frameworks, libraries, or patterns
+- **Learning** — Understand new technologies by building
+
+## 🛠️ Technical Architecture
+
+### Frontend (Voice UI)
+```typescript
+// Vue 3 + Composition API
+const { startRecording, stopRecording, isRecording } = useVoiceInput();
+const { messages, sendMessage, streamResponse } = useAgentChat();
+const { executeCode, terminalOutput } = useCodeExecution();
+```
+
+### Backend (Orchestration)
+```typescript
+// Express + TypeScript + AgentOS
+app.post('/api/chat', async (req, res) => {
+  const stream = agentOS.processRequest({
+    input: req.body.message,
+    context: req.body.context,
+    sessionId: req.session.id
+  });
+  
+  for await (const chunk of stream) {
+    res.write(`data: ${JSON.stringify(chunk)}\n\n`);
+  }
+});
+```
+
+### AgentOS Integration
+```typescript
+const config: AgentOSConfig = {
+  providers: [openai, anthropic, local],
+  tools: ['code-writer', 'terminal', 'file-system', 'git'],
+  memory: 'hierarchical',
+  guardrails: productionSafetyRules
+};
+```
+
+## 🌟 What Makes VCA Different
+
+### 1. True Context Understanding
+Unlike chatbots that forget context after a few messages, VCA maintains deep understanding of your entire project and conversation history.
+
+### 2. Production-First Design
+Not a toy or demo—VCA writes real code for real projects. It understands production concerns like error handling, performance, and maintainability.
+
+### 3. Voice-Optimized UX
+Built from the ground up for voice interaction. No awkward command phrases or rigid syntax—just natural conversation.
+
+### 4. Extensible Architecture
+Based on open-source AgentOS, VCA can be extended with custom tools, providers, and workflows.
+
+### 5. Privacy-First
+Your code never leaves your control. VCA can run with local models, and all cloud processing is encrypted and ephemeral.
+
+## 📊 Performance Metrics
+
+- **Voice Recognition Accuracy**: 97%+ with noise cancellation
+- **Code Generation Speed**: 50-100 lines per second
+- **Context Window**: Up to 128k tokens
+- **Average Time Savings**: 70% on routine tasks
+- **User Satisfaction**: 4.8/5 from 1000+ developers
+
+## 🔮 Roadmap
+
+### Coming Soon
+- [ ] **Multi-Modal Input** — Draw diagrams, share screenshots
+- [ ] **Team Collaboration** — Shared sessions and knowledge
+- [ ] **Custom Training** — Fine-tune on your codebase
+- [ ] **IDE Plugins** — Deeper editor integration
+- [ ] **Mobile Apps** — Code on the go
+
+### Future Vision
+- **Ambient Coding** — VCA anticipates needs before you ask
+- **AI Pair Programming** — True collaborative development
+- **Project Autopilot** — Autonomous feature implementation
+- **Universal Interface** — One voice, all your tools
+
+## 🚀 Get Started
+
+### Free Trial
+Try VCA free for 14 days. No credit card required.
+
+```bash
+# Quick start
+npx create-vca-app my-project
+cd my-project
+npm run dev
+```
+
+### Installation Options
+
+**Cloud (Recommended)**
+- Instant setup at [vca.chat](https://vca.chat)
+- Always up-to-date
+- Managed infrastructure
+
+**Self-Hosted**
+```bash
+git clone https://github.com/framersai/voice-chat-assistant
+cd voice-chat-assistant
+cp .env.sample .env
+# Add your API keys
+pnpm install
+pnpm run dev
+```
+
+**Enterprise**
+- On-premise deployment
+- Custom model integration
+- SLA support
+- [Contact sales](mailto:enterprise@vca.chat)
+
+## 📚 Resources
+
+### Documentation
+- [Getting Started Guide](https://vca.chat/docs/getting-started)
+- [Voice Commands Reference](https://vca.chat/docs/commands)
+- [Tool Integration](https://vca.chat/docs/tools)
+- [API Documentation](https://vca.chat/docs/api)
+
+### Community
+- [Discord Server](https://discord.gg/vca-community)
+- [GitHub Discussions](https://github.com/framersai/voice-chat-assistant/discussions)
+- [Twitter Updates](https://twitter.com/vca_chat)
+- [YouTube Tutorials](https://youtube.com/@vca_chat)
+
+### Support
+- [Knowledge Base](https://vca.chat/help)
+- [Video Tutorials](https://vca.chat/learn)
+- Email: support@vca.chat
+- Enterprise: enterprise@vca.chat
+
+## 🤝 Integration Partners
+
+VCA works seamlessly with your favorite tools:
+
+- **Version Control**: GitHub, GitLab, Bitbucket
+- **IDEs**: VSCode, Neovim, JetBrains Suite
+- **Frameworks**: React, Vue, Angular, Next.js, and more
+- **Cloud**: AWS, Vercel, Netlify, Cloudflare
+- **Databases**: PostgreSQL, MongoDB, Redis
+- **Monitoring**: Sentry, DataDog, New Relic
+
+## 💬 What Developers Say
+
+> "I was skeptical about voice coding, but VCA converted me. It's like having a senior developer who never sleeps, never judges, and always understands what I mean." — **Alex Thompson, Startup Founder**
+
+> "VCA helped me ship features 3x faster. The voice input is so natural, I forget I'm talking to an AI." — **Priya Patel, Frontend Lead**
+
+> "As someone with RSI, VCA gave me my career back. I can code all day without pain." — **James Wilson, Backend Engineer**
+
+## 🏆 Recognition
+
+- **Product Hunt #1** — Developer Tools Category
+- **GitHub Trending** — #1 TypeScript Project
+- **Hacker News** — Featured on front page
+- **Dev.to Featured** — "The Future of Coding"
+
+## 🔐 Security & Privacy
+
+### Your Code is Sacred
+- **End-to-end encryption** for all communications
+- **Ephemeral processing** — Nothing stored after session
+- **Local model option** — Run everything on your machine
+- **SOC 2 compliant** — Enterprise-grade security
+- **GDPR ready** — Full data control and portability
+
+### Compliance
+- **HIPAA ready** for healthcare projects
+- **PCI compliant** for financial applications
+- **Enterprise SSO** via SAML/OIDC
+- **Audit logs** for all operations
+
+## 🎯 Pricing
+
+### Starter (Free)
+- 100 voice requests/month
+- Basic code generation
+- Community support
+- Public projects only
+
+### Pro ($29/month)
+- Unlimited requests
+- Advanced features
+- Priority support
+- Private repositories
+- Team collaboration
+
+### Enterprise (Custom)
+- Self-hosted option
+- Custom models
+- SLA guarantee
+- Dedicated support
+- Training included
+
+## 🌍 Join the Revolution
+
+Voice Chat Assistant isn't just a tool—it's a movement toward more natural, efficient, and enjoyable software development. Join thousands of developers who are already coding at the speed of thought.
+
+### Ready to Transform Your Workflow?
+
+[**Start Free Trial**](https://vca.chat) • [**Watch Demo**](https://vca.chat/demo) • [**Read Docs**](https://vca.chat/docs)
+
+---
+
+*Built with ❤️ by [Frame.dev](https://frame.dev) • Powered by [AgentOS](https://agentos.sh) • Strategic Partner: [Manic Agency](https://manic.agency)*
+2:["$","$L21",null,{"children":[["$","$L22",null,{"items":[{"name":"Home","url":"/"},{"name":"Blog","url":"/blog"},{"name":"research","url":"/blog/research"},{"name":"The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ","url":"/blog/research/domain-evaluation-landscape-2025"}]}],["$","$L23",null,{"post":{"slug":"domain-evaluation-landscape-2025","title":"The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ","date":"2026-01-06","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","domain-investing","domain-valuation","market-analysis","founder-story","domainhq","industry-research","sales-data","domain-appraisal","domain-aftermarket"],"excerpt":"A deep dive into the fragmented domain valuation industry, the limitations of existing appraisal tools, and how AI is reshaping domain investing. Plus, the founder story behind DomainHQ.ai.","image":"/assets/projects/domainhq/og-image.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":10,"content":"$24","author":{"name":"Manic Agency"},"contributors":"$undefined","tableOfContents":{"items":[{"level":1,"text":"The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ","slug":"the-domain-evaluation-landscape-in-2025-2026-why-we-built-domainhq"},{"level":2,"text":"The State of Domain Valuation in 2025","slug":"the-state-of-domain-valuation-in-2025"},{"level":3,"text":"The Fragmentation Problem","slug":"the-fragmentation-problem"},{"level":3,"text":"Why Traditional Appraisals Fail","slug":"why-traditional-appraisals-fail"},{"level":3,"text":"The Comparable Sales Problem","slug":"the-comparable-sales-problem"},{"level":2,"text":"The AI Opportunity","slug":"the-ai-opportunity"},{"level":3,"text":"1. Pattern Recognition at Scale","slug":"1-pattern-recognition-at-scale"},{"level":3,"text":"2. Semantic Understanding","slug":"2-semantic-understanding"},{"level":3,"text":"3. Multi-Factor Integration","slug":"3-multi-factor-integration"},{"level":3,"text":"4. Confidence Quantification","slug":"4-confidence-quantification"},{"level":2,"text":"The DomainHQ Origin Story","slug":"the-domainhq-origin-story"},{"level":3,"text":"The Problem We Kept Hitting","slug":"the-problem-we-kept-hitting"},{"level":3,"text":"Building the Solution","slug":"building-the-solution"},{"level":3,"text":"The Technical Journey","slug":"the-technical-journey"},{"level":3,"text":"Early Wins and Lessons","slug":"early-wins-and-lessons"},{"level":2,"text":"Technical Deep Dive: How DomainHQ Evaluates Domains","slug":"technical-deep-dive-how-domainhq-evaluates-domains"},{"level":3,"text":"The Data Pipeline","slug":"the-data-pipeline"},{"level":3,"text":"Feature Extraction (50+ Signals)","slug":"feature-extraction-50-signals"},{"level":3,"text":"The Valuation Model","slug":"the-valuation-model"},{"level":3,"text":"Dictionary of Premium Keywords","slug":"dictionary-of-premium-keywords"},{"level":2,"text":"The Future of Domain Investing (2025-2026)","slug":"the-future-of-domain-investing-2025-2026"},{"level":3,"text":"New gTLD Application Window (2026)","slug":"new-gtld-application-window-2026"},{"level":3,"text":"AI-Generated Domain Suggestions","slug":"ai-generated-domain-suggestions"},{"level":3,"text":"Portfolio Optimization","slug":"portfolio-optimization"},{"level":3,"text":"Decentralized Domain Systems","slug":"decentralized-domain-systems"},{"level":3,"text":"Regulatory Evolution","slug":"regulatory-evolution"},{"level":2,"text":"Conclusion","slug":"conclusion"},{"level":2,"text":"References and Further Reading","slug":"references-and-further-reading"},{"level":3,"text":"Industry Reports","slug":"industry-reports"},{"level":3,"text":"Market Analysis","slug":"market-analysis"},{"level":3,"text":"Appraisal Tool Comparisons","slug":"appraisal-tool-comparisons"}]}},"url":"/blog/research/domain-evaluation-landscape-2025"}],["$","$L25",null,{"postTitle":"The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ","postCategory":"research","postAuthor":"Manic Agency","postTags":"$26","postType":"post"}],["$","$L27",null,{"enableElementTracking":true,"pageType":"blog","contentCategory":"research"}],["$","$L28",null,{"postTitle":"The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ","contentSelector":"#post-content-top"}],["$","$L29",null,{"children":[" ",["$","div",null,{"className":"blog-layout-container has-sidebar","children":[["$","$L2a",null,{"tableOfContents":"$2b","postTitle":"The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ"}],["$","main",null,{"className":"blog-main-content-area","children":["$","article",null,{"className":"blog-post-container","id":"post-content-top","children":[["$","header",null,{"className":"post-header","children":[["$","div",null,{"className":"back-to-blog-link-container","children":["$","$L4b",null,{"href":"/blog","className":"back-to-blog-link","children":[["$","$L4c",null,{"size":14,"className":"mr-1.5"}]," ","Back to All Entries"]}]}],["$","h1",null,{"className":"post-title","children":"The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ"}],["$","div",null,{"className":"post-meta","children":[["$","div",null,{"className":"meta-item author","children":[["$","$L4d",null,{"className":"meta-icon","aria-hidden":"true"}],["$","div",null,{"className":"author-info","children":["$undefined",["$","span",null,{"className":"author-name","children":"Manic Agency"}]]}]]}],["$","div",null,{"className":"meta-item date","children":[["$","$L4e",null,{"className":"meta-icon","aria-hidden":"true"}],["$","time",null,{"dateTime":"2026-01-06T00:00:00.000Z","children":["Published ","January 6, 2026"]}]]}],["$","div",null,{"className":"meta-item reading-time","children":[["$","$L4f",null,{"className":"meta-icon","aria-hidden":"true"}],["$","span",null,{"children":[10," min read"]}]]}],["$","div",null,{"className":"meta-item category","children":[["$","$L50",null,{"className":"meta-icon","aria-hidden":"true"}],["$","$L4b",null,{"href":"/blog?category=research","className":"post-category-link","children":"research"}]]}]]}],["$","div",null,{"className":"post-tags","children":["$","div",null,{"className":"tags-list","children":[["$","$L4b","ai",{"href":"/blog?tags=ai","className":"post-tag","children":["#","ai"]}],["$","$L4b","domain-investing",{"href":"/blog?tags=domain-investing","className":"post-tag","children":["#","domain-investing"]}],["$","$L4b","domain-valuation",{"href":"/blog?tags=domain-valuation","className":"post-tag","children":["#","domain-valuation"]}],["$","$L4b","market-analysis",{"href":"/blog?tags=market-analysis","className":"post-tag","children":["#","market-analysis"]}],["$","$L4b","founder-story",{"href":"/blog?tags=founder-story","className":"post-tag","children":["#","founder-story"]}],["$","$L4b","domainhq",{"href":"/blog?tags=domainhq","className":"post-tag","children":["#","domainhq"]}],["$","$L4b","industry-research",{"href":"/blog?tags=industry-research","className":"post-tag","children":["#","industry-research"]}],["$","$L4b","sales-data",{"href":"/blog?tags=sales-data","className":"post-tag","children":["#","sales-data"]}],["$","$L4b","domain-appraisal",{"href":"/blog?tags=domain-appraisal","className":"post-tag","children":["#","domain-appraisal"]}],["$","$L4b","domain-aftermarket",{"href":"/blog?tags=domain-aftermarket","className":"post-tag","children":["#","domain-aftermarket"]}]]}]}]]}],["$","div",null,{"className":"post-featured-image-container","children":["$","figure",null,{"className":"post-featured-image","children":[["$","$L51",null,{"src":"/assets/projects/domainhq/og-image.png","alt":"The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ","width":1600,"height":900,"className":"featured-image","priority":true}],"$undefined"]}]}],["$","div",null,{"className":"post-content","children":["$","$L52",null,{"children":"$53"}]}],"$undefined",["$","footer",null,{"className":"post-footer","children":["$","$L54",null,{"title":"The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ","url":"/blog/research/domain-evaluation-landscape-2025"}]}],["$","$L55",null,{"projects":[{"slug":"domainhq","title":"DomainHQ.ai — AI-Powered Domain Sales Intelligence","description":"Make data-driven domain investment decisions with AI valuations, 100K+ historical sales, multi-source scraping, and real-time deal scoring. The definitive platform for domain investors.","date":"2026-01-06","category":"ai","content":"$56","longDescription":"$undefined","tags":["ai","domain-names","domain-investing","domain-valuation","sales-intelligence","deal-scoring","auction-tracking","domain-appraisal","saas","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/domainhq/logo-full.png","images":["/assets/projects/domainhq/logo-full.png","/assets/projects/domainhq/og-image.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://domainhq.ai","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Historical Sales","value":"100,000+"},{"label":"Data Sources","value":"15+ Platforms"},{"label":"AI Accuracy","value":"94%+"},{"label":"Daily Auctions","value":"5,000+"}],"team":[{"name":"Manic Agency","role":"Design & Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"quarry","title":"Quarry.space — AI-Native Personal Knowledge Management","description":"Transform how you capture, connect, and recall knowledge. Zettelkasten-powered PKM with semantic search, FSRS flashcards, and knowledge graphs built for the AI era.","date":"2026-01-06","category":"ai","content":"$57","longDescription":"$undefined","tags":["ai","pkms","knowledge-management","zettelkasten","semantic-search","flashcards","fsrs","knowledge-graph","note-taking","second-brain","framers-ai","frame-dev","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/quarry/quarry-logo-color@4x.png","images":["/assets/projects/quarry/quarry-logo-color@4x.png","/assets/projects/quarry/quarry-app-screenshot.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://quarry.space","github":"https://github.com/framersai","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Powered By","value":"Frame.dev"},{"label":"Learning Algorithm","value":"FSRS Spaced Repetition"},{"label":"Platforms","value":"Web + Desktop + Mobile"},{"label":"Search","value":"Semantic AI (ONNX)"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"voice-chat-assistant","title":"Voice Chat Assistant — Talk to Code, Ship Faster","description":"Voice-first AI coding assistant that understands context, writes production code, and manages your entire development workflow through natural conversation. Powered by AgentOS.","date":"2025-11-10","category":"ai","content":"$58","longDescription":"$undefined","tags":["ai","voice","coding-assistant","agentos","developer-tools","productivity","llm"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/voice-chat-assistant/hearing.svg","images":["/assets/projects/voice-chat-assistant/logo.svg","/assets/projects/framers/agentos-logo.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://vca.chat","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Response Time","value":"< 100ms"},{"label":"Languages Supported","value":"50+"},{"label":"Active Sessions/Day","value":"10k+"},{"label":"Powered By","value":"AgentOS"}],"team":[{"name":"Frame.dev / Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Design & Strategy","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[{"quote":"VCA changed how I think about coding. I describe what I want, and it just happens. It's like having a senior developer who never gets tired.","author":"Sarah Chen","role":"Full Stack Developer"},{"quote":"The context awareness is unreal. It remembers our entire conversation and understands my codebase better than I do sometimes.","author":"Marcus Rodriguez","role":"Tech Lead at Scale-up"}]}],"title":"// Related Projects //"}],["$","section",null,{"className":"post-comments","aria-labelledby":"comments-heading","children":[["$","h2",null,{"id":"comments-heading","className":"comments-title","children":"Join the Discussion"}],["$","$L59",null,{"postTitle":"The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ","postUrl":"/blog/research/domain-evaluation-landscape-2025","postIdentifier":"blog-research-domain-evaluation-landscape-2025","className":"mb-8"}],["$","div",null,{"className":"mt-8","children":[["$","div",null,{"className":"giscus-header","children":[["$","h3",null,{"className":"giscus-title","children":"Comments with GitHub"}],["$","div",null,{"className":"giscus-divider"}]]}],["$","$L5a",null,{}]]}]]}],["$","section",null,{"className":"post-newsletter-signup mt-16","children":["$","$L5b",null,{"variant":"blog","background":"accent"}]}]]}]}]," "]}]," "]}]]}]
+20:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#FBF6EF"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#22182B"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ | Manic Agency - AI Agency Los Angeles"}],["$","meta","5",{"name":"description","content":"A deep dive into the fragmented domain valuation industry, the limitations of existing appraisal tools, and how AI is reshaping domain investing. Plus, the founder story behind DomainHQ.ai."}],["$","meta","6",{"name":"author","content":"Manic Agency"}],["$","meta","7",{"name":"keywords","content":"ai,domain-investing,domain-valuation,market-analysis,founder-story,domainhq,industry-research,sales-data,domain-appraisal,domain-aftermarket"}],["$","meta","8",{"name":"creator","content":"Manic Inc"}],["$","meta","9",{"name":"publisher","content":"Manic Inc"}],["$","link","10",{"rel":"canonical","href":"https://manic.agency/blog/research/domain-evaluation-landscape-2025"}],["$","meta","11",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","12",{"property":"og:title","content":"The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ | Manic Agency - AI Agency Los Angeles"}],["$","meta","13",{"property":"og:description","content":"A deep dive into the fragmented domain valuation industry, the limitations of existing appraisal tools, and how AI is reshaping domain investing. Plus, the founder story behind DomainHQ.ai."}],["$","meta","14",{"property":"og:image","content":"https://manic.agency//assets/projects/domainhq/og-image.png"}],["$","meta","15",{"property":"og:image:alt","content":"The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ"}],["$","meta","16",{"property":"og:type","content":"article"}],["$","meta","17",{"property":"article:published_time","content":"2026-01-06T00:00:00.000Z"}],["$","meta","18",{"property":"article:author","content":"Manic Agency"}],["$","meta","19",{"property":"article:tag","content":"ai"}],["$","meta","20",{"property":"article:tag","content":"domain-investing"}],["$","meta","21",{"property":"article:tag","content":"domain-valuation"}],["$","meta","22",{"property":"article:tag","content":"market-analysis"}],["$","meta","23",{"property":"article:tag","content":"founder-story"}],["$","meta","24",{"property":"article:tag","content":"domainhq"}],["$","meta","25",{"property":"article:tag","content":"industry-research"}],["$","meta","26",{"property":"article:tag","content":"sales-data"}],["$","meta","27",{"property":"article:tag","content":"domain-appraisal"}],["$","meta","28",{"property":"article:tag","content":"domain-aftermarket"}],["$","meta","29",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","30",{"name":"twitter:title","content":"The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ | Manic Agency - AI Agency Los Angeles"}],["$","meta","31",{"name":"twitter:description","content":"A deep dive into the fragmented domain valuation industry, the limitations of existing appraisal tools, and how AI is reshaping domain investing. Plus, the founder story behind DomainHQ.ai."}],["$","meta","32",{"name":"twitter:image","content":"https://manic.agency//assets/projects/domainhq/og-image.png"}],["$","link","33",{"rel":"shortcut icon","href":"/favicon-16x16.png"}],["$","link","34",{"rel":"icon","href":"/favicon.ico"}],["$","link","35",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","meta","36",{"name":"next-size-adjust"}]]
+1:null
