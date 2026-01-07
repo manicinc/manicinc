@@ -623,8 +623,8 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                  .image-link-wrapper { position: relative; display: block; width: 100%; height: 100%; }
                  .card-image-link { position: relative; display: block; width: 100%; height: 100%; border-radius: inherit; overflow: hidden; }
                  .card-image-link.draft-disabled { cursor: default; }
-                 .card-image-wrapper { position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: inherit; background: var(--bg-secondary); }
-                 .card-image { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.4s ease, filter 0.4s ease; filter: saturate(0.9); border-radius: inherit; }
+                 .card-image-wrapper { position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: inherit; background: var(--bg-secondary); contain: layout paint; isolation: isolate; }
+                 .card-image { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.4s ease; filter: saturate(0.9); border-radius: inherit; will-change: transform; }
                  .card-image-gradient-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(var(--accent-primary-rgb), 0.15) 0%, transparent 30%, rgba(var(--accent-highlight-rgb), 0.08) 70%, transparent 100%), linear-gradient(to top, rgba(var(--bg-primary-rgb), 0.4) 0%, transparent 50%); pointer-events: none; border-radius: inherit; z-index: 1; }
                  .group:hover .holographic-card:not(.is-draft) .card-image { transform: scale(1.05); filter: saturate(1.1); }
                  .group:hover .holographic-card:not(.is-draft) .card-image-gradient-overlay { background: linear-gradient(135deg, rgba(var(--accent-primary-rgb), 0.2) 0%, transparent 25%, rgba(var(--accent-highlight-rgb), 0.12) 75%, transparent 100%), linear-gradient(to top, rgba(var(--bg-primary-rgb), 0.3) 0%, transparent 60%); }
