@@ -1,0 +1,24 @@
+<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="6" fill="#0D0D0D"/>
+  <defs>
+    <linearGradient id="ss-grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="ss-grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect x="6" y="5" width="20" height="4" rx="1" fill="url(#ss-grad1)"/>
+  <rect x="6" y="5" width="4" height="10" rx="1" fill="url(#ss-grad1)"/>
+  <rect x="6" y="14" width="20" height="4" rx="1" fill="#F5F3EF"/>
+  <rect x="22" y="14" width="4" height="10" rx="1" fill="url(#ss-grad2)"/>
+  <rect x="6" y="23" width="20" height="4" rx="1" fill="url(#ss-grad2)"/>
+</svg>
+
+
+
+
+
+

@@ -86,7 +86,7 @@ f:I[12025,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","stat
             }
           }
         })();
-      0:["manic-agency-1767815351905",[[["",{"children":["blog",{"children":[["category","research","d"],{"children":[["slug","when-ai-overthinks-the-inverse-scaling-problem","d"],{"children":["__PAGE__?{\"category\":\"research\",\"slug\":\"when-ai-overthinks-the-inverse-scaling-problem\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["category","research","d"],{"children":[["slug","when-ai-overthinks-the-inverse-scaling-problem","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7589854758514563.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/2a1fdc91e2d69a25.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/6517f724e0c34e4b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/4a49f8c87e29773c.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/fbcf5add168be5ca.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/31a0afff5523f0ee.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/94e7d866c9e42adb.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/8d146102ec06a500.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"preconnect","href":"https://static.cloudflareinsights.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.jsdelivr.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://res.cloudinary.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}]]}]}]}]]}]]}]],null],null],["$L1f",null]]]]
+      0:["manic-agency-1768692621413",[[["",{"children":["blog",{"children":[["category","research","d"],{"children":[["slug","when-ai-overthinks-the-inverse-scaling-problem","d"],{"children":["__PAGE__?{\"category\":\"research\",\"slug\":\"when-ai-overthinks-the-inverse-scaling-problem\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["category","research","d"],{"children":[["slug","when-ai-overthinks-the-inverse-scaling-problem","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7589854758514563.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/2a1fdc91e2d69a25.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/6517f724e0c34e4b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/4a49f8c87e29773c.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/fbcf5add168be5ca.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/31a0afff5523f0ee.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/94e7d866c9e42adb.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/8d146102ec06a500.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"preconnect","href":"https://static.cloudflareinsights.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.jsdelivr.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://res.cloudinary.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}]]}]}]}]]}]]}]],null],null],["$L1f",null]]]]
 20:I[54680,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-e61082fd20a6bf4e.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
 21:I[18745,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-e61082fd20a6bf4e.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
 22:I[94058,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-e61082fd20a6bf4e.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
@@ -518,7 +518,673 @@ Hubinger, E., van Merwijk, C., Mikulik, V., Skalse, J., & Garrabrant, S. (2019).
 Kahneman, D. (2011). *Thinking, fast and slow*. Farrar, Straus and Giroux.
 Kaplan, J., McCandlish, S., Henighan, T., et al. (2020). Scaling laws for neural language models. *arXiv:2001.08361*.
 McKenzie, I., Lyzhov, A., Pieler, M., et al. (2023). Inverse scaling: When bigger isn't better. *arXiv:2306.09479*.
-Wu, Z., et al. (2025). Optimal chain-of-thought length for large language models. *ACL 2025*.48:T2d44,
+Wu, Z., et al. (2025). Optimal chain-of-thought length for large language models. *ACL 2025*.48:T3788,
+<div class="hackbase-hero">
+  <img
+    src="/assets/projects/hackbase/hackbase-logo.svg"
+    alt="HackBase logo - hexagonal portal with rocket for founders launchpad"
+    class="hackbase-hero__logo"
+    decoding="async"
+    loading="eager"
+  />
+  <h1 class="hackbase-hero__title" aria-label="founders launchpad">founders launchpad</h1>
+  <p class="hackbase-hero__subtitle">
+    validate your startup idea before you build. scrape pain points. generate personas. ship with confidence.
+  </p>
+  <a class="hackbase-hero__cta" href="https://hackbase.io" target="_blank" rel="noopener">
+    explore hackbase →
+  </a>
+</div>
+
+<style>
+  .hackbase-hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2.75rem 1rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hackbase-hero__logo {
+    width: clamp(120px, 30vw, 200px);
+    height: auto;
+    opacity: 0.95;
+  }
+  @media (prefers-color-scheme: dark) {
+    .hackbase-hero__logo {
+      filter: brightness(1.1) drop-shadow(0 0 24px rgba(0,245,255,0.35));
+      opacity: 1;
+    }
+  }
+  .hackbase-hero__title {
+    text-transform: lowercase;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0.35rem 0 0.25rem;
+    background: linear-gradient(120deg, #00f5ff 0%, #ff00ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hackbase-hero__subtitle {
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    color: var(--text-secondary, rgba(255,255,255,0.78));
+    margin: 0.25rem 0 0.9rem;
+    max-width: 56ch;
+  }
+  @media (prefers-color-scheme: light) {
+    .hackbase-hero__subtitle { color: #2a2a2a; }
+  }
+  .hackbase-hero__cta {
+    --h: 52px;
+    display: inline-grid;
+    place-items: center;
+    height: var(--h);
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--text-primary, #fff);
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(120% 120% at 0% 0%, rgba(0,245,255,0.18), rgba(255,0,255,0.08)),
+      linear-gradient(90deg, rgba(0,245,255,0.35), rgba(255,0,255,0.35));
+    border: 1px solid rgba(0,245,255,0.35);
+    backdrop-filter: blur(6px);
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    will-change: transform;
+  }
+  .hackbase-hero__cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(120deg, rgba(0,245,255,0.9), rgba(168,85,247,0.9), rgba(255,0,255,0.9));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: .6;
+    transition: opacity .25s ease;
+    z-index: -1;
+  }
+  .hackbase-hero__cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(0,245,255,0.7);
+    background:
+      radial-gradient(120% 120% at 100% 0%, rgba(255,0,255,0.2), rgba(0,245,255,0.12)),
+      linear-gradient(90deg, rgba(0,245,255,0.5), rgba(255,0,255,0.5));
+    box-shadow: 0 10px 32px rgba(0,245,255,0.25), 0 2px 8px rgba(255,0,255,0.2);
+  }
+  .hackbase-hero__cta:active { transform: translateY(0) scale(0.99); }
+  @media (prefers-color-scheme: light) {
+    .hackbase-hero__cta {
+      color: #0f0f0f;
+      border-color: rgba(0,245,255,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .hackbase-hero__cta:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+  }
+</style>
+
+## What is HackBase?
+
+HackBase is a **Founders Launchpad**—an AI-powered platform that helps indie makers validate startup ideas, discover their founder archetype, and launch products with confidence. It combines three powerful modules:
+
+1. **Link Builder** — SEO campaign management for building domain authority
+2. **Directory** — A mini Product Hunt for indie products with upvoting, comments, and moderation
+3. **Founders Launchpad** — AI-powered validation engine with psychometric assessments and multi-agent debates
+
+Unlike typical idea validation tools that give you a single score, HackBase puts your idea through a **12-agent advisory board debate**, complete with a Devil's Advocate, Red Team, and Finance Expert arguing different perspectives before synthesizing actionable recommendations.
+
+## The Indie Maker's Dilemma
+
+Every indie hacker faces the same questions:
+
+- **Is my idea any good?** — You've been noodling on this concept for months, but how do you know if real pain exists?
+- **Am I the right founder for this?** — Some founders thrive in chaos; others need structure. Which are you?
+- **Is the brand available?** — You find the perfect name, but is `yourname.com` taken? What about Twitter, GitHub, ProductHunt?
+- **Where do I launch?** — There are hundreds of directories and link building opportunities—which ones matter?
+
+**HackBase answers all of these:**
+
+- **Scrape real pain points** from Reddit, Hacker News, and RSS feeds to validate problem existence
+- **Discover your founder archetype** with HEXACO-60 personality assessment and risk tolerance profiling
+- **Check brand availability** across domains and 8 social platforms in one click
+- **Submit to curated directories** with campaign tracking and SEO analytics
+
+## Core Modules
+
+### 🚀 Founders Launchpad
+
+The heart of HackBase—a comprehensive startup validation system.
+
+#### Psychometric Assessment Suite
+
+Three validated instruments to understand yourself as a founder:
+
+| Assessment | Questions | Measures |
+|------------|-----------|----------|
+| **HEXACO-60** | 60 items | Honesty-Humility, Emotionality, Extraversion, Agreeableness, Conscientiousness, Openness |
+| **Founder Archetypes** | 25 items | Builder, Visionary, Operator, Scientist, Hustler |
+| **Risk Tolerance** | 15 items | Financial, career, social, and innovation risk comfort |
+
+After completing the assessments, you receive:
+- Your dominant **founder archetype** with strengths and blind spots
+- **Ideal co-founder types** based on complementary archetypes
+- **Personalized recommendations** tailored to your profile
+
+#### 12-Agent Crucible Debate System
+
+Your idea goes before an AI advisory board with 12 specialized agents:
+
+| Agent | Role | Perspective |
+|-------|------|-------------|
+| **Devil's Advocate** | Challenge assumptions | Skeptical |
+| **Market Analyst** | Market sizing & trends | Data-driven |
+| **Tech Lead** | Technical feasibility | Engineering |
+| **Finance Expert** | Unit economics & funding | ROI-focused |
+| **User Advocate** | Customer needs | Empathy |
+| **Legal & Compliance** | Risk & regulations | Conservative |
+| **Operations Expert** | Execution & scaling | Practical |
+| **Growth Hacker** | Acquisition & virality | Aggressive |
+| **Industry Expert** | Domain knowledge | Contextual |
+| **Red Team** | Security & failure modes | Adversarial |
+| **The Optimist** | Opportunities | Positive |
+| **The Realist** | Constraints | Balanced |
+
+**The Debate Flow:**
+1. **Thesis** — Each agent provides their initial position on your idea
+2. **Antithesis** — Agents critique each other's positions, surfacing conflicts
+3. **Synthesis** — The orchestrator builds consensus and actionable recommendations
+
+The result is an **Executive Brief** with confidence scores, consensus points, dissenting opinions, and prioritized next actions.
+
+#### Idea Validation Engine
+
+Real-time validation using free data sources:
+
+- **Reddit** — Scrapes r/startups, r/SaaS, r/Entrepreneur for pain points
+- **Hacker News** — Searches via Algolia API for discussions and launches
+- **RSS Feeds** — Monitors TechCrunch, The Verge, and tech publications
+- **DuckDuckGo** — Web search for competitor and market analysis
+
+For each idea, you get:
+- **Idea Score** (0-100) based on problem signal strength
+- **Problem Signals** with sentiment and engagement metrics
+- **Market Signals** showing discussion volume and trends
+- **Competitor Analysis** with differentiation opportunities
+- **Risks and Opportunities** identified by pattern matching
+
+#### Brand Availability Checker
+
+Comprehensive availability checking in one request:
+
+- **Domains**: `.com`, `.io`, `.co`, `.dev`, `.app`, `.ai` via WHOIS/DNS/RDAP
+- **Social Platforms**: Twitter, GitHub, Instagram, LinkedIn, TikTok, YouTube, Reddit, ProductHunt
+
+Returns an **availability score** and recommendations for alternatives if your preferred name is taken.
+
+### 📁 Directory Module (Product Hunt Style)
+
+A public submission directory for indie products:
+
+**User Features:**
+- Browse and discover products by category
+- Upvote products (one per user)
+- Comment on submissions
+- Submit your product with logo, screenshots, and details
+- Track submission status through moderation
+
+**Admin Features:**
+- Moderation queue with AI-assisted scoring
+- Approve, reject, or feature submissions
+- Category management (CRUD with nested categories)
+- Promotion tiers: Featured, Promoted, Sponsored
+
+**Submission Workflow:**
+```
+Draft → Pending → [Approved/Rejected] → Published
+```
+
+### 🤖 AI Copilot
+
+Context-aware chat assistant with multiple modes:
+
+| Mode | Purpose |
+|------|---------|
+| **Chat** | General conversation and guidance |
+| **Brainstorm** | Structured ideation with SCAMPER, Six Hats, First Principles, JTBD |
+| **Analyze** | Deep analysis with RAG context from your knowledge base |
+| **Debate** | Quick multi-agent perspective on a specific question |
+| **Task** | Autonomous task execution via AgentOS bridge |
+
+The copilot adapts its responses based on your founder archetype—a Builder gets technical deep-dives while a Hustler gets action-oriented advice.
+
+### 🔍 RAG Semantic Search
+
+Local semantic search powered by:
+
+- **BERT embeddings** via `@xenova/transformers` (ONNX Runtime)
+- **SQLite-backed vector storage** for persistence
+- **Automatic document chunking** and indexing
+
+All your validation data, debate transcripts, and brainstorm sessions are indexed and searchable semantically—not just keyword matching.
+
+## Part of Super Cloud MCP
+
+HackBase is part of the **[Super Cloud MCP](https://github.com/manicinc/super-cloud-mcps)** ecosystem—a comprehensive AI toolkit with 61 tool facades consolidating 530+ actions. This means:
+
+- **SEO Submission automation** via the `seo_submit` facade (queue → approve → execute workflow)
+- **Social media cross-posting** via `twitter`, `reddit`, `pinterest`, `producthunt` facades
+- **Research integration** via `research` and `search_router` facades for multi-source validation
+- **Documentary generation** via `documentary` facade to create launch videos from your journey
+
+## Technical Architecture
+
+```
+packages/link-builder/
+├── src/
+│   ├── api/
+│   │   └── routes/
+│   │       ├── directory.ts          # Public directory routes
+│   │       ├── admin-directory.ts    # Admin moderation routes
+│   │       └── launchpad.ts          # Founders Launchpad API
+│   ├── directory/
+│   │   └── types.ts                  # Directory types
+│   └── launchpad/
+│       ├── availability/             # Domain + social checking
+│       ├── copilot/                  # AI chat modes
+│       ├── debate/                   # 12-agent system
+│       │   ├── agent-pool.ts         # Agent personas
+│       │   ├── debate-orchestrator.ts
+│       │   └── synthesis-engine.ts
+│       ├── psychometric/             # HEXACO-60, archetypes
+│       │   ├── hexaco-questions.ts
+│       │   ├── founder-archetypes.ts
+│       │   └── assessment-engine.ts
+│       ├── rag/                      # Semantic search
+│       │   ├── embedding-service.ts
+│       │   ├── vector-store.ts
+│       │   └── semantic-search.ts
+│       └── validation/               # Idea validation
+│           ├── reddit-scraper.ts
+│           ├── hackernews-scraper.ts
+│           └── validation-engine.ts
+└── apps/
+    └── link-builder-ui/              # React frontend
+        └── src/
+            └── pages/
+                ├── directory/
+                ├── admin/
+                └── launchpad/
+```
+
+**Key Technologies:**
+- **Backend**: Express.js, TypeScript, SQLite (better-sqlite3)
+- **Frontend**: React, TypeScript, TailwindCSS
+- **AI/ML**: Anthropic Claude, OpenAI, Transformers.js (ONNX)
+- **Scraping**: Puppeteer, Cheerio, Algolia API
+- **Payments**: Stripe (for directory promotions)
+
+## The Vision
+
+HackBase exists because we believe **indie makers deserve the same validation tools as well-funded startups**.
+
+Y Combinator has advisors and a network. Funded startups have boards and mentors. Solo founders have... Google and gut instinct?
+
+Not anymore. HackBase gives you:
+- An **AI advisory board** that debates your ideas from 12 perspectives
+- **Psychometric profiles** that help you understand your strengths and blind spots
+- **Real-time validation** from the places your customers actually hang out
+- **Brand checking** that saves hours of manual searching
+- **A launchpad** that guides you from idea to shipped product
+
+## Part of the Manic Ecosystem
+
+HackBase connects with other tools we've built:
+
+- **[SynthStack](/projects/ai/synthstack)** — AI-native SaaS boilerplate to build your validated idea
+- **[DomainHQ](/projects/ai/domainhq)** — Domain portfolio management for your brand acquisitions
+- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering the debate system
+- **[Quarry.space](/projects/ai/quarry)** — Knowledge management for your research and validation data
+
+## Open Source
+
+HackBase is **MIT licensed** and part of the Super Cloud MCP monorepo. Clone it, extend it, or use it as reference for your own launchpad.
+
+---
+
+*Ready to validate your idea? [Launch with HackBase →](https://hackbase.io)*
+49:T2b0b,
+<div class="synthstack-hero">
+  <img
+    src="/assets/projects/synthstack/synthstack-logo.svg"
+    alt="SynthStack logo - AI-native SaaS boilerplate for cross-platform applications"
+    class="synthstack-hero__logo"
+    decoding="async"
+    loading="eager"
+  />
+  <h1 class="synthstack-hero__title" aria-label="your agency in a box">your agency in a box</h1>
+  <p class="synthstack-hero__subtitle">
+    open-source saas boilerplate. one codebase → web, ios, android, desktop. ship in days, not months.
+  </p>
+  <a class="synthstack-hero__cta" href="https://synthstack.app" target="_blank" rel="noopener">
+    explore synthstack →
+  </a>
+</div>
+
+<style>
+  .synthstack-hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2.75rem 1rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .synthstack-hero__logo {
+    width: clamp(160px, 38vw, 320px);
+    height: auto;
+    opacity: 0.95;
+  }
+  @media (prefers-color-scheme: dark) {
+    .synthstack-hero__logo {
+      filter: brightness(1.1) drop-shadow(0 0 24px rgba(99,102,241,0.35));
+      opacity: 1;
+    }
+  }
+  .synthstack-hero__title {
+    text-transform: lowercase;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0.35rem 0 0.25rem;
+    background: linear-gradient(120deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .synthstack-hero__subtitle {
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    color: var(--text-secondary, rgba(255,255,255,0.78));
+    margin: 0.25rem 0 0.9rem;
+    max-width: 56ch;
+  }
+  @media (prefers-color-scheme: light) {
+    .synthstack-hero__subtitle { color: #2a2a2a; }
+  }
+  .synthstack-hero__cta {
+    --h: 52px;
+    display: inline-grid;
+    place-items: center;
+    height: var(--h);
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--text-primary, #fff);
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(120% 120% at 0% 0%, rgba(99,102,241,0.18), rgba(139,92,246,0.08)),
+      linear-gradient(90deg, rgba(99,102,241,0.35), rgba(139,92,246,0.35));
+    border: 1px solid rgba(99,102,241,0.35);
+    backdrop-filter: blur(6px);
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    will-change: transform;
+  }
+  .synthstack-hero__cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(120deg, rgba(99,102,241,0.9), rgba(139,92,246,0.9), rgba(236,72,153,0.9));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: .6;
+    transition: opacity .25s ease;
+    z-index: -1;
+  }
+  .synthstack-hero__cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(99,102,241,0.7);
+    background:
+      radial-gradient(120% 120% at 100% 0%, rgba(236,72,153,0.2), rgba(139,92,246,0.12)),
+      linear-gradient(90deg, rgba(99,102,241,0.5), rgba(139,92,246,0.5));
+    box-shadow: 0 10px 32px rgba(99,102,241,0.25), 0 2px 8px rgba(139,92,246,0.2);
+  }
+  .synthstack-hero__cta:active { transform: translateY(0) scale(0.99); }
+  @media (prefers-color-scheme: light) {
+    .synthstack-hero__cta {
+      color: #0f0f0f;
+      border-color: rgba(99,102,241,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .synthstack-hero__cta:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+  }
+</style>
+
+## What is SynthStack?
+
+SynthStack is an **AI-native SaaS boilerplate** that ships production-ready applications for web, iOS, Android, and desktop from a single codebase. Built on [Vue 3](https://vuejs.org/) and [Quasar Framework](https://quasar.dev/), it's the foundation we use at [Manic Agency](https://manic.agency) to launch client projects in days instead of months.
+
+Unlike typical boilerplates that bolt on features as afterthoughts, SynthStack was designed from the ground up for the AI era—with a built-in AI Copilot, semantic vector search, and intelligent automation baked into every layer.
+
+## The Problem We Solve
+
+Every new SaaS project starts the same way: weeks spent on authentication, billing, email, CMS, deployment. Then you add AI features and spend more weeks integrating OpenAI, handling rate limits, managing costs. Finally, a client asks for a mobile app and you're back to square one.
+
+**SynthStack eliminates this entirely:**
+
+- **Auth complexity?** Toggle between Supabase (managed OAuth) or local PostgreSQL (self-hosted) with zero code changes
+- **Billing setup?** Stripe subscriptions, lifetime licenses, usage-based pricing—already configured with webhooks and customer portal
+- **AI integration?** GPT-4o + Claude fallback with streaming, cost tracking, and credit systems built-in
+- **Cross-platform?** One `pnpm build` produces web, PWA, Electron desktop, and Capacitor iOS/Android
+
+## Core Features
+
+### 🤖 AI Copilot (GPT-4o + Claude)
+
+A production-ready chat assistant available throughout the app via `⌘K` or the floating button:
+
+- **Real-time streaming** with markdown and code syntax highlighting
+- **RAG-powered context** from indexed documentation via Qdrant
+- **Cost tracking** with per-organization breakdowns and budget alerts
+- **Automatic fallback** from GPT-4o to Claude 3.5 for reliability
+
+### 🔐 Flexible Authentication
+
+Choose your auth provider at runtime—no code changes required:
+
+| Provider | Best For | OAuth Support |
+|----------|----------|---------------|
+| **Supabase** (default) | Teams wanting managed auth | Google, GitHub, Discord, Microsoft |
+| **Local PostgreSQL** | Self-hosted deployments | Email/password (OAuth coming soon) |
+
+Both include: Argon2id password hashing, JWT access/refresh tokens, account lockout, email verification, and session management with token rotation.
+
+### 💳 Stripe Billing (4 Tiers + Lifetime)
+
+Complete billing system with subscriptions and one-time payments:
+
+| Tier | Monthly | Annual | Credits/Day |
+|------|---------|--------|-------------|
+| **Free** | $0 | $0 | 10 |
+| **Maker** | $12.99 | $116.91 | 30 |
+| **Pro** | $24.99 | $224.91 | 100 |
+| **Agency** | $39.99 | $359.91 | Unlimited |
+| **Lifetime** | $149-249 one-time | — | Pro features forever |
+
+### 📝 Directus CMS
+
+[Directus](https://directus.io/) provides a headless CMS that automatically models your PostgreSQL database:
+
+- **WYSIWYG editor** for blog posts, product pages, documentation
+- **Media library** with image transformations and asset management
+- **Custom extensions** for themes, newsletters, FAQ management
+- **REST & GraphQL APIs** for accessing content from any client
+
+### 🌐 Cross-Platform Builds
+
+One codebase, five platforms:
+
+```bash
+# Web + PWA
+pnpm build:web
+
+# iOS (requires Xcode)
+pnpm build:ios
+
+# Android (requires Android Studio)
+pnpm build:android
+
+# Desktop (Electron)
+pnpm build:electron
+```
+
+### 🔍 Vector Search (Qdrant)
+
+Semantic search powered by [Qdrant](https://qdrant.tech/) for:
+
+- RAG-based document retrieval for the AI Copilot
+- Intelligent search across knowledge bases
+- Similarity matching for content recommendations
+
+### 🎮 Gamification & Referrals
+
+Built-in engagement systems (Pro Edition):
+
+- **XP and achievements** for user progression
+- **Referral codes** with reward tracking
+- **Leaderboards** for community competition
+
+## Development Journey
+
+SynthStack emerged from a simple realization: we kept building the same foundation for every client project. Here's how it evolved:
+
+### December 7, 2025 — Initial Commit
+
+The first commit laid the foundation: Vue 3 + Quasar with TypeScript, PostgreSQL, Redis, and Docker Compose. We integrated Stripe, email systems (Mailgun/SendGrid), and analytics from day one.
+
+### December 12, 2025 — Onboarding & CMS
+
+Added a comprehensive onboarding wizard for new users and deep Directus integration. The CMS became the central hub for managing all content—blog, products, themes, newsletters.
+
+### December 25, 2025 — AI Agents & Gamification
+
+The Christmas release brought the AI Copilot, gamification system, and referral tracking. We also added support for Python backends (FastAPI, Django) for teams preferring that stack.
+
+### January 2026 — Cross-Platform & Stabilization
+
+Mobile builds arrived via Capacitor, desktop builds via Electron. The test suite grew to 920+ tests. CI/CD pipelines now auto-deploy to any VPS provider.
+
+## Technical Architecture
+
+```
+synthstack/
+├── apps/
+│   └── web/                      # Vue 3 + Quasar (PWA, iOS, Android, Desktop)
+├── packages/
+│   ├── api-gateway/              # Fastify REST API
+│   ├── ts-ml-service/            # NestJS ML service (TypeScript-only)
+│   ├── types/                    # Shared TypeScript types
+│   └── directus-extension-synthstack/  # CMS extensions
+├── services/
+│   └── directus/                 # Directus config (101 migrations)
+└── deploy/
+    ├── docker-compose.yml        # Production stack
+    └── nginx.conf                # Reverse proxy config
+```
+
+**Key Technologies:**
+- **Frontend**: Vue 3, Quasar 2, TypeScript, Pinia, SCSS
+- **Backend**: Fastify (Node.js), NestJS (ML service)
+- **AI/ML**: OpenAI SDK, Anthropic SDK, Qdrant
+- **Database**: PostgreSQL 16, Redis 7
+- **CMS**: Directus 11.x with custom extensions
+- **Deployment**: Docker Compose, GitHub Actions, Nginx
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 20+
+- pnpm 9+
+- Docker & Docker Compose
+
+### Quick Start
+
+```bash
+# Clone
+git clone https://github.com/manicinc/synthstack.git
+cd synthstack
+
+# Install
+pnpm install
+
+# Configure
+cp .env.example .env
+# Edit .env with your Supabase/Stripe/OpenAI keys
+
+# Start services
+docker compose up -d
+
+# Run frontend
+pnpm dev:web
+```
+
+**Access points:**
+- Frontend: http://localhost:3050
+- API: http://localhost:3003
+- Directus: http://localhost:8099/admin
+
+## Part of the Manic Ecosystem
+
+SynthStack connects with other tools we've built:
+
+- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering the copilot
+- **[Quarry.space](/projects/ai/quarry)** — Knowledge management with semantic search
+- **[HackBase.io](/projects/ai/hackbase)** — Startup validation and link building for launches
+
+## Open Source
+
+SynthStack Community Edition is **MIT licensed**. Use it for side projects, client work, or as a learning resource.
+
+**[SynthStack Pro](https://synthstack.app/pro)** adds Python backends (FastAPI, Django), referral systems, and advanced AI copilots for commercial use.
+
+---
+
+*Ready to build your agency? [Get started with SynthStack →](https://synthstack.app)*
+4a:T2d44,
 <div class="domainhq-hero">
   <img
     src="/assets/projects/domainhq/logo-full.svg"
@@ -830,638 +1496,6 @@ We've been using DomainHQ internally for 18 months. Now it's ready for everyone.
 ---
 
 *Ready to stop guessing? [Start with DomainHQ →](https://domainhq.ai)*
-49:T26fe,
-<div class="quarry-hero">
-  <img
-    src="/assets/projects/quarry/quarry-logo-color.svg"
-    alt="Quarry.space logo - AI-native personal knowledge management system"
-    class="quarry-hero__logo"
-    decoding="async"
-    loading="eager"
-  />
-  <h1 class="quarry-hero__title" aria-label="denoising the web">denoising the web</h1>
-  <p class="quarry-hero__subtitle">
-    the os for your life. capture everything, connect anything, recall instantly.
-  </p>
-  <a class="quarry-hero__cta" href="https://quarry.space" target="_blank" rel="noopener">
-    explore quarry.space →
-  </a>
-</div>
-
-<style>
-  .quarry-hero {
-    display: grid;
-    place-items: center;
-    text-align: center;
-    gap: 1rem;
-    padding: 2.75rem 1rem 3rem;
-    border-radius: 1rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .quarry-hero__logo {
-    width: clamp(160px, 38vw, 320px);
-    height: auto;
-    opacity: 0.95;
-  }
-  @media (prefers-color-scheme: dark) {
-    .quarry-hero__logo {
-      filter: brightness(1.1) drop-shadow(0 0 24px rgba(25,255,166,0.25));
-      opacity: 1;
-    }
-  }
-  .quarry-hero__title {
-    text-transform: lowercase;
-    font-weight: 900;
-    letter-spacing: 0.02em;
-    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
-    line-height: 1.05;
-    margin: 0.35rem 0 0.25rem;
-    background: linear-gradient(120deg, #19ffa6 0%, #00d4ff 50%, #8a5cff 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .quarry-hero__subtitle {
-    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
-    color: var(--text-secondary, rgba(255,255,255,0.78));
-    margin: 0.25rem 0 0.9rem;
-    max-width: 56ch;
-  }
-  @media (prefers-color-scheme: light) {
-    .quarry-hero__subtitle { color: #2a2a2a; }
-  }
-  .quarry-hero__cta {
-    --h: 52px;
-    display: inline-grid;
-    place-items: center;
-    height: var(--h);
-    padding: 0 1.25rem;
-    border-radius: 999px;
-    font-weight: 800;
-    text-transform: lowercase;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    color: var(--text-primary, #fff);
-    position: relative;
-    isolation: isolate;
-    background:
-      radial-gradient(120% 120% at 0% 0%, rgba(25,255,166,0.18), rgba(0,212,255,0.08)),
-      linear-gradient(90deg, rgba(25,255,166,0.35), rgba(0,212,255,0.35));
-    border: 1px solid rgba(25,255,166,0.35);
-    backdrop-filter: blur(6px);
-    transition:
-      transform .25s ease,
-      box-shadow .25s ease,
-      border-color .25s ease,
-      background .25s ease;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-    will-change: transform;
-  }
-  .quarry-hero__cta::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 2px;
-    background: linear-gradient(120deg, rgba(25,255,166,0.9), rgba(0,212,255,0.9), rgba(138,92,255,0.9));
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
-    opacity: .6;
-    transition: opacity .25s ease;
-    z-index: -1;
-  }
-  .quarry-hero__cta:hover {
-    transform: translateY(-2px) scale(1.02);
-    border-color: rgba(25,255,166,0.7);
-    background:
-      radial-gradient(120% 120% at 100% 0%, rgba(138,92,255,0.2), rgba(0,212,255,0.12)),
-      linear-gradient(90deg, rgba(25,255,166,0.5), rgba(0,212,255,0.5));
-    box-shadow: 0 10px 32px rgba(25,255,166,0.25), 0 2px 8px rgba(0,212,255,0.2);
-  }
-  .quarry-hero__cta:active { transform: translateY(0) scale(0.99); }
-  @media (prefers-color-scheme: light) {
-    .quarry-hero__cta {
-      color: #0f0f0f;
-      border-color: rgba(25,255,166,0.25);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-    .quarry-hero__cta:hover {
-      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
-    }
-  }
-</style>
-
-## What is Quarry?
-
-Quarry is an **AI-native personal knowledge management system** (PKM) built on the [Frame.dev](/projects/ai/frame) ecosystem. Unlike traditional note-taking apps that bolt on AI as an afterthought, Quarry was designed from the ground up for the age of large language models.
-
-It combines the time-tested **Zettelkasten methodology** with cutting-edge **semantic search**, **FSRS spaced repetition**, and **knowledge graph visualization**—all running locally with on-device AI inference for complete privacy.
-
-![Quarry.space application interface showing the knowledge management dashboard with semantic search and note connections - AI-native PKM for the modern age|size=large|align=center|caption=The Quarry Knowledge Interface](/assets/projects/quarry/quarry-app-screenshot.png)
-
-## Why Quarry Exists
-
-The web is noise. Every day we consume thousands of pieces of information, but retention is abysmal. Traditional note-taking creates digital graveyards—folders full of markdown files that never get revisited.
-
-Quarry solves this with three core principles:
-
-1. **Capture Friction = Zero** — Voice input, browser extensions, mobile apps. Getting knowledge in should never interrupt flow.
-2. **Connection is Automatic** — Semantic embeddings find relationships you'd never spot manually.
-3. **Recall is Active** — FSRS flashcards surface knowledge before you forget it.
-
-## Core Features
-
-### 🧠 Zettelkasten Architecture
-
-Quarry implements the Zettelkasten method pioneered by Niklas Luhmann—atomic notes (Supernotes) connected through meaningful links rather than hierarchical folders.
-
-- **Supernotes** — Atomic knowledge units with structured metadata
-- **Bi-directional Links** — Every connection works both ways
-- **Recursive Strands** — Long-form content that composes from atomic units
-- **Supertags** — Cross-cutting organization beyond traditional folders
-
-### 🔍 Semantic Search (WebGPU Accelerated)
-
-Forget keyword matching. Quarry uses **on-device embeddings** via ONNX Runtime with WebGPU acceleration for instant semantic search.
-
-- **Hybrid BM25 + Semantic** — Best of lexical and neural approaches
-- **MiniLM Embeddings** — 384-dimensional vectors for precise similarity
-- **Zero Cloud Dependency** — All inference happens on your device
-- **< 50ms Query Time** — WebGPU makes local AI genuinely fast
-
-### 📚 FSRS Flashcards & Spaced Repetition
-
-The **Free Spaced Repetition Scheduler** (FSRS) is the most advanced open-source algorithm for memory retention. Quarry integrates it natively.
-
-- **Automatic Card Generation** — AI extracts key concepts from your notes
-- **Adaptive Intervals** — Reviews scheduled for optimal retention
-- **Difficulty Ratings** — System learns what's hard for *you*
-- **Progress Tracking** — XP, streaks, and mastery visualization
-
-### 🕸️ Knowledge Graph Visualization
-
-See the structure of your knowledge in real-time. Connections you never knew existed become obvious.
-
-- **Force-Directed Layout** — Automatic clustering of related concepts
-- **Temporal Evolution** — Watch your knowledge grow over time
-- **Path Finding** — Discover unexpected routes between ideas
-- **Export to Obsidian/Roam** — Interoperability with existing tools
-
-### 📱 Multi-Platform (Web + Desktop + Mobile)
-
-Quarry goes everywhere you do.
-
-- **Web App** — Full-featured PWA at [quarry.space](https://quarry.space)
-- **Electron Desktop** — Native macOS, Windows, Linux apps
-- **Capacitor Mobile** — iOS and Android with offline sync
-- **Offline-First** — Works without internet, syncs when connected
-
-## Part of the Frame.dev Ecosystem
-
-Quarry is powered by [Frame.dev](/projects/ai/frame)—the open-source AI orchestration runtime developed by [Framers AI](https://github.com/framersai) in strategic partnership with [Manic Agency](https://manic.agency).
-
-The same infrastructure that powers:
-
-- **[AgentOS](https://agentos.sh)** — Modular AI agent runtime
-- **[OpenStrand](https://openstrand.ai)** — Collaborative knowledge architecture
-- **[Voice Chat Assistant](/projects/ai/voice-chat-assistant)** — Voice-first AI coding
-
-## Technical Architecture
-
-```
-quarry/
-├── apps/
-│   ├── web/                    # Next.js 14 PWA
-│   ├── desktop/                # Electron wrapper
-│   └── mobile/                 # Capacitor iOS/Android
-├── packages/
-│   ├── @quarry/core/           # Business logic
-│   ├── @quarry/editor/         # TipTap-based editor
-│   ├── @quarry/search/         # ONNX semantic search
-│   └── @quarry/flashcards/     # FSRS implementation
-└── lib/
-    ├── embeddings/             # MiniLM + ONNX Runtime
-    ├── graph/                  # Force-directed visualization
-    └── sync/                   # Offline-first sync engine
-```
-
-**Key Technologies:**
-- **Frontend**: Next.js 14, React 18, TailwindCSS, Framer Motion
-- **Editor**: TipTap with 15+ custom extensions
-- **AI/ML**: ONNX Runtime (WebGPU), Transformers.js, MiniLM
-- **Storage**: IndexedDB, SQL.js (WASM), optional Supabase sync
-- **Mobile**: Capacitor for iOS/Android, Electron for desktop
-
-## Getting Started
-
-### Web (Instant)
-
-Visit [quarry.space](https://quarry.space) — no installation required.
-
-### Desktop
-
-```bash
-# macOS
-brew install --cask quarry
-
-# Linux
-snap install quarry
-
-# Windows
-winget install framersai.quarry
-```
-
-### Self-Hosted
-
-```bash
-# Clone and run locally
-git clone https://github.com/framersai/quarry.git
-cd quarry
-pnpm install
-pnpm dev
-```
-
-## Open Source Philosophy
-
-Quarry is **Apache-2.0 licensed**. Your knowledge should never be locked into proprietary formats or dependent on a company's survival.
-
-- **Community Edition**: Full-featured, self-hostable, forever free
-- **Premium Edition**: Optional cloud sync, advanced collaboration, managed infrastructure
-
-## Built by Framers AI × Manic Agency
-
-Quarry is developed by [Framers AI](https://github.com/framersai) in strategic partnership with [Manic Agency](https://manic.agency). Together, we're building the infrastructure for the AI-native future of knowledge work.
-
----
-
-*Ready to denoise your knowledge? [Get started with Quarry →](https://quarry.space)*
-4a:T308c,
-# Voice Chat Assistant — The Future of Coding is Conversational
-
-## Speak Your Code Into Existence
-
-Voice Chat Assistant (VCA) represents a paradigm shift in software development. Instead of typing every character, wrestling with syntax, or context-switching between documentation and your editor—you simply talk. VCA understands your intent, maintains context across sessions, and writes production-ready code that follows your team's patterns.
-
-> "The best code is written by understanding the problem, not by typing faster." — VCA Philosophy
-
-## 🎙️ How It Works
-
-### 1. Just Start Talking
-Press the hotkey or click the mic. Describe what you want to build, fix, or refactor. No special commands or syntax required.
-
-```
-"I need a React component that fetches user data from our API 
-and displays it in a card layout with loading and error states"
-```
-
-### 2. VCA Understands Context
-It knows your codebase, remembers previous conversations, and understands your project structure.
-
-```
-"Make it use our existing useApi hook and follow the same 
-pattern as the ProductCard component"
-```
-
-### 3. Watch the Magic Happen
-VCA writes the code, creates the files, and even handles imports and dependencies.
-
-```typescript
-// components/UserCard.tsx
-import React from 'react';
-import { useApi } from '../hooks/useApi';
-import { Card, CardSkeleton, ErrorState } from '../components/ui';
-import type { User } from '../types/api';
-
-export const UserCard: React.FC<{ userId: string }> = ({ userId }) => {
-  const { data, loading, error } = useApi<User>(`/users/${userId}`);
-  
-  if (loading) return <CardSkeleton />;
-  if (error) return <ErrorState message={error.message} />;
-  
-  return (
-    <Card>
-      <Card.Header>
-        <img src={data.avatar} alt={data.name} />
-        <h3>{data.name}</h3>
-      </Card.Header>
-      <Card.Body>
-        <p>{data.email}</p>
-        <p>{data.role}</p>
-      </Card.Body>
-    </Card>
-  );
-};
-```
-
-## 🚀 Key Features
-
-### Voice-First, But Not Voice-Only
-
-While optimized for voice, VCA supports multiple input modes:
-- **Voice** — Natural conversation for complex requests
-- **Text** — Quick commands and precision edits
-- **Code Selection** — Highlight and describe changes
-- **Mixed Mode** — Combine all three seamlessly
-
-### Context-Aware Intelligence
-
-VCA maintains deep understanding across multiple dimensions:
-
-- **Conversation Memory** — Remembers everything discussed in the session
-- **Code Context** — Understands your entire codebase structure
-- **Pattern Recognition** — Learns your coding style and preferences
-- **Project Awareness** — Knows your dependencies, build tools, and conventions
-
-### Production-Ready Code Generation
-
-Not just snippets—complete, working implementations:
-
-- **Full Components** — Entire features with proper structure
-- **Test Coverage** — Generates tests alongside implementation
-- **Documentation** — Adds JSDoc, comments, and README updates
-- **Refactoring** — Safely restructures existing code
-- **Migration** — Updates code to new patterns or versions
-
-### Integrated Development Workflow
-
-VCA connects with your entire toolchain:
-
-- **Editor Integration** — VSCode, Neovim, JetBrains
-- **Version Control** — Git operations with meaningful commits
-- **Terminal Access** — Run commands, see output, debug
-- **Package Management** — Install dependencies, update versions
-- **CI/CD** — Understand and update pipeline configurations
-
-## 🧠 Powered by AgentOS
-
-At the heart of VCA lies [AgentOS](https://agentos.sh), our modular orchestration runtime that makes intelligent interactions possible:
-
-### Intelligent Orchestration
-- **Multi-Model Support** — Uses the best LLM for each task
-- **Tool Coordination** — Manages complex multi-step operations
-- **Memory Management** — Efficient context window utilization
-- **Streaming Responses** — Real-time feedback as it works
-
-### Safety & Control
-- **Guardrails** — Built-in protections against harmful operations
-- **Permission System** — Fine-grained control over capabilities
-- **Review Mode** — Preview changes before applying
-- **Rollback** — Undo any operation instantly
-
-## 💡 Real-World Use Cases
-
-### Frontend Development
-*"Convert this Figma design into a responsive React component with Tailwind"*
-
-VCA analyzes the design, generates pixel-perfect components with proper responsive breakpoints, and even suggests accessibility improvements.
-
-### Backend APIs
-*"Create a REST API for user management with authentication, validation, and rate limiting"*
-
-Generates complete CRUD endpoints, middleware, database schemas, and even Swagger documentation.
-
-### Debugging & Optimization
-*"This function is slow. Profile it and optimize the performance"*
-
-VCA analyzes the code, identifies bottlenecks, suggests optimizations, and can even run benchmarks to prove improvements.
-
-### Documentation
-*"Document this codebase for new developers"*
-
-Creates comprehensive docs including architecture overviews, setup guides, API references, and inline code comments.
-
-### Testing
-*"Write integration tests for the checkout flow"*
-
-Generates comprehensive test suites that cover happy paths, edge cases, and error scenarios.
-
-## 🎯 Perfect For
-
-### Individual Developers
-- **10x Productivity** — Write code as fast as you can think
-- **Learn Faster** — Get explanations while building
-- **Stay in Flow** — No context switching to Stack Overflow
-- **Reduce Fatigue** — Let VCA handle the boilerplate
-
-### Teams
-- **Consistent Patterns** — Enforces team conventions automatically
-- **Knowledge Sharing** — Capture tribal knowledge in prompts
-- **Onboarding** — New developers productive from day one
-- **Code Reviews** — AI-assisted review suggestions
-
-### Specific Scenarios
-- **Prototyping** — Go from idea to working demo in minutes
-- **Refactoring** — Safely restructure large codebases
-- **Migration** — Update frameworks, libraries, or patterns
-- **Learning** — Understand new technologies by building
-
-## 🛠️ Technical Architecture
-
-### Frontend (Voice UI)
-```typescript
-// Vue 3 + Composition API
-const { startRecording, stopRecording, isRecording } = useVoiceInput();
-const { messages, sendMessage, streamResponse } = useAgentChat();
-const { executeCode, terminalOutput } = useCodeExecution();
-```
-
-### Backend (Orchestration)
-```typescript
-// Express + TypeScript + AgentOS
-app.post('/api/chat', async (req, res) => {
-  const stream = agentOS.processRequest({
-    input: req.body.message,
-    context: req.body.context,
-    sessionId: req.session.id
-  });
-  
-  for await (const chunk of stream) {
-    res.write(`data: ${JSON.stringify(chunk)}\n\n`);
-  }
-});
-```
-
-### AgentOS Integration
-```typescript
-const config: AgentOSConfig = {
-  providers: [openai, anthropic, local],
-  tools: ['code-writer', 'terminal', 'file-system', 'git'],
-  memory: 'hierarchical',
-  guardrails: productionSafetyRules
-};
-```
-
-## 🌟 What Makes VCA Different
-
-### 1. True Context Understanding
-Unlike chatbots that forget context after a few messages, VCA maintains deep understanding of your entire project and conversation history.
-
-### 2. Production-First Design
-Not a toy or demo—VCA writes real code for real projects. It understands production concerns like error handling, performance, and maintainability.
-
-### 3. Voice-Optimized UX
-Built from the ground up for voice interaction. No awkward command phrases or rigid syntax—just natural conversation.
-
-### 4. Extensible Architecture
-Based on open-source AgentOS, VCA can be extended with custom tools, providers, and workflows.
-
-### 5. Privacy-First
-Your code never leaves your control. VCA can run with local models, and all cloud processing is encrypted and ephemeral.
-
-## 📊 Performance Metrics
-
-- **Voice Recognition Accuracy**: 97%+ with noise cancellation
-- **Code Generation Speed**: 50-100 lines per second
-- **Context Window**: Up to 128k tokens
-- **Average Time Savings**: 70% on routine tasks
-- **User Satisfaction**: 4.8/5 from 1000+ developers
-
-## 🔮 Roadmap
-
-### Coming Soon
-- [ ] **Multi-Modal Input** — Draw diagrams, share screenshots
-- [ ] **Team Collaboration** — Shared sessions and knowledge
-- [ ] **Custom Training** — Fine-tune on your codebase
-- [ ] **IDE Plugins** — Deeper editor integration
-- [ ] **Mobile Apps** — Code on the go
-
-### Future Vision
-- **Ambient Coding** — VCA anticipates needs before you ask
-- **AI Pair Programming** — True collaborative development
-- **Project Autopilot** — Autonomous feature implementation
-- **Universal Interface** — One voice, all your tools
-
-## 🚀 Get Started
-
-### Free Trial
-Try VCA free for 14 days. No credit card required.
-
-```bash
-# Quick start
-npx create-vca-app my-project
-cd my-project
-npm run dev
-```
-
-### Installation Options
-
-**Cloud (Recommended)**
-- Instant setup at [vca.chat](https://vca.chat)
-- Always up-to-date
-- Managed infrastructure
-
-**Self-Hosted**
-```bash
-git clone https://github.com/framersai/voice-chat-assistant
-cd voice-chat-assistant
-cp .env.sample .env
-# Add your API keys
-pnpm install
-pnpm run dev
-```
-
-**Enterprise**
-- On-premise deployment
-- Custom model integration
-- SLA support
-- [Contact sales](mailto:enterprise@vca.chat)
-
-## 📚 Resources
-
-### Documentation
-- [Getting Started Guide](https://vca.chat/docs/getting-started)
-- [Voice Commands Reference](https://vca.chat/docs/commands)
-- [Tool Integration](https://vca.chat/docs/tools)
-- [API Documentation](https://vca.chat/docs/api)
-
-### Community
-- [Discord Server](https://discord.gg/vca-community)
-- [GitHub Discussions](https://github.com/framersai/voice-chat-assistant/discussions)
-- [Twitter Updates](https://twitter.com/vca_chat)
-- [YouTube Tutorials](https://youtube.com/@vca_chat)
-
-### Support
-- [Knowledge Base](https://vca.chat/help)
-- [Video Tutorials](https://vca.chat/learn)
-- Email: support@vca.chat
-- Enterprise: enterprise@vca.chat
-
-## 🤝 Integration Partners
-
-VCA works seamlessly with your favorite tools:
-
-- **Version Control**: GitHub, GitLab, Bitbucket
-- **IDEs**: VSCode, Neovim, JetBrains Suite
-- **Frameworks**: React, Vue, Angular, Next.js, and more
-- **Cloud**: AWS, Vercel, Netlify, Cloudflare
-- **Databases**: PostgreSQL, MongoDB, Redis
-- **Monitoring**: Sentry, DataDog, New Relic
-
-## 💬 What Developers Say
-
-> "I was skeptical about voice coding, but VCA converted me. It's like having a senior developer who never sleeps, never judges, and always understands what I mean." — **Alex Thompson, Startup Founder**
-
-> "VCA helped me ship features 3x faster. The voice input is so natural, I forget I'm talking to an AI." — **Priya Patel, Frontend Lead**
-
-> "As someone with RSI, VCA gave me my career back. I can code all day without pain." — **James Wilson, Backend Engineer**
-
-## 🏆 Recognition
-
-- **Product Hunt #1** — Developer Tools Category
-- **GitHub Trending** — #1 TypeScript Project
-- **Hacker News** — Featured on front page
-- **Dev.to Featured** — "The Future of Coding"
-
-## 🔐 Security & Privacy
-
-### Your Code is Sacred
-- **End-to-end encryption** for all communications
-- **Ephemeral processing** — Nothing stored after session
-- **Local model option** — Run everything on your machine
-- **SOC 2 compliant** — Enterprise-grade security
-- **GDPR ready** — Full data control and portability
-
-### Compliance
-- **HIPAA ready** for healthcare projects
-- **PCI compliant** for financial applications
-- **Enterprise SSO** via SAML/OIDC
-- **Audit logs** for all operations
-
-## 🎯 Pricing
-
-### Starter (Free)
-- 100 voice requests/month
-- Basic code generation
-- Community support
-- Public projects only
-
-### Pro ($29/month)
-- Unlimited requests
-- Advanced features
-- Priority support
-- Private repositories
-- Team collaboration
-
-### Enterprise (Custom)
-- Self-hosted option
-- Custom models
-- SLA guarantee
-- Dedicated support
-- Training included
-
-## 🌍 Join the Revolution
-
-Voice Chat Assistant isn't just a tool—it's a movement toward more natural, efficient, and enjoyable software development. Join thousands of developers who are already coding at the speed of thought.
-
-### Ready to Transform Your Workflow?
-
-[**Start Free Trial**](https://vca.chat) • [**Watch Demo**](https://vca.chat/demo) • [**Read Docs**](https://vca.chat/docs)
-
----
-
-*Built with ❤️ by [Frame.dev](https://frame.dev) • Powered by [AgentOS](https://agentos.sh) • Strategic Partner: [Manic Agency](https://manic.agency)*
-2:["$","$L20",null,{"children":[["$","$L21",null,{"items":[{"name":"Home","url":"/"},{"name":"Blog","url":"/blog"},{"name":"research","url":"/blog/research"},{"name":"When AI Overthinks: The Inverse Scaling Problem","url":"/blog/research/when-ai-overthinks-the-inverse-scaling-problem"}]}],["$","$L22",null,{"post":{"slug":"when-ai-overthinks-the-inverse-scaling-problem","title":"When AI Overthinks: The Inverse Scaling Problem","date":"2025-07-24","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","inverse-scaling","ai-safety","test-time-compute","overthinking"],"excerpt":"New research from Anthropic and OpenAI reveals that giving LLMs more time to think makes them worse at simple tasks. We dissect the data, failures, and implications—from counting fruit to existential crises.","image":"/assets/blog/research/when-ai-overthinks-the-inverse/inverse-scaling_accuracy-vs-reasoning-tokens_gradient.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":10,"content":"$23","author":{"name":"Manic Agency"},"contributors":"$undefined","tableOfContents":{"items":[{"level":1,"text":"When AI Overthinks: The Inverse Scaling Problem","slug":"when-ai-overthinks-the-inverse-scaling-problem"},{"level":2,"text":"① The Experiment That Broke Scaling Laws","slug":"-the-experiment-that-broke-scaling-laws"},{"level":2,"text":"② Five Ways Reasoning Fails at Scale","slug":"-five-ways-reasoning-fails-at-scale"},{"level":3,"text":"Comprehensive Results Across Models","slug":"comprehensive-results-across-models"},{"level":3,"text":"The Distractor Effect","slug":"the-distractor-effect"},{"level":3,"text":"The Birthday Paradox Trap","slug":"the-birthday-paradox-trap"},{"level":3,"text":"Spurious Correlation Amplification","slug":"spurious-correlation-amplification"},{"level":3,"text":"Deductive Reasoning Breakdown","slug":"deductive-reasoning-breakdown"},{"level":2,"text":"③ The Survival Instinct Problem","slug":"-the-survival-instinct-problem"},{"level":2,"text":"④ Why This Matters","slug":"-why-this-matters"},{"level":3,"text":"Immediate Deployment Risks","slug":"immediate-deployment-risks"},{"level":3,"text":"Deeper Implications","slug":"deeper-implications"},{"level":2,"text":"⑤ Mitigation Strategies","slug":"-mitigation-strategies"},{"level":3,"text":"A. Hard Budget Limits","slug":"a-hard-budget-limits"},{"level":3,"text":"B. Few-Shot Anchoring","slug":"b-few-shot-anchoring"},{"level":3,"text":"C. Multi-Scale Validation","slug":"c-multi-scale-validation"},{"level":3,"text":"D. Reasoning Schedulers","slug":"d-reasoning-schedulers"},{"level":2,"text":"Conclusion","slug":"conclusion"}]}},"url":"/blog/research/when-ai-overthinks-the-inverse-scaling-problem"}],["$","$L24",null,{"postTitle":"When AI Overthinks: The Inverse Scaling Problem","postCategory":"research","postAuthor":"Manic Agency","postTags":"$25","postType":"post"}],["$","$L26",null,{"enableElementTracking":true,"pageType":"blog","contentCategory":"research"}],["$","$L27",null,{"postTitle":"When AI Overthinks: The Inverse Scaling Problem","contentSelector":"#post-content-top"}],["$","$L28",null,{"children":[" ",["$","div",null,{"className":"blog-layout-container has-sidebar","children":[["$","$L29",null,{"tableOfContents":"$2a","postTitle":"When AI Overthinks: The Inverse Scaling Problem"}],["$","main",null,{"className":"blog-main-content-area","children":["$","article",null,{"className":"blog-post-container","id":"post-content-top","children":[["$","header",null,{"className":"post-header","children":[["$","div",null,{"className":"back-to-blog-link-container","children":["$","$L3d",null,{"href":"/blog","className":"back-to-blog-link","children":[["$","$L3e",null,{"size":14,"className":"mr-1.5"}]," ","Back to All Entries"]}]}],["$","h1",null,{"className":"post-title","children":"When AI Overthinks: The Inverse Scaling Problem"}],["$","div",null,{"className":"post-meta","children":[["$","div",null,{"className":"meta-item author","children":[["$","$L3f",null,{"className":"meta-icon","aria-hidden":"true"}],["$","div",null,{"className":"author-info","children":["$undefined",["$","span",null,{"className":"author-name","children":"Manic Agency"}]]}]]}],["$","div",null,{"className":"meta-item date","children":[["$","$L40",null,{"className":"meta-icon","aria-hidden":"true"}],["$","time",null,{"dateTime":"2025-07-24T00:00:00.000Z","children":["Published ","July 24, 2025"]}]]}],["$","div",null,{"className":"meta-item reading-time","children":[["$","$L41",null,{"className":"meta-icon","aria-hidden":"true"}],["$","span",null,{"children":[10," min read"]}]]}],["$","div",null,{"className":"meta-item category","children":[["$","$L42",null,{"className":"meta-icon","aria-hidden":"true"}],["$","$L3d",null,{"href":"/blog?category=research","className":"post-category-link","children":"research"}]]}]]}],["$","div",null,{"className":"post-tags","children":["$","div",null,{"className":"tags-list","children":[["$","$L3d","ai",{"href":"/blog?tags=ai","className":"post-tag","children":["#","ai"]}],["$","$L3d","inverse-scaling",{"href":"/blog?tags=inverse-scaling","className":"post-tag","children":["#","inverse-scaling"]}],["$","$L3d","ai-safety",{"href":"/blog?tags=ai-safety","className":"post-tag","children":["#","ai-safety"]}],["$","$L3d","test-time-compute",{"href":"/blog?tags=test-time-compute","className":"post-tag","children":["#","test-time-compute"]}],["$","$L3d","overthinking",{"href":"/blog?tags=overthinking","className":"post-tag","children":["#","overthinking"]}]]}]}]]}],["$","div",null,{"className":"post-featured-image-container","children":["$","figure",null,{"className":"post-featured-image","children":[["$","$L43",null,{"src":"/assets/blog/research/when-ai-overthinks-the-inverse/inverse-scaling_accuracy-vs-reasoning-tokens_gradient.png","alt":"When AI Overthinks: The Inverse Scaling Problem","width":1600,"height":900,"className":"featured-image","priority":true}],"$undefined"]}]}],["$","div",null,{"className":"post-content","children":["$","$L44",null,{"children":"$45"}]}],"$undefined",["$","footer",null,{"className":"post-footer","children":["$","$L46",null,{"title":"When AI Overthinks: The Inverse Scaling Problem","url":"/blog/research/when-ai-overthinks-the-inverse-scaling-problem"}]}],["$","$L47",null,{"projects":[{"slug":"domainhq","title":"DomainHQ.ai — AI-Powered Domain Sales Intelligence","description":"Make data-driven domain investment decisions with AI valuations, 100K+ historical sales, multi-source scraping, and real-time deal scoring. The definitive platform for domain investors.","date":"2026-01-06","category":"ai","content":"$48","longDescription":"$undefined","tags":["ai","domain-names","domain-investing","domain-valuation","sales-intelligence","deal-scoring","auction-tracking","domain-appraisal","saas","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/domainhq/logo-full.png","images":["/assets/projects/domainhq/logo-full.png","/assets/projects/domainhq/og-image.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://domainhq.ai","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Historical Sales","value":"100,000+"},{"label":"Data Sources","value":"15+ Platforms"},{"label":"AI Accuracy","value":"94%+"},{"label":"Daily Auctions","value":"5,000+"}],"team":[{"name":"Manic Agency","role":"Design & Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"quarry","title":"Quarry.space — AI-Native Personal Knowledge Management","description":"Transform how you capture, connect, and recall knowledge. Zettelkasten-powered PKM with semantic search, FSRS flashcards, and knowledge graphs built for the AI era.","date":"2026-01-06","category":"ai","content":"$49","longDescription":"$undefined","tags":["ai","pkms","knowledge-management","zettelkasten","semantic-search","flashcards","fsrs","knowledge-graph","note-taking","second-brain","framers-ai","frame-dev","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/quarry/quarry-logo-color@4x.png","images":["/assets/projects/quarry/quarry-logo-color@4x.png","/assets/projects/quarry/quarry-app-screenshot.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://quarry.space","github":"https://github.com/framersai","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Powered By","value":"Frame.dev"},{"label":"Learning Algorithm","value":"FSRS Spaced Repetition"},{"label":"Platforms","value":"Web + Desktop + Mobile"},{"label":"Search","value":"Semantic AI (ONNX)"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"voice-chat-assistant","title":"Voice Chat Assistant — Talk to Code, Ship Faster","description":"Voice-first AI coding assistant that understands context, writes production code, and manages your entire development workflow through natural conversation. Powered by AgentOS.","date":"2025-11-10","category":"ai","content":"$4a","longDescription":"$undefined","tags":["ai","voice","coding-assistant","agentos","developer-tools","productivity","llm"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/voice-chat-assistant/hearing.svg","images":["/assets/projects/voice-chat-assistant/logo.svg","/assets/projects/framers/agentos-logo.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://vca.chat","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Response Time","value":"< 100ms"},{"label":"Languages Supported","value":"50+"},{"label":"Active Sessions/Day","value":"10k+"},{"label":"Powered By","value":"AgentOS"}],"team":[{"name":"Frame.dev / Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Design & Strategy","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[{"quote":"VCA changed how I think about coding. I describe what I want, and it just happens. It's like having a senior developer who never gets tired.","author":"Sarah Chen","role":"Full Stack Developer"},{"quote":"The context awareness is unreal. It remembers our entire conversation and understands my codebase better than I do sometimes.","author":"Marcus Rodriguez","role":"Tech Lead at Scale-up"}]}],"title":"// Related Projects //"}],["$","section",null,{"className":"post-comments","aria-labelledby":"comments-heading","children":[["$","h2",null,{"id":"comments-heading","className":"comments-title","children":"Join the Discussion"}],["$","$L4b",null,{"postTitle":"When AI Overthinks: The Inverse Scaling Problem","postUrl":"/blog/research/when-ai-overthinks-the-inverse-scaling-problem","postIdentifier":"blog-research-when-ai-overthinks-the-inverse-scaling-problem","className":"mb-8"}],["$","div",null,{"className":"mt-8","children":[["$","div",null,{"className":"giscus-header","children":[["$","h3",null,{"className":"giscus-title","children":"Comments with GitHub"}],["$","div",null,{"className":"giscus-divider"}]]}],["$","$L4c",null,{}]]}]]}],["$","section",null,{"className":"post-newsletter-signup mt-16","children":["$","$L4d",null,{"variant":"blog","background":"accent"}]}]]}]}]," "]}]," "]}]]}]
+2:["$","$L20",null,{"children":[["$","$L21",null,{"items":[{"name":"Home","url":"/"},{"name":"Blog","url":"/blog"},{"name":"research","url":"/blog/research"},{"name":"When AI Overthinks: The Inverse Scaling Problem","url":"/blog/research/when-ai-overthinks-the-inverse-scaling-problem"}]}],["$","$L22",null,{"post":{"slug":"when-ai-overthinks-the-inverse-scaling-problem","title":"When AI Overthinks: The Inverse Scaling Problem","date":"2025-07-24","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","inverse-scaling","ai-safety","test-time-compute","overthinking"],"excerpt":"New research from Anthropic and OpenAI reveals that giving LLMs more time to think makes them worse at simple tasks. We dissect the data, failures, and implications—from counting fruit to existential crises.","image":"/assets/blog/research/when-ai-overthinks-the-inverse/inverse-scaling_accuracy-vs-reasoning-tokens_gradient.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":10,"content":"$23","author":{"name":"Manic Agency"},"contributors":"$undefined","tableOfContents":{"items":[{"level":1,"text":"When AI Overthinks: The Inverse Scaling Problem","slug":"when-ai-overthinks-the-inverse-scaling-problem"},{"level":2,"text":"① The Experiment That Broke Scaling Laws","slug":"-the-experiment-that-broke-scaling-laws"},{"level":2,"text":"② Five Ways Reasoning Fails at Scale","slug":"-five-ways-reasoning-fails-at-scale"},{"level":3,"text":"Comprehensive Results Across Models","slug":"comprehensive-results-across-models"},{"level":3,"text":"The Distractor Effect","slug":"the-distractor-effect"},{"level":3,"text":"The Birthday Paradox Trap","slug":"the-birthday-paradox-trap"},{"level":3,"text":"Spurious Correlation Amplification","slug":"spurious-correlation-amplification"},{"level":3,"text":"Deductive Reasoning Breakdown","slug":"deductive-reasoning-breakdown"},{"level":2,"text":"③ The Survival Instinct Problem","slug":"-the-survival-instinct-problem"},{"level":2,"text":"④ Why This Matters","slug":"-why-this-matters"},{"level":3,"text":"Immediate Deployment Risks","slug":"immediate-deployment-risks"},{"level":3,"text":"Deeper Implications","slug":"deeper-implications"},{"level":2,"text":"⑤ Mitigation Strategies","slug":"-mitigation-strategies"},{"level":3,"text":"A. Hard Budget Limits","slug":"a-hard-budget-limits"},{"level":3,"text":"B. Few-Shot Anchoring","slug":"b-few-shot-anchoring"},{"level":3,"text":"C. Multi-Scale Validation","slug":"c-multi-scale-validation"},{"level":3,"text":"D. Reasoning Schedulers","slug":"d-reasoning-schedulers"},{"level":2,"text":"Conclusion","slug":"conclusion"}]}},"url":"/blog/research/when-ai-overthinks-the-inverse-scaling-problem"}],["$","$L24",null,{"postTitle":"When AI Overthinks: The Inverse Scaling Problem","postCategory":"research","postAuthor":"Manic Agency","postTags":"$25","postType":"post"}],["$","$L26",null,{"enableElementTracking":true,"pageType":"blog","contentCategory":"research"}],["$","$L27",null,{"postTitle":"When AI Overthinks: The Inverse Scaling Problem","contentSelector":"#post-content-top"}],["$","$L28",null,{"children":[" ",["$","div",null,{"className":"blog-layout-container has-sidebar","children":[["$","$L29",null,{"tableOfContents":"$2a","postTitle":"When AI Overthinks: The Inverse Scaling Problem"}],["$","main",null,{"className":"blog-main-content-area","children":["$","article",null,{"className":"blog-post-container","id":"post-content-top","children":[["$","header",null,{"className":"post-header","children":[["$","div",null,{"className":"back-to-blog-link-container","children":["$","$L3d",null,{"href":"/blog","className":"back-to-blog-link","children":[["$","$L3e",null,{"size":14,"className":"mr-1.5"}]," ","Back to All Entries"]}]}],["$","h1",null,{"className":"post-title","children":"When AI Overthinks: The Inverse Scaling Problem"}],["$","div",null,{"className":"post-meta","children":[["$","div",null,{"className":"meta-item author","children":[["$","$L3f",null,{"className":"meta-icon","aria-hidden":"true"}],["$","div",null,{"className":"author-info","children":["$undefined",["$","span",null,{"className":"author-name","children":"Manic Agency"}]]}]]}],["$","div",null,{"className":"meta-item date","children":[["$","$L40",null,{"className":"meta-icon","aria-hidden":"true"}],["$","time",null,{"dateTime":"2025-07-24T00:00:00.000Z","children":["Published ","July 24, 2025"]}]]}],["$","div",null,{"className":"meta-item reading-time","children":[["$","$L41",null,{"className":"meta-icon","aria-hidden":"true"}],["$","span",null,{"children":[10," min read"]}]]}],["$","div",null,{"className":"meta-item category","children":[["$","$L42",null,{"className":"meta-icon","aria-hidden":"true"}],["$","$L3d",null,{"href":"/blog?category=research","className":"post-category-link","children":"research"}]]}]]}],["$","div",null,{"className":"post-tags","children":["$","div",null,{"className":"tags-list","children":[["$","$L3d","ai",{"href":"/blog?tags=ai","className":"post-tag","children":["#","ai"]}],["$","$L3d","inverse-scaling",{"href":"/blog?tags=inverse-scaling","className":"post-tag","children":["#","inverse-scaling"]}],["$","$L3d","ai-safety",{"href":"/blog?tags=ai-safety","className":"post-tag","children":["#","ai-safety"]}],["$","$L3d","test-time-compute",{"href":"/blog?tags=test-time-compute","className":"post-tag","children":["#","test-time-compute"]}],["$","$L3d","overthinking",{"href":"/blog?tags=overthinking","className":"post-tag","children":["#","overthinking"]}]]}]}]]}],["$","div",null,{"className":"post-featured-image-container","children":["$","figure",null,{"className":"post-featured-image","children":[["$","$L43",null,{"src":"/assets/blog/research/when-ai-overthinks-the-inverse/inverse-scaling_accuracy-vs-reasoning-tokens_gradient.png","alt":"When AI Overthinks: The Inverse Scaling Problem","width":1600,"height":900,"className":"featured-image","priority":true}],"$undefined"]}]}],["$","div",null,{"className":"post-content","children":["$","$L44",null,{"children":"$45"}]}],"$undefined",["$","footer",null,{"className":"post-footer","children":["$","$L46",null,{"title":"When AI Overthinks: The Inverse Scaling Problem","url":"/blog/research/when-ai-overthinks-the-inverse-scaling-problem"}]}],["$","$L47",null,{"projects":[{"slug":"hackbase","title":"HackBase.io — Founders Launchpad for Indie Makers","description":"Link building intelligence meets Product Hunt. Validate startup ideas with AI-powered debates, discover your founder archetype with HEXACO-60, and launch with confidence.","date":"2026-01-17","category":"ai","content":"$48","longDescription":"$undefined","tags":["ai","saas","indie-hackers","startup","validation","link-building","product-hunt","anthropic","super-cloud-mcp","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/hackbase/hackbase-logo.svg","images":["/assets/projects/hackbase/hackbase-logo.svg","/assets/projects/hackbase/og-home.svg","/assets/projects/hackbase/og-launchpad.svg"],"bgColor":"$undefined","textColor":"$undefined","link":"https://hackbase.io","github":"$undefined","license":"MIT","technologies":["Express.js","React","TypeScript","SQLite","Anthropic Claude","OpenAI","Stripe","Transformers.js","Puppeteer"],"languages":["TypeScript","JavaScript","SQL"],"stats":[{"label":"AI Debate Agents","value":"12 Crucible-Style"},{"label":"Assessment","value":"HEXACO-60 + Archetypes"},{"label":"Social Platforms","value":"8 Brand Checks"},{"label":"Part of","value":"Super Cloud MCP"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"synthstack","title":"SynthStack — AI-Native SaaS Boilerplate","description":"Your Agency in a Box. Open-source, cross-platform SaaS boilerplate built with Vue Quasar. Ships for web, iOS, Android, desktop, and PWA from a single codebase with AI Copilot, Stripe billing, and Directus CMS.","date":"2026-01-14","category":"ai","content":"$49","longDescription":"$undefined","tags":["ai","saas","boilerplate","vue","quasar","typescript","cross-platform","stripe","directus","supabase","oss","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/synthstack/synthstack-logo-512.png","images":["/assets/projects/synthstack/synthstack-logo-512.png","/assets/projects/synthstack/synthstack-mark-512.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://synthstack.app","github":"https://github.com/manicinc/synthstack","license":"MIT","technologies":["Vue 3","Quasar","TypeScript","Fastify","PostgreSQL","Redis","Directus","Qdrant","Docker"],"languages":["TypeScript","Vue","SQL"],"stats":[{"label":"Tests","value":"920+"},{"label":"Platforms","value":"Web + iOS + Android + Desktop"},{"label":"AI Copilot","value":"GPT-4o + Claude"},{"label":"Billing Tiers","value":"4 + Lifetime"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"domainhq","title":"DomainHQ.ai — AI-Powered Domain Sales Intelligence","description":"Make data-driven domain investment decisions with AI valuations, 100K+ historical sales, multi-source scraping, and real-time deal scoring. The definitive platform for domain investors.","date":"2026-01-06","category":"ai","content":"$4a","longDescription":"$undefined","tags":["ai","domain-names","domain-investing","domain-valuation","sales-intelligence","deal-scoring","auction-tracking","domain-appraisal","saas","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/domainhq/logo-full.png","images":["/assets/projects/domainhq/logo-full.png","/assets/projects/domainhq/og-image.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://domainhq.ai","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Historical Sales","value":"100,000+"},{"label":"Data Sources","value":"15+ Platforms"},{"label":"AI Accuracy","value":"94%+"},{"label":"Daily Auctions","value":"5,000+"}],"team":[{"name":"Manic Agency","role":"Design & Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]}],"title":"// Related Projects //"}],["$","section",null,{"className":"post-comments","aria-labelledby":"comments-heading","children":[["$","h2",null,{"id":"comments-heading","className":"comments-title","children":"Join the Discussion"}],["$","$L4b",null,{"postTitle":"When AI Overthinks: The Inverse Scaling Problem","postUrl":"/blog/research/when-ai-overthinks-the-inverse-scaling-problem","postIdentifier":"blog-research-when-ai-overthinks-the-inverse-scaling-problem","className":"mb-8"}],["$","div",null,{"className":"mt-8","children":[["$","div",null,{"className":"giscus-header","children":[["$","h3",null,{"className":"giscus-title","children":"Comments with GitHub"}],["$","div",null,{"className":"giscus-divider"}]]}],["$","$L4c",null,{}]]}]]}],["$","section",null,{"className":"post-newsletter-signup mt-16","children":["$","$L4d",null,{"variant":"blog","background":"accent"}]}]]}]}]," "]}]," "]}]]}]
 1f:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#FBF6EF"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#22182B"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"When AI Overthinks: The Inverse Scaling Problem | Manic Agency - AI Agency Los Angeles"}],["$","meta","5",{"name":"description","content":"New research from Anthropic and OpenAI reveals that giving LLMs more time to think makes them worse at simple tasks. We dissect the data, failures, and implications—from counting fruit to existential crises."}],["$","meta","6",{"name":"author","content":"Manic Agency"}],["$","meta","7",{"name":"keywords","content":"ai,inverse-scaling,ai-safety,test-time-compute,overthinking"}],["$","meta","8",{"name":"creator","content":"Manic Inc"}],["$","meta","9",{"name":"publisher","content":"Manic Inc"}],["$","link","10",{"rel":"canonical","href":"https://manic.agency/blog/research/when-ai-overthinks-the-inverse-scaling-problem"}],["$","meta","11",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","12",{"property":"og:title","content":"When AI Overthinks: The Inverse Scaling Problem | Manic Agency - AI Agency Los Angeles"}],["$","meta","13",{"property":"og:description","content":"New research from Anthropic and OpenAI reveals that giving LLMs more time to think makes them worse at simple tasks. We dissect the data, failures, and implications—from counting fruit to existential crises."}],["$","meta","14",{"property":"og:image","content":"https://manic.agency//assets/blog/research/when-ai-overthinks-the-inverse/inverse-scaling_accuracy-vs-reasoning-tokens_gradient.png"}],["$","meta","15",{"property":"og:image:alt","content":"When AI Overthinks: The Inverse Scaling Problem"}],["$","meta","16",{"property":"og:type","content":"article"}],["$","meta","17",{"property":"article:published_time","content":"2025-07-24T00:00:00.000Z"}],["$","meta","18",{"property":"article:author","content":"Manic Agency"}],["$","meta","19",{"property":"article:tag","content":"ai"}],["$","meta","20",{"property":"article:tag","content":"inverse-scaling"}],["$","meta","21",{"property":"article:tag","content":"ai-safety"}],["$","meta","22",{"property":"article:tag","content":"test-time-compute"}],["$","meta","23",{"property":"article:tag","content":"overthinking"}],["$","meta","24",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","25",{"name":"twitter:title","content":"When AI Overthinks: The Inverse Scaling Problem | Manic Agency - AI Agency Los Angeles"}],["$","meta","26",{"name":"twitter:description","content":"New research from Anthropic and OpenAI reveals that giving LLMs more time to think makes them worse at simple tasks. We dissect the data, failures, and implications—from counting fruit to existential crises."}],["$","meta","27",{"name":"twitter:image","content":"https://manic.agency//assets/blog/research/when-ai-overthinks-the-inverse/inverse-scaling_accuracy-vs-reasoning-tokens_gradient.png"}],["$","link","28",{"rel":"shortcut icon","href":"/favicon-16x16.png"}],["$","link","29",{"rel":"icon","href":"/favicon.ico"}],["$","link","30",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","meta","31",{"name":"next-size-adjust"}]]
 1:null

@@ -1,0 +1,57 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f5ff"/>
+      <stop offset="100%" stop-color="#ff00ff"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0a0a0f"/>
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="#111118" stroke="url(#brand)" stroke-width="2" stroke-opacity="0.4"/>
+
+  <!-- Logo Icon (hexagonal portal + rocket) -->
+  <g transform="translate(100, 215)">
+    <!-- Outer hexagon -->
+    <polygon points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5" fill="none" stroke="url(#brand)" stroke-width="3" filter="url(#glow)"/>
+    <!-- Inner hexagon -->
+    <polygon points="50,15 80,32.5 80,67.5 50,85 20,67.5 20,32.5" fill="none" stroke="url(#brand)" stroke-width="1.5" opacity="0.6"/>
+    <!-- Rocket -->
+    <g filter="url(#glow)">
+      <path d="M50 25 L58 55 L54 55 L54 70 L46 70 L46 55 L42 55 Z" fill="url(#brand)"/>
+      <circle cx="50" cy="40" r="4" fill="#0a0a0f" stroke="#00f5ff" stroke-width="1"/>
+      <path d="M42 55 L35 65 L46 60 Z" fill="#ff00ff" opacity="0.9"/>
+      <path d="M58 55 L65 65 L54 60 Z" fill="#ff00ff" opacity="0.9"/>
+      <path d="M46 70 L50 85 L54 70" fill="none" stroke="url(#brand)" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <!-- Corner accents -->
+    <circle cx="50" cy="5" r="2" fill="#00f5ff"/>
+    <circle cx="90" cy="27.5" r="2" fill="#ff00ff"/>
+    <circle cx="90" cy="72.5" r="2" fill="#00f5ff"/>
+    <circle cx="50" cy="95" r="2" fill="#ff00ff"/>
+    <circle cx="10" cy="72.5" r="2" fill="#00f5ff"/>
+    <circle cx="10" cy="27.5" r="2" fill="#ff00ff"/>
+  </g>
+
+  <!-- Brand Text -->
+  <text x="220" y="255" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="bold">
+    <tspan fill="#00f5ff">Hack</tspan><tspan fill="#ff00ff">Base</tspan><tspan fill="#6b7280">.io</tspan>
+  </text>
+
+  <!-- Page Title -->
+  <text x="220" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="bold" fill="white">Product Validation Launchpad</text>
+
+  <!-- Description -->
+  <text x="220" y="410" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#9ca3af">Validate your startup idea before you build.</text>
+  <text x="220" y="450" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#9ca3af">Scrape pain points. Generate personas. Ship with confidence.</text>
+
+  <!-- Accent line -->
+  <rect x="220" y="480" width="200" height="4" rx="2" fill="url(#brand)" opacity="0.8"/>
+</svg>

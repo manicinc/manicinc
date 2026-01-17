@@ -86,7 +86,7 @@ f:I[12025,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","stat
             }
           }
         })();
-      0:["manic-agency-1767815351905",[[["",{"children":["blog",{"children":[["category","tutorials","d"],{"children":[["slug","building-magiclogger-and-magic","d"],{"children":["__PAGE__?{\"category\":\"tutorials\",\"slug\":\"building-magiclogger-and-magic\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["category","tutorials","d"],{"children":[["slug","building-magiclogger-and-magic","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7589854758514563.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/2a1fdc91e2d69a25.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/6517f724e0c34e4b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/4a49f8c87e29773c.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/fbcf5add168be5ca.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/31a0afff5523f0ee.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/94e7d866c9e42adb.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/8d146102ec06a500.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"preconnect","href":"https://static.cloudflareinsights.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.jsdelivr.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://res.cloudinary.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}]]}]}]}]]}]]}]],null],null],["$L1f",null]]]]
+      0:["manic-agency-1768692621413",[[["",{"children":["blog",{"children":[["category","tutorials","d"],{"children":[["slug","building-magiclogger-and-magic","d"],{"children":["__PAGE__?{\"category\":\"tutorials\",\"slug\":\"building-magiclogger-and-magic\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["category","tutorials","d"],{"children":[["slug","building-magiclogger-and-magic","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7589854758514563.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/2a1fdc91e2d69a25.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/6517f724e0c34e4b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/4a49f8c87e29773c.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/fbcf5add168be5ca.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/31a0afff5523f0ee.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/94e7d866c9e42adb.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/8d146102ec06a500.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"preconnect","href":"https://static.cloudflareinsights.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.jsdelivr.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://res.cloudinary.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}]]}]}]}]]}]]}]],null],null],["$L1f",null]]]]
 20:I[54680,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-e61082fd20a6bf4e.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
 21:I[18745,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-e61082fd20a6bf4e.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
 22:I[94058,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-e61082fd20a6bf4e.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
@@ -105,9 +105,9 @@ f:I[12025,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","stat
 44:I[30603,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-e61082fd20a6bf4e.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"CustomMarkdownRenderer"]
 46:I[74644,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-e61082fd20a6bf4e.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
 47:I[75541,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-e61082fd20a6bf4e.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
-49:I[28054,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-e61082fd20a6bf4e.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
-4a:I[4681,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-e61082fd20a6bf4e.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
-4b:I[99775,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-e61082fd20a6bf4e.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
+4a:I[28054,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-e61082fd20a6bf4e.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
+4b:I[4681,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-e61082fd20a6bf4e.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
+4c:I[99775,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-e92c5a01f0a0e059.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-e61082fd20a6bf4e.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
 23:T642c,# Building MagicLogger and MAGIC: A Universal Logging Standard for Color
 
 **GitHub link: [https://github.com/manicinc/magiclogger](https://github.com/manicinc/magiclogger)**
@@ -1224,6 +1224,320 @@ const logger = createWinstonCompatible({ verbose: true });
 
 MagicLogger is currently in development and will be available soon. Stay tuned for its release!
 
-Built with ❤️ by [Manic Agency](https://manic.agency) - We do experimental design & development2:["$","$L20",null,{"children":[["$","$L21",null,{"items":[{"name":"Home","url":"/"},{"name":"Blog","url":"/blog"},{"name":"tutorials","url":"/blog/tutorials"},{"name":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color","url":"/blog/tutorials/building-magiclogger-and-magic"}]}],["$","$L22",null,{"post":{"slug":"building-magiclogger-and-magic","title":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color","date":"2025-10-15","lastModified":"$undefined","draft":false,"category":"tutorials","tags":["typescript","open-source","library","logging"],"excerpt":"One developer's journey into building a feature-rich colorful logging library and why.","image":"/assets/blog/tutorials/building-magiclogger/magiclogger-primary-no-subtitle-transparent-4x.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":17,"content":"$23","author":{"name":"Johnny Dunn"},"contributors":"$undefined","tableOfContents":{"items":[{"level":1,"text":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color","slug":"building-magiclogger-and-magic-a-universal-logging-standard-for-color"},{"level":2,"text":"Startups Should Consider Open-Source","slug":"startups-should-consider-open-source"},{"level":2,"text":"Can we get some color in our logs?","slug":"can-we-get-some-color-in-our-logs"},{"level":2,"text":"Designing the Task","slug":"designing-the-task"},{"level":2,"text":"Start Simple, Build Structure","slug":"start-simple-build-structure"},{"level":2,"text":"MAGIC Schema - Complete Observability by Default","slug":"magic-schema-complete-observability-by-default"},{"level":2,"text":"Making Things Fast","slug":"making-things-fast"},{"level":3,"text":"Immediate Dispatch Architecture","slug":"immediate-dispatch-architecture"},{"level":3,"text":"Optional Ring Buffer for High-Throughput","slug":"optional-ring-buffer-for-high-throughput"},{"level":3,"text":"Style Extraction and Colorization","slug":"style-extraction-and-colorization"},{"level":4,"text":"Edge Cases and Design Decisions","slug":"edge-cases-and-design-decisions"},{"level":3,"text":"Performance Comparison","slug":"performance-comparison"},{"level":3,"text":"The Trade-offs","slug":"the-trade-offs"},{"level":2,"text":"Verification and Testing","slug":"verification-and-testing"},{"level":3,"text":"Tree-Shaking Verification","slug":"tree-shaking-verification"},{"level":2,"text":"CI/CD: Actions and Abstractions","slug":"cicd-actions-and-abstractions"},{"level":2,"text":"Documentation and Landing","slug":"documentation-and-landing"},{"level":2,"text":"AI Coding Can Be Exponential in Both Development and Failure","slug":"ai-coding-can-be-exponential-in-both-development-and-failure"}]}},"url":"/blog/tutorials/building-magiclogger-and-magic"}],["$","$L24",null,{"postTitle":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color","postCategory":"tutorials","postAuthor":"Johnny Dunn","postTags":"$25","postType":"post"}],["$","$L26",null,{"enableElementTracking":true,"pageType":"blog","contentCategory":"tutorials"}],["$","$L27",null,{"postTitle":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color","contentSelector":"#post-content-top"}],["$","$L28",null,{"children":[" ",["$","div",null,{"className":"blog-layout-container has-sidebar","children":[["$","$L29",null,{"tableOfContents":"$2a","postTitle":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color"}],["$","main",null,{"className":"blog-main-content-area","children":["$","article",null,{"className":"blog-post-container","id":"post-content-top","children":[["$","header",null,{"className":"post-header","children":[["$","div",null,{"className":"back-to-blog-link-container","children":["$","$L3d",null,{"href":"/blog","className":"back-to-blog-link","children":[["$","$L3e",null,{"size":14,"className":"mr-1.5"}]," ","Back to All Entries"]}]}],["$","h1",null,{"className":"post-title","children":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color"}],["$","div",null,{"className":"post-meta","children":[["$","div",null,{"className":"meta-item author","children":[["$","$L3f",null,{"className":"meta-icon","aria-hidden":"true"}],["$","div",null,{"className":"author-info","children":["$undefined",["$","span",null,{"className":"author-name","children":"Johnny Dunn"}]]}]]}],["$","div",null,{"className":"meta-item date","children":[["$","$L40",null,{"className":"meta-icon","aria-hidden":"true"}],["$","time",null,{"dateTime":"2025-10-15T00:00:00.000Z","children":["Published ","October 15, 2025"]}]]}],["$","div",null,{"className":"meta-item reading-time","children":[["$","$L41",null,{"className":"meta-icon","aria-hidden":"true"}],["$","span",null,{"children":[17," min read"]}]]}],["$","div",null,{"className":"meta-item category","children":[["$","$L42",null,{"className":"meta-icon","aria-hidden":"true"}],["$","$L3d",null,{"href":"/blog?category=tutorials","className":"post-category-link","children":"tutorials"}]]}]]}],["$","div",null,{"className":"post-tags","children":["$","div",null,{"className":"tags-list","children":[["$","$L3d","typescript",{"href":"/blog?tags=typescript","className":"post-tag","children":["#","typescript"]}],["$","$L3d","open-source",{"href":"/blog?tags=open-source","className":"post-tag","children":["#","open-source"]}],["$","$L3d","library",{"href":"/blog?tags=library","className":"post-tag","children":["#","library"]}],["$","$L3d","logging",{"href":"/blog?tags=logging","className":"post-tag","children":["#","logging"]}]]}]}]]}],["$","div",null,{"className":"post-featured-image-container","children":["$","figure",null,{"className":"post-featured-image","children":[["$","$L43",null,{"src":"/assets/blog/tutorials/building-magiclogger/magiclogger-primary-no-subtitle-transparent-4x.png","alt":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color","width":1600,"height":900,"className":"featured-image","priority":true}],"$undefined"]}]}],["$","div",null,{"className":"post-content","children":["$","$L44",null,{"children":"$45"}]}],"$undefined",["$","footer",null,{"className":"post-footer","children":["$","$L46",null,{"title":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color","url":"/blog/tutorials/building-magiclogger-and-magic"}]}],["$","$L47",null,{"projects":[{"slug":"magiclogger","title":"MagicLogger — Colorful JavaScript / TypeScript Logger","description":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry.","date":"2025-04-20","category":"tools","content":"$48","longDescription":"$undefined","tags":["javascript","typescript","nodejs","logging","developers","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","images":["/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","/assets/projects/magiclogger/magiclogger-terminal-demo.gif"],"bgColor":"$undefined","textColor":"$undefined","link":"https://manic.agency/magiclogger","github":"https://github.com/manicinc/magiclogger","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[]}],"title":"// Related Projects //"}],["$","section",null,{"className":"post-comments","aria-labelledby":"comments-heading","children":[["$","h2",null,{"id":"comments-heading","className":"comments-title","children":"Join the Discussion"}],["$","$L49",null,{"postTitle":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color","postUrl":"/blog/tutorials/building-magiclogger-and-magic","postIdentifier":"blog-tutorials-building-magiclogger-and-magic","className":"mb-8"}],["$","div",null,{"className":"mt-8","children":[["$","div",null,{"className":"giscus-header","children":[["$","h3",null,{"className":"giscus-title","children":"Comments with GitHub"}],["$","div",null,{"className":"giscus-divider"}]]}],["$","$L4a",null,{}]]}]]}],["$","section",null,{"className":"post-newsletter-signup mt-16","children":["$","$L4b",null,{"variant":"blog","background":"accent"}]}]]}]}]," "]}]," "]}]]}]
+Built with ❤️ by [Manic Agency](https://manic.agency) - We do experimental design & development49:T2b0b,
+<div class="synthstack-hero">
+  <img
+    src="/assets/projects/synthstack/synthstack-logo.svg"
+    alt="SynthStack logo - AI-native SaaS boilerplate for cross-platform applications"
+    class="synthstack-hero__logo"
+    decoding="async"
+    loading="eager"
+  />
+  <h1 class="synthstack-hero__title" aria-label="your agency in a box">your agency in a box</h1>
+  <p class="synthstack-hero__subtitle">
+    open-source saas boilerplate. one codebase → web, ios, android, desktop. ship in days, not months.
+  </p>
+  <a class="synthstack-hero__cta" href="https://synthstack.app" target="_blank" rel="noopener">
+    explore synthstack →
+  </a>
+</div>
+
+<style>
+  .synthstack-hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2.75rem 1rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .synthstack-hero__logo {
+    width: clamp(160px, 38vw, 320px);
+    height: auto;
+    opacity: 0.95;
+  }
+  @media (prefers-color-scheme: dark) {
+    .synthstack-hero__logo {
+      filter: brightness(1.1) drop-shadow(0 0 24px rgba(99,102,241,0.35));
+      opacity: 1;
+    }
+  }
+  .synthstack-hero__title {
+    text-transform: lowercase;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0.35rem 0 0.25rem;
+    background: linear-gradient(120deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .synthstack-hero__subtitle {
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    color: var(--text-secondary, rgba(255,255,255,0.78));
+    margin: 0.25rem 0 0.9rem;
+    max-width: 56ch;
+  }
+  @media (prefers-color-scheme: light) {
+    .synthstack-hero__subtitle { color: #2a2a2a; }
+  }
+  .synthstack-hero__cta {
+    --h: 52px;
+    display: inline-grid;
+    place-items: center;
+    height: var(--h);
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--text-primary, #fff);
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(120% 120% at 0% 0%, rgba(99,102,241,0.18), rgba(139,92,246,0.08)),
+      linear-gradient(90deg, rgba(99,102,241,0.35), rgba(139,92,246,0.35));
+    border: 1px solid rgba(99,102,241,0.35);
+    backdrop-filter: blur(6px);
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    will-change: transform;
+  }
+  .synthstack-hero__cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(120deg, rgba(99,102,241,0.9), rgba(139,92,246,0.9), rgba(236,72,153,0.9));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: .6;
+    transition: opacity .25s ease;
+    z-index: -1;
+  }
+  .synthstack-hero__cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(99,102,241,0.7);
+    background:
+      radial-gradient(120% 120% at 100% 0%, rgba(236,72,153,0.2), rgba(139,92,246,0.12)),
+      linear-gradient(90deg, rgba(99,102,241,0.5), rgba(139,92,246,0.5));
+    box-shadow: 0 10px 32px rgba(99,102,241,0.25), 0 2px 8px rgba(139,92,246,0.2);
+  }
+  .synthstack-hero__cta:active { transform: translateY(0) scale(0.99); }
+  @media (prefers-color-scheme: light) {
+    .synthstack-hero__cta {
+      color: #0f0f0f;
+      border-color: rgba(99,102,241,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .synthstack-hero__cta:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+  }
+</style>
+
+## What is SynthStack?
+
+SynthStack is an **AI-native SaaS boilerplate** that ships production-ready applications for web, iOS, Android, and desktop from a single codebase. Built on [Vue 3](https://vuejs.org/) and [Quasar Framework](https://quasar.dev/), it's the foundation we use at [Manic Agency](https://manic.agency) to launch client projects in days instead of months.
+
+Unlike typical boilerplates that bolt on features as afterthoughts, SynthStack was designed from the ground up for the AI era—with a built-in AI Copilot, semantic vector search, and intelligent automation baked into every layer.
+
+## The Problem We Solve
+
+Every new SaaS project starts the same way: weeks spent on authentication, billing, email, CMS, deployment. Then you add AI features and spend more weeks integrating OpenAI, handling rate limits, managing costs. Finally, a client asks for a mobile app and you're back to square one.
+
+**SynthStack eliminates this entirely:**
+
+- **Auth complexity?** Toggle between Supabase (managed OAuth) or local PostgreSQL (self-hosted) with zero code changes
+- **Billing setup?** Stripe subscriptions, lifetime licenses, usage-based pricing—already configured with webhooks and customer portal
+- **AI integration?** GPT-4o + Claude fallback with streaming, cost tracking, and credit systems built-in
+- **Cross-platform?** One `pnpm build` produces web, PWA, Electron desktop, and Capacitor iOS/Android
+
+## Core Features
+
+### 🤖 AI Copilot (GPT-4o + Claude)
+
+A production-ready chat assistant available throughout the app via `⌘K` or the floating button:
+
+- **Real-time streaming** with markdown and code syntax highlighting
+- **RAG-powered context** from indexed documentation via Qdrant
+- **Cost tracking** with per-organization breakdowns and budget alerts
+- **Automatic fallback** from GPT-4o to Claude 3.5 for reliability
+
+### 🔐 Flexible Authentication
+
+Choose your auth provider at runtime—no code changes required:
+
+| Provider | Best For | OAuth Support |
+|----------|----------|---------------|
+| **Supabase** (default) | Teams wanting managed auth | Google, GitHub, Discord, Microsoft |
+| **Local PostgreSQL** | Self-hosted deployments | Email/password (OAuth coming soon) |
+
+Both include: Argon2id password hashing, JWT access/refresh tokens, account lockout, email verification, and session management with token rotation.
+
+### 💳 Stripe Billing (4 Tiers + Lifetime)
+
+Complete billing system with subscriptions and one-time payments:
+
+| Tier | Monthly | Annual | Credits/Day |
+|------|---------|--------|-------------|
+| **Free** | $0 | $0 | 10 |
+| **Maker** | $12.99 | $116.91 | 30 |
+| **Pro** | $24.99 | $224.91 | 100 |
+| **Agency** | $39.99 | $359.91 | Unlimited |
+| **Lifetime** | $149-249 one-time | — | Pro features forever |
+
+### 📝 Directus CMS
+
+[Directus](https://directus.io/) provides a headless CMS that automatically models your PostgreSQL database:
+
+- **WYSIWYG editor** for blog posts, product pages, documentation
+- **Media library** with image transformations and asset management
+- **Custom extensions** for themes, newsletters, FAQ management
+- **REST & GraphQL APIs** for accessing content from any client
+
+### 🌐 Cross-Platform Builds
+
+One codebase, five platforms:
+
+```bash
+# Web + PWA
+pnpm build:web
+
+# iOS (requires Xcode)
+pnpm build:ios
+
+# Android (requires Android Studio)
+pnpm build:android
+
+# Desktop (Electron)
+pnpm build:electron
+```
+
+### 🔍 Vector Search (Qdrant)
+
+Semantic search powered by [Qdrant](https://qdrant.tech/) for:
+
+- RAG-based document retrieval for the AI Copilot
+- Intelligent search across knowledge bases
+- Similarity matching for content recommendations
+
+### 🎮 Gamification & Referrals
+
+Built-in engagement systems (Pro Edition):
+
+- **XP and achievements** for user progression
+- **Referral codes** with reward tracking
+- **Leaderboards** for community competition
+
+## Development Journey
+
+SynthStack emerged from a simple realization: we kept building the same foundation for every client project. Here's how it evolved:
+
+### December 7, 2025 — Initial Commit
+
+The first commit laid the foundation: Vue 3 + Quasar with TypeScript, PostgreSQL, Redis, and Docker Compose. We integrated Stripe, email systems (Mailgun/SendGrid), and analytics from day one.
+
+### December 12, 2025 — Onboarding & CMS
+
+Added a comprehensive onboarding wizard for new users and deep Directus integration. The CMS became the central hub for managing all content—blog, products, themes, newsletters.
+
+### December 25, 2025 — AI Agents & Gamification
+
+The Christmas release brought the AI Copilot, gamification system, and referral tracking. We also added support for Python backends (FastAPI, Django) for teams preferring that stack.
+
+### January 2026 — Cross-Platform & Stabilization
+
+Mobile builds arrived via Capacitor, desktop builds via Electron. The test suite grew to 920+ tests. CI/CD pipelines now auto-deploy to any VPS provider.
+
+## Technical Architecture
+
+```
+synthstack/
+├── apps/
+│   └── web/                      # Vue 3 + Quasar (PWA, iOS, Android, Desktop)
+├── packages/
+│   ├── api-gateway/              # Fastify REST API
+│   ├── ts-ml-service/            # NestJS ML service (TypeScript-only)
+│   ├── types/                    # Shared TypeScript types
+│   └── directus-extension-synthstack/  # CMS extensions
+├── services/
+│   └── directus/                 # Directus config (101 migrations)
+└── deploy/
+    ├── docker-compose.yml        # Production stack
+    └── nginx.conf                # Reverse proxy config
+```
+
+**Key Technologies:**
+- **Frontend**: Vue 3, Quasar 2, TypeScript, Pinia, SCSS
+- **Backend**: Fastify (Node.js), NestJS (ML service)
+- **AI/ML**: OpenAI SDK, Anthropic SDK, Qdrant
+- **Database**: PostgreSQL 16, Redis 7
+- **CMS**: Directus 11.x with custom extensions
+- **Deployment**: Docker Compose, GitHub Actions, Nginx
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 20+
+- pnpm 9+
+- Docker & Docker Compose
+
+### Quick Start
+
+```bash
+# Clone
+git clone https://github.com/manicinc/synthstack.git
+cd synthstack
+
+# Install
+pnpm install
+
+# Configure
+cp .env.example .env
+# Edit .env with your Supabase/Stripe/OpenAI keys
+
+# Start services
+docker compose up -d
+
+# Run frontend
+pnpm dev:web
+```
+
+**Access points:**
+- Frontend: http://localhost:3050
+- API: http://localhost:3003
+- Directus: http://localhost:8099/admin
+
+## Part of the Manic Ecosystem
+
+SynthStack connects with other tools we've built:
+
+- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering the copilot
+- **[Quarry.space](/projects/ai/quarry)** — Knowledge management with semantic search
+- **[HackBase.io](/projects/ai/hackbase)** — Startup validation and link building for launches
+
+## Open Source
+
+SynthStack Community Edition is **MIT licensed**. Use it for side projects, client work, or as a learning resource.
+
+**[SynthStack Pro](https://synthstack.app/pro)** adds Python backends (FastAPI, Django), referral systems, and advanced AI copilots for commercial use.
+
+---
+
+*Ready to build your agency? [Get started with SynthStack →](https://synthstack.app)*
+2:["$","$L20",null,{"children":[["$","$L21",null,{"items":[{"name":"Home","url":"/"},{"name":"Blog","url":"/blog"},{"name":"tutorials","url":"/blog/tutorials"},{"name":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color","url":"/blog/tutorials/building-magiclogger-and-magic"}]}],["$","$L22",null,{"post":{"slug":"building-magiclogger-and-magic","title":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color","date":"2025-10-15","lastModified":"$undefined","draft":false,"category":"tutorials","tags":["typescript","open-source","library","logging"],"excerpt":"One developer's journey into building a feature-rich colorful logging library and why.","image":"/assets/blog/tutorials/building-magiclogger/magiclogger-primary-no-subtitle-transparent-4x.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":17,"content":"$23","author":{"name":"Johnny Dunn"},"contributors":"$undefined","tableOfContents":{"items":[{"level":1,"text":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color","slug":"building-magiclogger-and-magic-a-universal-logging-standard-for-color"},{"level":2,"text":"Startups Should Consider Open-Source","slug":"startups-should-consider-open-source"},{"level":2,"text":"Can we get some color in our logs?","slug":"can-we-get-some-color-in-our-logs"},{"level":2,"text":"Designing the Task","slug":"designing-the-task"},{"level":2,"text":"Start Simple, Build Structure","slug":"start-simple-build-structure"},{"level":2,"text":"MAGIC Schema - Complete Observability by Default","slug":"magic-schema-complete-observability-by-default"},{"level":2,"text":"Making Things Fast","slug":"making-things-fast"},{"level":3,"text":"Immediate Dispatch Architecture","slug":"immediate-dispatch-architecture"},{"level":3,"text":"Optional Ring Buffer for High-Throughput","slug":"optional-ring-buffer-for-high-throughput"},{"level":3,"text":"Style Extraction and Colorization","slug":"style-extraction-and-colorization"},{"level":4,"text":"Edge Cases and Design Decisions","slug":"edge-cases-and-design-decisions"},{"level":3,"text":"Performance Comparison","slug":"performance-comparison"},{"level":3,"text":"The Trade-offs","slug":"the-trade-offs"},{"level":2,"text":"Verification and Testing","slug":"verification-and-testing"},{"level":3,"text":"Tree-Shaking Verification","slug":"tree-shaking-verification"},{"level":2,"text":"CI/CD: Actions and Abstractions","slug":"cicd-actions-and-abstractions"},{"level":2,"text":"Documentation and Landing","slug":"documentation-and-landing"},{"level":2,"text":"AI Coding Can Be Exponential in Both Development and Failure","slug":"ai-coding-can-be-exponential-in-both-development-and-failure"}]}},"url":"/blog/tutorials/building-magiclogger-and-magic"}],["$","$L24",null,{"postTitle":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color","postCategory":"tutorials","postAuthor":"Johnny Dunn","postTags":"$25","postType":"post"}],["$","$L26",null,{"enableElementTracking":true,"pageType":"blog","contentCategory":"tutorials"}],["$","$L27",null,{"postTitle":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color","contentSelector":"#post-content-top"}],["$","$L28",null,{"children":[" ",["$","div",null,{"className":"blog-layout-container has-sidebar","children":[["$","$L29",null,{"tableOfContents":"$2a","postTitle":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color"}],["$","main",null,{"className":"blog-main-content-area","children":["$","article",null,{"className":"blog-post-container","id":"post-content-top","children":[["$","header",null,{"className":"post-header","children":[["$","div",null,{"className":"back-to-blog-link-container","children":["$","$L3d",null,{"href":"/blog","className":"back-to-blog-link","children":[["$","$L3e",null,{"size":14,"className":"mr-1.5"}]," ","Back to All Entries"]}]}],["$","h1",null,{"className":"post-title","children":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color"}],["$","div",null,{"className":"post-meta","children":[["$","div",null,{"className":"meta-item author","children":[["$","$L3f",null,{"className":"meta-icon","aria-hidden":"true"}],["$","div",null,{"className":"author-info","children":["$undefined",["$","span",null,{"className":"author-name","children":"Johnny Dunn"}]]}]]}],["$","div",null,{"className":"meta-item date","children":[["$","$L40",null,{"className":"meta-icon","aria-hidden":"true"}],["$","time",null,{"dateTime":"2025-10-15T00:00:00.000Z","children":["Published ","October 15, 2025"]}]]}],["$","div",null,{"className":"meta-item reading-time","children":[["$","$L41",null,{"className":"meta-icon","aria-hidden":"true"}],["$","span",null,{"children":[17," min read"]}]]}],["$","div",null,{"className":"meta-item category","children":[["$","$L42",null,{"className":"meta-icon","aria-hidden":"true"}],["$","$L3d",null,{"href":"/blog?category=tutorials","className":"post-category-link","children":"tutorials"}]]}]]}],["$","div",null,{"className":"post-tags","children":["$","div",null,{"className":"tags-list","children":[["$","$L3d","typescript",{"href":"/blog?tags=typescript","className":"post-tag","children":["#","typescript"]}],["$","$L3d","open-source",{"href":"/blog?tags=open-source","className":"post-tag","children":["#","open-source"]}],["$","$L3d","library",{"href":"/blog?tags=library","className":"post-tag","children":["#","library"]}],["$","$L3d","logging",{"href":"/blog?tags=logging","className":"post-tag","children":["#","logging"]}]]}]}]]}],["$","div",null,{"className":"post-featured-image-container","children":["$","figure",null,{"className":"post-featured-image","children":[["$","$L43",null,{"src":"/assets/blog/tutorials/building-magiclogger/magiclogger-primary-no-subtitle-transparent-4x.png","alt":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color","width":1600,"height":900,"className":"featured-image","priority":true}],"$undefined"]}]}],["$","div",null,{"className":"post-content","children":["$","$L44",null,{"children":"$45"}]}],"$undefined",["$","footer",null,{"className":"post-footer","children":["$","$L46",null,{"title":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color","url":"/blog/tutorials/building-magiclogger-and-magic"}]}],["$","$L47",null,{"projects":[{"slug":"magiclogger","title":"MagicLogger — Colorful JavaScript / TypeScript Logger","description":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry.","date":"2025-04-20","category":"tools","content":"$48","longDescription":"$undefined","tags":["javascript","typescript","nodejs","logging","developers","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","images":["/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","/assets/projects/magiclogger/magiclogger-terminal-demo.gif"],"bgColor":"$undefined","textColor":"$undefined","link":"https://manic.agency/magiclogger","github":"https://github.com/manicinc/magiclogger","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[]},{"slug":"synthstack","title":"SynthStack — AI-Native SaaS Boilerplate","description":"Your Agency in a Box. Open-source, cross-platform SaaS boilerplate built with Vue Quasar. Ships for web, iOS, Android, desktop, and PWA from a single codebase with AI Copilot, Stripe billing, and Directus CMS.","date":"2026-01-14","category":"ai","content":"$49","longDescription":"$undefined","tags":["ai","saas","boilerplate","vue","quasar","typescript","cross-platform","stripe","directus","supabase","oss","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/synthstack/synthstack-logo-512.png","images":["/assets/projects/synthstack/synthstack-logo-512.png","/assets/projects/synthstack/synthstack-mark-512.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://synthstack.app","github":"https://github.com/manicinc/synthstack","license":"MIT","technologies":["Vue 3","Quasar","TypeScript","Fastify","PostgreSQL","Redis","Directus","Qdrant","Docker"],"languages":["TypeScript","Vue","SQL"],"stats":[{"label":"Tests","value":"920+"},{"label":"Platforms","value":"Web + iOS + Android + Desktop"},{"label":"AI Copilot","value":"GPT-4o + Claude"},{"label":"Billing Tiers","value":"4 + Lifetime"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]}],"title":"// Related Projects //"}],["$","section",null,{"className":"post-comments","aria-labelledby":"comments-heading","children":[["$","h2",null,{"id":"comments-heading","className":"comments-title","children":"Join the Discussion"}],["$","$L4a",null,{"postTitle":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color","postUrl":"/blog/tutorials/building-magiclogger-and-magic","postIdentifier":"blog-tutorials-building-magiclogger-and-magic","className":"mb-8"}],["$","div",null,{"className":"mt-8","children":[["$","div",null,{"className":"giscus-header","children":[["$","h3",null,{"className":"giscus-title","children":"Comments with GitHub"}],["$","div",null,{"className":"giscus-divider"}]]}],["$","$L4b",null,{}]]}]]}],["$","section",null,{"className":"post-newsletter-signup mt-16","children":["$","$L4c",null,{"variant":"blog","background":"accent"}]}]]}]}]," "]}]," "]}]]}]
 1f:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#FBF6EF"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#22182B"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color | Manic Agency - AI Agency Los Angeles"}],["$","meta","5",{"name":"description","content":"One developer's journey into building a feature-rich colorful logging library and why."}],["$","meta","6",{"name":"author","content":"Johnny Dunn"}],["$","meta","7",{"name":"keywords","content":"typescript,open-source,library,logging"}],["$","meta","8",{"name":"creator","content":"Manic Inc"}],["$","meta","9",{"name":"publisher","content":"Manic Inc"}],["$","link","10",{"rel":"canonical","href":"https://manic.agency/blog/tutorials/building-magiclogger-and-magic"}],["$","meta","11",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","12",{"property":"og:title","content":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color | Manic Agency - AI Agency Los Angeles"}],["$","meta","13",{"property":"og:description","content":"One developer's journey into building a feature-rich colorful logging library and why."}],["$","meta","14",{"property":"og:image","content":"https://manic.agency//assets/blog/tutorials/building-magiclogger/magiclogger-primary-no-subtitle-transparent-4x.png"}],["$","meta","15",{"property":"og:image:alt","content":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color"}],["$","meta","16",{"property":"og:type","content":"article"}],["$","meta","17",{"property":"article:published_time","content":"2025-10-15T00:00:00.000Z"}],["$","meta","18",{"property":"article:author","content":"Johnny Dunn"}],["$","meta","19",{"property":"article:tag","content":"typescript"}],["$","meta","20",{"property":"article:tag","content":"open-source"}],["$","meta","21",{"property":"article:tag","content":"library"}],["$","meta","22",{"property":"article:tag","content":"logging"}],["$","meta","23",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","24",{"name":"twitter:title","content":"Building MagicLogger and MAGIC: A Universal Logging Standard for Color | Manic Agency - AI Agency Los Angeles"}],["$","meta","25",{"name":"twitter:description","content":"One developer's journey into building a feature-rich colorful logging library and why."}],["$","meta","26",{"name":"twitter:image","content":"https://manic.agency//assets/blog/tutorials/building-magiclogger/magiclogger-primary-no-subtitle-transparent-4x.png"}],["$","link","27",{"rel":"shortcut icon","href":"/favicon-16x16.png"}],["$","link","28",{"rel":"icon","href":"/favicon.ico"}],["$","link","29",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","meta","30",{"name":"next-size-adjust"}]]
 1:null
