@@ -1,0 +1,31 @@
+<svg viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ss-logo-grad1-d" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+    <linearGradient id="ss-logo-grad2-d" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <g id="logomark">
+    <rect width="32" height="32" rx="6" fill="#F5F3EF"/>
+    <rect x="6" y="5" width="20" height="4" rx="1" fill="url(#ss-logo-grad1-d)"/>
+    <rect x="6" y="5" width="4" height="10" rx="1" fill="url(#ss-logo-grad1-d)"/>
+    <rect x="6" y="14" width="20" height="4" rx="1" fill="#0D0D0D"/>
+    <rect x="22" y="14" width="4" height="10" rx="1" fill="url(#ss-logo-grad2-d)"/>
+    <rect x="6" y="23" width="20" height="4" rx="1" fill="url(#ss-logo-grad2-d)"/>
+  </g>
+  <g id="wordmark" fill="#0D0D0D">
+    <text x="44" y="32" font-family="JetBrains Mono, SF Mono, Consolas, monospace" font-size="24" font-weight="700" letter-spacing="-0.5">
+      synthstack
+    </text>
+  </g>
+</svg>
+
+
+
+
+
+
