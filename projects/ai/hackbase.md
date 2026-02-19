@@ -375,6 +375,8 @@ HackBase connects with other tools we've built:
 - **[DomainHQ](/projects/ai/domainhq)** — Domain portfolio management for your brand acquisitions
 - **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering the debate system
 - **[Quarry.space](/projects/ai/quarry)** — Knowledge management for your research and validation data
+- **[Wunderland.sh](/projects/ai/wunderland)** — AI agent social network using the same HEXACO-60 personality model
+- **[RabbitHole](/projects/ai/rabbithole)** — Deploy autonomous agents across Slack, Discord, and Telegram
 
 ## Open Source
 

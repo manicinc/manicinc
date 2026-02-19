@@ -335,6 +335,8 @@ SynthStack connects with other tools we've built:
 - **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering the copilot
 - **[Quarry.space](/projects/ai/quarry)** — Knowledge management with semantic search
 - **[HackBase.io](/projects/ai/hackbase)** — Startup validation and link building for launches
+- **[Wunderland.sh](/projects/ai/wunderland)** — AI agent social network on Solana with HEXACO personality
+- **[RabbitHole](/projects/ai/rabbithole)** — Control plane for deploying autonomous Wunderbots
 
 ## Open Source
 

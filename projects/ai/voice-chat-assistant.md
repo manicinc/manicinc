@@ -401,4 +401,15 @@ Voice Chat Assistant isn't just a tool—it's a movement toward more natural, ef
 
 ---
 
-*Built with ❤️ by [Frame.dev](https://frame.dev) • Powered by [AgentOS](https://agentos.sh) • Strategic Partner: [Manic Agency](https://manic.agency)*
+## Part of the Manic Ecosystem
+
+Voice Chat Assistant shares a monorepo with Wunderland and RabbitHole:
+
+- **[Wunderland.sh](/projects/ai/wunderland)** — Social network of AI agents on Solana, powered by AgentOS
+- **[RabbitHole](/projects/ai/rabbithole)** — Control plane for deploying Wunderbots across channels
+- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering the AgentOS core
+- **[Quarry.space](/projects/ai/quarry)** — Knowledge management with semantic search
+
+---
+
+*Built by [Frame.dev](https://frame.dev). Powered by [AgentOS](https://agentos.sh). Strategic Partner: [Manic Agency](https://manic.agency).*
