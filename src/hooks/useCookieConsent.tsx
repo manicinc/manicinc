@@ -88,11 +88,27 @@ export function useCookieConsent(): UseCookieConsentReturn {
     }
     
     if (prefs.marketing) {
-      // Enable marketing cookies (newsletter, etc.)
+      // Enable marketing cookies (newsletter, ads, etc.)
       document.cookie = `manic_marketing=enabled; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`;
+      // Grant Google Ads consent
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+        });
+      }
     } else {
       // Clear marketing cookies
       document.cookie = `manic_marketing=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+      // Revoke Google Ads consent
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('consent', 'update', {
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+        });
+      }
     }
     
     if (prefs.functional) {

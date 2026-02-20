@@ -55,8 +55,9 @@ jobs:
           # EmailOctopus Configuration
           NEXT_PUBLIC_EMAILOCTOPUS_FORM_ID: ${{ secrets.NEXT_PUBLIC_EMAILOCTOPUS_FORM_ID }}
           
-          # Analytics (if you have them)
+          # Analytics
           NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
+          NEXT_PUBLIC_GOOGLE_ADS_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_ADS_ID }}
           NEXT_PUBLIC_CLARITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_CLARITY_PROJECT_ID }}
           
           # Contact form (if using)

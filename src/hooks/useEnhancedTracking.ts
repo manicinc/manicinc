@@ -18,7 +18,7 @@ interface EnhancedTrackingOptions {
  * Provides convenient methods for tracking user interactions across the site
  */
 export function useEnhancedTracking() {
-  const { trackEvent, trackPageView, upgradeSession, setUserTag, canTrack } = useAnalytics();
+  const { trackEvent, trackPageView, upgradeSession, setUserTag, trackConversion, canTrack } = useAnalytics();
 
   // Track blog post interactions
   const trackBlogInteraction = useCallback((
@@ -187,6 +187,30 @@ export function useEnhancedTracking() {
     setUserTag('last_external_link', url);
   }, [trackEvent, setUserTag, canTrack]);
 
+  // Track product-specific CTAs with optional Google Ads conversion
+  const trackProductCTA = useCallback((
+    product: 'hackbase' | 'wunderland' | 'rabbithole' | string,
+    action: 'visit_site' | 'signup' | 'pricing_click' | 'github_click',
+    conversionLabel?: string,
+    options?: EnhancedTrackingOptions
+  ) => {
+    if (!canTrack) return;
+
+    trackEvent('product_cta', {
+      category: 'conversions',
+      product,
+      action,
+      ...options,
+    });
+
+    if (conversionLabel) {
+      trackConversion(conversionLabel);
+    }
+
+    setUserTag('last_product_cta', `${product}_${action}`);
+    upgradeSession(`Product CTA: ${product} ${action}`);
+  }, [trackEvent, trackConversion, setUserTag, upgradeSession, canTrack]);
+
   return {
     trackBlogInteraction,
     trackNavigation,
@@ -196,6 +220,8 @@ export function useEnhancedTracking() {
     trackEngagement,
     trackDownload,
     trackExternalLink,
+    trackProductCTA,
+    trackConversion,
     trackPageView,
     canTrack,
   };

@@ -8,21 +8,22 @@ import Clarity from '@microsoft/clarity';
 import { useCookieConsent } from '@/hooks/useCookieConsent';
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
 const CLARITY_PROJECT_ID = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID;
 
 export function Analytics() {
-  const { canUseAnalytics } = useCookieConsent();
+  const { canUseAnalytics, canUseMarketing } = useCookieConsent();
 
   useEffect(() => {
     // Initialize analytics if consent is given
     if (canUseAnalytics && typeof window !== 'undefined') {
-      // Update GA Consent Mode to granted
+      // Update GA Consent Mode based on user preferences
       try {
         if ((window as any).gtag) {
           (window as any).gtag('consent', 'update', {
-            ad_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied',
+            ad_storage: canUseMarketing ? 'granted' : 'denied',
+            ad_user_data: canUseMarketing ? 'granted' : 'denied',
+            ad_personalization: canUseMarketing ? 'granted' : 'denied',
             analytics_storage: 'granted'
           });
         }
@@ -101,21 +102,28 @@ export function Analytics() {
     }
 
     // Listen to cookie consent events to adjust GA consent dynamically
-    const onConsentGiven = () => {
+    const onConsentUpdate = () => {
       try {
         if (typeof window !== 'undefined' && (window as any).gtag) {
+          const saved = localStorage.getItem('manic_cookie_consent');
+          const marketing = saved ? JSON.parse(saved)?.preferences?.marketing : false;
           (window as any).gtag('consent', 'update', {
-            analytics_storage: 'granted'
+            analytics_storage: 'granted',
+            ad_storage: marketing ? 'granted' : 'denied',
+            ad_user_data: marketing ? 'granted' : 'denied',
+            ad_personalization: marketing ? 'granted' : 'denied',
           });
         }
       } catch {}
     };
 
-    window.addEventListener('cookie-consent-given', onConsentGiven);
+    window.addEventListener('cookie-consent-given', onConsentUpdate);
+    window.addEventListener('cookie-consent-updated', onConsentUpdate);
     return () => {
-      window.removeEventListener('cookie-consent-given', onConsentGiven);
+      window.removeEventListener('cookie-consent-given', onConsentUpdate);
+      window.removeEventListener('cookie-consent-updated', onConsentUpdate);
     };
-  }, [canUseAnalytics]);
+  }, [canUseAnalytics, canUseMarketing]);
 
   // Only render analytics components if consent is given
   if (!canUseAnalytics) {
@@ -165,6 +173,17 @@ export function Analytics() {
             }}
           />
         </>
+      )}
+
+      {/* Google Ads - Piggybacks on the gtag.js already loaded by GA4 */}
+      {GOOGLE_ADS_ID && (
+        <Script
+          id="google-ads-config"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `gtag('config', '${GOOGLE_ADS_ID}');`,
+          }}
+        />
       )}
     </>
   );
@@ -260,9 +279,21 @@ export function useAnalytics() {
     }
   };
 
+  const trackConversion = (conversionLabel: string, value?: number, currency?: string) => {
+    if (!canUseAnalytics) return;
+    if (typeof window !== 'undefined' && (window as any).gtag && GOOGLE_ADS_ID) {
+      (window as any).gtag('event', 'conversion', {
+        send_to: `${GOOGLE_ADS_ID}/${conversionLabel}`,
+        ...(value !== undefined && { value }),
+        ...(currency && { currency }),
+      });
+    }
+  };
+
   return {
     trackEvent,
     trackPageView,
+    trackConversion,
     upgradeSession,
     setUserTag,
     canTrack: canUseAnalytics,
@@ -277,6 +308,7 @@ export const debugAnalyticsConfig = () => {
     console.group('🔍 Analytics Configuration Debug');
     console.log('Environment:', process.env.NODE_ENV);
     console.log('Google Analytics ID:', GA_ID ? '✅ Set' : '❌ Missing');
+    console.log('Google Ads ID:', GOOGLE_ADS_ID ? '✅ Set' : '❌ Missing');
     console.log('Clarity Project ID:', CLARITY_PROJECT_ID ? '✅ Set' : '❌ Missing');
     console.log('Vercel Analytics:', '✅ Enabled (no config needed)');
     console.log('Vercel Speed Insights:', '✅ Enabled (no config needed)');
