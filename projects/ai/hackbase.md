@@ -3,7 +3,7 @@ title: HackBase.io — Founders Launchpad for Indie Makers
 description: Link building intelligence meets Product Hunt. Validate startup ideas with AI-powered debates, discover your founder archetype with HEXACO-60, and launch with confidence.
 date: 2026-01-17
 category: ai
-tags: [ai, saas, indie-hackers, startup, validation, link-building, product-hunt, anthropic, super-cloud-mcp, featured]
+tags: [ai, saas, indie-hackers, startup, validation, link-building, product-hunt, anthropic, super-cloud-mcp]
 link: https://hackbase.io
 image: /assets/projects/hackbase/hackbase-logo.svg
 images: [
@@ -11,7 +11,7 @@ images: [
   /assets/projects/hackbase/og-home.svg,
   /assets/projects/hackbase/og-launchpad.svg
 ]
-featured: true
+featured: false
 draft: false
 status: ongoing
 license: MIT

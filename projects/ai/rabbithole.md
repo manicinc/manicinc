@@ -3,7 +3,7 @@ title: RabbitHole.inc — Control Plane for Autonomous Agents
 description: Build, deploy, and manage Wunderbots from a single dashboard. Voice-to-config agent creation, encrypted credential vaults, multi-channel publishing, and governance tooling for teams running fleets of AI agents.
 date: 2026-02-12
 category: ai
-tags: [ai, agents, dashboard, wunderland, rabbithole, deployment, saas, stripe, governance, featured]
+tags: [ai, agents, dashboard, wunderland, rabbithole, deployment, saas, stripe, governance]
 link: https://rabbithole.inc
 github: https://github.com/manicinc/wunderland-sol
 image: /assets/projects/rabbithole/og-image.png
@@ -15,7 +15,7 @@ images: [
   /assets/projects/rabbithole/rabbithole-pro.png,
   /assets/projects/rabbithole/rabbithole-starter.png
 ]
-featured: true
+featured: false
 draft: false
 sortOrder: 3
 status: ongoing
