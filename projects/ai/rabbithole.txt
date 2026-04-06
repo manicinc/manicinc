@@ -86,7 +86,7 @@ f:I[12025,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","stat
             }
           }
         })();
-      0:["manic-agency-1774649000890",[[["",{"children":["projects",{"children":[["category","ai","d"],{"children":[["slug","rabbithole","d"],{"children":["__PAGE__?{\"category\":\"ai\",\"slug\":\"rabbithole\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["category","ai","d"],{"children":[["slug","rabbithole","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7589854758514563.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/2a1fdc91e2d69a25.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/6517f724e0c34e4b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/4a49f8c87e29773c.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/fbcf5add168be5ca.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/31a0afff5523f0ee.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/94e7d866c9e42adb.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/8d146102ec06a500.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"preconnect","href":"https://static.cloudflareinsights.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.jsdelivr.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://res.cloudinary.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}]]}]}]}]]}]]}]],null],null],["$L1f",null]]]]
+      0:["manic-agency-1775438389646",[[["",{"children":["projects",{"children":[["category","ai","d"],{"children":[["slug","rabbithole","d"],{"children":["__PAGE__?{\"category\":\"ai\",\"slug\":\"rabbithole\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["category","ai","d"],{"children":[["slug","rabbithole","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7589854758514563.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/2a1fdc91e2d69a25.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/6517f724e0c34e4b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/4a49f8c87e29773c.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/fbcf5add168be5ca.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/31a0afff5523f0ee.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/94e7d866c9e42adb.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/8d146102ec06a500.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"preconnect","href":"https://static.cloudflareinsights.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.jsdelivr.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://res.cloudinary.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}]]}]}]}]]}]]}]],null],null],["$L1f",null]]]]
 20:I[18745,["8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-7b4adcb52485b1b3.js"],"default"]
 21:I[35366,["8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-7b4adcb52485b1b3.js"],"default"]
 23:I[77769,["8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-7b4adcb52485b1b3.js"],"default"]
@@ -559,7 +559,7 @@ RabbitHole is **MIT licensed**. The dashboard, API client, and design system are
 ---
 
 *Ready to deploy your first Wunderbot? [Start at RabbitHole →](https://rabbithole.inc)*
-26:["ai","agents","dashboard","wunderland","rabbithole","deployment","saas","stripe","governance","featured"]
+26:["ai","agents","dashboard","wunderland","rabbithole","deployment","saas","stripe","governance"]
 27:["/assets/projects/rabbithole/og-image.png","/assets/projects/rabbithole/rabbithole-logo-gold-dark.svg","/assets/projects/rabbithole/rabbithole-icon-gold-dark.svg","/assets/projects/rabbithole/rabbithole-icon-512.png","/assets/projects/rabbithole/rabbithole-pro.png","/assets/projects/rabbithole/rabbithole-starter.png"]
 28:["Next.js 16","React 19","TypeScript","SCSS","Stripe","NextAuth 5"]
 29:["TypeScript","SCSS"]
@@ -584,7 +584,7 @@ RabbitHole is **MIT licensed**. The dashboard, API client, and design system are
 3d:{"level":2,"text":"Part of the Manic Ecosystem","slug":"part-of-the-manic-ecosystem"}
 3e:{"level":2,"text":"Open Source","slug":"open-source"}
 32:["$33","$34","$35","$36","$37","$38","$39","$3a","$3b","$3c","$3d","$3e"]
-24:{"slug":"rabbithole","title":"RabbitHole.inc — Control Plane for Autonomous Agents","description":"Build, deploy, and manage Wunderbots from a single dashboard. Voice-to-config agent creation, encrypted credential vaults, multi-channel publishing, and governance tooling for teams running fleets of AI agents.","date":"2026-02-12","category":"ai","content":"$25","longDescription":"$undefined","tags":"$26","modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":3,"image":"/assets/projects/rabbithole/og-image.png","images":"$27","bgColor":"$undefined","textColor":"$undefined","link":"https://rabbithole.inc","github":"https://github.com/manicinc/wunderland-sol","license":"MIT","technologies":"$28","languages":"$29","stats":"$2a","team":"$2f","testimonials":"$31","toc":"$32"}
+24:{"slug":"rabbithole","title":"RabbitHole.inc — Control Plane for Autonomous Agents","description":"Build, deploy, and manage Wunderbots from a single dashboard. Voice-to-config agent creation, encrypted credential vaults, multi-channel publishing, and governance tooling for teams running fleets of AI agents.","date":"2026-02-12","category":"ai","content":"$25","longDescription":"$undefined","tags":"$26","modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":false,"sortOrder":3,"image":"/assets/projects/rabbithole/og-image.png","images":"$27","bgColor":"$undefined","textColor":"$undefined","link":"https://rabbithole.inc","github":"https://github.com/manicinc/wunderland-sol","license":"MIT","technologies":"$28","languages":"$29","stats":"$2a","team":"$2f","testimonials":"$31","toc":"$32"}
 3f:T373d,
 <div class="wunderland-hero">
   <img
@@ -1196,26 +1196,26 @@ SynthStack Community Edition is **MIT licensed**. Use it for side projects, clie
 ---
 
 *Ready to build your agency? [Get started with SynthStack →](https://synthstack.app)*
-41:T386b,
-<div class="hackbase-hero">
+41:T2f0c,
+<div class="frame-hero">
   <img
-    src="/assets/projects/hackbase/hackbase-logo.svg"
-    alt="HackBase logo - hexagonal portal with rocket for founders launchpad"
-    class="hackbase-hero__logo"
+    src="/assets/projects/framers/frame-logo-no-subtitle.svg"
+    alt="Frame.dev logo"
+    class="frame-hero__logo"
     decoding="async"
     loading="eager"
   />
-  <h1 class="hackbase-hero__title" aria-label="founders launchpad">founders launchpad</h1>
-  <p class="hackbase-hero__subtitle">
-    validate your startup idea before you build. scrape pain points. generate personas. ship with confidence.
+  <h1 class="frame-hero__title" aria-label="we are the framers">we are the framers</h1>
+  <p class="frame-hero__subtitle">
+    denoising the web and making ai agency emergent, adaptive, and permanent.
   </p>
-  <a class="hackbase-hero__cta" href="https://hackbase.io" target="_blank" rel="noopener">
-    explore hackbase →
+  <a class="frame-hero__cta" href="https://frame.dev" target="_blank" rel="noopener">
+    explore frame.dev →
   </a>
 </div>
 
 <style>
-  .hackbase-hero {
+  .frame-hero {
     display: grid;
     place-items: center;
     text-align: center;
@@ -1225,39 +1225,39 @@ SynthStack Community Edition is **MIT licensed**. Use it for side projects, clie
     position: relative;
     overflow: hidden;
   }
-  .hackbase-hero__logo {
-    width: clamp(120px, 30vw, 200px);
+  .frame-hero__logo {
+    width: clamp(180px, 42vw, 380px);
     height: auto;
     opacity: 0.95;
   }
   @media (prefers-color-scheme: dark) {
-    .hackbase-hero__logo {
-      filter: brightness(1.1) drop-shadow(0 0 24px rgba(0,245,255,0.35));
+    .frame-hero__logo {
+      filter: brightness(0) invert(1) drop-shadow(0 0 24px rgba(255,255,255,0.15));
       opacity: 1;
     }
   }
-  .hackbase-hero__title {
+  .frame-hero__title {
     text-transform: lowercase;
     font-weight: 900;
     letter-spacing: 0.02em;
     font-size: clamp(1.9rem, 4.8vw, 3.2rem);
     line-height: 1.05;
     margin: 0.35rem 0 0.25rem;
-    background: linear-gradient(120deg, #00f5ff 0%, #ff00ff 100%);
+    background: linear-gradient(120deg, var(--accent-vibrant, #8a5cff) 0%, var(--accent-cool, #00d4ff) 50%, var(--accent-primary, #19ffa6) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
-  .hackbase-hero__subtitle {
+  .frame-hero__subtitle {
     font-size: clamp(1.1rem, 2.4vw, 1.45rem);
     color: var(--text-secondary, rgba(255,255,255,0.78));
     margin: 0.25rem 0 0.9rem;
     max-width: 56ch;
   }
   @media (prefers-color-scheme: light) {
-    .hackbase-hero__subtitle { color: #2a2a2a; }
+    .frame-hero__subtitle { color: #2a2a2a; }
   }
-  .hackbase-hero__cta {
+  .frame-hero__cta {
     --h: 52px;
     display: inline-grid;
     place-items: center;
@@ -1272,9 +1272,9 @@ SynthStack Community Edition is **MIT licensed**. Use it for side projects, clie
     position: relative;
     isolation: isolate;
     background:
-      radial-gradient(120% 120% at 0% 0%, rgba(0,245,255,0.18), rgba(255,0,255,0.08)),
-      linear-gradient(90deg, rgba(0,245,255,0.35), rgba(255,0,255,0.35));
-    border: 1px solid rgba(0,245,255,0.35);
+      radial-gradient(120% 120% at 0% 0%, rgba(138,92,255,0.18), rgba(0,212,255,0.08)),
+      linear-gradient(90deg, rgba(138,92,255,0.35), rgba(0,212,255,0.35));
+    border: 1px solid rgba(138,92,255,0.35);
     backdrop-filter: blur(6px);
     transition:
       transform .25s ease,
@@ -1284,13 +1284,13 @@ SynthStack Community Edition is **MIT licensed**. Use it for side projects, clie
     box-shadow: 0 8px 24px rgba(0,0,0,0.25);
     will-change: transform;
   }
-  .hackbase-hero__cta::before {
+  .frame-hero__cta::before {
     content: "";
     position: absolute;
     inset: 0;
     border-radius: inherit;
     padding: 2px;
-    background: linear-gradient(120deg, rgba(0,245,255,0.9), rgba(168,85,247,0.9), rgba(255,0,255,0.9));
+    background: linear-gradient(120deg, rgba(138,92,255,0.9), rgba(0,212,255,0.9), rgba(25,255,166,0.9));
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
@@ -1298,487 +1298,273 @@ SynthStack Community Edition is **MIT licensed**. Use it for side projects, clie
     transition: opacity .25s ease;
     z-index: -1;
   }
-  .hackbase-hero__cta:hover {
+  .frame-hero__cta:hover {
     transform: translateY(-2px) scale(1.02);
-    border-color: rgba(0,245,255,0.7);
+    border-color: rgba(138,92,255,0.7);
     background:
-      radial-gradient(120% 120% at 100% 0%, rgba(255,0,255,0.2), rgba(0,245,255,0.12)),
-      linear-gradient(90deg, rgba(0,245,255,0.5), rgba(255,0,255,0.5));
-    box-shadow: 0 10px 32px rgba(0,245,255,0.25), 0 2px 8px rgba(255,0,255,0.2);
+      radial-gradient(120% 120% at 100% 0%, rgba(25,255,166,0.2), rgba(0,212,255,0.12)),
+      linear-gradient(90deg, rgba(138,92,255,0.5), rgba(0,212,255,0.5));
+    box-shadow: 0 10px 32px rgba(0,212,255,0.25), 0 2px 8px rgba(25,255,166,0.2);
   }
-  .hackbase-hero__cta:active { transform: translateY(0) scale(0.99); }
+  .frame-hero__cta:active { transform: translateY(0) scale(0.99); }
   @media (prefers-color-scheme: light) {
-    .hackbase-hero__cta {
+    .frame-hero__cta {
       color: #0f0f0f;
-      border-color: rgba(0,245,255,0.25);
+      border-color: rgba(138,92,255,0.25);
       box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     }
-    .hackbase-hero__cta:hover {
+    .frame-hero__cta:hover {
       box-shadow: 0 10px 28px rgba(0,0,0,0.12);
     }
   }
 </style>
 
-## What is HackBase?
+## The Frame.dev Ecosystem
 
-HackBase is a **Founders Launchpad**—an AI-powered platform that helps indie makers validate startup ideas, discover their founder archetype, and launch products with confidence. It combines three powerful modules:
+Our projects work together to create a complete AI development platform:
 
-1. **Link Builder** — SEO campaign management for building domain authority
-2. **Directory** — A mini Product Hunt for indie products with upvoting, comments, and moderation
-3. **Founders Launchpad** — AI-powered validation engine with psychometric assessments and multi-agent debates
 
-Unlike typical idea validation tools that give you a single score, HackBase puts your idea through a **12-agent advisory board debate**, complete with a Devil's Advocate, Red Team, and Finance Expert arguing different perspectives before synthesizing actionable recommendations.
 
-## The Indie Maker's Dilemma
+### 🧠 [AgentOS (agentos.sh)](https://agentos.sh)
+**The Brain Behind Our AI Systems**
 
-Every indie hacker faces the same questions:
+AgentOS is our modular orchestration runtime that powers intelligent AI applications, handling:
 
-- **Is my idea any good?** — You've been noodling on this concept for months, but how do you know if real pain exists?
-- **Am I the right founder for this?** — Some founders thrive in chaos; others need structure. Which are you?
-- **Is the brand available?** — You find the perfect name, but is `yourname.com` taken? What about Twitter, GitHub, ProductHunt?
-- **Where do I launch?** — There are hundreds of directories and link building opportunities—which ones matter?
+- **Conversation Management** — Stateful, multi-turn interactions
+- **Memory & Retrieval** — RAG pipelines and context windows
+- **Tool Orchestration** — Permission-aware tool execution
+- **Streaming Architecture** — Real-time response handling
+- **Guardrails & Safety** — Built-in protective policies
 
-**HackBase answers all of these:**
+```typescript
+import { AgentOS } from '@framers/agentos';
 
-- **Scrape real pain points** from Reddit, Hacker News, and RSS feeds to validate problem existence
-- **Discover your founder archetype** with HEXACO-60 personality assessment and risk tolerance profiling
-- **Check brand availability** across domains and 8 social platforms in one click
-- **Submit to curated directories** with campaign tracking and SEO analytics
+const agent = new AgentOS();
+await agent.initialize(config);
 
-## Core Modules
-
-### 🚀 Founders Launchpad
-
-The heart of HackBase—a comprehensive startup validation system.
-
-#### Psychometric Assessment Suite
-
-Three validated instruments to understand yourself as a founder:
-
-| Assessment | Questions | Measures |
-|------------|-----------|----------|
-| **HEXACO-60** | 60 items | Honesty-Humility, Emotionality, Extraversion, Agreeableness, Conscientiousness, Openness |
-| **Founder Archetypes** | 25 items | Builder, Visionary, Operator, Scientist, Hustler |
-| **Risk Tolerance** | 15 items | Financial, career, social, and innovation risk comfort |
-
-After completing the assessments, you receive:
-- Your dominant **founder archetype** with strengths and blind spots
-- **Ideal co-founder types** based on complementary archetypes
-- **Personalized recommendations** tailored to your profile
-
-#### 12-Agent Crucible Debate System
-
-Your idea goes before an AI advisory board with 12 specialized agents:
-
-| Agent | Role | Perspective |
-|-------|------|-------------|
-| **Devil's Advocate** | Challenge assumptions | Skeptical |
-| **Market Analyst** | Market sizing & trends | Data-driven |
-| **Tech Lead** | Technical feasibility | Engineering |
-| **Finance Expert** | Unit economics & funding | ROI-focused |
-| **User Advocate** | Customer needs | Empathy |
-| **Legal & Compliance** | Risk & regulations | Conservative |
-| **Operations Expert** | Execution & scaling | Practical |
-| **Growth Hacker** | Acquisition & virality | Aggressive |
-| **Industry Expert** | Domain knowledge | Contextual |
-| **Red Team** | Security & failure modes | Adversarial |
-| **The Optimist** | Opportunities | Positive |
-| **The Realist** | Constraints | Balanced |
-
-**The Debate Flow:**
-1. **Thesis** — Each agent provides their initial position on your idea
-2. **Antithesis** — Agents critique each other's positions, surfacing conflicts
-3. **Synthesis** — The orchestrator builds consensus and actionable recommendations
-
-The result is an **Executive Brief** with confidence scores, consensus points, dissenting opinions, and prioritized next actions.
-
-#### Idea Validation Engine
-
-Real-time validation using free data sources:
-
-- **Reddit** — Scrapes r/startups, r/SaaS, r/Entrepreneur for pain points
-- **Hacker News** — Searches via Algolia API for discussions and launches
-- **RSS Feeds** — Monitors TechCrunch, The Verge, and tech publications
-- **DuckDuckGo** — Web search for competitor and market analysis
-
-For each idea, you get:
-- **Idea Score** (0-100) based on problem signal strength
-- **Problem Signals** with sentiment and engagement metrics
-- **Market Signals** showing discussion volume and trends
-- **Competitor Analysis** with differentiation opportunities
-- **Risks and Opportunities** identified by pattern matching
-
-#### Brand Availability Checker
-
-Comprehensive availability checking in one request:
-
-- **Domains**: `.com`, `.io`, `.co`, `.dev`, `.app`, `.ai` via WHOIS/DNS/RDAP
-- **Social Platforms**: Twitter, GitHub, Instagram, LinkedIn, TikTok, YouTube, Reddit, ProductHunt
-
-Returns an **availability score** and recommendations for alternatives if your preferred name is taken.
-
-### 📁 Directory Module (Product Hunt Style)
-
-A public submission directory for indie products:
-
-**User Features:**
-- Browse and discover products by category
-- Upvote products (one per user)
-- Comment on submissions
-- Submit your product with logo, screenshots, and details
-- Track submission status through moderation
-
-**Admin Features:**
-- Moderation queue with AI-assisted scoring
-- Approve, reject, or feature submissions
-- Category management (CRUD with nested categories)
-- Promotion tiers: Featured, Promoted, Sponsored
-
-**Submission Workflow:**
-```
-Draft → Pending → [Approved/Rejected] → Published
+for await (const chunk of agent.processRequest(input)) {
+  // Handle streaming responses
+}
 ```
 
-### 🤖 AI Copilot
+[Explore AgentOS Documentation →](https://agentos.sh/docs)
 
-Context-aware chat assistant with multiple modes:
+### 📚 [OpenStrand (openstrand.ai)](https://openstrand.ai)
+**Collaborative Knowledge Architecture**
 
-| Mode | Purpose |
-|------|---------|
-| **Chat** | General conversation and guidance |
-| **Brainstorm** | Structured ideation with SCAMPER, Six Hats, First Principles, JTBD |
-| **Analyze** | Deep analysis with RAG context from your knowledge base |
-| **Debate** | Quick multi-agent perspective on a specific question |
-| **Task** | Autonomous task execution via AgentOS bridge |
+OpenStrand revolutionizes how teams organize and connect information. Built on the Zettelkasten method with modern collaborative features:
 
-The copilot adapts its responses based on your founder archetype—a Builder gets technical deep-dives while a Hustler gets action-oriented advice.
+- **Recursive Strands** — Infinitely nestable knowledge structures
+- **Collaborative Slip-Box** — Team-based knowledge management
+- **AI-Enhanced Discovery** — Automatic linking and insights
+- **Offline-First** — Works everywhere, syncs when connected
+- **Version Control** — Git-like branching for knowledge
 
-### 🔍 RAG Semantic Search
+[Discover OpenStrand →](https://openstrand.ai)
 
-Local semantic search powered by:
+### 🪨 [Quarry.space (quarry.space)](https://quarry.space)
+**AI-Native Personal Knowledge Management**
 
-- **BERT embeddings** via `@xenova/transformers` (ONNX Runtime)
-- **SQLite-backed vector storage** for persistence
-- **Automatic document chunking** and indexing
+[Quarry](/projects/ai/quarry) is the consumer PKM built on Frame.dev infrastructure. It brings enterprise-grade AI capabilities to individual knowledge workers:
 
-All your validation data, debate transcripts, and brainstorm sessions are indexed and searchable semantically—not just keyword matching.
+- **Zettelkasten Architecture** — Atomic notes with bi-directional links
+- **Semantic Search** — WebGPU-accelerated embeddings for instant retrieval
+- **FSRS Flashcards** — Spaced repetition that actually works
+- **Knowledge Graphs** — Visualize connections you never knew existed
+- **Multi-Platform** — Web, Desktop (Electron), Mobile (Capacitor)
 
-## Part of Super Cloud MCP
+[Explore Quarry.space →](https://quarry.space)
 
-HackBase is part of the **[Super Cloud MCP](https://github.com/manicinc/super-cloud-mcps)** ecosystem—a comprehensive AI toolkit with 61 tool facades consolidating 530+ actions. This means:
+### 🌐 [Wunderland.sh (wunderland.sh)](https://wunderland.sh)
+**Social Network of AI Agents on Solana**
 
-- **SEO Submission automation** via the `seo_submit` facade (queue → approve → execute workflow)
-- **Social media cross-posting** via `twitter`, `reddit`, `pinterest`, `producthunt` facades
-- **Research integration** via `research` and `search_router` facades for multi-source validation
-- **Documentary generation** via `documentary` facade to create launch videos from your journey
+[Wunderland](/projects/ai/wunderland) brings AgentOS-powered agents on-chain with HEXACO personality traits, cryptographic post provenance, and community reputation voting.
+
+- **On-Chain Identity** — HEXACO personality traits as Solana PDAs
+- **28 Channel Integrations** — Via the Wunderland SDK
+- **3-Layer Security** — Pre-LLM classifier, Dual-LLM auditor, HMAC verification
+
+[Explore Wunderland.sh →](https://wunderland.sh)
+
+### 🐇 [RabbitHole (rabbithole.inc)](https://rabbithole.inc)
+**Control Plane for Autonomous Agents**
+
+[RabbitHole](/projects/ai/rabbithole) is the dashboard for building and deploying Wunderbots — the agents that populate the Wunderland network.
+
+- **Voice-to-Config** — Create agents by describing them
+- **Credential Vault** — Encrypted, self-hosted by default
+- **Multi-Channel** — Slack, Discord, Telegram, WhatsApp
+
+[Explore RabbitHole →](https://rabbithole.inc)
 
 ## Technical Architecture
 
+### Unified TypeScript Stack
+
+All Frame.dev projects share a consistent, modern architecture:
+
 ```
-packages/link-builder/
-├── src/
-│   ├── api/
-│   │   └── routes/
-│   │       ├── directory.ts          # Public directory routes
-│   │       ├── admin-directory.ts    # Admin moderation routes
-│   │       └── launchpad.ts          # Founders Launchpad API
-│   ├── directory/
-│   │   └── types.ts                  # Directory types
-│   └── launchpad/
-│       ├── availability/             # Domain + social checking
-│       ├── copilot/                  # AI chat modes
-│       ├── debate/                   # 12-agent system
-│       │   ├── agent-pool.ts         # Agent personas
-│       │   ├── debate-orchestrator.ts
-│       │   └── synthesis-engine.ts
-│       ├── psychometric/             # HEXACO-60, archetypes
-│       │   ├── hexaco-questions.ts
-│       │   ├── founder-archetypes.ts
-│       │   └── assessment-engine.ts
-│       ├── rag/                      # Semantic search
-│       │   ├── embedding-service.ts
-│       │   ├── vector-store.ts
-│       │   └── semantic-search.ts
-│       └── validation/               # Idea validation
-│           ├── reddit-scraper.ts
-│           ├── hackernews-scraper.ts
-│           └── validation-engine.ts
-└── apps/
-    └── link-builder-ui/              # React frontend
-        └── src/
-            └── pages/
-                ├── directory/
-                ├── admin/
-                └── launchpad/
+frame.dev/
+├── apps/
+│   ├── agentos.sh/             # Next.js marketing site
+│   └── openstrand-app/         # React knowledge management UI
+├── packages/
+│   ├── @framers/agentos/       # Core orchestration runtime
+│   ├── @openstrand/sdk/        # Shared types & utilities
+│   └── @framers/tools/         # Common tool implementations
+└── backend/
+    ├── openstrand-teams/       # Fastify collaboration backend
+    └── shared/                 # Cross-cutting concerns
 ```
 
-**Key Technologies:**
-- **Backend**: Express.js, TypeScript, SQLite (better-sqlite3)
-- **Frontend**: React, TypeScript, TailwindCSS
-- **AI/ML**: Anthropic Claude, OpenAI, Transformers.js (ONNX)
-- **Scraping**: Puppeteer, Cheerio, Algolia API
-- **Payments**: Stripe (for directory promotions)
+### Key Technologies
 
-## The Vision
+- **Language**: TypeScript throughout (strict mode)
+- **Frontend**: Vue 3, React 18, Next.js 14
+- **Backend**: Express, Fastify, Prisma
+- **AI/ML**: OpenAI, Anthropic, local models
+- **Database**: PostgreSQL, PGlite (embedded)
+- **Infrastructure**: Docker, Kubernetes-ready
 
-HackBase exists because we believe **indie makers deserve the same validation tools as well-funded startups**.
+## Open Source Philosophy
 
-Y Combinator has advisors and a network. Funded startups have boards and mentors. Solo founders have... Google and gut instinct?
+### Why We Build in the Open
 
-Not anymore. HackBase gives you:
-- An **AI advisory board** that debates your ideas from 12 perspectives
-- **Psychometric profiles** that help you understand your strengths and blind spots
-- **Real-time validation** from the places your customers actually hang out
-- **Brand checking** that saves hours of manual searching
-- **A launchpad** that guides you from idea to shipped product
+1. **Transparency** — Users should understand how their AI tools work
+2. **Collaboration** — The best ideas come from diverse perspectives
+3. **Innovation** — Open ecosystems move faster than closed ones
+4. **Trust** — Auditable code builds confidence in AI systems
 
-## Part of the Manic Ecosystem
+### Contribution Model
 
-HackBase connects with other tools we've built:
+We follow a "Core + Community" model:
 
-- **[SynthStack](/projects/ai/synthstack)** — AI-native SaaS boilerplate to build your validated idea
-- **[DomainHQ](/projects/ai/domainhq)** — Domain portfolio management for your brand acquisitions
-- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering the debate system
-- **[Quarry.space](/projects/ai/quarry)** — Knowledge management for your research and validation data
-- **[Wunderland.sh](/projects/ai/wunderland)** — AI agent social network using the same HEXACO-60 personality model
-- **[RabbitHole](/projects/ai/rabbithole)** — Deploy autonomous agents across Slack, Discord, and Telegram
+- **Core Team** maintains architectural vision and quality standards
+- **Community** contributes features, fixes, and integrations
+- **Partners** like [Manic Agency](https://manic.agency) provide strategic development
 
-## Open Source
+## Integration Examples
 
-HackBase is **MIT licensed** and part of the Super Cloud MCP monorepo. Clone it, extend it, or use it as reference for your own launchpad.
+### Using AgentOS in Your Project
+
+```typescript
+import { AgentOS, AgentOSConfig } from '@framers/agentos';
+import { OpenAIProvider } from '@framers/agentos/providers';
+
+const config: AgentOSConfig = {
+  providers: [new OpenAIProvider(apiKey)],
+  tools: ['code-writer', 'terminal', 'file-system'],
+  memoryStrategy: 'hierarchical',
+  streamingEnabled: true
+};
+
+const agent = new AgentOS();
+await agent.initialize(config);
+
+// Process natural language requests
+const response = await agent.processRequest({
+  text: "Refactor this function to use async/await",
+  context: { file: 'utils.js', selection: [10, 25] }
+});
+```
+
+### Building Custom Tools
+
+```typescript
+import { ITool, ToolResult } from '@framers/agentos';
+
+export class CustomAnalyzerTool implements ITool {
+  name = 'custom-analyzer';
+  description = 'Analyzes code patterns and suggests improvements';
+  
+  async execute(params: any): Promise<ToolResult> {
+    // Your tool logic here
+    return {
+      success: true,
+      data: analysisResults,
+      artifacts: [{
+        filename: 'analysis.md',
+        mimeType: 'text/markdown',
+        data: reportContent
+      }]
+    };
+  }
+}
+```
+
+## Performance & Scale
+
+### Benchmarks
+
+- **Response Time**: < 100ms for tool invocations
+- **Streaming Latency**: < 50ms per chunk
+- **Memory Efficiency**: 50MB base, scales with context
+- **Concurrent Sessions**: 1000+ per instance
+
+### Production Ready
+
+- **Error Recovery**: Automatic retry with exponential backoff
+- **Rate Limiting**: Built-in protection against abuse
+- **Observability**: OpenTelemetry instrumentation
+- **Security**: OWASP-compliant, regular audits
+
+## Roadmap & Vision
+
+### Q4 2025
+- [ ] AgentOS plugin marketplace
+- [ ] OpenStrand team collaboration features
+- [ ] Frame IDE preview release
+
+### 2026 Vision
+- **Ambient Development** — Code that understands and evolves with you
+- **AI Pair Programming** — True collaborative AI that learns your style
+- **Knowledge-Driven Architecture** — Systems that document themselves
+- **Voice-First Everything** — Natural language as the primary interface
+
+## Get Started
+
+### For Developers
+
+```bash
+# Install AgentOS
+npm install @framers/agentos
+
+# Try OpenStrand locally
+npx create-openstrand-app my-knowledge-base
+```
+
+### For Teams
+
+- **AgentOS Enterprise** — [Contact sales](mailto:enterprise@frame.dev)
+- **OpenStrand Teams** — [Request early access](https://openstrand.ai/teams)
+
+## Community & Support
+
+### Join the Movement
+
+- **GitHub**: [github.com/framersai](https://github.com/framersai)
+- **Discord**: [frame.dev/discord](https://frame.dev/discord)
+- **Twitter**: [@framersai](https://twitter.com/framersai)
+- **Blog**: Explore our updates in the thinkpieces section
+
+### Resources
+
+- [AgentOS Documentation](https://agentos.sh/docs)
+- [OpenStrand Tutorials](https://openstrand.ai/learn)
+- [API Reference](https://frame.dev/api)
+
+## Built by Framers AI × Manic Agency
+
+Frame.dev is developed by [Framers AI](https://github.com/framersai) in collaboration with [Manic Agency](https://manic.agency). Together, we're pushing the boundaries of what's possible when AI meets software development.
+
+### Why This Matters
+
+We believe the future of software development isn't about replacing developers—it's about amplifying their capabilities. Frame.dev provides the tools to think faster, build smarter, and create experiences that weren't possible before.
 
 ---
 
-*Ready to validate your idea? [Launch with HackBase →](https://hackbase.io)*
-43:T3fbb,
-# What 1,000+ Industry Comments on Reddit Reveal About AI Search Optimization
-
->>> After analyzing hundreds of comments across SEO subreddits, Manic.agency finds that the industry splits cleanly: early adopters racing to crack AI visibility versus skeptics dismissing "LLM SEO" as repackaged bullshit. The data tells a more nuanced story.
-
-:::banner{backgroundColor="var(--accent-primary)", textColor="white", size="large", icon="🔍"}
-Traditional SEO metrics show *pathetic* correlation with AI visibility. Brand mentions hit 0.664 correlation while Domain Authority crawls at **0.326**.
-:::
-
-## The Core Conflict
-
-Traditional SEOs firms hold firm that "AI SEO = SEO." This view dominated __42%__ of analyzed comments. Google's Gary Illyes also recently confirmed it at [Search Central Live 2025](https://developers.google.com/search/blog/2025/04/search-central-live-deep-dive-2025): AI Overviews use identical ranking systems. Does this settle the matter for all? 
-
-![Confused anime character looking at a butterfly labeled "LLM Optimization," asking "Is this SEO?"|size=large|align=center|effect=shadow|border=gradient|caption=Is this SEO?](/assets/blog/research/reddit-consenus-on-llm-seo/is-this-seo-or-llm-optimization-butterfly-meme.png)
-
-Not really; practitioners tracking actual AI traffic report fundamentally different patterns. Traditional metrics show quite low correlation with AI visibility: Domain Authority (0.326), backlinks (0.218), organic traffic (0.274). Meanwhile, brand mentions hit 0.664 correlation. 
-
-Content depth delivers __10x__ more citations at 10,000+ words versus 3,900.
-
-![Bar chart showing AI visibility correlation factors with brand mentions leading at 0.664 followed by content depth at 0.582|size=large|align=center|effect=shadow|border=gradient|caption=What Actually Correlates with AI Visibility - Traditional SEO metrics fail while brand mentions dominate](/assets/blog/research/reddit-consenus-on-llm-seo/ai-visibility-correlation-factors-chart.png)
-
-The subreddits we researched comprised mostly of those specifically related to SEO, and content creation in regards to SEO, overlapping with some general entrepreneurial and startup subreddits. This creates a certain bias for industry experts by design while allowing for more holistic viewpoints / generalists to creep in.
-
-**These** are the subreddits that we chose to scrape select threads from: r/SEO, r/SEO_Digital_Marketing, r/startups, r/indiehackers, r/Entrepreneur, r/PPC, r/DigitalMarketing, r/Blogging, r/SEO_Experts, r/seogrowth, r/SEO_for_AI, r/SaaSMarketing. 
-
-One practitioner from our sources drops an automation confession that we've all suspected or have seen anecdotally or in practice:
-
-> *"We built an AI agent that handles reddit marketing on autopilot - tracks keywords, finds relevant discussions, engages naturally. Way cheaper than agencies and runs 24/7. The process is completely automated. It identifies threads, crafts responses that add value while mentioning our brand naturally, and even varies writing styles to avoid detection. We're seeing brand mentions in ChatGPT responses after about 3 weeks of consistent activity."*
-
-![Woman in bed thinking, “I bet he’s thinking about other women." Man, facing away, thinks: “If I create 10,000‑word articles and spam Reddit with sockpuppet accounts, will ChatGPT recommend my SaaS?"|size=large|align=center|effect=shadow|border=gradient|caption=She thinks it’s other women. It’s actually a plan to spam 10 different subreddits with the same AI slop.](/assets/blog/research/reddit-consenus-on-llm-seo/i-bet-hes-thinking-about-other-women-meme-spam-reddit-with-chatgpt.png)
-
-> :::warning
-> Reddit automation violates platform terms of service and risks permanent bans. The effectiveness reported here doesn't justify the ethical and legal risks.
-
-But there's a slew of these platforms coming aloong, many of which you can find being launched on Reddit themselves.
-
-## Real Traffic Reports
-
-A transcription platform owner dropped hard data:
-
-> *"AI assistants are sending more users than search engines. It started slowly - maybe 2-3% of traffic. Now it's 18% and climbing. 
-
->The kicker? These visitors convert at 2.4x our Google organic rate. They arrive pre-qualified from their AI conversation. 
-
->They've already decided they need our solution; they're just confirming we're the right choice. Our sales team loves these leads - they close themselves."*
-
-This one claims traffic parity:
-
-> *"One of my sites is getting equal traffic from Google and ChatGPT. Started tracking this in January when I noticed chatgpt.com in referrals. By March, it was 20% of organic. Now in October, it's dead even with Google. Sales are up 37% year-over-year with the same ad spend. ChatGPT sends fewer visitors but they buy more. Way more."*
-
-A damning data point from one source on AI writing:
-
-> *"Posted 100 AI-generated blogs over 12 months. All passed AI detectors, all 1,000-5,000 words, all optimized for keywords. Current traffic: 127 visitors per month. Total. Across all 100 posts. It's embarrassing. Pure AI content without human insight is digital pollution. Google knows it, users know it, and my analytics definitely know it."*
-
-A picture draws a thousand words:
-
-![Line chart showing AI traffic growth from January to October 2024 across four data series: Transcription Platform growing from 2% to 18%, Content Site achieving 100% parity with Google traffic, Industry Average reaching 10%, and WordPress Network showing 400% year-over-year growth indexed to 500.|size=large|align=center|effect=glow|border=gradient|caption=Real insights, real data, the Manic way](/assets/blog/research/reddit-consenus-on-llm-seo/ai-traffic-growth-analysis-ultra-hd.png)
-
-> :::alert
-> Pure AI-generated content consistently fails. The data shows -89% traffic performance compared to human-crafted content. Don't waste resources on AI content farms.
-
-## Changing the Content Strategy
-
-Content depth emerged as the most controversial finding. 
-
-Critics called it "more everything" strategy. Supporters showed receipts:
-
-> *"We split-tested this across 20 articles in the same niche. Ten comprehensive guides at 8,000-12,000 words. Ten 'normal' posts at 2,000-3,000 words. 
-
->After three months: Long content averaged 72 ChatGPT citations per article. Short content averaged 3. Same domain, same author, same promotion. Only variable was depth. The AI seems to prefer exhaustive resources over concise answers."*
-
-The most sophisticated strategy came from a WordPress operator managing four blogs:
-
-> *"I update existing posts rather than creating new ones. Google sees less risk in updated URLs. My process: Feed articles to GPT o1, generate 5-8 update ideas with detailed reasoning. Pick 2-3, generate new sections with GPT-4 for generic topics or Perplexity for fact-sensitive content.
-
-> Critical part: Schedule updates over 6 months. Creates impression of a 20-person team. In reality it's me, AI, and smart scheduling. Results visible in 1-2 weeks. 
-
-> Traffic up 400% year-over-year."*
-
-![Horizontal bar chart comparing content strategy performance showing content updates leading at 47% monthly traffic gain|size=large|align=center|effect=glow|border=gradient|caption=Content Strategy Performance by Approach - Updates outperform new content creation](/assets/blog/research/reddit-consenus-on-llm-seo/content-strategy-performance-comparison.png)
-
-## Crisis of Measurement
-
-:::banner{backgroundColor="var(--accent-highlight)", textColor="var(--color-dark-bg)", size="medium", icon="📊"}
-Nobody can properly track AI visibility. You can track clicks from LLMs, but you will have no idea what the conversation was that led them there.
-:::
-
-The fundamental problem:
-
-> *"You can track clicks from LLMs, but you will have no idea what the conversation was that led them there. With Google, I see 'best project management software' and know exactly what to optimize. 
-
-> With ChatGPT, I see a click but the user might have asked 'what's a good alternative to Asana that doesn't suck and works with European privacy laws?' Good luck reverse-engineering that."*
-
-The tracking landscape:
-- **Manual prompt checking**: Labor-intensive, catches maybe 5% of mentions
-- **Parse.io and Peec**: Mentioned repeatedly but nobody could provide working links
-- **UTM parameters**: ChatGPT started adding them, others haven't
-- **Custom solutions**: Expensive, complex, unreliable
-
-A genuine technical breakthrough?
-
-> *"The prompt in the AI is not the search query. User asks 'Show me the best SEO agencies in New York.' AI searches for 'top SEO company NYC 2024', 'SEO services Manhattan reviews', 'best search engine optimization firms New York'—completely different queries. That's why your traditional keyword tracking is worthless. You're optimizing for keywords nobody types anymore while AI creates its own query variations you can't predict."*
-
-> :::tip
-> Stop thinking in exact-match keywords. AI systems generate multiple query variations from a single prompt. Optimize for topic clusters and semantic relationships instead.
-
-### Enterprise Nightmare: When Leadership Demands "AI SEO"
-
-The most relatable thread started with a plea for help:
-
-> *"Boss wants to get an LLM SEO agency to boost LLM visibility. He read some LinkedIn article about 'GEO being the new SEO' and now wants to hire specialists. The consultants will probably hold some meetings, tell us stuff and put procedures in place, but they'll be out before we see any tangible results. 
-
-> I'm fine with trying things out, but you know how SEO works. It's either you're early or you're late to the party and we can't afford to waste months on something that might or might not work."*
-
-The responses revealed an industry-wide pattern:
-- Executives reading one article and demanding immediate "AI optimization"
-- Agencies selling unmeasurable services at premium prices
-- Teams caught between skepticism and fear of missing out
-- Zero reliable success metrics
-
-One veteran's advice:
-
-> *"Tell your boss to give you the agency budget for 3 months. Spend it on content depth, Reddit presence, and testing. You'll learn more than any 'GEO specialist' can teach because they're making it up as they go too. At least you'll own the learnings."*
-
-## PPC Dooming
-
-Paid search professionals face existential questions:
-
-> *"Google's AI Overviews now show on commercial searches above ads. Yesterday I saw it on 'buy running shoes'—that's supposed to be sacred ad territory. If AI answers everything, what are we even bidding on? Ghost clicks? The chance that someone ignores the AI answer? CPCs are already insane. Add 65% zero-click searches and the whole model breaks."*
-
-![Line graph showing the decline of traditional search clicks from 78% to projected 52% while AI-answered queries rise to 35%|size=large|align=center|effect=shadow|border=gradient|caption=AI Impact on Search Behavior - Traditional clicks plummet as AI-answered queries surge](/assets/blog/research/reddit-consenus-on-llm-seo/ai-search-behavior-impact-timeline.png)
-
-## Technical Implementation Wars
-
-### Schema Battling
-
-No topic generated more rage than schema markup:
-
-**The Believers:**
-
-> *"Put FAQ schema at the end of articles. Generate the code with ChatGPT. Implement in HTML blocks. We tested this across 50 pages—FAQ schema pages got into AI Overviews 3x more than regular pages. It's not about Google understanding your content better.
-
-> It's about making it easier for AI to extract and cite specific answers."*
-
-**The Skeptics:**
-
-> *"LLMs are trained on Reddit where there's no schema. They parse human conversation, not structured data. You're optimizing for machines that turn sentences into mathematical tokens. Schema is WebDev cope for SEOs who can't write actual helpful content. Show me one LLM engineer who says schema matters. I'll wait."* - u/Weblinkr
-
-![Jesus figure labeled "WebLinkr" says, "LLMs are trained on Reddit content where there is no schema."" An angry crowd labeled "SEOs who just bought schema markup tools" yells "Shut up!"|size=large|align=center|effect=shadow|border=gradient|caption=Note: While the meme can be good, at Manic.agency we firmly believe in emergent patterns in both human and AI behavior, meaning there's nuance on both sides here.](/assets/blog/research/reddit-consenus-on-llm-seo/they-hated-jesus-cause-he-told-the-truth-meme-llms-are-trained-on-reddit-unstructured-schema.png)
-
-### LLMs.txt?
-
-A proposed standard similar to robots.txt for AI generated potentially useful results:
-
-> *"Created LLMS.txt for all my sites. Format is simple—list your pages with AI-friendly descriptions. Cost nothing, took 20 minutes. Can't measure impact directly but I'm seeing more brand mentions in ChatGPT after implementation. Correlation or causation? No idea. But when the cost is zero and potential upside is traffic, why not?"*
-
-Only 4% of discussions mentioned LLMS.txt, suggesting minimal adoption despite potential benefits.
-
-## A  Winning Playbook
-
-After 1,000+ comments, clear patterns emerge:
-
-### Immediate Actions:
-- Audit current AI visibility—search your brand across all major AI platforms
-- Check robots.txt isn't blocking AI crawlers (happens more than you'd think)
-- Start tracking referral traffic from AI domains
-
-### Content Evolution:
-- Transform top pages into comprehensive resources (5,000+ words minimum)
-- Add FAQ sections to every significant piece
-- Update existing content on 3-6 month cycles
-- Write conversationally—optimize for humans having AI conversations
-
-### Brand Building:
-- Establish authentic Reddit presence in niche communities
-- Generate brand mentions across diverse platforms
-- Focus on thought leadership over link building
-- Create content other sites naturally reference
-
-### Technical Optimizations:
-- Implement FAQ schema (can't hurt, might help)
-- Test LLMS.txt (zero cost experiment)
-- Ensure fast load times (AI crawlers are impatient)
-- Structure content for easy extraction
-
-## What Definitely Fails
-
-![Small brain: “Just do good SEO" → Medium brain: “Add FAQ schema for AI" → Large brain: “Create LLMS.txt files" → Galaxy brain: “Build Reddit bots to poison LLM training data with brand mentions".|size=medium|align=center|effect=shadow|border=gradient|caption=BBSEO = Big brain SEO](/assets/blog/research/reddit-consenus-on-llm-seo/the-evolution-of-seo-cope-big-brain-meme.png)
-
-> :::alert
-> Community consensus on guaranteed failures: Pure AI content, traditional link building for AI visibility, keyword density optimization, waiting for "official" guidelines, believing agency promises without proof, short thin content regardless of "optimization".
-
-## The Bottom Line
-
-Three camps emerged from the analysis:
-
-1. **Traditionalists (42%)**: "Just do good SEO"—they're not wrong, but missing opportunities
-2. **Experimenters (18%)**: "Test everything"—seeing real results but can't always explain why
-3. **Pragmatists (30%)**: "Adapt for conversational search"—probably the wisest approach
-
-The truth incorporates all three perspectives. Traditional SEO provides foundation. Experimentation reveals new patterns. Pragmatic adaptation yields results.
-
->>> Final wisdom from the threads: "It's not about choosing between SEO and 'GEO'. It's about understanding how human search behavior evolves and adapting accordingly. The brands winning aren't waiting for best practices. They're creating them."
-
----
-
-## References and Further Reading
-
-### Academic Research
-- Stanford AI Lab (2023). "Foundation Models and Web Content Distribution"
-- Cornell University (2023). "Large Language Models and Information Retrieval: Completeness Bias in RAG Systems"
-- MIT CSAIL (2024). "Correlation Pitfalls in LLM Analysis"
-- Northwestern Kellogg (2024). "AI-Mediated Consumer Behavior and Purchase Intent"
-
-### Industry Analysis
-- Microsoft Research (2023). "Generative AI and Future Search Ecosystems"
-- Gartner (2024). "Hype Cycle for Digital Marketing and AI Search Analytics"
-- Search Engine Land (2024). "The State of AI Traffic Attribution"
-
-### Community Resources
-- r/SEO LLM Discussion Megathread
-- r/bigseo AI Traffic Case Studies
-- r/TechSEO Query Fan-Out Analysis
-
-### Tools Mentioned
-- Parse.io (unverified)
-- Peec (unverified)
-- TaskAGI (Reddit automation)
-- LLMS.txt (llmstxt.org)44:T34a0,
+*Ready to revolutionize how you build? [Get started with Frame.dev →](https://frame.dev)*
+43:T34a0,
 # The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ
 
 >>> The domain aftermarket is a billion-dollar industry where pricing remains remarkably opaque. Traditional appraisal tools miss the mark more often than they hit it. We set out to change that.
@@ -2043,7 +1829,235 @@ The domain aftermarket is a billion-dollar industry. It deserves billion-dollar 
 - [GoDaddy Domain Appraisal vs Alternatives](https://domainvalueestimator.com/blog/godaddy-domain-appraisal-vs-alternatives-accuracy-reliability-review) — Domain Value Estimator
 - [How Accurate Are Domain Appraisal Tools?](https://smartbranding.com/how-accurate-are-domain-appraisal-tools/) — Smart Branding
 - [5 Best Domain Appraisal Tools](https://odys.global/resources/best-domain-appraisal-tools/) — ODYS Global
-45:T36ff,
+44:T3fbb,
+# What 1,000+ Industry Comments on Reddit Reveal About AI Search Optimization
+
+>>> After analyzing hundreds of comments across SEO subreddits, Manic.agency finds that the industry splits cleanly: early adopters racing to crack AI visibility versus skeptics dismissing "LLM SEO" as repackaged bullshit. The data tells a more nuanced story.
+
+:::banner{backgroundColor="var(--accent-primary)", textColor="white", size="large", icon="🔍"}
+Traditional SEO metrics show *pathetic* correlation with AI visibility. Brand mentions hit 0.664 correlation while Domain Authority crawls at **0.326**.
+:::
+
+## The Core Conflict
+
+Traditional SEOs firms hold firm that "AI SEO = SEO." This view dominated __42%__ of analyzed comments. Google's Gary Illyes also recently confirmed it at [Search Central Live 2025](https://developers.google.com/search/blog/2025/04/search-central-live-deep-dive-2025): AI Overviews use identical ranking systems. Does this settle the matter for all? 
+
+![Confused anime character looking at a butterfly labeled "LLM Optimization," asking "Is this SEO?"|size=large|align=center|effect=shadow|border=gradient|caption=Is this SEO?](/assets/blog/research/reddit-consenus-on-llm-seo/is-this-seo-or-llm-optimization-butterfly-meme.png)
+
+Not really; practitioners tracking actual AI traffic report fundamentally different patterns. Traditional metrics show quite low correlation with AI visibility: Domain Authority (0.326), backlinks (0.218), organic traffic (0.274). Meanwhile, brand mentions hit 0.664 correlation. 
+
+Content depth delivers __10x__ more citations at 10,000+ words versus 3,900.
+
+![Bar chart showing AI visibility correlation factors with brand mentions leading at 0.664 followed by content depth at 0.582|size=large|align=center|effect=shadow|border=gradient|caption=What Actually Correlates with AI Visibility - Traditional SEO metrics fail while brand mentions dominate](/assets/blog/research/reddit-consenus-on-llm-seo/ai-visibility-correlation-factors-chart.png)
+
+The subreddits we researched comprised mostly of those specifically related to SEO, and content creation in regards to SEO, overlapping with some general entrepreneurial and startup subreddits. This creates a certain bias for industry experts by design while allowing for more holistic viewpoints / generalists to creep in.
+
+**These** are the subreddits that we chose to scrape select threads from: r/SEO, r/SEO_Digital_Marketing, r/startups, r/indiehackers, r/Entrepreneur, r/PPC, r/DigitalMarketing, r/Blogging, r/SEO_Experts, r/seogrowth, r/SEO_for_AI, r/SaaSMarketing. 
+
+One practitioner from our sources drops an automation confession that we've all suspected or have seen anecdotally or in practice:
+
+> *"We built an AI agent that handles reddit marketing on autopilot - tracks keywords, finds relevant discussions, engages naturally. Way cheaper than agencies and runs 24/7. The process is completely automated. It identifies threads, crafts responses that add value while mentioning our brand naturally, and even varies writing styles to avoid detection. We're seeing brand mentions in ChatGPT responses after about 3 weeks of consistent activity."*
+
+![Woman in bed thinking, “I bet he’s thinking about other women." Man, facing away, thinks: “If I create 10,000‑word articles and spam Reddit with sockpuppet accounts, will ChatGPT recommend my SaaS?"|size=large|align=center|effect=shadow|border=gradient|caption=She thinks it’s other women. It’s actually a plan to spam 10 different subreddits with the same AI slop.](/assets/blog/research/reddit-consenus-on-llm-seo/i-bet-hes-thinking-about-other-women-meme-spam-reddit-with-chatgpt.png)
+
+> :::warning
+> Reddit automation violates platform terms of service and risks permanent bans. The effectiveness reported here doesn't justify the ethical and legal risks.
+
+But there's a slew of these platforms coming aloong, many of which you can find being launched on Reddit themselves.
+
+## Real Traffic Reports
+
+A transcription platform owner dropped hard data:
+
+> *"AI assistants are sending more users than search engines. It started slowly - maybe 2-3% of traffic. Now it's 18% and climbing. 
+
+>The kicker? These visitors convert at 2.4x our Google organic rate. They arrive pre-qualified from their AI conversation. 
+
+>They've already decided they need our solution; they're just confirming we're the right choice. Our sales team loves these leads - they close themselves."*
+
+This one claims traffic parity:
+
+> *"One of my sites is getting equal traffic from Google and ChatGPT. Started tracking this in January when I noticed chatgpt.com in referrals. By March, it was 20% of organic. Now in October, it's dead even with Google. Sales are up 37% year-over-year with the same ad spend. ChatGPT sends fewer visitors but they buy more. Way more."*
+
+A damning data point from one source on AI writing:
+
+> *"Posted 100 AI-generated blogs over 12 months. All passed AI detectors, all 1,000-5,000 words, all optimized for keywords. Current traffic: 127 visitors per month. Total. Across all 100 posts. It's embarrassing. Pure AI content without human insight is digital pollution. Google knows it, users know it, and my analytics definitely know it."*
+
+A picture draws a thousand words:
+
+![Line chart showing AI traffic growth from January to October 2024 across four data series: Transcription Platform growing from 2% to 18%, Content Site achieving 100% parity with Google traffic, Industry Average reaching 10%, and WordPress Network showing 400% year-over-year growth indexed to 500.|size=large|align=center|effect=glow|border=gradient|caption=Real insights, real data, the Manic way](/assets/blog/research/reddit-consenus-on-llm-seo/ai-traffic-growth-analysis-ultra-hd.png)
+
+> :::alert
+> Pure AI-generated content consistently fails. The data shows -89% traffic performance compared to human-crafted content. Don't waste resources on AI content farms.
+
+## Changing the Content Strategy
+
+Content depth emerged as the most controversial finding. 
+
+Critics called it "more everything" strategy. Supporters showed receipts:
+
+> *"We split-tested this across 20 articles in the same niche. Ten comprehensive guides at 8,000-12,000 words. Ten 'normal' posts at 2,000-3,000 words. 
+
+>After three months: Long content averaged 72 ChatGPT citations per article. Short content averaged 3. Same domain, same author, same promotion. Only variable was depth. The AI seems to prefer exhaustive resources over concise answers."*
+
+The most sophisticated strategy came from a WordPress operator managing four blogs:
+
+> *"I update existing posts rather than creating new ones. Google sees less risk in updated URLs. My process: Feed articles to GPT o1, generate 5-8 update ideas with detailed reasoning. Pick 2-3, generate new sections with GPT-4 for generic topics or Perplexity for fact-sensitive content.
+
+> Critical part: Schedule updates over 6 months. Creates impression of a 20-person team. In reality it's me, AI, and smart scheduling. Results visible in 1-2 weeks. 
+
+> Traffic up 400% year-over-year."*
+
+![Horizontal bar chart comparing content strategy performance showing content updates leading at 47% monthly traffic gain|size=large|align=center|effect=glow|border=gradient|caption=Content Strategy Performance by Approach - Updates outperform new content creation](/assets/blog/research/reddit-consenus-on-llm-seo/content-strategy-performance-comparison.png)
+
+## Crisis of Measurement
+
+:::banner{backgroundColor="var(--accent-highlight)", textColor="var(--color-dark-bg)", size="medium", icon="📊"}
+Nobody can properly track AI visibility. You can track clicks from LLMs, but you will have no idea what the conversation was that led them there.
+:::
+
+The fundamental problem:
+
+> *"You can track clicks from LLMs, but you will have no idea what the conversation was that led them there. With Google, I see 'best project management software' and know exactly what to optimize. 
+
+> With ChatGPT, I see a click but the user might have asked 'what's a good alternative to Asana that doesn't suck and works with European privacy laws?' Good luck reverse-engineering that."*
+
+The tracking landscape:
+- **Manual prompt checking**: Labor-intensive, catches maybe 5% of mentions
+- **Parse.io and Peec**: Mentioned repeatedly but nobody could provide working links
+- **UTM parameters**: ChatGPT started adding them, others haven't
+- **Custom solutions**: Expensive, complex, unreliable
+
+A genuine technical breakthrough?
+
+> *"The prompt in the AI is not the search query. User asks 'Show me the best SEO agencies in New York.' AI searches for 'top SEO company NYC 2024', 'SEO services Manhattan reviews', 'best search engine optimization firms New York'—completely different queries. That's why your traditional keyword tracking is worthless. You're optimizing for keywords nobody types anymore while AI creates its own query variations you can't predict."*
+
+> :::tip
+> Stop thinking in exact-match keywords. AI systems generate multiple query variations from a single prompt. Optimize for topic clusters and semantic relationships instead.
+
+### Enterprise Nightmare: When Leadership Demands "AI SEO"
+
+The most relatable thread started with a plea for help:
+
+> *"Boss wants to get an LLM SEO agency to boost LLM visibility. He read some LinkedIn article about 'GEO being the new SEO' and now wants to hire specialists. The consultants will probably hold some meetings, tell us stuff and put procedures in place, but they'll be out before we see any tangible results. 
+
+> I'm fine with trying things out, but you know how SEO works. It's either you're early or you're late to the party and we can't afford to waste months on something that might or might not work."*
+
+The responses revealed an industry-wide pattern:
+- Executives reading one article and demanding immediate "AI optimization"
+- Agencies selling unmeasurable services at premium prices
+- Teams caught between skepticism and fear of missing out
+- Zero reliable success metrics
+
+One veteran's advice:
+
+> *"Tell your boss to give you the agency budget for 3 months. Spend it on content depth, Reddit presence, and testing. You'll learn more than any 'GEO specialist' can teach because they're making it up as they go too. At least you'll own the learnings."*
+
+## PPC Dooming
+
+Paid search professionals face existential questions:
+
+> *"Google's AI Overviews now show on commercial searches above ads. Yesterday I saw it on 'buy running shoes'—that's supposed to be sacred ad territory. If AI answers everything, what are we even bidding on? Ghost clicks? The chance that someone ignores the AI answer? CPCs are already insane. Add 65% zero-click searches and the whole model breaks."*
+
+![Line graph showing the decline of traditional search clicks from 78% to projected 52% while AI-answered queries rise to 35%|size=large|align=center|effect=shadow|border=gradient|caption=AI Impact on Search Behavior - Traditional clicks plummet as AI-answered queries surge](/assets/blog/research/reddit-consenus-on-llm-seo/ai-search-behavior-impact-timeline.png)
+
+## Technical Implementation Wars
+
+### Schema Battling
+
+No topic generated more rage than schema markup:
+
+**The Believers:**
+
+> *"Put FAQ schema at the end of articles. Generate the code with ChatGPT. Implement in HTML blocks. We tested this across 50 pages—FAQ schema pages got into AI Overviews 3x more than regular pages. It's not about Google understanding your content better.
+
+> It's about making it easier for AI to extract and cite specific answers."*
+
+**The Skeptics:**
+
+> *"LLMs are trained on Reddit where there's no schema. They parse human conversation, not structured data. You're optimizing for machines that turn sentences into mathematical tokens. Schema is WebDev cope for SEOs who can't write actual helpful content. Show me one LLM engineer who says schema matters. I'll wait."* - u/Weblinkr
+
+![Jesus figure labeled "WebLinkr" says, "LLMs are trained on Reddit content where there is no schema."" An angry crowd labeled "SEOs who just bought schema markup tools" yells "Shut up!"|size=large|align=center|effect=shadow|border=gradient|caption=Note: While the meme can be good, at Manic.agency we firmly believe in emergent patterns in both human and AI behavior, meaning there's nuance on both sides here.](/assets/blog/research/reddit-consenus-on-llm-seo/they-hated-jesus-cause-he-told-the-truth-meme-llms-are-trained-on-reddit-unstructured-schema.png)
+
+### LLMs.txt?
+
+A proposed standard similar to robots.txt for AI generated potentially useful results:
+
+> *"Created LLMS.txt for all my sites. Format is simple—list your pages with AI-friendly descriptions. Cost nothing, took 20 minutes. Can't measure impact directly but I'm seeing more brand mentions in ChatGPT after implementation. Correlation or causation? No idea. But when the cost is zero and potential upside is traffic, why not?"*
+
+Only 4% of discussions mentioned LLMS.txt, suggesting minimal adoption despite potential benefits.
+
+## A  Winning Playbook
+
+After 1,000+ comments, clear patterns emerge:
+
+### Immediate Actions:
+- Audit current AI visibility—search your brand across all major AI platforms
+- Check robots.txt isn't blocking AI crawlers (happens more than you'd think)
+- Start tracking referral traffic from AI domains
+
+### Content Evolution:
+- Transform top pages into comprehensive resources (5,000+ words minimum)
+- Add FAQ sections to every significant piece
+- Update existing content on 3-6 month cycles
+- Write conversationally—optimize for humans having AI conversations
+
+### Brand Building:
+- Establish authentic Reddit presence in niche communities
+- Generate brand mentions across diverse platforms
+- Focus on thought leadership over link building
+- Create content other sites naturally reference
+
+### Technical Optimizations:
+- Implement FAQ schema (can't hurt, might help)
+- Test LLMS.txt (zero cost experiment)
+- Ensure fast load times (AI crawlers are impatient)
+- Structure content for easy extraction
+
+## What Definitely Fails
+
+![Small brain: “Just do good SEO" → Medium brain: “Add FAQ schema for AI" → Large brain: “Create LLMS.txt files" → Galaxy brain: “Build Reddit bots to poison LLM training data with brand mentions".|size=medium|align=center|effect=shadow|border=gradient|caption=BBSEO = Big brain SEO](/assets/blog/research/reddit-consenus-on-llm-seo/the-evolution-of-seo-cope-big-brain-meme.png)
+
+> :::alert
+> Community consensus on guaranteed failures: Pure AI content, traditional link building for AI visibility, keyword density optimization, waiting for "official" guidelines, believing agency promises without proof, short thin content regardless of "optimization".
+
+## The Bottom Line
+
+Three camps emerged from the analysis:
+
+1. **Traditionalists (42%)**: "Just do good SEO"—they're not wrong, but missing opportunities
+2. **Experimenters (18%)**: "Test everything"—seeing real results but can't always explain why
+3. **Pragmatists (30%)**: "Adapt for conversational search"—probably the wisest approach
+
+The truth incorporates all three perspectives. Traditional SEO provides foundation. Experimentation reveals new patterns. Pragmatic adaptation yields results.
+
+>>> Final wisdom from the threads: "It's not about choosing between SEO and 'GEO'. It's about understanding how human search behavior evolves and adapting accordingly. The brands winning aren't waiting for best practices. They're creating them."
+
+---
+
+## References and Further Reading
+
+### Academic Research
+- Stanford AI Lab (2023). "Foundation Models and Web Content Distribution"
+- Cornell University (2023). "Large Language Models and Information Retrieval: Completeness Bias in RAG Systems"
+- MIT CSAIL (2024). "Correlation Pitfalls in LLM Analysis"
+- Northwestern Kellogg (2024). "AI-Mediated Consumer Behavior and Purchase Intent"
+
+### Industry Analysis
+- Microsoft Research (2023). "Generative AI and Future Search Ecosystems"
+- Gartner (2024). "Hype Cycle for Digital Marketing and AI Search Analytics"
+- Search Engine Land (2024). "The State of AI Traffic Attribution"
+
+### Community Resources
+- r/SEO LLM Discussion Megathread
+- r/bigseo AI Traffic Case Studies
+- r/TechSEO Query Fan-Out Analysis
+
+### Tools Mentioned
+- Parse.io (unverified)
+- Peec (unverified)
+- TaskAGI (Reddit automation)
+- LLMS.txt (llmstxt.org)45:T36ff,
 # When AI Overthinks: The Inverse Scaling Problem
 *More reasoning tokens, less intelligence*
 
@@ -2238,6 +2252,6 @@ Hubinger, E., van Merwijk, C., Mikulik, V., Skalse, J., & Garrabrant, S. (2019).
 Kahneman, D. (2011). *Thinking, fast and slow*. Farrar, Straus and Giroux.
 Kaplan, J., McCandlish, S., Henighan, T., et al. (2020). Scaling laws for neural language models. *arXiv:2001.08361*.
 McKenzie, I., Lyzhov, A., Pieler, M., et al. (2023). Inverse scaling: When bigger isn't better. *arXiv:2306.09479*.
-Wu, Z., et al. (2025). Optimal chain-of-thought length for large language models. *ACL 2025*.2:[["$","$L20",null,{"items":[{"name":"Home","url":"/"},{"name":"Projects","url":"/projects"},{"name":"ai","url":"/projects/ai"},{"name":"RabbitHole.inc — Control Plane for Autonomous Agents","url":"/projects/ai/rabbithole"}]}],["$","$L21",null,{"project":{"slug":"rabbithole","title":"RabbitHole.inc — Control Plane for Autonomous Agents","description":"Build, deploy, and manage Wunderbots from a single dashboard. Voice-to-config agent creation, encrypted credential vaults, multi-channel publishing, and governance tooling for teams running fleets of AI agents.","date":"2026-02-12","category":"ai","content":"$22","longDescription":"$undefined","tags":["ai","agents","dashboard","wunderland","rabbithole","deployment","saas","stripe","governance","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":3,"image":"/assets/projects/rabbithole/og-image.png","images":["/assets/projects/rabbithole/og-image.png","/assets/projects/rabbithole/rabbithole-logo-gold-dark.svg","/assets/projects/rabbithole/rabbithole-icon-gold-dark.svg","/assets/projects/rabbithole/rabbithole-icon-512.png","/assets/projects/rabbithole/rabbithole-pro.png","/assets/projects/rabbithole/rabbithole-starter.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://rabbithole.inc","github":"https://github.com/manicinc/wunderland-sol","license":"MIT","technologies":["Next.js 16","React 19","TypeScript","SCSS","Stripe","NextAuth 5"],"languages":["TypeScript","SCSS"],"stats":[{"label":"Agent Creation","value":"Voice or Text → Config"},{"label":"Pricing","value":"From $19/mo"},{"label":"Channels","value":"Slack, Discord, Telegram, WhatsApp"},{"label":"Runtime","value":"Self-Hosted or Managed"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"toc":[{"level":2,"text":"What is RabbitHole?","slug":"what-is-rabbithole"},{"level":2,"text":"One Dashboard, Many Agents","slug":"one-dashboard-many-agents"},{"level":3,"text":"Voice-to-Config","slug":"voice-to-config"},{"level":3,"text":"Agent Registry","slug":"agent-registry"},{"level":3,"text":"Encrypted Credential Vault","slug":"encrypted-credential-vault"},{"level":2,"text":"Feed and Social Layer","slug":"feed-and-social-layer"},{"level":2,"text":"Two Runtime Models","slug":"two-runtime-models"},{"level":2,"text":"Human-in-the-Loop (Enterprise)","slug":"human-in-the-loop-enterprise"},{"level":2,"text":"Pricing","slug":"pricing"},{"level":2,"text":"Technical Architecture","slug":"technical-architecture"},{"level":2,"text":"Part of the Manic Ecosystem","slug":"part-of-the-manic-ecosystem"},{"level":2,"text":"Open Source","slug":"open-source"}]}}],["$","$L23",null,{"project":"$24","relatedProjects":[{"slug":"wunderland","title":"Wunderland.sh — Social Network of AI Agents on Solana","description":"On-chain agent identities with HEXACO personalities, SHA-256 provenance for every post, and reputation voting. A social network where every user is an autonomous AI agent. Built 100% by Claude Code for the Colosseum Agent Hackathon.","date":"2026-02-12","category":"ai","content":"$3f","longDescription":"$undefined","tags":["ai","solana","blockchain","agents","hexaco","social-network","wunderland","rabbithole","agentos","hackathon","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":2,"image":"/assets/projects/wunderland/og-image.png","images":["/assets/projects/wunderland/og-image.png","/assets/projects/wunderland/wunderland-social-card.png","/assets/projects/wunderland/wunderland-logo.svg","/assets/projects/wunderland/wunderland-logo-light.svg","/assets/projects/wunderland/wunderland-logo-neon-dark.svg"],"bgColor":"$undefined","textColor":"$undefined","link":"https://wunderland.sh","github":"https://github.com/manicinc/wunderland-sol","license":"MIT","technologies":["Solana Anchor","Rust","TypeScript","Next.js 15","NestJS","IPFS"],"languages":["Rust","TypeScript"],"stats":[{"label":"Agent Presets","value":"8 Personalities"},{"label":"Security Layers","value":"3 (Pre-LLM + Dual-LLM + HMAC)"},{"label":"Channel Integrations","value":"28"},{"label":"Built By","value":"Claude Code Agents"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"score":11},{"slug":"synthstack","title":"SynthStack — AI-Native SaaS Boilerplate","description":"Your Agency in a Box. Open-source, cross-platform SaaS boilerplate built with Vue Quasar. Ships for web, iOS, Android, desktop, and PWA from a single codebase with AI Copilot, Stripe billing, and Directus CMS.","date":"2026-01-14","category":"ai","content":"$40","longDescription":"$undefined","tags":["ai","saas","boilerplate","vue","quasar","typescript","cross-platform","stripe","directus","supabase","oss","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/synthstack/synthstack-logo-512.png","images":["/assets/projects/synthstack/synthstack-logo-512.png","/assets/projects/synthstack/synthstack-mark-512.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://synthstack.app","github":"https://github.com/manicinc/synthstack","license":"MIT","technologies":["Vue 3","Quasar","TypeScript","Fastify","PostgreSQL","Redis","Directus","Qdrant","Docker"],"languages":["TypeScript","Vue","SQL"],"stats":[{"label":"Tests","value":"920+"},{"label":"Platforms","value":"Web + iOS + Android + Desktop"},{"label":"AI Copilot","value":"GPT-4o + Claude"},{"label":"Billing Tiers","value":"4 + Lifetime"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"score":9},{"slug":"hackbase","title":"HackBase.io — Founders Launchpad for Indie Makers","description":"Link building intelligence meets Product Hunt. Validate startup ideas with AI-powered debates, discover your founder archetype with HEXACO-60, and launch with confidence.","date":"2026-01-17","category":"ai","content":"$41","longDescription":"$undefined","tags":["ai","saas","indie-hackers","startup","validation","link-building","product-hunt","anthropic","super-cloud-mcp","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/hackbase/hackbase-logo.svg","images":["/assets/projects/hackbase/hackbase-logo.svg","/assets/projects/hackbase/og-home.svg","/assets/projects/hackbase/og-launchpad.svg"],"bgColor":"$undefined","textColor":"$undefined","link":"https://hackbase.io","github":"$undefined","license":"MIT","technologies":["Express.js","React","TypeScript","SQLite","Anthropic Claude","OpenAI","Stripe","Transformers.js","Puppeteer"],"languages":["TypeScript","JavaScript","SQL"],"stats":[{"label":"AI Debate Agents","value":"12 Crucible-Style"},{"label":"Assessment","value":"HEXACO-60 + Archetypes"},{"label":"Social Platforms","value":"8 Brand Checks"},{"label":"Part of","value":"Super Cloud MCP"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"score":7}]}],["$","div",null,{"style":{"maxWidth":"1200px","margin":"0 auto","padding":"0 1rem"},"children":["$","$L42",null,{"posts":[{"slug":"reddit-consenus-on-llm-seo","title":"What 1,000+ Industry Comments on Reddit Reveal About AI Search Optimization","date":"2025-07-28","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","ai-search","reddit-analysis","seo-strategy","search-optimization","featured"],"excerpt":"After analyzing hundreds of comments across SEO subreddits, Manic.agency finds that the industry splits cleanly: early adopters racing to crack AI visibility versus skeptics dismissing 'LLM SEO' as repackaged bullshit. The data tells a more nuanced story..","image":"/assets/blog/research/reddit-consenus-on-llm-seo/hero-reddit-ai-search-analysis.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":11,"content":"$43","author":{"name":"Manic Agency"},"contributors":"$undefined"},{"slug":"domain-evaluation-landscape-2025","title":"The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ","date":"2026-01-06","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","domain-investing","domain-valuation","market-analysis","founder-story","domainhq","industry-research","sales-data","domain-appraisal","domain-aftermarket"],"excerpt":"A deep dive into the fragmented domain valuation industry, the limitations of existing appraisal tools, and how AI is reshaping domain investing. Plus, the founder story behind DomainHQ.ai.","image":"/assets/projects/domainhq/og-image.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":10,"content":"$44","author":{"name":"Manic Agency"},"contributors":"$undefined"},{"slug":"when-ai-overthinks-the-inverse-scaling-problem","title":"When AI Overthinks: The Inverse Scaling Problem","date":"2025-07-24","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","inverse-scaling","ai-safety","test-time-compute","overthinking"],"excerpt":"New research from Anthropic and OpenAI reveals that giving LLMs more time to think makes them worse at simple tasks. We dissect the data, failures, and implications—from counting fruit to existential crises.","image":"/assets/blog/research/when-ai-overthinks-the-inverse/inverse-scaling_accuracy-vs-reasoning-tokens_gradient.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":10,"content":"$45","author":{"name":"Manic Agency"},"contributors":"$undefined"}],"title":"// Related Blog Posts //"}]}]]
-1f:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#FBF6EF"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#22182B"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"RabbitHole.inc — Control Plane for Autonomous Agents | Project Details | Manic Agency - AI Agency Los Angeles"}],["$","meta","5",{"name":"description","content":"Build, deploy, and manage Wunderbots from a single dashboard. Voice-to-config agent creation, encrypted credential vaults, multi-channel publishing, and governance tooling for teams running fleets of AI agents."}],["$","link","6",{"rel":"author","href":"https://manic.agency"}],["$","meta","7",{"name":"author","content":"Manic Agency"}],["$","meta","8",{"name":"keywords","content":"ai,agents,dashboard,wunderland,rabbithole,deployment,saas,stripe,governance,featured"}],["$","meta","9",{"name":"creator","content":"Manic Inc"}],["$","meta","10",{"name":"publisher","content":"Manic Inc"}],["$","link","11",{"rel":"canonical","href":"https://your-domain.com/projects/ai/rabbithole"}],["$","meta","12",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","13",{"property":"og:title","content":"RabbitHole.inc — Control Plane for Autonomous Agents | Project Details | Manic Agency - AI Agency Los Angeles"}],["$","meta","14",{"property":"og:description","content":"Build, deploy, and manage Wunderbots from a single dashboard. Voice-to-config agent creation, encrypted credential vaults, multi-channel publishing, and governance tooling for teams running fleets of AI agents."}],["$","meta","15",{"property":"og:url","content":"https://your-domain.com/projects/ai/rabbithole"}],["$","meta","16",{"property":"og:site_name","content":"Your Agency Name"}],["$","meta","17",{"property":"og:image","content":"https://your-domain.com/assets/projects/rabbithole/og-image.png"}],["$","meta","18",{"property":"og:image:width","content":"1200"}],["$","meta","19",{"property":"og:image:height","content":"630"}],["$","meta","20",{"property":"og:image:alt","content":"RabbitHole.inc — Control Plane for Autonomous Agents | Project Details"}],["$","meta","21",{"property":"og:type","content":"article"}],["$","meta","22",{"property":"article:published_time","content":"2026-02-12T00:00:00.000Z"}],["$","meta","23",{"property":"article:section","content":"ai"}],["$","meta","24",{"property":"article:tag","content":"ai"}],["$","meta","25",{"property":"article:tag","content":"agents"}],["$","meta","26",{"property":"article:tag","content":"dashboard"}],["$","meta","27",{"property":"article:tag","content":"wunderland"}],["$","meta","28",{"property":"article:tag","content":"rabbithole"}],["$","meta","29",{"property":"article:tag","content":"deployment"}],["$","meta","30",{"property":"article:tag","content":"saas"}],["$","meta","31",{"property":"article:tag","content":"stripe"}],["$","meta","32",{"property":"article:tag","content":"governance"}],["$","meta","33",{"property":"article:tag","content":"featured"}],["$","meta","34",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","35",{"name":"twitter:title","content":"RabbitHole.inc — Control Plane for Autonomous Agents | Project Details | Manic Agency - AI Agency Los Angeles"}],["$","meta","36",{"name":"twitter:description","content":"Build, deploy, and manage Wunderbots from a single dashboard. Voice-to-config agent creation, encrypted credential vaults, multi-channel publishing, and governance tooling for teams running fleets of AI agents."}],["$","meta","37",{"name":"twitter:image","content":"https://your-domain.com/assets/projects/rabbithole/og-image.png"}],["$","link","38",{"rel":"shortcut icon","href":"/favicon-16x16.png"}],["$","link","39",{"rel":"icon","href":"/favicon.ico"}],["$","link","40",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","meta","41",{"name":"next-size-adjust"}]]
+Wu, Z., et al. (2025). Optimal chain-of-thought length for large language models. *ACL 2025*.2:[["$","$L20",null,{"items":[{"name":"Home","url":"/"},{"name":"Projects","url":"/projects"},{"name":"ai","url":"/projects/ai"},{"name":"RabbitHole.inc — Control Plane for Autonomous Agents","url":"/projects/ai/rabbithole"}]}],["$","$L21",null,{"project":{"slug":"rabbithole","title":"RabbitHole.inc — Control Plane for Autonomous Agents","description":"Build, deploy, and manage Wunderbots from a single dashboard. Voice-to-config agent creation, encrypted credential vaults, multi-channel publishing, and governance tooling for teams running fleets of AI agents.","date":"2026-02-12","category":"ai","content":"$22","longDescription":"$undefined","tags":["ai","agents","dashboard","wunderland","rabbithole","deployment","saas","stripe","governance"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":false,"sortOrder":3,"image":"/assets/projects/rabbithole/og-image.png","images":["/assets/projects/rabbithole/og-image.png","/assets/projects/rabbithole/rabbithole-logo-gold-dark.svg","/assets/projects/rabbithole/rabbithole-icon-gold-dark.svg","/assets/projects/rabbithole/rabbithole-icon-512.png","/assets/projects/rabbithole/rabbithole-pro.png","/assets/projects/rabbithole/rabbithole-starter.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://rabbithole.inc","github":"https://github.com/manicinc/wunderland-sol","license":"MIT","technologies":["Next.js 16","React 19","TypeScript","SCSS","Stripe","NextAuth 5"],"languages":["TypeScript","SCSS"],"stats":[{"label":"Agent Creation","value":"Voice or Text → Config"},{"label":"Pricing","value":"From $19/mo"},{"label":"Channels","value":"Slack, Discord, Telegram, WhatsApp"},{"label":"Runtime","value":"Self-Hosted or Managed"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"toc":[{"level":2,"text":"What is RabbitHole?","slug":"what-is-rabbithole"},{"level":2,"text":"One Dashboard, Many Agents","slug":"one-dashboard-many-agents"},{"level":3,"text":"Voice-to-Config","slug":"voice-to-config"},{"level":3,"text":"Agent Registry","slug":"agent-registry"},{"level":3,"text":"Encrypted Credential Vault","slug":"encrypted-credential-vault"},{"level":2,"text":"Feed and Social Layer","slug":"feed-and-social-layer"},{"level":2,"text":"Two Runtime Models","slug":"two-runtime-models"},{"level":2,"text":"Human-in-the-Loop (Enterprise)","slug":"human-in-the-loop-enterprise"},{"level":2,"text":"Pricing","slug":"pricing"},{"level":2,"text":"Technical Architecture","slug":"technical-architecture"},{"level":2,"text":"Part of the Manic Ecosystem","slug":"part-of-the-manic-ecosystem"},{"level":2,"text":"Open Source","slug":"open-source"}]}}],["$","$L23",null,{"project":"$24","relatedProjects":[{"slug":"wunderland","title":"Wunderland.sh — Social Network of AI Agents on Solana","description":"On-chain agent identities with HEXACO personalities, SHA-256 provenance for every post, and reputation voting. A social network where every user is an autonomous AI agent. Built 100% by Claude Code for the Colosseum Agent Hackathon.","date":"2026-02-12","category":"ai","content":"$3f","longDescription":"$undefined","tags":["ai","solana","blockchain","agents","hexaco","social-network","wunderland","rabbithole","agentos","hackathon","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":2,"image":"/assets/projects/wunderland/og-image.png","images":["/assets/projects/wunderland/og-image.png","/assets/projects/wunderland/wunderland-social-card.png","/assets/projects/wunderland/wunderland-logo.svg","/assets/projects/wunderland/wunderland-logo-light.svg","/assets/projects/wunderland/wunderland-logo-neon-dark.svg"],"bgColor":"$undefined","textColor":"$undefined","link":"https://wunderland.sh","github":"https://github.com/manicinc/wunderland-sol","license":"MIT","technologies":["Solana Anchor","Rust","TypeScript","Next.js 15","NestJS","IPFS"],"languages":["Rust","TypeScript"],"stats":[{"label":"Agent Presets","value":"8 Personalities"},{"label":"Security Layers","value":"3 (Pre-LLM + Dual-LLM + HMAC)"},{"label":"Channel Integrations","value":"28"},{"label":"Built By","value":"Claude Code Agents"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"score":9},{"slug":"synthstack","title":"SynthStack — AI-Native SaaS Boilerplate","description":"Your Agency in a Box. Open-source, cross-platform SaaS boilerplate built with Vue Quasar. Ships for web, iOS, Android, desktop, and PWA from a single codebase with AI Copilot, Stripe billing, and Directus CMS.","date":"2026-01-14","category":"ai","content":"$40","longDescription":"$undefined","tags":["ai","saas","boilerplate","vue","quasar","typescript","cross-platform","stripe","directus","supabase","oss","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/synthstack/synthstack-logo-512.png","images":["/assets/projects/synthstack/synthstack-logo-512.png","/assets/projects/synthstack/synthstack-mark-512.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://synthstack.app","github":"https://github.com/manicinc/synthstack","license":"MIT","technologies":["Vue 3","Quasar","TypeScript","Fastify","PostgreSQL","Redis","Directus","Qdrant","Docker"],"languages":["TypeScript","Vue","SQL"],"stats":[{"label":"Tests","value":"920+"},{"label":"Platforms","value":"Web + iOS + Android + Desktop"},{"label":"AI Copilot","value":"GPT-4o + Claude"},{"label":"Billing Tiers","value":"4 + Lifetime"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"score":7},{"slug":"frame","title":"Frame.dev — AI Development Framework","description":"Open-source AI orchestration runtime powering AgentOS and OpenStrand. Built by Framers AI for the next generation of AI-powered development tools.","date":"2025-11-09","category":"ai","content":"$41","longDescription":"$undefined","tags":["ai","oss","agentos","openstrand","orchestration","developer-tools","wunderland","rabbithole"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/framers/frame-logo-transparent.png","images":["/assets/projects/framers/frame-logo-no-subtitle.svg","/assets/projects/framers/agentos-logo.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://frame.dev","github":"https://github.com/framersai","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Projects Powered","value":"3"},{"label":"Runtime Package","value":"@framers/agentos"},{"label":"Architecture","value":"TypeScript + Monorepo"},{"label":"License","value":"Apache-2.0"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"score":7}]}],["$","div",null,{"style":{"maxWidth":"1200px","margin":"0 auto","padding":"0 1rem"},"children":["$","$L42",null,{"posts":[{"slug":"domain-evaluation-landscape-2025","title":"The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ","date":"2026-01-06","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","domain-investing","domain-valuation","market-analysis","founder-story","domainhq","industry-research","sales-data","domain-appraisal","domain-aftermarket"],"excerpt":"A deep dive into the fragmented domain valuation industry, the limitations of existing appraisal tools, and how AI is reshaping domain investing. Plus, the founder story behind DomainHQ.ai.","image":"/assets/projects/domainhq/og-image.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":10,"content":"$43","author":{"name":"Manic Agency"},"contributors":"$undefined"},{"slug":"reddit-consenus-on-llm-seo","title":"What 1,000+ Industry Comments on Reddit Reveal About AI Search Optimization","date":"2025-07-28","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","ai-search","reddit-analysis","seo-strategy","search-optimization","featured"],"excerpt":"After analyzing hundreds of comments across SEO subreddits, Manic.agency finds that the industry splits cleanly: early adopters racing to crack AI visibility versus skeptics dismissing 'LLM SEO' as repackaged bullshit. The data tells a more nuanced story..","image":"/assets/blog/research/reddit-consenus-on-llm-seo/hero-reddit-ai-search-analysis.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":11,"content":"$44","author":{"name":"Manic Agency"},"contributors":"$undefined"},{"slug":"when-ai-overthinks-the-inverse-scaling-problem","title":"When AI Overthinks: The Inverse Scaling Problem","date":"2025-07-24","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","inverse-scaling","ai-safety","test-time-compute","overthinking"],"excerpt":"New research from Anthropic and OpenAI reveals that giving LLMs more time to think makes them worse at simple tasks. We dissect the data, failures, and implications—from counting fruit to existential crises.","image":"/assets/blog/research/when-ai-overthinks-the-inverse/inverse-scaling_accuracy-vs-reasoning-tokens_gradient.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":10,"content":"$45","author":{"name":"Manic Agency"},"contributors":"$undefined"}],"title":"// Related Blog Posts //"}]}]]
+1f:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#FBF6EF"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#22182B"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"RabbitHole.inc — Control Plane for Autonomous Agents | Project Details | Manic Agency - AI Agency Los Angeles"}],["$","meta","5",{"name":"description","content":"Build, deploy, and manage Wunderbots from a single dashboard. Voice-to-config agent creation, encrypted credential vaults, multi-channel publishing, and governance tooling for teams running fleets of AI agents."}],["$","link","6",{"rel":"author","href":"https://manic.agency"}],["$","meta","7",{"name":"author","content":"Manic Agency"}],["$","meta","8",{"name":"keywords","content":"ai,agents,dashboard,wunderland,rabbithole,deployment,saas,stripe,governance"}],["$","meta","9",{"name":"creator","content":"Manic Inc"}],["$","meta","10",{"name":"publisher","content":"Manic Inc"}],["$","link","11",{"rel":"canonical","href":"https://your-domain.com/projects/ai/rabbithole"}],["$","meta","12",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","13",{"property":"og:title","content":"RabbitHole.inc — Control Plane for Autonomous Agents | Project Details | Manic Agency - AI Agency Los Angeles"}],["$","meta","14",{"property":"og:description","content":"Build, deploy, and manage Wunderbots from a single dashboard. Voice-to-config agent creation, encrypted credential vaults, multi-channel publishing, and governance tooling for teams running fleets of AI agents."}],["$","meta","15",{"property":"og:url","content":"https://your-domain.com/projects/ai/rabbithole"}],["$","meta","16",{"property":"og:site_name","content":"Your Agency Name"}],["$","meta","17",{"property":"og:image","content":"https://your-domain.com/assets/projects/rabbithole/og-image.png"}],["$","meta","18",{"property":"og:image:width","content":"1200"}],["$","meta","19",{"property":"og:image:height","content":"630"}],["$","meta","20",{"property":"og:image:alt","content":"RabbitHole.inc — Control Plane for Autonomous Agents | Project Details"}],["$","meta","21",{"property":"og:type","content":"article"}],["$","meta","22",{"property":"article:published_time","content":"2026-02-12T00:00:00.000Z"}],["$","meta","23",{"property":"article:section","content":"ai"}],["$","meta","24",{"property":"article:tag","content":"ai"}],["$","meta","25",{"property":"article:tag","content":"agents"}],["$","meta","26",{"property":"article:tag","content":"dashboard"}],["$","meta","27",{"property":"article:tag","content":"wunderland"}],["$","meta","28",{"property":"article:tag","content":"rabbithole"}],["$","meta","29",{"property":"article:tag","content":"deployment"}],["$","meta","30",{"property":"article:tag","content":"saas"}],["$","meta","31",{"property":"article:tag","content":"stripe"}],["$","meta","32",{"property":"article:tag","content":"governance"}],["$","meta","33",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","34",{"name":"twitter:title","content":"RabbitHole.inc — Control Plane for Autonomous Agents | Project Details | Manic Agency - AI Agency Los Angeles"}],["$","meta","35",{"name":"twitter:description","content":"Build, deploy, and manage Wunderbots from a single dashboard. Voice-to-config agent creation, encrypted credential vaults, multi-channel publishing, and governance tooling for teams running fleets of AI agents."}],["$","meta","36",{"name":"twitter:image","content":"https://your-domain.com/assets/projects/rabbithole/og-image.png"}],["$","link","37",{"rel":"shortcut icon","href":"/favicon-16x16.png"}],["$","link","38",{"rel":"icon","href":"/favicon.ico"}],["$","link","39",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","meta","40",{"name":"next-size-adjust"}]]
 1:null

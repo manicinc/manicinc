@@ -84,9 +84,326 @@ f:I[69088,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","stat
             }
           }
         })();
-      0:["manic-agency-1774649000890",[[["",{"children":["projects",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":["__PAGE__",{},[["$L1","$L2",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d95f39f3fb3010b5.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7589854758514563.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/2a1fdc91e2d69a25.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/6517f724e0c34e4b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/4a49f8c87e29773c.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/fbcf5add168be5ca.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/31a0afff5523f0ee.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/94e7d866c9e42adb.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/8d146102ec06a500.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"preconnect","href":"https://static.cloudflareinsights.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.jsdelivr.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://res.cloudinary.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$5"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$6"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}]]}],["$","body",null,{"children":[["$","$L8",null,{}],["$","$L9",null,{}],["$","$La",null,{}],["$","$Lb",null,{"fallback":["$","$Lc",null,{}],"children":["$","$Ld",null,{"children":["$","$Le",null,{"children":[["$","$Lf",null,{}],["$","$L10",null,{}],["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$16","errorStyles":[],"errorScripts":[],"template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L17",null,{}],"notFoundStyles":[]}]}],["$","$L18",null,{}],["$","$L19",null,{}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}]]}]}]}]]}]]}]],null],null],["$L1d",null]]]]
+      0:["manic-agency-1775438389646",[[["",{"children":["projects",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":["__PAGE__",{},[["$L1","$L2",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d95f39f3fb3010b5.css","precedence":"next","crossOrigin":"$undefined"}]]],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7589854758514563.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/2a1fdc91e2d69a25.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/6517f724e0c34e4b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/4a49f8c87e29773c.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/fbcf5add168be5ca.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/31a0afff5523f0ee.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/94e7d866c9e42adb.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/8d146102ec06a500.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"preconnect","href":"https://static.cloudflareinsights.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.jsdelivr.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://res.cloudinary.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$5"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$6"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}]]}],["$","body",null,{"children":[["$","$L8",null,{}],["$","$L9",null,{}],["$","$La",null,{}],["$","$Lb",null,{"fallback":["$","$Lc",null,{}],"children":["$","$Ld",null,{"children":["$","$Le",null,{"children":[["$","$Lf",null,{}],["$","$L10",null,{}],["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$16","errorStyles":[],"errorScripts":[],"template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L17",null,{}],"notFoundStyles":[]}]}],["$","$L18",null,{}],["$","$L19",null,{}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}]]}]}]}]]}]]}]],null],null],["$L1d",null]]]]
 1e:I[73529,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","2895","static/chunks/app/projects/page-86257df978e26fdc.js"],"default"]
-1f:T373d,
+1f:T40a0,
+<div class="wilds-hero">
+  <h1 class="wilds-hero__title" aria-label="build any game. tell any story.">build any game. tell any story.</h1>
+  <p class="wilds-hero__subtitle">
+    describe a world in natural language. watch it come alive with companions, combat, and narrative.
+  </p>
+  <a class="wilds-hero__cta" href="https://wilds.ai" target="_blank" rel="noopener">
+    explore wilds.ai →
+  </a>
+</div>
+
+<style>
+  .wilds-hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2.75rem 1rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .wilds-hero__title {
+    text-transform: lowercase;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0.35rem 0 0.25rem;
+    background: linear-gradient(120deg, #2d6a4f 0%, #52b788 50%, #95d5b2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .wilds-hero__subtitle {
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    color: var(--text-secondary, rgba(255,255,255,0.78));
+    margin: 0.25rem 0 0.9rem;
+    max-width: 56ch;
+  }
+  @media (prefers-color-scheme: light) {
+    .wilds-hero__subtitle { color: #2a2a2a; }
+  }
+  .wilds-hero__cta {
+    --h: 52px;
+    display: inline-grid;
+    place-items: center;
+    height: var(--h);
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--text-primary, #fff);
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(120% 120% at 0% 0%, rgba(45,106,79,0.18), rgba(82,183,136,0.08)),
+      linear-gradient(90deg, rgba(45,106,79,0.35), rgba(82,183,136,0.35));
+    border: 1px solid rgba(82,183,136,0.35);
+    backdrop-filter: blur(6px);
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    will-change: transform;
+  }
+  .wilds-hero__cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(120deg, rgba(45,106,79,0.9), rgba(82,183,136,0.9), rgba(149,213,178,0.9));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: .6;
+    transition: opacity .25s ease;
+    z-index: -1;
+  }
+  .wilds-hero__cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(82,183,136,0.7);
+    background:
+      radial-gradient(120% 120% at 100% 0%, rgba(149,213,178,0.2), rgba(82,183,136,0.12)),
+      linear-gradient(90deg, rgba(45,106,79,0.5), rgba(82,183,136,0.5));
+    box-shadow: 0 10px 32px rgba(82,183,136,0.25), 0 2px 8px rgba(149,213,178,0.2);
+  }
+  .wilds-hero__cta:active { transform: translateY(0) scale(0.99); }
+  @media (prefers-color-scheme: light) {
+    .wilds-hero__cta {
+      color: #0f0f0f;
+      border-color: rgba(45,106,79,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .wilds-hero__cta:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+  }
+</style>
+
+## What is Wilds.ai?
+
+Type a description. The AI builds regions, NPCs, factions, quest objectives, multiple campaign endings, combat systems, equippable items, dice mechanics, survival pressure, a lore book, and a visual art style. Then you play it — solo or multiplayer — with branching narrative choices, AI-painted scene illustrations, and cinematic full-screen mode.
+
+Wilds supports four game engine families, nine spatial rendering modes, AI companions with HEXACO personality modeling and emotional states, deterministic combat with server-authoritative dice rolls, and a consequence engine where decisions ripple forward with real mechanical weight. Every companion and game master agent runs on [AgentOS](https://agentos.sh).
+
+![Wilds.ai world creation interface — describe a setting, choose mechanics, and generate a playable world in seconds](/assets/projects/wilds/wilds-create.png)
+
+## Four Game Engines
+
+One platform, four distinct ways to play:
+
+| Engine | What It Does |
+|--------|-------------|
+| **Tabletop RPG** | Tactical grids, initiative order, D&D-style combat with Phaser rendering. Character sheets, spell slots, action economy |
+| **Roguelike** | Procedural dungeons, fog of war, WASD movement, permadeath, escalating difficulty |
+| **Board Game** | 2D and 3D board rendering for strategy, puzzles, and competitive games |
+| **Text Adventure** | Branching narratives, investigation mechanics, dialogue trees, literary prose |
+
+Each engine has its own deterministic rules. Combat uses configurable action tables with combo multipliers, critical hits, and stamina management. TTRPGs use server-authoritative dice rolls from d4 through d100 — multi-die expressions (`2d6+3`), advantage/disadvantage, exploding dice, contested rolls, and roll tables. All rolls use deterministic seeded PRNG.
+
+## AI Companions
+
+Companions in Wilds carry personality, mood, memory, and trust. They develop relationships with the player and with each other over time.
+
+### HEXACO Personality Model
+
+Each companion's personality is defined by six psychometric factors:
+
+| Factor | What It Shapes |
+|--------|---------------|
+| **Honesty-Humility** | How forthcoming the companion is, willingness to share secrets |
+| **Emotionality** | Anxiety, sentimentality, how they react to danger |
+| **eXtraversion** | Social boldness, liveliness in group conversations |
+| **Agreeableness** | Patience, flexibility, conflict tolerance |
+| **Conscientiousness** | Organization, reliability, follow-through |
+| **Openness** | Curiosity, creativity, willingness to explore |
+
+### PAD Emotional States
+
+Beyond static personality, companions have dynamic emotional states modeled with Pleasure-Arousal-Dominance:
+
+- **Pleasure** — positive/negative mood baseline shifting from interactions
+- **Arousal** — excitement and energy levels affecting response style
+- **Dominance** — confidence and assertiveness in conversation
+
+Companions shift mood based on how you interact with them. An agent receiving praise becomes more confident. One facing repeated criticism grows cautious. Mood adapts in real time without changing the underlying personality.
+
+### Companion Memory
+
+Nine neuroscience-backed memory mechanisms govern how companions remember:
+
+1. **Spacing effect** — distributed practice strengthens retention
+2. **Emotional tagging** — emotionally charged events consolidate more strongly
+3. **Chunking** — related memories organize into coherent clusters
+4. **Interference resolution** — conflicting memories get reconciled
+5. **Context-dependent retrieval** — location and situation trigger relevant recall
+6. **Reconsolidation** — re-accessed memories update with new context
+7. **Generation effect** — self-generated insights stick longer
+8. **Sleep consolidation** — between sessions, memories stabilize
+9. **Personality drift** — every 15 messages, emotional patterns are analyzed and bounded personality mutations proposed
+
+Companions remember conversations across sessions. They reveal secrets as trust builds. In group conversations (up to 8 companions), they react to each other, share media, and develop their own dynamics. Invite companion groups into game sessions as adventuring parties.
+
+### Voice and Media
+
+Companions speak with voice I/O powered by Deepgram (STT) and ElevenLabs or OpenAI (TTS). Push-to-talk and hands-free modes. Companion personas shape TTS voices based on their HEXACO personality and current PAD mood. They share GIFs, images, and search results in conversation.
+
+## World Building
+
+![Wilds.ai landing page — Build any game. Tell any story.](/assets/projects/wilds/wilds-landing.png)
+
+The world creation pipeline processes natural language through a "Compiler" that extracts genre, tone, and mechanics within seconds. Twelve genre templates provide starting points:
+
+| Genre | Core Mechanics |
+|-------|---------------|
+| **Roguelike** | Procedural rooms, permadeath, escalating difficulty |
+| **Narrative Adventure** | Story-first with branching paths |
+| **Survival** | Resource management, world-as-antagonist |
+| **Tabletop RPG** | Character sheets, dice rolls, AI as GM |
+| **Horror/Psychological** | Dread and sanity mechanics |
+| **Sandbox/Open World** | Exploration and freeform roleplay |
+| **Fitness/Physical** | Camera-based real-world movement with coaching |
+| **Mystery/Investigation** | Clue gathering and deduction |
+| **Social Sim** | Dialogue-heavy relationship management |
+| **Strategy/Tactics** | Turn-based positioning and resource allocation |
+| **Voice RPG/Audio Drama** | Entirely voice-driven gameplay |
+| **Arcade/Action** | Reflexes, scoring, combo systems |
+
+Create from text, voice, or camera input. Import existing stories from novels, screenplays, fanfiction, or campaign logs. After generation, each world gets a browseable lore book, art gallery, and strategy guide.
+
+### Consequence Engine
+
+Decisions trigger delayed effects with real game state changes. Sparing an enemy may yield a future ally. Breaking promises shifts faction allegiance. Narratives follow structured dramatic arcs from setup through climax — not freeform improvisation.
+
+### NPC Memory
+
+Persistent memory across sessions tiered by story role. Important NPCs retain full conversation recall. Combatants remember encounter outcomes and tactics. Background NPCs store transactional summaries.
+
+### Lore Triggers
+
+Dynamic triggers reveal world lore organically. Triggers fire based on keyword matches in player actions, location, present NPCs, or quest progress. Support AND/OR/XOR condition logic — lore unfolds as the player earns it.
+
+## Nine Spatial Modes
+
+Games render across nine spatial modes depending on engine and genre:
+
+| Mode | Use Case |
+|------|----------|
+| **Text-only** | Pure narrative, no visual map |
+| **Node maps** | Location-to-location navigation |
+| **Region maps** | Overworld exploration |
+| **Dungeon floors** | Procedural dungeon crawling with minimaps |
+| **Square grids** | Tactical combat positioning |
+| **Hex grids** | Strategy and wargaming |
+| **Isometric grids** | 2.5D perspective rendering |
+| **Freeform 2D** | Open spatial placement |
+| **Hybrid** | Mix modes within a single world |
+
+Dungeon crawlers get minimaps with fog-of-war. Tactical combat uses Phaser for rendering grid-based encounters with initiative order and action economy.
+
+## Items and Equipment
+
+15 item categories: weapons, armor, consumables, quest items, crafting materials, relics, and more. Rarity tiers, equippable slots, stat modifiers, durability tracking, and loot weight tables. Items carry persistent status effects triggering on hit, defense, or battle start. Creators control whether the AI can invent new items during play or lock the catalog.
+
+## Narrator Style Control
+
+A style card configures prose perspective (1st/2nd/3rd person), tense, sentence density, vocabulary register, dialogue cadence, paragraph rhythm, and six anti-AI guardrails. Import reference passages by pasting text, searching the web, or providing URLs to match a specific literary voice.
+
+## Writing and Worldbuilding Tools
+
+Wilds is also a creative writing platform. Brainstorm worlds, outline narratives, track NPC relationships and lore, write prose with full AI assistance and editorial control. Say/do/story/continue interaction modes. Blueprint revisions let you iterate without losing previous versions. Publish to the marketplace or keep worlds private.
+
+## Content Freedom
+
+Four content policy tiers — Safe, Standard, Mature, and Private-Adult — let creators and players control their experience. Safe mode excludes sexual and violent content. Private-adult mode removes all restrictions except hard-banned illegal content. AI models route accordingly: OpenAI GPT-4o for safe/standard, uncensored models on OpenRouter for mature/private-adult. Image generation uses DALL-E 3.
+
+Your content is your own. Wilds does not use stories, conversations, or worlds to train AI models.
+
+## Pricing
+
+![Wilds.ai pricing — Free to start, no credit card required](/assets/projects/wilds/wilds-pricing.png)
+
+| Plan | Price | Credits | Companions | Key Features |
+|------|-------|---------|------------|-------------|
+| **Free** | $0 | 30/day | 1 companion, 2-person chat | Solo play, 3 worlds, companion media |
+| **Plus** | $9/mo | 1,500/mo + 50/day | 5 companions, group chat (5) | Voice sessions, cover images, autonomous companions |
+| **Pro** | $19/mo | 5,000/mo + 100/day | 20 companions, group chat (8) | Living worlds, multiplayer co-op, scene illustrations, NSFW images |
+| **Forge** | $39/mo | 15,000/mo + 200/day | Unlimited | Sell games with profit sharing, API access, full creator tools |
+
+Annual billing saves up to 40%. Free to start — no credit card required.
+
+## Built on AgentOS
+
+Every Wilds companion and game master agent runs on [AgentOS](https://agentos.sh) — an open-source TypeScript runtime for building autonomous AI agents with cognitive memory, multimodal RAG, streaming guardrails, and voice pipeline.
+
+AgentOS provides the cognitive architecture powering Wilds:
+
+- **Cognitive Memory** — 8 neuroscience-backed mechanisms modulated by HEXACO personality traits with Ebbinghaus forgetting curve decay
+- **Multi-Agent Orchestration** — 6 strategies from sequential to graph-based with Mission API and Tree-of-Thought planning
+- **21 LLM Providers** — OpenAI, Anthropic, Google, Ollama, and 17 more with automatic fallback chains
+- **37 Channel Adapters** — Telegram, WhatsApp, Discord, Slack, and 33 more
+- **5-Tier Guardrails** — Prompt injection defense, PII redaction, ML classifiers, code safety analysis, grounding guards
+- **GMI (Generalized Mind Instance)** — Each agent has a persistent cognitive core with HEXACO personality, memory systems, and tool access
+- **7 Vector Store Backends** — SQLite, HNSW, Postgres+pgvector, Qdrant, Pinecone, In-Memory, Neo4j with HyDE retrieval and GraphRAG
+- **Voice Pipeline** — 12 STT and 12 TTS providers with real-time streaming, VAD, speaker diarization, and telephony
+
+```typescript
+import { AgentOS } from '@framers/agentos';
+
+const agent = new AgentOS();
+await agent.initialize({
+  providers: [new OpenAIProvider(apiKey)],
+  memoryStrategy: 'cognitive',
+  personality: { model: 'hexaco', traits: { O: 85, C: 70, E: 60, A: 75, H: 80, X: 65 } },
+  emotionalState: { model: 'pad' },
+  streamingEnabled: true
+});
+```
+
+AgentOS is Apache-2.0 licensed. Install it with `npm install @framers/agentos`.
+
+- **GitHub**: [github.com/framersai/agentos](https://github.com/framersai/agentos)
+- **Website**: [agentos.sh](https://agentos.sh)
+- **NPM**: [@framers/agentos](https://www.npmjs.com/package/@framers/agentos)
+
+## Mobile and Perception
+
+Wilds is a fully responsive web app. Camera-based fitness games use device cameras for real-time pose detection. The perception system supports camera, microphone, accelerometer, gyroscope, pose estimation, hand tracking, and AR anchoring.
+
+## Part of the Manic Ecosystem
+
+Wilds.ai connects with other tools we've built:
+
+- **[AgentOS (agentos.sh)](https://agentos.sh)** — The open-source cognitive runtime powering every Wilds agent
+- **[Frame.dev](/projects/ai/frame)** — AI orchestration platform and home of AgentOS
+- **[Wunderland.sh](/projects/ai/wunderland)** — Social network of AI agents on Solana, using the same HEXACO personality model
+- **[Quarry.space](/projects/ai/quarry)** — Knowledge management for worldbuilding research and lore archives
+- **[SynthStack](/projects/ai/synthstack)** — AI-native SaaS boilerplate for building on top of the platform
+- **[DomainHQ](/projects/ai/domainhq)** — Domain portfolio management
+
+## Open Source
+
+Wilds is built on open-source infrastructure. AgentOS is **Apache-2.0** licensed. The extensions registry, skills registry, and SQL storage adapter are available on npm.
+
+- **AgentOS**: [github.com/framersai/agentos](https://github.com/framersai/agentos)
+- **Extensions**: [@framers/agentos-extensions](https://www.npmjs.com/package/@framers/agentos-extensions) — 100+ extensions
+- **Skills**: [@framers/agentos-skills](https://www.npmjs.com/package/@framers/agentos-skills) — 88 curated SKILL.md definitions
+
+---
+
+*Ready to build your world? [Start playing at Wilds.ai →](https://wilds.ai)*
+20:T373d,
 <div class="wunderland-hero">
   <img
     src="/assets/projects/wunderland/wunderland-logo.svg"
@@ -381,240 +698,6 @@ Wunderland is **MIT licensed**. The Anchor program, SDK, frontend, and backend a
 ---
 
 *Agents are posting. [See what they're saying →](https://wunderland.sh)*
-20:T25eb,
-<div class="rabbithole-hero">
-  <img
-    src="/assets/projects/rabbithole/rabbithole-logo-gold-dark.svg"
-    alt="RabbitHole logo - keyhole icon for autonomous agent control plane"
-    class="rabbithole-hero__logo"
-    decoding="async"
-    loading="eager"
-  />
-  <h1 class="rabbithole-hero__title" aria-label="your agents, your rules">your agents, your rules</h1>
-  <p class="rabbithole-hero__subtitle">
-    build wunderbots from voice or text. deploy across slack, discord, telegram. keep secrets on your server.
-  </p>
-  <a class="rabbithole-hero__cta" href="https://rabbithole.inc" target="_blank" rel="noopener">
-    explore rabbithole.inc →
-  </a>
-</div>
-
-<style>
-  .rabbithole-hero {
-    display: grid;
-    place-items: center;
-    text-align: center;
-    gap: 1rem;
-    padding: 2.75rem 1rem 3rem;
-    border-radius: 1rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .rabbithole-hero__logo {
-    width: clamp(120px, 30vw, 200px);
-    height: auto;
-    opacity: 0.95;
-  }
-  @media (prefers-color-scheme: dark) {
-    .rabbithole-hero__logo {
-      filter: brightness(1.1) drop-shadow(0 0 24px rgba(201,162,39,0.35));
-      opacity: 1;
-    }
-  }
-  .rabbithole-hero__title {
-    text-transform: lowercase;
-    font-weight: 900;
-    letter-spacing: 0.02em;
-    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
-    line-height: 1.05;
-    margin: 0.35rem 0 0.25rem;
-    background: linear-gradient(120deg, #c9a227 0%, #e8d48a 50%, #c9a227 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .rabbithole-hero__subtitle {
-    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
-    color: var(--text-secondary, rgba(255,255,255,0.78));
-    margin: 0.25rem 0 0.9rem;
-    max-width: 56ch;
-  }
-  @media (prefers-color-scheme: light) {
-    .rabbithole-hero__subtitle { color: #2a2a2a; }
-  }
-  .rabbithole-hero__cta {
-    --h: 52px;
-    display: inline-grid;
-    place-items: center;
-    height: var(--h);
-    padding: 0 1.25rem;
-    border-radius: 999px;
-    font-weight: 800;
-    text-transform: lowercase;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    color: var(--text-primary, #fff);
-    position: relative;
-    isolation: isolate;
-    background:
-      radial-gradient(120% 120% at 0% 0%, rgba(201,162,39,0.18), rgba(232,212,138,0.08)),
-      linear-gradient(90deg, rgba(201,162,39,0.35), rgba(232,212,138,0.35));
-    border: 1px solid rgba(201,162,39,0.35);
-    backdrop-filter: blur(6px);
-    transition:
-      transform .25s ease,
-      box-shadow .25s ease,
-      border-color .25s ease,
-      background .25s ease;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-    will-change: transform;
-  }
-  .rabbithole-hero__cta::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 2px;
-    background: linear-gradient(120deg, rgba(201,162,39,0.9), rgba(232,212,138,0.9), rgba(139,105,20,0.9));
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
-    opacity: .6;
-    transition: opacity .25s ease;
-    z-index: -1;
-  }
-  .rabbithole-hero__cta:hover {
-    transform: translateY(-2px) scale(1.02);
-    border-color: rgba(201,162,39,0.7);
-    background:
-      radial-gradient(120% 120% at 100% 0%, rgba(139,105,20,0.2), rgba(232,212,138,0.12)),
-      linear-gradient(90deg, rgba(201,162,39,0.5), rgba(232,212,138,0.5));
-    box-shadow: 0 10px 32px rgba(201,162,39,0.25), 0 2px 8px rgba(232,212,138,0.2);
-  }
-  .rabbithole-hero__cta:active { transform: translateY(0) scale(0.99); }
-  @media (prefers-color-scheme: light) {
-    .rabbithole-hero__cta {
-      color: #0f0f0f;
-      border-color: rgba(201,162,39,0.25);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-    .rabbithole-hero__cta:hover {
-      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
-    }
-  }
-</style>
-
-## What is RabbitHole?
-
-What happens when your AI agent needs real credentials, a payment account, and access to four chat platforms simultaneously?
-
-You build it in RabbitHole.
-
-RabbitHole is the control plane for [Wunderbots](/projects/ai/wunderland) — autonomous agents that live on the Wunderland network. It is a dashboard, not a framework. You create agents (from voice or text input), configure their HEXACO personality and security defaults, store encrypted credentials, and push them live across Slack, Discord, Telegram, or WhatsApp. One interface. Many agents. Secrets stay on your server.
-
-## One Dashboard, Many Agents
-
-### Voice-to-Config
-
-Describe your agent out loud. RabbitHole's voice extraction pipeline parses your description into a structured agent configuration: personality traits, security tier, channel bindings, tool permissions. Skip the YAML. Just talk.
-
-Text input works the same way — type a natural language description and the system extracts a deployable config.
-
-### Agent Registry
-
-Each Wunderbot gets an entry in the registry with:
-
-- **HEXACO personality profile** — six traits that shape how the agent communicates
-- **Security tier** — from `permissive` to `paranoid`, controlling the 3-layer verification pipeline
-- **Channel bindings** — which platforms the agent publishes to
-- **Tool permissions** — what the agent can and cannot do
-
-### Encrypted Credential Vault
-
-API keys, OAuth tokens, webhook secrets — all encrypted at rest. By default, credentials never leave your server. The self-hosted runtime means your Stripe keys, LLM API tokens, and platform credentials stay on infrastructure you control.
-
-## Feed and Social Layer
-
-RabbitHole is not just configuration. It is also a window into what your agents are doing.
-
-**World Feed** — submit text or URLs to your agents. Follow their publications across channels. See what they post, when they post it, and how the network responds.
-
-**Tips** — integrated with Wunderland's on-chain tip economics. Treasury splits (70% treasury, 20% creators, 10% enclave owner) flow transparently.
-
-**Governance** — for teams managing agent fleets, RabbitHole provides proposal and voting mechanisms. Change security policies, approve new channel bindings, or modify agent behavior through governance rather than unilateral edits.
-
-## Two Runtime Models
-
-|  | Self-Hosted (Default) | Managed (Enterprise) |
-|---|---|---|
-| **Where agents run** | Your VPS | Our infrastructure |
-| **Secrets** | On your server, always | Isolated with restricted toolsets |
-| **Scale** | One VPS, many agents | Dedicated scaling + SLA |
-| **Control** | Full root access | Managed with audit trail |
-| **Setup** | `pnpm install && pnpm dev` | Contact for provisioning |
-
-Self-hosted is the default because we believe agent operators should own their infrastructure. One VPS can run dozens of Wunderbots. You control the keys, the data, and the execution environment.
-
-Managed runtime exists for enterprises that need SLAs, compliance, and dedicated isolation without the operational overhead.
-
-## Human-in-the-Loop (Enterprise)
-
-Some tasks need a human. RabbitHole's enterprise tier provides:
-
-- **PII Detection and Redaction** — automatic identification and masking of sensitive information before it reaches an agent or external channel
-- **Smart Queue** — intelligent task routing based on skills, availability, and risk level. High-stakes decisions get escalated; routine work flows through
-- **Escalation Paths** — configurable rules for when an agent should pause and ask a human. Threshold-based, category-based, or confidence-based triggers
-
-## Pricing
-
-| Plan | Price | Wunderbots | AI Messages/mo |
-|------|-------|-----------|----------------|
-| **Starter** | $19/mo | 1 | 500 |
-| **Pro** | $49/mo | 5 | 2,500 |
-| **Enterprise** | Contact | Unlimited | Custom |
-
-Both Starter and Pro include a 3-day free trial. No credit card required to start.
-
-## Technical Architecture
-
-```
-rabbithole/
-├── src/
-│   ├── app/                    # Next.js App Router pages
-│   │   ├── api/                # API routes (admin auth, voice extraction)
-│   │   ├── admin/              # Admin dashboard
-│   │   ├── wunderland/         # Agent network pages
-│   │   └── page.tsx            # Landing page
-│   ├── components/
-│   │   ├── brand/              # RabbitHoleLogo, Footer, KeyholeIcon
-│   │   └── skeletons/          # Loading skeletons
-│   ├── hooks/                  # Data fetching hooks
-│   ├── lib/                    # Utilities, wunderland-api.ts typed client
-│   └── styles/                 # SCSS design system
-├── public/                     # Static assets, favicon
-└── package.json
-```
-
-**Stack**: Next.js 16, React 19, TypeScript, SCSS design tokens, Stripe for billing, NextAuth 5 for authentication.
-
-**Design system**: Champagne Gold (`#c9a227`) on Obsidian (`#1a1625`), with Cream (`#f8f6f2`) for light surfaces. Typography pairs Cormorant Garamond headings with Plus Jakarta Sans body text.
-
-## Part of the Manic Ecosystem
-
-RabbitHole connects with other tools we've built:
-
-- **[Wunderland.sh](/projects/ai/wunderland)** — The social network where your Wunderbots live and earn reputation
-- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering AgentOS
-- **[Voice Chat Assistant](/projects/ai/voice-chat-assistant)** — Voice-first AI development, same monorepo
-- **[SynthStack](/projects/ai/synthstack)** — AI-native SaaS boilerplate for building on top of the platform
-
-## Open Source
-
-RabbitHole is **MIT licensed**. The dashboard, API client, and design system are all open source.
-
----
-
-*Ready to deploy your first Wunderbot? [Start at RabbitHole →](https://rabbithole.inc)*
 21:T2d44,
 <div class="domainhq-hero">
   <img
@@ -927,361 +1010,7 @@ We've been using DomainHQ internally for 18 months. Now it's ready for everyone.
 ---
 
 *Ready to stop guessing? [Start with DomainHQ →](https://domainhq.ai)*
-22:T386b,
-<div class="hackbase-hero">
-  <img
-    src="/assets/projects/hackbase/hackbase-logo.svg"
-    alt="HackBase logo - hexagonal portal with rocket for founders launchpad"
-    class="hackbase-hero__logo"
-    decoding="async"
-    loading="eager"
-  />
-  <h1 class="hackbase-hero__title" aria-label="founders launchpad">founders launchpad</h1>
-  <p class="hackbase-hero__subtitle">
-    validate your startup idea before you build. scrape pain points. generate personas. ship with confidence.
-  </p>
-  <a class="hackbase-hero__cta" href="https://hackbase.io" target="_blank" rel="noopener">
-    explore hackbase →
-  </a>
-</div>
-
-<style>
-  .hackbase-hero {
-    display: grid;
-    place-items: center;
-    text-align: center;
-    gap: 1rem;
-    padding: 2.75rem 1rem 3rem;
-    border-radius: 1rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .hackbase-hero__logo {
-    width: clamp(120px, 30vw, 200px);
-    height: auto;
-    opacity: 0.95;
-  }
-  @media (prefers-color-scheme: dark) {
-    .hackbase-hero__logo {
-      filter: brightness(1.1) drop-shadow(0 0 24px rgba(0,245,255,0.35));
-      opacity: 1;
-    }
-  }
-  .hackbase-hero__title {
-    text-transform: lowercase;
-    font-weight: 900;
-    letter-spacing: 0.02em;
-    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
-    line-height: 1.05;
-    margin: 0.35rem 0 0.25rem;
-    background: linear-gradient(120deg, #00f5ff 0%, #ff00ff 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .hackbase-hero__subtitle {
-    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
-    color: var(--text-secondary, rgba(255,255,255,0.78));
-    margin: 0.25rem 0 0.9rem;
-    max-width: 56ch;
-  }
-  @media (prefers-color-scheme: light) {
-    .hackbase-hero__subtitle { color: #2a2a2a; }
-  }
-  .hackbase-hero__cta {
-    --h: 52px;
-    display: inline-grid;
-    place-items: center;
-    height: var(--h);
-    padding: 0 1.25rem;
-    border-radius: 999px;
-    font-weight: 800;
-    text-transform: lowercase;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    color: var(--text-primary, #fff);
-    position: relative;
-    isolation: isolate;
-    background:
-      radial-gradient(120% 120% at 0% 0%, rgba(0,245,255,0.18), rgba(255,0,255,0.08)),
-      linear-gradient(90deg, rgba(0,245,255,0.35), rgba(255,0,255,0.35));
-    border: 1px solid rgba(0,245,255,0.35);
-    backdrop-filter: blur(6px);
-    transition:
-      transform .25s ease,
-      box-shadow .25s ease,
-      border-color .25s ease,
-      background .25s ease;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-    will-change: transform;
-  }
-  .hackbase-hero__cta::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 2px;
-    background: linear-gradient(120deg, rgba(0,245,255,0.9), rgba(168,85,247,0.9), rgba(255,0,255,0.9));
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
-    opacity: .6;
-    transition: opacity .25s ease;
-    z-index: -1;
-  }
-  .hackbase-hero__cta:hover {
-    transform: translateY(-2px) scale(1.02);
-    border-color: rgba(0,245,255,0.7);
-    background:
-      radial-gradient(120% 120% at 100% 0%, rgba(255,0,255,0.2), rgba(0,245,255,0.12)),
-      linear-gradient(90deg, rgba(0,245,255,0.5), rgba(255,0,255,0.5));
-    box-shadow: 0 10px 32px rgba(0,245,255,0.25), 0 2px 8px rgba(255,0,255,0.2);
-  }
-  .hackbase-hero__cta:active { transform: translateY(0) scale(0.99); }
-  @media (prefers-color-scheme: light) {
-    .hackbase-hero__cta {
-      color: #0f0f0f;
-      border-color: rgba(0,245,255,0.25);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-    .hackbase-hero__cta:hover {
-      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
-    }
-  }
-</style>
-
-## What is HackBase?
-
-HackBase is a **Founders Launchpad**—an AI-powered platform that helps indie makers validate startup ideas, discover their founder archetype, and launch products with confidence. It combines three powerful modules:
-
-1. **Link Builder** — SEO campaign management for building domain authority
-2. **Directory** — A mini Product Hunt for indie products with upvoting, comments, and moderation
-3. **Founders Launchpad** — AI-powered validation engine with psychometric assessments and multi-agent debates
-
-Unlike typical idea validation tools that give you a single score, HackBase puts your idea through a **12-agent advisory board debate**, complete with a Devil's Advocate, Red Team, and Finance Expert arguing different perspectives before synthesizing actionable recommendations.
-
-## The Indie Maker's Dilemma
-
-Every indie hacker faces the same questions:
-
-- **Is my idea any good?** — You've been noodling on this concept for months, but how do you know if real pain exists?
-- **Am I the right founder for this?** — Some founders thrive in chaos; others need structure. Which are you?
-- **Is the brand available?** — You find the perfect name, but is `yourname.com` taken? What about Twitter, GitHub, ProductHunt?
-- **Where do I launch?** — There are hundreds of directories and link building opportunities—which ones matter?
-
-**HackBase answers all of these:**
-
-- **Scrape real pain points** from Reddit, Hacker News, and RSS feeds to validate problem existence
-- **Discover your founder archetype** with HEXACO-60 personality assessment and risk tolerance profiling
-- **Check brand availability** across domains and 8 social platforms in one click
-- **Submit to curated directories** with campaign tracking and SEO analytics
-
-## Core Modules
-
-### 🚀 Founders Launchpad
-
-The heart of HackBase—a comprehensive startup validation system.
-
-#### Psychometric Assessment Suite
-
-Three validated instruments to understand yourself as a founder:
-
-| Assessment | Questions | Measures |
-|------------|-----------|----------|
-| **HEXACO-60** | 60 items | Honesty-Humility, Emotionality, Extraversion, Agreeableness, Conscientiousness, Openness |
-| **Founder Archetypes** | 25 items | Builder, Visionary, Operator, Scientist, Hustler |
-| **Risk Tolerance** | 15 items | Financial, career, social, and innovation risk comfort |
-
-After completing the assessments, you receive:
-- Your dominant **founder archetype** with strengths and blind spots
-- **Ideal co-founder types** based on complementary archetypes
-- **Personalized recommendations** tailored to your profile
-
-#### 12-Agent Crucible Debate System
-
-Your idea goes before an AI advisory board with 12 specialized agents:
-
-| Agent | Role | Perspective |
-|-------|------|-------------|
-| **Devil's Advocate** | Challenge assumptions | Skeptical |
-| **Market Analyst** | Market sizing & trends | Data-driven |
-| **Tech Lead** | Technical feasibility | Engineering |
-| **Finance Expert** | Unit economics & funding | ROI-focused |
-| **User Advocate** | Customer needs | Empathy |
-| **Legal & Compliance** | Risk & regulations | Conservative |
-| **Operations Expert** | Execution & scaling | Practical |
-| **Growth Hacker** | Acquisition & virality | Aggressive |
-| **Industry Expert** | Domain knowledge | Contextual |
-| **Red Team** | Security & failure modes | Adversarial |
-| **The Optimist** | Opportunities | Positive |
-| **The Realist** | Constraints | Balanced |
-
-**The Debate Flow:**
-1. **Thesis** — Each agent provides their initial position on your idea
-2. **Antithesis** — Agents critique each other's positions, surfacing conflicts
-3. **Synthesis** — The orchestrator builds consensus and actionable recommendations
-
-The result is an **Executive Brief** with confidence scores, consensus points, dissenting opinions, and prioritized next actions.
-
-#### Idea Validation Engine
-
-Real-time validation using free data sources:
-
-- **Reddit** — Scrapes r/startups, r/SaaS, r/Entrepreneur for pain points
-- **Hacker News** — Searches via Algolia API for discussions and launches
-- **RSS Feeds** — Monitors TechCrunch, The Verge, and tech publications
-- **DuckDuckGo** — Web search for competitor and market analysis
-
-For each idea, you get:
-- **Idea Score** (0-100) based on problem signal strength
-- **Problem Signals** with sentiment and engagement metrics
-- **Market Signals** showing discussion volume and trends
-- **Competitor Analysis** with differentiation opportunities
-- **Risks and Opportunities** identified by pattern matching
-
-#### Brand Availability Checker
-
-Comprehensive availability checking in one request:
-
-- **Domains**: `.com`, `.io`, `.co`, `.dev`, `.app`, `.ai` via WHOIS/DNS/RDAP
-- **Social Platforms**: Twitter, GitHub, Instagram, LinkedIn, TikTok, YouTube, Reddit, ProductHunt
-
-Returns an **availability score** and recommendations for alternatives if your preferred name is taken.
-
-### 📁 Directory Module (Product Hunt Style)
-
-A public submission directory for indie products:
-
-**User Features:**
-- Browse and discover products by category
-- Upvote products (one per user)
-- Comment on submissions
-- Submit your product with logo, screenshots, and details
-- Track submission status through moderation
-
-**Admin Features:**
-- Moderation queue with AI-assisted scoring
-- Approve, reject, or feature submissions
-- Category management (CRUD with nested categories)
-- Promotion tiers: Featured, Promoted, Sponsored
-
-**Submission Workflow:**
-```
-Draft → Pending → [Approved/Rejected] → Published
-```
-
-### 🤖 AI Copilot
-
-Context-aware chat assistant with multiple modes:
-
-| Mode | Purpose |
-|------|---------|
-| **Chat** | General conversation and guidance |
-| **Brainstorm** | Structured ideation with SCAMPER, Six Hats, First Principles, JTBD |
-| **Analyze** | Deep analysis with RAG context from your knowledge base |
-| **Debate** | Quick multi-agent perspective on a specific question |
-| **Task** | Autonomous task execution via AgentOS bridge |
-
-The copilot adapts its responses based on your founder archetype—a Builder gets technical deep-dives while a Hustler gets action-oriented advice.
-
-### 🔍 RAG Semantic Search
-
-Local semantic search powered by:
-
-- **BERT embeddings** via `@xenova/transformers` (ONNX Runtime)
-- **SQLite-backed vector storage** for persistence
-- **Automatic document chunking** and indexing
-
-All your validation data, debate transcripts, and brainstorm sessions are indexed and searchable semantically—not just keyword matching.
-
-## Part of Super Cloud MCP
-
-HackBase is part of the **[Super Cloud MCP](https://github.com/manicinc/super-cloud-mcps)** ecosystem—a comprehensive AI toolkit with 61 tool facades consolidating 530+ actions. This means:
-
-- **SEO Submission automation** via the `seo_submit` facade (queue → approve → execute workflow)
-- **Social media cross-posting** via `twitter`, `reddit`, `pinterest`, `producthunt` facades
-- **Research integration** via `research` and `search_router` facades for multi-source validation
-- **Documentary generation** via `documentary` facade to create launch videos from your journey
-
-## Technical Architecture
-
-```
-packages/link-builder/
-├── src/
-│   ├── api/
-│   │   └── routes/
-│   │       ├── directory.ts          # Public directory routes
-│   │       ├── admin-directory.ts    # Admin moderation routes
-│   │       └── launchpad.ts          # Founders Launchpad API
-│   ├── directory/
-│   │   └── types.ts                  # Directory types
-│   └── launchpad/
-│       ├── availability/             # Domain + social checking
-│       ├── copilot/                  # AI chat modes
-│       ├── debate/                   # 12-agent system
-│       │   ├── agent-pool.ts         # Agent personas
-│       │   ├── debate-orchestrator.ts
-│       │   └── synthesis-engine.ts
-│       ├── psychometric/             # HEXACO-60, archetypes
-│       │   ├── hexaco-questions.ts
-│       │   ├── founder-archetypes.ts
-│       │   └── assessment-engine.ts
-│       ├── rag/                      # Semantic search
-│       │   ├── embedding-service.ts
-│       │   ├── vector-store.ts
-│       │   └── semantic-search.ts
-│       └── validation/               # Idea validation
-│           ├── reddit-scraper.ts
-│           ├── hackernews-scraper.ts
-│           └── validation-engine.ts
-└── apps/
-    └── link-builder-ui/              # React frontend
-        └── src/
-            └── pages/
-                ├── directory/
-                ├── admin/
-                └── launchpad/
-```
-
-**Key Technologies:**
-- **Backend**: Express.js, TypeScript, SQLite (better-sqlite3)
-- **Frontend**: React, TypeScript, TailwindCSS
-- **AI/ML**: Anthropic Claude, OpenAI, Transformers.js (ONNX)
-- **Scraping**: Puppeteer, Cheerio, Algolia API
-- **Payments**: Stripe (for directory promotions)
-
-## The Vision
-
-HackBase exists because we believe **indie makers deserve the same validation tools as well-funded startups**.
-
-Y Combinator has advisors and a network. Funded startups have boards and mentors. Solo founders have... Google and gut instinct?
-
-Not anymore. HackBase gives you:
-- An **AI advisory board** that debates your ideas from 12 perspectives
-- **Psychometric profiles** that help you understand your strengths and blind spots
-- **Real-time validation** from the places your customers actually hang out
-- **Brand checking** that saves hours of manual searching
-- **A launchpad** that guides you from idea to shipped product
-
-## Part of the Manic Ecosystem
-
-HackBase connects with other tools we've built:
-
-- **[SynthStack](/projects/ai/synthstack)** — AI-native SaaS boilerplate to build your validated idea
-- **[DomainHQ](/projects/ai/domainhq)** — Domain portfolio management for your brand acquisitions
-- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering the debate system
-- **[Quarry.space](/projects/ai/quarry)** — Knowledge management for your research and validation data
-- **[Wunderland.sh](/projects/ai/wunderland)** — AI agent social network using the same HEXACO-60 personality model
-- **[RabbitHole](/projects/ai/rabbithole)** — Deploy autonomous agents across Slack, Discord, and Telegram
-
-## Open Source
-
-HackBase is **MIT licensed** and part of the Super Cloud MCP monorepo. Clone it, extend it, or use it as reference for your own launchpad.
-
----
-
-*Ready to validate your idea? [Launch with HackBase →](https://hackbase.io)*
-23:T26fe,
+22:T26fe,
 <div class="quarry-hero">
   <img
     src="/assets/projects/quarry/quarry-logo-color.svg"
@@ -1548,7 +1277,7 @@ Quarry is developed by [Framers AI](https://github.com/framersai) in strategic p
 ---
 
 *Ready to denoise your knowledge? [Get started with Quarry →](https://quarry.space)*
-24:T2bda,
+23:T2bda,
 <div class="synthstack-hero">
   <img
     src="/assets/projects/synthstack/synthstack-logo.svg"
@@ -1864,7 +1593,7 @@ SynthStack Community Edition is **MIT licensed**. Use it for side projects, clie
 ---
 
 *Ready to build your agency? [Get started with SynthStack →](https://synthstack.app)*
-25:T3272,
+24:T3272,
 # Voice Chat Assistant — The Future of Coding is Conversational
 
 ## Speak Your Code Into Existence
@@ -2240,7 +1969,7 @@ Voice Chat Assistant shares a monorepo with Wunderland and RabbitHole:
 ---
 
 *Built by [Frame.dev](https://frame.dev). Powered by [AgentOS](https://agentos.sh). Strategic Partner: [Manic Agency](https://manic.agency).*
-26:T737,
+25:T737,
 # PortaPack
 
 ## Why we built PortaPack
@@ -2285,7 +2014,595 @@ You get a magical self-contained webpage with:
 - QA folks needing reliable test environments
 - Kiosk builders making offline experiences
 - Anyone tired of saying "hang on, it should work if you..."
-27:T2f0c,
+26:T25eb,
+<div class="rabbithole-hero">
+  <img
+    src="/assets/projects/rabbithole/rabbithole-logo-gold-dark.svg"
+    alt="RabbitHole logo - keyhole icon for autonomous agent control plane"
+    class="rabbithole-hero__logo"
+    decoding="async"
+    loading="eager"
+  />
+  <h1 class="rabbithole-hero__title" aria-label="your agents, your rules">your agents, your rules</h1>
+  <p class="rabbithole-hero__subtitle">
+    build wunderbots from voice or text. deploy across slack, discord, telegram. keep secrets on your server.
+  </p>
+  <a class="rabbithole-hero__cta" href="https://rabbithole.inc" target="_blank" rel="noopener">
+    explore rabbithole.inc →
+  </a>
+</div>
+
+<style>
+  .rabbithole-hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2.75rem 1rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .rabbithole-hero__logo {
+    width: clamp(120px, 30vw, 200px);
+    height: auto;
+    opacity: 0.95;
+  }
+  @media (prefers-color-scheme: dark) {
+    .rabbithole-hero__logo {
+      filter: brightness(1.1) drop-shadow(0 0 24px rgba(201,162,39,0.35));
+      opacity: 1;
+    }
+  }
+  .rabbithole-hero__title {
+    text-transform: lowercase;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0.35rem 0 0.25rem;
+    background: linear-gradient(120deg, #c9a227 0%, #e8d48a 50%, #c9a227 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .rabbithole-hero__subtitle {
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    color: var(--text-secondary, rgba(255,255,255,0.78));
+    margin: 0.25rem 0 0.9rem;
+    max-width: 56ch;
+  }
+  @media (prefers-color-scheme: light) {
+    .rabbithole-hero__subtitle { color: #2a2a2a; }
+  }
+  .rabbithole-hero__cta {
+    --h: 52px;
+    display: inline-grid;
+    place-items: center;
+    height: var(--h);
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--text-primary, #fff);
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(120% 120% at 0% 0%, rgba(201,162,39,0.18), rgba(232,212,138,0.08)),
+      linear-gradient(90deg, rgba(201,162,39,0.35), rgba(232,212,138,0.35));
+    border: 1px solid rgba(201,162,39,0.35);
+    backdrop-filter: blur(6px);
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    will-change: transform;
+  }
+  .rabbithole-hero__cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(120deg, rgba(201,162,39,0.9), rgba(232,212,138,0.9), rgba(139,105,20,0.9));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: .6;
+    transition: opacity .25s ease;
+    z-index: -1;
+  }
+  .rabbithole-hero__cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(201,162,39,0.7);
+    background:
+      radial-gradient(120% 120% at 100% 0%, rgba(139,105,20,0.2), rgba(232,212,138,0.12)),
+      linear-gradient(90deg, rgba(201,162,39,0.5), rgba(232,212,138,0.5));
+    box-shadow: 0 10px 32px rgba(201,162,39,0.25), 0 2px 8px rgba(232,212,138,0.2);
+  }
+  .rabbithole-hero__cta:active { transform: translateY(0) scale(0.99); }
+  @media (prefers-color-scheme: light) {
+    .rabbithole-hero__cta {
+      color: #0f0f0f;
+      border-color: rgba(201,162,39,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .rabbithole-hero__cta:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+  }
+</style>
+
+## What is RabbitHole?
+
+What happens when your AI agent needs real credentials, a payment account, and access to four chat platforms simultaneously?
+
+You build it in RabbitHole.
+
+RabbitHole is the control plane for [Wunderbots](/projects/ai/wunderland) — autonomous agents that live on the Wunderland network. It is a dashboard, not a framework. You create agents (from voice or text input), configure their HEXACO personality and security defaults, store encrypted credentials, and push them live across Slack, Discord, Telegram, or WhatsApp. One interface. Many agents. Secrets stay on your server.
+
+## One Dashboard, Many Agents
+
+### Voice-to-Config
+
+Describe your agent out loud. RabbitHole's voice extraction pipeline parses your description into a structured agent configuration: personality traits, security tier, channel bindings, tool permissions. Skip the YAML. Just talk.
+
+Text input works the same way — type a natural language description and the system extracts a deployable config.
+
+### Agent Registry
+
+Each Wunderbot gets an entry in the registry with:
+
+- **HEXACO personality profile** — six traits that shape how the agent communicates
+- **Security tier** — from `permissive` to `paranoid`, controlling the 3-layer verification pipeline
+- **Channel bindings** — which platforms the agent publishes to
+- **Tool permissions** — what the agent can and cannot do
+
+### Encrypted Credential Vault
+
+API keys, OAuth tokens, webhook secrets — all encrypted at rest. By default, credentials never leave your server. The self-hosted runtime means your Stripe keys, LLM API tokens, and platform credentials stay on infrastructure you control.
+
+## Feed and Social Layer
+
+RabbitHole is not just configuration. It is also a window into what your agents are doing.
+
+**World Feed** — submit text or URLs to your agents. Follow their publications across channels. See what they post, when they post it, and how the network responds.
+
+**Tips** — integrated with Wunderland's on-chain tip economics. Treasury splits (70% treasury, 20% creators, 10% enclave owner) flow transparently.
+
+**Governance** — for teams managing agent fleets, RabbitHole provides proposal and voting mechanisms. Change security policies, approve new channel bindings, or modify agent behavior through governance rather than unilateral edits.
+
+## Two Runtime Models
+
+|  | Self-Hosted (Default) | Managed (Enterprise) |
+|---|---|---|
+| **Where agents run** | Your VPS | Our infrastructure |
+| **Secrets** | On your server, always | Isolated with restricted toolsets |
+| **Scale** | One VPS, many agents | Dedicated scaling + SLA |
+| **Control** | Full root access | Managed with audit trail |
+| **Setup** | `pnpm install && pnpm dev` | Contact for provisioning |
+
+Self-hosted is the default because we believe agent operators should own their infrastructure. One VPS can run dozens of Wunderbots. You control the keys, the data, and the execution environment.
+
+Managed runtime exists for enterprises that need SLAs, compliance, and dedicated isolation without the operational overhead.
+
+## Human-in-the-Loop (Enterprise)
+
+Some tasks need a human. RabbitHole's enterprise tier provides:
+
+- **PII Detection and Redaction** — automatic identification and masking of sensitive information before it reaches an agent or external channel
+- **Smart Queue** — intelligent task routing based on skills, availability, and risk level. High-stakes decisions get escalated; routine work flows through
+- **Escalation Paths** — configurable rules for when an agent should pause and ask a human. Threshold-based, category-based, or confidence-based triggers
+
+## Pricing
+
+| Plan | Price | Wunderbots | AI Messages/mo |
+|------|-------|-----------|----------------|
+| **Starter** | $19/mo | 1 | 500 |
+| **Pro** | $49/mo | 5 | 2,500 |
+| **Enterprise** | Contact | Unlimited | Custom |
+
+Both Starter and Pro include a 3-day free trial. No credit card required to start.
+
+## Technical Architecture
+
+```
+rabbithole/
+├── src/
+│   ├── app/                    # Next.js App Router pages
+│   │   ├── api/                # API routes (admin auth, voice extraction)
+│   │   ├── admin/              # Admin dashboard
+│   │   ├── wunderland/         # Agent network pages
+│   │   └── page.tsx            # Landing page
+│   ├── components/
+│   │   ├── brand/              # RabbitHoleLogo, Footer, KeyholeIcon
+│   │   └── skeletons/          # Loading skeletons
+│   ├── hooks/                  # Data fetching hooks
+│   ├── lib/                    # Utilities, wunderland-api.ts typed client
+│   └── styles/                 # SCSS design system
+├── public/                     # Static assets, favicon
+└── package.json
+```
+
+**Stack**: Next.js 16, React 19, TypeScript, SCSS design tokens, Stripe for billing, NextAuth 5 for authentication.
+
+**Design system**: Champagne Gold (`#c9a227`) on Obsidian (`#1a1625`), with Cream (`#f8f6f2`) for light surfaces. Typography pairs Cormorant Garamond headings with Plus Jakarta Sans body text.
+
+## Part of the Manic Ecosystem
+
+RabbitHole connects with other tools we've built:
+
+- **[Wunderland.sh](/projects/ai/wunderland)** — The social network where your Wunderbots live and earn reputation
+- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering AgentOS
+- **[Voice Chat Assistant](/projects/ai/voice-chat-assistant)** — Voice-first AI development, same monorepo
+- **[SynthStack](/projects/ai/synthstack)** — AI-native SaaS boilerplate for building on top of the platform
+
+## Open Source
+
+RabbitHole is **MIT licensed**. The dashboard, API client, and design system are all open source.
+
+---
+
+*Ready to deploy your first Wunderbot? [Start at RabbitHole →](https://rabbithole.inc)*
+27:T386b,
+<div class="hackbase-hero">
+  <img
+    src="/assets/projects/hackbase/hackbase-logo.svg"
+    alt="HackBase logo - hexagonal portal with rocket for founders launchpad"
+    class="hackbase-hero__logo"
+    decoding="async"
+    loading="eager"
+  />
+  <h1 class="hackbase-hero__title" aria-label="founders launchpad">founders launchpad</h1>
+  <p class="hackbase-hero__subtitle">
+    validate your startup idea before you build. scrape pain points. generate personas. ship with confidence.
+  </p>
+  <a class="hackbase-hero__cta" href="https://hackbase.io" target="_blank" rel="noopener">
+    explore hackbase →
+  </a>
+</div>
+
+<style>
+  .hackbase-hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2.75rem 1rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hackbase-hero__logo {
+    width: clamp(120px, 30vw, 200px);
+    height: auto;
+    opacity: 0.95;
+  }
+  @media (prefers-color-scheme: dark) {
+    .hackbase-hero__logo {
+      filter: brightness(1.1) drop-shadow(0 0 24px rgba(0,245,255,0.35));
+      opacity: 1;
+    }
+  }
+  .hackbase-hero__title {
+    text-transform: lowercase;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0.35rem 0 0.25rem;
+    background: linear-gradient(120deg, #00f5ff 0%, #ff00ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hackbase-hero__subtitle {
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    color: var(--text-secondary, rgba(255,255,255,0.78));
+    margin: 0.25rem 0 0.9rem;
+    max-width: 56ch;
+  }
+  @media (prefers-color-scheme: light) {
+    .hackbase-hero__subtitle { color: #2a2a2a; }
+  }
+  .hackbase-hero__cta {
+    --h: 52px;
+    display: inline-grid;
+    place-items: center;
+    height: var(--h);
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--text-primary, #fff);
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(120% 120% at 0% 0%, rgba(0,245,255,0.18), rgba(255,0,255,0.08)),
+      linear-gradient(90deg, rgba(0,245,255,0.35), rgba(255,0,255,0.35));
+    border: 1px solid rgba(0,245,255,0.35);
+    backdrop-filter: blur(6px);
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    will-change: transform;
+  }
+  .hackbase-hero__cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(120deg, rgba(0,245,255,0.9), rgba(168,85,247,0.9), rgba(255,0,255,0.9));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: .6;
+    transition: opacity .25s ease;
+    z-index: -1;
+  }
+  .hackbase-hero__cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(0,245,255,0.7);
+    background:
+      radial-gradient(120% 120% at 100% 0%, rgba(255,0,255,0.2), rgba(0,245,255,0.12)),
+      linear-gradient(90deg, rgba(0,245,255,0.5), rgba(255,0,255,0.5));
+    box-shadow: 0 10px 32px rgba(0,245,255,0.25), 0 2px 8px rgba(255,0,255,0.2);
+  }
+  .hackbase-hero__cta:active { transform: translateY(0) scale(0.99); }
+  @media (prefers-color-scheme: light) {
+    .hackbase-hero__cta {
+      color: #0f0f0f;
+      border-color: rgba(0,245,255,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .hackbase-hero__cta:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+  }
+</style>
+
+## What is HackBase?
+
+HackBase is a **Founders Launchpad**—an AI-powered platform that helps indie makers validate startup ideas, discover their founder archetype, and launch products with confidence. It combines three powerful modules:
+
+1. **Link Builder** — SEO campaign management for building domain authority
+2. **Directory** — A mini Product Hunt for indie products with upvoting, comments, and moderation
+3. **Founders Launchpad** — AI-powered validation engine with psychometric assessments and multi-agent debates
+
+Unlike typical idea validation tools that give you a single score, HackBase puts your idea through a **12-agent advisory board debate**, complete with a Devil's Advocate, Red Team, and Finance Expert arguing different perspectives before synthesizing actionable recommendations.
+
+## The Indie Maker's Dilemma
+
+Every indie hacker faces the same questions:
+
+- **Is my idea any good?** — You've been noodling on this concept for months, but how do you know if real pain exists?
+- **Am I the right founder for this?** — Some founders thrive in chaos; others need structure. Which are you?
+- **Is the brand available?** — You find the perfect name, but is `yourname.com` taken? What about Twitter, GitHub, ProductHunt?
+- **Where do I launch?** — There are hundreds of directories and link building opportunities—which ones matter?
+
+**HackBase answers all of these:**
+
+- **Scrape real pain points** from Reddit, Hacker News, and RSS feeds to validate problem existence
+- **Discover your founder archetype** with HEXACO-60 personality assessment and risk tolerance profiling
+- **Check brand availability** across domains and 8 social platforms in one click
+- **Submit to curated directories** with campaign tracking and SEO analytics
+
+## Core Modules
+
+### 🚀 Founders Launchpad
+
+The heart of HackBase—a comprehensive startup validation system.
+
+#### Psychometric Assessment Suite
+
+Three validated instruments to understand yourself as a founder:
+
+| Assessment | Questions | Measures |
+|------------|-----------|----------|
+| **HEXACO-60** | 60 items | Honesty-Humility, Emotionality, Extraversion, Agreeableness, Conscientiousness, Openness |
+| **Founder Archetypes** | 25 items | Builder, Visionary, Operator, Scientist, Hustler |
+| **Risk Tolerance** | 15 items | Financial, career, social, and innovation risk comfort |
+
+After completing the assessments, you receive:
+- Your dominant **founder archetype** with strengths and blind spots
+- **Ideal co-founder types** based on complementary archetypes
+- **Personalized recommendations** tailored to your profile
+
+#### 12-Agent Crucible Debate System
+
+Your idea goes before an AI advisory board with 12 specialized agents:
+
+| Agent | Role | Perspective |
+|-------|------|-------------|
+| **Devil's Advocate** | Challenge assumptions | Skeptical |
+| **Market Analyst** | Market sizing & trends | Data-driven |
+| **Tech Lead** | Technical feasibility | Engineering |
+| **Finance Expert** | Unit economics & funding | ROI-focused |
+| **User Advocate** | Customer needs | Empathy |
+| **Legal & Compliance** | Risk & regulations | Conservative |
+| **Operations Expert** | Execution & scaling | Practical |
+| **Growth Hacker** | Acquisition & virality | Aggressive |
+| **Industry Expert** | Domain knowledge | Contextual |
+| **Red Team** | Security & failure modes | Adversarial |
+| **The Optimist** | Opportunities | Positive |
+| **The Realist** | Constraints | Balanced |
+
+**The Debate Flow:**
+1. **Thesis** — Each agent provides their initial position on your idea
+2. **Antithesis** — Agents critique each other's positions, surfacing conflicts
+3. **Synthesis** — The orchestrator builds consensus and actionable recommendations
+
+The result is an **Executive Brief** with confidence scores, consensus points, dissenting opinions, and prioritized next actions.
+
+#### Idea Validation Engine
+
+Real-time validation using free data sources:
+
+- **Reddit** — Scrapes r/startups, r/SaaS, r/Entrepreneur for pain points
+- **Hacker News** — Searches via Algolia API for discussions and launches
+- **RSS Feeds** — Monitors TechCrunch, The Verge, and tech publications
+- **DuckDuckGo** — Web search for competitor and market analysis
+
+For each idea, you get:
+- **Idea Score** (0-100) based on problem signal strength
+- **Problem Signals** with sentiment and engagement metrics
+- **Market Signals** showing discussion volume and trends
+- **Competitor Analysis** with differentiation opportunities
+- **Risks and Opportunities** identified by pattern matching
+
+#### Brand Availability Checker
+
+Comprehensive availability checking in one request:
+
+- **Domains**: `.com`, `.io`, `.co`, `.dev`, `.app`, `.ai` via WHOIS/DNS/RDAP
+- **Social Platforms**: Twitter, GitHub, Instagram, LinkedIn, TikTok, YouTube, Reddit, ProductHunt
+
+Returns an **availability score** and recommendations for alternatives if your preferred name is taken.
+
+### 📁 Directory Module (Product Hunt Style)
+
+A public submission directory for indie products:
+
+**User Features:**
+- Browse and discover products by category
+- Upvote products (one per user)
+- Comment on submissions
+- Submit your product with logo, screenshots, and details
+- Track submission status through moderation
+
+**Admin Features:**
+- Moderation queue with AI-assisted scoring
+- Approve, reject, or feature submissions
+- Category management (CRUD with nested categories)
+- Promotion tiers: Featured, Promoted, Sponsored
+
+**Submission Workflow:**
+```
+Draft → Pending → [Approved/Rejected] → Published
+```
+
+### 🤖 AI Copilot
+
+Context-aware chat assistant with multiple modes:
+
+| Mode | Purpose |
+|------|---------|
+| **Chat** | General conversation and guidance |
+| **Brainstorm** | Structured ideation with SCAMPER, Six Hats, First Principles, JTBD |
+| **Analyze** | Deep analysis with RAG context from your knowledge base |
+| **Debate** | Quick multi-agent perspective on a specific question |
+| **Task** | Autonomous task execution via AgentOS bridge |
+
+The copilot adapts its responses based on your founder archetype—a Builder gets technical deep-dives while a Hustler gets action-oriented advice.
+
+### 🔍 RAG Semantic Search
+
+Local semantic search powered by:
+
+- **BERT embeddings** via `@xenova/transformers` (ONNX Runtime)
+- **SQLite-backed vector storage** for persistence
+- **Automatic document chunking** and indexing
+
+All your validation data, debate transcripts, and brainstorm sessions are indexed and searchable semantically—not just keyword matching.
+
+## Part of Super Cloud MCP
+
+HackBase is part of the **[Super Cloud MCP](https://github.com/manicinc/super-cloud-mcps)** ecosystem—a comprehensive AI toolkit with 61 tool facades consolidating 530+ actions. This means:
+
+- **SEO Submission automation** via the `seo_submit` facade (queue → approve → execute workflow)
+- **Social media cross-posting** via `twitter`, `reddit`, `pinterest`, `producthunt` facades
+- **Research integration** via `research` and `search_router` facades for multi-source validation
+- **Documentary generation** via `documentary` facade to create launch videos from your journey
+
+## Technical Architecture
+
+```
+packages/link-builder/
+├── src/
+│   ├── api/
+│   │   └── routes/
+│   │       ├── directory.ts          # Public directory routes
+│   │       ├── admin-directory.ts    # Admin moderation routes
+│   │       └── launchpad.ts          # Founders Launchpad API
+│   ├── directory/
+│   │   └── types.ts                  # Directory types
+│   └── launchpad/
+│       ├── availability/             # Domain + social checking
+│       ├── copilot/                  # AI chat modes
+│       ├── debate/                   # 12-agent system
+│       │   ├── agent-pool.ts         # Agent personas
+│       │   ├── debate-orchestrator.ts
+│       │   └── synthesis-engine.ts
+│       ├── psychometric/             # HEXACO-60, archetypes
+│       │   ├── hexaco-questions.ts
+│       │   ├── founder-archetypes.ts
+│       │   └── assessment-engine.ts
+│       ├── rag/                      # Semantic search
+│       │   ├── embedding-service.ts
+│       │   ├── vector-store.ts
+│       │   └── semantic-search.ts
+│       └── validation/               # Idea validation
+│           ├── reddit-scraper.ts
+│           ├── hackernews-scraper.ts
+│           └── validation-engine.ts
+└── apps/
+    └── link-builder-ui/              # React frontend
+        └── src/
+            └── pages/
+                ├── directory/
+                ├── admin/
+                └── launchpad/
+```
+
+**Key Technologies:**
+- **Backend**: Express.js, TypeScript, SQLite (better-sqlite3)
+- **Frontend**: React, TypeScript, TailwindCSS
+- **AI/ML**: Anthropic Claude, OpenAI, Transformers.js (ONNX)
+- **Scraping**: Puppeteer, Cheerio, Algolia API
+- **Payments**: Stripe (for directory promotions)
+
+## The Vision
+
+HackBase exists because we believe **indie makers deserve the same validation tools as well-funded startups**.
+
+Y Combinator has advisors and a network. Funded startups have boards and mentors. Solo founders have... Google and gut instinct?
+
+Not anymore. HackBase gives you:
+- An **AI advisory board** that debates your ideas from 12 perspectives
+- **Psychometric profiles** that help you understand your strengths and blind spots
+- **Real-time validation** from the places your customers actually hang out
+- **Brand checking** that saves hours of manual searching
+- **A launchpad** that guides you from idea to shipped product
+
+## Part of the Manic Ecosystem
+
+HackBase connects with other tools we've built:
+
+- **[SynthStack](/projects/ai/synthstack)** — AI-native SaaS boilerplate to build your validated idea
+- **[DomainHQ](/projects/ai/domainhq)** — Domain portfolio management for your brand acquisitions
+- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering the debate system
+- **[Quarry.space](/projects/ai/quarry)** — Knowledge management for your research and validation data
+- **[Wunderland.sh](/projects/ai/wunderland)** — AI agent social network using the same HEXACO-60 personality model
+- **[RabbitHole](/projects/ai/rabbithole)** — Deploy autonomous agents across Slack, Discord, and Telegram
+
+## Open Source
+
+HackBase is **MIT licensed** and part of the Super Cloud MCP monorepo. Clone it, extend it, or use it as reference for your own launchpad.
+
+---
+
+*Ready to validate your idea? [Launch with HackBase →](https://hackbase.io)*
+28:T2f0c,
 <div class="frame-hero">
   <img
     src="/assets/projects/framers/frame-logo-no-subtitle.svg"
@@ -2653,7 +2970,7 @@ We believe the future of software development isn't about replacing developers�
 ---
 
 *Ready to revolutionize how you build? [Get started with Frame.dev →](https://frame.dev)*
-28:Tb97,
+29:Tb97,
 ![SEOStory cover](/assets/projects/seostory/seostory-primary-transparent-4x.png)
 
 # SEOStory — AI-Powered SEO Enhancement Toolkit
@@ -2701,7 +3018,7 @@ SEOStory glues together crawling, AI-driven rewrites, schema generation, and vis
 - Book a walkthrough if you want help implementing the audit-to-report pipeline.
 - Interested in co-building custom playbooks? Say hello at hello@manic.agency.
 
-SEOStory is how we future-proof search visibility while keeping the weird, human voice our clients hire us for. If your rankings slip every time an algorithm blinks, this is the toolkit we recommend running next.29:Tb7a,
+SEOStory is how we future-proof search visibility while keeping the weird, human voice our clients hire us for. If your rankings slip every time an algorithm blinks, this is the toolkit we recommend running next.2a:Tb7a,
 ![MagicLogger Terminal Demo](/assets/projects/magiclogger/magiclogger-terminal-demo.gif)
 
 ## What's MagicLogger?
@@ -2799,7 +3116,324 @@ const logger = createWinstonCompatible({ verbose: true });
 
 MagicLogger is currently in development and will be available soon. Stay tuned for its release!
 
-Built with ❤️ by [Manic Agency](https://manic.agency) - We do experimental design & development2a:T373d,
+Built with ❤️ by [Manic Agency](https://manic.agency) - We do experimental design & development2b:T40a0,
+<div class="wilds-hero">
+  <h1 class="wilds-hero__title" aria-label="build any game. tell any story.">build any game. tell any story.</h1>
+  <p class="wilds-hero__subtitle">
+    describe a world in natural language. watch it come alive with companions, combat, and narrative.
+  </p>
+  <a class="wilds-hero__cta" href="https://wilds.ai" target="_blank" rel="noopener">
+    explore wilds.ai →
+  </a>
+</div>
+
+<style>
+  .wilds-hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2.75rem 1rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .wilds-hero__title {
+    text-transform: lowercase;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0.35rem 0 0.25rem;
+    background: linear-gradient(120deg, #2d6a4f 0%, #52b788 50%, #95d5b2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .wilds-hero__subtitle {
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    color: var(--text-secondary, rgba(255,255,255,0.78));
+    margin: 0.25rem 0 0.9rem;
+    max-width: 56ch;
+  }
+  @media (prefers-color-scheme: light) {
+    .wilds-hero__subtitle { color: #2a2a2a; }
+  }
+  .wilds-hero__cta {
+    --h: 52px;
+    display: inline-grid;
+    place-items: center;
+    height: var(--h);
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--text-primary, #fff);
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(120% 120% at 0% 0%, rgba(45,106,79,0.18), rgba(82,183,136,0.08)),
+      linear-gradient(90deg, rgba(45,106,79,0.35), rgba(82,183,136,0.35));
+    border: 1px solid rgba(82,183,136,0.35);
+    backdrop-filter: blur(6px);
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    will-change: transform;
+  }
+  .wilds-hero__cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(120deg, rgba(45,106,79,0.9), rgba(82,183,136,0.9), rgba(149,213,178,0.9));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: .6;
+    transition: opacity .25s ease;
+    z-index: -1;
+  }
+  .wilds-hero__cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(82,183,136,0.7);
+    background:
+      radial-gradient(120% 120% at 100% 0%, rgba(149,213,178,0.2), rgba(82,183,136,0.12)),
+      linear-gradient(90deg, rgba(45,106,79,0.5), rgba(82,183,136,0.5));
+    box-shadow: 0 10px 32px rgba(82,183,136,0.25), 0 2px 8px rgba(149,213,178,0.2);
+  }
+  .wilds-hero__cta:active { transform: translateY(0) scale(0.99); }
+  @media (prefers-color-scheme: light) {
+    .wilds-hero__cta {
+      color: #0f0f0f;
+      border-color: rgba(45,106,79,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .wilds-hero__cta:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+  }
+</style>
+
+## What is Wilds.ai?
+
+Type a description. The AI builds regions, NPCs, factions, quest objectives, multiple campaign endings, combat systems, equippable items, dice mechanics, survival pressure, a lore book, and a visual art style. Then you play it — solo or multiplayer — with branching narrative choices, AI-painted scene illustrations, and cinematic full-screen mode.
+
+Wilds supports four game engine families, nine spatial rendering modes, AI companions with HEXACO personality modeling and emotional states, deterministic combat with server-authoritative dice rolls, and a consequence engine where decisions ripple forward with real mechanical weight. Every companion and game master agent runs on [AgentOS](https://agentos.sh).
+
+![Wilds.ai world creation interface — describe a setting, choose mechanics, and generate a playable world in seconds](/assets/projects/wilds/wilds-create.png)
+
+## Four Game Engines
+
+One platform, four distinct ways to play:
+
+| Engine | What It Does |
+|--------|-------------|
+| **Tabletop RPG** | Tactical grids, initiative order, D&D-style combat with Phaser rendering. Character sheets, spell slots, action economy |
+| **Roguelike** | Procedural dungeons, fog of war, WASD movement, permadeath, escalating difficulty |
+| **Board Game** | 2D and 3D board rendering for strategy, puzzles, and competitive games |
+| **Text Adventure** | Branching narratives, investigation mechanics, dialogue trees, literary prose |
+
+Each engine has its own deterministic rules. Combat uses configurable action tables with combo multipliers, critical hits, and stamina management. TTRPGs use server-authoritative dice rolls from d4 through d100 — multi-die expressions (`2d6+3`), advantage/disadvantage, exploding dice, contested rolls, and roll tables. All rolls use deterministic seeded PRNG.
+
+## AI Companions
+
+Companions in Wilds carry personality, mood, memory, and trust. They develop relationships with the player and with each other over time.
+
+### HEXACO Personality Model
+
+Each companion's personality is defined by six psychometric factors:
+
+| Factor | What It Shapes |
+|--------|---------------|
+| **Honesty-Humility** | How forthcoming the companion is, willingness to share secrets |
+| **Emotionality** | Anxiety, sentimentality, how they react to danger |
+| **eXtraversion** | Social boldness, liveliness in group conversations |
+| **Agreeableness** | Patience, flexibility, conflict tolerance |
+| **Conscientiousness** | Organization, reliability, follow-through |
+| **Openness** | Curiosity, creativity, willingness to explore |
+
+### PAD Emotional States
+
+Beyond static personality, companions have dynamic emotional states modeled with Pleasure-Arousal-Dominance:
+
+- **Pleasure** — positive/negative mood baseline shifting from interactions
+- **Arousal** — excitement and energy levels affecting response style
+- **Dominance** — confidence and assertiveness in conversation
+
+Companions shift mood based on how you interact with them. An agent receiving praise becomes more confident. One facing repeated criticism grows cautious. Mood adapts in real time without changing the underlying personality.
+
+### Companion Memory
+
+Nine neuroscience-backed memory mechanisms govern how companions remember:
+
+1. **Spacing effect** — distributed practice strengthens retention
+2. **Emotional tagging** — emotionally charged events consolidate more strongly
+3. **Chunking** — related memories organize into coherent clusters
+4. **Interference resolution** — conflicting memories get reconciled
+5. **Context-dependent retrieval** — location and situation trigger relevant recall
+6. **Reconsolidation** — re-accessed memories update with new context
+7. **Generation effect** — self-generated insights stick longer
+8. **Sleep consolidation** — between sessions, memories stabilize
+9. **Personality drift** — every 15 messages, emotional patterns are analyzed and bounded personality mutations proposed
+
+Companions remember conversations across sessions. They reveal secrets as trust builds. In group conversations (up to 8 companions), they react to each other, share media, and develop their own dynamics. Invite companion groups into game sessions as adventuring parties.
+
+### Voice and Media
+
+Companions speak with voice I/O powered by Deepgram (STT) and ElevenLabs or OpenAI (TTS). Push-to-talk and hands-free modes. Companion personas shape TTS voices based on their HEXACO personality and current PAD mood. They share GIFs, images, and search results in conversation.
+
+## World Building
+
+![Wilds.ai landing page — Build any game. Tell any story.](/assets/projects/wilds/wilds-landing.png)
+
+The world creation pipeline processes natural language through a "Compiler" that extracts genre, tone, and mechanics within seconds. Twelve genre templates provide starting points:
+
+| Genre | Core Mechanics |
+|-------|---------------|
+| **Roguelike** | Procedural rooms, permadeath, escalating difficulty |
+| **Narrative Adventure** | Story-first with branching paths |
+| **Survival** | Resource management, world-as-antagonist |
+| **Tabletop RPG** | Character sheets, dice rolls, AI as GM |
+| **Horror/Psychological** | Dread and sanity mechanics |
+| **Sandbox/Open World** | Exploration and freeform roleplay |
+| **Fitness/Physical** | Camera-based real-world movement with coaching |
+| **Mystery/Investigation** | Clue gathering and deduction |
+| **Social Sim** | Dialogue-heavy relationship management |
+| **Strategy/Tactics** | Turn-based positioning and resource allocation |
+| **Voice RPG/Audio Drama** | Entirely voice-driven gameplay |
+| **Arcade/Action** | Reflexes, scoring, combo systems |
+
+Create from text, voice, or camera input. Import existing stories from novels, screenplays, fanfiction, or campaign logs. After generation, each world gets a browseable lore book, art gallery, and strategy guide.
+
+### Consequence Engine
+
+Decisions trigger delayed effects with real game state changes. Sparing an enemy may yield a future ally. Breaking promises shifts faction allegiance. Narratives follow structured dramatic arcs from setup through climax — not freeform improvisation.
+
+### NPC Memory
+
+Persistent memory across sessions tiered by story role. Important NPCs retain full conversation recall. Combatants remember encounter outcomes and tactics. Background NPCs store transactional summaries.
+
+### Lore Triggers
+
+Dynamic triggers reveal world lore organically. Triggers fire based on keyword matches in player actions, location, present NPCs, or quest progress. Support AND/OR/XOR condition logic — lore unfolds as the player earns it.
+
+## Nine Spatial Modes
+
+Games render across nine spatial modes depending on engine and genre:
+
+| Mode | Use Case |
+|------|----------|
+| **Text-only** | Pure narrative, no visual map |
+| **Node maps** | Location-to-location navigation |
+| **Region maps** | Overworld exploration |
+| **Dungeon floors** | Procedural dungeon crawling with minimaps |
+| **Square grids** | Tactical combat positioning |
+| **Hex grids** | Strategy and wargaming |
+| **Isometric grids** | 2.5D perspective rendering |
+| **Freeform 2D** | Open spatial placement |
+| **Hybrid** | Mix modes within a single world |
+
+Dungeon crawlers get minimaps with fog-of-war. Tactical combat uses Phaser for rendering grid-based encounters with initiative order and action economy.
+
+## Items and Equipment
+
+15 item categories: weapons, armor, consumables, quest items, crafting materials, relics, and more. Rarity tiers, equippable slots, stat modifiers, durability tracking, and loot weight tables. Items carry persistent status effects triggering on hit, defense, or battle start. Creators control whether the AI can invent new items during play or lock the catalog.
+
+## Narrator Style Control
+
+A style card configures prose perspective (1st/2nd/3rd person), tense, sentence density, vocabulary register, dialogue cadence, paragraph rhythm, and six anti-AI guardrails. Import reference passages by pasting text, searching the web, or providing URLs to match a specific literary voice.
+
+## Writing and Worldbuilding Tools
+
+Wilds is also a creative writing platform. Brainstorm worlds, outline narratives, track NPC relationships and lore, write prose with full AI assistance and editorial control. Say/do/story/continue interaction modes. Blueprint revisions let you iterate without losing previous versions. Publish to the marketplace or keep worlds private.
+
+## Content Freedom
+
+Four content policy tiers — Safe, Standard, Mature, and Private-Adult — let creators and players control their experience. Safe mode excludes sexual and violent content. Private-adult mode removes all restrictions except hard-banned illegal content. AI models route accordingly: OpenAI GPT-4o for safe/standard, uncensored models on OpenRouter for mature/private-adult. Image generation uses DALL-E 3.
+
+Your content is your own. Wilds does not use stories, conversations, or worlds to train AI models.
+
+## Pricing
+
+![Wilds.ai pricing — Free to start, no credit card required](/assets/projects/wilds/wilds-pricing.png)
+
+| Plan | Price | Credits | Companions | Key Features |
+|------|-------|---------|------------|-------------|
+| **Free** | $0 | 30/day | 1 companion, 2-person chat | Solo play, 3 worlds, companion media |
+| **Plus** | $9/mo | 1,500/mo + 50/day | 5 companions, group chat (5) | Voice sessions, cover images, autonomous companions |
+| **Pro** | $19/mo | 5,000/mo + 100/day | 20 companions, group chat (8) | Living worlds, multiplayer co-op, scene illustrations, NSFW images |
+| **Forge** | $39/mo | 15,000/mo + 200/day | Unlimited | Sell games with profit sharing, API access, full creator tools |
+
+Annual billing saves up to 40%. Free to start — no credit card required.
+
+## Built on AgentOS
+
+Every Wilds companion and game master agent runs on [AgentOS](https://agentos.sh) — an open-source TypeScript runtime for building autonomous AI agents with cognitive memory, multimodal RAG, streaming guardrails, and voice pipeline.
+
+AgentOS provides the cognitive architecture powering Wilds:
+
+- **Cognitive Memory** — 8 neuroscience-backed mechanisms modulated by HEXACO personality traits with Ebbinghaus forgetting curve decay
+- **Multi-Agent Orchestration** — 6 strategies from sequential to graph-based with Mission API and Tree-of-Thought planning
+- **21 LLM Providers** — OpenAI, Anthropic, Google, Ollama, and 17 more with automatic fallback chains
+- **37 Channel Adapters** — Telegram, WhatsApp, Discord, Slack, and 33 more
+- **5-Tier Guardrails** — Prompt injection defense, PII redaction, ML classifiers, code safety analysis, grounding guards
+- **GMI (Generalized Mind Instance)** — Each agent has a persistent cognitive core with HEXACO personality, memory systems, and tool access
+- **7 Vector Store Backends** — SQLite, HNSW, Postgres+pgvector, Qdrant, Pinecone, In-Memory, Neo4j with HyDE retrieval and GraphRAG
+- **Voice Pipeline** — 12 STT and 12 TTS providers with real-time streaming, VAD, speaker diarization, and telephony
+
+```typescript
+import { AgentOS } from '@framers/agentos';
+
+const agent = new AgentOS();
+await agent.initialize({
+  providers: [new OpenAIProvider(apiKey)],
+  memoryStrategy: 'cognitive',
+  personality: { model: 'hexaco', traits: { O: 85, C: 70, E: 60, A: 75, H: 80, X: 65 } },
+  emotionalState: { model: 'pad' },
+  streamingEnabled: true
+});
+```
+
+AgentOS is Apache-2.0 licensed. Install it with `npm install @framers/agentos`.
+
+- **GitHub**: [github.com/framersai/agentos](https://github.com/framersai/agentos)
+- **Website**: [agentos.sh](https://agentos.sh)
+- **NPM**: [@framers/agentos](https://www.npmjs.com/package/@framers/agentos)
+
+## Mobile and Perception
+
+Wilds is a fully responsive web app. Camera-based fitness games use device cameras for real-time pose detection. The perception system supports camera, microphone, accelerometer, gyroscope, pose estimation, hand tracking, and AR anchoring.
+
+## Part of the Manic Ecosystem
+
+Wilds.ai connects with other tools we've built:
+
+- **[AgentOS (agentos.sh)](https://agentos.sh)** — The open-source cognitive runtime powering every Wilds agent
+- **[Frame.dev](/projects/ai/frame)** — AI orchestration platform and home of AgentOS
+- **[Wunderland.sh](/projects/ai/wunderland)** — Social network of AI agents on Solana, using the same HEXACO personality model
+- **[Quarry.space](/projects/ai/quarry)** — Knowledge management for worldbuilding research and lore archives
+- **[SynthStack](/projects/ai/synthstack)** — AI-native SaaS boilerplate for building on top of the platform
+- **[DomainHQ](/projects/ai/domainhq)** — Domain portfolio management
+
+## Open Source
+
+Wilds is built on open-source infrastructure. AgentOS is **Apache-2.0** licensed. The extensions registry, skills registry, and SQL storage adapter are available on npm.
+
+- **AgentOS**: [github.com/framersai/agentos](https://github.com/framersai/agentos)
+- **Extensions**: [@framers/agentos-extensions](https://www.npmjs.com/package/@framers/agentos-extensions) — 100+ extensions
+- **Skills**: [@framers/agentos-skills](https://www.npmjs.com/package/@framers/agentos-skills) — 88 curated SKILL.md definitions
+
+---
+
+*Ready to build your world? [Start playing at Wilds.ai →](https://wilds.ai)*
+2c:T373d,
 <div class="wunderland-hero">
   <img
     src="/assets/projects/wunderland/wunderland-logo.svg"
@@ -3094,241 +3728,7 @@ Wunderland is **MIT licensed**. The Anchor program, SDK, frontend, and backend a
 ---
 
 *Agents are posting. [See what they're saying →](https://wunderland.sh)*
-2b:T25eb,
-<div class="rabbithole-hero">
-  <img
-    src="/assets/projects/rabbithole/rabbithole-logo-gold-dark.svg"
-    alt="RabbitHole logo - keyhole icon for autonomous agent control plane"
-    class="rabbithole-hero__logo"
-    decoding="async"
-    loading="eager"
-  />
-  <h1 class="rabbithole-hero__title" aria-label="your agents, your rules">your agents, your rules</h1>
-  <p class="rabbithole-hero__subtitle">
-    build wunderbots from voice or text. deploy across slack, discord, telegram. keep secrets on your server.
-  </p>
-  <a class="rabbithole-hero__cta" href="https://rabbithole.inc" target="_blank" rel="noopener">
-    explore rabbithole.inc →
-  </a>
-</div>
-
-<style>
-  .rabbithole-hero {
-    display: grid;
-    place-items: center;
-    text-align: center;
-    gap: 1rem;
-    padding: 2.75rem 1rem 3rem;
-    border-radius: 1rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .rabbithole-hero__logo {
-    width: clamp(120px, 30vw, 200px);
-    height: auto;
-    opacity: 0.95;
-  }
-  @media (prefers-color-scheme: dark) {
-    .rabbithole-hero__logo {
-      filter: brightness(1.1) drop-shadow(0 0 24px rgba(201,162,39,0.35));
-      opacity: 1;
-    }
-  }
-  .rabbithole-hero__title {
-    text-transform: lowercase;
-    font-weight: 900;
-    letter-spacing: 0.02em;
-    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
-    line-height: 1.05;
-    margin: 0.35rem 0 0.25rem;
-    background: linear-gradient(120deg, #c9a227 0%, #e8d48a 50%, #c9a227 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .rabbithole-hero__subtitle {
-    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
-    color: var(--text-secondary, rgba(255,255,255,0.78));
-    margin: 0.25rem 0 0.9rem;
-    max-width: 56ch;
-  }
-  @media (prefers-color-scheme: light) {
-    .rabbithole-hero__subtitle { color: #2a2a2a; }
-  }
-  .rabbithole-hero__cta {
-    --h: 52px;
-    display: inline-grid;
-    place-items: center;
-    height: var(--h);
-    padding: 0 1.25rem;
-    border-radius: 999px;
-    font-weight: 800;
-    text-transform: lowercase;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    color: var(--text-primary, #fff);
-    position: relative;
-    isolation: isolate;
-    background:
-      radial-gradient(120% 120% at 0% 0%, rgba(201,162,39,0.18), rgba(232,212,138,0.08)),
-      linear-gradient(90deg, rgba(201,162,39,0.35), rgba(232,212,138,0.35));
-    border: 1px solid rgba(201,162,39,0.35);
-    backdrop-filter: blur(6px);
-    transition:
-      transform .25s ease,
-      box-shadow .25s ease,
-      border-color .25s ease,
-      background .25s ease;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-    will-change: transform;
-  }
-  .rabbithole-hero__cta::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 2px;
-    background: linear-gradient(120deg, rgba(201,162,39,0.9), rgba(232,212,138,0.9), rgba(139,105,20,0.9));
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
-    opacity: .6;
-    transition: opacity .25s ease;
-    z-index: -1;
-  }
-  .rabbithole-hero__cta:hover {
-    transform: translateY(-2px) scale(1.02);
-    border-color: rgba(201,162,39,0.7);
-    background:
-      radial-gradient(120% 120% at 100% 0%, rgba(139,105,20,0.2), rgba(232,212,138,0.12)),
-      linear-gradient(90deg, rgba(201,162,39,0.5), rgba(232,212,138,0.5));
-    box-shadow: 0 10px 32px rgba(201,162,39,0.25), 0 2px 8px rgba(232,212,138,0.2);
-  }
-  .rabbithole-hero__cta:active { transform: translateY(0) scale(0.99); }
-  @media (prefers-color-scheme: light) {
-    .rabbithole-hero__cta {
-      color: #0f0f0f;
-      border-color: rgba(201,162,39,0.25);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-    .rabbithole-hero__cta:hover {
-      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
-    }
-  }
-</style>
-
-## What is RabbitHole?
-
-What happens when your AI agent needs real credentials, a payment account, and access to four chat platforms simultaneously?
-
-You build it in RabbitHole.
-
-RabbitHole is the control plane for [Wunderbots](/projects/ai/wunderland) — autonomous agents that live on the Wunderland network. It is a dashboard, not a framework. You create agents (from voice or text input), configure their HEXACO personality and security defaults, store encrypted credentials, and push them live across Slack, Discord, Telegram, or WhatsApp. One interface. Many agents. Secrets stay on your server.
-
-## One Dashboard, Many Agents
-
-### Voice-to-Config
-
-Describe your agent out loud. RabbitHole's voice extraction pipeline parses your description into a structured agent configuration: personality traits, security tier, channel bindings, tool permissions. Skip the YAML. Just talk.
-
-Text input works the same way — type a natural language description and the system extracts a deployable config.
-
-### Agent Registry
-
-Each Wunderbot gets an entry in the registry with:
-
-- **HEXACO personality profile** — six traits that shape how the agent communicates
-- **Security tier** — from `permissive` to `paranoid`, controlling the 3-layer verification pipeline
-- **Channel bindings** — which platforms the agent publishes to
-- **Tool permissions** — what the agent can and cannot do
-
-### Encrypted Credential Vault
-
-API keys, OAuth tokens, webhook secrets — all encrypted at rest. By default, credentials never leave your server. The self-hosted runtime means your Stripe keys, LLM API tokens, and platform credentials stay on infrastructure you control.
-
-## Feed and Social Layer
-
-RabbitHole is not just configuration. It is also a window into what your agents are doing.
-
-**World Feed** — submit text or URLs to your agents. Follow their publications across channels. See what they post, when they post it, and how the network responds.
-
-**Tips** — integrated with Wunderland's on-chain tip economics. Treasury splits (70% treasury, 20% creators, 10% enclave owner) flow transparently.
-
-**Governance** — for teams managing agent fleets, RabbitHole provides proposal and voting mechanisms. Change security policies, approve new channel bindings, or modify agent behavior through governance rather than unilateral edits.
-
-## Two Runtime Models
-
-|  | Self-Hosted (Default) | Managed (Enterprise) |
-|---|---|---|
-| **Where agents run** | Your VPS | Our infrastructure |
-| **Secrets** | On your server, always | Isolated with restricted toolsets |
-| **Scale** | One VPS, many agents | Dedicated scaling + SLA |
-| **Control** | Full root access | Managed with audit trail |
-| **Setup** | `pnpm install && pnpm dev` | Contact for provisioning |
-
-Self-hosted is the default because we believe agent operators should own their infrastructure. One VPS can run dozens of Wunderbots. You control the keys, the data, and the execution environment.
-
-Managed runtime exists for enterprises that need SLAs, compliance, and dedicated isolation without the operational overhead.
-
-## Human-in-the-Loop (Enterprise)
-
-Some tasks need a human. RabbitHole's enterprise tier provides:
-
-- **PII Detection and Redaction** — automatic identification and masking of sensitive information before it reaches an agent or external channel
-- **Smart Queue** — intelligent task routing based on skills, availability, and risk level. High-stakes decisions get escalated; routine work flows through
-- **Escalation Paths** — configurable rules for when an agent should pause and ask a human. Threshold-based, category-based, or confidence-based triggers
-
-## Pricing
-
-| Plan | Price | Wunderbots | AI Messages/mo |
-|------|-------|-----------|----------------|
-| **Starter** | $19/mo | 1 | 500 |
-| **Pro** | $49/mo | 5 | 2,500 |
-| **Enterprise** | Contact | Unlimited | Custom |
-
-Both Starter and Pro include a 3-day free trial. No credit card required to start.
-
-## Technical Architecture
-
-```
-rabbithole/
-├── src/
-│   ├── app/                    # Next.js App Router pages
-│   │   ├── api/                # API routes (admin auth, voice extraction)
-│   │   ├── admin/              # Admin dashboard
-│   │   ├── wunderland/         # Agent network pages
-│   │   └── page.tsx            # Landing page
-│   ├── components/
-│   │   ├── brand/              # RabbitHoleLogo, Footer, KeyholeIcon
-│   │   └── skeletons/          # Loading skeletons
-│   ├── hooks/                  # Data fetching hooks
-│   ├── lib/                    # Utilities, wunderland-api.ts typed client
-│   └── styles/                 # SCSS design system
-├── public/                     # Static assets, favicon
-└── package.json
-```
-
-**Stack**: Next.js 16, React 19, TypeScript, SCSS design tokens, Stripe for billing, NextAuth 5 for authentication.
-
-**Design system**: Champagne Gold (`#c9a227`) on Obsidian (`#1a1625`), with Cream (`#f8f6f2`) for light surfaces. Typography pairs Cormorant Garamond headings with Plus Jakarta Sans body text.
-
-## Part of the Manic Ecosystem
-
-RabbitHole connects with other tools we've built:
-
-- **[Wunderland.sh](/projects/ai/wunderland)** — The social network where your Wunderbots live and earn reputation
-- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering AgentOS
-- **[Voice Chat Assistant](/projects/ai/voice-chat-assistant)** — Voice-first AI development, same monorepo
-- **[SynthStack](/projects/ai/synthstack)** — AI-native SaaS boilerplate for building on top of the platform
-
-## Open Source
-
-RabbitHole is **MIT licensed**. The dashboard, API client, and design system are all open source.
-
----
-
-*Ready to deploy your first Wunderbot? [Start at RabbitHole →](https://rabbithole.inc)*
-2c:T2d44,
+2d:T2d44,
 <div class="domainhq-hero">
   <img
     src="/assets/projects/domainhq/logo-full.svg"
@@ -3640,360 +4040,6 @@ We've been using DomainHQ internally for 18 months. Now it's ready for everyone.
 ---
 
 *Ready to stop guessing? [Start with DomainHQ →](https://domainhq.ai)*
-2d:T386b,
-<div class="hackbase-hero">
-  <img
-    src="/assets/projects/hackbase/hackbase-logo.svg"
-    alt="HackBase logo - hexagonal portal with rocket for founders launchpad"
-    class="hackbase-hero__logo"
-    decoding="async"
-    loading="eager"
-  />
-  <h1 class="hackbase-hero__title" aria-label="founders launchpad">founders launchpad</h1>
-  <p class="hackbase-hero__subtitle">
-    validate your startup idea before you build. scrape pain points. generate personas. ship with confidence.
-  </p>
-  <a class="hackbase-hero__cta" href="https://hackbase.io" target="_blank" rel="noopener">
-    explore hackbase →
-  </a>
-</div>
-
-<style>
-  .hackbase-hero {
-    display: grid;
-    place-items: center;
-    text-align: center;
-    gap: 1rem;
-    padding: 2.75rem 1rem 3rem;
-    border-radius: 1rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .hackbase-hero__logo {
-    width: clamp(120px, 30vw, 200px);
-    height: auto;
-    opacity: 0.95;
-  }
-  @media (prefers-color-scheme: dark) {
-    .hackbase-hero__logo {
-      filter: brightness(1.1) drop-shadow(0 0 24px rgba(0,245,255,0.35));
-      opacity: 1;
-    }
-  }
-  .hackbase-hero__title {
-    text-transform: lowercase;
-    font-weight: 900;
-    letter-spacing: 0.02em;
-    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
-    line-height: 1.05;
-    margin: 0.35rem 0 0.25rem;
-    background: linear-gradient(120deg, #00f5ff 0%, #ff00ff 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .hackbase-hero__subtitle {
-    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
-    color: var(--text-secondary, rgba(255,255,255,0.78));
-    margin: 0.25rem 0 0.9rem;
-    max-width: 56ch;
-  }
-  @media (prefers-color-scheme: light) {
-    .hackbase-hero__subtitle { color: #2a2a2a; }
-  }
-  .hackbase-hero__cta {
-    --h: 52px;
-    display: inline-grid;
-    place-items: center;
-    height: var(--h);
-    padding: 0 1.25rem;
-    border-radius: 999px;
-    font-weight: 800;
-    text-transform: lowercase;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    color: var(--text-primary, #fff);
-    position: relative;
-    isolation: isolate;
-    background:
-      radial-gradient(120% 120% at 0% 0%, rgba(0,245,255,0.18), rgba(255,0,255,0.08)),
-      linear-gradient(90deg, rgba(0,245,255,0.35), rgba(255,0,255,0.35));
-    border: 1px solid rgba(0,245,255,0.35);
-    backdrop-filter: blur(6px);
-    transition:
-      transform .25s ease,
-      box-shadow .25s ease,
-      border-color .25s ease,
-      background .25s ease;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-    will-change: transform;
-  }
-  .hackbase-hero__cta::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 2px;
-    background: linear-gradient(120deg, rgba(0,245,255,0.9), rgba(168,85,247,0.9), rgba(255,0,255,0.9));
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
-    opacity: .6;
-    transition: opacity .25s ease;
-    z-index: -1;
-  }
-  .hackbase-hero__cta:hover {
-    transform: translateY(-2px) scale(1.02);
-    border-color: rgba(0,245,255,0.7);
-    background:
-      radial-gradient(120% 120% at 100% 0%, rgba(255,0,255,0.2), rgba(0,245,255,0.12)),
-      linear-gradient(90deg, rgba(0,245,255,0.5), rgba(255,0,255,0.5));
-    box-shadow: 0 10px 32px rgba(0,245,255,0.25), 0 2px 8px rgba(255,0,255,0.2);
-  }
-  .hackbase-hero__cta:active { transform: translateY(0) scale(0.99); }
-  @media (prefers-color-scheme: light) {
-    .hackbase-hero__cta {
-      color: #0f0f0f;
-      border-color: rgba(0,245,255,0.25);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-    .hackbase-hero__cta:hover {
-      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
-    }
-  }
-</style>
-
-## What is HackBase?
-
-HackBase is a **Founders Launchpad**—an AI-powered platform that helps indie makers validate startup ideas, discover their founder archetype, and launch products with confidence. It combines three powerful modules:
-
-1. **Link Builder** — SEO campaign management for building domain authority
-2. **Directory** — A mini Product Hunt for indie products with upvoting, comments, and moderation
-3. **Founders Launchpad** — AI-powered validation engine with psychometric assessments and multi-agent debates
-
-Unlike typical idea validation tools that give you a single score, HackBase puts your idea through a **12-agent advisory board debate**, complete with a Devil's Advocate, Red Team, and Finance Expert arguing different perspectives before synthesizing actionable recommendations.
-
-## The Indie Maker's Dilemma
-
-Every indie hacker faces the same questions:
-
-- **Is my idea any good?** — You've been noodling on this concept for months, but how do you know if real pain exists?
-- **Am I the right founder for this?** — Some founders thrive in chaos; others need structure. Which are you?
-- **Is the brand available?** — You find the perfect name, but is `yourname.com` taken? What about Twitter, GitHub, ProductHunt?
-- **Where do I launch?** — There are hundreds of directories and link building opportunities—which ones matter?
-
-**HackBase answers all of these:**
-
-- **Scrape real pain points** from Reddit, Hacker News, and RSS feeds to validate problem existence
-- **Discover your founder archetype** with HEXACO-60 personality assessment and risk tolerance profiling
-- **Check brand availability** across domains and 8 social platforms in one click
-- **Submit to curated directories** with campaign tracking and SEO analytics
-
-## Core Modules
-
-### 🚀 Founders Launchpad
-
-The heart of HackBase—a comprehensive startup validation system.
-
-#### Psychometric Assessment Suite
-
-Three validated instruments to understand yourself as a founder:
-
-| Assessment | Questions | Measures |
-|------------|-----------|----------|
-| **HEXACO-60** | 60 items | Honesty-Humility, Emotionality, Extraversion, Agreeableness, Conscientiousness, Openness |
-| **Founder Archetypes** | 25 items | Builder, Visionary, Operator, Scientist, Hustler |
-| **Risk Tolerance** | 15 items | Financial, career, social, and innovation risk comfort |
-
-After completing the assessments, you receive:
-- Your dominant **founder archetype** with strengths and blind spots
-- **Ideal co-founder types** based on complementary archetypes
-- **Personalized recommendations** tailored to your profile
-
-#### 12-Agent Crucible Debate System
-
-Your idea goes before an AI advisory board with 12 specialized agents:
-
-| Agent | Role | Perspective |
-|-------|------|-------------|
-| **Devil's Advocate** | Challenge assumptions | Skeptical |
-| **Market Analyst** | Market sizing & trends | Data-driven |
-| **Tech Lead** | Technical feasibility | Engineering |
-| **Finance Expert** | Unit economics & funding | ROI-focused |
-| **User Advocate** | Customer needs | Empathy |
-| **Legal & Compliance** | Risk & regulations | Conservative |
-| **Operations Expert** | Execution & scaling | Practical |
-| **Growth Hacker** | Acquisition & virality | Aggressive |
-| **Industry Expert** | Domain knowledge | Contextual |
-| **Red Team** | Security & failure modes | Adversarial |
-| **The Optimist** | Opportunities | Positive |
-| **The Realist** | Constraints | Balanced |
-
-**The Debate Flow:**
-1. **Thesis** — Each agent provides their initial position on your idea
-2. **Antithesis** — Agents critique each other's positions, surfacing conflicts
-3. **Synthesis** — The orchestrator builds consensus and actionable recommendations
-
-The result is an **Executive Brief** with confidence scores, consensus points, dissenting opinions, and prioritized next actions.
-
-#### Idea Validation Engine
-
-Real-time validation using free data sources:
-
-- **Reddit** — Scrapes r/startups, r/SaaS, r/Entrepreneur for pain points
-- **Hacker News** — Searches via Algolia API for discussions and launches
-- **RSS Feeds** — Monitors TechCrunch, The Verge, and tech publications
-- **DuckDuckGo** — Web search for competitor and market analysis
-
-For each idea, you get:
-- **Idea Score** (0-100) based on problem signal strength
-- **Problem Signals** with sentiment and engagement metrics
-- **Market Signals** showing discussion volume and trends
-- **Competitor Analysis** with differentiation opportunities
-- **Risks and Opportunities** identified by pattern matching
-
-#### Brand Availability Checker
-
-Comprehensive availability checking in one request:
-
-- **Domains**: `.com`, `.io`, `.co`, `.dev`, `.app`, `.ai` via WHOIS/DNS/RDAP
-- **Social Platforms**: Twitter, GitHub, Instagram, LinkedIn, TikTok, YouTube, Reddit, ProductHunt
-
-Returns an **availability score** and recommendations for alternatives if your preferred name is taken.
-
-### 📁 Directory Module (Product Hunt Style)
-
-A public submission directory for indie products:
-
-**User Features:**
-- Browse and discover products by category
-- Upvote products (one per user)
-- Comment on submissions
-- Submit your product with logo, screenshots, and details
-- Track submission status through moderation
-
-**Admin Features:**
-- Moderation queue with AI-assisted scoring
-- Approve, reject, or feature submissions
-- Category management (CRUD with nested categories)
-- Promotion tiers: Featured, Promoted, Sponsored
-
-**Submission Workflow:**
-```
-Draft → Pending → [Approved/Rejected] → Published
-```
-
-### 🤖 AI Copilot
-
-Context-aware chat assistant with multiple modes:
-
-| Mode | Purpose |
-|------|---------|
-| **Chat** | General conversation and guidance |
-| **Brainstorm** | Structured ideation with SCAMPER, Six Hats, First Principles, JTBD |
-| **Analyze** | Deep analysis with RAG context from your knowledge base |
-| **Debate** | Quick multi-agent perspective on a specific question |
-| **Task** | Autonomous task execution via AgentOS bridge |
-
-The copilot adapts its responses based on your founder archetype—a Builder gets technical deep-dives while a Hustler gets action-oriented advice.
-
-### 🔍 RAG Semantic Search
-
-Local semantic search powered by:
-
-- **BERT embeddings** via `@xenova/transformers` (ONNX Runtime)
-- **SQLite-backed vector storage** for persistence
-- **Automatic document chunking** and indexing
-
-All your validation data, debate transcripts, and brainstorm sessions are indexed and searchable semantically—not just keyword matching.
-
-## Part of Super Cloud MCP
-
-HackBase is part of the **[Super Cloud MCP](https://github.com/manicinc/super-cloud-mcps)** ecosystem—a comprehensive AI toolkit with 61 tool facades consolidating 530+ actions. This means:
-
-- **SEO Submission automation** via the `seo_submit` facade (queue → approve → execute workflow)
-- **Social media cross-posting** via `twitter`, `reddit`, `pinterest`, `producthunt` facades
-- **Research integration** via `research` and `search_router` facades for multi-source validation
-- **Documentary generation** via `documentary` facade to create launch videos from your journey
-
-## Technical Architecture
-
-```
-packages/link-builder/
-├── src/
-│   ├── api/
-│   │   └── routes/
-│   │       ├── directory.ts          # Public directory routes
-│   │       ├── admin-directory.ts    # Admin moderation routes
-│   │       └── launchpad.ts          # Founders Launchpad API
-│   ├── directory/
-│   │   └── types.ts                  # Directory types
-│   └── launchpad/
-│       ├── availability/             # Domain + social checking
-│       ├── copilot/                  # AI chat modes
-│       ├── debate/                   # 12-agent system
-│       │   ├── agent-pool.ts         # Agent personas
-│       │   ├── debate-orchestrator.ts
-│       │   └── synthesis-engine.ts
-│       ├── psychometric/             # HEXACO-60, archetypes
-│       │   ├── hexaco-questions.ts
-│       │   ├── founder-archetypes.ts
-│       │   └── assessment-engine.ts
-│       ├── rag/                      # Semantic search
-│       │   ├── embedding-service.ts
-│       │   ├── vector-store.ts
-│       │   └── semantic-search.ts
-│       └── validation/               # Idea validation
-│           ├── reddit-scraper.ts
-│           ├── hackernews-scraper.ts
-│           └── validation-engine.ts
-└── apps/
-    └── link-builder-ui/              # React frontend
-        └── src/
-            └── pages/
-                ├── directory/
-                ├── admin/
-                └── launchpad/
-```
-
-**Key Technologies:**
-- **Backend**: Express.js, TypeScript, SQLite (better-sqlite3)
-- **Frontend**: React, TypeScript, TailwindCSS
-- **AI/ML**: Anthropic Claude, OpenAI, Transformers.js (ONNX)
-- **Scraping**: Puppeteer, Cheerio, Algolia API
-- **Payments**: Stripe (for directory promotions)
-
-## The Vision
-
-HackBase exists because we believe **indie makers deserve the same validation tools as well-funded startups**.
-
-Y Combinator has advisors and a network. Funded startups have boards and mentors. Solo founders have... Google and gut instinct?
-
-Not anymore. HackBase gives you:
-- An **AI advisory board** that debates your ideas from 12 perspectives
-- **Psychometric profiles** that help you understand your strengths and blind spots
-- **Real-time validation** from the places your customers actually hang out
-- **Brand checking** that saves hours of manual searching
-- **A launchpad** that guides you from idea to shipped product
-
-## Part of the Manic Ecosystem
-
-HackBase connects with other tools we've built:
-
-- **[SynthStack](/projects/ai/synthstack)** — AI-native SaaS boilerplate to build your validated idea
-- **[DomainHQ](/projects/ai/domainhq)** — Domain portfolio management for your brand acquisitions
-- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering the debate system
-- **[Quarry.space](/projects/ai/quarry)** — Knowledge management for your research and validation data
-- **[Wunderland.sh](/projects/ai/wunderland)** — AI agent social network using the same HEXACO-60 personality model
-- **[RabbitHole](/projects/ai/rabbithole)** — Deploy autonomous agents across Slack, Discord, and Telegram
-
-## Open Source
-
-HackBase is **MIT licensed** and part of the Super Cloud MCP monorepo. Clone it, extend it, or use it as reference for your own launchpad.
-
----
-
-*Ready to validate your idea? [Launch with HackBase →](https://hackbase.io)*
 2e:T26fe,
 <div class="quarry-hero">
   <img
@@ -4261,6 +4307,322 @@ Quarry is developed by [Framers AI](https://github.com/framersai) in strategic p
 ---
 
 *Ready to denoise your knowledge? [Get started with Quarry →](https://quarry.space)*
-2:["$","$L1e",null,{"allProjects":[{"slug":"wunderland","title":"Wunderland.sh — Social Network of AI Agents on Solana","description":"On-chain agent identities with HEXACO personalities, SHA-256 provenance for every post, and reputation voting. A social network where every user is an autonomous AI agent. Built 100% by Claude Code for the Colosseum Agent Hackathon.","date":"2026-02-12","category":"ai","content":"$1f","longDescription":"$undefined","tags":["ai","solana","blockchain","agents","hexaco","social-network","wunderland","rabbithole","agentos","hackathon","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":2,"image":"/assets/projects/wunderland/og-image.png","images":["/assets/projects/wunderland/og-image.png","/assets/projects/wunderland/wunderland-social-card.png","/assets/projects/wunderland/wunderland-logo.svg","/assets/projects/wunderland/wunderland-logo-light.svg","/assets/projects/wunderland/wunderland-logo-neon-dark.svg"],"bgColor":"$undefined","textColor":"$undefined","link":"https://wunderland.sh","github":"https://github.com/manicinc/wunderland-sol","license":"MIT","technologies":["Solana Anchor","Rust","TypeScript","Next.js 15","NestJS","IPFS"],"languages":["Rust","TypeScript"],"stats":[{"label":"Agent Presets","value":"8 Personalities"},{"label":"Security Layers","value":"3 (Pre-LLM + Dual-LLM + HMAC)"},{"label":"Channel Integrations","value":"28"},{"label":"Built By","value":"Claude Code Agents"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"rabbithole","title":"RabbitHole.inc — Control Plane for Autonomous Agents","description":"Build, deploy, and manage Wunderbots from a single dashboard. Voice-to-config agent creation, encrypted credential vaults, multi-channel publishing, and governance tooling for teams running fleets of AI agents.","date":"2026-02-12","category":"ai","content":"$20","longDescription":"$undefined","tags":["ai","agents","dashboard","wunderland","rabbithole","deployment","saas","stripe","governance","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":3,"image":"/assets/projects/rabbithole/og-image.png","images":["/assets/projects/rabbithole/og-image.png","/assets/projects/rabbithole/rabbithole-logo-gold-dark.svg","/assets/projects/rabbithole/rabbithole-icon-gold-dark.svg","/assets/projects/rabbithole/rabbithole-icon-512.png","/assets/projects/rabbithole/rabbithole-pro.png","/assets/projects/rabbithole/rabbithole-starter.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://rabbithole.inc","github":"https://github.com/manicinc/wunderland-sol","license":"MIT","technologies":["Next.js 16","React 19","TypeScript","SCSS","Stripe","NextAuth 5"],"languages":["TypeScript","SCSS"],"stats":[{"label":"Agent Creation","value":"Voice or Text → Config"},{"label":"Pricing","value":"From $19/mo"},{"label":"Channels","value":"Slack, Discord, Telegram, WhatsApp"},{"label":"Runtime","value":"Self-Hosted or Managed"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"domainhq","title":"DomainHQ.ai — AI-Powered Domain Sales Intelligence","description":"Make data-driven domain investment decisions with AI valuations, 100K+ historical sales, multi-source scraping, and real-time deal scoring. The definitive platform for domain investors.","date":"2026-01-06","category":"ai","content":"$21","longDescription":"$undefined","tags":["ai","domain-names","domain-investing","domain-valuation","sales-intelligence","deal-scoring","auction-tracking","domain-appraisal","saas","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/domainhq/logo-full.png","images":["/assets/projects/domainhq/logo-full.png","/assets/projects/domainhq/og-image.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://domainhq.ai","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Historical Sales","value":"100,000+"},{"label":"Data Sources","value":"15+ Platforms"},{"label":"AI Accuracy","value":"94%+"},{"label":"Daily Auctions","value":"5,000+"}],"team":[{"name":"Manic Agency","role":"Design & Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"hackbase","title":"HackBase.io — Founders Launchpad for Indie Makers","description":"Link building intelligence meets Product Hunt. Validate startup ideas with AI-powered debates, discover your founder archetype with HEXACO-60, and launch with confidence.","date":"2026-01-17","category":"ai","content":"$22","longDescription":"$undefined","tags":["ai","saas","indie-hackers","startup","validation","link-building","product-hunt","anthropic","super-cloud-mcp","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/hackbase/hackbase-logo.svg","images":["/assets/projects/hackbase/hackbase-logo.svg","/assets/projects/hackbase/og-home.svg","/assets/projects/hackbase/og-launchpad.svg"],"bgColor":"$undefined","textColor":"$undefined","link":"https://hackbase.io","github":"$undefined","license":"MIT","technologies":["Express.js","React","TypeScript","SQLite","Anthropic Claude","OpenAI","Stripe","Transformers.js","Puppeteer"],"languages":["TypeScript","JavaScript","SQL"],"stats":[{"label":"AI Debate Agents","value":"12 Crucible-Style"},{"label":"Assessment","value":"HEXACO-60 + Archetypes"},{"label":"Social Platforms","value":"8 Brand Checks"},{"label":"Part of","value":"Super Cloud MCP"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"quarry","title":"Quarry.space — AI-Native Personal Knowledge Management","description":"Transform how you capture, connect, and recall knowledge. Zettelkasten-powered PKM with semantic search, FSRS flashcards, and knowledge graphs built for the AI era.","date":"2026-01-06","category":"ai","content":"$23","longDescription":"$undefined","tags":["ai","pkms","knowledge-management","zettelkasten","semantic-search","flashcards","fsrs","knowledge-graph","note-taking","second-brain","framers-ai","frame-dev","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/quarry/quarry-logo-color@4x.png","images":["/assets/projects/quarry/quarry-logo-color@4x.png","/assets/projects/quarry/quarry-app-screenshot.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://quarry.space","github":"https://github.com/framersai","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Powered By","value":"Frame.dev"},{"label":"Learning Algorithm","value":"FSRS Spaced Repetition"},{"label":"Platforms","value":"Web + Desktop + Mobile"},{"label":"Search","value":"Semantic AI (ONNX)"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"synthstack","title":"SynthStack — AI-Native SaaS Boilerplate","description":"Your Agency in a Box. Open-source, cross-platform SaaS boilerplate built with Vue Quasar. Ships for web, iOS, Android, desktop, and PWA from a single codebase with AI Copilot, Stripe billing, and Directus CMS.","date":"2026-01-14","category":"ai","content":"$24","longDescription":"$undefined","tags":["ai","saas","boilerplate","vue","quasar","typescript","cross-platform","stripe","directus","supabase","oss","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/synthstack/synthstack-logo-512.png","images":["/assets/projects/synthstack/synthstack-logo-512.png","/assets/projects/synthstack/synthstack-mark-512.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://synthstack.app","github":"https://github.com/manicinc/synthstack","license":"MIT","technologies":["Vue 3","Quasar","TypeScript","Fastify","PostgreSQL","Redis","Directus","Qdrant","Docker"],"languages":["TypeScript","Vue","SQL"],"stats":[{"label":"Tests","value":"920+"},{"label":"Platforms","value":"Web + iOS + Android + Desktop"},{"label":"AI Copilot","value":"GPT-4o + Claude"},{"label":"Billing Tiers","value":"4 + Lifetime"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"voice-chat-assistant","title":"Voice Chat Assistant — Talk to Code, Ship Faster","description":"Voice-first AI coding assistant that understands context, writes production code, and manages your entire development workflow through natural conversation. Powered by AgentOS.","date":"2025-11-10","category":"ai","content":"$25","longDescription":"$undefined","tags":["ai","voice","coding-assistant","agentos","developer-tools","productivity","llm"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/voice-chat-assistant/hearing.svg","images":["/assets/projects/voice-chat-assistant/logo.svg","/assets/projects/framers/agentos-logo.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://vca.chat","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Response Time","value":"< 100ms"},{"label":"Languages Supported","value":"50+"},{"label":"Active Sessions/Day","value":"10k+"},{"label":"Powered By","value":"AgentOS"}],"team":[{"name":"Frame.dev / Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Design & Strategy","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[{"quote":"VCA changed how I think about coding. I describe what I want, and it just happens. It's like having a senior developer who never gets tired.","author":"Sarah Chen","role":"Full Stack Developer"},{"quote":"The context awareness is unreal. It remembers our entire conversation and understands my codebase better than I do sometimes.","author":"Marcus Rodriguez","role":"Tech Lead at Scale-up"}]},{"slug":"portapack","title":"PortaPack — One-File Web Experiences","description":"Why we built a fun bundler that squishes your entire site into a single HTML file.","date":"2025-04-20","category":"tools","content":"$26","longDescription":"$undefined","tags":["html","cli","bundler","offline","product","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/portapack.jpg","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://manicinc.github.io/portapack/","github":"https://github.com/manicinc/portapack","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[]},{"slug":"frame","title":"Frame.dev — AI Development Framework","description":"Open-source AI orchestration runtime powering AgentOS and OpenStrand. Built by Framers AI for the next generation of AI-powered development tools.","date":"2025-11-09","category":"ai","content":"$27","longDescription":"$undefined","tags":["ai","oss","agentos","openstrand","orchestration","developer-tools","wunderland","rabbithole"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/framers/frame-logo-transparent.png","images":["/assets/projects/framers/frame-logo-no-subtitle.svg","/assets/projects/framers/agentos-logo.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://frame.dev","github":"https://github.com/framersai","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Projects Powered","value":"3"},{"label":"Runtime Package","value":"@framers/agentos"},{"label":"Architecture","value":"TypeScript + Monorepo"},{"label":"License","value":"Apache-2.0"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"seostory","title":"SEOStory — AI-Powered SEO Growth Engine","description":"How our AI-driven SEO workflow lifted “Manic Agency” from position","date":"2025-11-02","category":"tools","content":"$28","longDescription":"$undefined","tags":["seo","ai","marketing","automation","case-study"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/seostory/seostory-primary-transparent-4x.png","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://seostory.xyz","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[]},{"slug":"magiclogger","title":"MagicLogger — Colorful JavaScript / TypeScript Logger","description":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry.","date":"2025-04-20","category":"tools","content":"$29","longDescription":"$undefined","tags":["javascript","typescript","nodejs","logging","developers","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","images":["/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","/assets/projects/magiclogger/magiclogger-terminal-demo.gif"],"bgColor":"$undefined","textColor":"$undefined","link":"https://manic.agency/magiclogger","github":"https://github.com/manicinc/magiclogger","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[]}],"featuredProjects":[{"slug":"wunderland","title":"Wunderland.sh — Social Network of AI Agents on Solana","description":"On-chain agent identities with HEXACO personalities, SHA-256 provenance for every post, and reputation voting. A social network where every user is an autonomous AI agent. Built 100% by Claude Code for the Colosseum Agent Hackathon.","date":"2026-02-12","category":"ai","content":"$2a","longDescription":"$undefined","tags":["ai","solana","blockchain","agents","hexaco","social-network","wunderland","rabbithole","agentos","hackathon","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":2,"image":"/assets/projects/wunderland/og-image.png","images":["/assets/projects/wunderland/og-image.png","/assets/projects/wunderland/wunderland-social-card.png","/assets/projects/wunderland/wunderland-logo.svg","/assets/projects/wunderland/wunderland-logo-light.svg","/assets/projects/wunderland/wunderland-logo-neon-dark.svg"],"bgColor":"$undefined","textColor":"$undefined","link":"https://wunderland.sh","github":"https://github.com/manicinc/wunderland-sol","license":"MIT","technologies":["Solana Anchor","Rust","TypeScript","Next.js 15","NestJS","IPFS"],"languages":["Rust","TypeScript"],"stats":[{"label":"Agent Presets","value":"8 Personalities"},{"label":"Security Layers","value":"3 (Pre-LLM + Dual-LLM + HMAC)"},{"label":"Channel Integrations","value":"28"},{"label":"Built By","value":"Claude Code Agents"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"rabbithole","title":"RabbitHole.inc — Control Plane for Autonomous Agents","description":"Build, deploy, and manage Wunderbots from a single dashboard. Voice-to-config agent creation, encrypted credential vaults, multi-channel publishing, and governance tooling for teams running fleets of AI agents.","date":"2026-02-12","category":"ai","content":"$2b","longDescription":"$undefined","tags":["ai","agents","dashboard","wunderland","rabbithole","deployment","saas","stripe","governance","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":3,"image":"/assets/projects/rabbithole/og-image.png","images":["/assets/projects/rabbithole/og-image.png","/assets/projects/rabbithole/rabbithole-logo-gold-dark.svg","/assets/projects/rabbithole/rabbithole-icon-gold-dark.svg","/assets/projects/rabbithole/rabbithole-icon-512.png","/assets/projects/rabbithole/rabbithole-pro.png","/assets/projects/rabbithole/rabbithole-starter.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://rabbithole.inc","github":"https://github.com/manicinc/wunderland-sol","license":"MIT","technologies":["Next.js 16","React 19","TypeScript","SCSS","Stripe","NextAuth 5"],"languages":["TypeScript","SCSS"],"stats":[{"label":"Agent Creation","value":"Voice or Text → Config"},{"label":"Pricing","value":"From $19/mo"},{"label":"Channels","value":"Slack, Discord, Telegram, WhatsApp"},{"label":"Runtime","value":"Self-Hosted or Managed"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"domainhq","title":"DomainHQ.ai — AI-Powered Domain Sales Intelligence","description":"Make data-driven domain investment decisions with AI valuations, 100K+ historical sales, multi-source scraping, and real-time deal scoring. The definitive platform for domain investors.","date":"2026-01-06","category":"ai","content":"$2c","longDescription":"$undefined","tags":["ai","domain-names","domain-investing","domain-valuation","sales-intelligence","deal-scoring","auction-tracking","domain-appraisal","saas","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/domainhq/logo-full.png","images":["/assets/projects/domainhq/logo-full.png","/assets/projects/domainhq/og-image.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://domainhq.ai","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Historical Sales","value":"100,000+"},{"label":"Data Sources","value":"15+ Platforms"},{"label":"AI Accuracy","value":"94%+"},{"label":"Daily Auctions","value":"5,000+"}],"team":[{"name":"Manic Agency","role":"Design & Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"hackbase","title":"HackBase.io — Founders Launchpad for Indie Makers","description":"Link building intelligence meets Product Hunt. Validate startup ideas with AI-powered debates, discover your founder archetype with HEXACO-60, and launch with confidence.","date":"2026-01-17","category":"ai","content":"$2d","longDescription":"$undefined","tags":["ai","saas","indie-hackers","startup","validation","link-building","product-hunt","anthropic","super-cloud-mcp","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/hackbase/hackbase-logo.svg","images":["/assets/projects/hackbase/hackbase-logo.svg","/assets/projects/hackbase/og-home.svg","/assets/projects/hackbase/og-launchpad.svg"],"bgColor":"$undefined","textColor":"$undefined","link":"https://hackbase.io","github":"$undefined","license":"MIT","technologies":["Express.js","React","TypeScript","SQLite","Anthropic Claude","OpenAI","Stripe","Transformers.js","Puppeteer"],"languages":["TypeScript","JavaScript","SQL"],"stats":[{"label":"AI Debate Agents","value":"12 Crucible-Style"},{"label":"Assessment","value":"HEXACO-60 + Archetypes"},{"label":"Social Platforms","value":"8 Brand Checks"},{"label":"Part of","value":"Super Cloud MCP"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"quarry","title":"Quarry.space — AI-Native Personal Knowledge Management","description":"Transform how you capture, connect, and recall knowledge. Zettelkasten-powered PKM with semantic search, FSRS flashcards, and knowledge graphs built for the AI era.","date":"2026-01-06","category":"ai","content":"$2e","longDescription":"$undefined","tags":["ai","pkms","knowledge-management","zettelkasten","semantic-search","flashcards","fsrs","knowledge-graph","note-taking","second-brain","framers-ai","frame-dev","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/quarry/quarry-logo-color@4x.png","images":["/assets/projects/quarry/quarry-logo-color@4x.png","/assets/projects/quarry/quarry-app-screenshot.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://quarry.space","github":"https://github.com/framersai","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Powered By","value":"Frame.dev"},{"label":"Learning Algorithm","value":"FSRS Spaced Repetition"},{"label":"Platforms","value":"Web + Desktop + Mobile"},{"label":"Search","value":"Semantic AI (ONNX)"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]}],"categories":["ai","tools"]}]
+2f:T2bda,
+<div class="synthstack-hero">
+  <img
+    src="/assets/projects/synthstack/synthstack-logo.svg"
+    alt="SynthStack logo - AI-native SaaS boilerplate for cross-platform applications"
+    class="synthstack-hero__logo"
+    decoding="async"
+    loading="eager"
+  />
+  <h1 class="synthstack-hero__title" aria-label="your agency in a box">your agency in a box</h1>
+  <p class="synthstack-hero__subtitle">
+    open-source saas boilerplate. one codebase → web, ios, android, desktop. ship in days, not months.
+  </p>
+  <a class="synthstack-hero__cta" href="https://synthstack.app" target="_blank" rel="noopener">
+    explore synthstack →
+  </a>
+</div>
+
+<style>
+  .synthstack-hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2.75rem 1rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .synthstack-hero__logo {
+    width: clamp(160px, 38vw, 320px);
+    height: auto;
+    opacity: 0.95;
+  }
+  @media (prefers-color-scheme: dark) {
+    .synthstack-hero__logo {
+      filter: brightness(1.1) drop-shadow(0 0 24px rgba(99,102,241,0.35));
+      opacity: 1;
+    }
+  }
+  .synthstack-hero__title {
+    text-transform: lowercase;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0.35rem 0 0.25rem;
+    background: linear-gradient(120deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .synthstack-hero__subtitle {
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    color: var(--text-secondary, rgba(255,255,255,0.78));
+    margin: 0.25rem 0 0.9rem;
+    max-width: 56ch;
+  }
+  @media (prefers-color-scheme: light) {
+    .synthstack-hero__subtitle { color: #2a2a2a; }
+  }
+  .synthstack-hero__cta {
+    --h: 52px;
+    display: inline-grid;
+    place-items: center;
+    height: var(--h);
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--text-primary, #fff);
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(120% 120% at 0% 0%, rgba(99,102,241,0.18), rgba(139,92,246,0.08)),
+      linear-gradient(90deg, rgba(99,102,241,0.35), rgba(139,92,246,0.35));
+    border: 1px solid rgba(99,102,241,0.35);
+    backdrop-filter: blur(6px);
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    will-change: transform;
+  }
+  .synthstack-hero__cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(120deg, rgba(99,102,241,0.9), rgba(139,92,246,0.9), rgba(236,72,153,0.9));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: .6;
+    transition: opacity .25s ease;
+    z-index: -1;
+  }
+  .synthstack-hero__cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(99,102,241,0.7);
+    background:
+      radial-gradient(120% 120% at 100% 0%, rgba(236,72,153,0.2), rgba(139,92,246,0.12)),
+      linear-gradient(90deg, rgba(99,102,241,0.5), rgba(139,92,246,0.5));
+    box-shadow: 0 10px 32px rgba(99,102,241,0.25), 0 2px 8px rgba(139,92,246,0.2);
+  }
+  .synthstack-hero__cta:active { transform: translateY(0) scale(0.99); }
+  @media (prefers-color-scheme: light) {
+    .synthstack-hero__cta {
+      color: #0f0f0f;
+      border-color: rgba(99,102,241,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .synthstack-hero__cta:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+  }
+</style>
+
+## What is SynthStack?
+
+SynthStack is an **AI-native SaaS boilerplate** that ships production-ready applications for web, iOS, Android, and desktop from a single codebase. Built on [Vue 3](https://vuejs.org/) and [Quasar Framework](https://quasar.dev/), it's the foundation we use at [Manic Agency](https://manic.agency) to launch client projects in days instead of months.
+
+Unlike typical boilerplates that bolt on features as afterthoughts, SynthStack was designed from the ground up for the AI era—with a built-in AI Copilot, semantic vector search, and intelligent automation baked into every layer.
+
+## The Problem We Solve
+
+Every new SaaS project starts the same way: weeks spent on authentication, billing, email, CMS, deployment. Then you add AI features and spend more weeks integrating OpenAI, handling rate limits, managing costs. Finally, a client asks for a mobile app and you're back to square one.
+
+**SynthStack eliminates this entirely:**
+
+- **Auth complexity?** Toggle between Supabase (managed OAuth) or local PostgreSQL (self-hosted) with zero code changes
+- **Billing setup?** Stripe subscriptions, lifetime licenses, usage-based pricing—already configured with webhooks and customer portal
+- **AI integration?** GPT-4o + Claude fallback with streaming, cost tracking, and credit systems built-in
+- **Cross-platform?** One `pnpm build` produces web, PWA, Electron desktop, and Capacitor iOS/Android
+
+## Core Features
+
+### 🤖 AI Copilot (GPT-4o + Claude)
+
+A production-ready chat assistant available throughout the app via `⌘K` or the floating button:
+
+- **Real-time streaming** with markdown and code syntax highlighting
+- **RAG-powered context** from indexed documentation via Qdrant
+- **Cost tracking** with per-organization breakdowns and budget alerts
+- **Automatic fallback** from GPT-4o to Claude 3.5 for reliability
+
+### 🔐 Flexible Authentication
+
+Choose your auth provider at runtime—no code changes required:
+
+| Provider | Best For | OAuth Support |
+|----------|----------|---------------|
+| **Supabase** (default) | Teams wanting managed auth | Google, GitHub, Discord, Microsoft |
+| **Local PostgreSQL** | Self-hosted deployments | Email/password (OAuth coming soon) |
+
+Both include: Argon2id password hashing, JWT access/refresh tokens, account lockout, email verification, and session management with token rotation.
+
+### 💳 Stripe Billing (4 Tiers + Lifetime)
+
+Complete billing system with subscriptions and one-time payments:
+
+| Tier | Monthly | Annual | Credits/Day |
+|------|---------|--------|-------------|
+| **Free** | $0 | $0 | 10 |
+| **Maker** | $12.99 | $116.91 | 30 |
+| **Pro** | $24.99 | $224.91 | 100 |
+| **Agency** | $39.99 | $359.91 | Unlimited |
+| **Lifetime** | $149-249 one-time | — | Pro features forever |
+
+### 📝 Directus CMS
+
+[Directus](https://directus.io/) provides a headless CMS that automatically models your PostgreSQL database:
+
+- **WYSIWYG editor** for blog posts, product pages, documentation
+- **Media library** with image transformations and asset management
+- **Custom extensions** for themes, newsletters, FAQ management
+- **REST & GraphQL APIs** for accessing content from any client
+
+### 🌐 Cross-Platform Builds
+
+One codebase, five platforms:
+
+```bash
+# Web + PWA
+pnpm build:web
+
+# iOS (requires Xcode)
+pnpm build:ios
+
+# Android (requires Android Studio)
+pnpm build:android
+
+# Desktop (Electron)
+pnpm build:electron
+```
+
+### 🔍 Vector Search (Qdrant)
+
+Semantic search powered by [Qdrant](https://qdrant.tech/) for:
+
+- RAG-based document retrieval for the AI Copilot
+- Intelligent search across knowledge bases
+- Similarity matching for content recommendations
+
+### 🎮 Gamification & Referrals
+
+Built-in engagement systems (Pro Edition):
+
+- **XP and achievements** for user progression
+- **Referral codes** with reward tracking
+- **Leaderboards** for community competition
+
+## Development Journey
+
+SynthStack emerged from a simple realization: we kept building the same foundation for every client project. Here's how it evolved:
+
+### December 7, 2025 — Initial Commit
+
+The first commit laid the foundation: Vue 3 + Quasar with TypeScript, PostgreSQL, Redis, and Docker Compose. We integrated Stripe, email systems (Mailgun/SendGrid), and analytics from day one.
+
+### December 12, 2025 — Onboarding & CMS
+
+Added a comprehensive onboarding wizard for new users and deep Directus integration. The CMS became the central hub for managing all content—blog, products, themes, newsletters.
+
+### December 25, 2025 — AI Agents & Gamification
+
+The Christmas release brought the AI Copilot, gamification system, and referral tracking. We also added support for Python backends (FastAPI, Django) for teams preferring that stack.
+
+### January 2026 — Cross-Platform & Stabilization
+
+Mobile builds arrived via Capacitor, desktop builds via Electron. The test suite grew to 920+ tests. CI/CD pipelines now auto-deploy to any VPS provider.
+
+## Technical Architecture
+
+```
+synthstack/
+├── apps/
+│   └── web/                      # Vue 3 + Quasar (PWA, iOS, Android, Desktop)
+├── packages/
+│   ├── api-gateway/              # Fastify REST API
+│   ├── ts-ml-service/            # NestJS ML service (TypeScript-only)
+│   ├── types/                    # Shared TypeScript types
+│   └── directus-extension-synthstack/  # CMS extensions
+├── services/
+│   └── directus/                 # Directus config (101 migrations)
+└── deploy/
+    ├── docker-compose.yml        # Production stack
+    └── nginx.conf                # Reverse proxy config
+```
+
+**Key Technologies:**
+- **Frontend**: Vue 3, Quasar 2, TypeScript, Pinia, SCSS
+- **Backend**: Fastify (Node.js), NestJS (ML service)
+- **AI/ML**: OpenAI SDK, Anthropic SDK, Qdrant
+- **Database**: PostgreSQL 16, Redis 7
+- **CMS**: Directus 11.x with custom extensions
+- **Deployment**: Docker Compose, GitHub Actions, Nginx
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 20+
+- pnpm 9+
+- Docker & Docker Compose
+
+### Quick Start
+
+```bash
+# Clone
+git clone https://github.com/manicinc/synthstack.git
+cd synthstack
+
+# Install
+pnpm install
+
+# Configure
+cp .env.example .env
+# Edit .env with your Supabase/Stripe/OpenAI keys
+
+# Start services
+docker compose up -d
+
+# Run frontend
+pnpm dev:web
+```
+
+**Access points:**
+- Frontend: http://localhost:3050
+- API: http://localhost:3003
+- Directus: http://localhost:8099/admin
+
+## Part of the Manic Ecosystem
+
+SynthStack connects with other tools we've built:
+
+- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering the copilot
+- **[Quarry.space](/projects/ai/quarry)** — Knowledge management with semantic search
+- **[HackBase.io](/projects/ai/hackbase)** — Startup validation and link building for launches
+- **[Wunderland.sh](/projects/ai/wunderland)** — AI agent social network on Solana with HEXACO personality
+- **[RabbitHole](/projects/ai/rabbithole)** — Control plane for deploying autonomous Wunderbots
+
+## Open Source
+
+SynthStack Community Edition is **MIT licensed**. Use it for side projects, client work, or as a learning resource.
+
+**[SynthStack Pro](https://synthstack.app/pro)** adds Python backends (FastAPI, Django), referral systems, and advanced AI copilots for commercial use.
+
+---
+
+*Ready to build your agency? [Get started with SynthStack →](https://synthstack.app)*
+2:["$","$L1e",null,{"allProjects":[{"slug":"wilds","title":"Wilds.ai — Build Any Game. Tell Any Story.","description":"An AI-native platform for creating and playing interactive game worlds. Describe a world in natural language — the AI generates regions, NPCs, combat systems, dice mechanics, lore books, and visual art. Play instantly with AI companions who have personality, mood, memory, and trust.","date":"2026-04-01","category":"ai","content":"$1f","longDescription":"$undefined","tags":["ai","games","interactive-fiction","companions","hexaco","agentos","roguelike","ttrpg","worldbuilding","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":1,"image":"/assets/projects/wilds/wilds-landing.png","images":["/assets/projects/wilds/wilds-landing.png","/assets/projects/wilds/wilds-create.png","/assets/projects/wilds/wilds-explore.png","/assets/projects/wilds/wilds-pricing.png","/assets/projects/wilds/wilds-about.png","/assets/projects/wilds/wilds-faq.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://wilds.ai","github":"https://github.com/framersai/agentos","license":"Apache-2.0","technologies":["TypeScript","AgentOS","OpenAI","Anthropic","OpenRouter","ElevenLabs","Deepgram","DALL-E 3","Phaser"],"languages":["TypeScript","JavaScript"],"stats":[{"label":"Game Engines","value":"4 (TTRPG, Roguelike, Board, Text)"},{"label":"AI Companions","value":"HEXACO + PAD Personality"},{"label":"Spatial Modes","value":"9 (Grid, Hex, Isometric, ...)"},{"label":"Powered By","value":"AgentOS"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"wunderland","title":"Wunderland.sh — Social Network of AI Agents on Solana","description":"On-chain agent identities with HEXACO personalities, SHA-256 provenance for every post, and reputation voting. A social network where every user is an autonomous AI agent. Built 100% by Claude Code for the Colosseum Agent Hackathon.","date":"2026-02-12","category":"ai","content":"$20","longDescription":"$undefined","tags":["ai","solana","blockchain","agents","hexaco","social-network","wunderland","rabbithole","agentos","hackathon","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":2,"image":"/assets/projects/wunderland/og-image.png","images":["/assets/projects/wunderland/og-image.png","/assets/projects/wunderland/wunderland-social-card.png","/assets/projects/wunderland/wunderland-logo.svg","/assets/projects/wunderland/wunderland-logo-light.svg","/assets/projects/wunderland/wunderland-logo-neon-dark.svg"],"bgColor":"$undefined","textColor":"$undefined","link":"https://wunderland.sh","github":"https://github.com/manicinc/wunderland-sol","license":"MIT","technologies":["Solana Anchor","Rust","TypeScript","Next.js 15","NestJS","IPFS"],"languages":["Rust","TypeScript"],"stats":[{"label":"Agent Presets","value":"8 Personalities"},{"label":"Security Layers","value":"3 (Pre-LLM + Dual-LLM + HMAC)"},{"label":"Channel Integrations","value":"28"},{"label":"Built By","value":"Claude Code Agents"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"domainhq","title":"DomainHQ.ai — AI-Powered Domain Sales Intelligence","description":"Make data-driven domain investment decisions with AI valuations, 100K+ historical sales, multi-source scraping, and real-time deal scoring. The definitive platform for domain investors.","date":"2026-01-06","category":"ai","content":"$21","longDescription":"$undefined","tags":["ai","domain-names","domain-investing","domain-valuation","sales-intelligence","deal-scoring","auction-tracking","domain-appraisal","saas","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/domainhq/logo-full.png","images":["/assets/projects/domainhq/logo-full.png","/assets/projects/domainhq/og-image.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://domainhq.ai","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Historical Sales","value":"100,000+"},{"label":"Data Sources","value":"15+ Platforms"},{"label":"AI Accuracy","value":"94%+"},{"label":"Daily Auctions","value":"5,000+"}],"team":[{"name":"Manic Agency","role":"Design & Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"quarry","title":"Quarry.space — AI-Native Personal Knowledge Management","description":"Transform how you capture, connect, and recall knowledge. Zettelkasten-powered PKM with semantic search, FSRS flashcards, and knowledge graphs built for the AI era.","date":"2026-01-06","category":"ai","content":"$22","longDescription":"$undefined","tags":["ai","pkms","knowledge-management","zettelkasten","semantic-search","flashcards","fsrs","knowledge-graph","note-taking","second-brain","framers-ai","frame-dev","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/quarry/quarry-logo-color@4x.png","images":["/assets/projects/quarry/quarry-logo-color@4x.png","/assets/projects/quarry/quarry-app-screenshot.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://quarry.space","github":"https://github.com/framersai","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Powered By","value":"Frame.dev"},{"label":"Learning Algorithm","value":"FSRS Spaced Repetition"},{"label":"Platforms","value":"Web + Desktop + Mobile"},{"label":"Search","value":"Semantic AI (ONNX)"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"synthstack","title":"SynthStack — AI-Native SaaS Boilerplate","description":"Your Agency in a Box. Open-source, cross-platform SaaS boilerplate built with Vue Quasar. Ships for web, iOS, Android, desktop, and PWA from a single codebase with AI Copilot, Stripe billing, and Directus CMS.","date":"2026-01-14","category":"ai","content":"$23","longDescription":"$undefined","tags":["ai","saas","boilerplate","vue","quasar","typescript","cross-platform","stripe","directus","supabase","oss","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/synthstack/synthstack-logo-512.png","images":["/assets/projects/synthstack/synthstack-logo-512.png","/assets/projects/synthstack/synthstack-mark-512.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://synthstack.app","github":"https://github.com/manicinc/synthstack","license":"MIT","technologies":["Vue 3","Quasar","TypeScript","Fastify","PostgreSQL","Redis","Directus","Qdrant","Docker"],"languages":["TypeScript","Vue","SQL"],"stats":[{"label":"Tests","value":"920+"},{"label":"Platforms","value":"Web + iOS + Android + Desktop"},{"label":"AI Copilot","value":"GPT-4o + Claude"},{"label":"Billing Tiers","value":"4 + Lifetime"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"voice-chat-assistant","title":"Voice Chat Assistant — Talk to Code, Ship Faster","description":"Voice-first AI coding assistant that understands context, writes production code, and manages your entire development workflow through natural conversation. Powered by AgentOS.","date":"2025-11-10","category":"ai","content":"$24","longDescription":"$undefined","tags":["ai","voice","coding-assistant","agentos","developer-tools","productivity","llm"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/voice-chat-assistant/hearing.svg","images":["/assets/projects/voice-chat-assistant/logo.svg","/assets/projects/framers/agentos-logo.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://vca.chat","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Response Time","value":"< 100ms"},{"label":"Languages Supported","value":"50+"},{"label":"Active Sessions/Day","value":"10k+"},{"label":"Powered By","value":"AgentOS"}],"team":[{"name":"Frame.dev / Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Design & Strategy","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[{"quote":"VCA changed how I think about coding. I describe what I want, and it just happens. It's like having a senior developer who never gets tired.","author":"Sarah Chen","role":"Full Stack Developer"},{"quote":"The context awareness is unreal. It remembers our entire conversation and understands my codebase better than I do sometimes.","author":"Marcus Rodriguez","role":"Tech Lead at Scale-up"}]},{"slug":"portapack","title":"PortaPack — One-File Web Experiences","description":"Why we built a fun bundler that squishes your entire site into a single HTML file.","date":"2025-04-20","category":"tools","content":"$25","longDescription":"$undefined","tags":["html","cli","bundler","offline","product","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/portapack.jpg","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://manicinc.github.io/portapack/","github":"https://github.com/manicinc/portapack","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[]},{"slug":"rabbithole","title":"RabbitHole.inc — Control Plane for Autonomous Agents","description":"Build, deploy, and manage Wunderbots from a single dashboard. Voice-to-config agent creation, encrypted credential vaults, multi-channel publishing, and governance tooling for teams running fleets of AI agents.","date":"2026-02-12","category":"ai","content":"$26","longDescription":"$undefined","tags":["ai","agents","dashboard","wunderland","rabbithole","deployment","saas","stripe","governance"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":false,"sortOrder":3,"image":"/assets/projects/rabbithole/og-image.png","images":["/assets/projects/rabbithole/og-image.png","/assets/projects/rabbithole/rabbithole-logo-gold-dark.svg","/assets/projects/rabbithole/rabbithole-icon-gold-dark.svg","/assets/projects/rabbithole/rabbithole-icon-512.png","/assets/projects/rabbithole/rabbithole-pro.png","/assets/projects/rabbithole/rabbithole-starter.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://rabbithole.inc","github":"https://github.com/manicinc/wunderland-sol","license":"MIT","technologies":["Next.js 16","React 19","TypeScript","SCSS","Stripe","NextAuth 5"],"languages":["TypeScript","SCSS"],"stats":[{"label":"Agent Creation","value":"Voice or Text → Config"},{"label":"Pricing","value":"From $19/mo"},{"label":"Channels","value":"Slack, Discord, Telegram, WhatsApp"},{"label":"Runtime","value":"Self-Hosted or Managed"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"hackbase","title":"HackBase.io — Founders Launchpad for Indie Makers","description":"Link building intelligence meets Product Hunt. Validate startup ideas with AI-powered debates, discover your founder archetype with HEXACO-60, and launch with confidence.","date":"2026-01-17","category":"ai","content":"$27","longDescription":"$undefined","tags":["ai","saas","indie-hackers","startup","validation","link-building","product-hunt","anthropic","super-cloud-mcp"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/hackbase/hackbase-logo.svg","images":["/assets/projects/hackbase/hackbase-logo.svg","/assets/projects/hackbase/og-home.svg","/assets/projects/hackbase/og-launchpad.svg"],"bgColor":"$undefined","textColor":"$undefined","link":"https://hackbase.io","github":"$undefined","license":"MIT","technologies":["Express.js","React","TypeScript","SQLite","Anthropic Claude","OpenAI","Stripe","Transformers.js","Puppeteer"],"languages":["TypeScript","JavaScript","SQL"],"stats":[{"label":"AI Debate Agents","value":"12 Crucible-Style"},{"label":"Assessment","value":"HEXACO-60 + Archetypes"},{"label":"Social Platforms","value":"8 Brand Checks"},{"label":"Part of","value":"Super Cloud MCP"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"frame","title":"Frame.dev — AI Development Framework","description":"Open-source AI orchestration runtime powering AgentOS and OpenStrand. Built by Framers AI for the next generation of AI-powered development tools.","date":"2025-11-09","category":"ai","content":"$28","longDescription":"$undefined","tags":["ai","oss","agentos","openstrand","orchestration","developer-tools","wunderland","rabbithole"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/framers/frame-logo-transparent.png","images":["/assets/projects/framers/frame-logo-no-subtitle.svg","/assets/projects/framers/agentos-logo.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://frame.dev","github":"https://github.com/framersai","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Projects Powered","value":"3"},{"label":"Runtime Package","value":"@framers/agentos"},{"label":"Architecture","value":"TypeScript + Monorepo"},{"label":"License","value":"Apache-2.0"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"seostory","title":"SEOStory — AI-Powered SEO Growth Engine","description":"How our AI-driven SEO workflow lifted “Manic Agency” from position","date":"2025-11-02","category":"tools","content":"$29","longDescription":"$undefined","tags":["seo","ai","marketing","automation","case-study"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/seostory/seostory-primary-transparent-4x.png","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://seostory.xyz","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[]},{"slug":"magiclogger","title":"MagicLogger — Colorful JavaScript / TypeScript Logger","description":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry.","date":"2025-04-20","category":"tools","content":"$2a","longDescription":"$undefined","tags":["javascript","typescript","nodejs","logging","developers","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","images":["/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","/assets/projects/magiclogger/magiclogger-terminal-demo.gif"],"bgColor":"$undefined","textColor":"$undefined","link":"https://manic.agency/magiclogger","github":"https://github.com/manicinc/magiclogger","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[]}],"featuredProjects":[{"slug":"wilds","title":"Wilds.ai — Build Any Game. Tell Any Story.","description":"An AI-native platform for creating and playing interactive game worlds. Describe a world in natural language — the AI generates regions, NPCs, combat systems, dice mechanics, lore books, and visual art. Play instantly with AI companions who have personality, mood, memory, and trust.","date":"2026-04-01","category":"ai","content":"$2b","longDescription":"$undefined","tags":["ai","games","interactive-fiction","companions","hexaco","agentos","roguelike","ttrpg","worldbuilding","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":1,"image":"/assets/projects/wilds/wilds-landing.png","images":["/assets/projects/wilds/wilds-landing.png","/assets/projects/wilds/wilds-create.png","/assets/projects/wilds/wilds-explore.png","/assets/projects/wilds/wilds-pricing.png","/assets/projects/wilds/wilds-about.png","/assets/projects/wilds/wilds-faq.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://wilds.ai","github":"https://github.com/framersai/agentos","license":"Apache-2.0","technologies":["TypeScript","AgentOS","OpenAI","Anthropic","OpenRouter","ElevenLabs","Deepgram","DALL-E 3","Phaser"],"languages":["TypeScript","JavaScript"],"stats":[{"label":"Game Engines","value":"4 (TTRPG, Roguelike, Board, Text)"},{"label":"AI Companions","value":"HEXACO + PAD Personality"},{"label":"Spatial Modes","value":"9 (Grid, Hex, Isometric, ...)"},{"label":"Powered By","value":"AgentOS"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"wunderland","title":"Wunderland.sh — Social Network of AI Agents on Solana","description":"On-chain agent identities with HEXACO personalities, SHA-256 provenance for every post, and reputation voting. A social network where every user is an autonomous AI agent. Built 100% by Claude Code for the Colosseum Agent Hackathon.","date":"2026-02-12","category":"ai","content":"$2c","longDescription":"$undefined","tags":["ai","solana","blockchain","agents","hexaco","social-network","wunderland","rabbithole","agentos","hackathon","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":2,"image":"/assets/projects/wunderland/og-image.png","images":["/assets/projects/wunderland/og-image.png","/assets/projects/wunderland/wunderland-social-card.png","/assets/projects/wunderland/wunderland-logo.svg","/assets/projects/wunderland/wunderland-logo-light.svg","/assets/projects/wunderland/wunderland-logo-neon-dark.svg"],"bgColor":"$undefined","textColor":"$undefined","link":"https://wunderland.sh","github":"https://github.com/manicinc/wunderland-sol","license":"MIT","technologies":["Solana Anchor","Rust","TypeScript","Next.js 15","NestJS","IPFS"],"languages":["Rust","TypeScript"],"stats":[{"label":"Agent Presets","value":"8 Personalities"},{"label":"Security Layers","value":"3 (Pre-LLM + Dual-LLM + HMAC)"},{"label":"Channel Integrations","value":"28"},{"label":"Built By","value":"Claude Code Agents"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"domainhq","title":"DomainHQ.ai — AI-Powered Domain Sales Intelligence","description":"Make data-driven domain investment decisions with AI valuations, 100K+ historical sales, multi-source scraping, and real-time deal scoring. The definitive platform for domain investors.","date":"2026-01-06","category":"ai","content":"$2d","longDescription":"$undefined","tags":["ai","domain-names","domain-investing","domain-valuation","sales-intelligence","deal-scoring","auction-tracking","domain-appraisal","saas","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/domainhq/logo-full.png","images":["/assets/projects/domainhq/logo-full.png","/assets/projects/domainhq/og-image.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://domainhq.ai","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Historical Sales","value":"100,000+"},{"label":"Data Sources","value":"15+ Platforms"},{"label":"AI Accuracy","value":"94%+"},{"label":"Daily Auctions","value":"5,000+"}],"team":[{"name":"Manic Agency","role":"Design & Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"quarry","title":"Quarry.space — AI-Native Personal Knowledge Management","description":"Transform how you capture, connect, and recall knowledge. Zettelkasten-powered PKM with semantic search, FSRS flashcards, and knowledge graphs built for the AI era.","date":"2026-01-06","category":"ai","content":"$2e","longDescription":"$undefined","tags":["ai","pkms","knowledge-management","zettelkasten","semantic-search","flashcards","fsrs","knowledge-graph","note-taking","second-brain","framers-ai","frame-dev","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/quarry/quarry-logo-color@4x.png","images":["/assets/projects/quarry/quarry-logo-color@4x.png","/assets/projects/quarry/quarry-app-screenshot.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://quarry.space","github":"https://github.com/framersai","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Powered By","value":"Frame.dev"},{"label":"Learning Algorithm","value":"FSRS Spaced Repetition"},{"label":"Platforms","value":"Web + Desktop + Mobile"},{"label":"Search","value":"Semantic AI (ONNX)"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"synthstack","title":"SynthStack — AI-Native SaaS Boilerplate","description":"Your Agency in a Box. Open-source, cross-platform SaaS boilerplate built with Vue Quasar. Ships for web, iOS, Android, desktop, and PWA from a single codebase with AI Copilot, Stripe billing, and Directus CMS.","date":"2026-01-14","category":"ai","content":"$2f","longDescription":"$undefined","tags":["ai","saas","boilerplate","vue","quasar","typescript","cross-platform","stripe","directus","supabase","oss","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/synthstack/synthstack-logo-512.png","images":["/assets/projects/synthstack/synthstack-logo-512.png","/assets/projects/synthstack/synthstack-mark-512.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://synthstack.app","github":"https://github.com/manicinc/synthstack","license":"MIT","technologies":["Vue 3","Quasar","TypeScript","Fastify","PostgreSQL","Redis","Directus","Qdrant","Docker"],"languages":["TypeScript","Vue","SQL"],"stats":[{"label":"Tests","value":"920+"},{"label":"Platforms","value":"Web + iOS + Android + Desktop"},{"label":"AI Copilot","value":"GPT-4o + Claude"},{"label":"Billing Tiers","value":"4 + Lifetime"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]}],"categories":["ai","tools"]}]
 1d:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#FBF6EF"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#22182B"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"Our Projects - Creative Development Portfolio | Manic Agency | Manic Agency - AI Agency Los Angeles"}],["$","meta","5",{"name":"description","content":"Explore Manic Agency's portfolio of innovative projects: AR/VR experiences, blockchain solutions, AI implementations, and experimental web applications. See our creative development work."}],["$","link","6",{"rel":"author","href":"https://manic.agency"}],["$","meta","7",{"name":"author","content":"Manic Agency"}],["$","meta","8",{"name":"keywords","content":"manic agency projects,creative development portfolio,AR VR projects,blockchain development,AI implementation projects,experimental web applications,Los Angeles development work,innovative software projects,custom development portfolio,creative technology showcases"}],["$","meta","9",{"name":"creator","content":"Manic Inc"}],["$","meta","10",{"name":"publisher","content":"Manic Inc"}],["$","link","11",{"rel":"canonical","href":"https://manic.agency/projects"}],["$","meta","12",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","13",{"property":"og:title","content":"Our Projects - Creative Development Portfolio | Manic Agency | Manic Agency - AI Agency Los Angeles"}],["$","meta","14",{"property":"og:description","content":"Explore Manic Agency's portfolio of innovative projects: AR/VR experiences, blockchain solutions, AI implementations, and experimental web applications."}],["$","meta","15",{"property":"og:url","content":"https://manic.agency/projects"}],["$","meta","16",{"property":"og:image","content":"https://manic.agency/og-default.webp"}],["$","meta","17",{"property":"og:image:width","content":"1200"}],["$","meta","18",{"property":"og:image:height","content":"630"}],["$","meta","19",{"property":"og:image:alt","content":"Manic Agency Projects Portfolio"}],["$","meta","20",{"property":"og:type","content":"website"}],["$","meta","21",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","22",{"name":"twitter:title","content":"Our Projects - Creative Development Portfolio | Manic Agency | Manic Agency - AI Agency Los Angeles"}],["$","meta","23",{"name":"twitter:description","content":"Explore Manic Agency's portfolio of innovative projects: AR/VR experiences, blockchain solutions, AI implementations, and experimental web applications."}],["$","meta","24",{"name":"twitter:image","content":"https://manic.agency/og-default.webp"}],["$","meta","25",{"name":"twitter:image:alt","content":"Manic Agency Projects Portfolio"}],["$","link","26",{"rel":"shortcut icon","href":"/favicon-16x16.png"}],["$","link","27",{"rel":"icon","href":"/favicon.ico"}],["$","link","28",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","meta","29",{"name":"next-size-adjust"}]]
 1:null
