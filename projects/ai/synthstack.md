@@ -3,7 +3,7 @@ title: SynthStack — AI-Native SaaS Boilerplate
 description: Your Agency in a Box. Open-source, cross-platform SaaS boilerplate built with Vue Quasar. Ships for web, iOS, Android, desktop, and PWA from a single codebase with AI Copilot, Stripe billing, and Directus CMS.
 date: 2026-01-14
 category: ai
-tags: [ai, saas, boilerplate, vue, quasar, typescript, cross-platform, stripe, directus, supabase, oss, featured]
+tags: [ai, saas, boilerplate, vue, quasar, typescript, cross-platform, stripe, directus, supabase, oss]
 link: https://synthstack.app
 github: https://github.com/manicinc/synthstack
 image: /assets/projects/synthstack/synthstack-logo-512.png
@@ -11,7 +11,7 @@ images: [
   /assets/projects/synthstack/synthstack-logo-512.png,
   /assets/projects/synthstack/synthstack-mark-512.png
 ]
-featured: true
+featured: false
 draft: false
 status: ongoing
 license: MIT

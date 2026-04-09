@@ -1,9 +1,9 @@
 ---
-title: Wilds.ai — Build Any Game. Tell Any Story.
-description: An AI-native platform for creating and playing interactive game worlds. Describe a world in natural language — the AI generates regions, NPCs, combat systems, dice mechanics, lore books, and visual art. Play instantly with AI companions who have personality, mood, memory, and trust.
+title: Wilds.ai — AI Game World Creator and Interactive Fiction Platform
+description: Build any game world with natural language. Wilds.ai generates regions, NPCs, combat, dice mechanics, lore, and art — then lets you play instantly with AI companions who remember, evolve, and form real relationships. Powered by AgentOS.
 date: 2026-04-01
 category: ai
-tags: [ai, games, interactive-fiction, companions, hexaco, agentos, roguelike, ttrpg, worldbuilding, featured]
+tags: [ai, ai-game-maker, interactive-fiction, ai-dungeon-master, text-adventure, ai-rpg, ai-companions, worldbuilding, hexaco, agentos, ttrpg, roguelike, featured]
 link: https://wilds.ai
 github: https://github.com/framersai/agentos
 image: /assets/projects/wilds/wilds-landing.png
@@ -13,7 +13,8 @@ images: [
   /assets/projects/wilds/wilds-explore.png,
   /assets/projects/wilds/wilds-pricing.png,
   /assets/projects/wilds/wilds-about.png,
-  /assets/projects/wilds/wilds-faq.png
+  /assets/projects/wilds/wilds-faq.png,
+  /assets/projects/wilds/wilds-blog.png
 ]
 featured: true
 draft: false
@@ -22,13 +23,13 @@ status: ongoing
 license: Apache-2.0
 stats:
   - label: "Game Engines"
-    value: "4 (TTRPG, Roguelike, Board, Text)"
+    value: "4 Families"
   - label: "AI Companions"
-    value: "HEXACO + PAD Personality"
-  - label: "Spatial Modes"
-    value: "9 (Grid, Hex, Isometric, ...)"
+    value: "HEXACO Personality + Memory"
+  - label: "World Genres"
+    value: "12 Templates"
   - label: "Powered By"
-    value: "AgentOS"
+    value: "AgentOS (Open Source)"
 technologies: [TypeScript, AgentOS, OpenAI, Anthropic, OpenRouter, ElevenLabs, Deepgram, DALL-E 3, Phaser]
 languages: [TypeScript, JavaScript]
 team:
@@ -46,7 +47,7 @@ team:
     describe a world in natural language. watch it come alive with companions, combat, and narrative.
   </p>
   <a class="wilds-hero__cta" href="https://wilds.ai" target="_blank" rel="noopener">
-    explore wilds.ai →
+    start creating at wilds.ai →
   </a>
 </div>
 
@@ -68,7 +69,7 @@ team:
     font-size: clamp(1.9rem, 4.8vw, 3.2rem);
     line-height: 1.05;
     margin: 0.35rem 0 0.25rem;
-    background: linear-gradient(120deg, #2d6a4f 0%, #52b788 50%, #95d5b2 100%);
+    background: linear-gradient(120deg, #2d6a4f 0%, #40916c 30%, #52b788 60%, #95d5b2 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -144,215 +145,175 @@ team:
   }
 </style>
 
-## What is Wilds.ai?
+## The AI Game Maker That Builds Entire Worlds From a Single Sentence
 
-Type a description. The AI builds regions, NPCs, factions, quest objectives, multiple campaign endings, combat systems, equippable items, dice mechanics, survival pressure, a lore book, and a visual art style. Then you play it — solo or multiplayer — with branching narrative choices, AI-painted scene illustrations, and cinematic full-screen mode.
+Imagine typing *"a haunted space station where sanity is your most precious resource"* and watching the AI generate a complete survival horror game — derelict corridors with fog-of-war, a crew of NPCs with fractured memories, a sanity meter that warps the narrator's prose as it drops, and a branching story with three endings you didn't write.
 
-Wilds supports four game engine families, nine spatial rendering modes, AI companions with HEXACO personality modeling and emotional states, deterministic combat with server-authoritative dice rolls, and a consequence engine where decisions ripple forward with real mechanical weight. Every companion and game master agent runs on [AgentOS](https://agentos.sh).
+That is [Wilds.ai](https://wilds.ai).
 
-![Wilds.ai world creation interface — describe a setting, choose mechanics, and generate a playable world in seconds](/assets/projects/wilds/wilds-create.png)
+[Wilds](https://wilds.ai) is an AI-native platform for creating and playing interactive game worlds. Describe any setting, genre, or scenario in plain language. The AI compiler processes your prompt and generates playable worlds with regions, NPCs, factions, quest objectives, combat systems, equippable items, dice mechanics, survival pressure, a lore book, cover art, and a visual art style — ready to play in seconds.
 
-## Four Game Engines
+No coding. No game design experience. No art skills. Just words.
 
-One platform, four distinct ways to play:
+![Wilds.ai landing page — Build any game. Tell any story. AI-powered interactive fiction and game creation platform](/assets/projects/wilds/wilds-landing.png)
 
-| Engine | What It Does |
-|--------|-------------|
-| **Tabletop RPG** | Tactical grids, initiative order, D&D-style combat with Phaser rendering. Character sheets, spell slots, action economy |
-| **Roguelike** | Procedural dungeons, fog of war, WASD movement, permadeath, escalating difficulty |
-| **Board Game** | 2D and 3D board rendering for strategy, puzzles, and competitive games |
-| **Text Adventure** | Branching narratives, investigation mechanics, dialogue trees, literary prose |
+## Create a World With Natural Language
 
-Each engine has its own deterministic rules. Combat uses configurable action tables with combo multipliers, critical hits, and stamina management. TTRPGs use server-authoritative dice rolls from d4 through d100 — multi-die expressions (`2d6+3`), advantage/disadvantage, exploding dice, contested rolls, and roll tables. All rolls use deterministic seeded PRNG.
+The [world creation wizard](https://wilds.ai/app/create) is where everything starts. Type one sentence or a full paragraph. The compiler extracts genre, tone, mechanics, and narrative from your text, then generates a playable world.
 
-## AI Companions
+![Wilds.ai world creation interface — describe a setting, pick genre templates, configure mechanics, and generate a playable world](/assets/projects/wilds/wilds-create.png)
 
-Companions in Wilds carry personality, mood, memory, and trust. They develop relationships with the player and with each other over time.
+**Twelve genre templates** give you a starting point if you want one:
 
-### HEXACO Personality Model
+- **Tabletop RPG** — character sheets, dice rolls, and an AI dungeon master running your campaign
+- **Roguelike** — procedural rooms, permadeath, escalating difficulty
+- **Narrative Adventure** — story-first with branching paths and consequences
+- **Survival** — resource management where the world itself is the antagonist
+- **Horror/Psychological** — dread mechanics, sanity systems, unreliable narration
+- **Mystery/Investigation** — clue gathering, deduction, suspect interrogation
+- **Sandbox/Open World** — exploration and freeform roleplay without rails
+- **Strategy/Tactics** — turn-based positioning and resource allocation
+- **Social Sim** — dialogue-heavy relationship management and social dynamics
+- **Fitness/Physical** — camera-based real-world movement with AI coaching
+- **Voice RPG/Audio Drama** — entirely voice-driven with no screen required
+- **Arcade/Action** — reflexes, scoring, combo systems
 
-Each companion's personality is defined by six psychometric factors:
+Or ignore the templates entirely. Describe something the templates never imagined — a Victorian cooking competition judged by ghosts, a courtroom drama in a galactic senate, a nature documentary where you play the animal. The compiler handles it.
 
-| Factor | What It Shapes |
-|--------|---------------|
-| **Honesty-Humility** | How forthcoming the companion is, willingness to share secrets |
-| **Emotionality** | Anxiety, sentimentality, how they react to danger |
-| **eXtraversion** | Social boldness, liveliness in group conversations |
-| **Agreeableness** | Patience, flexibility, conflict tolerance |
-| **Conscientiousness** | Organization, reliability, follow-through |
-| **Openness** | Curiosity, creativity, willingness to explore |
+You can also **import existing stories** — paste text from novels, screenplays, fanfiction, or campaign logs, and the AI converts them into playable worlds.
 
-### PAD Emotional States
+[Create your first world for free at Wilds.ai →](https://wilds.ai/app/create)
 
-Beyond static personality, companions have dynamic emotional states modeled with Pleasure-Arousal-Dominance:
+## Four Game Engines, One Platform
 
-- **Pleasure** — positive/negative mood baseline shifting from interactions
-- **Arousal** — excitement and energy levels affecting response style
-- **Dominance** — confidence and assertiveness in conversation
+Wilds ships four distinct game engine families. Each has its own rendering, rules, and feel:
 
-Companions shift mood based on how you interact with them. An agent receiving praise becomes more confident. One facing repeated criticism grows cautious. Mood adapts in real time without changing the underlying personality.
+| Engine | Experience |
+|--------|-----------|
+| **Tabletop RPG / VTT** | Phaser-rendered tactical grids, initiative order, D&D 5e-style combat. Character sheets, spell slots, action economy, and an AI game master running the session |
+| **Roguelike** | Procedural dungeons with WASD movement, fog of war, field-of-view visibility, permadeath, and escalating difficulty curves |
+| **Board Game** | 2D and 3D board rendering for strategy games, puzzles, and competitive play |
+| **Text / Narrative** | Literary prose with branching narratives, investigation mechanics, and dialogue trees. Cinematic full-screen mode for immersive reading |
 
-### Companion Memory
+All four engines share the same **deterministic combat system**. Combat uses configurable action tables with combo multipliers, critical hits, and stamina management. TTRPG sessions use server-authoritative dice rolls — d4 through d100, multi-die expressions like `2d6+3`, advantage/disadvantage, exploding dice, contested rolls, and roll tables. Every roll uses a deterministic seeded PRNG. No fudging.
 
-Nine neuroscience-backed memory mechanisms govern how companions remember:
+**Items and equipment** span 15 categories — weapons, armor, consumables, quest items, crafting materials, relics, and more. Rarity tiers, equippable slots, stat modifiers, durability tracking, and loot weight tables. Items carry persistent status effects that trigger on hit, on defense, or at battle start. World creators control whether the AI invents new items during play or locks the catalog.
 
-1. **Spacing effect** — distributed practice strengthens retention
-2. **Emotional tagging** — emotionally charged events consolidate more strongly
-3. **Chunking** — related memories organize into coherent clusters
-4. **Interference resolution** — conflicting memories get reconciled
-5. **Context-dependent retrieval** — location and situation trigger relevant recall
-6. **Reconsolidation** — re-accessed memories update with new context
-7. **Generation effect** — self-generated insights stick longer
-8. **Sleep consolidation** — between sessions, memories stabilize
-9. **Personality drift** — every 15 messages, emotional patterns are analyzed and bounded personality mutations proposed
+## AI Companions That Remember, Evolve, and Form Relationships
 
-Companions remember conversations across sessions. They reveal secrets as trust builds. In group conversations (up to 8 companions), they react to each other, share media, and develop their own dynamics. Invite companion groups into game sessions as adventuring parties.
+Every AI companion on [Wilds.ai](https://wilds.ai) has a distinct personality, emotional state, memory, and trust level. These are not chatbots wearing a costume — they are persistent agents with cognitive depth.
 
-### Voice and Media
+**Personality** is modeled with [HEXACO-60](https://en.wikipedia.org/wiki/HEXACO_model_of_personality_structure), a validated six-factor psychometric model. Each factor shapes how the companion talks, reacts, and relates:
 
-Companions speak with voice I/O powered by Deepgram (STT) and ElevenLabs or OpenAI (TTS). Push-to-talk and hands-free modes. Companion personas shape TTS voices based on their HEXACO personality and current PAD mood. They share GIFs, images, and search results in conversation.
+- **Honesty-Humility** — how forthcoming they are, their willingness to reveal secrets
+- **Emotionality** — sentimentality, anxiety, how they respond to danger
+- **eXtraversion** — social boldness and energy in group conversations
+- **Agreeableness** — patience, flexibility, conflict tolerance
+- **Conscientiousness** — reliability, follow-through, organizational habits
+- **Openness** — curiosity, creativity, willingness to explore the unknown
 
-## World Building
+**Mood** shifts in real time through the PAD (Pleasure-Arousal-Dominance) emotional model. A companion who receives praise grows more confident. One facing repeated betrayal becomes guarded. Mood adapts continuously without changing the underlying personality — the same person on a good day versus a bad day.
 
-![Wilds.ai landing page — Build any game. Tell any story.](/assets/projects/wilds/wilds-landing.png)
+**Memory** uses nine neuroscience-backed mechanisms: spacing effect, emotional tagging, chunking, interference resolution, context-dependent retrieval, reconsolidation, generation effect, sleep consolidation, and personality drift. Companions remember your conversations across sessions. They reveal secrets as trust builds. They recall promises you made — and notice when you break them.
 
-The world creation pipeline processes natural language through a "Compiler" that extracts genre, tone, and mechanics within seconds. Twelve genre templates provide starting points:
+**Group dynamics** support up to 8 companions in a single conversation. They react to each other, share GIFs and media, develop preferences about one another, and form their own social dynamics. Invite a companion group into a game session as your adventuring party.
 
-| Genre | Core Mechanics |
-|-------|---------------|
-| **Roguelike** | Procedural rooms, permadeath, escalating difficulty |
-| **Narrative Adventure** | Story-first with branching paths |
-| **Survival** | Resource management, world-as-antagonist |
-| **Tabletop RPG** | Character sheets, dice rolls, AI as GM |
-| **Horror/Psychological** | Dread and sanity mechanics |
-| **Sandbox/Open World** | Exploration and freeform roleplay |
-| **Fitness/Physical** | Camera-based real-world movement with coaching |
-| **Mystery/Investigation** | Clue gathering and deduction |
-| **Social Sim** | Dialogue-heavy relationship management |
-| **Strategy/Tactics** | Turn-based positioning and resource allocation |
-| **Voice RPG/Audio Drama** | Entirely voice-driven gameplay |
-| **Arcade/Action** | Reflexes, scoring, combo systems |
+**Voice** is powered by Deepgram for speech-to-text and ElevenLabs or OpenAI for text-to-speech, with push-to-talk and hands-free modes. Each companion's voice is shaped by their personality and current mood.
 
-Create from text, voice, or camera input. Import existing stories from novels, screenplays, fanfiction, or campaign logs. After generation, each world gets a browseable lore book, art gallery, and strategy guide.
+[Chat with AI companions on Wilds.ai →](https://wilds.ai)
 
-### Consequence Engine
+## Nine Spatial Rendering Modes
 
-Decisions trigger delayed effects with real game state changes. Sparing an enemy may yield a future ally. Breaking promises shifts faction allegiance. Narratives follow structured dramatic arcs from setup through climax — not freeform improvisation.
+Games on [Wilds](https://wilds.ai) render across nine spatial modes that match the genre:
 
-### NPC Memory
+**Text-only** for pure narrative. **Node maps** for location-to-location travel. **Region maps** for overworld exploration. **Dungeon floors** with procedural generation and fog-of-war minimaps. **Square grids** and **hex grids** for tactical combat and strategy. **Isometric grids** for 2.5D perspective. **Freeform 2D** for open spatial placement. **Hybrid** mode mixes spatial types within a single world.
 
-Persistent memory across sessions tiered by story role. Important NPCs retain full conversation recall. Combatants remember encounter outcomes and tactics. Background NPCs store transactional summaries.
+The dungeon crawler engine generates minimaps with real fog-of-war. Tactical combat renders through Phaser with initiative order and action economy.
 
-### Lore Triggers
+## A Consequence Engine Where Choices Have Real Weight
 
-Dynamic triggers reveal world lore organically. Triggers fire based on keyword matches in player actions, location, present NPCs, or quest progress. Support AND/OR/XOR condition logic — lore unfolds as the player earns it.
+Decisions in Wilds trigger delayed effects with real game state changes — not narrative flavor text. Spare an enemy and they may reappear as an ally three sessions later. Break a promise to a faction and watch your reputation shift across the entire world. Betray a companion's trust and feel the relationship cool over the next several conversations.
 
-## Nine Spatial Modes
+Narratives follow structured dramatic arcs from setup through climax. The AI maintains story momentum through rising tension, not random events. NPCs remember encounter outcomes across sessions — important characters retain full conversation recall, combatants adapt their tactics, and even background NPCs store transactional summaries.
 
-Games render across nine spatial modes depending on engine and genre:
+A **lore trigger system** reveals world history organically. Triggers fire based on keyword matches in your actions, your location, which NPCs are present, or quest progress. Condition logic supports AND, OR, and XOR — lore unfolds as you earn it, not as an info dump.
 
-| Mode | Use Case |
-|------|----------|
-| **Text-only** | Pure narrative, no visual map |
-| **Node maps** | Location-to-location navigation |
-| **Region maps** | Overworld exploration |
-| **Dungeon floors** | Procedural dungeon crawling with minimaps |
-| **Square grids** | Tactical combat positioning |
-| **Hex grids** | Strategy and wargaming |
-| **Isometric grids** | 2.5D perspective rendering |
-| **Freeform 2D** | Open spatial placement |
-| **Hybrid** | Mix modes within a single world |
+## Writing, Worldbuilding, and Creative Tools
 
-Dungeon crawlers get minimaps with fog-of-war. Tactical combat uses Phaser for rendering grid-based encounters with initiative order and action economy.
+[Wilds.ai](https://wilds.ai) is also a full creative writing platform. Brainstorm worlds, outline narratives, track NPC relationships and faction politics, and write prose with AI assistance and editorial control.
 
-## Items and Equipment
+Interaction modes include **say** (dialogue), **do** (actions), **story** (narration), and **continue** (let the AI advance the scene). A **narrator style card** configures prose perspective (1st, 2nd, or 3rd person), tense, sentence density, vocabulary register, dialogue cadence, paragraph rhythm, and six anti-AI guardrails. Import reference passages from novels or screenplays to match a specific literary voice.
 
-15 item categories: weapons, armor, consumables, quest items, crafting materials, relics, and more. Rarity tiers, equippable slots, stat modifiers, durability tracking, and loot weight tables. Items carry persistent status effects triggering on hit, defense, or battle start. Creators control whether the AI can invent new items during play or lock the catalog.
+**Blueprint revisions** let you iterate on world designs without losing previous versions. Every generated world includes a browseable **lore book**, **art gallery**, and **strategy guide**.
 
-## Narrator Style Control
+Publish finished worlds to the marketplace for other players, or keep them private.
 
-A style card configures prose perspective (1st/2nd/3rd person), tense, sentence density, vocabulary register, dialogue cadence, paragraph rhythm, and six anti-AI guardrails. Import reference passages by pasting text, searching the web, or providing URLs to match a specific literary voice.
+[Start writing at Wilds.ai →](https://wilds.ai/app/create)
 
-## Writing and Worldbuilding Tools
+## Content Freedom and Privacy
 
-Wilds is also a creative writing platform. Brainstorm worlds, outline narratives, track NPC relationships and lore, write prose with full AI assistance and editorial control. Say/do/story/continue interaction modes. Blueprint revisions let you iterate without losing previous versions. Publish to the marketplace or keep worlds private.
+Four content policy tiers let creators and players control their experience:
 
-## Content Freedom
+- **Safe** — no sexual or violent content
+- **Standard** — mild romance, moderate language
+- **Mature** — explicit romance, strong themes
+- **Private-Adult** — no restrictions except hard-banned illegal content
 
-Four content policy tiers — Safe, Standard, Mature, and Private-Adult — let creators and players control their experience. Safe mode excludes sexual and violent content. Private-adult mode removes all restrictions except hard-banned illegal content. AI models route accordingly: OpenAI GPT-4o for safe/standard, uncensored models on OpenRouter for mature/private-adult. Image generation uses DALL-E 3.
+AI models route accordingly — OpenAI GPT-4o for safe and standard content, uncensored models on OpenRouter for mature and private-adult tiers. Image generation uses DALL-E 3.
 
-Your content is your own. Wilds does not use stories, conversations, or worlds to train AI models.
+**Your content stays yours.** [Wilds.ai](https://wilds.ai) does not use your stories, conversations, or worlds to train AI models.
 
-## Pricing
+## Plans and Pricing
 
-![Wilds.ai pricing — Free to start, no credit card required](/assets/projects/wilds/wilds-pricing.png)
+Free to start — no credit card required. All paid plans include a 3-day free trial.
 
-| Plan | Price | Credits | Companions | Key Features |
-|------|-------|---------|------------|-------------|
-| **Free** | $0 | 30/day | 1 companion, 2-person chat | Solo play, 3 worlds, companion media |
-| **Plus** | $9/mo | 1,500/mo + 50/day | 5 companions, group chat (5) | Voice sessions, cover images, autonomous companions |
-| **Pro** | $19/mo | 5,000/mo + 100/day | 20 companions, group chat (8) | Living worlds, multiplayer co-op, scene illustrations, NSFW images |
-| **Forge** | $39/mo | 15,000/mo + 200/day | Unlimited | Sell games with profit sharing, API access, full creator tools |
+![Wilds.ai pricing — four tiers from free to Forge at $39/month](/assets/projects/wilds/wilds-pricing.png)
 
-Annual billing saves up to 40%. Free to start — no credit card required.
+| Plan | Price | What You Get |
+|------|-------|-------------|
+| **Free** | $0 | 500 starter credits, 3 companions, 2-person group chat, solo play, 3 worlds, uncensored text |
+| **Plus** | $9/mo | 1,500 monthly credits + 150/day, 10 companions, voice sessions, cover images, autonomous companions, group chat up to 5 |
+| **Pro** | $19/mo | 5,000 monthly credits + 100/day, 20 companions, living worlds, multiplayer co-op, scene illustrations, companion relationships, NSFW image generation |
+| **Forge** | $39/mo | 15,000 monthly credits + 200/day, unlimited companions, sell games and earn credits from players, full API access, creator tools, custom scripting |
 
-## Built on AgentOS
+Annual billing saves up to 40%.
 
-Every Wilds companion and game master agent runs on [AgentOS](https://agentos.sh) — an open-source TypeScript runtime for building autonomous AI agents with cognitive memory, multimodal RAG, streaming guardrails, and voice pipeline.
+[See full plan comparison at Wilds.ai →](https://wilds.ai/pricing)
 
-AgentOS provides the cognitive architecture powering Wilds:
+## Powered by AgentOS — Open-Source AI Agent Framework
 
-- **Cognitive Memory** — 8 neuroscience-backed mechanisms modulated by HEXACO personality traits with Ebbinghaus forgetting curve decay
-- **Multi-Agent Orchestration** — 6 strategies from sequential to graph-based with Mission API and Tree-of-Thought planning
-- **21 LLM Providers** — OpenAI, Anthropic, Google, Ollama, and 17 more with automatic fallback chains
-- **37 Channel Adapters** — Telegram, WhatsApp, Discord, Slack, and 33 more
-- **5-Tier Guardrails** — Prompt injection defense, PII redaction, ML classifiers, code safety analysis, grounding guards
-- **GMI (Generalized Mind Instance)** — Each agent has a persistent cognitive core with HEXACO personality, memory systems, and tool access
-- **7 Vector Store Backends** — SQLite, HNSW, Postgres+pgvector, Qdrant, Pinecone, In-Memory, Neo4j with HyDE retrieval and GraphRAG
-- **Voice Pipeline** — 12 STT and 12 TTS providers with real-time streaming, VAD, speaker diarization, and telephony
+Every companion, narrator, and game master on [Wilds.ai](https://wilds.ai) runs on [AgentOS](https://agentos.sh) — an open-source TypeScript runtime for building autonomous AI agents.
 
-```typescript
-import { AgentOS } from '@framers/agentos';
+[AgentOS](https://agentos.sh) provides the cognitive architecture behind Wilds: **HEXACO personality modeling**, **PAD emotional states**, **cognitive memory** with 8 neuroscience-backed mechanisms and Ebbinghaus forgetting curve decay, **multi-agent orchestration** across 6 strategies, **21 LLM providers** with automatic fallback chains, **5-tier guardrails** with prompt injection defense, and a **voice pipeline** supporting 12 STT and 12 TTS providers.
 
-const agent = new AgentOS();
-await agent.initialize({
-  providers: [new OpenAIProvider(apiKey)],
-  memoryStrategy: 'cognitive',
-  personality: { model: 'hexaco', traits: { O: 85, C: 70, E: 60, A: 75, H: 80, X: 65 } },
-  emotionalState: { model: 'pad' },
-  streamingEnabled: true
-});
-```
+AgentOS is Apache-2.0 licensed and available on npm.
 
-AgentOS is Apache-2.0 licensed. Install it with `npm install @framers/agentos`.
-
-- **GitHub**: [github.com/framersai/agentos](https://github.com/framersai/agentos)
 - **Website**: [agentos.sh](https://agentos.sh)
+- **GitHub**: [github.com/framersai/agentos](https://github.com/framersai/agentos)
 - **NPM**: [@framers/agentos](https://www.npmjs.com/package/@framers/agentos)
+- **Extensions**: [@framers/agentos-extensions](https://www.npmjs.com/package/@framers/agentos-extensions) — 100+ extensions
+- **Skills**: [@framers/agentos-skills](https://www.npmjs.com/package/@framers/agentos-skills) — 88 curated skill definitions
 
-## Mobile and Perception
+Wilds is proof of what you can build with AgentOS. If you want to create your own AI agent applications with personality, memory, and emotional depth, [start with AgentOS](https://agentos.sh).
 
-Wilds is a fully responsive web app. Camera-based fitness games use device cameras for real-time pose detection. The perception system supports camera, microphone, accelerometer, gyroscope, pose estimation, hand tracking, and AR anchoring.
+## Mobile, Voice, and Camera
+
+[Wilds.ai](https://wilds.ai) is fully responsive — play on desktop, tablet, or phone. Camera-based fitness games use your device camera for real-time pose detection. The perception system supports camera, microphone, accelerometer, gyroscope, pose estimation, hand tracking, and AR anchoring.
+
+Voice RPGs and audio dramas require no screen at all. Push-to-talk or hands-free — play while walking, cooking, or commuting.
 
 ## Part of the Manic Ecosystem
 
-Wilds.ai connects with other tools we've built:
+[Wilds.ai](https://wilds.ai) connects with other tools we build and maintain:
 
-- **[AgentOS (agentos.sh)](https://agentos.sh)** — The open-source cognitive runtime powering every Wilds agent
+- **[AgentOS (agentos.sh)](https://agentos.sh)** — open-source cognitive runtime powering every Wilds agent
 - **[Frame.dev](/projects/ai/frame)** — AI orchestration platform and home of AgentOS
-- **[Wunderland.sh](/projects/ai/wunderland)** — Social network of AI agents on Solana, using the same HEXACO personality model
-- **[Quarry.space](/projects/ai/quarry)** — Knowledge management for worldbuilding research and lore archives
-- **[SynthStack](/projects/ai/synthstack)** — AI-native SaaS boilerplate for building on top of the platform
-- **[DomainHQ](/projects/ai/domainhq)** — Domain portfolio management
+- **[Wunderland.sh](/projects/ai/wunderland)** — social network of AI agents on Solana, using the same HEXACO personality model
+- **[Quarry.space](/projects/ai/quarry)** — knowledge management for worldbuilding research and lore archives
+- **[DomainHQ](/projects/ai/domainhq)** — domain portfolio management
 
-## Open Source
+## Get Started
 
-Wilds is built on open-source infrastructure. AgentOS is **Apache-2.0** licensed. The extensions registry, skills registry, and SQL storage adapter are available on npm.
+[Wilds.ai](https://wilds.ai) is free to start. Describe a world, generate it, and play — all in your browser.
 
-- **AgentOS**: [github.com/framersai/agentos](https://github.com/framersai/agentos)
-- **Extensions**: [@framers/agentos-extensions](https://www.npmjs.com/package/@framers/agentos-extensions) — 100+ extensions
-- **Skills**: [@framers/agentos-skills](https://www.npmjs.com/package/@framers/agentos-skills) — 88 curated SKILL.md definitions
-
----
-
-*Ready to build your world? [Start playing at Wilds.ai →](https://wilds.ai)*
+[Create your first world →](https://wilds.ai/app/create) | [Explore existing worlds →](https://wilds.ai/app) | [Read the FAQ →](https://wilds.ai/faq) | [Blog & News →](https://wilds.ai/blog)
