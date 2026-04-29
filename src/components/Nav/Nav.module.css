@@ -131,6 +131,14 @@
     color: transparent;
     background-size: 250% auto;
     animation: animatedGradientCoolVibrant 6s ease-in-out infinite alternate;
+    /* Isolate the gradient-clipped text into its own compositing layer so it
+       does not get re-rasterized when the parent navContainer transitions
+       between scrolled / unscrolled states (which was causing the logo to
+       briefly disappear/reappear on scroll-back-to-top). */
+    transform: translateZ(0);
+    isolation: isolate;
+    will-change: background-position;
+    backface-visibility: hidden;
 }
 @media (max-width: 768px) {
     .logoText,
