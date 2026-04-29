@@ -87,7 +87,6 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
     const [mounted, setMounted] = useState(false);
     const [glitchingQuote, setGlitchingQuote] = useState(false);
     const [decryptingLink, setDecryptingLink] = useState<string | null>(null);
-    const [showBackToTop, setShowBackToTop] = useState<boolean>(false);
     const [terminalText, setTerminalText] = useState<string>(abbreviateText("link_init..."));
     // Note: Cursor blinking is now CSS-only to prevent re-renders
     const [isDecryptingTerminal, setIsDecryptingTerminal] = useState<boolean>(false);
@@ -234,8 +233,6 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
 
     // --- Other Logic ---
     const handleDecodeClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, urlPath: string | null, isDraft: boolean) => { if (isDraft || !urlPath) { e.preventDefault(); return; } e.preventDefault(); if (decryptingLink === urlPath) return; setDecryptingLink(urlPath); setTimeout(() => { router.push(urlPath); setTimeout(() => setDecryptingLink(null), 150); }, 400); }, [decryptingLink, router]);
-    const scrollToTop = useCallback(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, []);
-    useEffect(() => { let lastValue = window.scrollY > 150; setShowBackToTop(lastValue); const h = () => { const newValue = window.scrollY > 150; if (newValue !== lastValue) { lastValue = newValue; setShowBackToTop(newValue); } }; window.addEventListener('scroll', h, { passive: true }); return () => window.removeEventListener('scroll', h); }, []);
     const animationClass = (delay = 'delay-0') => mounted ? `fade-in-up ${delay}` : 'opacity-0';
     const fadeIn = { hidden: { opacity: 0, y: 15 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } };
 
@@ -334,10 +331,20 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                 /* --- Base & Layout --- */
                  .hero-wrapper.themed { position: relative; overflow: hidden; padding-top: 2.5rem; padding-bottom: 3rem; background: var(--bg-gradient-dark), var(--bg-noise-standard); color: var(--text-primary); font-family: var(--font-body); min-height: auto; }
                  .hero-wrapper.hero-bottom-fade::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 120px; background: linear-gradient(to bottom, transparent, var(--bg-primary) 90%); pointer-events: none; z-index: 15; }
-                 .hero-bg-effects { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+                 .hero-bg-effects {
+                    position: absolute; inset: 0; z-index: 0; pointer-events: none;
+                    /* Promote to its own GPU layer so the SVG animation doesn't
+                       trigger repaints of the rest of the hero on every frame. */
+                    transform: translateZ(0);
+                    will-change: transform;
+                    contain: paint style;
+                 }
                  .hero-bg-effects > :global(*) { opacity: 0.12; }
-                 .noise-overlay { position: absolute; inset: 0; background: var(--bg-noise-soft); opacity: 0.4; mix-blend-mode: overlay; z-index: 1; }
-                 .mesh-gradient-overlay { position: absolute; inset: 0; z-index: -1; opacity: 0.25; }
+                 /* mix-blend-mode is removed: it forced full-stack repaints on
+                    every animation tick (terminal decrypt, glitch, scanlines)
+                    causing visible flashing on scroll and interaction. */
+                 .noise-overlay { position: absolute; inset: 0; background: var(--bg-noise-soft); opacity: 0.18; z-index: 1; pointer-events: none; }
+                 .mesh-gradient-overlay { position: absolute; inset: 0; z-index: -1; opacity: 0.25; pointer-events: none; }
                 /* Ensure the hero content is always centered, even during initial load */
                 .hero-wrapper,
                 .hero-content-main,
@@ -439,7 +446,9 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                   .terminal-text-area { display: flex; align-items: baseline; font-family: var(--font-mono); font-size: 0.75rem; line-height: 1.45; color: var(--accent-terminal-text, var(--accent-primary)); padding: 0.3rem 0.4rem 0.15rem 0.4rem; min-height: 1.9rem; width: 100%; overflow: hidden; background: rgba(var(--bg-primary-rgb), 0.3); border-radius: 2px; border: 1px solid rgba(var(--accent-terminal-border, var(--accent-secondary-rgb)), 0.2); }
                   .terminal-prompt { color: var(--accent-terminal-prompt, var(--accent-secondary)); margin-right: 0.3rem; flex-shrink: 0; }
                   .terminal-text { flex-grow: 1; flex-shrink: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: left; position: relative; vertical-align: baseline; }
-                  .terminal-text.decrypting { animation: terminal-decrypt 0.08s steps(1) infinite; }
+                  /* Slowed from 0.08s to 0.4s and applied to text only (was triggering
+                     a layout-paint loop 12x/sec that visibly flashed adjacent elements). */
+                  .terminal-text.decrypting { animation: terminal-decrypt 0.4s steps(2) infinite; }
                   .terminal-cursor { margin-left: 0.1rem; font-weight: bold; color: var(--accent-terminal-cursor, var(--accent-highlight)); vertical-align: baseline; flex-shrink: 0; animation: cursor-blink 1.06s infinite steps(2); }
                   /* CSS-only cursor blink - no JS state updates needed */
                   .terminal-scanline { position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; background: linear-gradient(to bottom, transparent 50%, rgba(var(--accent-terminal-glow, var(--accent-secondary-rgb)), 0.06) 51%, transparent 52%); background-size: 100% 2.5px; opacity: 0.4; animation: scan-anim 7s linear infinite; z-index: -1; }
@@ -548,23 +557,27 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                    } 
                  }
                  
-                 .holographic-card { 
-                   min-height: 250px; 
-                   background: rgba(var(--bg-tertiary-rgb), 0.35); 
-                   border: 1px solid rgba(var(--accent-primary-rgb), 0.12); 
-                   border-radius: 8px 3px 10px 4px; 
-                   padding: 0; 
-                   overflow: hidden; 
-                   transition: transform 0.3s ease, box-shadow 0.3s ease; 
-                   box-shadow: 0 3px 10px rgba(var(--shadow-color), 0.12), inset 0 0 4px rgba(var(--bg-primary-rgb), 0.15); 
-                   backdrop-filter: blur(6px); 
-                   -webkit-backdrop-filter: blur(6px); 
-                   z-index: 1; 
-                   height: 100%; 
-                   display: flex; 
-                   flex-direction: column; 
-                   position: relative; 
+                 .holographic-card {
+                   min-height: 250px;
+                   /* Solid semi-transparent fill replaces backdrop-filter — the
+                      blur was forcing a recomposite of the layer behind every
+                      card on every parent re-render (terminal text cycle, scroll,
+                      hover) which was a primary cause of hero flashing. */
+                   background: rgba(var(--bg-tertiary-rgb), 0.55);
+                   border: 1px solid rgba(var(--accent-primary-rgb), 0.12);
+                   border-radius: 8px 3px 10px 4px;
+                   padding: 0;
+                   overflow: hidden;
+                   transition: transform 0.3s ease, box-shadow 0.3s ease;
+                   box-shadow: 0 3px 10px rgba(var(--shadow-color), 0.12), inset 0 0 4px rgba(var(--bg-primary-rgb), 0.15);
+                   z-index: 1;
+                   height: 100%;
+                   display: flex;
+                   flex-direction: column;
+                   position: relative;
                    width: 100%;
+                   /* Isolate paint so card animations don't repaint hero background */
+                   contain: layout paint;
                  }
                  
                  /* Responsive card sizing */

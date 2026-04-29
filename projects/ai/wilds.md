@@ -6,11 +6,11 @@ category: ai
 tags: [ai, ai-game-maker, interactive-fiction, ai-dungeon-master, text-adventure, ai-rpg, ai-companions, worldbuilding, hexaco, agentos, ttrpg, roguelike, featured]
 link: https://wilds.ai
 github: https://github.com/framersai/agentos
-image: /assets/projects/wilds/wilds-landing.png
+image: /assets/projects/wilds/wilds-explore.png
 images: [
-  /assets/projects/wilds/wilds-landing.png,
-  /assets/projects/wilds/wilds-create.png,
   /assets/projects/wilds/wilds-explore.png,
+  /assets/projects/wilds/wilds-create.png,
+  /assets/projects/wilds/wilds-landing.png,
   /assets/projects/wilds/wilds-pricing.png,
   /assets/projects/wilds/wilds-about.png,
   /assets/projects/wilds/wilds-faq.png,
