@@ -86,12 +86,12 @@ f:I[12025,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","stat
             }
           }
         })();
-      0:["manic-agency-1775751749017",[[["",{"children":["projects",{"children":[["category","ai","d"],{"children":[["slug","synthstack","d"],{"children":["__PAGE__?{\"category\":\"ai\",\"slug\":\"synthstack\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["category","ai","d"],{"children":[["slug","synthstack","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7589854758514563.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/2a1fdc91e2d69a25.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/6517f724e0c34e4b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/4a49f8c87e29773c.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/fbcf5add168be5ca.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/31a0afff5523f0ee.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/94e7d866c9e42adb.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/8d146102ec06a500.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"preconnect","href":"https://static.cloudflareinsights.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.jsdelivr.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://res.cloudinary.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}]]}]}]}]]}]]}]],null],null],["$L1f",null]]]]
+      0:["manic-agency-1777478289138",[[["",{"children":["projects",{"children":[["category","ai","d"],{"children":[["slug","synthstack","d"],{"children":["__PAGE__?{\"category\":\"ai\",\"slug\":\"synthstack\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["category","ai","d"],{"children":[["slug","synthstack","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7589854758514563.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/2a1fdc91e2d69a25.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/6517f724e0c34e4b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/4a49f8c87e29773c.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/fbcf5add168be5ca.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/31a0afff5523f0ee.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/94e7d866c9e42adb.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/013e147df3ede691.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"preconnect","href":"https://static.cloudflareinsights.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.jsdelivr.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://res.cloudinary.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}]]}]}]}]]}]]}]],null],null],["$L1f",null]]]]
 20:I[18745,["8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-7b4adcb52485b1b3.js"],"default"]
 21:I[35366,["8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-7b4adcb52485b1b3.js"],"default"]
 23:I[77769,["8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-7b4adcb52485b1b3.js"],"default"]
 4b:I[75541,["8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-9f13a664dcce1b0c.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-7b4adcb52485b1b3.js"],"default"]
-22:T2bda,
+22:T2c75,
 <div class="synthstack-hero">
   <img
     src="/assets/projects/synthstack/synthstack-logo.svg"
@@ -395,7 +395,8 @@ SynthStack connects with other tools we've built:
 - **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering the copilot
 - **[Quarry.space](/projects/ai/quarry)** — Knowledge management with semantic search
 - **[HackBase.io](/projects/ai/hackbase)** — Startup validation and link building for launches
-- **[Wunderland.sh](/projects/ai/wunderland)** — AI agent social network on Solana with HEXACO personality
+- **[Wunderland.sh](/projects/ai/wunderland)** — Open-source OpenClaw fork autonomous agent framework with HEXACO personality and 37-channel reach
+- **[Wunderland Sol](/projects/ai/wunderland-sol)** — Solana hackathon project: on-chain AI agent social network
 - **[RabbitHole](/projects/ai/rabbithole)** — Control plane for deploying autonomous Wunderbots
 
 ## Open Source
@@ -407,7 +408,7 @@ SynthStack Community Edition is **MIT licensed**. Use it for side projects, clie
 ---
 
 *Ready to build your agency? [Get started with SynthStack →](https://synthstack.app)*
-25:T2bda,
+25:T2c75,
 <div class="synthstack-hero">
   <img
     src="/assets/projects/synthstack/synthstack-logo.svg"
@@ -711,7 +712,8 @@ SynthStack connects with other tools we've built:
 - **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering the copilot
 - **[Quarry.space](/projects/ai/quarry)** — Knowledge management with semantic search
 - **[HackBase.io](/projects/ai/hackbase)** — Startup validation and link building for launches
-- **[Wunderland.sh](/projects/ai/wunderland)** — AI agent social network on Solana with HEXACO personality
+- **[Wunderland.sh](/projects/ai/wunderland)** — Open-source OpenClaw fork autonomous agent framework with HEXACO personality and 37-channel reach
+- **[Wunderland Sol](/projects/ai/wunderland-sol)** — Solana hackathon project: on-chain AI agent social network
 - **[RabbitHole](/projects/ai/rabbithole)** — Control plane for deploying autonomous Wunderbots
 
 ## Open Source
@@ -758,7 +760,7 @@ SynthStack Community Edition is **MIT licensed**. Use it for side projects, clie
 47:{"level":2,"text":"Open Source","slug":"open-source"}
 32:["$33","$34","$35","$36","$37","$38","$39","$3a","$3b","$3c","$3d","$3e","$3f","$40","$41","$42","$43","$44","$45","$46","$47"]
 24:{"slug":"synthstack","title":"SynthStack — AI-Native SaaS Boilerplate","description":"Your Agency in a Box. Open-source, cross-platform SaaS boilerplate built with Vue Quasar. Ships for web, iOS, Android, desktop, and PWA from a single codebase with AI Copilot, Stripe billing, and Directus CMS.","date":"2026-01-14","category":"ai","content":"$25","longDescription":"$undefined","tags":"$26","modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/synthstack/synthstack-logo-512.png","images":"$27","bgColor":"$undefined","textColor":"$undefined","link":"https://synthstack.app","github":"https://github.com/manicinc/synthstack","license":"MIT","technologies":"$28","languages":"$29","stats":"$2a","team":"$2f","testimonials":"$31","toc":"$32"}
-48:T25eb,
+48:T2764,
 <div class="rabbithole-hero">
   <img
     src="/assets/projects/rabbithole/rabbithole-logo-gold-dark.svg"
@@ -887,7 +889,7 @@ What happens when your AI agent needs real credentials, a payment account, and a
 
 You build it in RabbitHole.
 
-RabbitHole is the control plane for [Wunderbots](/projects/ai/wunderland) — autonomous agents that live on the Wunderland network. It is a dashboard, not a framework. You create agents (from voice or text input), configure their HEXACO personality and security defaults, store encrypted credentials, and push them live across Slack, Discord, Telegram, or WhatsApp. One interface. Many agents. Secrets stay on your server.
+RabbitHole is the control plane for [Wunderbots](/projects/ai/wunderland) — autonomous AI agents built on the open-source [Wunderland.sh](/projects/ai/wunderland) framework. It is a dashboard, not a framework. You create agents (from voice or text input), configure their HEXACO personality and security defaults, store encrypted credentials, and push them live across Slack, Discord, Telegram, WhatsApp, and 33 more channels. One interface. Many agents. Secrets stay on your server.
 
 ## One Dashboard, Many Agents
 
@@ -980,10 +982,12 @@ rabbithole/
 
 RabbitHole connects with other tools we've built:
 
-- **[Wunderland.sh](/projects/ai/wunderland)** — The social network where your Wunderbots live and earn reputation
-- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering AgentOS
-- **[Voice Chat Assistant](/projects/ai/voice-chat-assistant)** — Voice-first AI development, same monorepo
-- **[SynthStack](/projects/ai/synthstack)** — AI-native SaaS boilerplate for building on top of the platform
+- **[Wunderland.sh](/projects/ai/wunderland)** — Open-source OpenClaw fork autonomous agent framework. Wunderbots are agents built on the Wunderland CLI.
+- **[AgentOS](/projects/ai/agentos)** — TypeScript runtime providing the cognitive substrate (HEXACO, memory, multi-agent orchestration).
+- **[Wunderland Sol](/projects/ai/wunderland-sol)** — Separate Solana hackathon social network where every account is an AI agent.
+- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering AgentOS.
+- **[Voice Chat Assistant](/projects/ai/voice-chat-assistant)** — Voice-first AI development, same monorepo.
+- **[SynthStack](/projects/ai/synthstack)** — AI-native SaaS boilerplate for building on top of the platform.
 
 ## Open Source
 
@@ -992,7 +996,241 @@ RabbitHole is **MIT licensed**. The dashboard, API client, and design system are
 ---
 
 *Ready to deploy your first Wunderbot? [Start at RabbitHole →](https://rabbithole.inc)*
-49:T386b,
+49:T3ad9,
+<div class="agentos-hero">
+  <h1 class="agentos-hero__title" aria-label="the cognitive runtime for ai agents">the cognitive runtime for ai agents.</h1>
+  <p class="agentos-hero__subtitle">
+    open-source typescript framework for autonomous agents with personality, cognitive memory, and emergent tool forging.
+  </p>
+  <a class="agentos-hero__cta" href="https://agentos.sh" target="_blank" rel="noopener">
+    explore agentos.sh →
+  </a>
+</div>
+
+<style>
+  .agentos-hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2.75rem 1rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .agentos-hero__title {
+    text-transform: lowercase;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0.35rem 0 0.25rem;
+    background: linear-gradient(120deg, #e06530 0%, #e8b44a 50%, #4ca8a8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .agentos-hero__subtitle {
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    color: var(--text-secondary, rgba(255,255,255,0.78));
+    margin: 0.25rem 0 0.9rem;
+    max-width: 60ch;
+  }
+  @media (prefers-color-scheme: light) {
+    .agentos-hero__subtitle { color: #2a2a2a; }
+  }
+  .agentos-hero__cta {
+    --h: 52px;
+    display: inline-grid;
+    place-items: center;
+    height: var(--h);
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--text-primary, #fff);
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(120% 120% at 0% 0%, rgba(224,101,48,0.18), rgba(232,180,74,0.08)),
+      linear-gradient(90deg, rgba(224,101,48,0.35), rgba(76,168,168,0.35));
+    border: 1px solid rgba(232,180,74,0.35);
+    backdrop-filter: blur(6px);
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    will-change: transform;
+  }
+  .agentos-hero__cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(120deg, rgba(224,101,48,0.9), rgba(232,180,74,0.9), rgba(76,168,168,0.9));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: .6;
+    transition: opacity .25s ease;
+    z-index: -1;
+  }
+  .agentos-hero__cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(232,180,74,0.7);
+    background:
+      radial-gradient(120% 120% at 100% 0%, rgba(76,168,168,0.2), rgba(232,180,74,0.12)),
+      linear-gradient(90deg, rgba(224,101,48,0.5), rgba(76,168,168,0.5));
+    box-shadow: 0 10px 32px rgba(232,180,74,0.25), 0 2px 8px rgba(76,168,168,0.2);
+  }
+  .agentos-hero__cta:active { transform: translateY(0) scale(0.99); }
+  @media (prefers-color-scheme: light) {
+    .agentos-hero__cta {
+      color: #0f0f0f;
+      border-color: rgba(224,101,48,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+  }
+</style>
+
+## What is AgentOS?
+
+[AgentOS](https://agentos.sh) is the open-source TypeScript runtime for autonomous AI agents. Each agent is a **Generalized Mind Instance (GMI)** with a HEXACO personality, eight neuroscience-backed memory mechanisms, runtime tool forging inside a V8 sandbox, and a classifier-driven memory pipeline that decides per-query whether to retrieve, which architecture to use, and which reader to dispatch.
+
+AgentOS powers production agents on [Wilds.ai](/projects/ai/wilds), [Wunderland.sh](/projects/ai/wunderland), and [Paracosm](/projects/ai/paracosm). The package ships under the Apache-2.0 license with 3,866+ tests in CI, full TypeScript types, and zero vendor lock-in.
+
+```bash
+npm install @framers/agentos
+```
+
+![AgentOS landing page — open-source TypeScript runtime for autonomous AI agents with cognitive memory, HEXACO personality, and emergent tool forging](/assets/projects/agentos/agentos-landing.png)
+
+## Cognitive Architecture, Not Just an Orchestrator
+
+Most agent libraries are routing layers — they accept a prompt, pick a tool, return an answer. AgentOS treats the agent as a *mind* with persistent identity, memory, and behavioral adaptation across sessions.
+
+### HEXACO Personality
+
+Every GMI carries a [HEXACO-60](https://en.wikipedia.org/wiki/HEXACO_model_of_personality_structure) personality vector: Honesty-Humility, Emotionality, eXtraversion, Agreeableness, Conscientiousness, Openness. The six traits modulate retrieval bias (a high-Openness agent surfaces more counterintuitive memories), response style (a high-Emotionality agent leans into sentiment), and tool selection (a high-Conscientiousness agent picks higher-fidelity tools). Personality is not a system prompt template — it shapes which memories get encoded, how they decay, and what the agent actually picks from the retrieval candidates.
+
+### Eight-Mechanism Cognitive Memory
+
+The memory engine implements eight neuroscience-backed processes: **reconsolidation** (memories rewrite when re-accessed), **retrieval-induced forgetting** (RIF), **involuntary recall** (proactive surfacing), **feeling-of-knowing** (FOK metacognition), **gist extraction** (compressed summaries), **schema encoding** (typed slots), **source decay** (provenance fades on the [Ebbinghaus forgetting curve](https://en.wikipedia.org/wiki/Forgetting_curve)), and **emotion regulation** (mood-tagged retrieval). The result is an agent that remembers what mattered, forgets what didn't, and can correct itself when memory and reality diverge.
+
+### Classifier-Driven Memory Pipeline
+
+The standout feature: a three-stage LLM-as-judge classifier pipeline that gates retrieval per query. Stage 1 decides whether memory is even needed. Stage 2 picks the retrieval architecture (canonical-hybrid, observational-memory-v10, observational-memory-v11). Stage 3 picks the reader tier (gpt-4o for hard categories, gpt-5-mini for easy ones). Stages 2 and 3 reuse the Stage 1 classification so the full pipeline costs **one classifier call per query**, not three.
+
+Validated on [LongMemEval-S](https://arxiv.org/abs/2410.10813) Phase B at N=500 with bootstrap confidence intervals: **85.6% accuracy [82.4%, 88.6%] at $0.0090 per correct answer**. That beats Mastra OM gpt-4o (84.2% published) and EmergenceMem Simple Fast (80.6% measured apples-to-apples) by +5.0 percentage points at 6.5× lower cost-per-correct.
+
+## Sixteen LLM Providers, Automatic Fallback
+
+AgentOS ships native adapters for OpenAI, Anthropic, Gemini, Groq, Ollama, OpenRouter, Together, Mistral, xAI, Claude CLI, Gemini CLI, plus five image/video providers. When the primary returns HTTP 402/429/5xx, network fails, or auth breaks, `generateText` walks a canonical fallback chain using whichever API keys are present. No extra imports, no chain construction. Strict single-provider routing is one parameter away for billing isolation, capability auditing, or provider-pinned tests.
+
+## Seven Vector Backends, Four Retrieval Strategies, GraphRAG
+
+The RAG pipeline supports InMemory, SQL, HNSW, [Qdrant](https://qdrant.tech), [Neo4j](https://neo4j.com), [pgvector](https://github.com/pgvector/pgvector), and [Pinecone](https://www.pinecone.io). Four retrieval strategies (vanilla similarity, hybrid BM25 + dense, query rewriting, GraphRAG) cover the full spectrum from "small dataset on a laptop" to "production knowledge graph with citation paths."
+
+## Multi-Agent Teams With Six Strategies
+
+Six coordination strategies for multi-agent work: `sequential`, `parallel`, `debate`, `review-loop`, `hierarchical`, `graph`. Each agent has its own HEXACO profile, memory, and skill set; teams share memory through scoped channels with HITL approval gates. The orchestration runtime offers three authoring surfaces — `workflow()` for deterministic DAGs, `AgentGraph` for cycles and subgraphs, `mission()` for goal-driven adaptive planning — all compiling to the same graph runtime with persistent checkpointing.
+
+## Five-Tier Guardrails
+
+Security ships built in. Five tiers from `dangerous` (no guardrails) to `paranoid` (full pipeline + circuit breakers). Six guardrail packs cover PII redaction, ML-based classifiers, topicality enforcement, code-execution safety, grounding-against-context, and content policy. Prompt injection patterns are caught at the pre-LLM stage; outputs are signed with HMAC-SHA256 to maintain an intent-chain audit trail.
+
+## How AgentOS Compares
+
+| Framework | Cognitive memory | HEXACO personality | Multi-agent | Voice + telephony | License | Language |
+|-----------|-----------------|---------------------|-------------|---------------------|---------|----------|
+| **AgentOS** | 8 mechanisms + classifier pipeline | Yes, modulates retrieval and response | 6 strategies + shared memory | ElevenLabs, Deepgram, Twilio | Apache-2.0 | TypeScript |
+| [LangGraph](https://langchain-ai.github.io/langgraph/) | Conversational buffer | No | Graph orchestration | Add-on | MIT | Python (TS port) |
+| [AutoGen](https://microsoft.github.io/autogen/) | Buffer + summarization | No | Two-agent conversations | No | MIT | Python |
+| [Mastra](https://mastra.ai) | Working + semantic memory | No | Workflow steps | TTS only | Apache-2.0 | TypeScript |
+| [Vercel AI SDK](https://sdk.vercel.ai) | None | No | None | TTS only | Apache-2.0 | TypeScript |
+| [CrewAI](https://www.crewai.com) | RAG only | No | Role-based crews | No | MIT | Python |
+
+The core differentiation is the cognitive layer — personality + memory + classifier-driven retrieval — that other frameworks treat as out-of-scope.
+
+## Quick Start — A Personality-Driven Agent in 10 Lines
+
+```typescript
+import { agent } from '@framers/agentos';
+
+const research = agent({
+  name: 'researcher',
+  personality: { O: 0.9, C: 0.85 }, // high openness, high conscientiousness
+  memory: { backend: 'pgvector', mechanisms: 'all' },
+  guardrails: { tier: 'balanced' },
+  providers: ['openai', 'anthropic'], // automatic fallback
+});
+
+const answer = await research.ask('Find the most-cited 2026 paper on cognitive AI agents.');
+```
+
+The agent has persistent memory across calls, falls back from OpenAI to Anthropic on errors, blocks prompt injection at the guardrail stage, and shapes retrieval by its high-Openness profile.
+
+## The AgentOS Family on npm
+
+| Package | What it provides |
+|---------|------------------|
+| [`@framers/agentos`](https://www.npmjs.com/package/@framers/agentos) | Core runtime — agents, providers, memory, RAG, orchestration, guardrails |
+| [`@framers/agentos-extensions`](https://www.npmjs.com/package/@framers/agentos-extensions) | 100+ extensions and templates |
+| [`@framers/agentos-skills`](https://www.npmjs.com/package/@framers/agentos-skills) | 88 curated SKILL.md definitions |
+| [`paracosm`](https://www.npmjs.com/package/paracosm) | Counterfactual world simulator built on AgentOS |
+| [`wunderland`](https://www.npmjs.com/package/wunderland) | OpenClaw-fork personal AI assistant built on AgentOS |
+
+## Production Deployments
+
+- **[Wilds.ai](/projects/ai/wilds)** — every NPC, narrator, and game master runs on AgentOS. HEXACO companions with mood drift, voice synthesis, and 12-genre game generation.
+- **[Wunderland.sh](/projects/ai/wunderland)** — open-source OpenClaw fork distributing AgentOS as a personal AI assistant across 37 messaging channels.
+- **[Paracosm](/projects/ai/paracosm)** — counterfactual world simulation; AgentOS provides the GMI substrate, HEXACO actors, and runtime tool forging.
+
+## Frequently Asked Questions
+
+### What is AgentOS?
+
+AgentOS is an open-source TypeScript runtime for autonomous AI agents with cognitive memory, HEXACO personality, multi-agent orchestration, and a classifier-driven retrieval pipeline. It is published on npm as `@framers/agentos` under the Apache-2.0 license.
+
+### Is AgentOS free and open-source?
+
+Yes. AgentOS is Apache-2.0 licensed with the source on [GitHub](https://github.com/framersai/agentos). You can use it commercially without royalty, modify it, and self-host it. There are no paid tiers of the runtime itself — paid services like Wilds.ai are built on top of it.
+
+### How does AgentOS differ from LangGraph?
+
+LangGraph is a graph orchestration library — it routes prompts and tools through nodes. AgentOS is a cognitive runtime: agents have persistent HEXACO personalities, eight-mechanism memory with reconsolidation and forgetting curves, runtime tool forging, and a classifier pipeline that decides per query whether memory is even needed. Orchestration is one component of AgentOS, not the whole framework.
+
+### What LLM providers does AgentOS support?
+
+Sixteen native providers: OpenAI, Anthropic, Gemini, Groq, Ollama, OpenRouter, Together, Mistral, xAI, Claude CLI, Gemini CLI, plus five image and video providers. Automatic fallback chains kick in on retryable errors (HTTP 402/429/5xx, network failures). You can also opt out for strict single-provider routing.
+
+### Does AgentOS work with voice?
+
+Yes. The voice pipeline supports [ElevenLabs](https://elevenlabs.io), [Deepgram](https://deepgram.com), and OpenAI Whisper for STT/TTS, plus telephony adapters for Twilio, Telnyx, and Plivo. Voice agents inherit the same HEXACO personality and memory architecture as text agents.
+
+### How does AgentOS handle agent memory?
+
+Eight neuroscience-backed mechanisms run on top of seven supported vector backends. Memory is encoded with HEXACO-modulated salience, consolidates during sleep cycles, decays per the Ebbinghaus forgetting curve, and gets reconsolidated when re-accessed. A three-stage classifier pipeline gates retrieval per query — most queries skip retrieval entirely, the rest get the right architecture and reader for the question type.
+
+### Can I use AgentOS without Wilds or Wunderland?
+
+Yes. AgentOS is the underlying runtime; Wilds.ai and Wunderland.sh are products built on it. You can install `@framers/agentos` directly and build your own agents, teams, or runtimes. The package is provider-agnostic and self-hostable.
+
+### How do I get started with AgentOS?
+
+Run `npm install @framers/agentos`, set an API key for any supported provider, and call `agent()` or `generateText()`. The full quickstart is at [docs.agentos.sh](https://docs.agentos.sh). The example repository is at [github.com/framersai/agentos](https://github.com/framersai/agentos) — clone it for runnable code samples covering memory, multi-agent teams, RAG, and orchestration.
+
+## Get Started
+
+[AgentOS](https://agentos.sh) is the cognitive substrate behind every AI agent we ship. Install it, fork it, build on top of it.
+
+[Read the docs at agentos.sh →](https://agentos.sh) | [Browse the source on GitHub →](https://github.com/framersai/agentos) | [Install from npm →](https://www.npmjs.com/package/@framers/agentos) | [Join the Discord →](https://wilds.ai/discord)
+4a:T390d,
 <div class="hackbase-hero">
   <img
     src="/assets/projects/hackbase/hackbase-logo.svg"
@@ -1336,8 +1574,9 @@ HackBase connects with other tools we've built:
 - **[DomainHQ](/projects/ai/domainhq)** — Domain portfolio management for your brand acquisitions
 - **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering the debate system
 - **[Quarry.space](/projects/ai/quarry)** — Knowledge management for your research and validation data
-- **[Wunderland.sh](/projects/ai/wunderland)** — AI agent social network using the same HEXACO-60 personality model
-- **[RabbitHole](/projects/ai/rabbithole)** — Deploy autonomous agents across Slack, Discord, and Telegram
+- **[Wunderland.sh](/projects/ai/wunderland)** — Open-source OpenClaw fork autonomous agent framework using the same HEXACO-60 personality model
+- **[Wunderland Sol](/projects/ai/wunderland-sol)** — Solana hackathon project: on-chain AI agent social network
+- **[RabbitHole](/projects/ai/rabbithole)** — Deploy autonomous agents across Slack, Discord, Telegram, and 34 more channels
 
 ## Open Source
 
@@ -1346,318 +1585,6 @@ HackBase is **MIT licensed** and part of the Super Cloud MCP monorepo. Clone it,
 ---
 
 *Ready to validate your idea? [Launch with HackBase →](https://hackbase.io)*
-4a:T2d44,
-<div class="domainhq-hero">
-  <img
-    src="/assets/projects/domainhq/logo-full.svg"
-    alt="DomainHQ.ai logo - AI-powered domain sales intelligence platform"
-    class="domainhq-hero__logo"
-    decoding="async"
-    loading="eager"
-  />
-  <h1 class="domainhq-hero__title" aria-label="stop guessing start knowing">stop guessing. start knowing.</h1>
-  <p class="domainhq-hero__subtitle">
-    domain sales intelligence powered by AI. valuations, comparables, and deal scoring—all in one platform.
-  </p>
-  <a class="domainhq-hero__cta" href="https://domainhq.ai" target="_blank" rel="noopener">
-    explore domainhq.ai →
-  </a>
-</div>
-
-<style>
-  .domainhq-hero {
-    display: grid;
-    place-items: center;
-    text-align: center;
-    gap: 1rem;
-    padding: 2.75rem 1rem 3rem;
-    border-radius: 1rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .domainhq-hero__logo {
-    width: clamp(180px, 42vw, 380px);
-    height: auto;
-    opacity: 0.95;
-  }
-  @media (prefers-color-scheme: dark) {
-    .domainhq-hero__logo {
-      filter: brightness(1.1) drop-shadow(0 0 24px rgba(99,102,241,0.25));
-      opacity: 1;
-    }
-  }
-  .domainhq-hero__title {
-    text-transform: lowercase;
-    font-weight: 900;
-    letter-spacing: 0.02em;
-    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
-    line-height: 1.05;
-    margin: 0.35rem 0 0.25rem;
-    background: linear-gradient(120deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .domainhq-hero__subtitle {
-    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
-    color: var(--text-secondary, rgba(255,255,255,0.78));
-    margin: 0.25rem 0 0.9rem;
-    max-width: 56ch;
-  }
-  @media (prefers-color-scheme: light) {
-    .domainhq-hero__subtitle { color: #2a2a2a; }
-  }
-  .domainhq-hero__cta {
-    --h: 52px;
-    display: inline-grid;
-    place-items: center;
-    height: var(--h);
-    padding: 0 1.25rem;
-    border-radius: 999px;
-    font-weight: 800;
-    text-transform: lowercase;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    color: var(--text-primary, #fff);
-    position: relative;
-    isolation: isolate;
-    background:
-      radial-gradient(120% 120% at 0% 0%, rgba(99,102,241,0.18), rgba(139,92,246,0.08)),
-      linear-gradient(90deg, rgba(99,102,241,0.35), rgba(168,85,247,0.35));
-    border: 1px solid rgba(99,102,241,0.35);
-    backdrop-filter: blur(6px);
-    transition:
-      transform .25s ease,
-      box-shadow .25s ease,
-      border-color .25s ease,
-      background .25s ease;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-    will-change: transform;
-  }
-  .domainhq-hero__cta::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 2px;
-    background: linear-gradient(120deg, rgba(99,102,241,0.9), rgba(139,92,246,0.9), rgba(168,85,247,0.9));
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
-    opacity: .6;
-    transition: opacity .25s ease;
-    z-index: -1;
-  }
-  .domainhq-hero__cta:hover {
-    transform: translateY(-2px) scale(1.02);
-    border-color: rgba(99,102,241,0.7);
-    background:
-      radial-gradient(120% 120% at 100% 0%, rgba(168,85,247,0.2), rgba(139,92,246,0.12)),
-      linear-gradient(90deg, rgba(99,102,241,0.5), rgba(168,85,247,0.5));
-    box-shadow: 0 10px 32px rgba(99,102,241,0.25), 0 2px 8px rgba(168,85,247,0.2);
-  }
-  .domainhq-hero__cta:active { transform: translateY(0) scale(0.99); }
-  @media (prefers-color-scheme: light) {
-    .domainhq-hero__cta {
-      color: #0f0f0f;
-      border-color: rgba(99,102,241,0.25);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-    .domainhq-hero__cta:hover {
-      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
-    }
-  }
-</style>
-
-## What is DomainHQ?
-
-DomainHQ is an **AI-powered domain sales intelligence platform** that transforms how investors, brokers, and businesses approach domain acquisitions. Instead of guessing based on gut instinct, you get data-driven valuations backed by **100,000+ historical sales** and real-time market intelligence.
-
-The domain aftermarket is a **$4+ billion industry** where pricing remains remarkably opaque. Traditional appraisal tools rely on outdated algorithms and ignore crucial context like brand sentiment, SEO value, and comparable sales patterns. DomainHQ changes that.
-
-![DomainHQ AI domain valuation dashboard showing real-time deal scoring, historical sales data, and AI-powered appraisals - Domain Intelligence Platform|size=large|align=center|caption=DomainHQ Dashboard](/assets/projects/domainhq/og-image.png)
-
-## The Problem We Solve
-
-Domain investing without data is gambling. Here's what most investors face:
-
-- **Fragmented Data** — Sales scattered across 15+ marketplaces with no unified view
-- **Inaccurate Appraisals** — GoDaddy inflates values; Estibot uses decade-old algorithms
-- **No Comparables** — Finding similar domain sales requires hours of manual research
-- **Missed Deals** — By the time you spot a good auction, it's already over
-- **Gut-Based Pricing** — Sellers ask arbitrary prices; buyers have no negotiation data
-
-DomainHQ solves all of this with AI.
-
-## Core Features
-
-### 💰 AI Valuations with Comparables
-
-Our valuation engine doesn't just spit out a number—it shows its work.
-
-- **Multi-Factor Analysis** — 50+ signals including TLD, length, keywords, brandability
-- **Historical Comparables** — See what similar domains actually sold for
-- **Confidence Scoring** — Know when data is sparse vs. robust
-- **Low/Mid/High Ranges** — Understand the negotiation envelope
-
-**94%+ accuracy** against realized sales in our validation dataset.
-
-### 📊 Multi-Source Data Aggregation
-
-We scrape so you don't have to. Real-time data from:
-
-| Platform | Data Type |
-|----------|-----------|
-| GoDaddy Auctions | Live auctions, expired domains |
-| NameJet | Premium auction inventory |
-| Sedo | European marketplace data |
-| Dynadot | Direct sales, marketplace |
-| Afternic | BIN listings, premium inventory |
-| NameBio | Historical sales database |
-| + 10 more | Specialized TLD registries |
-
-All normalized, deduplicated, and searchable in one interface.
-
-### 🎯 Deal Scoring Algorithm
-
-Every domain gets a **0-100 Deal Score** based on:
-
-- **Value Gap** — How far below AI valuation is the asking price?
-- **Comparable Volume** — Do we have strong evidence for the valuation?
-- **Market Momentum** — Is this TLD/niche trending up or down?
-- **Liquidity Risk** — How long do similar domains take to sell?
-
-High scores surface automatically. Stop scrolling through garbage.
-
-### 📡 Live Auction Tracking
-
-Never miss another deal.
-
-- **Real-Time Bid Monitoring** — See bids as they happen
-- **Ending Soon Alerts** — Push notifications for expiring auctions
-- **Snipe Detection** — Know when last-second bidders are active
-- **Historical Bid Patterns** — Learn when to bid and when to wait
-
-### 🧠 AI Domain Brainstorming
-
-Need domains? Let AI help.
-
-- **Style Preferences** — Brandable, keyword-rich, short, descriptive
-- **Industry Targeting** — Generate for specific verticals
-- **Availability Checking** — Instant WHOIS lookups
-- **Trademark Screening** — Avoid legal landmines
-
-### 📈 Historical Sales Database
-
-**100,000+ verified sales** with full metadata:
-
-- Domain name and TLD
-- Sale price (normalized to USD)
-- Venue and date
-- Buyer/seller info (when available)
-- Domain age at time of sale
-
-Filter, sort, export. Build your own analysis.
-
-## Pricing Tiers
-
-| Feature | Free | Pro ($12/mo) | Elite ($29/mo) |
-|---------|------|--------------|----------------|
-| Historical Sales | 5 pages | 25 pages | Unlimited |
-| AI Brainstorms | 1/day | 3/day | 7/day |
-| AI Valuations | 2/day | 8/day | 25/day |
-| CSV Export | — | ✓ | ✓ |
-| API Access | — | — | ✓ |
-| Live Auction Alerts | — | ✓ | ✓ |
-
-## Use Cases
-
-### For Domain Investors
-
-- **Portfolio Valuation** — Know what your holdings are actually worth
-- **Acquisition Research** — Find underpriced domains before others
-- **Exit Strategy** — Price domains to sell, not to sit
-
-### For Domain Brokers
-
-- **Client Proposals** — Back up recommendations with data
-- **Market Reports** — Generate branded analysis for prospects
-- **Deal Negotiation** — Arm yourself with comparable sales
-
-### For Startups & Businesses
-
-- **Brand Domain Acquisition** — Know what's fair before negotiating
-- **Trademark Clearance** — Avoid buying legally risky domains
-- **Alternative Discovery** — Find available variations when premium is too expensive
-
-## Technical Architecture
-
-```
-domainhq/
-├── api/                        # Express 5.x REST API
-│   ├── routes/                 # 25 endpoint handlers
-│   ├── middleware/             # Auth, rate limiting
-│   └── swagger/                # OpenAPI documentation
-├── lib/
-│   ├── domain-evaluator.ts     # AI valuation engine (41KB)
-│   ├── domain-brainstormer.ts  # Generation with Claude
-│   ├── deal-scorer.ts          # Deal scoring algorithm
-│   └── metrics/                # Specialized scoring modules
-├── scraper/
-│   ├── sources/                # Per-marketplace scrapers
-│   ├── auctions/               # Live auction monitors
-│   └── scheduler/              # Multi-source orchestration
-├── apps/
-│   └── domainhq-ui/            # React 19 + Vite frontend
-└── data/
-    └── namebio.db              # SQLite historical database
-```
-
-**Key Technologies:**
-- **Backend**: Node.js, Express 5, TypeScript 5.9
-- **Database**: SQLite (sales), PostgreSQL (users)
-- **AI**: Anthropic Claude API, custom embeddings
-- **Frontend**: React 19, Vite, TailwindCSS 4
-- **Scraping**: Playwright, Selenium, anti-detection
-- **Payments**: Stripe
-
-## The AI Advantage
-
-Traditional domain appraisals fail because they ignore context. Our AI model considers:
-
-1. **Semantic Meaning** — "cloudbank.ai" isn't just 9 letters; it's two powerful keywords
-2. **Category Detection** — Automatically classify domains into 50+ industry verticals
-3. **TLD Intelligence** — .ai premiums differ from .io premiums
-4. **Market Timing** — What's hot in 2026 isn't what was hot in 2020
-5. **Brandability Scoring** — Pronounceable, memorable, defensible
-
-This isn't simple string matching. It's genuine natural language understanding applied to the domain aftermarket.
-
-## Why We Built DomainHQ
-
-Domain investing was our accidental side hustle. We kept buying domains on gut instinct, overpaying for some, missing obvious deals on others. The existing tools felt stuck in 2015.
-
-So we built what we wished existed:
-
-- A single place to see all marketplace data
-- Valuations that actually correlate with realized sales
-- Alerts that surface deals before they expire
-- AI that generates brandable options when we're stuck
-
-We've been using DomainHQ internally for 18 months. Now it's ready for everyone.
-
-*For a deep dive into the domain valuation landscape and why existing tools fail, read our [full industry analysis](/posts/research/domain-evaluation-landscape-2025).*
-
-## Get Started
-
-1. **Free Account** — [Sign up at domainhq.ai](https://domainhq.ai) (no credit card required)
-2. **Explore Sales** — Browse 100K+ historical transactions
-3. **Run Valuations** — Get AI appraisals for any domain
-4. **Set Alerts** — Never miss an auction in your niche
-
----
-
-*Ready to stop guessing? [Start with DomainHQ →](https://domainhq.ai)*
 4c:T34a0,
 # The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ
 
@@ -2346,6 +2273,6 @@ Hubinger, E., van Merwijk, C., Mikulik, V., Skalse, J., & Garrabrant, S. (2019).
 Kahneman, D. (2011). *Thinking, fast and slow*. Farrar, Straus and Giroux.
 Kaplan, J., McCandlish, S., Henighan, T., et al. (2020). Scaling laws for neural language models. *arXiv:2001.08361*.
 McKenzie, I., Lyzhov, A., Pieler, M., et al. (2023). Inverse scaling: When bigger isn't better. *arXiv:2306.09479*.
-Wu, Z., et al. (2025). Optimal chain-of-thought length for large language models. *ACL 2025*.2:[["$","$L20",null,{"items":[{"name":"Home","url":"/"},{"name":"Projects","url":"/projects"},{"name":"ai","url":"/projects/ai"},{"name":"SynthStack — AI-Native SaaS Boilerplate","url":"/projects/ai/synthstack"}]}],["$","$L21",null,{"project":{"slug":"synthstack","title":"SynthStack — AI-Native SaaS Boilerplate","description":"Your Agency in a Box. Open-source, cross-platform SaaS boilerplate built with Vue Quasar. Ships for web, iOS, Android, desktop, and PWA from a single codebase with AI Copilot, Stripe billing, and Directus CMS.","date":"2026-01-14","category":"ai","content":"$22","longDescription":"$undefined","tags":["ai","saas","boilerplate","vue","quasar","typescript","cross-platform","stripe","directus","supabase","oss"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/synthstack/synthstack-logo-512.png","images":["/assets/projects/synthstack/synthstack-logo-512.png","/assets/projects/synthstack/synthstack-mark-512.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://synthstack.app","github":"https://github.com/manicinc/synthstack","license":"MIT","technologies":["Vue 3","Quasar","TypeScript","Fastify","PostgreSQL","Redis","Directus","Qdrant","Docker"],"languages":["TypeScript","Vue","SQL"],"stats":[{"label":"Tests","value":"920+"},{"label":"Platforms","value":"Web + iOS + Android + Desktop"},{"label":"AI Copilot","value":"GPT-4o + Claude"},{"label":"Billing Tiers","value":"4 + Lifetime"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"toc":[{"level":2,"text":"What is SynthStack?","slug":"what-is-synthstack"},{"level":2,"text":"The Problem We Solve","slug":"the-problem-we-solve"},{"level":2,"text":"Core Features","slug":"core-features"},{"level":3,"text":"🤖 AI Copilot (GPT-4o + Claude)","slug":"-ai-copilot-gpt-4o-claude"},{"level":3,"text":"🔐 Flexible Authentication","slug":"-flexible-authentication"},{"level":3,"text":"💳 Stripe Billing (4 Tiers + Lifetime)","slug":"-stripe-billing-4-tiers-lifetime"},{"level":3,"text":"📝 Directus CMS","slug":"-directus-cms"},{"level":3,"text":"🌐 Cross-Platform Builds","slug":"-cross-platform-builds"},{"level":3,"text":"🔍 Vector Search (Qdrant)","slug":"-vector-search-qdrant"},{"level":3,"text":"🎮 Gamification & Referrals","slug":"-gamification-referrals"},{"level":2,"text":"Development Journey","slug":"development-journey"},{"level":3,"text":"December 7, 2025 — Initial Commit","slug":"december-7-2025-initial-commit"},{"level":3,"text":"December 12, 2025 — Onboarding & CMS","slug":"december-12-2025-onboarding-cms"},{"level":3,"text":"December 25, 2025 — AI Agents & Gamification","slug":"december-25-2025-ai-agents-gamification"},{"level":3,"text":"January 2026 — Cross-Platform & Stabilization","slug":"january-2026-cross-platform-stabilization"},{"level":2,"text":"Technical Architecture","slug":"technical-architecture"},{"level":2,"text":"Getting Started","slug":"getting-started"},{"level":3,"text":"Prerequisites","slug":"prerequisites"},{"level":3,"text":"Quick Start","slug":"quick-start"},{"level":2,"text":"Part of the Manic Ecosystem","slug":"part-of-the-manic-ecosystem"},{"level":2,"text":"Open Source","slug":"open-source"}]}}],["$","$L23",null,{"project":"$24","relatedProjects":[{"slug":"rabbithole","title":"RabbitHole.inc — Control Plane for Autonomous Agents","description":"Build, deploy, and manage Wunderbots from a single dashboard. Voice-to-config agent creation, encrypted credential vaults, multi-channel publishing, and governance tooling for teams running fleets of AI agents.","date":"2026-02-12","category":"ai","content":"$48","longDescription":"$undefined","tags":["ai","agents","dashboard","wunderland","rabbithole","deployment","saas","stripe","governance"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":false,"sortOrder":3,"image":"/assets/projects/rabbithole/og-image.png","images":["/assets/projects/rabbithole/og-image.png","/assets/projects/rabbithole/rabbithole-logo-gold-dark.svg","/assets/projects/rabbithole/rabbithole-icon-gold-dark.svg","/assets/projects/rabbithole/rabbithole-icon-512.png","/assets/projects/rabbithole/rabbithole-pro.png","/assets/projects/rabbithole/rabbithole-starter.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://rabbithole.inc","github":"https://github.com/manicinc/wunderland-sol","license":"MIT","technologies":["Next.js 16","React 19","TypeScript","SCSS","Stripe","NextAuth 5"],"languages":["TypeScript","SCSS"],"stats":[{"label":"Agent Creation","value":"Voice or Text → Config"},{"label":"Pricing","value":"From $19/mo"},{"label":"Channels","value":"Slack, Discord, Telegram, WhatsApp"},{"label":"Runtime","value":"Self-Hosted or Managed"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"score":7},{"slug":"hackbase","title":"HackBase.io — Founders Launchpad for Indie Makers","description":"Link building intelligence meets Product Hunt. Validate startup ideas with AI-powered debates, discover your founder archetype with HEXACO-60, and launch with confidence.","date":"2026-01-17","category":"ai","content":"$49","longDescription":"$undefined","tags":["ai","saas","indie-hackers","startup","validation","link-building","product-hunt","anthropic","super-cloud-mcp"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/hackbase/hackbase-logo.svg","images":["/assets/projects/hackbase/hackbase-logo.svg","/assets/projects/hackbase/og-home.svg","/assets/projects/hackbase/og-launchpad.svg"],"bgColor":"$undefined","textColor":"$undefined","link":"https://hackbase.io","github":"$undefined","license":"MIT","technologies":["Express.js","React","TypeScript","SQLite","Anthropic Claude","OpenAI","Stripe","Transformers.js","Puppeteer"],"languages":["TypeScript","JavaScript","SQL"],"stats":[{"label":"AI Debate Agents","value":"12 Crucible-Style"},{"label":"Assessment","value":"HEXACO-60 + Archetypes"},{"label":"Social Platforms","value":"8 Brand Checks"},{"label":"Part of","value":"Super Cloud MCP"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"score":5},{"slug":"domainhq","title":"DomainHQ.ai — AI-Powered Domain Sales Intelligence","description":"Make data-driven domain investment decisions with AI valuations, 100K+ historical sales, multi-source scraping, and real-time deal scoring. The definitive platform for domain investors.","date":"2026-01-06","category":"ai","content":"$4a","longDescription":"$undefined","tags":["ai","domain-names","domain-investing","domain-valuation","sales-intelligence","deal-scoring","auction-tracking","domain-appraisal","saas","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/domainhq/logo-full.png","images":["/assets/projects/domainhq/logo-full.png","/assets/projects/domainhq/og-image.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://domainhq.ai","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Historical Sales","value":"100,000+"},{"label":"Data Sources","value":"15+ Platforms"},{"label":"AI Accuracy","value":"94%+"},{"label":"Daily Auctions","value":"5,000+"}],"team":[{"name":"Manic Agency","role":"Design & Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"score":5}]}],["$","div",null,{"style":{"maxWidth":"1200px","margin":"0 auto","padding":"0 1rem"},"children":["$","$L4b",null,{"posts":[{"slug":"domain-evaluation-landscape-2025","title":"The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ","date":"2026-01-06","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","domain-investing","domain-valuation","market-analysis","founder-story","domainhq","industry-research","sales-data","domain-appraisal","domain-aftermarket"],"excerpt":"A deep dive into the fragmented domain valuation industry, the limitations of existing appraisal tools, and how AI is reshaping domain investing. Plus, the founder story behind DomainHQ.ai.","image":"/assets/projects/domainhq/og-image.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":10,"content":"$4c","author":{"name":"Manic Agency"},"contributors":"$undefined"},{"slug":"reddit-consenus-on-llm-seo","title":"What 1,000+ Industry Comments on Reddit Reveal About AI Search Optimization","date":"2025-07-28","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","ai-search","reddit-analysis","seo-strategy","search-optimization","featured"],"excerpt":"After analyzing hundreds of comments across SEO subreddits, Manic.agency finds that the industry splits cleanly: early adopters racing to crack AI visibility versus skeptics dismissing 'LLM SEO' as repackaged bullshit. The data tells a more nuanced story..","image":"/assets/blog/research/reddit-consenus-on-llm-seo/hero-reddit-ai-search-analysis.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":11,"content":"$4d","author":{"name":"Manic Agency"},"contributors":"$undefined"},{"slug":"when-ai-overthinks-the-inverse-scaling-problem","title":"When AI Overthinks: The Inverse Scaling Problem","date":"2025-07-24","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","inverse-scaling","ai-safety","test-time-compute","overthinking"],"excerpt":"New research from Anthropic and OpenAI reveals that giving LLMs more time to think makes them worse at simple tasks. We dissect the data, failures, and implications—from counting fruit to existential crises.","image":"/assets/blog/research/when-ai-overthinks-the-inverse/inverse-scaling_accuracy-vs-reasoning-tokens_gradient.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":10,"content":"$4e","author":{"name":"Manic Agency"},"contributors":"$undefined"}],"title":"// Related Blog Posts //"}]}]]
+Wu, Z., et al. (2025). Optimal chain-of-thought length for large language models. *ACL 2025*.2:[["$","$L20",null,{"items":[{"name":"Home","url":"/"},{"name":"Projects","url":"/projects"},{"name":"ai","url":"/projects/ai"},{"name":"SynthStack — AI-Native SaaS Boilerplate","url":"/projects/ai/synthstack"}]}],["$","$L21",null,{"project":{"slug":"synthstack","title":"SynthStack — AI-Native SaaS Boilerplate","description":"Your Agency in a Box. Open-source, cross-platform SaaS boilerplate built with Vue Quasar. Ships for web, iOS, Android, desktop, and PWA from a single codebase with AI Copilot, Stripe billing, and Directus CMS.","date":"2026-01-14","category":"ai","content":"$22","longDescription":"$undefined","tags":["ai","saas","boilerplate","vue","quasar","typescript","cross-platform","stripe","directus","supabase","oss"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/synthstack/synthstack-logo-512.png","images":["/assets/projects/synthstack/synthstack-logo-512.png","/assets/projects/synthstack/synthstack-mark-512.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://synthstack.app","github":"https://github.com/manicinc/synthstack","license":"MIT","technologies":["Vue 3","Quasar","TypeScript","Fastify","PostgreSQL","Redis","Directus","Qdrant","Docker"],"languages":["TypeScript","Vue","SQL"],"stats":[{"label":"Tests","value":"920+"},{"label":"Platforms","value":"Web + iOS + Android + Desktop"},{"label":"AI Copilot","value":"GPT-4o + Claude"},{"label":"Billing Tiers","value":"4 + Lifetime"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"toc":[{"level":2,"text":"What is SynthStack?","slug":"what-is-synthstack"},{"level":2,"text":"The Problem We Solve","slug":"the-problem-we-solve"},{"level":2,"text":"Core Features","slug":"core-features"},{"level":3,"text":"🤖 AI Copilot (GPT-4o + Claude)","slug":"-ai-copilot-gpt-4o-claude"},{"level":3,"text":"🔐 Flexible Authentication","slug":"-flexible-authentication"},{"level":3,"text":"💳 Stripe Billing (4 Tiers + Lifetime)","slug":"-stripe-billing-4-tiers-lifetime"},{"level":3,"text":"📝 Directus CMS","slug":"-directus-cms"},{"level":3,"text":"🌐 Cross-Platform Builds","slug":"-cross-platform-builds"},{"level":3,"text":"🔍 Vector Search (Qdrant)","slug":"-vector-search-qdrant"},{"level":3,"text":"🎮 Gamification & Referrals","slug":"-gamification-referrals"},{"level":2,"text":"Development Journey","slug":"development-journey"},{"level":3,"text":"December 7, 2025 — Initial Commit","slug":"december-7-2025-initial-commit"},{"level":3,"text":"December 12, 2025 — Onboarding & CMS","slug":"december-12-2025-onboarding-cms"},{"level":3,"text":"December 25, 2025 — AI Agents & Gamification","slug":"december-25-2025-ai-agents-gamification"},{"level":3,"text":"January 2026 — Cross-Platform & Stabilization","slug":"january-2026-cross-platform-stabilization"},{"level":2,"text":"Technical Architecture","slug":"technical-architecture"},{"level":2,"text":"Getting Started","slug":"getting-started"},{"level":3,"text":"Prerequisites","slug":"prerequisites"},{"level":3,"text":"Quick Start","slug":"quick-start"},{"level":2,"text":"Part of the Manic Ecosystem","slug":"part-of-the-manic-ecosystem"},{"level":2,"text":"Open Source","slug":"open-source"}]}}],["$","$L23",null,{"project":"$24","relatedProjects":[{"slug":"rabbithole","title":"RabbitHole.inc — Control Plane for Autonomous Agents","description":"Build, deploy, and manage Wunderbots from a single dashboard. Voice-to-config agent creation, encrypted credential vaults, multi-channel publishing, and governance tooling for teams running fleets of AI agents.","date":"2026-02-12","category":"ai","content":"$48","longDescription":"$undefined","tags":["ai","agents","dashboard","wunderland","rabbithole","deployment","saas","stripe","governance"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":false,"sortOrder":3,"image":"/assets/projects/rabbithole/og-image.png","images":["/assets/projects/rabbithole/og-image.png","/assets/projects/rabbithole/rabbithole-logo-gold-dark.svg","/assets/projects/rabbithole/rabbithole-icon-gold-dark.svg","/assets/projects/rabbithole/rabbithole-icon-512.png","/assets/projects/rabbithole/rabbithole-pro.png","/assets/projects/rabbithole/rabbithole-starter.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://rabbithole.inc","github":"https://github.com/manicinc/wunderland-sol","license":"MIT","technologies":["Next.js 16","React 19","TypeScript","SCSS","Stripe","NextAuth 5"],"languages":["TypeScript","SCSS"],"stats":[{"label":"Agent Creation","value":"Voice or Text → Config"},{"label":"Pricing","value":"From $19/mo"},{"label":"Channels","value":"Slack, Discord, Telegram, WhatsApp"},{"label":"Runtime","value":"Self-Hosted or Managed"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"score":7},{"slug":"agentos","title":"AgentOS — Open-Source TypeScript AI Agent Runtime","description":"Open-source cognitive runtime for autonomous AI agents. HEXACO personality, 8-mechanism cognitive memory, 16 LLM providers with auto-fallback, 6 multi-agent strategies, runtime tool forging. Apache-2.0. The engine behind Wilds.ai and Wunderland.sh.","date":"2026-02-12","category":"ai","content":"$49","longDescription":"$undefined","tags":["ai","ai-agents","agentos","llm","typescript","open-source","cognitive-architecture","multi-agent","agent-framework","hexaco","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":3,"image":"/assets/projects/agentos/agentos-landing.png","images":["/assets/projects/agentos/agentos-landing.png","/assets/projects/agentos/agentos-features.png","/assets/projects/agentos/agentos-ecosystem.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://agentos.sh","github":"https://github.com/framersai/agentos","license":"Apache-2.0","technologies":["TypeScript","Node.js 20+","OpenAI","Anthropic","Gemini","Groq","Ollama","OpenRouter","Cohere","ElevenLabs","Deepgram","Qdrant","Neo4j","pgvector"],"languages":["TypeScript","JavaScript"],"stats":[{"label":"LLM Providers","value":"16 with Auto-Fallback"},{"label":"Cognitive Memory","value":"8 Neuroscience-Backed"},{"label":"Vector Backends","value":"7 (RAG + GraphRAG)"},{"label":"Tests Passing","value":"3,866+"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"score":5},{"slug":"hackbase","title":"HackBase.io — Founders Launchpad for Indie Makers","description":"Link building intelligence meets Product Hunt. Validate startup ideas with AI-powered debates, discover your founder archetype with HEXACO-60, and launch with confidence.","date":"2026-01-17","category":"ai","content":"$4a","longDescription":"$undefined","tags":["ai","saas","indie-hackers","startup","validation","link-building","product-hunt","anthropic","super-cloud-mcp"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/hackbase/hackbase-logo.svg","images":["/assets/projects/hackbase/hackbase-logo.svg","/assets/projects/hackbase/og-home.svg","/assets/projects/hackbase/og-launchpad.svg"],"bgColor":"$undefined","textColor":"$undefined","link":"https://hackbase.io","github":"$undefined","license":"MIT","technologies":["Express.js","React","TypeScript","SQLite","Anthropic Claude","OpenAI","Stripe","Transformers.js","Puppeteer"],"languages":["TypeScript","JavaScript","SQL"],"stats":[{"label":"AI Debate Agents","value":"12 Crucible-Style"},{"label":"Assessment","value":"HEXACO-60 + Archetypes"},{"label":"Social Platforms","value":"8 Brand Checks"},{"label":"Part of","value":"Super Cloud MCP"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"score":5}]}],["$","div",null,{"style":{"maxWidth":"1200px","margin":"0 auto","padding":"0 1rem"},"children":["$","$L4b",null,{"posts":[{"slug":"domain-evaluation-landscape-2025","title":"The Domain Evaluation Landscape in 2025-2026: Why We Built DomainHQ","date":"2026-01-06","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","domain-investing","domain-valuation","market-analysis","founder-story","domainhq","industry-research","sales-data","domain-appraisal","domain-aftermarket"],"excerpt":"A deep dive into the fragmented domain valuation industry, the limitations of existing appraisal tools, and how AI is reshaping domain investing. Plus, the founder story behind DomainHQ.ai.","image":"/assets/projects/domainhq/og-image.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":10,"content":"$4c","author":{"name":"Manic Agency"},"contributors":"$undefined"},{"slug":"reddit-consenus-on-llm-seo","title":"What 1,000+ Industry Comments on Reddit Reveal About AI Search Optimization","date":"2025-07-28","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","ai-search","reddit-analysis","seo-strategy","search-optimization","featured"],"excerpt":"After analyzing hundreds of comments across SEO subreddits, Manic.agency finds that the industry splits cleanly: early adopters racing to crack AI visibility versus skeptics dismissing 'LLM SEO' as repackaged bullshit. The data tells a more nuanced story..","image":"/assets/blog/research/reddit-consenus-on-llm-seo/hero-reddit-ai-search-analysis.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":11,"content":"$4d","author":{"name":"Manic Agency"},"contributors":"$undefined"},{"slug":"when-ai-overthinks-the-inverse-scaling-problem","title":"When AI Overthinks: The Inverse Scaling Problem","date":"2025-07-24","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","inverse-scaling","ai-safety","test-time-compute","overthinking"],"excerpt":"New research from Anthropic and OpenAI reveals that giving LLMs more time to think makes them worse at simple tasks. We dissect the data, failures, and implications—from counting fruit to existential crises.","image":"/assets/blog/research/when-ai-overthinks-the-inverse/inverse-scaling_accuracy-vs-reasoning-tokens_gradient.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":10,"content":"$4e","author":{"name":"Manic Agency"},"contributors":"$undefined"}],"title":"// Related Blog Posts //"}]}]]
 1f:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#FBF6EF"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#22182B"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"SynthStack — AI-Native SaaS Boilerplate | Project Details | Manic Agency - AI Agency Los Angeles"}],["$","meta","5",{"name":"description","content":"Your Agency in a Box. Open-source, cross-platform SaaS boilerplate built with Vue Quasar. Ships for web, iOS, Android, desktop, and PWA from a single codebase with AI Copilot, Stripe billing, and Directus CMS."}],["$","link","6",{"rel":"author","href":"https://manic.agency"}],["$","meta","7",{"name":"author","content":"Manic Agency"}],["$","meta","8",{"name":"keywords","content":"ai,saas,boilerplate,vue,quasar,typescript,cross-platform,stripe,directus,supabase,oss"}],["$","meta","9",{"name":"creator","content":"Manic Inc"}],["$","meta","10",{"name":"publisher","content":"Manic Inc"}],["$","link","11",{"rel":"canonical","href":"https://your-domain.com/projects/ai/synthstack"}],["$","meta","12",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","13",{"property":"og:title","content":"SynthStack — AI-Native SaaS Boilerplate | Project Details | Manic Agency - AI Agency Los Angeles"}],["$","meta","14",{"property":"og:description","content":"Your Agency in a Box. Open-source, cross-platform SaaS boilerplate built with Vue Quasar. Ships for web, iOS, Android, desktop, and PWA from a single codebase with AI Copilot, Stripe billing, and Directus CMS."}],["$","meta","15",{"property":"og:url","content":"https://your-domain.com/projects/ai/synthstack"}],["$","meta","16",{"property":"og:site_name","content":"Your Agency Name"}],["$","meta","17",{"property":"og:image","content":"https://your-domain.com/assets/projects/synthstack/synthstack-logo-512.png"}],["$","meta","18",{"property":"og:image:width","content":"1200"}],["$","meta","19",{"property":"og:image:height","content":"630"}],["$","meta","20",{"property":"og:image:alt","content":"SynthStack — AI-Native SaaS Boilerplate | Project Details"}],["$","meta","21",{"property":"og:type","content":"article"}],["$","meta","22",{"property":"article:published_time","content":"2026-01-14T00:00:00.000Z"}],["$","meta","23",{"property":"article:section","content":"ai"}],["$","meta","24",{"property":"article:tag","content":"ai"}],["$","meta","25",{"property":"article:tag","content":"saas"}],["$","meta","26",{"property":"article:tag","content":"boilerplate"}],["$","meta","27",{"property":"article:tag","content":"vue"}],["$","meta","28",{"property":"article:tag","content":"quasar"}],["$","meta","29",{"property":"article:tag","content":"typescript"}],["$","meta","30",{"property":"article:tag","content":"cross-platform"}],["$","meta","31",{"property":"article:tag","content":"stripe"}],["$","meta","32",{"property":"article:tag","content":"directus"}],["$","meta","33",{"property":"article:tag","content":"supabase"}],["$","meta","34",{"property":"article:tag","content":"oss"}],["$","meta","35",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","36",{"name":"twitter:title","content":"SynthStack — AI-Native SaaS Boilerplate | Project Details | Manic Agency - AI Agency Los Angeles"}],["$","meta","37",{"name":"twitter:description","content":"Your Agency in a Box. Open-source, cross-platform SaaS boilerplate built with Vue Quasar. Ships for web, iOS, Android, desktop, and PWA from a single codebase with AI Copilot, Stripe billing, and Directus CMS."}],["$","meta","38",{"name":"twitter:image","content":"https://your-domain.com/assets/projects/synthstack/synthstack-logo-512.png"}],["$","link","39",{"rel":"shortcut icon","href":"/favicon-16x16.png"}],["$","link","40",{"rel":"icon","href":"/favicon.ico"}],["$","link","41",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","meta","42",{"name":"next-size-adjust"}]]
 1:null
