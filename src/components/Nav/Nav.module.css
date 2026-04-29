@@ -1319,8 +1319,18 @@
     }
 }
 
-/* Remove margin compensation on larger screens */
-@media (min-width: 769px) {
+/* Match container padding compensation at sm breakpoint (sm:px-4 = 1rem) so the
+   hamburger button sits flush to the viewport edge between 640px and the xl
+   breakpoint where the desktop nav takes over. Without this the button leaves
+   a ~4px gap on the right edge on tablet-sized viewports. */
+@media (min-width: 640px) and (max-width: 1279px) {
+    .mobileMenuBtn {
+        margin-right: -1rem;
+    }
+}
+
+/* Remove margin compensation on xl and up where the mobile button is hidden */
+@media (min-width: 1280px) {
     .mobileMenuBtn {
         margin-right: 0 !important;
     }
