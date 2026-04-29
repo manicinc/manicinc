@@ -3,14 +3,14 @@ title: DomainHQ.ai — AI-Powered Domain Sales Intelligence
 description: Make data-driven domain investment decisions with AI valuations, 100K+ historical sales, multi-source scraping, and real-time deal scoring. The definitive platform for domain investors.
 date: 2026-01-06
 category: ai
-tags: [ai, domain-names, domain-investing, domain-valuation, sales-intelligence, deal-scoring, auction-tracking, domain-appraisal, saas, featured]
+tags: [ai, domain-names, domain-investing, domain-valuation, sales-intelligence, deal-scoring, auction-tracking, domain-appraisal, saas]
 link: https://domainhq.ai
 image: /assets/projects/domainhq/logo-full.png
 images: [
   /assets/projects/domainhq/logo-full.png,
   /assets/projects/domainhq/og-image.png
 ]
-featured: true
+featured: false
 draft: false
 stats:
   - label: "Historical Sales"

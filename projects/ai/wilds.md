@@ -1,7 +1,7 @@
 ---
 title: Wilds.ai — AI Game World Creator and Interactive Fiction Platform
 description: Build any game world with natural language. Wilds.ai generates regions, NPCs, combat, dice mechanics, lore, and art — then lets you play instantly with AI companions who remember, evolve, and form real relationships. Powered by AgentOS.
-date: 2026-04-01
+date: 2026-04-25
 category: ai
 tags: [ai, ai-game-maker, interactive-fiction, ai-dungeon-master, text-adventure, ai-rpg, ai-companions, worldbuilding, hexaco, agentos, ttrpg, roguelike, featured]
 link: https://wilds.ai
