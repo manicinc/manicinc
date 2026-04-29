@@ -166,7 +166,7 @@ The memory engine implements eight neuroscience-backed processes: **reconsolidat
 
 The standout feature: a three-stage LLM-as-judge classifier pipeline that gates retrieval per query. Stage 1 decides whether memory is even needed. Stage 2 picks the retrieval architecture (canonical-hybrid, observational-memory-v10, observational-memory-v11). Stage 3 picks the reader tier (gpt-4o for hard categories, gpt-5-mini for easy ones). Stages 2 and 3 reuse the Stage 1 classification so the full pipeline costs **one classifier call per query**, not three.
 
-Validated on [LongMemEval-S](https://arxiv.org/abs/2410.10813) Phase B at N=500 with bootstrap confidence intervals: **85.6% accuracy [82.4%, 88.6%] at $0.0090 per correct answer**. That beats Mastra OM gpt-4o (84.2% published) and EmergenceMem Simple Fast (80.6% measured apples-to-apples) by +5.0 percentage points at 6.5× lower cost-per-correct.
+Internal evaluation on [LongMemEval-S](https://arxiv.org/abs/2410.10813) Phase B at N=500 with 10k-resample bootstrap confidence intervals: **85.6% accuracy [82.4%, 88.6%] at $0.0090 per correct answer**. The same harness measures Mastra OM gpt-4o at 84.2% (matches their published number) and re-runs EmergenceMem Simple Fast at 80.6% (apples-to-apples in our harness; their published headline is 79.0%). AgentOS lands +5.0 percentage points over EmergenceMem at 6.5× lower cost-per-correct. Full reproducible run JSONs and methodology in the [agentos-bench repo](https://github.com/framersai/agentos-bench).
 
 ## Sixteen LLM Providers, Automatic Fallback
 

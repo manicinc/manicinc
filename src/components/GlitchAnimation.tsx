@@ -150,6 +150,21 @@ const DARK_THEME = {
 };
 
 // --- Helper Functions ---
+// Scale an animation config's count ranges by a factor in [0.5, 1].
+// Used by the resize-density observer and the burst-toggle restore path so
+// scaling stays consistent when toggling between base and burst configs.
+const scaleAnimationConfig = (cfg: AnimationConfig, scale: number): AnimationConfig => {
+    const scaleInt = (val: number) => Math.max(1, Math.floor(val * scale));
+    const scaleRange = ([min, max]: [number, number]): [number, number] => [scaleInt(min), scaleInt(max)];
+    return {
+        ...cfg,
+        pathCountRange: scaleRange(cfg.pathCountRange),
+        noiseCountRange: scaleRange(cfg.noiseCountRange),
+        textCountRange: scaleRange(cfg.textCountRange),
+        objectCountRange: scaleRange(cfg.objectCountRange),
+    } as AnimationConfig;
+};
+
 const randomInRange = (min: number, max: number) => Math.random() * (max - min) + min;
 const randomIntInRange = (min: number, max: number) => Math.floor(randomInRange(min, max + 1));
 const generatePathObjData = (type: FallingObjectType, size: number): string | undefined => { 
@@ -219,6 +234,9 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
     const baseConfigRef = useRef<AnimationConfig>(getConfigForPerformanceMode(performanceMode));
     const burstConfigRef = useRef<AnimationConfig>(BURST_CONFIG);
     const reducedMotionRef = useRef<boolean>(false);
+    // Tracks the most recently committed resize scale so burst toggles preserve
+    // it instead of resetting to the unscaled base config.
+    const lastScaleRef = useRef<number>(1);
     const animationFrameRef = useRef<number>();
     const lastRegenerateTimeRef = useRef<number>(0);
     const containerRef = useRef<HTMLDivElement>(null);
@@ -263,25 +281,15 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
         if (!el) return;
         const baselineArea = 800 * 600; // reference area
         const clamp = (v: number, min: number, max: number) => Math.max(min, Math.min(max, v));
-
-        const scaleConfig = (cfg: AnimationConfig, scale: number): AnimationConfig => {
-            const scaleInt = (val: number) => Math.max(1, Math.floor(val * scale));
-            const scaleRange = ([min, max]: [number, number]): [number, number] => [scaleInt(min), scaleInt(max)];
-            return {
-                ...cfg,
-                pathCountRange: scaleRange(cfg.pathCountRange),
-                noiseCountRange: scaleRange(cfg.noiseCountRange),
-                textCountRange: scaleRange(cfg.textCountRange),
-                objectCountRange: scaleRange(cfg.objectCountRange),
-            } as AnimationConfig;
-        };
+        const scaleConfig = scaleAnimationConfig;
 
         // Debounce + delta-threshold the resize handler so scroll-induced layout
         // shifts (lazy-loaded sections, nav transitions, sticky elements) don't
         // continuously regenerate the SVG and cause visible flashing.
         let debounceTimer: ReturnType<typeof setTimeout> | null = null;
-        let lastScale = -1;
         const ro = new ResizeObserver((entries) => {
+            // Honor reduced-motion: do not regenerate the SVG state on resize.
+            if (reducedMotionRef.current) return;
             const entry = entries[entries.length - 1];
             if (!entry) return;
             const cr = entry.contentRect;
@@ -291,10 +299,11 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
             const dprScale = clamp(1 / Math.max(1, dpr), 0.5, 1);
             const scale = clamp(Math.min(areaScale, dprScale), 0.5, 1);
             // Only commit when the scale changes by >5% (avoids sub-pixel/scroll jitter).
-            if (Math.abs(scale - lastScale) < 0.05) return;
+            if (Math.abs(scale - lastScaleRef.current) < 0.05) return;
             if (debounceTimer) clearTimeout(debounceTimer);
             debounceTimer = setTimeout(() => {
-                lastScale = scale;
+                if (reducedMotionRef.current) return;
+                lastScaleRef.current = scale;
                 setCurrentConfig(scaleConfig(baseConfigRef.current, scale));
             }, 250);
         });
@@ -416,7 +425,11 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
     // Update currentConfig based on burst state
     useEffect(() => {
         if (!reducedMotionRef.current) {
-            setCurrentConfig(isChaosBurstActive ? burstConfigRef.current : baseConfigRef.current);
+            // Apply the most recent resize scale so toggling burst on/off does
+            // not erase the density scaling that the ResizeObserver computed.
+            const scale = lastScaleRef.current || 1;
+            const next = isChaosBurstActive ? burstConfigRef.current : baseConfigRef.current;
+            setCurrentConfig(scaleAnimationConfig(next, scale));
         }
     }, [isChaosBurstActive]);
 
