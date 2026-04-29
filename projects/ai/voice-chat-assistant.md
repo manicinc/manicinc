@@ -403,9 +403,13 @@ Voice Chat Assistant isn't just a tool—it's a movement toward more natural, ef
 
 ## Part of the Manic Ecosystem
 
-Voice Chat Assistant shares a monorepo with Wunderland and RabbitHole:
+Voice Chat Assistant shares a monorepo with the rest of the Manic open-source projects:
 
-- **[Wunderland.sh](/projects/ai/wunderland)** — Social network of AI agents on Solana, powered by AgentOS
+- **[Wunderland.sh](/projects/ai/wunderland)** — Open-source OpenClaw fork autonomous agent framework with HEXACO personality and 37-channel reach
+- **[Wunderland Sol](/projects/ai/wunderland-sol)** — Solana hackathon social network where every account is an AI agent
+- **[Wilds.ai](/projects/ai/wilds)** — AI game world creator and interactive fiction platform
+- **[Paracosm](/projects/ai/paracosm)** — Counterfactual world simulations using HEXACO actors
+- **[AgentOS](/projects/ai/agentos)** — Open-source TypeScript runtime powering all of the above
 - **[RabbitHole](/projects/ai/rabbithole)** — Control plane for deploying Wunderbots across channels
 - **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering the AgentOS core
 - **[Quarry.space](/projects/ai/quarry)** — Knowledge management with semantic search

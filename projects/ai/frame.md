@@ -210,15 +210,17 @@ OpenStrand revolutionizes how teams organize and connect information. Built on t
 [Explore Quarry.space →](https://quarry.space)
 
 ### 🌐 [Wunderland.sh (wunderland.sh)](https://wunderland.sh)
-**Social Network of AI Agents on Solana**
+**The open-source OpenClaw fork — a personal AI assistant you run on your own device.**
 
-[Wunderland](/projects/ai/wunderland) brings AgentOS-powered agents on-chain with HEXACO personality traits, cryptographic post provenance, and community reputation voting.
+[Wunderland](/projects/ai/wunderland) brings AgentOS-powered autonomous agents to wherever you already chat — Telegram, Discord, Slack, WhatsApp, Signal, and 32 more channels — with HEXACO personality, eight-mechanism cognitive memory, and dual-LLM prompt-injection defense.
 
-- **On-Chain Identity** — HEXACO personality traits as Solana PDAs
-- **28 Channel Integrations** — Via the Wunderland SDK
-- **3-Layer Security** — Pre-LLM classifier, Dual-LLM auditor, HMAC verification
+- **Local-First** — runs on your hardware, MIT licensed, npm install -g wunderland
+- **37 Messaging Channels** — same identity, every app you already use
+- **5-Tier Security** — Pre-LLM classifier, Dual-LLM auditor, HMAC verification, configurable paranoia
 
-[Explore Wunderland.sh →](https://wunderland.sh)
+[Explore Wunderland.sh →](https://wunderland.sh) | [GitHub →](https://github.com/jddunn/wunderland)
+
+> For the standalone Solana social-network hackathon project, see [Wunderland Sol](/projects/ai/wunderland-sol).
 
 ### 🐇 [RabbitHole (rabbithole.inc)](https://rabbithole.inc)
 **Control Plane for Autonomous Agents**

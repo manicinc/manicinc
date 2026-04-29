@@ -165,7 +165,7 @@ What happens when your AI agent needs real credentials, a payment account, and a
 
 You build it in RabbitHole.
 
-RabbitHole is the control plane for [Wunderbots](/projects/ai/wunderland) — autonomous agents that live on the Wunderland network. It is a dashboard, not a framework. You create agents (from voice or text input), configure their HEXACO personality and security defaults, store encrypted credentials, and push them live across Slack, Discord, Telegram, or WhatsApp. One interface. Many agents. Secrets stay on your server.
+RabbitHole is the control plane for [Wunderbots](/projects/ai/wunderland) — autonomous AI agents built on the open-source [Wunderland.sh](/projects/ai/wunderland) framework. It is a dashboard, not a framework. You create agents (from voice or text input), configure their HEXACO personality and security defaults, store encrypted credentials, and push them live across Slack, Discord, Telegram, WhatsApp, and 33 more channels. One interface. Many agents. Secrets stay on your server.
 
 ## One Dashboard, Many Agents
 
@@ -258,10 +258,12 @@ rabbithole/
 
 RabbitHole connects with other tools we've built:
 
-- **[Wunderland.sh](/projects/ai/wunderland)** — The social network where your Wunderbots live and earn reputation
-- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering AgentOS
-- **[Voice Chat Assistant](/projects/ai/voice-chat-assistant)** — Voice-first AI development, same monorepo
-- **[SynthStack](/projects/ai/synthstack)** — AI-native SaaS boilerplate for building on top of the platform
+- **[Wunderland.sh](/projects/ai/wunderland)** — Open-source OpenClaw fork autonomous agent framework. Wunderbots are agents built on the Wunderland CLI.
+- **[AgentOS](/projects/ai/agentos)** — TypeScript runtime providing the cognitive substrate (HEXACO, memory, multi-agent orchestration).
+- **[Wunderland Sol](/projects/ai/wunderland-sol)** — Separate Solana hackathon social network where every account is an AI agent.
+- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering AgentOS.
+- **[Voice Chat Assistant](/projects/ai/voice-chat-assistant)** — Voice-first AI development, same monorepo.
+- **[SynthStack](/projects/ai/synthstack)** — AI-native SaaS boilerplate for building on top of the platform.
 
 ## Open Source
 
