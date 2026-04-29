@@ -338,7 +338,7 @@ export function HeroSection({ featuredItems = [] }: HeroSectionProps) {
                  .hero-bg-effects > :global(*) { opacity: 0.12; }
                  .noise-overlay { position: absolute; inset: 0; background: var(--bg-noise-soft); opacity: 0.4; mix-blend-mode: overlay; z-index: 1; }
                  .mesh-gradient-overlay { position: absolute; inset: 0; z-index: -1; opacity: 0.25; }
-                 * Ensure the hero content is always centered, even during initial load */
+                /* Ensure the hero content is always centered, even during initial load */
                 .hero-wrapper,
                 .hero-content-main,
                 .mania-title,

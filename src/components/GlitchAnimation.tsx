@@ -276,20 +276,33 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
             } as AnimationConfig;
         };
 
+        // Debounce + delta-threshold the resize handler so scroll-induced layout
+        // shifts (lazy-loaded sections, nav transitions, sticky elements) don't
+        // continuously regenerate the SVG and cause visible flashing.
+        let debounceTimer: ReturnType<typeof setTimeout> | null = null;
+        let lastScale = -1;
         const ro = new ResizeObserver((entries) => {
-            for (const entry of entries) {
-                const cr = entry.contentRect;
-                const area = cr.width * cr.height;
-                const areaScale = clamp(Math.sqrt(area / baselineArea), 0.5, 1);
-                const dpr = typeof window !== 'undefined' ? (window.devicePixelRatio || 1) : 1;
-                const dprScale = clamp(1 / Math.max(1, dpr), 0.5, 1);
-                const scale = clamp(Math.min(areaScale, dprScale), 0.5, 1);
-                const base = baseConfigRef.current;
-                setCurrentConfig(scaleConfig(base, scale));
-            }
+            const entry = entries[entries.length - 1];
+            if (!entry) return;
+            const cr = entry.contentRect;
+            const area = cr.width * cr.height;
+            const areaScale = clamp(Math.sqrt(area / baselineArea), 0.5, 1);
+            const dpr = typeof window !== 'undefined' ? (window.devicePixelRatio || 1) : 1;
+            const dprScale = clamp(1 / Math.max(1, dpr), 0.5, 1);
+            const scale = clamp(Math.min(areaScale, dprScale), 0.5, 1);
+            // Only commit when the scale changes by >5% (avoids sub-pixel/scroll jitter).
+            if (Math.abs(scale - lastScale) < 0.05) return;
+            if (debounceTimer) clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                lastScale = scale;
+                setCurrentConfig(scaleConfig(baseConfigRef.current, scale));
+            }, 250);
         });
         ro.observe(el);
-        return () => ro.disconnect();
+        return () => {
+            if (debounceTimer) clearTimeout(debounceTimer);
+            ro.disconnect();
+        };
     }, []);
 
     // Theme detection and monitoring
@@ -1140,4 +1153,7 @@ const GlitchAnimation: React.FC<GlitchAnimationProps> = ({
     );
 };
 
-export default GlitchAnimation; 
+// Wrap in React.memo so parent re-renders (e.g. HeroSection's terminal text
+// cycling every 60ms during decrypt) don't propagate down and cause the SVG
+// animation to re-render on top of its own RAF loop.
+export default React.memo(GlitchAnimation);
