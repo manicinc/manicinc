@@ -213,8 +213,8 @@ const MissionPageClient = () => {
                                 We're not just building games; we're architecting the future of interactive storytelling and fostering a community where innovation thrives through collaboration.
                             </motion.blockquote>
                             <motion.div variants={fadeIn} className="mt-6">
-                                 <a href="https://games.manic.agency" target="_blank" rel="noopener noreferrer" className="styled-button primary">
-                                     Explore Manic Games <Rocket className="button-icon" />
+                                 <a href="https://wilds.ai" target="_blank" rel="noopener noreferrer" className="styled-button primary">
+                                     Explore Wilds.ai <Rocket className="button-icon" />
                                  </a>
                              </motion.div>
                         </motion.div>
@@ -292,7 +292,7 @@ const MissionPageClient = () => {
                                      <Link href="/blog" className="explore-link"> <BlogIcon /><span>Æther Log</span></Link>
                                 </motion.div>
                                 <motion.div variants={fadeIn} whileHover={iconHover}>
-                                     <a href="https://games.manic.agency" target="_blank" rel="noopener noreferrer" className="explore-link"> <Rocket /><span>Manic Games</span></a>
+                                     <a href="https://wilds.ai" target="_blank" rel="noopener noreferrer" className="explore-link"> <Rocket /><span>Wilds.ai</span></a>
                                 </motion.div>
                                 <motion.div variants={fadeIn} whileHover={iconHover}>
                                      <Link href="/team" className="explore-link"> <TeamIcon /><span>Architects</span></Link>

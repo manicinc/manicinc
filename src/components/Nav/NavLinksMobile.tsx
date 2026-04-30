@@ -89,7 +89,7 @@ const NavLinksMobile: React.FC<NavLinksMobileProps> = ({
 
                     {/* --- Games Link (Conditionally Shown) --- */}
                     {shouldShowGames && (
-                        <Link href="https://games.manic.agency" legacyBehavior>
+                        <Link href="https://wilds.ai" legacyBehavior>
                             <a className={`${styles.gamesBtn} ${styles.mobileGames}`}
                                data-nav-id="games"
                                onClick={closeAndNavigate}

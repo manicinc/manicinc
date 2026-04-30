@@ -88,7 +88,7 @@ const NavLinksDesktop: React.FC<NavLinksDesktopProps> = ({ isBlog, isActivePath,
 
             {/* Games Button (Conditionally shown) */}
             {shouldShowGames && (
-                <Link href="https://games.manic.agency" legacyBehavior>
+                <Link href="https://wilds.ai" legacyBehavior>
                     <a className={styles.gamesBtn} data-nav-id="games" onClick={closeMenu} target="_blank" rel="noopener noreferrer">
                         <span>Games</span>
                         <img src="/controller-button.svg" alt="Game Controller" className={styles.gamesSvg} />
