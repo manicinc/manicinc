@@ -486,16 +486,36 @@ export default function OpenSourcePageClient() {
             setLoading(true);
             setError(null);
             try {
-                const results = await Promise.all(ORGS.map((o) => fetchOrg(o.key)));
+                // Promise.allSettled so one org's failure doesn't block the other tab
+                // from rendering. Only set a global error if every org failed.
+                const settled = await Promise.allSettled(ORGS.map((o) => fetchOrg(o.key)));
                 if (!isMounted) return;
                 const nextRepos: Record<OrgKey, Repository[]> = { manicinc: [], framersai: [] };
                 const nextOrgInfo: Record<OrgKey, GitHubUserOrg | null> = { manicinc: null, framersai: null };
-                for (const r of results) {
-                    nextRepos[r.org] = r.repos;
-                    nextOrgInfo[r.org] = r.orgData;
+                const errors: string[] = [];
+                for (const result of settled) {
+                    if (result.status === 'fulfilled') {
+                        nextRepos[result.value.org] = result.value.repos;
+                        nextOrgInfo[result.value.org] = result.value.orgData;
+                    } else {
+                        const reason = result.reason as unknown;
+                        const msg =
+                            reason instanceof Error
+                                ? reason.message
+                                : typeof reason === 'string'
+                                    ? reason
+                                    : 'Unknown error';
+                        errors.push(msg);
+                    }
                 }
                 setReposByOrg(nextRepos);
                 setOrgInfoByOrg(nextOrgInfo);
+                if (errors.length === ORGS.length) {
+                    setError(errors.join('; '));
+                } else if (errors.length > 0) {
+                    // Partial failure — log and degrade silently in the UI.
+                    console.warn('[OpenSource] some orgs failed to load:', errors);
+                }
             } catch (err: any) {
                 if (isMounted) setError(err.message || 'Unknown fetch error');
             } finally {
@@ -699,7 +719,12 @@ export default function OpenSourcePageClient() {
                 </section>
 
                 {/* Repositories Section */}
-                <section className="container mx-auto px-4 sm:px-6 relative z-10 pb-16 md:pb-24">
+                <section
+                    id="repositories-grid"
+                    role="tabpanel"
+                    aria-label={`${activeOrgConfig.label} repositories`}
+                    className="container mx-auto px-4 sm:px-6 relative z-10 pb-16 md:pb-24"
+                >
                     {/* Filter & Sort Bar */}
                     {!loading && !error && repositories.length > 0 && (
                         <div className={styles.filterSortBar}>
@@ -819,7 +844,9 @@ export default function OpenSourcePageClient() {
                     {error && (
                         <div className={styles.errorState}>
                             <Icons.AlertTriangle />
-                            <h3 className={styles.stateTitle}>Failed to Load Repositories for </h3> <strong>{activeOrg}</strong>
+                            <h3 className={styles.stateTitle}>
+                                Failed to Load Repositories for <strong>{activeOrg}</strong>
+                            </h3>
                             <p className={styles.stateDesc}>Error: {error}</p>
                         </div>
                     )}
