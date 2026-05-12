@@ -244,14 +244,58 @@ const languageColors: Record<string, string> = {
 };
 
 // Constants
-const GITHUB_USERNAME = 'manicinc';
-const GITHUB_SPONSOR_URL = `https://github.com/sponsors/${GITHUB_USERNAME}`;
-const TWITTER_HANDLE = "manicagency";
+type OrgKey = 'manicinc' | 'framersai';
+
+interface OrgConfig {
+    key: OrgKey;
+    label: string;
+    tagline: string;
+    sponsorUrl: string;
+}
+
+const ORGS: readonly OrgConfig[] = [
+    {
+        key: 'manicinc',
+        label: 'Manic Agency',
+        tagline: 'The Looking Glass — synthetic publishing, agentic experiments, tooling.',
+        sponsorUrl: 'https://github.com/sponsors/manicinc',
+    },
+    {
+        key: 'framersai',
+        label: 'Framers AI',
+        tagline: 'Open-source AI infrastructure — AgentOS, SafeOS, Paracosm, and the rest of the Frame ecosystem.',
+        sponsorUrl: 'https://github.com/sponsors/framersai',
+    },
+] as const;
+
+const DEFAULT_ORG: OrgKey = 'manicinc';
+const TWITTER_HANDLE = 'manicagency';
 
 export default function OpenSourcePageClient() {
-    // State
-    const [repositories, setRepositories] = useState<Repository[]>([]);
-    const [githubOrg, setGithubOrg] = useState<GitHubUserOrg | null>(null);
+    // Active org tab
+    const [activeOrg, setActiveOrg] = useState<OrgKey>(DEFAULT_ORG);
+
+    // Per-org cache so switching tabs doesn't refetch.
+    const [reposByOrg, setReposByOrg] = useState<Record<OrgKey, Repository[]>>({
+        manicinc: [],
+        framersai: [],
+    });
+    const [orgInfoByOrg, setOrgInfoByOrg] = useState<Record<OrgKey, GitHubUserOrg | null>>({
+        manicinc: null,
+        framersai: null,
+    });
+
+    // Derived state for current org (preserves the original variable names so the
+    // rest of the component renders without touching every reference).
+    const repositories = reposByOrg[activeOrg];
+    const githubOrg = orgInfoByOrg[activeOrg];
+
+    const activeOrgConfig = useMemo(
+        () => ORGS.find((o) => o.key === activeOrg) ?? ORGS[0],
+        [activeOrg]
+    );
+    const activeSponsorUrl = activeOrgConfig.sponsorUrl;
+
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [selectedRepo, setSelectedRepo] = useState<Repository | null>(null);
@@ -421,35 +465,45 @@ export default function OpenSourcePageClient() {
         };
     }, [showModal, closeRepoModal]);
 
-    // Fetch data
+    // Fetch data for every org in parallel so tab switching is instant.
     useEffect(() => {
         let isMounted = true;
-        async function fetchData() {
+        async function fetchOrg(org: OrgKey) {
+            const [orgResponse, repoResponse] = await Promise.all([
+                fetch(`https://api.github.com/users/${org}`),
+                fetch(`https://api.github.com/users/${org}/repos?per_page=100&sort=pushed`),
+            ]);
+            const orgData = orgResponse.ok ? ((await orgResponse.json()) as GitHubUserOrg) : null;
+            if (!repoResponse.ok) {
+                throw new Error(`${org}: API ${repoResponse.status}`);
+            }
+            const repos = (await repoResponse.json()) as Repository[];
+            return { org, orgData, repos };
+        }
+
+        async function fetchAll() {
             if (!isMounted) return;
             setLoading(true);
             setError(null);
             try {
-                const [orgResponse, repoResponse] = await Promise.all([
-                    fetch(`https://api.github.com/users/${GITHUB_USERNAME}`),
-                    fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100&sort=pushed`)
-                ]);
-                if (orgResponse.ok) {
-                    const d = await orgResponse.json();
-                    if (isMounted) setGithubOrg(d);
+                const results = await Promise.all(ORGS.map((o) => fetchOrg(o.key)));
+                if (!isMounted) return;
+                const nextRepos: Record<OrgKey, Repository[]> = { manicinc: [], framersai: [] };
+                const nextOrgInfo: Record<OrgKey, GitHubUserOrg | null> = { manicinc: null, framersai: null };
+                for (const r of results) {
+                    nextRepos[r.org] = r.repos;
+                    nextOrgInfo[r.org] = r.orgData;
                 }
-                if (repoResponse.ok) {
-                    const d = await repoResponse.json();
-                    if (isMounted) setRepositories(d);
-                } else {
-                    throw new Error(`API Error: ${repoResponse.status}`);
-                }
+                setReposByOrg(nextRepos);
+                setOrgInfoByOrg(nextOrgInfo);
             } catch (err: any) {
                 if (isMounted) setError(err.message || 'Unknown fetch error');
             } finally {
                 if (isMounted) setLoading(false);
             }
         }
-        fetchData();
+
+        fetchAll();
         return () => { isMounted = false };
     }, []);
 
@@ -461,9 +515,9 @@ export default function OpenSourcePageClient() {
 
     const topics = useMemo(() => {
         const allTopics = repositories.flatMap(repo => repo.topics || []).filter(Boolean);
-        const forbidden = new Set(['manic', 'agency', 'manicinc', GITHUB_USERNAME.toLowerCase()]);
+        const forbidden = new Set(['manic', 'agency', 'manicinc', 'framers', 'framersai', activeOrg.toLowerCase()]);
         return Array.from(new Set(allTopics)).filter(t => !forbidden.has(t.toLowerCase())).sort();
-    }, [repositories]);
+    }, [repositories, activeOrg]);
 
     const filteredRepositories = useMemo(() => {
         if (loading && !error) return [];
@@ -513,6 +567,44 @@ export default function OpenSourcePageClient() {
                                 Open Source<span className="accent-dot">.</span>
                             </h1>
                         </div>
+
+                        {/* Org tabs — switch between Manic Agency + Framers AI repos */}
+                        <div
+                            role="tablist"
+                            aria-label="Select organization"
+                            className="mt-6 mb-2 flex flex-wrap items-center justify-center gap-2"
+                        >
+                            {ORGS.map((org) => {
+                                const isActive = org.key === activeOrg;
+                                return (
+                                    <button
+                                        key={org.key}
+                                        type="button"
+                                        role="tab"
+                                        aria-selected={isActive}
+                                        aria-controls="repositories-grid"
+                                        onClick={() => setActiveOrg(org.key)}
+                                        className={[
+                                            'px-5 py-2.5 rounded-full text-sm font-semibold transition-all',
+                                            'border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
+                                            isActive
+                                                ? 'bg-fuchsia-500/20 border-fuchsia-400/60 text-fuchsia-100 shadow-[0_0_16px_rgba(217,70,239,0.18)]'
+                                                : 'bg-white/5 border-white/10 text-zinc-300 hover:bg-white/10 hover:border-white/20',
+                                        ].join(' ')}
+                                    >
+                                        {org.label}
+                                        {reposByOrg[org.key].length > 0 && (
+                                            <span className={`ml-2 text-xs ${isActive ? 'text-fuchsia-200/80' : 'text-zinc-500'}`}>
+                                                {reposByOrg[org.key].length}
+                                            </span>
+                                        )}
+                                    </button>
+                                );
+                            })}
+                        </div>
+                        <p className="text-center text-sm text-zinc-400 mb-2 max-w-2xl mx-auto">
+                            {activeOrgConfig.tagline}
+                        </p>
                     </div>
 
                     <div className="max-w-4xl mx-auto text-center">
@@ -573,9 +665,9 @@ export default function OpenSourcePageClient() {
                             transition={{ delay: 0.4, duration: 0.5 }}
                             className={styles.heroButtonContainer}
                         >
-                            {GITHUB_SPONSOR_URL && (
-                                <a href={GITHUB_SPONSOR_URL} target="_blank" rel="noopener noreferrer" className={styles.sponsorButton}>
-                                    <Icons.Heart /> Sponsor Manic Agency
+                            {activeSponsorUrl && (
+                                <a href={activeSponsorUrl} target="_blank" rel="noopener noreferrer" className={styles.sponsorButton}>
+                                    <Icons.Heart /> Sponsor {activeOrgConfig.label}
                                 </a>
                             )}
                             {/* View Mode Toggle */}
@@ -617,7 +709,7 @@ export default function OpenSourcePageClient() {
                                     <Icons.Search />
                                     <input
                                         type="text"
-                                        placeholder="Search manicinc repositories..."
+                                        placeholder={`Search ${activeOrg} repositories...`}
                                         value={searchQuery}
                                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
                                         className={styles.filterInput}
@@ -727,7 +819,7 @@ export default function OpenSourcePageClient() {
                     {error && (
                         <div className={styles.errorState}>
                             <Icons.AlertTriangle />
-                            <h3 className={styles.stateTitle}>Failed to Load Repositories for </h3> <strong>manicinc</strong>
+                            <h3 className={styles.stateTitle}>Failed to Load Repositories for </h3> <strong>{activeOrg}</strong>
                             <p className={styles.stateDesc}>Error: {error}</p>
                         </div>
                     )}
