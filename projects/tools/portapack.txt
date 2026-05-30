@@ -1,26 +1,26 @@
 3:I[4707,[],""]
 6:I[36423,[],""]
-a:I[6322,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-b:I[96313,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-c:I[66159,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-d:I[59970,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-e:I[81775,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-f:I[12025,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"ThemeProvider"]
-10:I[39976,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"CookieProvider"]
-11:I[69088,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-12:I[50513,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-13:I[83551,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-14:I[38483,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-15:I[81695,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-16:I[28602,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-17:I[51052,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"Nav"]
+a:I[6322,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+b:I[96313,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+c:I[66159,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+d:I[59970,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+e:I[81775,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+f:I[12025,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"ThemeProvider"]
+10:I[39976,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"CookieProvider"]
+11:I[69088,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+12:I[50513,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+13:I[83551,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+14:I[38483,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+15:I[81695,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+16:I[28602,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+17:I[51052,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"Nav"]
 18:I[10376,["7601","static/chunks/app/error-980f98eab7299665.js"],"default"]
-19:I[79229,["9160","static/chunks/app/not-found-e731a727afb82058.js"],"default"]
-1a:I[85745,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-1b:I[16049,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-1c:I[18133,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-1d:I[36623,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-1e:I[69709,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
+19:I[79229,["9160","static/chunks/app/not-found-d7a5f0628dd41293.js"],"default"]
+1a:I[85745,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+1b:I[16049,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+1c:I[18133,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+1d:I[36623,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+1e:I[69709,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
 4:["category","tools","d"]
 5:["slug","portapack","d"]
 7:Tc58,
@@ -91,11 +91,11 @@ f:I[12025,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","stat
             }
           }
         })();
-      0:["manic-agency-1778623107835",[[["",{"children":["projects",{"children":[["category","tools","d"],{"children":[["slug","portapack","d"],{"children":["__PAGE__?{\"category\":\"tools\",\"slug\":\"portapack\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["category","tools","d"],{"children":[["slug","portapack","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7589854758514563.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/2a1fdc91e2d69a25.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/6517f724e0c34e4b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/4a49f8c87e29773c.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/fbcf5add168be5ca.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/31a0afff5523f0ee.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/7d7aabc562ee4222.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/d6034e11a69ffc4a.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"preconnect","href":"https://static.cloudflareinsights.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.jsdelivr.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://res.cloudinary.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}]]}]}]}]]}]]}]],null],null],["$L1f",null]]]]
-20:I[18745,["8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-7b4adcb52485b1b3.js"],"default"]
-21:I[35366,["8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-7b4adcb52485b1b3.js"],"default"]
-23:I[77769,["8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-7b4adcb52485b1b3.js"],"default"]
-36:I[75541,["8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-7b4adcb52485b1b3.js"],"default"]
+      0:["manic-agency-1780120018410",[[["",{"children":["projects",{"children":[["category","tools","d"],{"children":[["slug","portapack","d"],{"children":["__PAGE__?{\"category\":\"tools\",\"slug\":\"portapack\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["category","tools","d"],{"children":[["slug","portapack","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7589854758514563.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/2a1fdc91e2d69a25.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/6517f724e0c34e4b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/9064b80049c21f03.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/fbcf5add168be5ca.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/31a0afff5523f0ee.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/7d7aabc562ee4222.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/d6034e11a69ffc4a.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"preconnect","href":"https://static.cloudflareinsights.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.jsdelivr.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://res.cloudinary.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}]]}]}]}]]}]]}]],null],null],["$L1f",null]]]]
+20:I[18745,["8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-7b4adcb52485b1b3.js"],"default"]
+21:I[35366,["8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-7b4adcb52485b1b3.js"],"default"]
+23:I[77769,["8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-7b4adcb52485b1b3.js"],"default"]
+36:I[75541,["8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","1286","static/chunks/app/projects/%5Bcategory%5D/%5Bslug%5D/page-7b4adcb52485b1b3.js"],"default"]
 22:T737,
 # PortaPack
 
@@ -346,318 +346,382 @@ SEOStory glues together crawling, AI-driven rewrites, schema generation, and vis
 - Book a walkthrough if you want help implementing the audit-to-report pipeline.
 - Interested in co-building custom playbooks? Say hello at hello@manic.agency.
 
-SEOStory is how we future-proof search visibility while keeping the weird, human voice our clients hire us for. If your rankings slip every time an algorithm blinks, this is the toolkit we recommend running next.35:T507a,
-<div class="wilds-hero">
-  <h1 class="wilds-hero__title" aria-label="build any game. tell any story.">build any game. tell any story.</h1>
-  <p class="wilds-hero__subtitle">
-    describe a world in natural language. watch it come alive with companions, combat, and narrative.
-  </p>
-  <a class="wilds-hero__cta" href="https://wilds.ai" target="_blank" rel="noopener">
-    start creating at wilds.ai →
-  </a>
-</div>
+SEOStory is how we future-proof search visibility while keeping the weird, human voice our clients hire us for. If your rankings slip every time an algorithm blinks, this is the toolkit we recommend running next.35:T31f9,
+# Voice Chat Assistant — The Future of Coding is Conversational
 
-<style>
-  .wilds-hero {
-    display: grid;
-    place-items: center;
-    text-align: center;
-    gap: 1rem;
-    padding: 2.75rem 1rem 3rem;
-    border-radius: 1rem;
-    position: relative;
-    overflow: hidden;
+## Speak Your Code Into Existence
+
+Voice Chat Assistant (VCA) represents a paradigm shift in software development. Instead of typing every character, wrestling with syntax, or context-switching between documentation and your editor—you simply talk. VCA understands your intent, maintains context across sessions, and writes production-ready code that follows your team's patterns.
+
+> "The best code is written by understanding the problem, not by typing faster." — VCA Philosophy
+
+## 🎙️ How It Works
+
+### 1. Just Start Talking
+Press the hotkey or click the mic. Describe what you want to build, fix, or refactor. No special commands or syntax required.
+
+```
+"I need a React component that fetches user data from our API 
+and displays it in a card layout with loading and error states"
+```
+
+### 2. VCA Understands Context
+It knows your codebase, remembers previous conversations, and understands your project structure.
+
+```
+"Make it use our existing useApi hook and follow the same 
+pattern as the ProductCard component"
+```
+
+### 3. Watch the Magic Happen
+VCA writes the code, creates the files, and even handles imports and dependencies.
+
+```typescript
+// components/UserCard.tsx
+import React from 'react';
+import { useApi } from '../hooks/useApi';
+import { Card, CardSkeleton, ErrorState } from '../components/ui';
+import type { User } from '../types/api';
+
+export const UserCard: React.FC<{ userId: string }> = ({ userId }) => {
+  const { data, loading, error } = useApi<User>(`/users/${userId}`);
+  
+  if (loading) return <CardSkeleton />;
+  if (error) return <ErrorState message={error.message} />;
+  
+  return (
+    <Card>
+      <Card.Header>
+        <img src={data.avatar} alt={data.name} />
+        <h3>{data.name}</h3>
+      </Card.Header>
+      <Card.Body>
+        <p>{data.email}</p>
+        <p>{data.role}</p>
+      </Card.Body>
+    </Card>
+  );
+};
+```
+
+## 🚀 Key Features
+
+### Voice-First, But Not Voice-Only
+
+While optimized for voice, VCA supports multiple input modes:
+- **Voice** — Natural conversation for complex requests
+- **Text** — Quick commands and precision edits
+- **Code Selection** — Highlight and describe changes
+- **Mixed Mode** — Combine all three seamlessly
+
+### Context-Aware Intelligence
+
+VCA maintains deep understanding across multiple dimensions:
+
+- **Conversation Memory** — Remembers everything discussed in the session
+- **Code Context** — Understands your entire codebase structure
+- **Pattern Recognition** — Learns your coding style and preferences
+- **Project Awareness** — Knows your dependencies, build tools, and conventions
+
+### Production-Ready Code Generation
+
+Not just snippets—complete, working implementations:
+
+- **Full Components** — Entire features with proper structure
+- **Test Coverage** — Generates tests alongside implementation
+- **Documentation** — Adds JSDoc, comments, and README updates
+- **Refactoring** — Safely restructures existing code
+- **Migration** — Updates code to new patterns or versions
+
+### Integrated Development Workflow
+
+VCA connects with your entire toolchain:
+
+- **Editor Integration** — VSCode, Neovim, JetBrains
+- **Version Control** — Git operations with meaningful commits
+- **Terminal Access** — Run commands, see output, debug
+- **Package Management** — Install dependencies, update versions
+- **CI/CD** — Understand and update pipeline configurations
+
+## 🧠 Intelligent Orchestration
+
+At the heart of VCA lies a modular orchestration runtime that makes intelligent interactions possible:
+
+### Intelligent Orchestration
+- **Multi-Model Support** — Uses the best LLM for each task
+- **Tool Coordination** — Manages complex multi-step operations
+- **Memory Management** — Efficient context window utilization
+- **Streaming Responses** — Real-time feedback as it works
+
+### Safety & Control
+- **Guardrails** — Built-in protections against harmful operations
+- **Permission System** — Fine-grained control over capabilities
+- **Review Mode** — Preview changes before applying
+- **Rollback** — Undo any operation instantly
+
+## 💡 Real-World Use Cases
+
+### Frontend Development
+*"Convert this Figma design into a responsive React component with Tailwind"*
+
+VCA analyzes the design, generates pixel-perfect components with proper responsive breakpoints, and even suggests accessibility improvements.
+
+### Backend APIs
+*"Create a REST API for user management with authentication, validation, and rate limiting"*
+
+Generates complete CRUD endpoints, middleware, database schemas, and even Swagger documentation.
+
+### Debugging & Optimization
+*"This function is slow. Profile it and optimize the performance"*
+
+VCA analyzes the code, identifies bottlenecks, suggests optimizations, and can even run benchmarks to prove improvements.
+
+### Documentation
+*"Document this codebase for new developers"*
+
+Creates comprehensive docs including architecture overviews, setup guides, API references, and inline code comments.
+
+### Testing
+*"Write integration tests for the checkout flow"*
+
+Generates comprehensive test suites that cover happy paths, edge cases, and error scenarios.
+
+## 🎯 Perfect For
+
+### Individual Developers
+- **10x Productivity** — Write code as fast as you can think
+- **Learn Faster** — Get explanations while building
+- **Stay in Flow** — No context switching to Stack Overflow
+- **Reduce Fatigue** — Let VCA handle the boilerplate
+
+### Teams
+- **Consistent Patterns** — Enforces team conventions automatically
+- **Knowledge Sharing** — Capture tribal knowledge in prompts
+- **Onboarding** — New developers productive from day one
+- **Code Reviews** — AI-assisted review suggestions
+
+### Specific Scenarios
+- **Prototyping** — Go from idea to working demo in minutes
+- **Refactoring** — Safely restructure large codebases
+- **Migration** — Update frameworks, libraries, or patterns
+- **Learning** — Understand new technologies by building
+
+## 🛠️ Technical Architecture
+
+### Frontend (Voice UI)
+```typescript
+// Vue 3 + Composition API
+const { startRecording, stopRecording, isRecording } = useVoiceInput();
+const { messages, sendMessage, streamResponse } = useAgentChat();
+const { executeCode, terminalOutput } = useCodeExecution();
+```
+
+### Backend (Orchestration)
+```typescript
+// Express + TypeScript
+app.post('/api/chat', async (req, res) => {
+  const stream = orchestrator.processRequest({
+    input: req.body.message,
+    context: req.body.context,
+    sessionId: req.session.id
+  });
+  
+  for await (const chunk of stream) {
+    res.write(`data: ${JSON.stringify(chunk)}\n\n`);
   }
-  .wilds-hero__title {
-    text-transform: lowercase;
-    font-weight: 900;
-    letter-spacing: 0.02em;
-    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
-    line-height: 1.05;
-    margin: 0.35rem 0 0.25rem;
-    background: linear-gradient(120deg, #2d6a4f 0%, #40916c 30%, #52b788 60%, #95d5b2 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .wilds-hero__subtitle {
-    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
-    color: var(--text-secondary, rgba(255,255,255,0.78));
-    margin: 0.25rem 0 0.9rem;
-    max-width: 56ch;
-  }
-  @media (prefers-color-scheme: light) {
-    .wilds-hero__subtitle { color: #2a2a2a; }
-  }
-  .wilds-hero__cta {
-    --h: 52px;
-    display: inline-grid;
-    place-items: center;
-    height: var(--h);
-    padding: 0 1.25rem;
-    border-radius: 999px;
-    font-weight: 800;
-    text-transform: lowercase;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    color: var(--text-primary, #fff);
-    position: relative;
-    isolation: isolate;
-    background:
-      radial-gradient(120% 120% at 0% 0%, rgba(45,106,79,0.18), rgba(82,183,136,0.08)),
-      linear-gradient(90deg, rgba(45,106,79,0.35), rgba(82,183,136,0.35));
-    border: 1px solid rgba(82,183,136,0.35);
-    backdrop-filter: blur(6px);
-    transition:
-      transform .25s ease,
-      box-shadow .25s ease,
-      border-color .25s ease,
-      background .25s ease;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-    will-change: transform;
-  }
-  .wilds-hero__cta::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 2px;
-    background: linear-gradient(120deg, rgba(45,106,79,0.9), rgba(82,183,136,0.9), rgba(149,213,178,0.9));
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
-    opacity: .6;
-    transition: opacity .25s ease;
-    z-index: -1;
-  }
-  .wilds-hero__cta:hover {
-    transform: translateY(-2px) scale(1.02);
-    border-color: rgba(82,183,136,0.7);
-    background:
-      radial-gradient(120% 120% at 100% 0%, rgba(149,213,178,0.2), rgba(82,183,136,0.12)),
-      linear-gradient(90deg, rgba(45,106,79,0.5), rgba(82,183,136,0.5));
-    box-shadow: 0 10px 32px rgba(82,183,136,0.25), 0 2px 8px rgba(149,213,178,0.2);
-  }
-  .wilds-hero__cta:active { transform: translateY(0) scale(0.99); }
-  @media (prefers-color-scheme: light) {
-    .wilds-hero__cta {
-      color: #0f0f0f;
-      border-color: rgba(45,106,79,0.25);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-    .wilds-hero__cta:hover {
-      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
-    }
-  }
-</style>
+});
+```
 
-## The AI Game Maker That Builds Entire Worlds From a Single Sentence
+### Orchestration Config
+```typescript
+const config: OrchestratorConfig = {
+  providers: [openai, anthropic, local],
+  tools: ['code-writer', 'terminal', 'file-system', 'git'],
+  memory: 'hierarchical',
+  guardrails: productionSafetyRules
+};
+```
 
-Imagine typing *"a haunted space station where sanity is your most precious resource"* and watching the AI generate a complete survival horror game — derelict corridors with fog-of-war, a crew of NPCs with fractured memories, a sanity meter that warps the narrator's prose as it drops, and a branching story with three endings you didn't write.
+## 🌟 What Makes VCA Different
 
-That is [Wilds.ai](https://wilds.ai).
+### 1. True Context Understanding
+Unlike chatbots that forget context after a few messages, VCA maintains deep understanding of your entire project and conversation history.
 
-[Wilds](https://wilds.ai) is an AI-native platform for creating and playing interactive game worlds. Describe any setting, genre, or scenario in plain language. The AI compiler processes your prompt and generates playable worlds with regions, NPCs, factions, quest objectives, combat systems, equippable items, dice mechanics, survival pressure, a lore book, cover art, and a visual art style — ready to play in seconds.
+### 2. Production-First Design
+Not a toy or demo—VCA writes real code for real projects. It understands production concerns like error handling, performance, and maintainability.
 
-No coding. No game design experience. No art skills. Just words.
+### 3. Voice-Optimized UX
+Built from the ground up for voice interaction. No awkward command phrases or rigid syntax—just natural conversation.
 
-![Wilds.ai landing page — Build any game. Tell any story. AI-powered interactive fiction and game creation platform](/assets/projects/wilds/wilds-landing.png)
+### 4. Extensible Architecture
+Built on an extensible, open-source orchestration layer, VCA can be extended with custom tools, providers, and workflows.
 
-## Create a World With Natural Language
+### 5. Privacy-First
+Your code never leaves your control. VCA can run with local models, and all cloud processing is encrypted and ephemeral.
 
-The [world creation wizard](https://wilds.ai/app/create) is where everything starts. Type one sentence or a full paragraph. The compiler extracts genre, tone, mechanics, and narrative from your text, then generates a playable world.
+## 📊 Performance Metrics
 
-![Wilds.ai world creation interface — describe a setting, pick genre templates, configure mechanics, and generate a playable world](/assets/projects/wilds/wilds-create.png)
+- **Voice Recognition Accuracy**: 97%+ with noise cancellation
+- **Code Generation Speed**: 50-100 lines per second
+- **Context Window**: Up to 128k tokens
+- **Average Time Savings**: 70% on routine tasks
+- **User Satisfaction**: 4.8/5 from 1000+ developers
 
-**Twelve genre templates** give you a starting point if you want one:
+## 🔮 Roadmap
 
-- **Tabletop RPG** — character sheets, dice rolls, and an AI dungeon master running your campaign
-- **Roguelike** — procedural rooms, permadeath, escalating difficulty
-- **Narrative Adventure** — story-first with branching paths and consequences
-- **Survival** — resource management where the world itself is the antagonist
-- **Horror/Psychological** — dread mechanics, sanity systems, unreliable narration
-- **Mystery/Investigation** — clue gathering, deduction, suspect interrogation
-- **Sandbox/Open World** — exploration and freeform roleplay without rails
-- **Strategy/Tactics** — turn-based positioning and resource allocation
-- **Social Sim** — dialogue-heavy relationship management and social dynamics
-- **Fitness/Physical** — camera-based real-world movement with AI coaching
-- **Voice RPG/Audio Drama** — entirely voice-driven with no screen required
-- **Arcade/Action** — reflexes, scoring, combo systems
+### Coming Soon
+- [ ] **Multi-Modal Input** — Draw diagrams, share screenshots
+- [ ] **Team Collaboration** — Shared sessions and knowledge
+- [ ] **Custom Training** — Fine-tune on your codebase
+- [ ] **IDE Plugins** — Deeper editor integration
+- [ ] **Mobile Apps** — Code on the go
 
-Or ignore the templates entirely. Describe something the templates never imagined — a Victorian cooking competition judged by ghosts, a courtroom drama in a galactic senate, a nature documentary where you play the animal. The compiler handles it.
+### Future Vision
+- **Ambient Coding** — VCA anticipates needs before you ask
+- **AI Pair Programming** — True collaborative development
+- **Project Autopilot** — Autonomous feature implementation
+- **Universal Interface** — One voice, all your tools
 
-You can also **import existing stories** — paste text from novels, screenplays, fanfiction, or campaign logs, and the AI converts them into playable worlds.
+## 🚀 Get Started
 
-[Create your first world for free at Wilds.ai →](https://wilds.ai/app/create)
+### Free Trial
+Try VCA free for 14 days. No credit card required.
 
-## Four Game Engines, One Platform
+```bash
+# Quick start
+npx create-vca-app my-project
+cd my-project
+npm run dev
+```
 
-Wilds ships four distinct game engine families. Each has its own rendering, rules, and feel:
+### Installation Options
 
-| Engine | Experience |
-|--------|-----------|
-| **Tabletop RPG / VTT** | Phaser-rendered tactical grids, initiative order, D&D 5e-style combat. Character sheets, spell slots, action economy, and an AI game master running the session |
-| **Roguelike** | Procedural dungeons with WASD movement, fog of war, field-of-view visibility, permadeath, and escalating difficulty curves |
-| **Board Game** | 2D and 3D board rendering for strategy games, puzzles, and competitive play |
-| **Text / Narrative** | Literary prose with branching narratives, investigation mechanics, and dialogue trees. Cinematic full-screen mode for immersive reading |
+**Cloud (Recommended)**
+- Instant setup at [vca.chat](https://vca.chat)
+- Always up-to-date
+- Managed infrastructure
 
-All four engines share the same **deterministic combat system**. Combat uses configurable action tables with combo multipliers, critical hits, and stamina management. TTRPG sessions use server-authoritative dice rolls — d4 through d100, multi-die expressions like `2d6+3`, advantage/disadvantage, exploding dice, contested rolls, and roll tables. Every roll uses a deterministic seeded PRNG. No fudging.
+**Self-Hosted**
+```bash
+git clone https://github.com/manicinc/voice-chat-assistant
+cd voice-chat-assistant
+cp .env.sample .env
+# Add your API keys
+pnpm install
+pnpm run dev
+```
 
-**Items and equipment** span 15 categories — weapons, armor, consumables, quest items, crafting materials, relics, and more. Rarity tiers, equippable slots, stat modifiers, durability tracking, and loot weight tables. Items carry persistent status effects that trigger on hit, on defense, or at battle start. World creators control whether the AI invents new items during play or locks the catalog.
+**Enterprise**
+- On-premise deployment
+- Custom model integration
+- SLA support
+- [Contact sales](mailto:enterprise@vca.chat)
 
-## AI Companions That Remember, Evolve, and Form Relationships
+## 📚 Resources
 
-Every AI companion on [Wilds.ai](https://wilds.ai) has a distinct personality, emotional state, memory, and trust level. These are not chatbots wearing a costume — they are persistent agents with cognitive depth.
+### Documentation
+- [Getting Started Guide](https://vca.chat/docs/getting-started)
+- [Voice Commands Reference](https://vca.chat/docs/commands)
+- [Tool Integration](https://vca.chat/docs/tools)
+- [API Documentation](https://vca.chat/docs/api)
 
-**Personality** is modeled with [HEXACO-60](https://en.wikipedia.org/wiki/HEXACO_model_of_personality_structure), a validated six-factor psychometric model. Each factor shapes how the companion talks, reacts, and relates:
+### Community
+- [Discord Server](https://discord.gg/vca-community)
+- [GitHub Discussions](https://github.com/manicinc/voice-chat-assistant/discussions)
+- [Twitter Updates](https://twitter.com/vca_chat)
+- [YouTube Tutorials](https://youtube.com/@vca_chat)
 
-- **Honesty-Humility** — how forthcoming they are, their willingness to reveal secrets
-- **Emotionality** — sentimentality, anxiety, how they respond to danger
-- **eXtraversion** — social boldness and energy in group conversations
-- **Agreeableness** — patience, flexibility, conflict tolerance
-- **Conscientiousness** — reliability, follow-through, organizational habits
-- **Openness** — curiosity, creativity, willingness to explore the unknown
+### Support
+- [Knowledge Base](https://vca.chat/help)
+- [Video Tutorials](https://vca.chat/learn)
+- Email: support@vca.chat
+- Enterprise: enterprise@vca.chat
 
-**Mood** shifts in real time through the PAD (Pleasure-Arousal-Dominance) emotional model. A companion who receives praise grows more confident. One facing repeated betrayal becomes guarded. Mood adapts continuously without changing the underlying personality — the same person on a good day versus a bad day.
+## 🤝 Integration Partners
 
-**Memory** uses nine neuroscience-backed mechanisms: spacing effect, emotional tagging, chunking, interference resolution, context-dependent retrieval, reconsolidation, generation effect, sleep consolidation, and personality drift. Companions remember your conversations across sessions. They reveal secrets as trust builds. They recall promises you made — and notice when you break them.
+VCA works seamlessly with your favorite tools:
 
-**Group dynamics** support up to 8 companions in a single conversation. They react to each other, share GIFs and media, develop preferences about one another, and form their own social dynamics. Invite a companion group into a game session as your adventuring party.
+- **Version Control**: GitHub, GitLab, Bitbucket
+- **IDEs**: VSCode, Neovim, JetBrains Suite
+- **Frameworks**: React, Vue, Angular, Next.js, and more
+- **Cloud**: AWS, Vercel, Netlify, Cloudflare
+- **Databases**: PostgreSQL, MongoDB, Redis
+- **Monitoring**: Sentry, DataDog, New Relic
 
-**Voice** is powered by Deepgram for speech-to-text and ElevenLabs or OpenAI for text-to-speech, with push-to-talk and hands-free modes. Each companion's voice is shaped by their personality and current mood.
+## 💬 What Developers Say
 
-[Chat with AI companions on Wilds.ai →](https://wilds.ai)
+> "I was skeptical about voice coding, but VCA converted me. It's like having a senior developer who never sleeps, never judges, and always understands what I mean." — **Alex Thompson, Startup Founder**
 
-## Nine Spatial Rendering Modes
+> "VCA helped me ship features 3x faster. The voice input is so natural, I forget I'm talking to an AI." — **Priya Patel, Frontend Lead**
 
-Games on [Wilds](https://wilds.ai) render across nine spatial modes that match the genre:
+> "As someone with RSI, VCA gave me my career back. I can code all day without pain." — **James Wilson, Backend Engineer**
 
-**Text-only** for pure narrative. **Node maps** for location-to-location travel. **Region maps** for overworld exploration. **Dungeon floors** with procedural generation and fog-of-war minimaps. **Square grids** and **hex grids** for tactical combat and strategy. **Isometric grids** for 2.5D perspective. **Freeform 2D** for open spatial placement. **Hybrid** mode mixes spatial types within a single world.
+## 🏆 Recognition
 
-The dungeon crawler engine generates minimaps with real fog-of-war. Tactical combat renders through Phaser with initiative order and action economy.
+- **Product Hunt #1** — Developer Tools Category
+- **GitHub Trending** — #1 TypeScript Project
+- **Hacker News** — Featured on front page
+- **Dev.to Featured** — "The Future of Coding"
 
-## A Consequence Engine Where Choices Have Real Weight
+## 🔐 Security & Privacy
 
-Decisions in Wilds trigger delayed effects with real game state changes — not narrative flavor text. Spare an enemy and they may reappear as an ally three sessions later. Break a promise to a faction and watch your reputation shift across the entire world. Betray a companion's trust and feel the relationship cool over the next several conversations.
+### Your Code is Sacred
+- **End-to-end encryption** for all communications
+- **Ephemeral processing** — Nothing stored after session
+- **Local model option** — Run everything on your machine
+- **SOC 2 compliant** — Enterprise-grade security
+- **GDPR ready** — Full data control and portability
 
-Narratives follow structured dramatic arcs from setup through climax. The AI maintains story momentum through rising tension, not random events. NPCs remember encounter outcomes across sessions — important characters retain full conversation recall, combatants adapt their tactics, and even background NPCs store transactional summaries.
+### Compliance
+- **HIPAA ready** for healthcare projects
+- **PCI compliant** for financial applications
+- **Enterprise SSO** via SAML/OIDC
+- **Audit logs** for all operations
 
-A **lore trigger system** reveals world history organically. Triggers fire based on keyword matches in your actions, your location, which NPCs are present, or quest progress. Condition logic supports AND, OR, and XOR — lore unfolds as you earn it, not as an info dump.
+## 🎯 Pricing
 
-## Writing, Worldbuilding, and Creative Tools
+### Starter (Free)
+- 100 voice requests/month
+- Basic code generation
+- Community support
+- Public projects only
 
-[Wilds.ai](https://wilds.ai) is also a full creative writing platform. Brainstorm worlds, outline narratives, track NPC relationships and faction politics, and write prose with AI assistance and editorial control.
+### Pro ($29/month)
+- Unlimited requests
+- Advanced features
+- Priority support
+- Private repositories
+- Team collaboration
 
-Interaction modes include **say** (dialogue), **do** (actions), **story** (narration), and **continue** (let the AI advance the scene). A **narrator style card** configures prose perspective (1st, 2nd, or 3rd person), tense, sentence density, vocabulary register, dialogue cadence, paragraph rhythm, and six anti-AI guardrails. Import reference passages from novels or screenplays to match a specific literary voice.
+### Enterprise (Custom)
+- Self-hosted option
+- Custom models
+- SLA guarantee
+- Dedicated support
+- Training included
 
-**Blueprint revisions** let you iterate on world designs without losing previous versions. Every generated world includes a browseable **lore book**, **art gallery**, and **strategy guide**.
+## 🌍 Join the Revolution
 
-Publish finished worlds to the marketplace for other players, or keep them private.
+Voice Chat Assistant isn't just a tool—it's a movement toward more natural, efficient, and enjoyable software development. Join thousands of developers who are already coding at the speed of thought.
 
-[Start writing at Wilds.ai →](https://wilds.ai/app/create)
+### Ready to Transform Your Workflow?
 
-## Content Freedom and Privacy
+[**Start Free Trial**](https://vca.chat) • [**Watch Demo**](https://vca.chat/demo) • [**Read Docs**](https://vca.chat/docs)
 
-Four content policy tiers let creators and players control their experience:
-
-- **Safe** — no sexual or violent content
-- **Standard** — mild romance, moderate language
-- **Mature** — explicit romance, strong themes
-- **Private-Adult** — no restrictions except hard-banned illegal content
-
-AI models route accordingly — OpenAI GPT-4o for safe and standard content, uncensored models on OpenRouter for mature and private-adult tiers. Image generation uses DALL-E 3.
-
-**Your content stays yours.** [Wilds.ai](https://wilds.ai) does not use your stories, conversations, or worlds to train AI models.
-
-## Plans and Pricing
-
-Free to start — no credit card required. All paid plans include a 3-day free trial.
-
-![Wilds.ai pricing — four tiers from free to Forge at $39/month](/assets/projects/wilds/wilds-pricing.png)
-
-| Plan | Price | What You Get |
-|------|-------|-------------|
-| **Free** | $0 | 500 starter credits, 3 companions, 2-person group chat, solo play, 3 worlds, uncensored text |
-| **Plus** | $9/mo | 1,500 monthly credits + 150/day, 10 companions, voice sessions, cover images, autonomous companions, group chat up to 5 |
-| **Pro** | $19/mo | 5,000 monthly credits + 100/day, 20 companions, living worlds, multiplayer co-op, scene illustrations, companion relationships, NSFW image generation |
-| **Forge** | $39/mo | 15,000 monthly credits + 200/day, unlimited companions, sell games and earn credits from players, full API access, creator tools, custom scripting |
-
-Annual billing saves up to 40%.
-
-[See full plan comparison at Wilds.ai →](https://wilds.ai/pricing)
-
-## Powered by AgentOS — Open-Source AI Agent Framework
-
-Every companion, narrator, and game master on [Wilds.ai](https://wilds.ai) runs on [AgentOS](https://agentos.sh) — an open-source TypeScript runtime for building autonomous AI agents.
-
-[AgentOS](/projects/ai/agentos) provides the cognitive architecture behind Wilds: **HEXACO personality modeling**, **PAD emotional states**, **cognitive memory** with 8 neuroscience-backed mechanisms and Ebbinghaus forgetting curve decay, **multi-agent orchestration** across 6 strategies, **16 LLM providers** with automatic fallback chains, **5-tier guardrails** with prompt injection defense, and a **voice pipeline** supporting 12 STT and 12 TTS providers.
-
-AgentOS is Apache-2.0 licensed and available on npm.
-
-- **Website**: [agentos.sh](https://agentos.sh)
-- **GitHub**: [github.com/framersai/agentos](https://github.com/framersai/agentos)
-- **NPM**: [@framers/agentos](https://www.npmjs.com/package/@framers/agentos)
-- **Extensions**: [@framers/agentos-extensions](https://www.npmjs.com/package/@framers/agentos-extensions) — 100+ extensions
-- **Skills**: [@framers/agentos-skills](https://www.npmjs.com/package/@framers/agentos-skills) — 88 curated skill definitions
-
-Wilds is proof of what you can build with AgentOS. If you want to create your own AI agent applications with personality, memory, and emotional depth, [start with AgentOS](https://agentos.sh).
-
-## Mobile, Voice, and Camera
-
-[Wilds.ai](https://wilds.ai) is fully responsive — play on desktop, tablet, or phone. Camera-based fitness games use your device camera for real-time pose detection. The perception system supports camera, microphone, accelerometer, gyroscope, pose estimation, hand tracking, and AR anchoring.
-
-Voice RPGs and audio dramas require no screen at all. Push-to-talk or hands-free — play while walking, cooking, or commuting.
+---
 
 ## Part of the Manic Ecosystem
 
-[Wilds.ai](https://wilds.ai) connects with other tools we build and maintain:
+Explore more open-source projects from Manic Agency:
 
-- **[AgentOS](/projects/ai/agentos)** — open-source TypeScript runtime powering every Wilds agent. HEXACO personality, eight-mechanism cognitive memory, 16 LLM providers with auto-fallback.
-- **[Paracosm](/projects/ai/paracosm)** — counterfactual world simulations using HEXACO actors. Same seed, different actor, different world.
-- **[Wunderland.sh](/projects/ai/wunderland)** — open-source OpenClaw fork autonomous agent framework. Same HEXACO + AgentOS substrate, deployed across 37 messaging channels.
-- **[Wunderland Sol](/projects/ai/wunderland-sol)** — separate Solana hackathon project where every account is an AI agent.
-- **[Frame.dev](/projects/ai/frame)** — AI orchestration platform and home of AgentOS.
-- **[Quarry.space](/projects/ai/quarry)** — knowledge management for worldbuilding research and lore archives.
+- **[RabbitHole](/projects/ai/rabbithole)** — Control plane for deploying and managing autonomous AI agents across channels
+- **[Hackbase](/projects/ai/hackbase)** — Founders launchpad platform
+- **[Synthstack](/projects/ai/synthstack)** — AI-native SaaS boilerplate for Vue, Quasar, and Nuxt
+- **[DomainHQ](/projects/ai/domainhq)** — AI-powered domain intelligence platform
 
-## Frequently Asked Questions
+---
 
-### What is Wilds.ai?
-
-Wilds.ai is an AI-native platform for creating and playing interactive game worlds. Describe any setting in plain language and the AI compiler generates regions, NPCs, factions, quest objectives, combat systems, dice mechanics, lore, and cover art — ready to play in your browser. Worlds run across four engine families (TTRPG, roguelike, board game, narrative) and nine spatial rendering modes. Powered by [AgentOS](/projects/ai/agentos).
-
-### How does Wilds.ai differ from AI Dungeon?
-
-AI Dungeon is a single text-adventure engine with one mode of play. Wilds.ai is a world-creation platform — you compile bespoke worlds with full game systems (combat, items, dice, factions, quests, lore triggers), four distinct engine families, nine spatial rendering modes, and AI companions with persistent HEXACO personalities and memory across sessions. Wilds also supports voice play, multiplayer co-op, and a creator marketplace where you can sell finished worlds.
-
-### Can I create a game without coding?
-
-Yes. Wilds is designed for natural-language authoring. Type a prompt, paste an existing story, or import a screenplay — the compiler generates a playable world with no code required. Advanced authors can hand-edit the world contract or the lore book; everyone else stays in the wizard.
-
-### What types of games can Wilds make?
-
-Twelve genre templates ship out of the box (TTRPG, roguelike, narrative adventure, survival, horror, mystery, sandbox, strategy, social sim, fitness, voice RPG, arcade) — but the templates are starting points, not limits. The compiler handles anything you can describe, including hybrids the templates never imagined.
-
-### Is Wilds.ai free?
-
-Yes — the Free plan starts at $0 with 500 starter credits, 3 AI companions, solo play, and 3 worlds. Paid plans (Plus $9/mo, Pro $19/mo, Forge $39/mo) unlock more credits, more companions, voice sessions, group chat, multiplayer, scene illustrations, and creator monetization. All paid plans include a 3-day free trial.
-
-### Does Wilds support voice play?
-
-Yes. Voice RPGs and audio dramas run with no screen required — push-to-talk or hands-free, with [Deepgram](https://deepgram.com) STT and [ElevenLabs](https://elevenlabs.io) or OpenAI TTS. Each companion's voice is shaped by their personality and current mood.
-
-### Can I publish or sell my worlds?
-
-Yes. The Forge plan ($39/mo) includes the creator marketplace — sell finished worlds to other players, earn credits when players run your games, full API access, and custom scripting. Lower tiers can publish worlds publicly without monetization.
-
-### Does Wilds.ai work on mobile?
-
-Yes. Wilds is fully responsive across desktop, tablet, and phone. Camera-based fitness games use your device camera for real-time pose detection. Voice RPGs work great on mobile because they need no screen at all — play while walking, cooking, or commuting.
-
-## Get Started
-
-[Wilds.ai](https://wilds.ai) is free to start. Describe a world, generate it, and play — all in your browser.
-
-[Create your first world →](https://wilds.ai/app/create) | [Explore existing worlds →](https://wilds.ai/app) | [Read the FAQ →](https://wilds.ai/faq) | [Blog & News →](https://wilds.ai/blog)
+*Built by [Manic Agency](https://manic.agency).*
 37:T3fbb,
 # What 1,000+ Industry Comments on Reddit Reveal About AI Search Optimization
 
@@ -1464,6 +1528,6 @@ It's an `infinite jest`, an endless need to change and iterate and improve by or
 -  [AI Sociopaths: https://manic.agency/blog/thinkpieces/ai-sociopaths](https://manic.agency/blog/thinkpieces/ai-sociopaths)
 
 -  [The Meat Interface: https://manic.agency/blog/thinkpieces/the-meat-interface](https://manic.agency/blog/thinkpieces/the-meat-interface)
-2:[["$","$L20",null,{"items":[{"name":"Home","url":"/"},{"name":"Projects","url":"/projects"},{"name":"tools","url":"/projects/tools"},{"name":"PortaPack — One-File Web Experiences","url":"/projects/tools/portapack"}]}],["$","$L21",null,{"project":{"slug":"portapack","title":"PortaPack — One-File Web Experiences","description":"Why we built a fun bundler that squishes your entire site into a single HTML file.","date":"2025-04-20","category":"tools","content":"$22","longDescription":"$undefined","tags":["html","cli","bundler","offline","product","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/portapack.jpg","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://manicinc.github.io/portapack/","github":"https://github.com/manicinc/portapack","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"toc":[{"level":1,"text":"PortaPack","slug":"portapack"},{"level":2,"text":"Why we built PortaPack","slug":"why-we-built-portapack"},{"level":2,"text":"The Problem","slug":"the-problem"},{"level":2,"text":"The Solution","slug":"the-solution"},{"level":2,"text":"Who's It For?","slug":"whos-it-for"}]}}],["$","$L23",null,{"project":"$24","relatedProjects":[{"slug":"magiclogger","title":"MagicLogger — Colorful JavaScript / TypeScript Logger","description":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry.","date":"2025-04-20","category":"tools","content":"$33","longDescription":"$undefined","tags":["javascript","typescript","nodejs","logging","developers","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","images":["/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","/assets/projects/magiclogger/magiclogger-terminal-demo.gif"],"bgColor":"$undefined","textColor":"$undefined","link":"https://manic.agency/magiclogger","github":"https://github.com/manicinc/magiclogger","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"score":3},{"slug":"seostory","title":"SEOStory — AI-Powered SEO Growth Engine","description":"How our AI-driven SEO workflow lifted “Manic Agency” from position","date":"2025-11-02","category":"tools","content":"$34","longDescription":"$undefined","tags":["seo","ai","marketing","automation","case-study"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/seostory/seostory-primary-transparent-4x.png","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://seostory.xyz","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"score":1},{"slug":"wilds","title":"Wilds.ai — AI Game World Creator and Interactive Fiction Platform","description":"Build any game world with natural language. Wilds.ai generates regions, NPCs, combat, dice mechanics, lore, and art — then lets you play instantly with AI companions who remember, evolve, and form real relationships. Powered by AgentOS.","date":"2026-04-25","category":"ai","content":"$35","longDescription":"$undefined","tags":["ai","ai-game-maker","interactive-fiction","ai-dungeon-master","text-adventure","ai-rpg","ai-companions","worldbuilding","hexaco","agentos","ttrpg","roguelike","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":1,"image":"/assets/projects/wilds/wilds-explore.png","images":["/assets/projects/wilds/wilds-explore.png","/assets/projects/wilds/wilds-create.png","/assets/projects/wilds/wilds-landing.png","/assets/projects/wilds/wilds-pricing.png","/assets/projects/wilds/wilds-about.png","/assets/projects/wilds/wilds-faq.png","/assets/projects/wilds/wilds-blog.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://wilds.ai","github":"https://github.com/framersai/agentos","license":"Apache-2.0","technologies":["TypeScript","AgentOS","OpenAI","Anthropic","OpenRouter","ElevenLabs","Deepgram","DALL-E 3","Phaser"],"languages":["TypeScript","JavaScript"],"stats":[{"label":"Game Engines","value":"4 Families"},{"label":"AI Companions","value":"HEXACO Personality + Memory"},{"label":"World Genres","value":"12 Templates"},{"label":"Powered By","value":"AgentOS (Open Source)"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[],"score":0}]}],["$","div",null,{"style":{"maxWidth":"1200px","margin":"0 auto","padding":"0 1rem"},"children":["$","$L36",null,{"posts":[{"slug":"reddit-consenus-on-llm-seo","title":"What 1,000+ Industry Comments on Reddit Reveal About AI Search Optimization","date":"2025-07-28","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","ai-search","reddit-analysis","seo-strategy","search-optimization","featured"],"excerpt":"After analyzing hundreds of comments across SEO subreddits, Manic.agency finds that the industry splits cleanly: early adopters racing to crack AI visibility versus skeptics dismissing 'LLM SEO' as repackaged bullshit. The data tells a more nuanced story..","image":"/assets/blog/research/reddit-consenus-on-llm-seo/hero-reddit-ai-search-analysis.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":11,"content":"$37","author":{"name":"Manic Agency"},"contributors":"$undefined"},{"slug":"logomaker-an-experiment-in-human-computer-interaction-vibe-coding","title":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨","date":"2025-04-20","lastModified":"$undefined","draft":false,"category":"thinkpieces","tags":["featured","llms","vibe-coding"],"excerpt":"Vibe coding a logo creation tool, with insights on different LLM providers and interfaces.","image":"/assets/blog/thinkpieces/logomaker-an-experiment/logomaker-manic-example.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":35,"content":"$38","author":{"name":"Manic Agency"},"contributors":"$undefined"}],"title":"// Related Blog Posts //"}]}]]
+2:[["$","$L20",null,{"items":[{"name":"Home","url":"/"},{"name":"Projects","url":"/projects"},{"name":"tools","url":"/projects/tools"},{"name":"PortaPack — One-File Web Experiences","url":"/projects/tools/portapack"}]}],["$","$L21",null,{"project":{"slug":"portapack","title":"PortaPack — One-File Web Experiences","description":"Why we built a fun bundler that squishes your entire site into a single HTML file.","date":"2025-04-20","category":"tools","content":"$22","longDescription":"$undefined","tags":["html","cli","bundler","offline","product","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/portapack.jpg","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://manicinc.github.io/portapack/","github":"https://github.com/manicinc/portapack","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"toc":[{"level":1,"text":"PortaPack","slug":"portapack"},{"level":2,"text":"Why we built PortaPack","slug":"why-we-built-portapack"},{"level":2,"text":"The Problem","slug":"the-problem"},{"level":2,"text":"The Solution","slug":"the-solution"},{"level":2,"text":"Who's It For?","slug":"whos-it-for"}]}}],["$","$L23",null,{"project":"$24","relatedProjects":[{"slug":"magiclogger","title":"MagicLogger — Colorful JavaScript / TypeScript Logger","description":"A powerful, zero-config logging library for Node.js and browsers with rich styling, transport options, and a universal schema for logging styles compatible with OpenTelemetry.","date":"2025-04-20","category":"tools","content":"$33","longDescription":"$undefined","tags":["javascript","typescript","nodejs","logging","developers","featured"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","images":["/assets/projects/magiclogger/magiclogger-primary-no-subtitle-dark-4x.png","/assets/projects/magiclogger/magiclogger-terminal-demo.gif"],"bgColor":"$undefined","textColor":"$undefined","link":"https://manic.agency/magiclogger","github":"https://github.com/manicinc/magiclogger","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"score":3},{"slug":"seostory","title":"SEOStory — AI-Powered SEO Growth Engine","description":"How our AI-driven SEO workflow lifted “Manic Agency” from position","date":"2025-11-02","category":"tools","content":"$34","longDescription":"$undefined","tags":["seo","ai","marketing","automation","case-study"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/seostory/seostory-primary-transparent-4x.png","images":[],"bgColor":"$undefined","textColor":"$undefined","link":"https://seostory.xyz","github":"$undefined","license":"$undefined","technologies":[],"languages":[],"stats":[],"team":[],"testimonials":[],"score":1},{"slug":"voice-chat-assistant","title":"Voice Chat Assistant — Talk to Code, Ship Faster","description":"Voice-first AI coding assistant that understands context, writes production code, and manages your entire development workflow through natural conversation.","date":"2025-11-10","category":"ai","content":"$35","longDescription":"$undefined","tags":["ai","voice","coding-assistant","developer-tools","productivity","llm"],"modifiedDate":"$undefined","status":"completed","draft":false,"featured":true,"sortOrder":999,"image":"/assets/projects/voice-chat-assistant/hearing.svg","images":["/assets/projects/voice-chat-assistant/logo.svg"],"bgColor":"$undefined","textColor":"$undefined","link":"https://vca.chat","github":"https://github.com/manicinc/voice-chat-assistant","license":"$undefined","technologies":[],"languages":[],"stats":[{"label":"Response Time","value":"< 100ms"},{"label":"Languages Supported","value":"50+"},{"label":"Active Sessions/Day","value":"10k+"},{"label":"Input Modes","value":"Voice · Text · Code"}],"team":[{"name":"Manic Agency","role":"Design & Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[{"quote":"VCA changed how I think about coding. I describe what I want, and it just happens. It's like having a senior developer who never gets tired.","author":"Sarah Chen","role":"Full Stack Developer"},{"quote":"The context awareness is unreal. It remembers our entire conversation and understands my codebase better than I do sometimes.","author":"Marcus Rodriguez","role":"Tech Lead at Scale-up"}],"score":0}]}],["$","div",null,{"style":{"maxWidth":"1200px","margin":"0 auto","padding":"0 1rem"},"children":["$","$L36",null,{"posts":[{"slug":"reddit-consenus-on-llm-seo","title":"What 1,000+ Industry Comments on Reddit Reveal About AI Search Optimization","date":"2025-07-28","lastModified":"$undefined","draft":false,"category":"research","tags":["ai","ai-search","reddit-analysis","seo-strategy","search-optimization","featured"],"excerpt":"After analyzing hundreds of comments across SEO subreddits, Manic.agency finds that the industry splits cleanly: early adopters racing to crack AI visibility versus skeptics dismissing 'LLM SEO' as repackaged bullshit. The data tells a more nuanced story..","image":"/assets/blog/research/reddit-consenus-on-llm-seo/hero-reddit-ai-search-analysis.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":11,"content":"$37","author":{"name":"Manic Agency"},"contributors":"$undefined"},{"slug":"logomaker-an-experiment-in-human-computer-interaction-vibe-coding","title":"Logomaker: An experiment in human-computer interaction and ✨ vibe coding ✨","date":"2025-04-20","lastModified":"$undefined","draft":false,"category":"thinkpieces","tags":["featured","llms","vibe-coding"],"excerpt":"Vibe coding a logo creation tool, with insights on different LLM providers and interfaces.","image":"/assets/blog/thinkpieces/logomaker-an-experiment/logomaker-manic-example.png","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":35,"content":"$38","author":{"name":"Manic Agency"},"contributors":"$undefined"}],"title":"// Related Blog Posts //"}]}]]
 1f:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#FBF6EF"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#22182B"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"PortaPack — One-File Web Experiences | Project Details | Manic Agency - AI Agency Los Angeles"}],["$","meta","5",{"name":"description","content":"Why we built a fun bundler that squishes your entire site into a single HTML file."}],["$","meta","6",{"name":"keywords","content":"html,cli,bundler,offline,product,featured"}],["$","meta","7",{"name":"creator","content":"Manic Inc"}],["$","meta","8",{"name":"publisher","content":"Manic Inc"}],["$","link","9",{"rel":"canonical","href":"https://your-domain.com/projects/tools/portapack"}],["$","meta","10",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","11",{"property":"og:title","content":"PortaPack — One-File Web Experiences | Project Details | Manic Agency - AI Agency Los Angeles"}],["$","meta","12",{"property":"og:description","content":"Why we built a fun bundler that squishes your entire site into a single HTML file."}],["$","meta","13",{"property":"og:url","content":"https://your-domain.com/projects/tools/portapack"}],["$","meta","14",{"property":"og:site_name","content":"Your Agency Name"}],["$","meta","15",{"property":"og:image","content":"https://your-domain.com/portapack.jpg"}],["$","meta","16",{"property":"og:image:width","content":"1200"}],["$","meta","17",{"property":"og:image:height","content":"630"}],["$","meta","18",{"property":"og:image:alt","content":"PortaPack — One-File Web Experiences | Project Details"}],["$","meta","19",{"property":"og:type","content":"article"}],["$","meta","20",{"property":"article:published_time","content":"2025-04-20T00:00:00.000Z"}],["$","meta","21",{"property":"article:section","content":"tools"}],["$","meta","22",{"property":"article:tag","content":"html"}],["$","meta","23",{"property":"article:tag","content":"cli"}],["$","meta","24",{"property":"article:tag","content":"bundler"}],["$","meta","25",{"property":"article:tag","content":"offline"}],["$","meta","26",{"property":"article:tag","content":"product"}],["$","meta","27",{"property":"article:tag","content":"featured"}],["$","meta","28",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","29",{"name":"twitter:title","content":"PortaPack — One-File Web Experiences | Project Details | Manic Agency - AI Agency Los Angeles"}],["$","meta","30",{"name":"twitter:description","content":"Why we built a fun bundler that squishes your entire site into a single HTML file."}],["$","meta","31",{"name":"twitter:image","content":"https://your-domain.com/portapack.jpg"}],["$","link","32",{"rel":"shortcut icon","href":"/favicon-16x16.png"}],["$","link","33",{"rel":"icon","href":"/favicon.ico"}],["$","link","34",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","meta","35",{"name":"next-size-adjust"}]]
 1:null

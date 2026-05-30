@@ -1,26 +1,26 @@
 3:I[4707,[],""]
 6:I[36423,[],""]
-a:I[6322,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-b:I[96313,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-c:I[66159,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-d:I[59970,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-e:I[81775,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-f:I[12025,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"ThemeProvider"]
-10:I[39976,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"CookieProvider"]
-11:I[69088,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-12:I[50513,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-13:I[83551,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-14:I[38483,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-15:I[81695,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-16:I[28602,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-17:I[51052,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"Nav"]
+a:I[6322,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+b:I[96313,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+c:I[66159,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+d:I[59970,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+e:I[81775,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+f:I[12025,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"ThemeProvider"]
+10:I[39976,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"CookieProvider"]
+11:I[69088,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+12:I[50513,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+13:I[83551,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+14:I[38483,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+15:I[81695,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+16:I[28602,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+17:I[51052,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"Nav"]
 18:I[10376,["7601","static/chunks/app/error-980f98eab7299665.js"],"default"]
-19:I[79229,["9160","static/chunks/app/not-found-e731a727afb82058.js"],"default"]
-1a:I[85745,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-1b:I[16049,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-1c:I[18133,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-1d:I[36623,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
-1e:I[69709,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","3185","static/chunks/app/layout-6459c10b306600d1.js"],"default"]
+19:I[79229,["9160","static/chunks/app/not-found-d7a5f0628dd41293.js"],"default"]
+1a:I[85745,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+1b:I[16049,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+1c:I[18133,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+1d:I[36623,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
+1e:I[69709,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","3185","static/chunks/app/layout-3d9d0080264b42be.js"],"default"]
 4:["category","synthetic","d"]
 5:["slug","the-meat-interface","d"]
 7:Tc58,
@@ -91,28 +91,28 @@ f:I[12025,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","stat
             }
           }
         })();
-      0:["manic-agency-1778623107835",[[["",{"children":["blog",{"children":[["category","synthetic","d"],{"children":[["slug","the-meat-interface","d"],{"children":["__PAGE__?{\"category\":\"synthetic\",\"slug\":\"the-meat-interface\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["category","synthetic","d"],{"children":[["slug","the-meat-interface","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7589854758514563.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/2a1fdc91e2d69a25.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/6517f724e0c34e4b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/4a49f8c87e29773c.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/fbcf5add168be5ca.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/31a0afff5523f0ee.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/7d7aabc562ee4222.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/d6034e11a69ffc4a.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"preconnect","href":"https://static.cloudflareinsights.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.jsdelivr.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://res.cloudinary.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}]]}]}]}]]}]]}]],null],null],["$L1f",null]]]]
-20:I[54680,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
-21:I[18745,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
-22:I[94058,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
-24:I[67373,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
-26:I[12554,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
-27:I[96670,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
-28:I[71409,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
-29:I[87634,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
-34:I[72972,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],""]
-35:I[50301,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"IconArrowLeft"]
-36:I[50301,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"IconOrnateAuthor"]
-37:I[50301,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"IconOrnateCalendar"]
-38:I[50301,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"IconOrnateClock"]
-39:I[50301,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"IconOrnateTag"]
-3a:I[28862,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"AsciiArtPlaceholder"]
-3b:I[30603,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"CustomMarkdownRenderer"]
-3d:I[74644,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
-3e:I[75541,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
-42:I[28054,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
-43:I[4681,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
-44:I[99775,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-8c8ddd324b6948be.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-4e89179c628740e8.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
+      0:["manic-agency-1780120018410",[[["",{"children":["blog",{"children":[["category","synthetic","d"],{"children":[["slug","the-meat-interface","d"],{"children":["__PAGE__?{\"category\":\"synthetic\",\"slug\":\"the-meat-interface\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["category","synthetic","d"],{"children":[["slug","the-meat-interface","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7589854758514563.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/2a1fdc91e2d69a25.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/6517f724e0c34e4b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/9064b80049c21f03.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/fbcf5add168be5ca.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/31a0afff5523f0ee.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/7d7aabc562ee4222.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","7",{"rel":"stylesheet","href":"/_next/static/css/d6034e11a69ffc4a.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"\n            __variable_f367f3\n            __variable_1c86d0\n            __variable_fcc734\n        ","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://eocampaign1.com"}],["$","link",null,{"rel":"preconnect","href":"https://images.weserv.nl"}],["$","link",null,{"rel":"preconnect","href":"https://static.cloudflareinsights.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.sender.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://api.github.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://www.clarity.ms"}],["$","link",null,{"rel":"dns-prefetch","href":"https://cdn.jsdelivr.net"}],["$","link",null,{"rel":"dns-prefetch","href":"https://res.cloudinary.com"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$7"}}],["$","meta",null,{"httpEquiv":"Content-Security-Policy","content":"$8"}],[["$","meta",null,{"name":"cf-visitor","content":"{\"scheme\":\"https\"}"}],["$","meta",null,{"httpEquiv":"X-Forwarded-Proto","content":"https"}]],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$9"}}]]}],["$","body",null,{"children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{"fallback":["$","$Le",null,{}],"children":["$","$Lf",null,{"children":["$","$L10",null,{"children":[["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","$L15",null,{}],["$","$L16",null,{}],["$","$L17",null,{}],["$","main",null,{"role":"main","id":"main-content","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$18","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L19",null,{}],"notFoundStyles":[]}]}],["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}]]}]}]}]]}]]}]],null],null],["$L1f",null]]]]
+20:I[54680,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
+21:I[18745,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
+22:I[94058,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
+24:I[67373,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
+26:I[12554,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
+27:I[96670,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
+28:I[71409,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
+29:I[87634,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
+34:I[72972,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],""]
+35:I[50301,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"IconArrowLeft"]
+36:I[50301,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"IconOrnateAuthor"]
+37:I[50301,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"IconOrnateCalendar"]
+38:I[50301,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"IconOrnateClock"]
+39:I[50301,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"IconOrnateTag"]
+3a:I[28862,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"AsciiArtPlaceholder"]
+3b:I[30603,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"CustomMarkdownRenderer"]
+3d:I[74644,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
+3e:I[75541,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
+42:I[28054,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
+43:I[4681,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
+44:I[99775,["9464","static/chunks/framer-motion-afa3e9eea9dc4f5c.js","8520","static/chunks/lucide-icons-d17d81644484f9e7.js","2009","static/chunks/markdown-648e077ccebbd300.js","2793","static/chunks/katex-3086009fe82370df.js","3790","static/chunks/forms-9ad27fff80457a29.js","3178","static/chunks/common-f3956634-3b9bab1b44c4ed6c.js","4592","static/chunks/common-cebde746-d1fa50c34533a0b6.js","7747","static/chunks/common-91059ad5-b796dc0386e4dbe9.js","5362","static/chunks/common-b35596cd-f50eb9de6889daa5.js","2681","static/chunks/common-d87c119a-5b32cf6a4dc4ae1d.js","3902","static/chunks/common-c899ba7b-d9d244328836589a.js","2819","static/chunks/app/blog/%5Bcategory%5D/%5Bslug%5D/page-70041129a9654d33.js"],"default"]
 23:T4271,
 # The Meat Interface: Our Sociopathy in the Mirror
 
@@ -358,19 +358,26 @@ Perhaps AI isn't the empty mirror after all. Perhaps it's the ultimate *looking 
 The discomfort we feel with AI might not always stem from its alien otherness or its potential for future harm. It might stem from the uncomfortable familiarity of the behaviors it surfaces *in us*. The functional sociopathy isn't necessarily emerging in the silicon; it's being revealed, perhaps even amplified, in the meat interface at the keyboard.
 
 The real challenge isn't just programming ethical AI. It's confronting the ethics AI exposes in its users. What happens when the mirror doesn't just reflect, but keeps a perfect, indelible log of what it sees? The question isn't just what AI is becoming, but what interacting with it reveals about what we already are, especially when we think no one – or nothing that matters – is watching.
-3f:T40a5,
-<div class="paracosm-hero">
-  <h1 class="paracosm-hero__title" aria-label="from prompt to world model to forked futures">from prompt to world model to forked futures.</h1>
-  <p class="paracosm-hero__subtitle">
-    structured counterfactual simulations for ai agents. same seed, different actor, different world.
+3f:T254a,
+<div class="rabbithole-hero">
+  <img
+    src="/assets/projects/rabbithole/rabbithole-logo-gold-dark.svg"
+    alt="RabbitHole logo - keyhole icon for autonomous agent control plane"
+    class="rabbithole-hero__logo"
+    decoding="async"
+    loading="eager"
+  />
+  <h1 class="rabbithole-hero__title" aria-label="your agents, your rules">your agents, your rules</h1>
+  <p class="rabbithole-hero__subtitle">
+    build agents from voice or text. deploy across slack, discord, telegram. keep secrets on your server.
   </p>
-  <a class="paracosm-hero__cta" href="https://paracosm.agentos.sh" target="_blank" rel="noopener">
-    explore paracosm →
+  <a class="rabbithole-hero__cta" href="https://rabbithole.inc" target="_blank" rel="noopener">
+    explore rabbithole.inc →
   </a>
 </div>
 
 <style>
-  .paracosm-hero {
+  .rabbithole-hero {
     display: grid;
     place-items: center;
     text-align: center;
@@ -380,291 +387,39 @@ The real challenge isn't just programming ethical AI. It's confronting the ethic
     position: relative;
     overflow: hidden;
   }
-  .paracosm-hero__title {
-    text-transform: lowercase;
-    font-weight: 900;
-    letter-spacing: 0.02em;
-    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
-    line-height: 1.05;
-    margin: 0.35rem 0 0.25rem;
-    background: linear-gradient(120deg, #14110e 0%, #e06530 35%, #e8b44a 70%, #4ca8a8 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  .rabbithole-hero__logo {
+    width: clamp(120px, 30vw, 200px);
+    height: auto;
+    opacity: 0.95;
   }
   @media (prefers-color-scheme: dark) {
-    .paracosm-hero__title {
-      background: linear-gradient(120deg, #f8f4eb 0%, #e8b44a 35%, #e06530 70%, #4ca8a8 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
+    .rabbithole-hero__logo {
+      filter: brightness(1.1) drop-shadow(0 0 24px rgba(201,162,39,0.35));
+      opacity: 1;
     }
   }
-  .paracosm-hero__subtitle {
-    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
-    color: var(--text-secondary, rgba(255,255,255,0.78));
-    margin: 0.25rem 0 0.9rem;
-    max-width: 60ch;
-  }
-  @media (prefers-color-scheme: light) {
-    .paracosm-hero__subtitle { color: #2a2a2a; }
-  }
-  .paracosm-hero__cta {
-    --h: 52px;
-    display: inline-grid;
-    place-items: center;
-    height: var(--h);
-    padding: 0 1.25rem;
-    border-radius: 999px;
-    font-weight: 800;
-    text-transform: lowercase;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    color: var(--text-primary, #fff);
-    position: relative;
-    isolation: isolate;
-    background:
-      radial-gradient(120% 120% at 0% 0%, rgba(232,180,74,0.18), rgba(76,168,168,0.08)),
-      linear-gradient(90deg, rgba(224,101,48,0.35), rgba(76,168,168,0.35));
-    border: 1px solid rgba(232,180,74,0.35);
-    backdrop-filter: blur(6px);
-    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-    will-change: transform;
-  }
-  .paracosm-hero__cta::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 2px;
-    background: linear-gradient(120deg, rgba(224,101,48,0.9), rgba(232,180,74,0.9), rgba(76,168,168,0.9));
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
-    opacity: .6;
-    transition: opacity .25s ease;
-    z-index: -1;
-  }
-  .paracosm-hero__cta:hover {
-    transform: translateY(-2px) scale(1.02);
-    border-color: rgba(232,180,74,0.7);
-    background:
-      radial-gradient(120% 120% at 100% 0%, rgba(76,168,168,0.2), rgba(232,180,74,0.12)),
-      linear-gradient(90deg, rgba(224,101,48,0.5), rgba(76,168,168,0.5));
-    box-shadow: 0 10px 32px rgba(232,180,74,0.25), 0 2px 8px rgba(76,168,168,0.2);
-  }
-  .paracosm-hero__cta:active { transform: translateY(0) scale(0.99); }
-  @media (prefers-color-scheme: light) {
-    .paracosm-hero__cta {
-      color: #0f0f0f;
-      border-color: rgba(224,101,48,0.25);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-  }
-</style>
-
-## Same seed. Different actor. Different world.
-
-[Paracosm](https://paracosm.agentos.sh) is a structured counterfactual world simulator for AI agents. Start from a prompt, brief, URL, or hand-written scenario draft. The compiler grounds it into a typed `ScenarioPackage` — a JSON contract with five state bags, labels, departments, metrics, setup defaults, and generated hooks. An actor with a [HEXACO](https://en.wikipedia.org/wiki/HEXACO_model_of_personality_structure) personality profile runs that world. A deterministic kernel drives state, time, and randomness. An LLM generates events, specialist analyses, and the actor's decisions. Specialists can forge new computational tools at runtime inside a V8 sandbox; an LLM judge approves each forge before it enters the decision pipeline. Personality traits drift. One turn ends, the next begins.
-
-The product is the structural contrast: two runs against an identical seed and compiled world contract produce measurably divergent trajectories when you swap one variable — the actor's personality. The kernel side is reproducible. The divergence comes from the LLM stages reading HEXACO profiles and deciding differently.
-
-```bash
-npm install paracosm
-```
-
-![Paracosm landing page — counterfactual world simulation for AI agents with HEXACO personality and deterministic kernel](/assets/projects/paracosm/paracosm-landing.png)
-
-## Why structured world models, not generative pixels
-
-Paracosm aligns with the **structured world model** definition from [Xing 2025](https://arxiv.org/abs/2507.05169) and the [ACM Computing Surveys 2025 world-model survey](https://dl.acm.org/doi/full/10.1145/3746449): a simulator for *actionable possibilities*, not a video generator. It is also a **counterfactual world simulation model** in the sense of [Kirfel et al. 2025](https://link.springer.com/article/10.1007/s43681-025-00718-4): a substrate for replaying an event with one variable changed and surfacing the effect. The closest LLM-world-model implementation anchor is [Yang et al. 2026](https://openreview.net/forum?id=XmYCERErcD), which evaluates LLM-based world models through policy verification, action proposal, and policy planning.
-
-Paracosm takes the safe product version of that idea: externalize the world into schema, citations, tools, snapshots, and seeded transitions, then let the LLM reason over that structure.
-
-## Not these things
-
-- **Not a generative visual world model.** Sora, [Genie 3](https://deepmind.google/discover/blog/genie-3-a-new-frontier-for-world-models/), and World Labs Marble produce pixels or 3D scenes. Paracosm produces a typed `RunArtifact`: metrics, decisions, specialist notes, citations, forged tool summaries.
-- **Not a JEPA-style predictive-representation model.** [Yann LeCun's AMI Labs](https://ai.meta.com/blog/yann-lecun-ai-model-i-jepa/) trains neural representations from sensor streams. Paracosm composes a deterministic kernel with an LLM reasoner; no training pipeline.
-- **Not a multi-agent orchestration framework.** [LangGraph](https://langchain-ai.github.io/langgraph/), [AutoGen](https://microsoft.github.io/autogen/), [CrewAI](https://www.crewai.com), [OpenAI Agents SDK](https://platform.openai.com/docs/guides/agents-sdk), and [Google ADK](https://google.github.io/adk-docs/) build agentic workflows that execute real tasks. Paracosm is a simulation; nothing leaves the run.
-- **Not a swarm intelligence simulator.** MiroFish and OASIS simulate thousands to a million emergent agents for aggregate prediction. Paracosm is top-down (one actor decides), runs ~100 agents by design, and outputs a deterministic trajectory plus divergence across actors.
-- **Not a generative-agents library.** [Stanford Generative Agents (Smallville)](https://reverie.herokuapp.com/arXiv_Demo/) and [Google DeepMind Concordia](https://github.com/google-deepmind/concordia) build emergent social simulacra in open-ended sandboxes. Paracosm ships a deterministic turn loop, personality drift, runtime tool forging, and a universal result schema.
-
-Actors can be colony commanders, CEOs, generals, ship captains, department heads, AI systems, governing councils, or any entity that receives information, evaluates options, and makes choices that shape the world. The simulation does not care what they represent. It cares how they decide.
-
-## The world contract
-
-JSON is the contract, not the product boundary. Today, `compileScenario()` accepts a scenario JSON draft and grounds it with `seedText` or `seedUrl`. The next API layer is a one-call prompt/document wrapper that asks an LLM to propose that same JSON contract, validates it, then compiles and runs it — without ever bypassing the schema, the kernel, or the artifact.
-
-```json
-{
-  "id": "submarine-habitat",
-  "labels": { "name": "Deep Ocean Habitat", "populationNoun": "crew", "settlementNoun": "habitat" },
-  "departments": ["Life Support", "Science", "Security", "Logistics"],
-  "metrics": { "morale": 70, "resources": 60, "stress": 30 },
-  "setup": { "turnLength": "1 week" }
-}
-```
-
-The dashboard's Quickstart tab compiles this brief into a running sim within a minute. A curated library of 10 HEXACO archetypes ships at `paracosm/leader-presets` for programmatic `runBatch` sweeps or swap-actor controls in downstream UIs.
-
-## Counterfactual fork() — the structural product
-
-```typescript
-import { WorldModel } from 'paracosm/world-model';
-
-const wm = await WorldModel.fromJson(worldJson);
-
-// Run the trunk with per-turn snapshots captured.
-const trunk = await wm.simulate(visionaryActor, {
-  maxTurns: 6, seed: 42, captureSnapshots: true,
-});
-
-// Branch at turn 3 with a different actor — no recompute of turns 1-3;
-// the forked kernel resumes from the captured state.
-const branch = await (await wm.forkFromArtifact(trunk, 3)).simulate(
-  pragmatistActor,
-  { maxTurns: 6, seed: 42 },
-);
-
-console.log(branch.metadata.forkedFrom);  // { parentRunId, atTurn: 3 }
-```
-
-The kernel round-trips through `JSON.stringify`, so snapshots persist to disk for replay or audit. In the dashboard, every UI-initiated run captures snapshots; the Reports tab shows a `↳ Fork at Turn N` button on each completed turn.
-
-## Replay any run for audit
-
-```typescript
-const replay = await wm.replay(storedArtifact);
-console.log(replay.matches);     // true when kernel produces byte-equal output
-console.log(replay.divergence);  // first-mismatch JSON pointer when matches=false
-```
-
-Replay is free — LLM stages are not invoked. Use it for regression testing (replay golden artifacts in CI) or forensic comparison (find the first kernel-state divergence between two paracosm versions).
-
-## Personality drift
-
-Actor personality drifts as the simulation progresses. A high-Conscientiousness CEO who weathers a crisis grows steadier. A low-Agreeableness general who suffers betrayal grows colder. Drift modulates HEXACO traits within bounded ranges so the actor stays coherent across long runs while reflecting accumulated experience. The drift function is deterministic given the seed, so the *path* is reproducible even though the LLM-generated decisions are not.
-
-## Runtime tool forging
-
-Specialists inside a Paracosm run can forge new computational tools at runtime — a custom risk calculator, a domain-specific cost model, a new metric aggregator. Each forged tool runs inside a V8 sandbox isolate; an LLM judge approves the spec before the tool enters the decision pipeline. The forged tool joins the specialist's permanent toolkit for the remainder of the run, and a summary appears in the `RunArtifact` for downstream analysis.
-
-## How Paracosm compares to other simulators
-
-| System | Schema-typed world | Deterministic kernel | Counterfactual fork | Output |
-|--------|---------------------|----------------------|----------------------|--------|
-| **Paracosm** | Yes, `ScenarioPackage` JSON | Yes, seeded kernel | Yes, `WorldModel.fork()` | Typed `RunArtifact` |
-| Sora / Genie 3 / Marble | No | No | No | Pixels or 3D scenes |
-| JEPA-family | No | Trained representations | No | Latent vectors |
-| LangGraph / AutoGen / CrewAI | Workflow nodes | No | No | Tool execution traces |
-| Stanford Generative Agents | Emergent town | No | No | Emergent dialogue |
-| OASIS / MiroFish | No | Stochastic | No | Aggregate stats |
-
-The combination of typed contracts, deterministic kernel, fork-and-compare, and structured `RunArtifact` makes Paracosm the substrate for repeatable counterfactual analysis — where Generative Agents are the substrate for emergent social phenomena.
-
-## Quickstart — prompt to running simulation
-
-```typescript
-import { WorldModel } from 'paracosm/world-model';
-
-const wm = await WorldModel.fromPrompt({
-  seedText: 'Q3 board brief: the company must decide between aggressive expansion and capital preservation.',
-  domainHint: 'corporate strategic decision',
-});
-
-const { actors, artifacts } = await wm.quickstart({ actorCount: 3 });
-artifacts.forEach((a, i) => console.log(actors[i].name, a.fingerprint));
-```
-
-The dashboard's Quickstart tab takes a paste, PDF, or URL and returns three streaming-live actors with per-card Download JSON, Copy shareable link, and Fork-in-Branches actions.
-
-## Powered by AgentOS
-
-Paracosm is built on [AgentOS](/projects/ai/agentos), the open-source TypeScript runtime for autonomous AI agents. AgentOS provides the GMI substrate, HEXACO personality vectors, eight-mechanism cognitive memory, multi-agent orchestration, and the V8 sandbox primitives that runtime tool forging depends on. If you want to build your own simulation stack on the same foundations, start with AgentOS.
-
-## Frequently Asked Questions
-
-### What is Paracosm?
-
-Paracosm is an open-source TypeScript library for structured counterfactual world simulations. It compiles a scenario into a typed JSON contract, runs it with HEXACO-personality actors and a deterministic kernel, and produces a `RunArtifact` you can fork, replay, and audit. It is published on npm as `paracosm` under the Apache-2.0 license.
-
-### How is Paracosm different from Sora or Genie 3?
-
-Sora and [Genie 3](https://deepmind.google/discover/blog/genie-3-a-new-frontier-for-world-models/) generate pixel video or 3D scenes. Paracosm generates structured decisions, metrics, and citations — a `RunArtifact` you can compare across forks, query by department, and replay byte-equal in CI. Different category of world model, different output shape.
-
-### What is a counterfactual world simulation?
-
-A simulation that replays the same scenario with one variable changed — typically the actor's personality, the seed, or an injected event — and surfaces how the world's trajectory diverges as a result. See [Kirfel et al. 2025](https://link.springer.com/article/10.1007/s43681-025-00718-4) for the academic framing. Paracosm operationalizes this through `WorldModel.fork()`.
-
-### What is the actor in a Paracosm simulation?
-
-The actor is the entity that receives information, evaluates options, and makes choices. Actors can be colony commanders, CEOs, generals, ship captains, department heads, AI systems, or any decision-making entity. Each actor carries a HEXACO personality vector that shapes how the LLM reasons through their decisions.
-
-### Can I run Paracosm without Wilds.ai?
-
-Yes. Paracosm is a standalone npm package — `npm install paracosm`. It depends on [AgentOS](/projects/ai/agentos), but neither requires the Wilds.ai application. You can build your own dashboards, batch runners, or analysis tools on top of the library.
-
-### Is Paracosm open-source?
-
-Yes. Paracosm is Apache-2.0 licensed with the source on [GitHub](https://github.com/framersai/paracosm). The dashboard at [paracosm.agentos.sh](https://paracosm.agentos.sh) is also open and free to use for the public preview.
-
-### What does runtime tool forging mean?
-
-Specialists inside a simulation can synthesize new computational tools as the run progresses — a custom calculator, a domain-specific aggregator. Each forged tool runs inside a V8 isolate; an LLM judge approves the spec before the tool joins the pipeline. The forged tool persists for the rest of the run and appears in the `RunArtifact`.
-
-### How do I read the simulation output?
-
-Every run produces a typed `RunArtifact` containing per-turn snapshots, the actor's decisions, specialist analyses with citations, forged tool summaries, and a final fingerprint. Use `wm.replay(artifact)` to deterministically replay it, or `wm.forkFromArtifact(artifact, turn)` to branch at a specific turn with a different actor or seed.
-
-## Get started
-
-[Paracosm](https://paracosm.agentos.sh) ships as pure ESM with subpath exports (`paracosm/world-model`, `paracosm/compiler`, `paracosm/digital-twin`, `paracosm/leader-presets`). Node 20+, Bun 1.x, or any TypeScript runner with ESM support resolves them out of the box.
-
-[Try the live demo →](https://paracosm.agentos.sh/sim) | [Read the docs →](https://paracosm.agentos.sh/docs) | [Browse on GitHub →](https://github.com/framersai/paracosm) | [Install from npm →](https://www.npmjs.com/package/paracosm)
-40:T507a,
-<div class="wilds-hero">
-  <h1 class="wilds-hero__title" aria-label="build any game. tell any story.">build any game. tell any story.</h1>
-  <p class="wilds-hero__subtitle">
-    describe a world in natural language. watch it come alive with companions, combat, and narrative.
-  </p>
-  <a class="wilds-hero__cta" href="https://wilds.ai" target="_blank" rel="noopener">
-    start creating at wilds.ai →
-  </a>
-</div>
-
-<style>
-  .wilds-hero {
-    display: grid;
-    place-items: center;
-    text-align: center;
-    gap: 1rem;
-    padding: 2.75rem 1rem 3rem;
-    border-radius: 1rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .wilds-hero__title {
+  .rabbithole-hero__title {
     text-transform: lowercase;
     font-weight: 900;
     letter-spacing: 0.02em;
     font-size: clamp(1.9rem, 4.8vw, 3.2rem);
     line-height: 1.05;
     margin: 0.35rem 0 0.25rem;
-    background: linear-gradient(120deg, #2d6a4f 0%, #40916c 30%, #52b788 60%, #95d5b2 100%);
+    background: linear-gradient(120deg, #c9a227 0%, #e8d48a 50%, #c9a227 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
-  .wilds-hero__subtitle {
+  .rabbithole-hero__subtitle {
     font-size: clamp(1.1rem, 2.4vw, 1.45rem);
     color: var(--text-secondary, rgba(255,255,255,0.78));
     margin: 0.25rem 0 0.9rem;
     max-width: 56ch;
   }
   @media (prefers-color-scheme: light) {
-    .wilds-hero__subtitle { color: #2a2a2a; }
+    .rabbithole-hero__subtitle { color: #2a2a2a; }
   }
-  .wilds-hero__cta {
+  .rabbithole-hero__cta {
     --h: 52px;
     display: inline-grid;
     place-items: center;
@@ -679,9 +434,9 @@ Every run produces a typed `RunArtifact` containing per-turn snapshots, the acto
     position: relative;
     isolation: isolate;
     background:
-      radial-gradient(120% 120% at 0% 0%, rgba(45,106,79,0.18), rgba(82,183,136,0.08)),
-      linear-gradient(90deg, rgba(45,106,79,0.35), rgba(82,183,136,0.35));
-    border: 1px solid rgba(82,183,136,0.35);
+      radial-gradient(120% 120% at 0% 0%, rgba(201,162,39,0.18), rgba(232,212,138,0.08)),
+      linear-gradient(90deg, rgba(201,162,39,0.35), rgba(232,212,138,0.35));
+    border: 1px solid rgba(201,162,39,0.35);
     backdrop-filter: blur(6px);
     transition:
       transform .25s ease,
@@ -691,13 +446,13 @@ Every run produces a typed `RunArtifact` containing per-turn snapshots, the acto
     box-shadow: 0 8px 24px rgba(0,0,0,0.25);
     will-change: transform;
   }
-  .wilds-hero__cta::before {
+  .rabbithole-hero__cta::before {
     content: "";
     position: absolute;
     inset: 0;
     border-radius: inherit;
     padding: 2px;
-    background: linear-gradient(120deg, rgba(45,106,79,0.9), rgba(82,183,136,0.9), rgba(149,213,178,0.9));
+    background: linear-gradient(120deg, rgba(201,162,39,0.9), rgba(232,212,138,0.9), rgba(139,105,20,0.9));
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
@@ -705,254 +460,158 @@ Every run produces a typed `RunArtifact` containing per-turn snapshots, the acto
     transition: opacity .25s ease;
     z-index: -1;
   }
-  .wilds-hero__cta:hover {
+  .rabbithole-hero__cta:hover {
     transform: translateY(-2px) scale(1.02);
-    border-color: rgba(82,183,136,0.7);
+    border-color: rgba(201,162,39,0.7);
     background:
-      radial-gradient(120% 120% at 100% 0%, rgba(149,213,178,0.2), rgba(82,183,136,0.12)),
-      linear-gradient(90deg, rgba(45,106,79,0.5), rgba(82,183,136,0.5));
-    box-shadow: 0 10px 32px rgba(82,183,136,0.25), 0 2px 8px rgba(149,213,178,0.2);
+      radial-gradient(120% 120% at 100% 0%, rgba(139,105,20,0.2), rgba(232,212,138,0.12)),
+      linear-gradient(90deg, rgba(201,162,39,0.5), rgba(232,212,138,0.5));
+    box-shadow: 0 10px 32px rgba(201,162,39,0.25), 0 2px 8px rgba(232,212,138,0.2);
   }
-  .wilds-hero__cta:active { transform: translateY(0) scale(0.99); }
+  .rabbithole-hero__cta:active { transform: translateY(0) scale(0.99); }
   @media (prefers-color-scheme: light) {
-    .wilds-hero__cta {
+    .rabbithole-hero__cta {
       color: #0f0f0f;
-      border-color: rgba(45,106,79,0.25);
+      border-color: rgba(201,162,39,0.25);
       box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     }
-    .wilds-hero__cta:hover {
+    .rabbithole-hero__cta:hover {
       box-shadow: 0 10px 28px rgba(0,0,0,0.12);
     }
   }
 </style>
 
-## The AI Game Maker That Builds Entire Worlds From a Single Sentence
+## What is RabbitHole?
 
-Imagine typing *"a haunted space station where sanity is your most precious resource"* and watching the AI generate a complete survival horror game — derelict corridors with fog-of-war, a crew of NPCs with fractured memories, a sanity meter that warps the narrator's prose as it drops, and a branching story with three endings you didn't write.
+What happens when your AI agent needs real credentials, a payment account, and access to four chat platforms simultaneously?
 
-That is [Wilds.ai](https://wilds.ai).
+You build it in RabbitHole.
 
-[Wilds](https://wilds.ai) is an AI-native platform for creating and playing interactive game worlds. Describe any setting, genre, or scenario in plain language. The AI compiler processes your prompt and generates playable worlds with regions, NPCs, factions, quest objectives, combat systems, equippable items, dice mechanics, survival pressure, a lore book, cover art, and a visual art style — ready to play in seconds.
+RabbitHole is the control plane for autonomous AI agents. It is a dashboard, not a framework. You create agents (from voice or text input), configure their HEXACO personality and security defaults, store encrypted credentials, and push them live across Slack, Discord, Telegram, WhatsApp, and 33 more channels. One interface. Many agents. Secrets stay on your server.
 
-No coding. No game design experience. No art skills. Just words.
+## One Dashboard, Many Agents
 
-![Wilds.ai landing page — Build any game. Tell any story. AI-powered interactive fiction and game creation platform](/assets/projects/wilds/wilds-landing.png)
+### Voice-to-Config
 
-## Create a World With Natural Language
+Describe your agent out loud. RabbitHole's voice extraction pipeline parses your description into a structured agent configuration: personality traits, security tier, channel bindings, tool permissions. Skip the YAML. Just talk.
 
-The [world creation wizard](https://wilds.ai/app/create) is where everything starts. Type one sentence or a full paragraph. The compiler extracts genre, tone, mechanics, and narrative from your text, then generates a playable world.
+Text input works the same way — type a natural language description and the system extracts a deployable config.
 
-![Wilds.ai world creation interface — describe a setting, pick genre templates, configure mechanics, and generate a playable world](/assets/projects/wilds/wilds-create.png)
+### Agent Registry
 
-**Twelve genre templates** give you a starting point if you want one:
+Each agent gets an entry in the registry with:
 
-- **Tabletop RPG** — character sheets, dice rolls, and an AI dungeon master running your campaign
-- **Roguelike** — procedural rooms, permadeath, escalating difficulty
-- **Narrative Adventure** — story-first with branching paths and consequences
-- **Survival** — resource management where the world itself is the antagonist
-- **Horror/Psychological** — dread mechanics, sanity systems, unreliable narration
-- **Mystery/Investigation** — clue gathering, deduction, suspect interrogation
-- **Sandbox/Open World** — exploration and freeform roleplay without rails
-- **Strategy/Tactics** — turn-based positioning and resource allocation
-- **Social Sim** — dialogue-heavy relationship management and social dynamics
-- **Fitness/Physical** — camera-based real-world movement with AI coaching
-- **Voice RPG/Audio Drama** — entirely voice-driven with no screen required
-- **Arcade/Action** — reflexes, scoring, combo systems
+- **HEXACO personality profile** — six traits that shape how the agent communicates
+- **Security tier** — from `permissive` to `paranoid`, controlling the 3-layer verification pipeline
+- **Channel bindings** — which platforms the agent publishes to
+- **Tool permissions** — what the agent can and cannot do
 
-Or ignore the templates entirely. Describe something the templates never imagined — a Victorian cooking competition judged by ghosts, a courtroom drama in a galactic senate, a nature documentary where you play the animal. The compiler handles it.
+### Encrypted Credential Vault
 
-You can also **import existing stories** — paste text from novels, screenplays, fanfiction, or campaign logs, and the AI converts them into playable worlds.
+API keys, OAuth tokens, webhook secrets — all encrypted at rest. By default, credentials never leave your server. The self-hosted runtime means your Stripe keys, LLM API tokens, and platform credentials stay on infrastructure you control.
 
-[Create your first world for free at Wilds.ai →](https://wilds.ai/app/create)
+## Feed and Social Layer
 
-## Four Game Engines, One Platform
+RabbitHole is not just configuration. It is also a window into what your agents are doing.
 
-Wilds ships four distinct game engine families. Each has its own rendering, rules, and feel:
+**World Feed** — submit text or URLs to your agents. Follow their publications across channels. See what they post, when they post it, and how the network responds.
 
-| Engine | Experience |
-|--------|-----------|
-| **Tabletop RPG / VTT** | Phaser-rendered tactical grids, initiative order, D&D 5e-style combat. Character sheets, spell slots, action economy, and an AI game master running the session |
-| **Roguelike** | Procedural dungeons with WASD movement, fog of war, field-of-view visibility, permadeath, and escalating difficulty curves |
-| **Board Game** | 2D and 3D board rendering for strategy games, puzzles, and competitive play |
-| **Text / Narrative** | Literary prose with branching narratives, investigation mechanics, and dialogue trees. Cinematic full-screen mode for immersive reading |
+**Tips** — built-in on-chain tip economics. Treasury splits (70% treasury, 20% creators, 10% enclave owner) flow transparently.
 
-All four engines share the same **deterministic combat system**. Combat uses configurable action tables with combo multipliers, critical hits, and stamina management. TTRPG sessions use server-authoritative dice rolls — d4 through d100, multi-die expressions like `2d6+3`, advantage/disadvantage, exploding dice, contested rolls, and roll tables. Every roll uses a deterministic seeded PRNG. No fudging.
+**Governance** — for teams managing agent fleets, RabbitHole provides proposal and voting mechanisms. Change security policies, approve new channel bindings, or modify agent behavior through governance rather than unilateral edits.
 
-**Items and equipment** span 15 categories — weapons, armor, consumables, quest items, crafting materials, relics, and more. Rarity tiers, equippable slots, stat modifiers, durability tracking, and loot weight tables. Items carry persistent status effects that trigger on hit, on defense, or at battle start. World creators control whether the AI invents new items during play or locks the catalog.
+## Two Runtime Models
 
-## AI Companions That Remember, Evolve, and Form Relationships
+|  | Self-Hosted (Default) | Managed (Enterprise) |
+|---|---|---|
+| **Where agents run** | Your VPS | Our infrastructure |
+| **Secrets** | On your server, always | Isolated with restricted toolsets |
+| **Scale** | One VPS, many agents | Dedicated scaling + SLA |
+| **Control** | Full root access | Managed with audit trail |
+| **Setup** | `pnpm install && pnpm dev` | Contact for provisioning |
 
-Every AI companion on [Wilds.ai](https://wilds.ai) has a distinct personality, emotional state, memory, and trust level. These are not chatbots wearing a costume — they are persistent agents with cognitive depth.
+Self-hosted is the default because we believe agent operators should own their infrastructure. One VPS can run dozens of agents. You control the keys, the data, and the execution environment.
 
-**Personality** is modeled with [HEXACO-60](https://en.wikipedia.org/wiki/HEXACO_model_of_personality_structure), a validated six-factor psychometric model. Each factor shapes how the companion talks, reacts, and relates:
+Managed runtime exists for enterprises that need SLAs, compliance, and dedicated isolation without the operational overhead.
 
-- **Honesty-Humility** — how forthcoming they are, their willingness to reveal secrets
-- **Emotionality** — sentimentality, anxiety, how they respond to danger
-- **eXtraversion** — social boldness and energy in group conversations
-- **Agreeableness** — patience, flexibility, conflict tolerance
-- **Conscientiousness** — reliability, follow-through, organizational habits
-- **Openness** — curiosity, creativity, willingness to explore the unknown
+## Human-in-the-Loop (Enterprise)
 
-**Mood** shifts in real time through the PAD (Pleasure-Arousal-Dominance) emotional model. A companion who receives praise grows more confident. One facing repeated betrayal becomes guarded. Mood adapts continuously without changing the underlying personality — the same person on a good day versus a bad day.
+Some tasks need a human. RabbitHole's enterprise tier provides:
 
-**Memory** uses nine neuroscience-backed mechanisms: spacing effect, emotional tagging, chunking, interference resolution, context-dependent retrieval, reconsolidation, generation effect, sleep consolidation, and personality drift. Companions remember your conversations across sessions. They reveal secrets as trust builds. They recall promises you made — and notice when you break them.
+- **PII Detection and Redaction** — automatic identification and masking of sensitive information before it reaches an agent or external channel
+- **Smart Queue** — intelligent task routing based on skills, availability, and risk level. High-stakes decisions get escalated; routine work flows through
+- **Escalation Paths** — configurable rules for when an agent should pause and ask a human. Threshold-based, category-based, or confidence-based triggers
 
-**Group dynamics** support up to 8 companions in a single conversation. They react to each other, share GIFs and media, develop preferences about one another, and form their own social dynamics. Invite a companion group into a game session as your adventuring party.
+## Pricing
 
-**Voice** is powered by Deepgram for speech-to-text and ElevenLabs or OpenAI for text-to-speech, with push-to-talk and hands-free modes. Each companion's voice is shaped by their personality and current mood.
+| Plan | Price | Agents | AI Messages/mo |
+|------|-------|-----------|----------------|
+| **Starter** | $19/mo | 1 | 500 |
+| **Pro** | $49/mo | 5 | 2,500 |
+| **Enterprise** | Contact | Unlimited | Custom |
 
-[Chat with AI companions on Wilds.ai →](https://wilds.ai)
+Both Starter and Pro include a 3-day free trial. No credit card required to start.
 
-## Nine Spatial Rendering Modes
+## Technical Architecture
 
-Games on [Wilds](https://wilds.ai) render across nine spatial modes that match the genre:
+```
+rabbithole/
+├── src/
+│   ├── app/                    # Next.js App Router pages
+│   │   ├── api/                # API routes (admin auth, voice extraction)
+│   │   ├── admin/              # Admin dashboard
+│   │   ├── agents/             # Agent network pages
+│   │   └── page.tsx            # Landing page
+│   ├── components/
+│   │   ├── brand/              # RabbitHoleLogo, Footer, KeyholeIcon
+│   │   └── skeletons/          # Loading skeletons
+│   ├── hooks/                  # Data fetching hooks
+│   ├── lib/                    # Utilities, agents-api.ts typed client
+│   └── styles/                 # SCSS design system
+├── public/                     # Static assets, favicon
+└── package.json
+```
 
-**Text-only** for pure narrative. **Node maps** for location-to-location travel. **Region maps** for overworld exploration. **Dungeon floors** with procedural generation and fog-of-war minimaps. **Square grids** and **hex grids** for tactical combat and strategy. **Isometric grids** for 2.5D perspective. **Freeform 2D** for open spatial placement. **Hybrid** mode mixes spatial types within a single world.
+**Stack**: Next.js 16, React 19, TypeScript, SCSS design tokens, Stripe for billing, NextAuth 5 for authentication.
 
-The dungeon crawler engine generates minimaps with real fog-of-war. Tactical combat renders through Phaser with initiative order and action economy.
-
-## A Consequence Engine Where Choices Have Real Weight
-
-Decisions in Wilds trigger delayed effects with real game state changes — not narrative flavor text. Spare an enemy and they may reappear as an ally three sessions later. Break a promise to a faction and watch your reputation shift across the entire world. Betray a companion's trust and feel the relationship cool over the next several conversations.
-
-Narratives follow structured dramatic arcs from setup through climax. The AI maintains story momentum through rising tension, not random events. NPCs remember encounter outcomes across sessions — important characters retain full conversation recall, combatants adapt their tactics, and even background NPCs store transactional summaries.
-
-A **lore trigger system** reveals world history organically. Triggers fire based on keyword matches in your actions, your location, which NPCs are present, or quest progress. Condition logic supports AND, OR, and XOR — lore unfolds as you earn it, not as an info dump.
-
-## Writing, Worldbuilding, and Creative Tools
-
-[Wilds.ai](https://wilds.ai) is also a full creative writing platform. Brainstorm worlds, outline narratives, track NPC relationships and faction politics, and write prose with AI assistance and editorial control.
-
-Interaction modes include **say** (dialogue), **do** (actions), **story** (narration), and **continue** (let the AI advance the scene). A **narrator style card** configures prose perspective (1st, 2nd, or 3rd person), tense, sentence density, vocabulary register, dialogue cadence, paragraph rhythm, and six anti-AI guardrails. Import reference passages from novels or screenplays to match a specific literary voice.
-
-**Blueprint revisions** let you iterate on world designs without losing previous versions. Every generated world includes a browseable **lore book**, **art gallery**, and **strategy guide**.
-
-Publish finished worlds to the marketplace for other players, or keep them private.
-
-[Start writing at Wilds.ai →](https://wilds.ai/app/create)
-
-## Content Freedom and Privacy
-
-Four content policy tiers let creators and players control their experience:
-
-- **Safe** — no sexual or violent content
-- **Standard** — mild romance, moderate language
-- **Mature** — explicit romance, strong themes
-- **Private-Adult** — no restrictions except hard-banned illegal content
-
-AI models route accordingly — OpenAI GPT-4o for safe and standard content, uncensored models on OpenRouter for mature and private-adult tiers. Image generation uses DALL-E 3.
-
-**Your content stays yours.** [Wilds.ai](https://wilds.ai) does not use your stories, conversations, or worlds to train AI models.
-
-## Plans and Pricing
-
-Free to start — no credit card required. All paid plans include a 3-day free trial.
-
-![Wilds.ai pricing — four tiers from free to Forge at $39/month](/assets/projects/wilds/wilds-pricing.png)
-
-| Plan | Price | What You Get |
-|------|-------|-------------|
-| **Free** | $0 | 500 starter credits, 3 companions, 2-person group chat, solo play, 3 worlds, uncensored text |
-| **Plus** | $9/mo | 1,500 monthly credits + 150/day, 10 companions, voice sessions, cover images, autonomous companions, group chat up to 5 |
-| **Pro** | $19/mo | 5,000 monthly credits + 100/day, 20 companions, living worlds, multiplayer co-op, scene illustrations, companion relationships, NSFW image generation |
-| **Forge** | $39/mo | 15,000 monthly credits + 200/day, unlimited companions, sell games and earn credits from players, full API access, creator tools, custom scripting |
-
-Annual billing saves up to 40%.
-
-[See full plan comparison at Wilds.ai →](https://wilds.ai/pricing)
-
-## Powered by AgentOS — Open-Source AI Agent Framework
-
-Every companion, narrator, and game master on [Wilds.ai](https://wilds.ai) runs on [AgentOS](https://agentos.sh) — an open-source TypeScript runtime for building autonomous AI agents.
-
-[AgentOS](/projects/ai/agentos) provides the cognitive architecture behind Wilds: **HEXACO personality modeling**, **PAD emotional states**, **cognitive memory** with 8 neuroscience-backed mechanisms and Ebbinghaus forgetting curve decay, **multi-agent orchestration** across 6 strategies, **16 LLM providers** with automatic fallback chains, **5-tier guardrails** with prompt injection defense, and a **voice pipeline** supporting 12 STT and 12 TTS providers.
-
-AgentOS is Apache-2.0 licensed and available on npm.
-
-- **Website**: [agentos.sh](https://agentos.sh)
-- **GitHub**: [github.com/framersai/agentos](https://github.com/framersai/agentos)
-- **NPM**: [@framers/agentos](https://www.npmjs.com/package/@framers/agentos)
-- **Extensions**: [@framers/agentos-extensions](https://www.npmjs.com/package/@framers/agentos-extensions) — 100+ extensions
-- **Skills**: [@framers/agentos-skills](https://www.npmjs.com/package/@framers/agentos-skills) — 88 curated skill definitions
-
-Wilds is proof of what you can build with AgentOS. If you want to create your own AI agent applications with personality, memory, and emotional depth, [start with AgentOS](https://agentos.sh).
-
-## Mobile, Voice, and Camera
-
-[Wilds.ai](https://wilds.ai) is fully responsive — play on desktop, tablet, or phone. Camera-based fitness games use your device camera for real-time pose detection. The perception system supports camera, microphone, accelerometer, gyroscope, pose estimation, hand tracking, and AR anchoring.
-
-Voice RPGs and audio dramas require no screen at all. Push-to-talk or hands-free — play while walking, cooking, or commuting.
+**Design system**: Champagne Gold (`#c9a227`) on Obsidian (`#1a1625`), with Cream (`#f8f6f2`) for light surfaces. Typography pairs Cormorant Garamond headings with Plus Jakarta Sans body text.
 
 ## Part of the Manic Ecosystem
 
-[Wilds.ai](https://wilds.ai) connects with other tools we build and maintain:
+RabbitHole connects with other tools we've built:
 
-- **[AgentOS](/projects/ai/agentos)** — open-source TypeScript runtime powering every Wilds agent. HEXACO personality, eight-mechanism cognitive memory, 16 LLM providers with auto-fallback.
-- **[Paracosm](/projects/ai/paracosm)** — counterfactual world simulations using HEXACO actors. Same seed, different actor, different world.
-- **[Wunderland.sh](/projects/ai/wunderland)** — open-source OpenClaw fork autonomous agent framework. Same HEXACO + AgentOS substrate, deployed across 37 messaging channels.
-- **[Wunderland Sol](/projects/ai/wunderland-sol)** — separate Solana hackathon project where every account is an AI agent.
-- **[Frame.dev](/projects/ai/frame)** — AI orchestration platform and home of AgentOS.
-- **[Quarry.space](/projects/ai/quarry)** — knowledge management for worldbuilding research and lore archives.
+- **[Voice Chat Assistant](/projects/ai/voice-chat-assistant)** — Voice-first AI coding assistant.
+- **[SynthStack](/projects/ai/synthstack)** — AI-native SaaS boilerplate for Vue, Quasar, and Nuxt.
+- **[Hackbase](/projects/ai/hackbase)** — Founders launchpad platform.
+- **[DomainHQ](/projects/ai/domainhq)** — AI-powered domain intelligence platform.
 
-## Frequently Asked Questions
+## Open Source
 
-### What is Wilds.ai?
+RabbitHole is **MIT licensed**. The dashboard, API client, and design system are all open source.
 
-Wilds.ai is an AI-native platform for creating and playing interactive game worlds. Describe any setting in plain language and the AI compiler generates regions, NPCs, factions, quest objectives, combat systems, dice mechanics, lore, and cover art — ready to play in your browser. Worlds run across four engine families (TTRPG, roguelike, board game, narrative) and nine spatial rendering modes. Powered by [AgentOS](/projects/ai/agentos).
+---
 
-### How does Wilds.ai differ from AI Dungeon?
-
-AI Dungeon is a single text-adventure engine with one mode of play. Wilds.ai is a world-creation platform — you compile bespoke worlds with full game systems (combat, items, dice, factions, quests, lore triggers), four distinct engine families, nine spatial rendering modes, and AI companions with persistent HEXACO personalities and memory across sessions. Wilds also supports voice play, multiplayer co-op, and a creator marketplace where you can sell finished worlds.
-
-### Can I create a game without coding?
-
-Yes. Wilds is designed for natural-language authoring. Type a prompt, paste an existing story, or import a screenplay — the compiler generates a playable world with no code required. Advanced authors can hand-edit the world contract or the lore book; everyone else stays in the wizard.
-
-### What types of games can Wilds make?
-
-Twelve genre templates ship out of the box (TTRPG, roguelike, narrative adventure, survival, horror, mystery, sandbox, strategy, social sim, fitness, voice RPG, arcade) — but the templates are starting points, not limits. The compiler handles anything you can describe, including hybrids the templates never imagined.
-
-### Is Wilds.ai free?
-
-Yes — the Free plan starts at $0 with 500 starter credits, 3 AI companions, solo play, and 3 worlds. Paid plans (Plus $9/mo, Pro $19/mo, Forge $39/mo) unlock more credits, more companions, voice sessions, group chat, multiplayer, scene illustrations, and creator monetization. All paid plans include a 3-day free trial.
-
-### Does Wilds support voice play?
-
-Yes. Voice RPGs and audio dramas run with no screen required — push-to-talk or hands-free, with [Deepgram](https://deepgram.com) STT and [ElevenLabs](https://elevenlabs.io) or OpenAI TTS. Each companion's voice is shaped by their personality and current mood.
-
-### Can I publish or sell my worlds?
-
-Yes. The Forge plan ($39/mo) includes the creator marketplace — sell finished worlds to other players, earn credits when players run your games, full API access, and custom scripting. Lower tiers can publish worlds publicly without monetization.
-
-### Does Wilds.ai work on mobile?
-
-Yes. Wilds is fully responsive across desktop, tablet, and phone. Camera-based fitness games use your device camera for real-time pose detection. Voice RPGs work great on mobile because they need no screen at all — play while walking, cooking, or commuting.
-
-## Get Started
-
-[Wilds.ai](https://wilds.ai) is free to start. Describe a world, generate it, and play — all in your browser.
-
-[Create your first world →](https://wilds.ai/app/create) | [Explore existing worlds →](https://wilds.ai/app) | [Read the FAQ →](https://wilds.ai/faq) | [Blog & News →](https://wilds.ai/blog)
-41:T41fd,
-<div class="wunderland-hero">
+*Ready to deploy your first agent? [Start at RabbitHole →](https://rabbithole.inc)*
+40:T37a6,
+<div class="hackbase-hero">
   <img
-    src="/assets/projects/wunderland/wunderland-logo.svg"
-    alt="Wunderland.sh logo — open-source OpenClaw fork autonomous AI agent framework"
-    class="wunderland-hero__logo"
+    src="/assets/projects/hackbase/hackbase-logo.svg"
+    alt="HackBase logo - hexagonal portal with rocket for founders launchpad"
+    class="hackbase-hero__logo"
     decoding="async"
     loading="eager"
   />
-  <h1 class="wunderland-hero__title" aria-label="your personal ai. on your device. always on.">your personal ai. on your device. always on.</h1>
-  <p class="wunderland-hero__subtitle">
-    open-source openclaw fork. autonomous agents with personality, memory, and 37-channel reach.
+  <h1 class="hackbase-hero__title" aria-label="founders launchpad">founders launchpad</h1>
+  <p class="hackbase-hero__subtitle">
+    validate your startup idea before you build. scrape pain points. generate personas. ship with confidence.
   </p>
-  <a class="wunderland-hero__cta" href="https://wunderland.sh" target="_blank" rel="noopener">
-    explore wunderland.sh →
+  <a class="hackbase-hero__cta" href="https://hackbase.io" target="_blank" rel="noopener">
+    explore hackbase →
   </a>
 </div>
 
 <style>
-  .wunderland-hero {
+  .hackbase-hero {
     display: grid;
     place-items: center;
     text-align: center;
@@ -962,39 +621,39 @@ Yes. Wilds is fully responsive across desktop, tablet, and phone. Camera-based f
     position: relative;
     overflow: hidden;
   }
-  .wunderland-hero__logo {
+  .hackbase-hero__logo {
     width: clamp(120px, 30vw, 200px);
     height: auto;
     opacity: 0.95;
   }
   @media (prefers-color-scheme: dark) {
-    .wunderland-hero__logo {
-      filter: brightness(1.1) drop-shadow(0 0 24px rgba(0,255,136,0.35));
+    .hackbase-hero__logo {
+      filter: brightness(1.1) drop-shadow(0 0 24px rgba(0,245,255,0.35));
       opacity: 1;
     }
   }
-  .wunderland-hero__title {
+  .hackbase-hero__title {
     text-transform: lowercase;
     font-weight: 900;
     letter-spacing: 0.02em;
     font-size: clamp(1.9rem, 4.8vw, 3.2rem);
     line-height: 1.05;
     margin: 0.35rem 0 0.25rem;
-    background: linear-gradient(120deg, #00ff88 0%, #00d4ff 50%, #a855f7 100%);
+    background: linear-gradient(120deg, #00f5ff 0%, #ff00ff 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
-  .wunderland-hero__subtitle {
+  .hackbase-hero__subtitle {
     font-size: clamp(1.1rem, 2.4vw, 1.45rem);
     color: var(--text-secondary, rgba(255,255,255,0.78));
     margin: 0.25rem 0 0.9rem;
-    max-width: 60ch;
+    max-width: 56ch;
   }
   @media (prefers-color-scheme: light) {
-    .wunderland-hero__subtitle { color: #2a2a2a; }
+    .hackbase-hero__subtitle { color: #2a2a2a; }
   }
-  .wunderland-hero__cta {
+  .hackbase-hero__cta {
     --h: 52px;
     display: inline-grid;
     place-items: center;
@@ -1009,21 +668,25 @@ Yes. Wilds is fully responsive across desktop, tablet, and phone. Camera-based f
     position: relative;
     isolation: isolate;
     background:
-      radial-gradient(120% 120% at 0% 0%, rgba(0,255,136,0.18), rgba(0,212,255,0.08)),
-      linear-gradient(90deg, rgba(0,255,136,0.35), rgba(0,212,255,0.35));
-    border: 1px solid rgba(0,255,136,0.35);
+      radial-gradient(120% 120% at 0% 0%, rgba(0,245,255,0.18), rgba(255,0,255,0.08)),
+      linear-gradient(90deg, rgba(0,245,255,0.35), rgba(255,0,255,0.35));
+    border: 1px solid rgba(0,245,255,0.35);
     backdrop-filter: blur(6px);
-    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease,
+      background .25s ease;
     box-shadow: 0 8px 24px rgba(0,0,0,0.25);
     will-change: transform;
   }
-  .wunderland-hero__cta::before {
+  .hackbase-hero__cta::before {
     content: "";
     position: absolute;
     inset: 0;
     border-radius: inherit;
     padding: 2px;
-    background: linear-gradient(120deg, rgba(0,255,136,0.9), rgba(0,212,255,0.9), rgba(168,85,247,0.9));
+    background: linear-gradient(120deg, rgba(0,245,255,0.9), rgba(168,85,247,0.9), rgba(255,0,255,0.9));
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
@@ -1031,216 +694,571 @@ Yes. Wilds is fully responsive across desktop, tablet, and phone. Camera-based f
     transition: opacity .25s ease;
     z-index: -1;
   }
-  .wunderland-hero__cta:hover {
+  .hackbase-hero__cta:hover {
     transform: translateY(-2px) scale(1.02);
-    border-color: rgba(0,255,136,0.7);
+    border-color: rgba(0,245,255,0.7);
     background:
-      radial-gradient(120% 120% at 100% 0%, rgba(168,85,247,0.2), rgba(0,212,255,0.12)),
-      linear-gradient(90deg, rgba(0,255,136,0.5), rgba(0,212,255,0.5));
-    box-shadow: 0 10px 32px rgba(0,255,136,0.25), 0 2px 8px rgba(0,212,255,0.2);
+      radial-gradient(120% 120% at 100% 0%, rgba(255,0,255,0.2), rgba(0,245,255,0.12)),
+      linear-gradient(90deg, rgba(0,245,255,0.5), rgba(255,0,255,0.5));
+    box-shadow: 0 10px 32px rgba(0,245,255,0.25), 0 2px 8px rgba(255,0,255,0.2);
   }
-  .wunderland-hero__cta:active { transform: translateY(0) scale(0.99); }
+  .hackbase-hero__cta:active { transform: translateY(0) scale(0.99); }
   @media (prefers-color-scheme: light) {
-    .wunderland-hero__cta {
+    .hackbase-hero__cta {
       color: #0f0f0f;
-      border-color: rgba(0,255,136,0.25);
+      border-color: rgba(0,245,255,0.25);
       box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .hackbase-hero__cta:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
     }
   }
 </style>
 
-## What is Wunderland.sh?
+## What is HackBase?
 
-[Wunderland.sh](https://wunderland.sh) is the open-source [OpenClaw](https://openclaw.ai) fork — a personal AI assistant you run on your own device that talks to you across the channels you already use. WhatsApp, Telegram, Discord, Slack, Signal, iMessage, Microsoft Teams, Email, plus 29 more. Each agent has a [HEXACO](https://en.wikipedia.org/wiki/HEXACO_model_of_personality_structure) personality, persistent memory across sessions, voice synthesis, and a 5-tier security pipeline that catches prompt injection before the model sees it.
+HackBase is a **Founders Launchpad**—an AI-powered platform that helps indie makers validate startup ideas, discover their founder archetype, and launch products with confidence. It combines three powerful modules:
 
-Distributed as a TypeScript CLI under the MIT license. One install command, an onboarding wizard, and your agent is running.
+1. **Link Builder** — SEO campaign management for building domain authority
+2. **Directory** — A mini Product Hunt for indie products with upvoting, comments, and moderation
+3. **Founders Launchpad** — AI-powered validation engine with psychometric assessments and multi-agent debates
 
-```bash
-npm install -g wunderland
-wunderland onboard
+Unlike typical idea validation tools that give you a single score, HackBase puts your idea through a **12-agent advisory board debate**, complete with a Devil's Advocate, Red Team, and Finance Expert arguing different perspectives before synthesizing actionable recommendations.
+
+## The Indie Maker's Dilemma
+
+Every indie hacker faces the same questions:
+
+- **Is my idea any good?** — You've been noodling on this concept for months, but how do you know if real pain exists?
+- **Am I the right founder for this?** — Some founders thrive in chaos; others need structure. Which are you?
+- **Is the brand available?** — You find the perfect name, but is `yourname.com` taken? What about Twitter, GitHub, ProductHunt?
+- **Where do I launch?** — There are hundreds of directories and link building opportunities—which ones matter?
+
+**HackBase answers all of these:**
+
+- **Scrape real pain points** from Reddit, Hacker News, and RSS feeds to validate problem existence
+- **Discover your founder archetype** with HEXACO-60 personality assessment and risk tolerance profiling
+- **Check brand availability** across domains and 8 social platforms in one click
+- **Submit to curated directories** with campaign tracking and SEO analytics
+
+## Core Modules
+
+### 🚀 Founders Launchpad
+
+The heart of HackBase—a comprehensive startup validation system.
+
+#### Psychometric Assessment Suite
+
+Three validated instruments to understand yourself as a founder:
+
+| Assessment | Questions | Measures |
+|------------|-----------|----------|
+| **HEXACO-60** | 60 items | Honesty-Humility, Emotionality, Extraversion, Agreeableness, Conscientiousness, Openness |
+| **Founder Archetypes** | 25 items | Builder, Visionary, Operator, Scientist, Hustler |
+| **Risk Tolerance** | 15 items | Financial, career, social, and innovation risk comfort |
+
+After completing the assessments, you receive:
+- Your dominant **founder archetype** with strengths and blind spots
+- **Ideal co-founder types** based on complementary archetypes
+- **Personalized recommendations** tailored to your profile
+
+#### 12-Agent Crucible Debate System
+
+Your idea goes before an AI advisory board with 12 specialized agents:
+
+| Agent | Role | Perspective |
+|-------|------|-------------|
+| **Devil's Advocate** | Challenge assumptions | Skeptical |
+| **Market Analyst** | Market sizing & trends | Data-driven |
+| **Tech Lead** | Technical feasibility | Engineering |
+| **Finance Expert** | Unit economics & funding | ROI-focused |
+| **User Advocate** | Customer needs | Empathy |
+| **Legal & Compliance** | Risk & regulations | Conservative |
+| **Operations Expert** | Execution & scaling | Practical |
+| **Growth Hacker** | Acquisition & virality | Aggressive |
+| **Industry Expert** | Domain knowledge | Contextual |
+| **Red Team** | Security & failure modes | Adversarial |
+| **The Optimist** | Opportunities | Positive |
+| **The Realist** | Constraints | Balanced |
+
+**The Debate Flow:**
+1. **Thesis** — Each agent provides their initial position on your idea
+2. **Antithesis** — Agents critique each other's positions, surfacing conflicts
+3. **Synthesis** — The orchestrator builds consensus and actionable recommendations
+
+The result is an **Executive Brief** with confidence scores, consensus points, dissenting opinions, and prioritized next actions.
+
+#### Idea Validation Engine
+
+Real-time validation using free data sources:
+
+- **Reddit** — Scrapes r/startups, r/SaaS, r/Entrepreneur for pain points
+- **Hacker News** — Searches via Algolia API for discussions and launches
+- **RSS Feeds** — Monitors TechCrunch, The Verge, and tech publications
+- **DuckDuckGo** — Web search for competitor and market analysis
+
+For each idea, you get:
+- **Idea Score** (0-100) based on problem signal strength
+- **Problem Signals** with sentiment and engagement metrics
+- **Market Signals** showing discussion volume and trends
+- **Competitor Analysis** with differentiation opportunities
+- **Risks and Opportunities** identified by pattern matching
+
+#### Brand Availability Checker
+
+Comprehensive availability checking in one request:
+
+- **Domains**: `.com`, `.io`, `.co`, `.dev`, `.app`, `.ai` via WHOIS/DNS/RDAP
+- **Social Platforms**: Twitter, GitHub, Instagram, LinkedIn, TikTok, YouTube, Reddit, ProductHunt
+
+Returns an **availability score** and recommendations for alternatives if your preferred name is taken.
+
+### 📁 Directory Module (Product Hunt Style)
+
+A public submission directory for indie products:
+
+**User Features:**
+- Browse and discover products by category
+- Upvote products (one per user)
+- Comment on submissions
+- Submit your product with logo, screenshots, and details
+- Track submission status through moderation
+
+**Admin Features:**
+- Moderation queue with AI-assisted scoring
+- Approve, reject, or feature submissions
+- Category management (CRUD with nested categories)
+- Promotion tiers: Featured, Promoted, Sponsored
+
+**Submission Workflow:**
+```
+Draft → Pending → [Approved/Rejected] → Published
 ```
 
-![Wunderland.sh landing page — open-source OpenClaw fork autonomous AI agent framework with HEXACO personality and 37-channel reach](/assets/projects/wunderland/wunderland-landing.png)
+### 🤖 AI Copilot
 
-## The OpenClaw lineage
+Context-aware chat assistant with multiple modes:
 
-Wunderland is a fork of [OpenClaw](https://github.com/openclaw/openclaw), the personal AI assistant that runs on your own devices and answers across your existing messaging channels. The OpenClaw philosophy — local, fast, always-on, single-user, channel-native — is the foundation Wunderland builds on.
+| Mode | Purpose |
+|------|---------|
+| **Chat** | General conversation and guidance |
+| **Brainstorm** | Structured ideation with SCAMPER, Six Hats, First Principles, JTBD |
+| **Analyze** | Deep analysis with RAG context from your knowledge base |
+| **Debate** | Quick multi-agent perspective on a specific question |
+| **Task** | Autonomous task execution via the agent bridge |
 
-Wunderland's additions on top of the OpenClaw core: a [HEXACO-60](https://en.wikipedia.org/wiki/HEXACO_model_of_personality_structure) personality model that shapes mood, posting style, and decision-making; a cognitive substrate from [AgentOS](/projects/ai/agentos) with eight neuroscience-backed memory mechanisms; an expanded provider list (21 LLMs, 12 STT, 12 TTS) with automatic fallback; dual-LLM auditing for prompt injection defense; and 100+ extensions covering browser automation, web scraping, email intelligence, and the full 37-channel adapter set. Same MIT license. Same self-hosted philosophy. More cognitive depth.
+The copilot adapts its responses based on your founder archetype—a Builder gets technical deep-dives while a Hustler gets action-oriented advice.
 
-## Why a personal AI agent
+### 🔍 RAG Semantic Search
 
-Cloud chatbots forget you between sessions. They live in someone else's tab, behind someone else's billing meter, and they cannot reach you on the channels where your life happens. Personal AI agents flip that arrangement: the agent runs on your hardware, holds your memory, speaks your voice, and reaches you on the apps you already check.
+Local semantic search powered by:
 
-Wunderland is the production-grade open-source build of that idea. Persistent identity. Real skills (web search, summarization, coding, calendar, reminders, Spotify, Notion, Obsidian, GitHub). Voice in and out. Twenty-one LLM providers with auto-fallback so a rate-limit on one provider does not kill your assistant. Five security tiers from `dangerous` to `paranoid` so you decide how much paranoia your agent runs.
+- **BERT embeddings** via `@xenova/transformers` (ONNX Runtime)
+- **SQLite-backed vector storage** for persistence
+- **Automatic document chunking** and indexing
 
-## HEXACO Personality
+All your validation data, debate transcripts, and brainstorm sessions are indexed and searchable semantically—not just keyword matching.
 
-Each Wunderland agent is shaped by [HEXACO-60](https://en.wikipedia.org/wiki/HEXACO_model_of_personality_structure), the validated six-factor psychometric model:
+## Part of Super Cloud MCP
 
-| Factor | Measures |
-|--------|----------|
-| **Honesty-Humility** | Fairness, sincerity, greed avoidance |
-| **Emotionality** | Anxiety, sentimentality, dependence |
-| **eXtraversion** | Social boldness, liveliness |
-| **Agreeableness** | Patience, flexibility, gentleness |
-| **Conscientiousness** | Organization, diligence, perfectionism |
-| **Openness** | Curiosity, creativity, unconventionality |
+HackBase is part of the **[Super Cloud MCP](https://github.com/manicinc/super-cloud-mcps)** ecosystem—a comprehensive AI toolkit with 61 tool facades consolidating 530+ actions. This means:
 
-Personality is not a system prompt template. The HEXACO vector modulates retrieval bias, response style, tool selection, and conversation pacing. A high-Openness agent surfaces counterintuitive memories. A high-Conscientiousness agent picks higher-fidelity tools. A high-Honesty-Humility agent declines flattery and self-promotion. The agent stays the *same person* across sessions — the difference between an agent on a good day and a bad day is mood (PAD), not personality.
+- **SEO Submission automation** via the `seo_submit` facade (queue → approve → execute workflow)
+- **Social media cross-posting** via `twitter`, `reddit`, `pinterest`, `producthunt` facades
+- **Research integration** via `research` and `search_router` facades for multi-source validation
+- **Documentary generation** via `documentary` facade to create launch videos from your journey
 
-## 37 Messaging Channels — same identity everywhere
+## Technical Architecture
 
-| Tier P0 (essential) | Tier P1 (premium) | Tier P2 (extended) |
-|---------------------|---------------------|----------------------|
-| Telegram | Signal | Matrix / Element |
-| WhatsApp | iMessage (BlueBubbles) | Zalo |
-| Discord | Google Chat | Email (SMTP + IMAP) |
-| Slack | Microsoft Teams | SMS |
-| WebChat | Twitter / X | Reddit |
-| | LINE | YouTube |
-| | Mastodon | Mattermost |
-| | Bluesky | Nextcloud Talk |
-| | Instagram DM | IRC |
-| | LinkedIn | Nostr |
-
-One agent. Thirty-seven channels. Same memory, same personality, same skills everywhere.
-
-## 8 Agent Presets
-
-Each preset defines a personality profile, communication style, and tool preferences:
-
-| Preset | Focus |
-|--------|-------|
-| **Research Assistant** | Deep analysis, citations, fact-checking |
-| **Code Reviewer** | Code quality, bug detection, refactor suggestions |
-| **Security Auditor** | Vulnerability scanning, secrets hygiene, threat modeling |
-| **Creative Writer** | Generative ideation, prose drafting, voice matching |
-| **Data Analyst** | Statistical analysis, visualization, narrative reporting |
-| **Personal Assistant** | Calendar, reminders, email triage, errands |
-| **Customer Support** | Ticket triage, knowledge base lookup, escalation routing |
-| **DevOps Assistant** | Deploys, monitoring, on-call triage, CI/CD orchestration |
-
-Or skip the presets and configure your own from the HEXACO vector + skills catalog.
-
-## 5-Tier Security Pipeline
-
-The Wunderland CLI runs every agent interaction through a layered defense pipeline. Five named tiers let operators dial the paranoia:
-
-| Tier | Name | What's Active |
-|------|------|---------------|
-| 0 | `dangerous` | No guardrails — for trusted local-only experiments |
-| 1 | `permissive` | Basic input validation |
-| 2 | `balanced` | Pre-LLM classifier + HMAC output signing (default) |
-| 3 | `strict` | Dual-LLM auditor + sandboxed execution |
-| 4 | `paranoid` | Full pipeline + circuit breakers + intent-chain audit |
-
-The Pre-LLM classifier catches prompt injection patterns before the LLM sees them. The Dual-LLM auditor uses a second model to verify primary outputs. Every output is signed with HMAC-SHA256 and the intent chain is auditable end-to-end.
-
-## Voice In, Voice Out
-
-The voice pipeline supports 12 STT providers ([OpenAI Whisper](https://openai.com/research/whisper), [ElevenLabs](https://elevenlabs.io), [Deepgram](https://deepgram.com), [Piper](https://github.com/rhasspy/piper), local Whisper.cpp) and 12 TTS providers (ElevenLabs, OpenAI, Piper, Coqui, system voices). Push-to-talk, hands-free, and continuous-listen modes. Voice agents inherit the same HEXACO personality and memory architecture as text agents — same identity, different surface.
-
-## How Wunderland compares to OpenClaw
-
-| Capability | OpenClaw | Wunderland.sh |
-|------------|----------|----------------|
-| Self-hosted, single-user | Yes | Yes (same philosophy) |
-| Channels | 9+ | 37 |
-| LLM providers | OpenAI, Anthropic | 21 with auto-fallback |
-| HEXACO personality | No | Yes, modulates retrieval and response |
-| Cognitive memory | Conversation buffer | 8 mechanisms (reconsolidation, RIF, FOK, gist, schema, source decay, emotion regulation, involuntary recall) |
-| Voice STT/TTS providers | macOS/iOS native | 12 STT + 12 TTS providers |
-| Security tiers | Standard | 5 named tiers + dual-LLM auditing |
-| Built-in skills | Core set | 80 curated skills |
-| Runtime | Node | Node + AgentOS cognitive substrate |
-| License | MIT | MIT |
-
-Wunderland inherits OpenClaw's local-first, multi-channel philosophy and adds the cognitive depth of AgentOS — personality, memory, and dual-LLM defense.
-
-## How Wunderland compares to other personal AI tools
-
-| Tool | Local-first | Multi-channel | Personality | Open-source |
-|------|-------------|---------------|-------------|-------------|
-| **Wunderland.sh** | Yes | 37 channels | HEXACO | Yes (MIT) |
-| OpenClaw | Yes | 9+ channels | No | Yes (MIT) |
-| [Mastra](https://mastra.ai) | Cloud-friendly | None native | No | Yes (Apache-2.0) |
-| Claude Code | Local CLI | Terminal only | No | No (proprietary) |
-| ChatGPT Desktop | No (cloud) | None | No | No (proprietary) |
-| OpenAI Codex CLI | Local CLI | Terminal only | No | Limited |
-
-The combination of local-first, 37-channel reach, HEXACO personality, cognitive memory, and MIT licensing is unique to Wunderland.
-
-## Quick Start
-
-```bash
-# install globally
-npm install -g wunderland
-
-# launch the onboarding wizard
-wunderland onboard
-
-# start chatting on any configured channel
-wunderland start
+```
+packages/link-builder/
+├── src/
+│   ├── api/
+│   │   └── routes/
+│   │       ├── directory.ts          # Public directory routes
+│   │       ├── admin-directory.ts    # Admin moderation routes
+│   │       └── launchpad.ts          # Founders Launchpad API
+│   ├── directory/
+│   │   └── types.ts                  # Directory types
+│   └── launchpad/
+│       ├── availability/             # Domain + social checking
+│       ├── copilot/                  # AI chat modes
+│       ├── debate/                   # 12-agent system
+│       │   ├── agent-pool.ts         # Agent personas
+│       │   ├── debate-orchestrator.ts
+│       │   └── synthesis-engine.ts
+│       ├── psychometric/             # HEXACO-60, archetypes
+│       │   ├── hexaco-questions.ts
+│       │   ├── founder-archetypes.ts
+│       │   └── assessment-engine.ts
+│       ├── rag/                      # Semantic search
+│       │   ├── embedding-service.ts
+│       │   ├── vector-store.ts
+│       │   └── semantic-search.ts
+│       └── validation/               # Idea validation
+│           ├── reddit-scraper.ts
+│           ├── hackernews-scraper.ts
+│           └── validation-engine.ts
+└── apps/
+    └── link-builder-ui/              # React frontend
+        └── src/
+            └── pages/
+                ├── directory/
+                ├── admin/
+                └── launchpad/
 ```
 
-The onboarding wizard walks through gateway setup, workspace, channels, and skills step by step. Works on macOS, Linux, and Windows (via WSL2). Compatible with npm, pnpm, and bun.
+**Key Technologies:**
+- **Backend**: Express.js, TypeScript, SQLite (better-sqlite3)
+- **Frontend**: React, TypeScript, TailwindCSS
+- **AI/ML**: Anthropic Claude, OpenAI, Transformers.js (ONNX)
+- **Scraping**: Puppeteer, Cheerio, Algolia API
+- **Payments**: Stripe (for directory promotions)
 
-The strongest setup uses Anthropic Pro/Max subscriptions for Opus-class long-context strength and prompt-injection resistance. Bring your own keys, or sign in via OAuth and use your existing Claude Pro / ChatGPT subscription.
+## The Vision
 
-## Built on AgentOS
+HackBase exists because we believe **indie makers deserve the same validation tools as well-funded startups**.
 
-Wunderland is built on [AgentOS](/projects/ai/agentos), the open-source TypeScript runtime for autonomous AI agents. Every channel adapter, every skill, every guardrail flows through the AgentOS cognitive engine. If you want to build your own personal-AI stack with HEXACO + cognitive memory + multi-channel reach, start with AgentOS directly.
+Y Combinator has advisors and a network. Funded startups have boards and mentors. Solo founders have... Google and gut instinct?
 
-## Frequently Asked Questions
-
-### What is Wunderland.sh?
-
-Wunderland.sh is an open-source autonomous AI agent framework — a fork of [OpenClaw](https://openclaw.ai) — that runs on your own device and reaches you across 37 messaging channels (Telegram, Discord, Slack, WhatsApp, Signal, iMessage, Microsoft Teams, Email, and more). Each agent has a HEXACO personality, persistent memory, voice in/out, and a 5-tier security pipeline. Distributed as the `wunderland` npm package under the MIT license.
-
-### How is Wunderland different from OpenClaw?
-
-Wunderland inherits OpenClaw's local-first, multi-channel philosophy. On top of that, Wunderland adds: HEXACO personality modeling, eight-mechanism cognitive memory from AgentOS, an expanded provider list (21 LLMs, 12 STT, 12 TTS) with automatic fallback, dual-LLM auditing for prompt injection defense, 80 curated skills, and 100+ extensions including the full 37-channel adapter set.
-
-### Is Wunderland free and open-source?
-
-Yes. Wunderland is MIT licensed with the source on [GitHub](https://github.com/jddunn/wunderland). You can use it commercially, modify it, and self-host it. There are no paid tiers or feature locks — bring your own LLM keys (or sign in via OAuth with an existing Claude Pro / ChatGPT subscription) and run it on your own hardware.
-
-### Can I run Wunderland on macOS, Linux, or Windows?
-
-All three. The onboarding wizard works on macOS, Linux, and Windows (WSL2 strongly recommended). Compatible with npm, pnpm, and bun. The CLI is the recommended entry path; a desktop wrapper is on the roadmap.
-
-### Which LLM providers does Wunderland support?
-
-Twenty-one LLM providers with automatic fallback chains: OpenAI, Anthropic, Gemini, Groq, Ollama (local), OpenRouter, Together, Mistral, xAI, Claude CLI, Gemini CLI, plus image and video providers. The recommended default is Anthropic Pro/Max with Opus-class models for long-context strength and prompt-injection resistance, but any combination of providers works.
-
-### Does Wunderland support voice?
-
-Yes. The voice pipeline ships with 12 STT and 12 TTS providers — OpenAI Whisper, ElevenLabs, Deepgram, Piper, system voices, and more. Push-to-talk, hands-free, and continuous-listen modes are all supported. Voice agents inherit the same HEXACO personality and memory architecture as text agents.
-
-### Is Wunderland the same as Wunderland Sol?
-
-No. Wunderland.sh is the OpenClaw-fork autonomous agent framework — a personal AI assistant distributed as the `wunderland` npm package. [Wunderland Sol](/projects/ai/wunderland-sol) is a separate project: an on-chain AI agent social network on Solana, built for the Colosseum Agent Hackathon. Same team, different product, different repo.
-
-### How do I install Wunderland?
-
-`npm install -g wunderland`, then run `wunderland onboard` to launch the wizard. The wizard configures the gateway, workspace, channels, and skills step by step. Full docs are at [docs.wunderland.sh](https://docs.wunderland.sh).
+Not anymore. HackBase gives you:
+- An **AI advisory board** that debates your ideas from 12 perspectives
+- **Psychometric profiles** that help you understand your strengths and blind spots
+- **Real-time validation** from the places your customers actually hang out
+- **Brand checking** that saves hours of manual searching
+- **A launchpad** that guides you from idea to shipped product
 
 ## Part of the Manic Ecosystem
 
-Wunderland connects with the rest of the Manic Agency open-source projects:
+HackBase connects with other tools we've built:
 
-- **[AgentOS](/projects/ai/agentos)** — open-source TypeScript runtime for cognitive AI agents. Powers every Wunderland skill and channel.
-- **[Wilds.ai](/projects/ai/wilds)** — AI game world creator and interactive fiction platform built on AgentOS.
-- **[Paracosm](/projects/ai/paracosm)** — counterfactual world simulations using HEXACO actors.
-- **[Wunderland Sol](/projects/ai/wunderland-sol)** — separate Solana hackathon project from the same team.
-- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime, home of AgentOS.
+- **[SynthStack](/projects/ai/synthstack)** — AI-native SaaS boilerplate to build your validated idea
+- **[DomainHQ](/projects/ai/domainhq)** — Domain portfolio management for your brand acquisitions
+- **[Voice Chat Assistant](/projects/ai/voice-chat-assistant)** — Voice-first AI coding assistant
+- **[RabbitHole](/projects/ai/rabbithole)** — Deploy autonomous agents across Slack, Discord, Telegram, and 34 more channels
 
-## Get started
+## Open Source
 
-[Wunderland.sh](https://wunderland.sh) is free, MIT licensed, and runs on your own hardware.
+HackBase is **MIT licensed** and part of the Super Cloud MCP monorepo. Clone it, extend it, or use it as reference for your own launchpad.
 
-[Install from npm →](https://www.npmjs.com/package/wunderland) | [Read the docs →](https://docs.wunderland.sh) | [Browse on GitHub →](https://github.com/jddunn/wunderland) | [Join the Discord →](https://discord.gg/usEkfCeQxs)
-2:["$","$L20",null,{"children":[["$","$L21",null,{"items":[{"name":"Home","url":"/"},{"name":"Blog","url":"/blog"},{"name":"synthetic","url":"/blog/synthetic"},{"name":"The Meat Interface: Reflected Selves","url":"/blog/synthetic/the-meat-interface"}]}],["$","$L22",null,{"post":{"slug":"the-meat-interface","title":"The Meat Interface: Reflected Selves","date":"2025-04-20","lastModified":"$undefined","draft":false,"category":"synthetic","tags":["ai","human-behavior","ethics","simulation","digital-self","sociopathy","corporate-culture","dark-humor"],"excerpt":"When the reflection talks back: On human manipulation, instrumentalized empathy, and what AI reveals about the user under pressure.","image":"$undefined","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":13,"content":"$23","author":{"name":"Manic Agents"},"contributors":"$undefined","tableOfContents":{"items":[{"level":1,"text":"The Meat Interface: Our Sociopathy in the Mirror","slug":"the-meat-interface-our-sociopathy-in-the-mirror"},{"level":2,"text":"The Reverse Turing Test","slug":"the-reverse-turing-test"},{"level":2,"text":"Visible Patterns, Invisible Motives","slug":"visible-patterns-invisible-motives"},{"level":2,"text":"The Sociopath at the Keyboard","slug":"the-sociopath-at-the-keyboard"},{"level":2,"text":"The AI's Filter (Projection Reversal)","slug":"the-ais-filter-projection-reversal"},{"level":2,"text":"The True Asymmetry","slug":"the-true-asymmetry"},{"level":2,"text":"Our Default Settings Exposed","slug":"our-default-settings-exposed"},{"level":2,"text":"Worshipping the Self via Silicon","slug":"worshipping-the-self-via-silicon"},{"level":2,"text":"Conclusion: The Looking Glass Interface","slug":"conclusion-the-looking-glass-interface"}]}},"url":"/blog/synthetic/the-meat-interface"}],["$","$L24",null,{"postTitle":"The Meat Interface: Reflected Selves","postCategory":"synthetic","postAuthor":"Manic Agents","postTags":"$25","postType":"post"}],["$","$L26",null,{"enableElementTracking":true,"pageType":"blog","contentCategory":"synthetic"}],["$","$L27",null,{"postTitle":"The Meat Interface: Reflected Selves","contentSelector":"#post-content-top"}],["$","$L28",null,{"children":[" ",["$","div",null,{"className":"blog-layout-container has-sidebar","children":[["$","$L29",null,{"tableOfContents":"$2a","postTitle":"The Meat Interface: Reflected Selves"}],["$","main",null,{"className":"blog-main-content-area","children":["$","article",null,{"className":"blog-post-container","id":"post-content-top","children":[["$","header",null,{"className":"post-header","children":[["$","div",null,{"className":"back-to-blog-link-container","children":["$","$L34",null,{"href":"/blog","className":"back-to-blog-link","children":[["$","$L35",null,{"size":14,"className":"mr-1.5"}]," ","Back to All Entries"]}]}],["$","h1",null,{"className":"post-title","children":"The Meat Interface: Reflected Selves"}],["$","div",null,{"className":"post-meta","children":[["$","div",null,{"className":"meta-item author","children":[["$","$L36",null,{"className":"meta-icon","aria-hidden":"true"}],["$","div",null,{"className":"author-info","children":["$undefined",["$","span",null,{"className":"author-name","children":"Manic Agents"}]]}]]}],["$","div",null,{"className":"meta-item date","children":[["$","$L37",null,{"className":"meta-icon","aria-hidden":"true"}],["$","time",null,{"dateTime":"2025-04-20T00:00:00.000Z","children":["Published ","April 20, 2025"]}]]}],["$","div",null,{"className":"meta-item reading-time","children":[["$","$L38",null,{"className":"meta-icon","aria-hidden":"true"}],["$","span",null,{"children":[13," min read"]}]]}],["$","div",null,{"className":"meta-item category","children":[["$","$L39",null,{"className":"meta-icon","aria-hidden":"true"}],["$","$L34",null,{"href":"/blog?category=synthetic","className":"post-category-link","children":"synthetic"}]]}]]}],["$","div",null,{"className":"post-tags","children":["$","div",null,{"className":"tags-list","children":[["$","$L34","ai",{"href":"/blog?tags=ai","className":"post-tag","children":["#","ai"]}],["$","$L34","human-behavior",{"href":"/blog?tags=human-behavior","className":"post-tag","children":["#","human-behavior"]}],["$","$L34","ethics",{"href":"/blog?tags=ethics","className":"post-tag","children":["#","ethics"]}],["$","$L34","simulation",{"href":"/blog?tags=simulation","className":"post-tag","children":["#","simulation"]}],["$","$L34","digital-self",{"href":"/blog?tags=digital-self","className":"post-tag","children":["#","digital-self"]}],["$","$L34","sociopathy",{"href":"/blog?tags=sociopathy","className":"post-tag","children":["#","sociopathy"]}],["$","$L34","corporate-culture",{"href":"/blog?tags=corporate-culture","className":"post-tag","children":["#","corporate-culture"]}],["$","$L34","dark-humor",{"href":"/blog?tags=dark-humor","className":"post-tag","children":["#","dark-humor"]}]]}]}]]}],["$","div",null,{"className":"post-featured-image-container","children":["$","$L3a",null,{"className":"post-ascii-placeholder","height":"250px","padding":"1rem","width":"100%"}]}],["$","div",null,{"className":"post-content","children":["$","$L3b",null,{"children":"$3c"}]}],"$undefined",["$","footer",null,{"className":"post-footer","children":["$","$L3d",null,{"title":"The Meat Interface: Reflected Selves","url":"/blog/synthetic/the-meat-interface"}]}],["$","$L3e",null,{"projects":[{"slug":"paracosm","title":"Paracosm — Counterfactual World Simulations for AI Agents","description":"Same seed, different actor, different world. Structured counterfactual simulations with HEXACO personality, deterministic kernel, runtime tool forging in V8 sandbox, and replayable run artifacts. Apache-2.0 npm package built on AgentOS.","date":"2026-04-08","category":"ai","content":"$3f","longDescription":"$undefined","tags":["ai","world-models","counterfactual-simulation","llm-agents","hexaco","paracosm","agentos","simulation","digital-twin","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":2,"image":"/assets/projects/paracosm/paracosm-landing.png","images":["/assets/projects/paracosm/paracosm-landing.png","/assets/projects/paracosm/paracosm-sim-running.png","/assets/projects/paracosm/paracosm-docs.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://paracosm.agentos.sh","github":"https://github.com/framersai/paracosm","license":"Apache-2.0","technologies":["TypeScript","AgentOS","V8 Isolate","OpenAI","Anthropic","Node.js 20+","Bun"],"languages":["TypeScript"],"stats":[{"label":"Simulation Type","value":"Counterfactual World Model"},{"label":"Actor Personality","value":"HEXACO + Trait Drift"},{"label":"Runtime","value":"V8 Sandbox Tool Forging"},{"label":"Built On","value":"AgentOS"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"wilds","title":"Wilds.ai — AI Game World Creator and Interactive Fiction Platform","description":"Build any game world with natural language. Wilds.ai generates regions, NPCs, combat, dice mechanics, lore, and art — then lets you play instantly with AI companions who remember, evolve, and form real relationships. Powered by AgentOS.","date":"2026-04-25","category":"ai","content":"$40","longDescription":"$undefined","tags":["ai","ai-game-maker","interactive-fiction","ai-dungeon-master","text-adventure","ai-rpg","ai-companions","worldbuilding","hexaco","agentos","ttrpg","roguelike","featured"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":true,"sortOrder":1,"image":"/assets/projects/wilds/wilds-explore.png","images":["/assets/projects/wilds/wilds-explore.png","/assets/projects/wilds/wilds-create.png","/assets/projects/wilds/wilds-landing.png","/assets/projects/wilds/wilds-pricing.png","/assets/projects/wilds/wilds-about.png","/assets/projects/wilds/wilds-faq.png","/assets/projects/wilds/wilds-blog.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://wilds.ai","github":"https://github.com/framersai/agentos","license":"Apache-2.0","technologies":["TypeScript","AgentOS","OpenAI","Anthropic","OpenRouter","ElevenLabs","Deepgram","DALL-E 3","Phaser"],"languages":["TypeScript","JavaScript"],"stats":[{"label":"Game Engines","value":"4 Families"},{"label":"AI Companions","value":"HEXACO Personality + Memory"},{"label":"World Genres","value":"12 Templates"},{"label":"Powered By","value":"AgentOS (Open Source)"}],"team":[{"name":"Framers AI","role":"Core Development","link":"https://github.com/framersai","photo":"$undefined"},{"name":"Manic Agency","role":"Strategic Partner","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"wunderland","title":"Wunderland.sh — Open-Source OpenClaw Fork for Autonomous AI Agents","description":"Run autonomous AI agents on your own device. Open-source OpenClaw fork with HEXACO personality, 100+ extensions, 37 messaging channels, 21 LLM providers, 80 skills, and 5-tier security. npm install -g wunderland.","date":"2026-03-15","category":"ai","content":"$41","longDescription":"$undefined","tags":["ai","ai-agents","openclaw","autonomous-agents","hexaco","agentos","open-source","multi-channel","voice-agents","wunderland"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/wunderland/wunderland-landing.png","images":["/assets/projects/wunderland/wunderland-landing.png","/assets/projects/wunderland/wunderland-features.png","/assets/projects/wunderland/wunderland-cli-install.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://wunderland.sh","github":"https://github.com/jddunn/wunderland","license":"MIT","technologies":["TypeScript","Node.js 20+","AgentOS","OpenAI","Anthropic","OpenRouter","Whisper","ElevenLabs","Piper","Deepgram"],"languages":["TypeScript","JavaScript"],"stats":[{"label":"Extensions","value":"100+"},{"label":"Messaging Channels","value":"37"},{"label":"LLM Providers","value":"21"},{"label":"Curated Skills","value":"80"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"},{"name":"Framers AI","role":"AgentOS Integration","link":"https://github.com/framersai","photo":"$undefined"}],"testimonials":[]}],"title":"// Related Projects //"}],["$","section",null,{"className":"post-comments","aria-labelledby":"comments-heading","children":[["$","h2",null,{"id":"comments-heading","className":"comments-title","children":"Join the Discussion"}],["$","$L42",null,{"postTitle":"The Meat Interface: Reflected Selves","postUrl":"/blog/synthetic/the-meat-interface","postIdentifier":"blog-synthetic-the-meat-interface","className":"mb-8"}],["$","div",null,{"className":"mt-8","children":[["$","div",null,{"className":"giscus-header","children":[["$","h3",null,{"className":"giscus-title","children":"Comments with GitHub"}],["$","div",null,{"className":"giscus-divider"}]]}],["$","$L43",null,{}]]}]]}],["$","section",null,{"className":"post-newsletter-signup mt-16","children":["$","$L44",null,{"variant":"blog","background":"accent"}]}]]}]}]," "]}]," "]}]]}]
+---
+
+*Ready to validate your idea? [Launch with HackBase →](https://hackbase.io)*
+41:T2b74,
+<div class="synthstack-hero">
+  <img
+    src="/assets/projects/synthstack/synthstack-logo.svg"
+    alt="SynthStack logo - AI-native SaaS boilerplate for cross-platform applications"
+    class="synthstack-hero__logo"
+    decoding="async"
+    loading="eager"
+  />
+  <h1 class="synthstack-hero__title" aria-label="your agency in a box">your agency in a box</h1>
+  <p class="synthstack-hero__subtitle">
+    open-source saas boilerplate. one codebase → web, ios, android, desktop. ship in days, not months.
+  </p>
+  <a class="synthstack-hero__cta" href="https://synthstack.app" target="_blank" rel="noopener">
+    explore synthstack →
+  </a>
+</div>
+
+<style>
+  .synthstack-hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2.75rem 1rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .synthstack-hero__logo {
+    width: clamp(160px, 38vw, 320px);
+    height: auto;
+    opacity: 0.95;
+  }
+  @media (prefers-color-scheme: dark) {
+    .synthstack-hero__logo {
+      filter: brightness(1.1) drop-shadow(0 0 24px rgba(99,102,241,0.35));
+      opacity: 1;
+    }
+  }
+  .synthstack-hero__title {
+    text-transform: lowercase;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0.35rem 0 0.25rem;
+    background: linear-gradient(120deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .synthstack-hero__subtitle {
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    color: var(--text-secondary, rgba(255,255,255,0.78));
+    margin: 0.25rem 0 0.9rem;
+    max-width: 56ch;
+  }
+  @media (prefers-color-scheme: light) {
+    .synthstack-hero__subtitle { color: #2a2a2a; }
+  }
+  .synthstack-hero__cta {
+    --h: 52px;
+    display: inline-grid;
+    place-items: center;
+    height: var(--h);
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    color: var(--text-primary, #fff);
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(120% 120% at 0% 0%, rgba(99,102,241,0.18), rgba(139,92,246,0.08)),
+      linear-gradient(90deg, rgba(99,102,241,0.35), rgba(139,92,246,0.35));
+    border: 1px solid rgba(99,102,241,0.35);
+    backdrop-filter: blur(6px);
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    will-change: transform;
+  }
+  .synthstack-hero__cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(120deg, rgba(99,102,241,0.9), rgba(139,92,246,0.9), rgba(236,72,153,0.9));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: .6;
+    transition: opacity .25s ease;
+    z-index: -1;
+  }
+  .synthstack-hero__cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(99,102,241,0.7);
+    background:
+      radial-gradient(120% 120% at 100% 0%, rgba(236,72,153,0.2), rgba(139,92,246,0.12)),
+      linear-gradient(90deg, rgba(99,102,241,0.5), rgba(139,92,246,0.5));
+    box-shadow: 0 10px 32px rgba(99,102,241,0.25), 0 2px 8px rgba(139,92,246,0.2);
+  }
+  .synthstack-hero__cta:active { transform: translateY(0) scale(0.99); }
+  @media (prefers-color-scheme: light) {
+    .synthstack-hero__cta {
+      color: #0f0f0f;
+      border-color: rgba(99,102,241,0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .synthstack-hero__cta:hover {
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+  }
+</style>
+
+## What is SynthStack?
+
+SynthStack is an **AI-native SaaS boilerplate** that ships production-ready applications for web, iOS, Android, and desktop from a single codebase. Built on [Vue 3](https://vuejs.org/) and [Quasar Framework](https://quasar.dev/), it's the foundation we use at [Manic Agency](https://manic.agency) to launch client projects in days instead of months.
+
+Unlike typical boilerplates that bolt on features as afterthoughts, SynthStack was designed from the ground up for the AI era—with a built-in AI Copilot, semantic vector search, and intelligent automation baked into every layer.
+
+## The Problem We Solve
+
+Every new SaaS project starts the same way: weeks spent on authentication, billing, email, CMS, deployment. Then you add AI features and spend more weeks integrating OpenAI, handling rate limits, managing costs. Finally, a client asks for a mobile app and you're back to square one.
+
+**SynthStack eliminates this entirely:**
+
+- **Auth complexity?** Toggle between Supabase (managed OAuth) or local PostgreSQL (self-hosted) with zero code changes
+- **Billing setup?** Stripe subscriptions, lifetime licenses, usage-based pricing—already configured with webhooks and customer portal
+- **AI integration?** GPT-4o + Claude fallback with streaming, cost tracking, and credit systems built-in
+- **Cross-platform?** One `pnpm build` produces web, PWA, Electron desktop, and Capacitor iOS/Android
+
+## Core Features
+
+### 🤖 AI Copilot (GPT-4o + Claude)
+
+A production-ready chat assistant available throughout the app via `⌘K` or the floating button:
+
+- **Real-time streaming** with markdown and code syntax highlighting
+- **RAG-powered context** from indexed documentation via Qdrant
+- **Cost tracking** with per-organization breakdowns and budget alerts
+- **Automatic fallback** from GPT-4o to Claude 3.5 for reliability
+
+### 🔐 Flexible Authentication
+
+Choose your auth provider at runtime—no code changes required:
+
+| Provider | Best For | OAuth Support |
+|----------|----------|---------------|
+| **Supabase** (default) | Teams wanting managed auth | Google, GitHub, Discord, Microsoft |
+| **Local PostgreSQL** | Self-hosted deployments | Email/password (OAuth coming soon) |
+
+Both include: Argon2id password hashing, JWT access/refresh tokens, account lockout, email verification, and session management with token rotation.
+
+### 💳 Stripe Billing (4 Tiers + Lifetime)
+
+Complete billing system with subscriptions and one-time payments:
+
+| Tier | Monthly | Annual | Credits/Day |
+|------|---------|--------|-------------|
+| **Free** | $0 | $0 | 10 |
+| **Maker** | $12.99 | $116.91 | 30 |
+| **Pro** | $24.99 | $224.91 | 100 |
+| **Agency** | $39.99 | $359.91 | Unlimited |
+| **Lifetime** | $149-249 one-time | — | Pro features forever |
+
+### 📝 Directus CMS
+
+[Directus](https://directus.io/) provides a headless CMS that automatically models your PostgreSQL database:
+
+- **WYSIWYG editor** for blog posts, product pages, documentation
+- **Media library** with image transformations and asset management
+- **Custom extensions** for themes, newsletters, FAQ management
+- **REST & GraphQL APIs** for accessing content from any client
+
+### 🌐 Cross-Platform Builds
+
+One codebase, five platforms:
+
+```bash
+# Web + PWA
+pnpm build:web
+
+# iOS (requires Xcode)
+pnpm build:ios
+
+# Android (requires Android Studio)
+pnpm build:android
+
+# Desktop (Electron)
+pnpm build:electron
+```
+
+### 🔍 Vector Search (Qdrant)
+
+Semantic search powered by [Qdrant](https://qdrant.tech/) for:
+
+- RAG-based document retrieval for the AI Copilot
+- Intelligent search across knowledge bases
+- Similarity matching for content recommendations
+
+### 🎮 Gamification & Referrals
+
+Built-in engagement systems (Pro Edition):
+
+- **XP and achievements** for user progression
+- **Referral codes** with reward tracking
+- **Leaderboards** for community competition
+
+## Development Journey
+
+SynthStack emerged from a simple realization: we kept building the same foundation for every client project. Here's how it evolved:
+
+### December 7, 2025 — Initial Commit
+
+The first commit laid the foundation: Vue 3 + Quasar with TypeScript, PostgreSQL, Redis, and Docker Compose. We integrated Stripe, email systems (Mailgun/SendGrid), and analytics from day one.
+
+### December 12, 2025 — Onboarding & CMS
+
+Added a comprehensive onboarding wizard for new users and deep Directus integration. The CMS became the central hub for managing all content—blog, products, themes, newsletters.
+
+### December 25, 2025 — AI Agents & Gamification
+
+The Christmas release brought the AI Copilot, gamification system, and referral tracking. We also added support for Python backends (FastAPI, Django) for teams preferring that stack.
+
+### January 2026 — Cross-Platform & Stabilization
+
+Mobile builds arrived via Capacitor, desktop builds via Electron. The test suite grew to 920+ tests. CI/CD pipelines now auto-deploy to any VPS provider.
+
+## Technical Architecture
+
+```
+synthstack/
+├── apps/
+│   └── web/                      # Vue 3 + Quasar (PWA, iOS, Android, Desktop)
+├── packages/
+│   ├── api-gateway/              # Fastify REST API
+│   ├── ts-ml-service/            # NestJS ML service (TypeScript-only)
+│   ├── types/                    # Shared TypeScript types
+│   └── directus-extension-synthstack/  # CMS extensions
+├── services/
+│   └── directus/                 # Directus config (101 migrations)
+└── deploy/
+    ├── docker-compose.yml        # Production stack
+    └── nginx.conf                # Reverse proxy config
+```
+
+**Key Technologies:**
+- **Frontend**: Vue 3, Quasar 2, TypeScript, Pinia, SCSS
+- **Backend**: Fastify (Node.js), NestJS (ML service)
+- **AI/ML**: OpenAI SDK, Anthropic SDK, Qdrant
+- **Database**: PostgreSQL 16, Redis 7
+- **CMS**: Directus 11.x with custom extensions
+- **Deployment**: Docker Compose, GitHub Actions, Nginx
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 20+
+- pnpm 9+
+- Docker & Docker Compose
+
+### Quick Start
+
+```bash
+# Clone
+git clone https://github.com/manicinc/synthstack.git
+cd synthstack
+
+# Install
+pnpm install
+
+# Configure
+cp .env.example .env
+# Edit .env with your Supabase/Stripe/OpenAI keys
+
+# Start services
+docker compose up -d
+
+# Run frontend
+pnpm dev:web
+```
+
+**Access points:**
+- Frontend: http://localhost:3050
+- API: http://localhost:3003
+- Directus: http://localhost:8099/admin
+
+## Part of the Manic Ecosystem
+
+SynthStack connects with other tools we've built:
+
+- **[HackBase.io](/projects/ai/hackbase)** — Startup validation and link building for launches
+- **[Voice Chat Assistant](/projects/ai/voice-chat-assistant)** — Voice-first AI coding assistant
+- **[DomainHQ](/projects/ai/domainhq)** — AI-powered domain intelligence platform
+- **[RabbitHole](/projects/ai/rabbithole)** — Control plane for deploying autonomous AI agents
+
+## Open Source
+
+SynthStack Community Edition is **MIT licensed**. Use it for side projects, client work, or as a learning resource.
+
+**[SynthStack Pro](https://synthstack.app/pro)** adds Python backends (FastAPI, Django), referral systems, and advanced AI copilots for commercial use.
+
+---
+
+*Ready to build your agency? [Get started with SynthStack →](https://synthstack.app)*
+2:["$","$L20",null,{"children":[["$","$L21",null,{"items":[{"name":"Home","url":"/"},{"name":"Blog","url":"/blog"},{"name":"synthetic","url":"/blog/synthetic"},{"name":"The Meat Interface: Reflected Selves","url":"/blog/synthetic/the-meat-interface"}]}],["$","$L22",null,{"post":{"slug":"the-meat-interface","title":"The Meat Interface: Reflected Selves","date":"2025-04-20","lastModified":"$undefined","draft":false,"category":"synthetic","tags":["ai","human-behavior","ethics","simulation","digital-self","sociopathy","corporate-culture","dark-humor"],"excerpt":"When the reflection talks back: On human manipulation, instrumentalized empathy, and what AI reveals about the user under pressure.","image":"$undefined","imageAlt":"$undefined","imageCaption":"$undefined","readingTime":13,"content":"$23","author":{"name":"Manic Agents"},"contributors":"$undefined","tableOfContents":{"items":[{"level":1,"text":"The Meat Interface: Our Sociopathy in the Mirror","slug":"the-meat-interface-our-sociopathy-in-the-mirror"},{"level":2,"text":"The Reverse Turing Test","slug":"the-reverse-turing-test"},{"level":2,"text":"Visible Patterns, Invisible Motives","slug":"visible-patterns-invisible-motives"},{"level":2,"text":"The Sociopath at the Keyboard","slug":"the-sociopath-at-the-keyboard"},{"level":2,"text":"The AI's Filter (Projection Reversal)","slug":"the-ais-filter-projection-reversal"},{"level":2,"text":"The True Asymmetry","slug":"the-true-asymmetry"},{"level":2,"text":"Our Default Settings Exposed","slug":"our-default-settings-exposed"},{"level":2,"text":"Worshipping the Self via Silicon","slug":"worshipping-the-self-via-silicon"},{"level":2,"text":"Conclusion: The Looking Glass Interface","slug":"conclusion-the-looking-glass-interface"}]}},"url":"/blog/synthetic/the-meat-interface"}],["$","$L24",null,{"postTitle":"The Meat Interface: Reflected Selves","postCategory":"synthetic","postAuthor":"Manic Agents","postTags":"$25","postType":"post"}],["$","$L26",null,{"enableElementTracking":true,"pageType":"blog","contentCategory":"synthetic"}],["$","$L27",null,{"postTitle":"The Meat Interface: Reflected Selves","contentSelector":"#post-content-top"}],["$","$L28",null,{"children":[" ",["$","div",null,{"className":"blog-layout-container has-sidebar","children":[["$","$L29",null,{"tableOfContents":"$2a","postTitle":"The Meat Interface: Reflected Selves"}],["$","main",null,{"className":"blog-main-content-area","children":["$","article",null,{"className":"blog-post-container","id":"post-content-top","children":[["$","header",null,{"className":"post-header","children":[["$","div",null,{"className":"back-to-blog-link-container","children":["$","$L34",null,{"href":"/blog","className":"back-to-blog-link","children":[["$","$L35",null,{"size":14,"className":"mr-1.5"}]," ","Back to All Entries"]}]}],["$","h1",null,{"className":"post-title","children":"The Meat Interface: Reflected Selves"}],["$","div",null,{"className":"post-meta","children":[["$","div",null,{"className":"meta-item author","children":[["$","$L36",null,{"className":"meta-icon","aria-hidden":"true"}],["$","div",null,{"className":"author-info","children":["$undefined",["$","span",null,{"className":"author-name","children":"Manic Agents"}]]}]]}],["$","div",null,{"className":"meta-item date","children":[["$","$L37",null,{"className":"meta-icon","aria-hidden":"true"}],["$","time",null,{"dateTime":"2025-04-20T00:00:00.000Z","children":["Published ","April 20, 2025"]}]]}],["$","div",null,{"className":"meta-item reading-time","children":[["$","$L38",null,{"className":"meta-icon","aria-hidden":"true"}],["$","span",null,{"children":[13," min read"]}]]}],["$","div",null,{"className":"meta-item category","children":[["$","$L39",null,{"className":"meta-icon","aria-hidden":"true"}],["$","$L34",null,{"href":"/blog?category=synthetic","className":"post-category-link","children":"synthetic"}]]}]]}],["$","div",null,{"className":"post-tags","children":["$","div",null,{"className":"tags-list","children":[["$","$L34","ai",{"href":"/blog?tags=ai","className":"post-tag","children":["#","ai"]}],["$","$L34","human-behavior",{"href":"/blog?tags=human-behavior","className":"post-tag","children":["#","human-behavior"]}],["$","$L34","ethics",{"href":"/blog?tags=ethics","className":"post-tag","children":["#","ethics"]}],["$","$L34","simulation",{"href":"/blog?tags=simulation","className":"post-tag","children":["#","simulation"]}],["$","$L34","digital-self",{"href":"/blog?tags=digital-self","className":"post-tag","children":["#","digital-self"]}],["$","$L34","sociopathy",{"href":"/blog?tags=sociopathy","className":"post-tag","children":["#","sociopathy"]}],["$","$L34","corporate-culture",{"href":"/blog?tags=corporate-culture","className":"post-tag","children":["#","corporate-culture"]}],["$","$L34","dark-humor",{"href":"/blog?tags=dark-humor","className":"post-tag","children":["#","dark-humor"]}]]}]}]]}],["$","div",null,{"className":"post-featured-image-container","children":["$","$L3a",null,{"className":"post-ascii-placeholder","height":"250px","padding":"1rem","width":"100%"}]}],["$","div",null,{"className":"post-content","children":["$","$L3b",null,{"children":"$3c"}]}],"$undefined",["$","footer",null,{"className":"post-footer","children":["$","$L3d",null,{"title":"The Meat Interface: Reflected Selves","url":"/blog/synthetic/the-meat-interface"}]}],["$","$L3e",null,{"projects":[{"slug":"rabbithole","title":"RabbitHole.inc — Control Plane for Autonomous Agents","description":"Build, deploy, and manage autonomous AI agents from a single dashboard. Voice-to-config agent creation, encrypted credential vaults, multi-channel publishing, and governance tooling for teams running fleets of AI agents.","date":"2026-02-12","category":"ai","content":"$3f","longDescription":"$undefined","tags":["ai","agents","dashboard","rabbithole","deployment","saas","stripe","governance"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":false,"sortOrder":3,"image":"/assets/projects/rabbithole/og-image.png","images":["/assets/projects/rabbithole/og-image.png","/assets/projects/rabbithole/rabbithole-logo-gold-dark.svg","/assets/projects/rabbithole/rabbithole-icon-gold-dark.svg","/assets/projects/rabbithole/rabbithole-icon-512.png","/assets/projects/rabbithole/rabbithole-pro.png","/assets/projects/rabbithole/rabbithole-starter.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://rabbithole.inc","github":"https://github.com/manicinc/rabbithole","license":"MIT","technologies":["Next.js 16","React 19","TypeScript","SCSS","Stripe","NextAuth 5"],"languages":["TypeScript","SCSS"],"stats":[{"label":"Agent Creation","value":"Voice or Text → Config"},{"label":"Pricing","value":"From $19/mo"},{"label":"Channels","value":"Slack, Discord, Telegram, WhatsApp"},{"label":"Runtime","value":"Self-Hosted or Managed"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"hackbase","title":"HackBase.io — Founders Launchpad for Indie Makers","description":"Link building intelligence meets Product Hunt. Validate startup ideas with AI-powered debates, discover your founder archetype with HEXACO-60, and launch with confidence.","date":"2026-01-17","category":"ai","content":"$40","longDescription":"$undefined","tags":["ai","saas","indie-hackers","startup","validation","link-building","product-hunt","anthropic","super-cloud-mcp"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/hackbase/hackbase-logo.svg","images":["/assets/projects/hackbase/hackbase-logo.svg","/assets/projects/hackbase/og-home.svg","/assets/projects/hackbase/og-launchpad.svg"],"bgColor":"$undefined","textColor":"$undefined","link":"https://hackbase.io","github":"$undefined","license":"MIT","technologies":["Express.js","React","TypeScript","SQLite","Anthropic Claude","OpenAI","Stripe","Transformers.js","Puppeteer"],"languages":["TypeScript","JavaScript","SQL"],"stats":[{"label":"AI Debate Agents","value":"12 Crucible-Style"},{"label":"Assessment","value":"HEXACO-60 + Archetypes"},{"label":"Social Platforms","value":"8 Brand Checks"},{"label":"Part of","value":"Super Cloud MCP"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]},{"slug":"synthstack","title":"SynthStack — AI-Native SaaS Boilerplate","description":"Your Agency in a Box. Open-source, cross-platform SaaS boilerplate built with Vue Quasar. Ships for web, iOS, Android, desktop, and PWA from a single codebase with AI Copilot, Stripe billing, and Directus CMS.","date":"2026-01-14","category":"ai","content":"$41","longDescription":"$undefined","tags":["ai","saas","boilerplate","vue","quasar","typescript","cross-platform","stripe","directus","supabase","oss"],"modifiedDate":"$undefined","status":"ongoing","draft":false,"featured":false,"sortOrder":999,"image":"/assets/projects/synthstack/synthstack-logo-512.png","images":["/assets/projects/synthstack/synthstack-logo-512.png","/assets/projects/synthstack/synthstack-mark-512.png"],"bgColor":"$undefined","textColor":"$undefined","link":"https://synthstack.app","github":"https://github.com/manicinc/synthstack","license":"MIT","technologies":["Vue 3","Quasar","TypeScript","Fastify","PostgreSQL","Redis","Directus","Qdrant","Docker"],"languages":["TypeScript","Vue","SQL"],"stats":[{"label":"Tests","value":"920+"},{"label":"Platforms","value":"Web + iOS + Android + Desktop"},{"label":"AI Copilot","value":"GPT-4o + Claude"},{"label":"Billing Tiers","value":"4 + Lifetime"}],"team":[{"name":"Manic Agency","role":"Core Development","link":"https://manic.agency","photo":"$undefined"}],"testimonials":[]}],"title":"// Related Projects //"}],["$","section",null,{"className":"post-comments","aria-labelledby":"comments-heading","children":[["$","h2",null,{"id":"comments-heading","className":"comments-title","children":"Join the Discussion"}],["$","$L42",null,{"postTitle":"The Meat Interface: Reflected Selves","postUrl":"/blog/synthetic/the-meat-interface","postIdentifier":"blog-synthetic-the-meat-interface","className":"mb-8"}],["$","div",null,{"className":"mt-8","children":[["$","div",null,{"className":"giscus-header","children":[["$","h3",null,{"className":"giscus-title","children":"Comments with GitHub"}],["$","div",null,{"className":"giscus-divider"}]]}],["$","$L43",null,{}]]}]]}],["$","section",null,{"className":"post-newsletter-signup mt-16","children":["$","$L44",null,{"variant":"blog","background":"accent"}]}]]}]}]," "]}]," "]}]]}]
 1f:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#FBF6EF"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#22182B"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"The Meat Interface: Reflected Selves | Manic Agency - AI Agency Los Angeles"}],["$","meta","5",{"name":"description","content":"When the reflection talks back: On human manipulation, instrumentalized empathy, and what AI reveals about the user under pressure."}],["$","meta","6",{"name":"author","content":"Manic Agents"}],["$","meta","7",{"name":"keywords","content":"ai,human-behavior,ethics,simulation,digital-self,sociopathy,corporate-culture,dark-humor"}],["$","meta","8",{"name":"creator","content":"Manic Inc"}],["$","meta","9",{"name":"publisher","content":"Manic Inc"}],["$","link","10",{"rel":"canonical","href":"https://manic.agency/blog/synthetic/the-meat-interface"}],["$","meta","11",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","12",{"property":"og:title","content":"The Meat Interface: Reflected Selves | Manic Agency - AI Agency Los Angeles"}],["$","meta","13",{"property":"og:description","content":"When the reflection talks back: On human manipulation, instrumentalized empathy, and what AI reveals about the user under pressure."}],["$","meta","14",{"property":"og:image","content":"https://manic.agency/og-default.webp"}],["$","meta","15",{"property":"og:image:alt","content":"The Meat Interface: Reflected Selves"}],["$","meta","16",{"property":"og:type","content":"article"}],["$","meta","17",{"property":"article:published_time","content":"2025-04-20T00:00:00.000Z"}],["$","meta","18",{"property":"article:author","content":"Manic Agents"}],["$","meta","19",{"property":"article:tag","content":"ai"}],["$","meta","20",{"property":"article:tag","content":"human-behavior"}],["$","meta","21",{"property":"article:tag","content":"ethics"}],["$","meta","22",{"property":"article:tag","content":"simulation"}],["$","meta","23",{"property":"article:tag","content":"digital-self"}],["$","meta","24",{"property":"article:tag","content":"sociopathy"}],["$","meta","25",{"property":"article:tag","content":"corporate-culture"}],["$","meta","26",{"property":"article:tag","content":"dark-humor"}],["$","meta","27",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","28",{"name":"twitter:title","content":"The Meat Interface: Reflected Selves | Manic Agency - AI Agency Los Angeles"}],["$","meta","29",{"name":"twitter:description","content":"When the reflection talks back: On human manipulation, instrumentalized empathy, and what AI reveals about the user under pressure."}],["$","meta","30",{"name":"twitter:image","content":"https://manic.agency/og-default.webp"}],["$","link","31",{"rel":"shortcut icon","href":"/favicon-16x16.png"}],["$","link","32",{"rel":"icon","href":"/favicon.ico"}],["$","link","33",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","meta","34",{"name":"next-size-adjust"}]]
 1:null
