@@ -5,12 +5,12 @@ import { ChevronDown } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions - Manic Agency',
-  description: 'Common questions about Manic Agency services, Frame.dev ecosystem, AI development, and our open-source projects including Voice Chat Assistant and AgentOS.',
-  keywords: ['FAQ', 'questions', 'Frame.dev', 'AI development', 'Voice Chat Assistant', 'AgentOS', 'OpenStrand', 'Manic Agency'],
+  description: 'Common questions about Manic Agency: software development, AI engineering, design, and our open-source projects.',
+  keywords: ['FAQ', 'questions', 'Manic Agency', 'software development', 'AI development', 'web development', 'design', 'open source'],
   alternates: { canonical: '/faq' },
   openGraph: {
     title: 'FAQ - Manic Agency',
-    description: 'Get answers to common questions about our AI development services and open-source ecosystem.',
+    description: 'Answers to common questions about our software, AI, and design services.',
     type: 'website',
   }
 };
@@ -18,27 +18,11 @@ export const metadata: Metadata = {
 const faqData = [
   {
     question: "What is Manic Agency and what services do you offer?",
-    answer: "Manic Agency is a digital innovation studio specializing in emergent AI technologies. We build Frame.dev and the Framers AI ecosystem, including Voice Chat Assistant, AgentOS, and OpenStrand. Our services include AI development, web applications, and creative technology solutions."
-  },
-  {
-    question: "What is Frame.dev and how does it relate to your other projects?",
-    answer: "Frame.dev is our flagship open-source AI development platform. It's the foundation of our Framers AI ecosystem, which includes Voice Chat Assistant (VCA) for natural language coding, AgentOS for AI orchestration, and OpenStrand for collaborative knowledge management. We're also developing HomeOS, WebOS, SafeOS, MyOS, and WorkOS."
-  },
-  {
-    question: "How can Voice Chat Assistant help with development?",
-    answer: "Voice Chat Assistant (VCA.chat) enables natural language coding through voice commands. It integrates with AgentOS to provide intelligent assistance for software development, making coding more accessible and efficient through conversational interfaces."
-  },
-  {
-    question: "What is AgentOS and how does it work?",
-    answer: "AgentOS (agentos.sh) is a modular runtime for AI applications that provides orchestration capabilities for intelligent systems. It enables developers to build, deploy, and manage AI agents with seamless integration across different platforms and services."
-  },
-  {
-    question: "How does OpenStrand support collaborative knowledge management?",
-    answer: "OpenStrand (openstrand.ai) is inspired by Zettelkasten methodology and provides tools for organizing, connecting, and discovering knowledge collaboratively. It helps teams build interconnected knowledge bases that grow more valuable over time."
+    answer: "Manic Agency is a software and design studio. We build custom web, AI, and interactive applications for clients, and we develop our own portfolio of software products and developer tools. Our work spans full-stack development, AI integration, web3, AR/VR, and brand and product design."
   },
   {
     question: "Are your projects open source?",
-    answer: "Yes! We're committed to open-source development. Frame.dev, Voice Chat Assistant, AgentOS, and OpenStrand are all open-source projects. You can find our repositories on GitHub at github.com/manicinc and contribute to the ecosystem."
+    answer: "Yes. We maintain an active open-source portfolio of libraries, tools, and experiments at github.com/manicinc, and we contribute to the wider ecosystem."
   },
   {
     question: "How can I get started with your AI development services?",
@@ -50,7 +34,7 @@ const faqData = [
   },
   {
     question: "What makes your approach to AI development different?",
-    answer: "We focus on making AI agency emergent, adaptive, and permanent. Rather than building isolated tools, we create interconnected systems that learn and evolve. Our 'denoising the web' philosophy emphasizes clarity and intelligent automation over complexity."
+    answer: "We pair senior full-stack engineering with strong design. Every developer is full-stack with at least one specialization, so we take projects from concept through deployment without handoffs. Because we also ship our own products, we build with the same standards we recommend to clients."
   },
   {
     question: "Can I hire Manic Agency for custom development projects?",
@@ -77,7 +61,7 @@ export default function FAQPage() {
             Frequently Asked Questions
           </h1>
           <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-            Common questions about Manic Agency, Frame.dev ecosystem, and our AI development services.
+            Common questions about Manic Agency and our software, AI, and design services.
           </p>
         </header>
 

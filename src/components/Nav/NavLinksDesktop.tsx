@@ -1,7 +1,6 @@
 // src/components/Nav/NavLinksDesktop.tsx
 import React from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import ThemeToggle from '../Theme/ThemeToggle'; // Standard Toggle
 import OrnamentalThemeToggle from '../Theme/OrnamentalThemeToggle'; // Ornate Toggle
 import {
@@ -22,11 +21,6 @@ interface NavLinksDesktopProps {
 }
 
 const NavLinksDesktop: React.FC<NavLinksDesktopProps> = ({ isBlog, isActivePath, closeMenu, handleContactClick }) => {
-    const pathname = usePathname();
-    
-    // Hide games button on velvet/looking glass pages
-    const shouldShowGames = !pathname?.includes('/velvet');
-    
     return (
         <nav className={`
             flex items-stretch
@@ -86,15 +80,6 @@ const NavLinksDesktop: React.FC<NavLinksDesktopProps> = ({ isBlog, isActivePath,
                 </a>
             </Link>
 
-            {/* Games Button (Conditionally shown) */}
-            {shouldShowGames && (
-                <Link href="https://wilds.ai" legacyBehavior>
-                    <a className={styles.gamesBtn} data-nav-id="games" onClick={closeMenu} target="_blank" rel="noopener noreferrer">
-                        <span>Games</span>
-                        <img src="/controller-button.svg" alt="Game Controller" className={styles.gamesSvg} />
-                    </a>
-                </Link>
-            )}
 
             {/* Contact Button (Always shown) */}
             <Link href="/contact" legacyBehavior>

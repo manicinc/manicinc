@@ -244,7 +244,7 @@ const languageColors: Record<string, string> = {
 };
 
 // Constants
-type OrgKey = 'manicinc' | 'framersai';
+type OrgKey = 'manicinc';
 
 interface OrgConfig {
     key: OrgKey;
@@ -260,12 +260,6 @@ const ORGS: readonly OrgConfig[] = [
         tagline: 'The Looking Glass — synthetic publishing, agentic experiments, tooling.',
         sponsorUrl: 'https://github.com/sponsors/manicinc',
     },
-    {
-        key: 'framersai',
-        label: 'Framers AI',
-        tagline: 'Open-source AI infrastructure — AgentOS, SafeOS, Paracosm, and the rest of the Frame ecosystem.',
-        sponsorUrl: 'https://github.com/sponsors/framersai',
-    },
 ] as const;
 
 const DEFAULT_ORG: OrgKey = 'manicinc';
@@ -278,11 +272,9 @@ export default function OpenSourcePageClient() {
     // Per-org cache so switching tabs doesn't refetch.
     const [reposByOrg, setReposByOrg] = useState<Record<OrgKey, Repository[]>>({
         manicinc: [],
-        framersai: [],
     });
     const [orgInfoByOrg, setOrgInfoByOrg] = useState<Record<OrgKey, GitHubUserOrg | null>>({
         manicinc: null,
-        framersai: null,
     });
 
     // Derived state for current org (preserves the original variable names so the
@@ -490,8 +482,8 @@ export default function OpenSourcePageClient() {
                 // from rendering. Only set a global error if every org failed.
                 const settled = await Promise.allSettled(ORGS.map((o) => fetchOrg(o.key)));
                 if (!isMounted) return;
-                const nextRepos: Record<OrgKey, Repository[]> = { manicinc: [], framersai: [] };
-                const nextOrgInfo: Record<OrgKey, GitHubUserOrg | null> = { manicinc: null, framersai: null };
+                const nextRepos: Record<OrgKey, Repository[]> = { manicinc: [] };
+                const nextOrgInfo: Record<OrgKey, GitHubUserOrg | null> = { manicinc: null };
                 const errors: string[] = [];
                 for (const result of settled) {
                     if (result.status === 'fulfilled') {
@@ -535,7 +527,7 @@ export default function OpenSourcePageClient() {
 
     const topics = useMemo(() => {
         const allTopics = repositories.flatMap(repo => repo.topics || []).filter(Boolean);
-        const forbidden = new Set(['manic', 'agency', 'manicinc', 'framers', 'framersai', activeOrg.toLowerCase()]);
+        const forbidden = new Set(['manic', 'agency', 'manicinc', activeOrg.toLowerCase()]);
         return Array.from(new Set(allTopics)).filter(t => !forbidden.has(t.toLowerCase())).sort();
     }, [repositories, activeOrg]);
 
@@ -588,7 +580,8 @@ export default function OpenSourcePageClient() {
                             </h1>
                         </div>
 
-                        {/* Org tabs — switch between Manic Agency + Framers AI repos */}
+                        {/* Org tabs — only shown when more than one org is configured */}
+                        {ORGS.length > 1 && (
                         <div
                             role="tablist"
                             aria-label="Select organization"
@@ -622,6 +615,7 @@ export default function OpenSourcePageClient() {
                                 );
                             })}
                         </div>
+                        )}
                         <p className="text-center text-sm text-zinc-400 mb-2 max-w-2xl mx-auto">
                             {activeOrgConfig.tagline}
                         </p>

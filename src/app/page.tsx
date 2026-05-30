@@ -223,39 +223,6 @@ export default function HomePage() {
 
             </Suspense> {/* Close Suspense tag */}
             
-        {/* Frame.dev CTA Banner */}
-        <section className="frame-banner">
-            <div className="frame-banner__container">
-                <div className="frame-banner__logo-wrapper">
-                    <Image
-                        src="/assets/projects/framers/frame-logo-no-subtitle.svg"
-                        alt="Frame.dev"
-                        className="frame-banner__logo"
-                        width={280}
-                        height={112}
-                        priority
-                        fetchPriority="high"
-                        sizes="(max-width: 768px) 200px, 280px"
-                    />
-                </div>
-                
-                <h2 className="frame-banner__title">
-                    we are the framers
-                </h2>
-                
-                <p className="frame-banner__subtitle">
-                    Denoising the web and making AI agency <strong>emergent</strong>, <strong>adaptive</strong>, and <strong>permanent</strong>.
-                </p>
-                
-                <Link href="https://frame.dev" className="frame-banner__cta">
-                    <span className="frame-banner__cta-text">explore frame.dev</span>
-                    <svg className="frame-banner__cta-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </Link>
-            </div>
-        </section>
-            
             {/* Newsletter signup for main site */}
             <NewsletterSection 
                 variant="main" 

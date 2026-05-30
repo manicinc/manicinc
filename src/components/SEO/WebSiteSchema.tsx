@@ -8,7 +8,7 @@ export default function WebSiteSchema() {
     "name": "Manic Agency",
     "alternateName": "MANIC AGENCY",
     "url": "https://manic.agency",
-    "description": "Digital innovation studio - We are the Framers, denoising the web through AI and open source",
+    "description": "Digital innovation studio building AI, web, and interactive software.",
     "publisher": {
       "@type": "Organization",
       "name": "Manic Agency",
@@ -27,12 +27,6 @@ export default function WebSiteSchema() {
     "copyrightHolder": {
       "@type": "Organization",
       "name": "Manic Agency"
-    },
-    "mainEntity": {
-      "@type": "CreativeWork",
-      "name": "Frame.dev",
-      "url": "https://frame.dev",
-      "description": "Open-source AI development ecosystem"
     }
   };
 

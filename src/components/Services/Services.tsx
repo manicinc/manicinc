@@ -47,16 +47,16 @@ interface Service {
 const servicesData: Service[] = [
   {
     id: 1,
-    title: "Open-Source Innovation & AI Infrastructure",
+    title: "AI Engineering & Integration",
     IconComponent: IconSimulation, // Use created component
     description:
-      "Through Frame.dev and Framers AI, we build emergent, adaptive AI systems. We denoise the web and create permanent AI agency through open-source tools.",
+      "We design and ship AI features end to end: agents, retrieval, voice, and LLM integrations wired into real products. We also build and maintain our own open-source libraries and tools.",
     features: [
-      "Frame.dev ecosystem: VCA, AgentOS, OpenStrand, and emerging OS platforms",
-      "Voice Chat Assistant for natural language coding",
-      "AgentOS orchestration runtime for intelligent AI applications",
-      "OpenStrand collaborative knowledge management",
-      "HomeOS, WebOS, SafeOS, MyOS, WorkOS (in development)"
+      "LLM and agent integrations built into production apps",
+      "Retrieval-augmented search and knowledge systems",
+      "Voice and conversational interfaces",
+      "Open-source libraries and developer tooling",
+      "Model evaluation, prompt engineering, and cost optimization"
     ],
 },
  {

@@ -284,7 +284,7 @@ Context-aware chat assistant with multiple modes:
 | **Brainstorm** | Structured ideation with SCAMPER, Six Hats, First Principles, JTBD |
 | **Analyze** | Deep analysis with RAG context from your knowledge base |
 | **Debate** | Quick multi-agent perspective on a specific question |
-| **Task** | Autonomous task execution via AgentOS bridge |
+| **Task** | Autonomous task execution via the agent bridge |
 
 The copilot adapts its responses based on your founder archetype—a Builder gets technical deep-dives while a Hustler gets action-oriented advice.
 
@@ -373,10 +373,7 @@ HackBase connects with other tools we've built:
 
 - **[SynthStack](/projects/ai/synthstack)** — AI-native SaaS boilerplate to build your validated idea
 - **[DomainHQ](/projects/ai/domainhq)** — Domain portfolio management for your brand acquisitions
-- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering the debate system
-- **[Quarry.space](/projects/ai/quarry)** — Knowledge management for your research and validation data
-- **[Wunderland.sh](/projects/ai/wunderland)** — Open-source OpenClaw fork autonomous agent framework using the same HEXACO-60 personality model
-- **[Wunderland Sol](/projects/ai/wunderland-sol)** — Solana hackathon project: on-chain AI agent social network
+- **[Voice Chat Assistant](/projects/ai/voice-chat-assistant)** — Voice-first AI coding assistant
 - **[RabbitHole](/projects/ai/rabbithole)** — Deploy autonomous agents across Slack, Discord, Telegram, and 34 more channels
 
 ## Open Source

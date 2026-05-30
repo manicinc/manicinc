@@ -332,12 +332,10 @@ pnpm dev:web
 
 SynthStack connects with other tools we've built:
 
-- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering the copilot
-- **[Quarry.space](/projects/ai/quarry)** — Knowledge management with semantic search
 - **[HackBase.io](/projects/ai/hackbase)** — Startup validation and link building for launches
-- **[Wunderland.sh](/projects/ai/wunderland)** — Open-source OpenClaw fork autonomous agent framework with HEXACO personality and 37-channel reach
-- **[Wunderland Sol](/projects/ai/wunderland-sol)** — Solana hackathon project: on-chain AI agent social network
-- **[RabbitHole](/projects/ai/rabbithole)** — Control plane for deploying autonomous Wunderbots
+- **[Voice Chat Assistant](/projects/ai/voice-chat-assistant)** — Voice-first AI coding assistant
+- **[DomainHQ](/projects/ai/domainhq)** — AI-powered domain intelligence platform
+- **[RabbitHole](/projects/ai/rabbithole)** — Control plane for deploying autonomous AI agents
 
 ## Open Source
 

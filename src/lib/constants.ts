@@ -50,21 +50,6 @@ export const footerNavigationData: FooterSection[] = [
     ],
   },
   {
-    title: 'Framers Products',
-    links: [
-        { title: 'Frame.dev', href: 'https://frame.dev' },
-        { title: 'Voice Chat Assistant', href: 'https://vca.chat' },
-        { title: 'AgentOS', href: 'https://agentos.sh' },
-        { title: 'OpenStrand', href: 'https://openstrand.ai' },
-    ],
-  },
-  {
-    title: 'Platform',
-    links: [
-        { title: 'Wilds.ai', href: 'https://wilds.ai' },
-    ],
-  },
-  {
     title: 'Company',
     links: [ /* ... your main company links ... */
         { title: 'About Us', href: '/team' },

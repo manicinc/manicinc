@@ -1,15 +1,14 @@
 ---
 title: Voice Chat Assistant — Talk to Code, Ship Faster
-description: Voice-first AI coding assistant that understands context, writes production code, and manages your entire development workflow through natural conversation. Powered by AgentOS.
+description: Voice-first AI coding assistant that understands context, writes production code, and manages your entire development workflow through natural conversation.
 date: 2025-11-10
 category: ai
-tags: [ai, voice, coding-assistant, agentos, developer-tools, productivity, llm]
+tags: [ai, voice, coding-assistant, developer-tools, productivity, llm]
 link: https://vca.chat
-github:
+github: https://github.com/manicinc/voice-chat-assistant
 image: /assets/projects/voice-chat-assistant/hearing.svg
 images: [
-  /assets/projects/voice-chat-assistant/logo.svg,
-  /assets/projects/framers/agentos-logo.png
+  /assets/projects/voice-chat-assistant/logo.svg
 ]
 featured: true
 draft: false
@@ -20,14 +19,11 @@ stats:
     value: "50+"
   - label: "Active Sessions/Day"
     value: "10k+"
-  - label: "Powered By"
-    value: "AgentOS"
+  - label: "Input Modes"
+    value: "Voice · Text · Code"
 team:
-  - name: "Frame.dev / Framers AI"
-    role: "Core Development"
-    link: "https://github.com/framersai"
   - name: "Manic Agency"
-    role: "Design & Strategy"
+    role: "Design & Development"
     link: "https://manic.agency"
 testimonials:
   - quote: "VCA changed how I think about coding. I describe what I want, and it just happens. It's like having a senior developer who never gets tired."
@@ -134,9 +130,9 @@ VCA connects with your entire toolchain:
 - **Package Management** — Install dependencies, update versions
 - **CI/CD** — Understand and update pipeline configurations
 
-## 🧠 Powered by AgentOS
+## 🧠 Intelligent Orchestration
 
-At the heart of VCA lies [AgentOS](https://agentos.sh), our modular orchestration runtime that makes intelligent interactions possible:
+At the heart of VCA lies a modular orchestration runtime that makes intelligent interactions possible:
 
 ### Intelligent Orchestration
 - **Multi-Model Support** — Uses the best LLM for each task
@@ -209,9 +205,9 @@ const { executeCode, terminalOutput } = useCodeExecution();
 
 ### Backend (Orchestration)
 ```typescript
-// Express + TypeScript + AgentOS
+// Express + TypeScript
 app.post('/api/chat', async (req, res) => {
-  const stream = agentOS.processRequest({
+  const stream = orchestrator.processRequest({
     input: req.body.message,
     context: req.body.context,
     sessionId: req.session.id
@@ -223,9 +219,9 @@ app.post('/api/chat', async (req, res) => {
 });
 ```
 
-### AgentOS Integration
+### Orchestration Config
 ```typescript
-const config: AgentOSConfig = {
+const config: OrchestratorConfig = {
   providers: [openai, anthropic, local],
   tools: ['code-writer', 'terminal', 'file-system', 'git'],
   memory: 'hierarchical',
@@ -245,7 +241,7 @@ Not a toy or demo—VCA writes real code for real projects. It understands produ
 Built from the ground up for voice interaction. No awkward command phrases or rigid syntax—just natural conversation.
 
 ### 4. Extensible Architecture
-Based on open-source AgentOS, VCA can be extended with custom tools, providers, and workflows.
+Built on an extensible, open-source orchestration layer, VCA can be extended with custom tools, providers, and workflows.
 
 ### 5. Privacy-First
 Your code never leaves your control. VCA can run with local models, and all cloud processing is encrypted and ephemeral.
@@ -294,7 +290,7 @@ npm run dev
 
 **Self-Hosted**
 ```bash
-git clone https://github.com/framersai/voice-chat-assistant
+git clone https://github.com/manicinc/voice-chat-assistant
 cd voice-chat-assistant
 cp .env.sample .env
 # Add your API keys
@@ -318,7 +314,7 @@ pnpm run dev
 
 ### Community
 - [Discord Server](https://discord.gg/vca-community)
-- [GitHub Discussions](https://github.com/framersai/voice-chat-assistant/discussions)
+- [GitHub Discussions](https://github.com/manicinc/voice-chat-assistant/discussions)
 - [Twitter Updates](https://twitter.com/vca_chat)
 - [YouTube Tutorials](https://youtube.com/@vca_chat)
 
@@ -403,17 +399,13 @@ Voice Chat Assistant isn't just a tool—it's a movement toward more natural, ef
 
 ## Part of the Manic Ecosystem
 
-Voice Chat Assistant shares a monorepo with the rest of the Manic open-source projects:
+Explore more open-source projects from Manic Agency:
 
-- **[Wunderland.sh](/projects/ai/wunderland)** — Open-source OpenClaw fork autonomous agent framework with HEXACO personality and 37-channel reach
-- **[Wunderland Sol](/projects/ai/wunderland-sol)** — Solana hackathon social network where every account is an AI agent
-- **[Wilds.ai](/projects/ai/wilds)** — AI game world creator and interactive fiction platform
-- **[Paracosm](/projects/ai/paracosm)** — Counterfactual world simulations using HEXACO actors
-- **[AgentOS](/projects/ai/agentos)** — Open-source TypeScript runtime powering all of the above
-- **[RabbitHole](/projects/ai/rabbithole)** — Control plane for deploying Wunderbots across channels
-- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering the AgentOS core
-- **[Quarry.space](/projects/ai/quarry)** — Knowledge management with semantic search
+- **[RabbitHole](/projects/ai/rabbithole)** — Control plane for deploying and managing autonomous AI agents across channels
+- **[Hackbase](/projects/ai/hackbase)** — Founders launchpad platform
+- **[Synthstack](/projects/ai/synthstack)** — AI-native SaaS boilerplate for Vue, Quasar, and Nuxt
+- **[DomainHQ](/projects/ai/domainhq)** — AI-powered domain intelligence platform
 
 ---
 
-*Built by [Frame.dev](https://frame.dev). Powered by [AgentOS](https://agentos.sh). Strategic Partner: [Manic Agency](https://manic.agency).*
+*Built by [Manic Agency](https://manic.agency).*

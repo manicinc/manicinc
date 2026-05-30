@@ -39,7 +39,7 @@ export default function OrganizationSchema() {
         "itemOffered": {
           "@type": "Service",
           "name": "AI Development",
-          "description": "Custom AI solutions including Frame.dev ecosystem"
+          "description": "Custom AI solutions, integrations, and applications"
         }
       },
       {

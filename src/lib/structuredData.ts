@@ -21,8 +21,7 @@ export const organizationSchema = {
   },
   "sameAs": [
     "https://github.com/manicinc",
-    "https://twitter.com/manicagency",
-    "https://wilds.ai"
+    "https://twitter.com/manicagency"
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",

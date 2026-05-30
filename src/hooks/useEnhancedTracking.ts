@@ -189,7 +189,7 @@ export function useEnhancedTracking() {
 
   // Track product-specific CTAs with optional Google Ads conversion
   const trackProductCTA = useCallback((
-    product: 'hackbase' | 'wunderland' | 'rabbithole' | string,
+    product: 'hackbase' | 'rabbithole' | string,
     action: 'visit_site' | 'signup' | 'pricing_click' | 'github_click',
     conversionLabel?: string,
     options?: EnhancedTrackingOptions

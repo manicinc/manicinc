@@ -24,6 +24,20 @@ import white4 from "@/images/404/white-4.png";
 const darkImages: StaticImageData[] = [dark1, dark2, dark3, dark4];
 const whiteImages: StaticImageData[] = [white1, white2, white3, white4];
 
+// --- Retired project-page redirects ---
+// These project slugs were removed from the portfolio. GitHub Pages serves this
+// 404 view for the now-missing routes while keeping the original URL, so we send
+// any inbound traffic on to each product's canonical home.
+const PROJECT_REDIRECTS: Record<string, string> = {
+    "/projects/ai/frame": "https://frame.dev",
+    "/projects/ai/agentos": "https://agentos.sh",
+    "/projects/ai/wunderland": "https://wunderland.sh",
+    "/projects/ai/wilds": "https://wilds.ai",
+    "/projects/ai/paracosm": "https://paracosm.agentos.sh",
+    "/projects/ai/quarry": "https://quarry.space",
+    "/projects/ai/wunderland-sol": "https://github.com/manicinc/wunderland-sol",
+};
+
 export default function NotFound() {
     const pathname = usePathname();
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -60,6 +74,18 @@ export default function NotFound() {
 
     // Determine which image set to use based on detected theme
     const imageSet = activeTheme === 'dark' ? darkImages : whiteImages;
+
+    // --- Retired Project Page Redirection ---
+    useEffect(() => {
+        if (!pathname) return;
+        // Normalize a trailing slash so both /projects/ai/agentos and /projects/ai/agentos/ match.
+        const normalized =
+            pathname.length > 1 && pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
+        const target = PROJECT_REDIRECTS[normalized];
+        if (target) {
+            window.location.replace(target);
+        }
+    }, [pathname]);
 
     // --- Old Blog Slug Redirection ---
     useEffect(() => {

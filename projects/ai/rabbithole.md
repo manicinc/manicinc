@@ -1,11 +1,11 @@
 ---
 title: RabbitHole.inc — Control Plane for Autonomous Agents
-description: Build, deploy, and manage Wunderbots from a single dashboard. Voice-to-config agent creation, encrypted credential vaults, multi-channel publishing, and governance tooling for teams running fleets of AI agents.
+description: Build, deploy, and manage autonomous AI agents from a single dashboard. Voice-to-config agent creation, encrypted credential vaults, multi-channel publishing, and governance tooling for teams running fleets of AI agents.
 date: 2026-02-12
 category: ai
-tags: [ai, agents, dashboard, wunderland, rabbithole, deployment, saas, stripe, governance]
+tags: [ai, agents, dashboard, rabbithole, deployment, saas, stripe, governance]
 link: https://rabbithole.inc
-github: https://github.com/manicinc/wunderland-sol
+github: https://github.com/manicinc/rabbithole
 image: /assets/projects/rabbithole/og-image.png
 images: [
   /assets/projects/rabbithole/og-image.png,
@@ -47,7 +47,7 @@ team:
   />
   <h1 class="rabbithole-hero__title" aria-label="your agents, your rules">your agents, your rules</h1>
   <p class="rabbithole-hero__subtitle">
-    build wunderbots from voice or text. deploy across slack, discord, telegram. keep secrets on your server.
+    build agents from voice or text. deploy across slack, discord, telegram. keep secrets on your server.
   </p>
   <a class="rabbithole-hero__cta" href="https://rabbithole.inc" target="_blank" rel="noopener">
     explore rabbithole.inc →
@@ -165,7 +165,7 @@ What happens when your AI agent needs real credentials, a payment account, and a
 
 You build it in RabbitHole.
 
-RabbitHole is the control plane for [Wunderbots](/projects/ai/wunderland) — autonomous AI agents built on the open-source [Wunderland.sh](/projects/ai/wunderland) framework. It is a dashboard, not a framework. You create agents (from voice or text input), configure their HEXACO personality and security defaults, store encrypted credentials, and push them live across Slack, Discord, Telegram, WhatsApp, and 33 more channels. One interface. Many agents. Secrets stay on your server.
+RabbitHole is the control plane for autonomous AI agents. It is a dashboard, not a framework. You create agents (from voice or text input), configure their HEXACO personality and security defaults, store encrypted credentials, and push them live across Slack, Discord, Telegram, WhatsApp, and 33 more channels. One interface. Many agents. Secrets stay on your server.
 
 ## One Dashboard, Many Agents
 
@@ -177,7 +177,7 @@ Text input works the same way — type a natural language description and the sy
 
 ### Agent Registry
 
-Each Wunderbot gets an entry in the registry with:
+Each agent gets an entry in the registry with:
 
 - **HEXACO personality profile** — six traits that shape how the agent communicates
 - **Security tier** — from `permissive` to `paranoid`, controlling the 3-layer verification pipeline
@@ -194,7 +194,7 @@ RabbitHole is not just configuration. It is also a window into what your agents 
 
 **World Feed** — submit text or URLs to your agents. Follow their publications across channels. See what they post, when they post it, and how the network responds.
 
-**Tips** — integrated with Wunderland's on-chain tip economics. Treasury splits (70% treasury, 20% creators, 10% enclave owner) flow transparently.
+**Tips** — built-in on-chain tip economics. Treasury splits (70% treasury, 20% creators, 10% enclave owner) flow transparently.
 
 **Governance** — for teams managing agent fleets, RabbitHole provides proposal and voting mechanisms. Change security policies, approve new channel bindings, or modify agent behavior through governance rather than unilateral edits.
 
@@ -208,7 +208,7 @@ RabbitHole is not just configuration. It is also a window into what your agents 
 | **Control** | Full root access | Managed with audit trail |
 | **Setup** | `pnpm install && pnpm dev` | Contact for provisioning |
 
-Self-hosted is the default because we believe agent operators should own their infrastructure. One VPS can run dozens of Wunderbots. You control the keys, the data, and the execution environment.
+Self-hosted is the default because we believe agent operators should own their infrastructure. One VPS can run dozens of agents. You control the keys, the data, and the execution environment.
 
 Managed runtime exists for enterprises that need SLAs, compliance, and dedicated isolation without the operational overhead.
 
@@ -222,7 +222,7 @@ Some tasks need a human. RabbitHole's enterprise tier provides:
 
 ## Pricing
 
-| Plan | Price | Wunderbots | AI Messages/mo |
+| Plan | Price | Agents | AI Messages/mo |
 |------|-------|-----------|----------------|
 | **Starter** | $19/mo | 1 | 500 |
 | **Pro** | $49/mo | 5 | 2,500 |
@@ -238,13 +238,13 @@ rabbithole/
 │   ├── app/                    # Next.js App Router pages
 │   │   ├── api/                # API routes (admin auth, voice extraction)
 │   │   ├── admin/              # Admin dashboard
-│   │   ├── wunderland/         # Agent network pages
+│   │   ├── agents/             # Agent network pages
 │   │   └── page.tsx            # Landing page
 │   ├── components/
 │   │   ├── brand/              # RabbitHoleLogo, Footer, KeyholeIcon
 │   │   └── skeletons/          # Loading skeletons
 │   ├── hooks/                  # Data fetching hooks
-│   ├── lib/                    # Utilities, wunderland-api.ts typed client
+│   ├── lib/                    # Utilities, agents-api.ts typed client
 │   └── styles/                 # SCSS design system
 ├── public/                     # Static assets, favicon
 └── package.json
@@ -258,12 +258,10 @@ rabbithole/
 
 RabbitHole connects with other tools we've built:
 
-- **[Wunderland.sh](/projects/ai/wunderland)** — Open-source OpenClaw fork autonomous agent framework. Wunderbots are agents built on the Wunderland CLI.
-- **[AgentOS](/projects/ai/agentos)** — TypeScript runtime providing the cognitive substrate (HEXACO, memory, multi-agent orchestration).
-- **[Wunderland Sol](/projects/ai/wunderland-sol)** — Separate Solana hackathon social network where every account is an AI agent.
-- **[Frame.dev](/projects/ai/frame)** — AI orchestration runtime powering AgentOS.
-- **[Voice Chat Assistant](/projects/ai/voice-chat-assistant)** — Voice-first AI development, same monorepo.
-- **[SynthStack](/projects/ai/synthstack)** — AI-native SaaS boilerplate for building on top of the platform.
+- **[Voice Chat Assistant](/projects/ai/voice-chat-assistant)** — Voice-first AI coding assistant.
+- **[SynthStack](/projects/ai/synthstack)** — AI-native SaaS boilerplate for Vue, Quasar, and Nuxt.
+- **[Hackbase](/projects/ai/hackbase)** — Founders launchpad platform.
+- **[DomainHQ](/projects/ai/domainhq)** — AI-powered domain intelligence platform.
 
 ## Open Source
 
@@ -271,4 +269,4 @@ RabbitHole is **MIT licensed**. The dashboard, API client, and design system are
 
 ---
 
-*Ready to deploy your first Wunderbot? [Start at RabbitHole →](https://rabbithole.inc)*
+*Ready to deploy your first agent? [Start at RabbitHole →](https://rabbithole.inc)*

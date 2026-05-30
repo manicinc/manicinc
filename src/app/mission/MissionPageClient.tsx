@@ -212,11 +212,6 @@ const MissionPageClient = () => {
                             <motion.blockquote variants={fadeIn} className="quote">
                                 We're not just building games; we're architecting the future of interactive storytelling and fostering a community where innovation thrives through collaboration.
                             </motion.blockquote>
-                            <motion.div variants={fadeIn} className="mt-6">
-                                 <a href="https://wilds.ai" target="_blank" rel="noopener noreferrer" className="styled-button primary">
-                                     Explore Wilds.ai <Rocket className="button-icon" />
-                                 </a>
-                             </motion.div>
                         </motion.div>
                     </div>
                 </section>
@@ -243,30 +238,6 @@ const MissionPageClient = () => {
                     </div>
                 </section>
 
-                <OrnateDividerSVG />
-
-                {/* --- Framers AI / Frame.dev Section --- */}
-                <section className="mission-section">
-                    <div className="container mx-auto px-4">
-                        <motion.div
-                            className="max-w-4xl mx-auto text-center"
-                            initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={staggerContainer}
-                        >
-                            <motion.h2 variants={fadeIn} className="section-title">The Framers: Denoising the Web</motion.h2>
-                            <motion.p variants={fadeIn} className="body-text">
-                                Through <strong className="highlight-text"><a href="https://frame.dev" target="_blank" rel="noopener noreferrer">Frame.dev</a></strong> and <strong className="highlight-text">Framers AI</strong>, we're building the infrastructure for emergent, adaptive, and permanent AI agency. Our open-source ecosystem includes <a href="https://vca.chat" target="_blank" rel="noopener noreferrer" className="highlight-text">Voice Chat Assistant</a>, <a href="https://agentos.sh" target="_blank" rel="noopener noreferrer" className="highlight-text">AgentOS</a>, and <a href="https://openstrand.ai" target="_blank" rel="noopener noreferrer" className="highlight-text">OpenStrand</a>—alongside emerging platforms like HomeOS, WebOS, SafeOS, MyOS, and WorkOS.
-                            </motion.p>
-                            <motion.blockquote variants={fadeIn} className="quote">
-                                We denoise the web by creating clarity through intelligent systems. AI shouldn't just assist—it should understand, adapt, and persist across contexts.
-                            </motion.blockquote>
-                            <motion.div variants={fadeIn} className="mt-6">
-                                 <a href="https://frame.dev" target="_blank" rel="noopener noreferrer" className="styled-button primary">
-                                     Explore Frame.dev <ArrowRight className="button-icon" />
-                                 </a>
-                             </motion.div>
-                        </motion.div>
-                    </div>
-                </section>
 
                 <OrnateDividerSVG />
 
@@ -290,9 +261,6 @@ const MissionPageClient = () => {
                                 </motion.div>
                                 <motion.div variants={fadeIn} whileHover={iconHover}>
                                      <Link href="/blog" className="explore-link"> <BlogIcon /><span>Æther Log</span></Link>
-                                </motion.div>
-                                <motion.div variants={fadeIn} whileHover={iconHover}>
-                                     <a href="https://wilds.ai" target="_blank" rel="noopener noreferrer" className="explore-link"> <Rocket /><span>Wilds.ai</span></a>
                                 </motion.div>
                                 <motion.div variants={fadeIn} whileHover={iconHover}>
                                      <Link href="/team" className="explore-link"> <TeamIcon /><span>Architects</span></Link>
