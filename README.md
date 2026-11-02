@@ -421,19 +421,8 @@ NEXT_PUBLIC_CLARITY_PROJECT_ID=your_clarity_project_id
 # Contact Form (Web3Forms - Free)
 NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your_web3forms_access_key
 
-# Newsletter (Sender.net - Free)
-NEXT_PUBLIC_SENDER_ACCOUNT_ID=your_account_id_from_sender_js_snippet
-NEXT_PUBLIC_SENDER_FORM_ID=your_form_id_from_sender_dashboard
-
-# Legacy EmailJS (Fallback - Optional)
-NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
-NEXT_PUBLIC_EMAILJS_NEWSLETTER_TEMPLATE_ID=template_k3v4qm9
-NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID=template_rq6cbua
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=CU78N6a7mfAlrjGWo
-
-# Resend (Server-side alternative - Optional)
-RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxxxx
-RESEND_AUDIENCE_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+# Newsletter (EmailOctopus)
+NEXT_PUBLIC_EMAILOCTOPUS_FORM_ID=your_emailoctopus_form_id
 ```
 
 ## Service Setup Instructions:
@@ -443,24 +432,12 @@ RESEND_AUDIENCE_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 2. Enter your email → Get instant access key
 3. Add `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` to GitHub Secrets
 
-### Sender.net (Newsletter)
+### EmailOctopus (Newsletter)
 
-#### Getting Your Sender.net IDs
+1. In EmailOctopus, open the list's embedded form and copy its form ID (the `<id>` in `https://eocampaign1.com/form/<id>.js`).
+2. Add `NEXT_PUBLIC_EMAILOCTOPUS_FORM_ID` to GitHub Secrets.
 
-1. **Form ID**: Go to your Sender.net dashboard → Forms → Select your form → The ID is shown (e.g., `45678`)
-
-2. **Account ID**: In the same form settings, look for "JavaScript integration instructions"
-   - The account ID is in the `sender('YOUR_ACCOUNT_ID')` line of the JavaScript snippet
-   - Example: If you see `sender('1234563')`, then `1234563` is your account ID
-
-#### How It Works
-
-- **Global Script**: Loads once in the site header using your account ID
-- **Form Embed**: Places forms using your form ID where needed
-- **Error Handling**: Graceful fallback if environment variables are missing
-
-**Account ID**: `1234563` (for the JavaScript `sender()` call)  
-**Form ID**: `45678` (for the HTML `data-sender-form-id` attribute)
+EmailOctopus holds the subscriber list and sends the confirmation mail, the campaigns and their unsubscribe links. The site sends no mail itself: it is a static export, so it has no API routes.
 
 **For Local Development:**
 No setup required! Forms will show graceful fallback messages if environment variables are missing.
@@ -477,13 +454,6 @@ Just run `npm run dev` and the app handles missing values automatically.
 1. Create a project at [clarity.microsoft.com](https://clarity.microsoft.com)
 2. Go to Settings > Overview to find your Project ID
 3. Add to environment variables
-
-**Resend Newsletter**:
-1. Create an account at [resend.com](https://resend.com)
-2. Verify your domain
-3. Create an API key in the API Keys section
-4. (Optional) Create an audience for subscriber management
-5. Add both keys to environment variables
 
 #### Usage
 
@@ -502,25 +472,8 @@ setUserTag('user_type', 'returning_visitor');
 
 ### Newsletter System
 
-The project includes a comprehensive newsletter system with **Resend** integration, featuring GDPR compliance and context-aware messaging.
+`NewsletterSection` renders the newsletter block and mounts the EmailOctopus embed (`EmailOctopusForm`) when `NEXT_PUBLIC_EMAILOCTOPUS_FORM_ID` is set.
 
-#### Components
-
-**NewsletterForm**: Reusable form component with multiple variants
-```typescript
-import NewsletterForm from '@/components/NewsletterForm';
-
-// Main site version
-<NewsletterForm variant="main" />
-
-// Blog version with different messaging
-<NewsletterForm variant="blog" />
-
-// Compact inline version
-<NewsletterForm variant="main" compact inline />
-```
-
-**NewsletterSection**: Full-featured section with social proof
 ```typescript
 import NewsletterSection from '@/components/NewsletterSection';
 
@@ -531,21 +484,7 @@ import NewsletterSection from '@/components/NewsletterSection';
 <NewsletterSection variant="blog" background="default" />
 ```
 
-#### Legacy API Endpoints (Used by Resend/EmailJS integrations)
-
-**Note:** These are not used by the current Sender.net embed forms, but are available for custom implementations using Resend or EmailJS libraries.
-
-- **POST /api/subscribe**: Subscribe users with welcome emails (via Resend)
-- **POST/GET /api/unsubscribe**: GDPR-compliant unsubscribe with confirmation (via Resend)
-
-#### GDPR Features (Sender.net handles this automatically)
-
-- ✅ **One-click unsubscribe** links in all emails
-- ✅ **Permanent dismissal** with localStorage persistence  
-- ✅ **Context-aware messaging** (blog vs main site)
-- ✅ **Welcome email automation** based on subscription source
-- ✅ **Privacy policy integration** with cookie consent
-- ✅ **Graceful degradation** when API keys are missing
+Sign-up, double opt-in, unsubscribe links and the postal address in each campaign's footer are EmailOctopus settings on the list, not code in this repository.
 
 ### Other Configuration
 
