@@ -75,7 +75,14 @@ test('the mounted newsletter form is the EmailOctopus embed', () => {
 
 test(
   'the built newsletter page renders the EmailOctopus form, not the fallback',
-  { skip: !requireBuild && !existsSync(outDir) && 'no static export output' },
+  {
+    // CI sets REQUIRE_BUILD_MANIFEST and builds with a form id, so this never
+    // skips there. A local build without the id renders the fallback by design.
+    skip:
+      !requireBuild &&
+      (!existsSync(outDir) || !expectedFormId) &&
+      'no static export output or no EXPECT_EMAILOCTOPUS_FORM_ID',
+  },
   () => {
     assert.ok(expectedFormId, 'build with NEXT_PUBLIC_EMAILOCTOPUS_FORM_ID and set EXPECT_EMAILOCTOPUS_FORM_ID');
     const pages = filesUnder(outDir, /\.html$/).filter((f) => /^newsletter(\/index)?\.html$/.test(relative(outDir, f)));
