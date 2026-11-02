@@ -15,12 +15,24 @@ import { fileURLToPath } from 'node:url';
 const root = fileURLToPath(new URL('..', import.meta.url));
 const manifestPath = join(root, '.next', 'app-path-routes-manifest.json');
 const requireBuild = process.env.REQUIRE_BUILD_MANIFEST === '1';
+const outDir = join(root, 'out');
+const expectedFormId = process.env.EXPECT_EMAILOCTOPUS_FORM_ID;
+const mailModules = String.raw`resend|@emailjs\/browser|@\/lib\/emailjs`;
 
 function sourceFiles(dir, out = []) {
   for (const name of readdirSync(dir)) {
     const full = join(dir, name);
     if (statSync(full).isDirectory()) sourceFiles(full, out);
     else if (/\.(ts|tsx|js|jsx|mjs)$/.test(name)) out.push(full);
+  }
+  return out;
+}
+
+function filesUnder(dir, pattern, out = []) {
+  for (const name of readdirSync(dir)) {
+    const full = join(dir, name);
+    if (statSync(full).isDirectory()) filesUnder(full, pattern, out);
+    else if (pattern.test(name)) out.push(full);
   }
   return out;
 }
@@ -46,7 +58,7 @@ test('no source file calls a mail route or a mail-sending library', () => {
     const text = readFileSync(file, 'utf8');
     if (
       /['"`]\/api\/(subscribe|unsubscribe|newsletter|contact)\b/.test(text) ||
-      /from\s+['"](resend|@emailjs\/browser|@\/lib\/emailjs)['"]/.test(text)
+      new RegExp(`(?:from|import|require)\\s*\\(?\\s*['"](?:${mailModules})['"]`).test(text)
     ) {
       offenders.push(relative(root, file));
     }
@@ -60,3 +72,25 @@ test('the mounted newsletter form is the EmailOctopus embed', () => {
   const form = readFileSync(join(root, 'src', 'components', 'EmailOctopusForm.tsx'), 'utf8');
   assert.match(form, /https:\/\/eocampaign1\.com\/form\//);
 });
+
+test(
+  'the built newsletter page renders the EmailOctopus form, not the fallback',
+  { skip: !requireBuild && !existsSync(outDir) && 'no static export output' },
+  () => {
+    assert.ok(expectedFormId, 'build with NEXT_PUBLIC_EMAILOCTOPUS_FORM_ID and set EXPECT_EMAILOCTOPUS_FORM_ID');
+    const pages = filesUnder(outDir, /\.html$/).filter((f) => /^newsletter(\/index)?\.html$/.test(relative(outDir, f)));
+    assert.ok(pages.length > 0, 'out/ holds no newsletter page');
+    for (const page of pages) {
+      assert.doesNotMatch(readFileSync(page, 'utf8'), /Newsletter form unavailable/);
+    }
+    const chunks = filesUnder(join(outDir, '_next', 'static'), /\.js$/);
+    assert.ok(
+      chunks.some((f) => readFileSync(f, 'utf8').includes(expectedFormId)),
+      'no client chunk carries the form id passed to EmailOctopusForm',
+    );
+    assert.ok(
+      chunks.some((f) => readFileSync(f, 'utf8').includes('eocampaign1.com/form/')),
+      'no client chunk loads the EmailOctopus embed',
+    );
+  },
+);

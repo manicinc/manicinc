@@ -16,7 +16,6 @@ export async function lazyLoadComponent<T>(
  */
 export const codeSplitPoints = {
   // Heavy third-party libraries
-  emailjs: () => import('@emailjs/browser'),
   giscus: () => import('@giscus/react'),
   syntaxHighlighter: () => import('react-syntax-highlighter'),
   framerMotion: () => import('framer-motion'),
